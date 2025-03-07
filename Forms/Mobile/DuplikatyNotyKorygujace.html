@@ -1,0 +1,2043 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>
+
+</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="format-detection" content="telephone=no" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Styles/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Styles/styles_ext_mobile.css?v=20250214" media='all' />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://opinie.orlen.pl/Images/orlenfavicon.ico" /><link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/Opinie.css?v=20250214" />
+    <link type="text/css" href="https://opinie.orlen.pl/Styles/select2.css?v=20250214" " rel="stylesheet" />
+
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/ua-parser.min.js?v=20250214"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/CheckVersionJS.js?v=20250214"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/fontawesome/all.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jqueryUiNew/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jqueryUiNew/jquery-ui.min.js"></script>
+    
+    
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.datepicker.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.menu.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.autocomplete.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/validator-0.11.5.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/utils.js?v=20250214"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/select2.js?v=20250214"></script> 
+
+    
+    <title>Zmiana danych na fakturze i duplikaty faktur - Orlen</title>
+
+    <script type="text/javascript">
+        if (top !== self)
+            top.location.replace(self.location.href);
+
+        $(function () {
+            preventEnterOnTextBoxes();
+        });
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                console.log("responsive");
+            } else {
+                x.className = "topnav";
+                console.log("desktop");
+            }
+        }
+
+        window.onload = function () {
+            hideBannerForNotyDuplikaty();
+        };
+
+        function hideBannerForNotyDuplikaty() {
+            var infoPageNumber = GetQueryStringParams('info');
+            if (infoPageNumber === "7") {
+                $('.banner').hide();
+            }
+        }
+    </script>
+</head>
+<body style="background-color: white !important; border-top: #D81E05 8px solid;">
+    <form name="aspnetForm" method="post" action="https://opinie.orlen.pl/Forms/Mobile/DuplikatyNotyKorygujace.html" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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TEVOIFMuQS4geiBzaWVkemlixIUgdyBQxYJvY2t1LCAwOSA0MTEgUMWCb2NrLCB1bC4gQ2hlbWlrw7N3IDcsIChkYWxlajogT1JMRU4gUy5BLikuIEtvbnRha3Rvd2UgbnVtZXJ5IHRlbGVmb27Ds3cgZG8gT1JMRU4gUy5BLjogKDI0KSAyNTYgMDAgMDAsICgyNCkgMzY1IDAwIDAwLCAoMjIpIDc3OCAwMCAwMC48YnIgLz4NCiAgICA8YnIgLz4NCiAgICAyLiBaIEluc3Bla3RvcmVtIE9jaHJvbnkgRGFueWNoIG1vxbxuYSBzacSZIHNrb250YWt0b3dhxIc6IHBvcHJ6ZXogYWRyZXMgZW1haWw6IGRhbmVvc29ib3dlQG9ybGVuLnBsIGx1YiBwaXNlbW5pZSBuYSBhZHJlcyBuYXN6ZWogc2llZHppYnksIHdza2F6YW55IHcgcGt0IEksIHogZG9waXNraWVtIOKAnkluc3Bla3RvciBPY2hyb255IERhbnljaOKAnS4gPGJyIC8+DQogICAgPGJyIC8+DQogICAgMy4gUGFuaS9QYW5hIGRhbmUgb3NvYm93ZSBwcnpldHdhcnphbmUgc8SFIHcgbmFzdMSZcHVqxIVjeWNoIGNlbGFjaDo8YnIgLz4NCiAgICA8dWw+DQogICAgICAgIDxsaT5wcm93YWR6ZW5pYSB6IFBhbmnEhS9QYW5lbSBrb3Jlc3BvbmRlbmNqaSwgb2JzxYJ1Z2Egc3ByYXcgemfFgmFzemFueWNoIHByemV6IGZvcm11bGFyeiBvcmF6IHcgY2VsdSBld2VudHVhbG5lZ28gZG9jaG9kemVuaWEgcm9zemN6ZcWEIGx1YiBvYnJvbnkgcHJ6ZWQgdGFraW1pIHJvc3pjemVuaWFtaSDigJMgcG9kc3Rhd8SFIHByYXduYSBqZXN0IHByYXduaWUgdXphc2FkbmlvbnkgaW50ZXJlcyAoYXJ0LiA2IHVzdC4gMSBsaXQgZiBST0RPKSw8L2xpPg0KICAgICAgICA8bGk+d3lwZcWCbmllbmllIGNpxIXFvMSFY3ljaCBuYSBhZG1pbmlzdHJhdG9yemUgb2Jvd2nEhXprw7N3IHByYXdueWNoIC0gd3lkYW5pYSBkb2t1bWVudHUgcG90d2llcmR6YWrEhWNlZ28gemFrdXAgdG93YXJ1IGx1YiB1c8WCdWdpIChmYWt0dXJhKSBpIGlubnljaCBkb2t1bWVudMOzdyBrc2nEmWdvd3ljaCAoYXJ0LiA2IHVzdC4gMSBsaXQuIGMgUk9ETykuPC9saT4NCiAgICA8L3VsPg0KICAgIDxiciAvPg0KICAgIDQuIFBhbmkvUGFuYSBtb2fEhSBiecSHIHVqYXduaWFuZSBwcnpleiBPUkxFTiBTLkEuIHBvZG1pb3RvbSB6IG5pbSB3c3DDs8WCcHJhY3VqxIVjeW0gKG9kYmlvcmNvbSksIHcgc3pjemVnw7Nsbm/Fm2NpIHBvZG1pb3RvbSB3c3DDs8WCcHJhY3VqxIVjeW0gcHJ6eSBvYnPFgnVkemUgc3lzdGVtdSBTQVNpUiwgxZt3aWFkY3rEhWN5bSB1c8WCdWdpIHNwcnplZGHFvHksIGZha3R1cm93YW5pYSwgcm96bGljemFuaWEgbmFsZcW8bm/Fm2NpLCBkb3LEmWN6YW5pYSBrb3Jlc3BvbmRlbmNqaSBpIHByemVzecWCZWssIHByYXduZSwgd2luZHlrYWN5am5lLCBhcmNoaXdpemFjamksIG9ic8WCdWdpIHByb2Nlc8OzdyBrc2nEmWdvd2/igJNyb3psaWN6ZW5pb3d5Y2guPGJyIC8+DQogICAgPGJyIC8+DQogICAgNS4gUGFuaS9QYW5hIGRhbmUgb3NvYm93ZSBixJlkxIUgcHJ6ZXR3YXJ6YW5lIHByemV6IG9rcmVzIHd5bmlrYWrEhWN5IHogcG93c3plY2huaWUgb2Jvd2nEhXp1asSFY3ljaCBwcnplcGlzw7N3IHByYXdhIG9yYXogZG8gY3phc3Ugd3lnYcWbbmnEmWNpYSByb3N6Y3plxYQgdyB0eW0gemFrcmVzaWUuPGJyIC8+DQogICAgPGJyIC8+DQogICAgNi4gUHJ6eXPFgnVndWrEhSBQYW5pL1BhbnUgcHJhd2EgendpxIV6YW5lIHogcHJ6ZXR3YXJ6YW5pZW0gZGFueWNoIG9zb2Jvd3ljaDo8YnIgLz4NCiAgICA8dWw+DQogICAgICAgIDxsaT5wcmF3byB3bmllc2llbmlhIHNwcnplY2l3dSAtIHcgcHJ6eXBhZGthY2gsIGtpZWR5IE9STEVOIFMuQS5wcnpldHdhcnphIFBhbmkvUGFuYSBkYW5lIG9zb2Jvd2UgbmEgcG9kc3Rhd2llIHN3b2plZ28gcHJhd25pZSB1emFzYWRuaW9uZWdvIGludGVyZXN1LCBzcHJ6ZWNpdyBtb8W8bmEgd3lyYXppxIcgemUgd3pnbMSZZHUgbmEgc3pjemVnw7NsbsSFIHN5dHVhY2rEmSBuYSBhZHJlcyBwb2N6dHkgZWxla3Ryb25pY3puZWo6IGRhbmVvc29ib3dlQG9ybGVuLnBsIGx1YiBhZHJlcyBzaWVkemlieSBPUkxFTiBTLkEuIHogZG9waXNraWVtIOKAnkluc3Bla3RvciBPY2hyb255IERhbnljaOKAnSw8L2xpPg0KICAgICAgICA8bGk+cHJhd28gxbzEhWRhbmlhIGRvc3TEmXB1IGRvIHRyZcWbY2kgc3dvaWNoIGRhbnljaCw8L2xpPg0KICAgICAgICA8bGk+cHJhd28gxbzEhWRhbmlhIHNwcm9zdG93YW5pYSBkYW55Y2ggb3NvYm93eWNoLDwvbGk+DQogICAgICAgIDxsaT5wcmF3byBkbyBvZ3JhbmljemVuaWEgcHJ6ZXR3YXJ6YW5pYSBkYW55Y2ggb3NvYm93eWNoLDwvbGk+DQogICAgPC91bD4NCiAgICA3LiBQcnp5c8WCdWd1amUgUGFuaS9QYW51IHByYXdvIGRvIHduaWVzaWVuaWEgc2thcmdpIGRvIG9yZ2FudSBuYWR6b3JjemVnbywgUHJlemVzYSBVcnrEmWR1IE9jaHJvbnkgRGFueWNoIE9zb2Jvd3ljaC48YnIgLz4NCiAgICA8YnIgLz4NCiAgICA4LiBQb2RhbmllIGRhbnljaCBvc29ib3d5Y2ggamVzdCBkb2Jyb3dvbG5lIGplZG5hayBuaWV6YsSZZG5lIGRvIHVkemllbGVuaWEgb2Rwb3dpZWR6aSBuYSBQYW5pL1BhbmEgemfFgm9zemVuaWUuZGQCIw9kFgJmDw8WAh8DaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYEBS5jdGwwMCRjcGhNYWluJHRiTm90eUtvcnlndWphY2VJbm55T2RiaW9yY2EkY2hiBSRjdGwwMCRjcGhNYWluJGNoYk5yUmVqZXN0cmFjeWpueSRjaGIFIGN0bDAwJGNwaE1haW4kY2hiVXBvd2F6bmlvbnkkY2hiBSFjdGwwMCRjcGhNYWluJGNoYld5cmF6YW1aZ29kZSRjaGISqnzDfTIebS047E8YZ5L/kJ1teiZhvodx3Hm5GNkGOw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://opinie.orlen.pl/WebResource.axd?d=Sr5XR1dbgWMhHdCYGZ6rsWRq4T0A7VN6_YwHsCm66L-1QTjFzMn5gbiHmu6qnbbazTD_dg9kftqrnig2VwltKzaGUn9P2BsCTBLrdRQKgcQ1&amp;t=637100538060000000" type="text/javascript"></script>
+
+
+<script src="https://opinie.orlen.pl/ScriptResource.axd?d=MS_z_l6JbA1nKatfsWHvwHS0P5BS89iqV1lpBNjGENhvuHMeKEKahMXq-y3OlDuzGo3UIlLhEQPxWt1chx-Z_I8-rivu90EIjPUFUCXKVusutMpV-TZNfrasVJXR1PFwlDBIGYQCjLGfAqHAPbvOlXYoWktEzHo2AFt2aB_o44Y1&amp;t=ffffffff93f2983c" type="text/javascript"></script>
+<script src="https://opinie.orlen.pl/ScriptResource.axd?d=CPTThhfT8z4TIFDA4dbhRCcmVkomg4npy0az0Gb1fgkOkEdZvISGztsqp90Lv6qMZzYYGJO7zNh6L8BEuExTXoAjYSWNxQtFWNI0qK2NHA7_8HvrpEAEiQL-W_C-thyuTR9xewVGk415fbdvJvwv-rmljo0LxCgbp8lgx4kAoaNJSwviw3SNhGuTFeS6S8kH0&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="https://opinie.orlen.pl/ScriptResource.axd?d=N1nw0uUHMfXeuZJ_srD2gyLlG_rrjkKSNIfkdKWoZkoT33kJWoGhbCCS_b4Hy0eiBVGPK610WgtXcREUseE72nvmBdmwbpyLMJ_oaCOq0n54nUr07hCtBCRcBxqbw_qBaYuZGxBUC9OUz2baMmn_NUy9vx0yhnSqFGbYOmoJtRb9K4OheE-D1aypkoW2gCfe0&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D430B3D0" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACpz6QGYYPfN1lYQALTRpp7lgjR18yvaw8bty7tbRKzbbMpUehZCP6hBGCMt5cdHP+61zJjrDCd9pgScSHQ02CveYukeCrnYyAw1ZpeMjAy2RCzLstXunPWJeeP0EBPZ+S82XkdfRbamj8dHArzeivmoiYa5t+vwVgGQJ4c9mFcMJ3xHgXpgIMFHwnJT90UAs9CTU4BmrSIpn6C7CA3qJelMK8VNKF5ewSur0T4HRXoK/b+ALkbsIXJoKuTfaHNGIHmMo3c90DhPCVD5CeNo8T1nUsWRH72oHguKtxbPFGjkw8hfsRIgAPL1J5yzwU6miJ7XnEcbPDFLJC0XoS4ci5GgznWBvcpjjP104AcFWUC592C44harHkv8T7+GzwMkbZmTI13rsRe4xqLo3baep3+GuBg8QP2mhCEj3jRtkCeiHRialagm4k7fpYl5l3Hl/bZ4iyvCg3A9ITOqFq+rfRMOPrT/T67IvBnEyEfzY9qjmiOVsVpU/HQLxwKOgKotTYRugkLXD6f1PzxKzsEgJvaRBUP2jv0lTJxWELN7GqCK99VqrobI1V9lx9QDAqJaz3J15WRYKEQiFd4ru/8frv1ydhaJRBIA+9xRl2/Du7aKrRqCjErA00yxtjigFlKgAO6RDD2YSb0llOErrAzmRQfhzgbagllRedGm7Ob+4GE2gMJusKMKHutBqpzjnGyJOcRqlrjCJB49culAHhqMIlDgr+uey1ztss7usTtKfRh2Ed1ogmWLE4wUuWy7NslDV81dTBOEAZVID2UC4sY+UHvHs/Z0qAvMrrVTwSPWRos5mSPPbiZ/MDO3BH5q/wZEyiFBTaTNsXQZL2vv8Qpr4X20YXc+O77vI82Z3bp+z+6aTWU0/FiNAhLCYMBaCLA8DNWZ/LAI0CDEGPiihJC8NgUY4FNV+SkeMpscZJrjSB5p7A==" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div class="container page-header" style="margin-top: -25px; padding-top: 0px; padding-left: 0px !important; padding-right: 0px !important;">
+            <header>
+                <div style="display: flex;">
+                    <div style="flex: 0 0 65%;">
+                        <a href="http://www.orlen.pl">
+                            <img src="https://opinie.orlen.pl/Images/logo_orlen.gif" style="height: 100px; width: 120px;" />
+                        </a>
+                        <div class="topBanner">
+                            <img src="https://opinie.orlen.pl/Images/baner.jpg" />
+                        </div>
+                    </div>
+                    <div style="flex: 1; width: 1%;">
+                        <div class="banner" style="display: inline-flex;">
+                            <div class="pull-left banner-image">
+                                <i class="fa fa-phone-alt fa-2x" style="color: #DD3126;"></i>
+                            </div>
+                            <div class="pull-right" style="background-color: #DD3126; width: 100%;">
+                                <p style="width: 100%; text-align: center; margin: 0px; padding: 0px; font-size: 20px;">
+                                    <b style="color: white;">801&nbsp;167&nbsp;536</b>
+                                </p>
+                                <p style="width: 100%; text-align: center; margin: 0px; padding: 0px; font-size: 20px;">
+                                    <b style="color: white;">502&nbsp;167&nbsp;536</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <aside class="nav-menu">
+                
+    <ul class="left-nav" style="cursor: pointer;">
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/Default">INFORMACJE</a>
+        </li>
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosProblem">ZGŁOSZENIA / SKARGI / REKLAMACJE</a>
+        </li>
+        <li >
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosProblem?pochwaly=true">POCHWAŁY</a>
+        </li>
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosSzkodeOC">ZGŁOŚ SZKODĘ OC</a>
+        </li>
+        <li class="active">
+            <a href="https://opinie.orlen.pl/Forms/Mobile/DuplikatyNotyKorygujace.html">DUPLIKATY
+                <br />
+                ZMIANA DANYCH NA FAKTURZE</a>
+        </li>
+        <li>
+            <a href="https://www.orlenpaczka.pl/reklamacje/">ORLEN Paczka</a>
+        </li>
+                <li>
+           <a href="https://opinie.orlen.pl/Forms/Mobile/OrlenCharge">ORLEN CHARGE</a>
+
+        </li>
+    </ul>
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger-menu-items">
+            <a href="https://opinie.orlen.pl/Forms/Mobile/DuplikatyNotyKorygujace.html" class="hamburger-menu-link">DUPLIKATY / ZMIANY DANYCH NA FAKTURZE</a>
+        </div>
+    </div>
+
+            </aside>
+            <section id="main">
+                
+    <!--<link rel="stylesheet" type="text/css" href="https://orlen.com.co/content/opinie-styles.min.css" />-->
+
+    <style>
+        .rbl input[type="radio"] {
+            margin-right: 10px;
+            text-align: center;
+            padding-left: 0px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .errorMessage {
+                margin-left: 45% !important;
+                font: bold 12px sans-serif;
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .errorMessage {
+                margin-left: 0% !important;
+                font: bold 12px sans-serif;
+            }
+        }
+
+        .banner {
+            visibility: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        var isSaving = false;
+        var autosaveTimeout = 300;
+        var IsExternalForm =true;
+        var maxUploadSize = Math.round(5000000 / 1024 / 1024);
+        var userRoleId = '-1';
+        var allowedExtensions = ["pdf", "jpg"];
+
+        //js do hamburgermenu
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const hamburgerMenuIcon = document.querySelector('.hamburger-menu-icon');
+        const hamburgerMenuItems = document.querySelector('.hamburger-menu-items');
+        if (hamburgerMenuIcon) {
+            hamburgerMenuIcon.addEventListener('click', () => {
+                if (hamburgerMenuItems.style.display === 'block') {
+                    hamburgerMenuItems.style.display = 'none';
+                } else {
+                    hamburgerMenuItems.style.display = 'block';
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/WalidatoryNotyDuplikaty.js?v=20250214"></script>
+
+    <div class="client-content">
+        <div id="ctl00_cphMain_pForm" class="form-validation">
+	
+            <div class="form-title-row">
+                <h1>Zgłoszenie wniosku</h1>
+            </div>
+            <input type="hidden" name="ctl00$cphMain$hfdGuid" id="ctl00_cphMain_hfdGuid" />
+            <span id="ctl00_cphMain_lblError" style="color:Red;"></span>
+
+            
+            <div>
+                <div id="ctl00_cphMain_pDiv" class="form-control flex-input-container border-0 ">
+		
+                    <div class="flex-label rbField" style="padding-top: 3px; height: 34px !important;">
+                        <span id="ctl00_cphMain_rblCzyNotyKorygujaceFormularz" class="rbl" Field="DuplikatyNotyKorygujace.CzyFormularzNotyKorygujace"><input id="ctl00_cphMain_rblCzyNotyKorygujaceFormularz_0" type="radio" name="ctl00$cphMain$rblCzyNotyKorygujaceFormularz" value="1" checked="checked" /><label for="ctl00_cphMain_rblCzyNotyKorygujaceFormularz_0">Zmiana danych na fakturze</label><input id="ctl00_cphMain_rblCzyNotyKorygujaceFormularz_1" type="radio" name="ctl00$cphMain$rblCzyNotyKorygujaceFormularz" value="0" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphMain$rblCzyNotyKorygujaceFormularz$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_cphMain_rblCzyNotyKorygujaceFormularz_1">Duplikat faktury</label></span>
+                        <span id="ctl00_cphMain_RFVal_czyNoty" class="form-invalid-data-info requiredMessage" style="color:Red;visibility:hidden;">Pole wymagane</span>
+                    </div>
+                
+	</div>
+
+                <div id="ctl00_cphMain_pRblNotyKorygujaceCzyFirma" class="form-control flex-input-container border-0">
+		
+                    <div class="flex-label rbField" style="padding-top: 3px; height: 34px !important;">
+                        <span id="ctl00_cphMain_rblNotyKorygujaceCzyFirma" class="rbl" Field="DuplikatyNotyKorygujace.CzyFirma"><input id="ctl00_cphMain_rblNotyKorygujaceCzyFirma_0" type="radio" name="ctl00$cphMain$rblNotyKorygujaceCzyFirma" value="1" checked="checked" /><label for="ctl00_cphMain_rblNotyKorygujaceCzyFirma_0">Firma</label><input id="ctl00_cphMain_rblNotyKorygujaceCzyFirma_1" type="radio" name="ctl00$cphMain$rblNotyKorygujaceCzyFirma" value="0" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphMain$rblNotyKorygujaceCzyFirma$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_cphMain_rblNotyKorygujaceCzyFirma_1">Osoba fizyczna</label></span>
+                        <span id="ctl00_cphMain_RFVal_czyNotyFirma" class="form-invalid-data-info requiredMessage" style="color:Red;visibility:hidden;">Pole wymagane</span>
+                    </div>
+                
+	</div>
+            </div>
+
+            <div id="ctl00_cphMain_pNotyKorygujaceDaneFirmy">
+		
+                <div class="form-title-row">
+                    <h1>Nabywca</h1>
+                </div>
+                <div class="flex-row" id="daneKontaktoweFirma">
+                    <div id="ctl00_cphMain_tbNotyKorygujaceFirmaNip_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceFirmaNip_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNip_lbl">NIP</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujaceFirmaNip$txt" type="text" maxlength="14" id="ctl00_cphMain_tbNotyKorygujaceFirmaNip_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 14 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    <div class='hint nipHint'><span>?</span><div class='hintContent'><p style = 'font-weight: normal;' >Sprawdź numer NIP. Usuń znaki specjalne. Jeżeli NIP jest prawidłowy udaj się na stacje paliw.</p></div></div>
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_lbl">Nazwa kontrahenta / imię i nazwisko</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujaceFirmaNazwaFirmy$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_lbl">Ulica, numer domu i nr lokalu</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujaceFirmaAdres$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_lbl">Kod pocztowy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujaceFirmaKodPocztowy$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">Błędny kod pocztowy. Poprawny kod powinien być w formacie: 'XX-XXX'</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_lbl">Miejscowość</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujaceFirmaMiejscowosc$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                </div>
+            
+	</div>
+
+            
+
+            <div id="ctl00_cphMain_pNotyKorygujaceFaktura">
+		
+                <div class="form-title-row">
+                    <h1>DANE FAKTURY KORYGOWANEJ</h1>
+                </div>
+                <div class="flex-row" id="daneDoFaktury">
+                    <div id="ctl00_cphMain_tbNotyKorygujaceNrFaktury_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceNrFaktury_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceNrFaktury_lbl">Nr faktury</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujaceNrFaktury$txt" type="text" maxlength="100" id="ctl00_cphMain_tbNotyKorygujaceNrFaktury_txt" class="form-control input-lg" autocomplete="off" placeholder="xxxxKxx/xxxx/xx lub EMOB-xxxx-xxxx" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;"></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    <div class='hint nrFakturyHint'><span>?</span><div class='hintContent'><p style = 'font-weight: normal;' >Numer dokumentu wpisujemy bez oznaczenia F, FK. <br /><br />Numer dokumentu nie jest z zakresu dokumentów detalicznych wystawionych na stacji paliw.<br />Więcej informacji na:<br />FLOTA<br />501 235 682<br />801 235 682</p></div></div>
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceDataFaktury_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_lbl">Data</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujaceDataFaktury$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_txt" class="form-control input-lg DateControl" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;"></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                </div>
+            
+	</div>
+
+            <div id="ctl00_cphMain_pNotyKorygujaceDanePrzedKoreta">
+		
+                <div class="form-title-row mb-0">
+                    <h1>Treść korygowana</h1>
+                    <h6 id="przedKorektaInfo" class="mb-3" style="color: #17a2b8">(Wypełnij pole które wymagają korekty)</h6>
+                </div>
+                <div class="flex-row" id="danePrzedKorekta">
+                    <div id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_lbl">Nazwa firmy / kontrahenta</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujacePrzedKorektaNazwaFirmy$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_lbl">Ulica, numer domu i nr lokalu</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujacePrzedKorektaAdres$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_lbl">Kod pocztowy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujacePrzedKorektaKodPocztowy$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">Błędny kod pocztowy. Poprawny kod powinien być w formacie: 'XX-XXX'</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_lbl">Miejscowość</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujacePrzedKorektaMiejscowosc$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_lbl">NIP</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujacePrzedKorektaNip$txt" type="text" maxlength="14" id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 14 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_lbl">Numer rejestracyjny pojazdu</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujacePrzedKorektaNrRejestracyjny$txt" type="text" maxlength="20" id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 20 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    <div class='hint nrRejestracyjnyHint' style='display: none;'><span>?</span><div class='hintContent'><p style = 'font-weight: normal;' >Proszę załączyć skan noty korygującej z czytelnym podpisem osoby upoważnionej, w przeciwnym wypadku wniosek zostanie odrzucony</p></div></div>
+
+		</div>
+
+
+                </div>
+            
+	</div>
+
+            <div id="ctl00_cphMain_pNotyKorygujaceDanePoKorekcie">
+		
+                <div class="form-title-row mb-0">
+                    <h1>Treść prawidłowa</h1>
+                    <h6 id="poKorektaInfo" class="mb-3" style="color: #17a2b8">(Wypełnij pole które wymagają korekty)</h6>
+                </div>
+                <div class="flex-row" id="danePoKorekta">
+                    <div id="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_lbl">Nazwa firmy / kontrahenta</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujacePoKorektaNazwaFirmy$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_lbl">Ulica, numer domu i nr lokalu</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujacePoKorektaAdres$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_lbl">Kod pocztowy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujacePoKorektaKodPocztowy$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">Błędny kod pocztowy. Poprawny kod powinien być w formacie: 'XX-XXX'</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_lbl">Miejscowość</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujacePoKorektaMiejscowosc$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_lbl">NIP</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujacePoKorektaNip$txt" type="text" maxlength="14" id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 14 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorca_pDiv" class="form-row cb form-input-name-row appClasstbNotyKorygujaceInnyOdbiorca">
+			
+    <label class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorca_lbl">Odbiorca inny niż Nabywca</span>
+    </label>
+    <div class="flex-input-container">
+        <span class="appCheckBox"><input id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorca_chb" type="checkbox" name="ctl00$cphMain$tbNotyKorygujaceInnyOdbiorca$chb" /></span>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+    </div>
+
+		</div>
+
+
+                    <!-- Odbiorca inny niż Nabywca -->
+                    <div id="OdbiorcaInnyDiv" style="display: none">
+                        <div class="form-title-row mb-3">
+                            <h4>Odbiorca inny niż Nabywca</h4>
+                        </div>
+                        <div class="flex-row">
+                            <div id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_lbl">Nazwa firmy / kontrahenta</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                            <div id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_lbl">Ulica, numer domu i nr lokalu</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                            <div id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_lbl">Kod pocztowy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">Błędny kod pocztowy. Poprawny kod powinien być w formacie: 'XX-XXX'</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                            <div id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_lbl">Miejscowość</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc$txt" rows="1" cols="20" id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 200 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                            <div id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_lbl">NIP</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP$txt" type="text" maxlength="14" id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 14 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                        </div>
+                    </div>
+
+                    <div id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_lbl">Numer rejestracyjny pojazdu</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNotyKorygujacePoKorektaNrRejestracyjny$txt" type="text" maxlength="15" id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 15 znaków</span>
+        <span id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    <div class='hint nrRejestracyjnyHint' style='display: none;'><span>?</span><div class='hintContent'><p style = 'font-weight: normal;' >Proszę załączyć skan noty korygującej z czytelnym podpisem osoby upoważnionej, w przeciwnym wypadku wniosek zostanie odrzucony</p></div></div>
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_chbNrRejestracyjny_pDiv" class="form-group flex-field">
+			
+    <div class="flex-label">
+        <input id="ctl00_cphMain_chbNrRejestracyjny_chb" type="checkbox" name="ctl00$cphMain$chbNrRejestracyjny$chb" />
+    </div>
+    <div class="clause" style="text-align: left; width: 280px;">
+        Korekta numeru rejestracyjnego będzie możliwa po jego weryfikacji/potwierdzeniu na monitoringu stacji
+    </div>
+
+		</div>
+
+
+                </div>
+            
+	</div>
+
+            <div id="ctl00_cphMain_pNotyKorygujaceSkanFaktury">
+		
+                <div class="form-title-row mb-0">
+                    <h1>Skan dokumentu</h1>
+                    <h7 class="mb-3" style="color: red">Załączony dokument powinien dotyczyć tylko faktury wymienionej w zgłoszeniu.</h7>
+                    <h6 class="mb-3 text-info">(Akceptowany format pliku z rozszerzeniem: PDF, JPG)</h6>
+                </div>
+                <div class="flex-row" id="skanFaktury">
+                    <div id="ctl00_cphMain_AttNotyKorygujaceSkanFaktury_pDiv" class="form-group flex-field">
+    <label class="flex-label">
+        <span id="ctl00_cphMain_AttNotyKorygujaceSkanFaktury_lbl">Dowód zakupu/inne dokumenty </span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$AttNotyKorygujaceSkanFaktury$att" type="file" id="ctl00_cphMain_AttNotyKorygujaceSkanFaktury_att" class="uploaddoc" multiple="multiple" accept=".jpg, .jpeg, .pdf" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal" class="form-invalid-data-info requiredMessage" style="color:Red;visibility:hidden;">Pole wymagane</span>
+        <span id="ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal" class="form-invalid-data-info" style="color:Red;display:none;"></span>
+        <span id="ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal" class="form-invalid-data-info" style="color:Red;display:none;"></span>
+    </div>
+</div>
+
+                </div>
+                <div class="form-title-row mb-0">
+                    <h1>Dodatkowe Informacje</h1>
+                </div>
+                <div class="flex-row">
+                    <div id="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_lbl">Dodatkowy opis</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbDodatkowyOpisZmianaDanych$txt" rows="3" cols="20" id="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 1000 znaków</span>
+        <span id="ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                </div>
+            
+	</div>
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <div id="ctl00_cphMain_pOsobaZglaszajaca">
+		
+                <div class="form-title-row">
+                    <h1>Osoba zgłaszająca wniosek</h1>
+                </div>
+                <div class="flex-row" id="daneOsobyZglaszajacej">
+                    <div id="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_lbl">Imię i nazwisko</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbOsobaZglaszajacaImieNazwisko$txt" type="text" maxlength="50" id="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbOsobaZglaszajacaEmail_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbOsobaZglaszajacaEmail_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmail_lbl">Email</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbOsobaZglaszajacaEmail$txt" type="text" maxlength="50" id="ctl00_cphMain_tbOsobaZglaszajacaEmail_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                     <div id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_lbl">Powtórz Email</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbOsobaZglaszajacaEmailRepeat$txt" type="text" maxlength="50" id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_pDiv" class="form-group flex-field">
+			
+    <label for="ctl00_cphMain_tbOsobaZglaszajacaTelefon_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_lbl">Telefon</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbOsobaZglaszajacaTelefon$txt" type="text" maxlength="12" id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 12 znaków</span>
+        <span id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+		</div>
+
+
+                    <div id="ctl00_cphMain_chbUpowazniony_pDiv" class="form-group flex-field">
+			
+    <div class="flex-label">
+        <input id="ctl00_cphMain_chbUpowazniony_chb" type="checkbox" name="ctl00$cphMain$chbUpowazniony$chb" />
+    </div>
+    <div class="clause" style="text-align: left; width: 280px;">
+        Oświadczam, iż jestem upoważniona/y do składania/uzyskania dokumentów związanych ze zgłoszonym wnioskiem dotyczącym zakupu towaru lub usługi (faktura) lub innych dokumentów księgowych oraz odbioru w/w dokumentów. Jednocześnie działając na podstawie przepisów prawa regulujących sposób i warunki przesyłania faktur w formie elektronicznej, a także zasady ich przechowywania, akceptuję wystawianie i przesyłanie w/w dokumentów w formie elektronicznej, na adres e-mail wskazany w niniejszym wniosku, ze wszystkimi prawnymi skutkami ich doręczania w tej postaci.
+    </div>
+
+		</div>
+
+                </div>
+            
+	</div>
+
+            <div class="flex-row">
+                <div>
+                    
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#collapseLink").click(function () {
+            $(this).text(function (i, old) {
+                return old == 'więcej...' ? 'mniej...' : 'więcej...';
+            });
+        });
+    });
+</script>
+
+<div id="ctl00_cphMain_chbWyrazamZgode_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_chbWyrazamZgode_chb" class="flex-label">
+        <input id="ctl00_cphMain_chbWyrazamZgode_chb" type="checkbox" name="ctl00$cphMain$chbWyrazamZgode$chb" />
+    </label>
+    <div class="clause" style="text-align: left; width: 280px;">
+        Klauzula informacyjna zgodnie z art. 13 ust. 1 i ust. 2 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r.&nbsp;<a data-toggle="collapse" href="https://opinie.orlen.pl/Forms/Mobile/DuplikatyNotyKorygujace.htm#WyrazamZgodeClause" style="display: inline; font-weight: bold;" id="collapseLink">więcej...</a>
+    </div>
+
+	</div>
+<div id="WyrazamZgodeClause" class="collapse clause">
+     <span id="ctl00_cphMain_chbWyrazamZgode_klauzulaLabel" class="clauseLabel flex-label">Klauzula informacyjna zgodnie z art. 13 ust. 1 i ust. 2 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych \'RODO') informujemy:
+    <br />
+    <br />
+    1. Administratorem danych osobowych jest ORLEN S.A. z siedzibą w Płocku, 09 411 Płock, ul. Chemików 7, (dalej: ORLEN S.A.). Kontaktowe numery telefonów do ORLEN S.A.: (24) 256 00 00, (24) 365 00 00, (22) 778 00 00.<br />
+    <br />
+    2. Z Inspektorem Ochrony Danych można się skontaktować: poprzez adres email: daneosobowe@orlen.pl lub pisemnie na adres naszej siedziby, wskazany w pkt I, z dopiskiem „Inspektor Ochrony Danych”. <br />
+    <br />
+    3. Pani/Pana dane osobowe przetwarzane są w następujących celach:<br />
+    <ul>
+        <li>prowadzenia z Panią/Panem korespondencji, obsługa spraw zgłaszanych przez formularz oraz w celu ewentualnego dochodzenia roszczeń lub obrony przed takimi roszczeniami – podstawą prawna jest prawnie uzasadniony interes (art. 6 ust. 1 lit f RODO),</li>
+        <li>wypełnienie ciążących na administratorze obowiązków prawnych - wydania dokumentu potwierdzającego zakup towaru lub usługi (faktura) i innych dokumentów księgowych (art. 6 ust. 1 lit. c RODO).</li>
+    </ul>
+    <br />
+    4. Pani/Pana mogą być ujawniane przez ORLEN S.A. podmiotom z nim współpracującym (odbiorcom), w szczególności podmiotom współpracującym przy obsłudze systemu SASiR, świadczącym usługi sprzedaży, fakturowania, rozliczania należności, doręczania korespondencji i przesyłek, prawne, windykacyjne, archiwizacji, obsługi procesów księgowo–rozliczeniowych.<br />
+    <br />
+    5. Pani/Pana dane osobowe będą przetwarzane przez okres wynikający z powszechnie obowiązujących przepisów prawa oraz do czasu wygaśnięcia roszczeń w tym zakresie.<br />
+    <br />
+    6. Przysługują Pani/Panu prawa związane z przetwarzaniem danych osobowych:<br />
+    <ul>
+        <li>prawo wniesienia sprzeciwu - w przypadkach, kiedy ORLEN S.A.przetwarza Pani/Pana dane osobowe na podstawie swojego prawnie uzasadnionego interesu, sprzeciw można wyrazić ze względu na szczególną sytuację na adres poczty elektronicznej: daneosobowe@orlen.pl lub adres siedziby ORLEN S.A. z dopiskiem „Inspektor Ochrony Danych”,</li>
+        <li>prawo żądania dostępu do treści swoich danych,</li>
+        <li>prawo żądania sprostowania danych osobowych,</li>
+        <li>prawo do ograniczenia przetwarzania danych osobowych,</li>
+    </ul>
+    7. Przysługuje Pani/Panu prawo do wniesienia skargi do organu nadzorczego, Prezesa Urzędu Ochrony Danych Osobowych.<br />
+    <br />
+    8. Podanie danych osobowych jest dobrowolne jednak niezbędne do udzielenia odpowiedzi na Pani/Pana zgłoszenie.</span>
+</div>
+
+
+
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <div>
+                    
+                    
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+        
+</div>
+        <div id="NavigationButtons" style="text-align: right;">
+            <input type="submit" name="ctl00$cphMain$btnZapisz" value="Wyślij zgłoszenie" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphMain$btnZapisz&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_cphMain_btnZapisz" class="SubmitButton" />
+        </div>
+        <div id="errorAlertBg" class="notyduplikaty-overlay" style="display: none;"></div>
+        <div id="errorAlertPopup" class="popup-notyduplikaty" style="display: none;">
+            <a id="popup-notyduplikaty-close" class="popup-notyduplikaty-close">&times;</a>
+            <h2>Formularz zawiera błędy!</h2>
+            <div class="popup-notyduplikaty-content">
+                Należy poprawnie uzupełnić wszystkie wymagane pola.
+            </div>
+        </div>
+    </div>
+
+                <noscript>
+                    <div style="text-align: center; color: red; font-weight: bold; font-size: medium; margin-top: 20px">
+                        Do pełnej funkcjonalności strony potrzebujesz włączonej obsługi skryptów.<br />
+                        Tu znajdziesz <a href="http://www.enable-javascript.com/pl/" target="_blank">instrukcje, które pozwolą Ci włączyć skrypty w Twojej przeglądarce</a>.
+                    </div>
+                </noscript>
+            </section>
+            <footer>
+                <div style="float: left; cursor: pointer;">
+                    <a href="https://opinie.orlen.pl/Forms/Mobile/PolitykaPrywatnosci">Polityka prywatności i cookies</a>
+                </div>
+            </footer>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_cphMain_RFVal_czyNoty"), document.getElementById("ctl00_cphMain_RFVal_czyNotyFirma"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal"), document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal"), document.getElementById("ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal"), document.getElementById("ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal"), document.getElementById("ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal"), document.getElementById("ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal"), document.getElementById("ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal"), document.getElementById("ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal"), document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_cphMain_RFVal_czyNoty = document.all ? document.all["ctl00_cphMain_RFVal_czyNoty"] : document.getElementById("ctl00_cphMain_RFVal_czyNoty");
+ctl00_cphMain_RFVal_czyNoty.controltovalidate = "ctl00_cphMain_rblCzyNotyKorygujaceFormularz";
+ctl00_cphMain_RFVal_czyNoty.enabled = "False";
+ctl00_cphMain_RFVal_czyNoty.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_RFVal_czyNoty.initialvalue = "";
+var ctl00_cphMain_RFVal_czyNotyFirma = document.all ? document.all["ctl00_cphMain_RFVal_czyNotyFirma"] : document.getElementById("ctl00_cphMain_RFVal_czyNotyFirma");
+ctl00_cphMain_RFVal_czyNotyFirma.controltovalidate = "ctl00_cphMain_rblNotyKorygujaceCzyFirma";
+ctl00_cphMain_RFVal_czyNotyFirma.enabled = "False";
+ctl00_cphMain_RFVal_czyNotyFirma.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_RFVal_czyNotyFirma.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaNip_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaNip_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal.errormessage = "W polu wprowadź maksimum 14 znaków";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal.validationexpression = "^[\\s\\S]{0,14}$";
+var ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaNip_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaAdres_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaAdres_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaAdres_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal.errormessage = "Błędny kod pocztowy. Poprawny kod powinien być w formacie: \'XX-XXX\'";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal.validationexpression = "^(\\d{2}-\\d{3})|(\\d{5})$";
+var ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal");
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal");
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceNrFaktury_txt";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal");
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceNrFaktury_txt";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+var ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal");
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceNrFaktury_txt";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal");
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceDataFaktury_txt";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal");
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceDataFaktury_txt";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+var ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal");
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceDataFaktury_txt";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal.errormessage = "Błędny kod pocztowy. Poprawny kod powinien być w formacie: \'XX-XXX\'";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal.validationexpression = "^(\\d{2}-\\d{3})|(\\d{5})$";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal.errormessage = "W polu wprowadź maksimum 14 znaków";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal.validationexpression = "^[\\s\\S]{0,14}$";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal.errormessage = "W polu wprowadź maksimum 20 znaków";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal.validationexpression = "^[\\s\\S]{0,20}$";
+var ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal");
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_txt";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal.errormessage = "Błędny kod pocztowy. Poprawny kod powinien być w formacie: \'XX-XXX\'";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal.validationexpression = "^(\\d{2}-\\d{3})|(\\d{5})$";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNip_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNip_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal.errormessage = "W polu wprowadź maksimum 14 znaków";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal.validationexpression = "^[\\s\\S]{0,14}$";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNip_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal.errormessage = "Błędny kod pocztowy. Poprawny kod powinien być w formacie: \'XX-XXX\'";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal.validationexpression = "^(\\d{2}-\\d{3})|(\\d{5})$";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal.errormessage = "W polu wprowadź maksimum 200 znaków";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal.validationexpression = "^[\\s\\S]{0,200}$";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal.errormessage = "W polu wprowadź maksimum 14 znaków";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal.validationexpression = "^[\\s\\S]{0,14}$";
+var ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal");
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_txt";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal.errormessage = "W polu wprowadź maksimum 15 znaków";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal.validationexpression = "^[\\s\\S]{0,15}$";
+var ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal = document.all ? document.all["ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal"] : document.getElementById("ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal");
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal.controltovalidate = "ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_txt";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal.display = "Dynamic";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal.enabled = "False";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal.maximumvalue = "";
+ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal.minimumvalue = "";
+var ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal = document.all ? document.all["ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal"] : document.getElementById("ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal");
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal.controltovalidate = "ctl00_cphMain_AttNotyKorygujaceSkanFaktury_att";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal.enabled = "False";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal.initialvalue = "";
+var ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal = document.all ? document.all["ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal"] : document.getElementById("ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal");
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal.controltovalidate = "ctl00_cphMain_AttNotyKorygujaceSkanFaktury_att";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal.display = "Dynamic";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal.enabled = "False";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+var ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal = document.all ? document.all["ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal"] : document.getElementById("ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal");
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal.controltovalidate = "ctl00_cphMain_AttNotyKorygujaceSkanFaktury_att";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal.display = "Dynamic";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal.enabled = "False";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal.maximumvalue = "";
+ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal.minimumvalue = "";
+var ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal = document.all ? document.all["ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal"] : document.getElementById("ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal");
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal.controltovalidate = "ctl00_cphMain_tbDodatkowyOpisZmianaDanych_txt";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal.display = "Dynamic";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal.enabled = "False";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal.initialvalue = "";
+var ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal = document.all ? document.all["ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal"] : document.getElementById("ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal");
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal.controltovalidate = "ctl00_cphMain_tbDodatkowyOpisZmianaDanych_txt";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal.errormessage = "W polu wprowadź maksimum 1000 znaków";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal.display = "Dynamic";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal.validationexpression = "^[\\s\\S]{0,1000}$";
+var ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal = document.all ? document.all["ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal"] : document.getElementById("ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal");
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal.controltovalidate = "ctl00_cphMain_tbDodatkowyOpisZmianaDanych_txt";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal.display = "Dynamic";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal.enabled = "False";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal.maximumvalue = "";
+ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal");
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_txt";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal");
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_txt";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal");
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_txt";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal.maximumvalue = "";
+ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal");
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaEmail_txt";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal");
+ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaEmail_txt";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal");
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaEmail_txt";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal.maximumvalue = "";
+ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal");
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_txt";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal");
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_txt";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal");
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_txt";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal.maximumvalue = "";
+ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal");
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaTelefon_txt";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal");
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaTelefon_txt";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal.errormessage = "W polu wprowadź maksimum 12 znaków";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal.validationexpression = "^[\\s\\S]{0,12}$";
+var ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal = document.all ? document.all["ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal"] : document.getElementById("ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal");
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.controltovalidate = "ctl00_cphMain_tbOsobaZglaszajacaTelefon_txt";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.display = "Dynamic";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.enabled = "False";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.maximumvalue = "";
+ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.minimumvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+document.getElementById('ctl00_cphMain_RFVal_czyNoty').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_RFVal_czyNoty'));
+}
+
+document.getElementById('ctl00_cphMain_RFVal_czyNotyFirma').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_RFVal_czyNotyFirma'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+

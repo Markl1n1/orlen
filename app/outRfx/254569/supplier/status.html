@@ -1,0 +1,1072 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+<html class="modern-browser">
+    <head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144171163-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-144171163-1');
+            </script>
+    
+        <title>
+        	
+
+
+	        Platforma zakupowa Grupy ORLEN
+	     </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/css/open-sans.css">
+        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/jquery-ui-1.9.1.custom.css">
+        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/mpTooltip.css">
+        <link rel="shortcut icon" href="https://connect.orlen.pl/pic/favicon.ico" type="image/x-icon" />
+        
+
+
+
+
+
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/modernizr.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery-migrate-1.4.1.min.js" ></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/jquery.inputmask.bundle.min.js" ></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/select2.full.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.qtip.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.ui-1.11.4.js"></script>
+
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.hc-sticky.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.dotdotdot.min.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/support-tickets.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.mpobjectlist2.js"></script>
+
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/promise-polyfill.js"></script>
+<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/css/sweetalert.css" />
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/sweetalert.min.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/jquery.contextMenu.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.comment.min.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/support-capture.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/jquery.maxlength.min.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/purify.min.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/mpTooltip.js"></script>
+
+<script type="text/javascript">
+var searchInputDefaultText = 'Zacznij pisać';
+var expandAllClosedText = 'rozwiń wszystkie';
+var expandAllOpenText = 'zwiń wszystkie';
+var checkAllText = 'zaznacz wszystkie';
+var uncheckAllText = 'odznacz wszystkie';
+var availableCategoriesTxt = 'Dostępne kategorie';
+var insertCategoryNameTxt = 'Wpisz nazwę kategorii';
+</script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/picker.js"></script>
+
+
+    <style>
+        .grecaptcha-badge {
+            bottom: 145px !important;
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG"></script>
+    <script type="text/javascript">
+        function recaptchaCallbackFunction(actionName, formId){
+            grecaptcha.ready(function() {
+               grecaptcha.execute('6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG', {action: actionName}).then(function(token) {
+                   var parentForm = $('#'+formId);
+                   var captchaHidden = parentForm.find("input[name=recaptcha-response-code]");
+                   if(!captchaHidden || captchaHidden.length == 0){
+                       parentForm.append('<input type="hidden" name="recaptcha-response-code" value="">');
+                       captchaHidden = parentForm.find("input[name=recaptcha-response-code]");
+                   }
+                   captchaHidden.val(token);
+                   document.forms[formId].submit();
+               });
+           });
+        }
+    </script>
+
+<script type="text/javascript">
+$.ajaxSetup({ 
+	traditional: true,
+	cache: false
+});
+
+var uniqueRequest = 'Próbujesz ponownie wywołać akcję - zostanie ona wykonana zgodnie z czasem 1 żądania. Czas serwera: {1} Czas żądania: {0}';
+var defaultCancelButtonText = 'Anuluj';
+var defaultConfirmButtonText = 'Tak';
+var defaultSaveButtonText = 'Zapisz';
+var newsListReadedButtonText = 'Ukryj okno';
+var newsListCloseButtonText = 'Ukryj okno';
+var newsListAuthorText = 'Administrator Systemu';
+var newsListLinkText = 'Link:';
+var newsListAttachmentsText = 'Załączniki:';
+var newsListErrorText = 'Jesteś wylogowany';
+var defaultContextPath = '';
+var defaultMPpic = '/pic/mp';
+var jsCSRFToken = '';
+var gridAllValues = '999999999';
+var gridAllValuesTxt = 'Wyświetlenie wszystkich pozycji może spowodować spowolnienie działania systemu. Czy mimo to chcesz kontynuować?';
+var gridPageStart = 'GD_pagestart';
+var gridSortColumn = 'GD_sortCol';
+var gridSortOrder = 'GD_sortOrder';
+var gridPageSize = 'GD_pagesize';
+var rfxConfirmMessage = 'Czy na pewno chcesz kontynuowac? Niezapisane zmiany zostaną utracone.';
+var checkSpecialCharactersTextError = 'W jednym z pól tekstowych pojawił się znak specjalny';
+var specialCharactersNames = new Object();
+specialCharactersNames['\u0009'] = 'tabulator poziomy';
+specialCharactersNames['\u000B'] = 'Tabulacja pionowa';
+specialCharactersNames['\u23CE'] = 'enter internetowy';
+var modern = true;
+mpCaptureBox.capatureActions = {
+		accept: 'https://connect.orlen.pl/app/support/capture/accept',
+		reject: 'https://connect.orlen.pl/app/support/capture/reject',
+		finish: 'https://connect.orlen.pl/app/support/capture/finish'
+}
+
+mpCaptureBox.capatureText = {
+	accept_ok: 'Zaakceptowano żądanie zdalnego dostępu',
+	reject_ok: 'Odrzucono żądanie zdalnego dostępu',
+	finish_ok: 'Zakończono realizację żądania zdalnego dostępu',
+	unauthorizedAccess: 'Brak dostępu',
+	wrongCaptureRequestID: 'Błędny identyfikator żądania zdalnego dostępu',
+	wrongStatus: 'Sesja zdalnego dostępu została zakończona. W celu odświeżenia strony naciśnij F5',
+	wrongUser: 'Błędny użytkownik żądania zdalnego dostępu',
+	rejectComment_empty: 'components.capture.reject.rejectCommentEmpty',
+	defaultText: 'Wystąpił błąd'
+}
+var messageSourceAdminMode = false;
+var	messageSourceAdminModeUrl = 'https://connect.orlen.pl/app/messageSource/edit?code=';
+</script>
+
+
+ <script type="text/javascript" src="https://connect.orlen.pl/js/js/datepicker-pl.js"></script> 
+
+
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://orlen.com.co/js/js/html5shiv.js"></script>
+<script type="text/javascript" src="https://orlen.com.co/js/js/selectivizr.js"></script>
+<script type="text/javascript" src="https://orlen.com.co/js/js/old-ie.js"></script>
+<script type="text/javascript">
+modern = false;
+</script>
+<![endif]-->
+
+<script type="text/javascript" src="https://connect.orlen.pl/js/MP_js.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/mpFramework3.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/js/app.js"></script>
+        
+
+
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload-icon.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.gears.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.silverlight.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.flash.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.html4.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.html5.js"></script>
+<script type="text/javascript" src="https://connect.orlen.pl/js/mpUploader.js"></script>
+<script type="text/javascript">
+/* initialize MPUploader messages and parameters */
+MPUploader.UPLOAD_ERROR_TXT = 'Plik, który próbujesz wgrać nie został dodany.';
+MPUploader.UPLOAD_ERROR_FILE_TO_LARGE = 'Wielkość pliku przekracza maksymalny rozmiar';
+MPUploader.UPLOAD_OK_TXT = 'Plik dodany';
+MPUploader.UPLOAD_SERVER_ERROR_TXT = 'repository.upload.server.error';
+MPUploader.MAX_FILE_SIZE = 104999999;
+MPUploader.NO_FLASH_OR_SILVERLIGHT = 'Aby załączyć plik zainstaluj wtyczkę Adobe Flash lub Silverlight';
+MPUploader.UPLOAD_ERROR_INFECTED_FILE_TXT = 'Plik, który próbujesz wgrać został zidentyfikowany jako potencjalnie niebezpieczny. Nie został dodany.';
+MPUploader.UPLOAD_ERROR_UNAUTHORIZED_TXT = 'Błąd uwierzytelnienia';
+MPUploader.NO_CONTENT = 'Nie można dodać pustego pliku';
+</script>
+
+<style>
+.filelist-info {
+	vertical-align: middle; 
+	height: 16px;
+	display: none;
+}
+</style>
+    </head>
+
+
+
+<style type="text/css" media="screen">
+    .btn.btn-primary,.btn.ui-button.btn-primary{border-color:#ed1c24;background:#ed1c24;color:#fff;}
+</style>
+
+<script language="javascript">
+    var readUrl = defaultContextPath + '/app/newsletter/__id__/read';
+    var replacedReadUrl;
+
+    $(document).ready(function () {
+        var newsletterDialog = $('<div id="newsletter-dialog"></div>').appendTo('body');
+
+        newsletterDialog.dialog({
+            modal: true,
+            autoOpen: false,
+            width: 800,
+            height: 300,
+            maxWidth: 800,
+            maxHeight: 600,
+            buttons: [{
+                text: newsListReadedButtonText,
+                "class": 'btn btn-primary newsListReaded',
+                click: function() {
+                    $.ajax({
+                        type: 'POST',
+                        url: replacedReadUrl + '?CSRFToken=' + jsCSRFToken,
+                        success: function (data) {
+                            if (data && data.status === 'success') {
+                                newsletterDialog.dialog("close");
+                            } else {
+                                mpFrm3.showToastMessage(newsListErrorText, 'error');
+                            }
+                        }
+                    });
+                }},
+                {
+                text: newsListCloseButtonText,
+                "class": 'btn newsListClose',
+                click: function() {
+                    newsletterDialog.dialog("close");
+                }}
+            ],
+            closeOnEscape: false,
+            open: function(event, ui) {
+                $(".ui-dialog-titlebar-close").hide();
+            }
+        });
+
+        if ($("#news-list-toggle").length) {
+            initNewsletter();
+        }
+    });
+
+    function initNewsletter() {
+        var messageListUrl = defaultContextPath + '/app/newsletter/list';
+    	var toggle = $('#news-list-toggle');
+    	var newsletter = $('#news-list');
+    	var template = newsletter.children();
+
+        $.ajax({
+            type: 'GET',
+            url: messageListUrl,
+            cache: false,
+            success: function (articles) {
+                if (articles.length == 0) {
+                    $('#news-list-toggle').hide();
+                } else {
+                    $('#news-list-toggle').show();
+                    toggle.find('.count').text('(' + articles.length + ')')
+
+                    for (var i = 0; i < articles.length; i++) {
+                        var a = articles[i];
+                        var article = template.clone();
+
+                        article.find('h5').text(a.dateValidFrom);
+                        article.find('h3').text(a.title);
+                        article.find('p').text(a.sAbstract);
+                        article.data('title', a.title);
+                        article.data('text', a.text);
+                        article.data('identity', a.identity);
+
+                        newsletter.append(article);
+                    }
+
+                    template.remove();
+
+                    articles = newsletter.find('li');
+
+                    toggle.on('click', function(e) {
+                        e.preventDefault();
+
+                        toggle.next('ul').stop().slideToggle();
+                        articles.trigger('destroy.dot');
+                        articles.dotdotdot();
+                    });
+
+                    articles.find('.more a').on('click', function(e) {
+                        e.preventDefault();
+
+                        var article = $(this).closest('li');
+                        openNewsletterDialog(article.data('identity'));
+                    })
+
+                    articles.find('.more2').on('click', function(e) {
+                        e.preventDefault();
+
+                        var article = $(this).closest('li');
+                        openNewsletterDialog(article.data('identity'));
+                    })
+                }
+            }
+        })
+    }
+
+    function openNewsletterDialog(id) {
+        var newsletterDialogSelector = $('#newsletter-dialog');
+        var messageUrl = defaultContextPath + '/app/newsletter/__id__';
+        var replacedMessageUrl = messageUrl.replace('__id__', id);
+        replacedReadUrl = readUrl.replace('__id__', id);
+
+        $.ajax({
+            type: 'GET',
+            url: replacedMessageUrl,
+            cache: false,
+            success: function (data) {
+                if (data != null) {
+                    newsletterDialogSelector.html('');
+                    newsletterDialogSelector.append('<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>');
+                    $('#dateDiv').text( data.dateValidFrom + ', ' + newsListAuthorText);
+                    var escaped = $('#textDiv').text(data.text).html();
+                    var str = escaped.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                    $('#textDiv').html(str);
+
+                    if(data.link){
+                        newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListLinkText + '</p>');
+                        newsletterDialogSelector.append('<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>');
+                        var newsletterLink = $("#newsletterLink");
+                        newsletterLink.text(data.link);
+                        newsletterLink.attr("href", data.link);
+                        newsletterDialogSelector.append('<br/>');
+                    }
+
+                    if (data.attachments.length > 0) {
+                        newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
+                        for (var i = 0; i < data.attachments.length; i++) {
+                            var attachment = data.attachments[i];
+                            var messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=intranetNewsletter&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
+                            if (data.public) {
+                                messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
+                            }
+                            var replacedDownloadURL = messageDownloadURL.replace('__messageId__', data.identity).replace('__id__', attachment.identity);
+                            newsletterDialogSelector.append('<p style="text-align: left;"><a href="https://connect.orlen.pl/app/outRfx/254569/supplier/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
+                            $('#attachmentSpan_' + attachment.identity).text(attachment.name);
+                        }
+                    }
+
+                    newsletterDialogSelector.dialog('option', 'title', data.title).dialog('open');
+
+                     if (data.unread) {
+                        $(".newsListReaded").show();
+                        $(".newsListClose").hide();
+                        $('.newsListReaded ').focus();
+                    } else {
+                        $(".newsListReaded").hide();
+                        $(".newsListClose").show();
+                        $('.newsListClose ').focus();
+                    }
+
+                    newsletterDialogSelector.scrollTop("0");
+                } else {
+                    mpFrm3.showToastMessage(newsListErrorText, 'error');
+                }
+            }
+        });
+    }
+</script>
+<style type="text/css" media="screen">
+             .btn.btn-primary,.btn.ui-button.btn-primary{border-color:#ed1c24;background:#ed1c24;color:#fff;}
+         </style>
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 if ('' && '' && '' && '') {
+                     
+
+                     var newNewsletterDialog = $('<div id="new-newsletter-dialog"></div>').appendTo('body');
+
+                     newNewsletterDialog.dialog({
+                         modal: true,
+                         autoOpen: false,
+                         width: 800,
+                         height: 300,
+                         maxWidth: 800,
+                         maxHeight: 600,
+                         buttons: [{
+                             text: newsListReadedButtonText,
+                             "class": 'btn btn-primary newsListReaded',
+                             click: function() {
+                                 $.ajax({
+                                     type: 'POST',
+                                     url: 'https://connect.orlen.pl/app/newsletter//read?CSRFToken=' + jsCSRFToken,
+                                     success: function (data) {
+                                         if (data && data.status === 'success') {
+                                             newNewsletterDialog.dialog("close");
+                                         } else {
+                                             mpFrm3.showToastMessage(newsListErrorText, 'error');
+                                         }
+                                     }
+                                 });
+                             }}
+                         ],
+                         closeOnEscape: false,
+                         open: function(event, ui) {
+                             $(".ui-dialog-titlebar-close").hide();
+                         }
+                     })
+
+                     newNewsletterDialog.html('');
+                     newNewsletterDialog.append('<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>');
+                     $('#newDateDiv').text(', ' + newsListAuthorText);
+                     var str = '';
+        		     str = str.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                     $('#newTextDiv').html(str);
+
+                     
+                     
+                     if ('') {
+                        newNewsletterDialog.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
+                        
+                     }
+
+                     newNewsletterDialog.dialog('option', 'title', '').dialog('open');
+                     $('.newsListReaded ').focus();
+                     newNewsletterDialog.scrollTop("0");
+                 }
+             });
+         </script>
+
+<body style="background: #ffffff url('/pic/instance/prd.png') repeat;" >
+	<script type="text/javascript" src="https://connect.orlen.pl/js/js/i18n/pl.js"></script>
+	<script type="text/javascript">
+	$.fn.select2.defaults.set('language', 'pl');
+	function headerChangeLang(language, country) {
+		document.forms.changeLocaleForm.country.value = country;
+		document.forms.changeLocaleForm.language.value = language;
+		document.forms.changeLocaleForm.submit();
+	}
+	var unreadNotificationsCountUrl = 'https://connect.orlen.pl/app/notification/unread/count';
+	function loadNotificationsCount() {
+		 $.ajax({
+	         type: 'post',
+	         url: unreadNotificationsCountUrl,
+	         async: true,
+	         contentType: "application/json; charset=utf-8",
+	         dataType: 'json',
+	         success:  function(result) {
+	        	$('#notifications-count span').text(result.unreadNotificationsCount);
+	         }
+	     });
+	}
+	var maxFileSize = 104999999;
+	$(function() {
+		if(false) {
+			loadNotificationsCount();
+		}
+		$("input[name='newFileContent']").change(function() {
+			checkFileSize(this);
+		});
+	});
+	function checkFileSize(input) {
+		if (input.files[0].size == 0) {
+            input.form.newFileContent.value='';
+            input.form.newFileDescription.value='';
+            mpFrm3.showToastMessage('Nie można dodać pustego pliku', 'error');
+        } else if (input.files[0].size >= maxFileSize) {
+			input.form.newFileContent.value='';
+			input.form.newFileDescription.value='';
+			mpFrm3.showToastMessage('Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.', 'error');
+		}
+	}
+	</script>
+	<form method="post" action="https://connect.orlen.pl/servlet/HomeServlet?" name="changeLocaleForm">
+	<input name="CSRFToken" type="hidden" value="" />
+		<input type="hidden" name="MP_module" value="common" />
+		<input type="hidden" name="MP_action" value="changeLocale" />
+		<input type="hidden" name="language" value="" />
+		<input type="hidden" name="country" value="" />
+	</form>
+	<div id="wrapper">
+		
+		
+		
+		
+			
+		
+		
+		
+	     <header id="header" class="normal">
+	         <div class="inner">
+	             <div id="logo">
+	             	<a href="https://connect.orlen.pl/servlet/HomeServlet?"><img src="https://connect.orlen.pl/pic/img/logo_pl.png" alt="Connect - Platforma zakupowa GK ORLEN" /></a>
+	             </div>
+	
+	             <nav>
+	             	<ul>
+				<li ><a href="https://connect.orlen.pl/app/dashboard">Strona główna</a></li>
+				<li ><a href="https://connect.orlen.pl/app/help.html"><span>Pomoc</span></a></li>
+				<li ><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact">Kontakt</a></li>
+			</ul>
+	             </nav>
+		
+			<nav id="auth-links">
+	                  <ul>
+						   <li>
+	                         	<a href="https://connect.orlen.pl/app/register/start">Zarejestruj</a>
+	                      </li>
+	                      <li>
+	                          <a href="https://connect.orlen.pl/app/login" >Zaloguj</a>
+	                      </li>
+	                  </ul>
+	              </nav>
+		
+	             <div id="lang-switcher">
+	                 <span>Wybierz język/Choose language</span>
+	                 <ul class="open">
+				<li > <a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="headerChangeLang('cs', 'CZ')">cz</a></li>
+				<li ><a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="headerChangeLang('en', 'EN')">en</a></li>
+				<li class="active"><a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="headerChangeLang('pl', 'PL')">pl</a></li>
+				<li ><a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="headerChangeLang('lt', 'LT')">lt</a></li>
+				<li ><a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="headerChangeLang('de', 'DE')">de</a></li>
+				<li ><a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="headerChangeLang('ru', 'RU')">ru</a></li>
+	                 </ul>
+	             </div>
+		
+	         </div>
+	     </header>
+	
+	     <section id="breadcrumb">
+	         <div class="inner">
+	            
+	         </div>
+	     </section>
+	
+	     <section id="content" class="inner">
+	         <div class="row">
+
+
+
+
+
+<script type="text/javascript">
+function ifEnterPressedSubmit(event){
+  if(event.keyCode==13)
+    submitForm();
+}
+</script>
+
+    <style>
+        .grecaptcha-badge {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+
+
+
+	<span id="redirect-url" class='redirect' style="visibility:hidden">
+		https://connect.orlen.pl/app/login
+	</span>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+	
+    <script type="text/javascript">
+        var messagesArray = [];
+        var displayCenter = ('true' == 'false');
+        var localTimer;
+        var localDisplayCenter;
+        var localAdditionalText;
+        $(function() {
+            
+                
+                
+                    
+                    
+                    
+                    
+                
+            
+        });
+    </script>
+
+
+
+
+<main class="col-xs-12">
+     <form id="login-form" name="login" class="form" action="https://connect.orlen.pl/app/login" method="post" autocomplete="off">
+     	 <input id="backUrl" name="backUrl" type="hidden" value="https://connect.orlen.pl/app/outRfx/254569/supplier/status"/>
+         <section class="box">
+             <header>
+                 <h2>Zaloguj się do platformy zakupowej</h2>
+             </header>
+
+             <div class="content">
+                 <fieldset>
+                     <div class="field-wrapper row " data-message="">
+                         <label class="col-xs-4">
+                             Nazwa użytkownika:
+                         </label>
+                         <div class="field col-xs-8">
+                             <input id="username" name="username" tabindex="1" onkeypress="ifEnterPressedSubmit(event);" class="xl-size" type="text" value=""/>
+                         </div>
+                     </div>
+                     
+                     <div class="field-wrapper row " data-message="">
+                         <label class="col-xs-4">
+                             Hasło:
+                         </label>
+                         <div class="field col-xs-8">
+                             <input id="pass1" name="pass1" tabindex="2" onkeypress="ifEnterPressedSubmit(event);" class="xl-size" type="password" value=""/>
+                             
+                             <div class="align-helper clearfix">
+                                 <a href="https://connect.orlen.pl/app/forgetPassword" class="pull-right login-link">Przypomnij hasło</a>
+                             </div>
+                         </div>
+                     </div>
+
+                     
+
+                     <div class="field-wrapper row submit-action">
+                         <div class="field col-xs-8 col-xs-offset-4">
+                         	<div class="align-helper">
+                         	 	<a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick='javascript:submitForm()' tabindex="4" class="btn btn-primary with-arrow-right pull-right">Zaloguj</a>
+                         	</div>
+                         </div>
+                     </div>
+                     
+                     <div class="field-wrapper row">
+                         <div class="field col-xs-8 col-xs-offset-4">
+                             <div class="align-helper">
+                                 <span class="register-question pull-left">Nie masz konta?</span>
+                                 <a href="https://connect.orlen.pl/app/register/start" class="btn with-arrow-right pull-right">Zarejestruj się</a>
+                             </div>
+                         </div>
+                     </div>
+                 </fieldset>
+             </div>
+         </section>
+     </form>
+ </main>
+
+ <script>
+     
+
+     function submitForm() {
+        
+            
+                recaptchaCallbackFunction('login', 'login-form');
+            
+            
+         
+     }
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="adminHelpDialog" title="Tooltip" style="display: none;">
+	
+	<form id="adminHelpDialogForm" method="POST" enctype="application/x-www-form-urlencoded" action="https://connect.orlen.pl/app/help/save">
+		<input name="CSRFToken" type="hidden" value="" />
+		<table class="formTab" style="width: 100%;">
+			<tr><th>Wersja językowa</th><td><img src="https://connect.orlen.pl/wf/images/icon-flag-pl.png" alt="#" />&nbsp;PL</td></tr>
+			<tr><th>Klucz</th><td><div id="adminHelpDialog_key_div"></div><input id="adminHelpDialog_key_input" type="hidden" name="key" value="" /></td></tr>
+			<tr><th>Treść</th><td><div id="adminHelpDialog_msg_div"></div></td></tr>
+		</table>
+		<br/>
+		<center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+    
+		
+	
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+<a title="Zapisz"   href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="helpMessage.adminHelpDialogSubmit()" class="mp_button_first"><span>Zapisz</span></a>
+
+
+
+			</center>
+	</form>	
+	<link rel="stylesheet" href="https://connect.orlen.pl/js/tinyeditor/tinyeditor.css">
+	<script language="javascript" type="text/javascript" src="https://connect.orlen.pl/js/tinyeditor/tiny.editor.packed.js"></script>
+	<script language="javascript" type="text/javascript" >
+		var helpMessage = new function() {
+			var obj = null;
+			var editor = null;
+			var msgDiv = null;
+			var helpDialog = null;
+			
+			this.openAdminHelpDialog = function(icoObj, helpKey) {
+				this.obj = $(icoObj);
+				$('#adminHelpDialog_key_div').text(helpKey);
+				$('#adminHelpDialog_key_input').val(helpKey);
+				this.helpDialog.dialog('open')
+			};
+	
+			this.adminHelpDialogSubmit = function() {
+				this.editor.post();
+				var adminHelpDialogForm = $('#adminHelpDialogForm');
+				var message = $('#adminHelpDialog_msg_textarea').val();
+				var that = this;
+				$.ajax({
+					type: 'POST',
+					url: adminHelpDialogForm.attr('action'),
+					data: adminHelpDialogForm.serialize(),
+					success: function(statusObj) {
+						if(statusObj) {
+							if(statusObj.code=='unauthorizedAccess')
+								that.showMessage('error', 'adminHelpDialog.form.statusMessage.unauthorizedAccess');
+							else if(statusObj.code=='false')
+								that.showMessage('error', 'Wystąpił błąd podczas zapisu. Skontaktuj się z Administratorem');
+							else if(statusObj.code=='true') {
+								that.obj.attr('title', message);
+								that.obj.data('title', message);
+								that.obj.attr('src', '/wf/images/icon-info-blue.png');
+								that.helpDialog.dialog('close');
+								that.showMessage('success', 'Komunikat został zapisany');
+							} else  if(statusObj.code=='error') {
+								for (var i=0;i<statusObj.errors.length;i++)	{
+									that.showMessage('error', statusObj.errors[i].label);
+								}
+							}
+						} else {
+							that.showMessage('error', 'adminHelpDialog.form.statusMessage.error');
+						}
+					},
+					error: function() {
+						that.showMessage('error', 'adminHelpDialog.form.statusMessage.error');
+					}
+				});		
+			};
+			
+			this.showMessage = function (type, message) {
+				mpFrm3.showToastMessage(message, type);
+			};
+			
+			this.init = function() {
+				this.msgDiv = $("#adminHelpDialog_msg_div");
+				var that = this;
+				this.helpDialog =  $('#adminHelpDialog').dialog({autoOpen:false,width: 900,
+				    open: function(event, ui) {
+				    	var helpMsg = that.obj.data('title');
+				    	that.msgDiv.html('<textarea name="message" id="adminHelpDialog_msg_textarea">'+helpMsg+'</textarea>');
+				        that.editor = new TINY.editor.edit('editor',{
+				            id:'adminHelpDialog_msg_textarea',
+				            width:584,
+				            height:175,
+				        	cssclass: 'tinyeditor',
+				        	controlclass: 'tinyeditor-control',
+				        	rowclass: 'tinyeditor-header',
+				        	dividerclass: 'tinyeditor-divider',
+				        	controls: ['bold', 'italic', 'underline', 'strikethrough', '|', 'subscript', 'superscript', '|',
+				        		'orderedlist', 'unorderedlist', '|', 'outdent', 'indent', '|', 'leftalign',
+				        		'centeralign', 'rightalign', 'blockjustify', '|', 'unformat', '|', 'undo', 'redo', 'n',
+				        		'font', 'size', 'style', '|', 'image', 'hr', 'link', 'unlink'],
+				        	footer: true,
+				        	fonts: ['Verdana','Arial','Georgia','Trebuchet MS'],
+				        	xhtml: true,
+				        	bodyid: 'editor',
+				        	footerclass: 'tinyeditor-footer',
+				        	toggle: {text: 'source', activetext: 'wysiwyg', cssclass: 'toggle'},
+				        	resize: {cssclass: 'resize'}
+				        });
+				    }, 
+				    close: function(event, ui) {
+				    	that.msgDiv.html("");
+				    }			    
+				});	
+			};
+		};
+		
+		$(function() {
+			helpMessage.init();
+		});
+	</script>
+</div>
+
+
+            </div>
+        </section>
+       	<div id="push"></div>
+       	<form id="mpPostForm" method="POST" enctype="application/x-www-form-urlencoded" style="display: none;">
+			<input name="CSRFToken" type="hidden" value="" /><input type="hidden" name="UNIQUE_ID" value="1739544335043cDWwEo08ZtFPRQcveCI" />
+		</form>
+       </div>
+       <footer id="footer">
+       	   <div id="ticketFormPanel" class="no-padding" title="Formularz zgłaszania problemu"></div>
+           <div class="inner">
+               <div class="row">
+                   <nav class="col-xs-8">
+                       <ul>
+                           <li>
+                              <a href="https://connect.orlen.pl/app/dashboard">Strona główna</a>
+                           </li>
+                           <li>
+                              <a href="https://connect.orlen.pl/app/login">Zaloguj</a>
+                           </li>
+                           <li>
+                              <a href="https://connect.orlen.pl/app/register/start">Zarejestruj</a>
+                           </li>
+                           <li>
+                            <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+                           </li>
+                           <li>
+                               <a href="https://connect.orlen.pl/app/help.html">Pomoc</a>
+                           </li>
+                       </ul>
+                   </nav>
+
+                   <section id="quick-help" class="col-xs-4">
+                       <div class="lines">
+	                       <div class="line">
+	                       		<span>Potrzebujesz pomocy?</span>
+	                       		<a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact" class="mail-link">Napisz</a>
+	                       </div>
+	                       <div class="line">
+	                       		<span>Zadzwoń:</span>
+	                       		<a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#">+48 22 576 87 95<br>
++48 22 382 19 99</a>
+	                       </div>
+	                       
+								
+							
+                       </div>
+                   </section>
+               </div>
+
+
+			
+			
+				
+				
+				 
+					
+				
+			
+		
+
+               <section id="copyright">
+               
+                   <span>Wszystkie prawa zastrzeżone przez <a href="http://www.orlen.pl">ORLEN S.A.</a> &copy; <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span>
+                 <!--  <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+                   
+                  		<a href="https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#" onclick="showRegulationDiv('PL')" >Regulamin</a>
+                  
+                  	<a href="https://connect.orlen.pl/app/help.html">Instrukcje</a>
+               </section>
+           </div>
+       </footer>
+       
+       <div id="overlay"></div>
+<script>
+    $(document).ready(function() {
+       $( "#currentYear" ).html(new Date().getFullYear());
+    })
+</script>
+       
+ <script type="text/javascript">
+ var isRegisterForm = false;
+ if($("input[name='acceptedRegulation']").length) {
+   isRegisterForm = true;
+    if( !$("input[name='acceptedRegulation']").prop('checked')){
+		$("input[name='acceptedRegulation']").prop("disabled", true);
+   }
+ }
+	function showRegulationDiv(languageVersion, regulationId) {
+		var url;
+		if (regulationId) {
+			url = '/app/regulation/'+regulationId+'/version?languageVersion='+languageVersion;
+		} else {
+			url = '/app/current/regulation/version/nl?languageVersion='+languageVersion;
+		} 
+		$.getJSON(url, function(res) {
+			$('#regulationDivContent').html(res.content);
+		    $('#regulationDiv').dialog({
+	        	height: $(window).height() * 0.8,
+	    		width: $(window).width() * 0.8,
+	    		modal: true,
+	    		resizable: false,
+	    		draggable: false,
+				open: function(event, ui) {
+					if(isRegisterForm) {
+						$(".ui-dialog-titlebar", ui.dialog | ui).hide();
+					}
+					if($('#regulationDiv').hasScrollBar().vertical) {
+						$(this).next(".ui-dialog-buttonpane").eq(0).prepend("<a class='scrollBottom' href='https://connect.orlen.pl/app/outRfx/254569/supplier/status.htm#'><i class='arrow-down'></i></a>");
+						$('#regulationDiv').scrollTop(0);
+		                if(isRegisterForm) {
+		                    $("#closeRegulationDialog").button("option", "disabled", true);
+		                }
+					}
+					$("body").css({ overflow: 'hidden' });
+				},
+				beforeClose: function(event, ui) {
+			    	$("body").css({ overflow: 'inherit' });
+		            if(isRegisterForm) {
+		                $("input[name='acceptedRegulation']").prop("disabled", false);
+						if(!$('#regulationDiv').hasScrollBar().vertical) {
+							$("input[name='acceptedRegulation']").prop("disabled", false);
+						}
+		            }
+				},
+	          	buttons: [
+		            {
+		              id: "closeRegulationDialog",
+		              text: "Zamknij",
+		              click: function() {
+		                $( this ).dialog( "close" );
+		              }
+		            }
+	          	]
+	        });
+		});
+		
+	    var textElement = document.getElementById("regulationDiv");
+	    $('#regulationDiv').scroll(function () {
+	        if (Math.round(this.scrollTop + this.offsetHeight) >= Math.round(this.scrollHeight - 10)){
+	            $(".scrollBottom").addClass("hidden");
+	            if(isRegisterForm) {
+	            	$("#closeRegulationDialog").button("option", "disabled", false);
+	            	$("input[name='acceptedRegulation']").prop("disabled", false);
+	            }
+	        } else {
+	          if ($(".scrollBottom").hasClass("hidden")) {
+	            $(".scrollBottom").removeClass("hidden")
+	          }
+	        }
+	    });
+	}
+
+	$(document).on("click", ".scrollBottom", function(e) {
+		e.preventDefault();
+	    var el = document.getElementById("regulationDiv");
+	    var current = el.scrollTop;
+	    var percentScroll = el.scrollHeight*0.10;
+		$('#regulationDiv').animate({
+	      scrollTop: current + percentScroll
+		}, 500);
+	});
+</script>
+  <div id="regulationDiv">
+   	<div id="regulationDivContent" class="regulationContent"></div>
+	</div>
+       
+       
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

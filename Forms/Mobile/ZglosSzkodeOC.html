@@ -1,0 +1,1981 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>
+
+</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="format-detection" content="telephone=no" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Styles/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Styles/styles_ext_mobile.css?v=20250214" media='all' />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://opinie.orlen.pl/Images/orlenfavicon.ico" /><link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/Opinie.css?v=20250214" />
+    <link type="text/css" href="https://opinie.orlen.pl/Styles/select2.css?v=20250214" " rel="stylesheet" />
+
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/ua-parser.min.js?v=20250214"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/CheckVersionJS.js?v=20250214"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/fontawesome/all.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jqueryUiNew/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jqueryUiNew/jquery-ui.min.js"></script>
+    
+    
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.datepicker.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.menu.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.ui.autocomplete.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/validator-0.11.5.js"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/utils.js?v=20250214"></script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/select2.js?v=20250214"></script> 
+
+    
+    <title>Polityka prywatności i cookies - Orlen</title>
+
+    <script type="text/javascript">
+        if (top !== self)
+            top.location.replace(self.location.href);
+
+        $(function () {
+            preventEnterOnTextBoxes();
+        });
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                console.log("responsive");
+            } else {
+                x.className = "topnav";
+                console.log("desktop");
+            }
+        }
+
+        window.onload = function () {
+            hideBannerForNotyDuplikaty();
+        };
+
+        function hideBannerForNotyDuplikaty() {
+            var infoPageNumber = GetQueryStringParams('info');
+            if (infoPageNumber === "7") {
+                $('.banner').hide();
+            }
+        }
+    </script>
+</head>
+<body style="background-color: white !important; border-top: #D81E05 8px solid;">
+    <form name="aspnetForm" method="post" action="https://opinie.orlen.pl/Forms/Mobile/ZglosSzkodeOC.html" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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IE9STEVOIFMuQS4pLiBLb250YWt0b3dlICBudW1lcnkgIHRlbGVmb27Ds3cgIGRvICBhZG1pbmlzdHJhdG9yYSBkYW55Y2g6ICgyNCkgMjU2IDAwIDAwLCAoMjQpIDM2NSAwMCAwMCwgKDIyKSA3NzggMDAgMDAuPGJyIC8+DQogICAgICAgIDxiciAvPg0KICAgICAgICAyKSBPUkxFTiBTLkEuIHd5em5hY3p5xYIgSW5zcGVrdG9yYSBPY2hyb255IERhbnljaCwgeiBrdMOzcnltIG1vxbxlIHNpxJkgUGFuaS9QYW4gc2tvbnRha3Rvd2HEhyBwb3ByemV6IG5hc3TEmXB1asSFY3kgYWRyZXMgZW1haWw6IGRhbmVvc29ib3dlQG9ybGVuLnBsIGx1YiBwaXNlbW5pZSBuYSBhZHJlcyBuYXN6ZWogc2llZHppYnksIHdza2F6YW55IHcgcGt0IDEsIHogZG9waXNraWVtIOKAnkluc3Bla3RvciBPY2hyb255IERhbnljaOKAnS4gPGJyIC8+DQogICAgICAgIDxiciAvPg0KICAgICAgICAzKSBQYW5pL1BhbmEgZGFuZSBvc29ib3dlLCB3IHphbGXFvG5vxZtjaSBvZCByb2R6YWp1IHd5c3TEmXB1asSFY2VnbyB6ZGFyemVuaWEsIG1vZ8SFIGJ5xIcgcHJ6ZXR3YXJ6YW5lIHByemV6IE9STEVOIFMuQS4gdyBjZWxhY2g6PGJyIC8+DQogICAgICAgIDx1bD4NCiAgICAgICAgICAgIDxsaSA+cmVhbGl6YWNqaSBjenlubm/Fm2NpIHp3acSFemFueWNoIHplIHpnxYJvc3plbmllbSBzemtvZHkgZG8gemFrxYJhZHUgdWJlenBpZWN6ZcWEIHcgY2VsdSByb3pwb2N6xJljaWEgcHJvY2VkdXJ5IGplaiBsaWt3aWRhY2ppIG5hIHBvZHN0YXdpZSBwb2xpc3kgb2Rwb3dpZWR6aWFsbm/Fm2NpIGN5d2lsbmVqLDwvbGk+DQogICAgICAgICAgICA8bGkgPmRvY2hvZHplbmlhIGkgb2Jyb255IHcgcmF6aWUgemFpc3RuaWVuaWEgd3phamVtbnljaCByb3N6Y3plxYQuPC9saT4NCiAgICAgICAgPC91bD4NCiAgICAgICAgNCkgUG9kc3Rhd8SFIHByYXduxIUgcHJ6ZXR3YXJ6YW5pYSBwcnpleiBPUkxFTiBTLkEuIFBhbmkvUGFuYSBkYW55Y2ggb3NvYm93eWNoIHcgY2VsdSB3c2themFueW0gdyBwa3QuIDMgcG93ecW8ZWogamVzdDo8YnIgLz4NCiAgICAgICAgICAgIDx1bD4NCiAgICAgICAgICAgIDxsaSA+d3lwZcWCbmlhbmllIG9ib3dpxIV6a8OzdyBwcmF3bnljaCBjacSFxbzEhWN5Y2ggbmEgYWRtaW5pc3RyYXRvcnplICh6Z29kbmllIHogYXJ0LiA2IHVzdC4gMSBsaXQuIGMgUk9ETykgd3luaWthasSFY3ljaCBtLmluLiB6OjwvbGk+DQogICAgICAgICAgICAgICAgPHVsIHN0eWxlPSJwYWRkaW5nLWxlZnQ6IDI0cHg7Ij4NCiAgICAgICAgICAgICAgICAgICAgPGxpID51c3Rhd3kgbyB1YmV6cGllY3plbmlhY2ggb2Jvd2nEhXprb3d5Y2gsIFViZXpwaWVjemVuaW93eW0gRnVuZHVzenUgR3dhcmFuY3lqbnltIGkgUG9sc2tpbSBCaXVyemUgVWJlenBpZWN6eWNpZWxpIEtvbXVuaWthY3lqbnljaCBvcmF6IHVzdGF3eSBvIGR6aWHFgmFsbm/Fm2NpIHViZXpwaWVjemVuaW93ZWogaSByZWFzZWt1cmFjeWpuZWosPC9saT4NCiAgICAgICAgICAgICAgICAgICAgPGxpID5vcmR5bmFjamkgcG9kYXRrb3dlaiwgdXN0YXd5IG8gcG9kYXRrdSBvZCB0b3dhcsOzdyBpIHVzxYJ1ZywgdXN0YXd5IG8gcG9kYXRrdSBkb2Nob2Rvd3ltIG9kIG9zw7NiIHByYXdueWNoIHcgemFrcmVzaWUgendpxIV6YW55bSB6IHDFgmFjZW5pZW0gcG9kYXRrw7N3LCB3IHR5bSBwcm93YWR6ZW5pZW0gaSBwcnplY2hvd3l3YW5pZW0ga3NpxIVnIHBvZGF0a293eWNoIGkgZG9rdW1lbnTDs3cgendpxIV6YW55Y2ggeiBwcm93YWR6ZW5pZW0ga3NpxIVnIHBvZGF0a293eWNoIG9yYXogcHJ6ZWNob3d5d2FuaWVtIGRvd29kw7N3IGtzacSZZ293eWNoLDwvbGk+DQogICAgICAgICAgICAgICAgICAgIDxsaSA+cHJ6ZXBpc8OzdyBvIHJhY2h1bmtvd2/Fm2NpICh1c3Rhd2EgbyByYWNodW5rb3dvxZtjaSksPC9saT4NCiAgICAgICAgICAgICAgICAgICAgPGxpPnVzdGF3eSBvIHByemVjaXdkemlhxYJhbml1IHByYW5pdSBwaWVuacSZZHp5IHcgemFrcmVzaWUgd3lzdMSFcGllbmlhIGtvbmllY3pub8WbY2kgd3lwZcWCbmllbmlhIG9ib3dpxIV6a8OzdyBwcmF3bnljaCBjacSFxbzEhWN5Y2ggbmEgYWRtaW5pc3RyYXRvcnplIGpha28gaW5zdHl0dWNqaSBvYm93acSFemFuZWouPC9saT4NCiAgICAgICAgICAgICAgICA8L3VsPg0KICAgICAgICAgICAgPGxpID5wcmF3bmllIHV6YXNhZG5pb255IGludGVyZXMgT1JMRU4gUy5BLiAoemdvZG5pZSB6IGFydC4gNi4gdXN0LiAxIGxpdC4gZiBST0RPKSAtIHcgendpxIV6a3UgeiByZWFsaXphY2rEhSB6Z8WCb3N6ZW5pYSBzemtvZHkgdWJlenBpZWN6eWNpZWxvd2kgaSByb3pwb2N6xJljaWEgcHJvY2VkdXJ5IGplaiBsaWt3aWRhY2ppIG9yYXogemFwZXduaWVuaWEgbW/FvGxpd2/Fm2NpIGRvY2hvZHplbmlhIGkgb2Jyb255IHcgcmF6aWUgemFpc3RuaWVuaWEgd3phamVtbnljaCByb3N6Y3plxYQuPC9saT4NCiAgICAgICAgPC91bD4NCiAgICAgICAgNSkgUGFuaS9QYW5hIGRhbmUgb3NvYm93ZSBtb2fEhSBiecSHIHVqYXduaWFuZSBwcnpleiBPUkxFTiBTLkEuIHBvZG1pb3RvbSB6IG5pbSB3c3DDs8WCcHJhY3VqxIVjeW0gKG9kYmlvcmNvbSkgdyBzemN6ZWfDs2xub8WbY2kgdWJlenBpZWN6eWNpZWxvbSwgUHJvd2FkesSFY3ltIFN0YWNqZSBQYWxpdywgcG9kbWlvdG9tIMWbd2lhZGN6xIVjeW0gdXPFgnVnaSB6IHpha3Jlc3UgZG9yxJljemFuaWEga29yZXNwb25kZW5jamkgaSBwcnplc3nFgmVrLCBwb2RtaW90b20gxZt3aWFkY3rEhWN5bSB1c8WCdWdpIHJhY2h1bmtvd28ta3NpxJlnb3dlLCBwcmF3bmUgaSB3aW5keWthY3lqbmUsIHpham11asSFY3ltIHNpxJkgZG9yYWR6dHdlbSBwb2RhdGtvd3ltLCBwb2RtaW90b20gxZt3aWFkY3rEhWN5bSB1c8WCdWdpIGZha3R1cm93YW5pYSBvcmF6IGFyY2hpd2l6YWNqaSwgb3JnYW5vbSDFm2NpZ2FuaWEg4oCTIG5hIGljaCB3bmlvc2VrLjxiciAvPg0KICAgICAgICA8YnIgLz4NCiAgICAgICAgNikgUGFuaS9QYW5hIGRhbmUgb3NvYm93ZSBwcnpldHdhcnphbmUgYsSZZMSFIHByemV6IG9rcmVzIHd5bmlrYWrEhWN5IHogcG93c3plY2huaWUgb2Jvd2nEhXp1asSFY3ljaCBwcnplcGlzw7N3IHByYXdhIG9yYXogZG8gY3phc3Ugd3lnYcWbbmnEmWNpYSB3emFqZW1ueWNoIHJvc3pjemXFhC48YnIgLz4NCiAgICAgICAgPGJyIC8+DQogICAgICAgIDcpIFByenlzxYJ1Z3VqxIUgUGFuaS9QYW51IHByYXdhIHp3acSFemFuZSB6IHByemV0d2FyemFuaWVtIGRhbnljaCBvc29ib3d5Y2g6PGJyIC8+DQogICAgICAgIDx1bD4NCiAgICAgICAgICAgIDxsaSA+cHJhd28gZG9zdMSZcHUgZG8gdHJlxZtjaSBzd29pY2ggZGFueWNoIG9zb2Jvd3ljaCw8L2xpPg0KICAgICAgICAgICAgPGxpID5wcmF3byBkbyBpY2ggc3Byb3N0b3dhbmlhIChwb3ByYXdpYW5pYSwgdXp1cGXFgm5pYW5pYSBucC4gdyBzeXR1YWNqaSwgZ2R5IHPEhSBuaWVwcmF3aWTFgm93ZSBsdWIgbmlla29tcGxldG5lKSw8L2xpPg0KICAgICAgICAgICAgPGxpID5wcmF3byBkbyB1c3VuacSZY2lhIGRhbnljaCBvc29ib3d5Y2ggbHViIG9ncmFuaWN6ZW5pYSBwcnpldHdhcnphbmlhLCA8L2xpPg0KICAgICAgICAgICAgPGxpPnByYXdvIGRvIHByemVub3N6ZW5pYSBkYW55Y2ggZG8gaW5uZWdvIGFkbWluaXN0cmF0b3JhIHRqLiBwcmF3byBvdHJ6eW1hbmlhIG9kIE9STEVOIFMuQS4gZGFueWNoIG9zb2Jvd3ljaCwgdyB1c3RydWt0dXJ5em93YW55bSwgcG93c3plY2huaWUgdcW8eXdhbnltIGZvcm1hY2llIGluZm9ybWF0eWN6bnltIG5hZGFqxIVjeW0gc2nEmSBkbyBvZGN6eXR1IG1hc3p5bm93ZWdvLiBNb8W8ZSBQYW5pL1BhbiBwcnplc8WCYcSHIHRlIGRhbmUgaW5uZW11IGFkbWluaXN0cmF0b3Jvd2kgZGFueWNoIGx1YiB6YcW8xIVkYcSHLCBhYnkgT1JMRU4gUy5BLiBwcnplc8WCYcWCIGRhbmUgZG8gaW5uZWdvIGFkbWluaXN0cmF0b3JhLiBKZWRuYWvFvGUgT1JMRU4gUy5BLiB6cm9iaSB0bywgdHlsa28gamXFm2xpIHRha2llIHByemVzxYJhbmllIGplc3QgdGVjaG5pY3puaWUgbW/FvGxpd2UuIFByYXdvIGRvIHByemVub3N6ZW5pYSBkYW55Y2ggb3NvYm93eWNoIHByenlzxYJ1Z3VqZSB0eWxrbyBjbyBkbyBkYW55Y2gscHJ6ZXR3YXJ6YW55Y2ggbmEgcG9kc3Rhd2llIFBhbmkvUGFuYSB6Z29keSBsdWIgdW1vd3ksIDwvbGk+DQogICAgICAgICAgICA8bGk+cHJhd28gd25pZXNpZW5pYSBzcHJ6ZWNpd3Ug4oCTIHcgcHJ6eXBhZGthY2gsIGtpZWR5IE9STEVOIFMuQS4gcHJ6ZXR3YXJ6YSBQYW5pL1BhbmEgZGFuZSBvc29ib3dlIG5hIHBvZHN0YXdpZSBzd29qZWdvIHByYXduaWUgdXphc2FkbmlvbmVnbyBpbnRlcmVzdTsgc3ByemVjaXcgbW/FvG5hIHd5cmF6acSHIHplIHd6Z2zEmWR1IG5hIHN6Y3plZ8OzbG7EhSBzeXR1YWNqxJkgbmEgYWRyZXMgcG9jenR5IGVsZWt0cm9uaWN6bmVqOiBkYW5lb3NvYm93ZUBvcmxlbi5wbCBsdWIgYWRyZXMgc2llZHppYnkgT1JMRU4gUy5BLiB6IGRvcGlza2llbSDigJ5JbnNwZWt0b3IgT2Nocm9ueSBEYW55Y2jigJ0uPC9saT4NCiAgICAgICAgPC91bD4NCiAgICAgICAgUHJ6eXPFgnVndWplIFBhbnUvUGFuaSBwcmF3byBkbyB3bmllc2llbmlhIHNrYXJnaSBkbyBQcmV6ZXNhIFVyesSZZHUgT2Nocm9ueSBEYW55Y2ggT3NvYm93eWNoLmRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYHBSxjdGwwMCRjcGhNYWluJGNibE9TemtvZHppZVBvd2lhZG9taW9ubyRjaGIkMAUsY3RsMDAkY3BoTWFpbiRjYmxPU3prb2R6aWVQb3dpYWRvbWlvbm8kY2hiJDEFLGN0bDAwJGNwaE1haW4kY2JsT1N6a29kemllUG93aWFkb21pb25vJGNoYiQyBSxjdGwwMCRjcGhNYWluJGNibE9TemtvZHppZVBvd2lhZG9taW9ubyRjaGIkMwUsY3RsMDAkY3BoTWFpbiRjYmxPU3prb2R6aWVQb3dpYWRvbWlvbm8kY2hiJDMFImN0bDAwJGNwaE1haW4kY2hiV3lyYXphbVpnb2RlMSRjaGIFImN0bDAwJGNwaE1haW4kY2hiV3lyYXphbVpnb2RlMiRjaGIGgGB3rncyrbo05tYzmGtl6MlGcEtYeo/lTvILYyponQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://opinie.orlen.pl/WebResource.axd?d=Sr5XR1dbgWMhHdCYGZ6rsWRq4T0A7VN6_YwHsCm66L-1QTjFzMn5gbiHmu6qnbbazTD_dg9kftqrnig2VwltKzaGUn9P2BsCTBLrdRQKgcQ1&amp;t=637100538060000000" type="text/javascript"></script>
+
+
+<script src="https://opinie.orlen.pl/ScriptResource.axd?d=MS_z_l6JbA1nKatfsWHvwHS0P5BS89iqV1lpBNjGENhvuHMeKEKahMXq-y3OlDuzGo3UIlLhEQPxWt1chx-Z_I8-rivu90EIjPUFUCXKVusutMpV-TZNfrasVJXR1PFwlDBIGYQCjLGfAqHAPbvOlXYoWktEzHo2AFt2aB_o44Y1&amp;t=ffffffff93f2983c" type="text/javascript"></script>
+<script src="https://opinie.orlen.pl/ScriptResource.axd?d=CPTThhfT8z4TIFDA4dbhRCcmVkomg4npy0az0Gb1fgkOkEdZvISGztsqp90Lv6qMZzYYGJO7zNh6L8BEuExTXoAjYSWNxQtFWNI0qK2NHA7_8HvrpEAEiQL-W_C-thyuTR9xewVGk415fbdvJvwv-rmljo0LxCgbp8lgx4kAoaNJSwviw3SNhGuTFeS6S8kH0&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="https://opinie.orlen.pl/ScriptResource.axd?d=N1nw0uUHMfXeuZJ_srD2gyLlG_rrjkKSNIfkdKWoZkoT33kJWoGhbCCS_b4Hy0eiBVGPK610WgtXcREUseE72nvmBdmwbpyLMJ_oaCOq0n54nUr07hCtBCRcBxqbw_qBaYuZGxBUC9OUz2baMmn_NUy9vx0yhnSqFGbYOmoJtRb9K4OheE-D1aypkoW2gCfe0&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FC539986" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$cphMain$pnlDaneWlasciciela',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div class="container page-header" style="margin-top: -25px; padding-top: 0px; padding-left: 0px !important; padding-right: 0px !important;">
+            <header>
+                <div style="display: flex;">
+                    <div style="flex: 0 0 65%;">
+                        <a href="http://www.orlen.pl">
+                            <img src="https://opinie.orlen.pl/Images/logo_orlen.gif" style="height: 100px; width: 120px;" />
+                        </a>
+                        <div class="topBanner">
+                            <img src="https://opinie.orlen.pl/Images/baner.jpg" />
+                        </div>
+                    </div>
+                    <div style="flex: 1; width: 1%;">
+                        <div class="banner" style="display: inline-flex;">
+                            <div class="pull-left banner-image">
+                                <i class="fa fa-phone-alt fa-2x" style="color: #DD3126;"></i>
+                            </div>
+                            <div class="pull-right" style="background-color: #DD3126; width: 100%;">
+                                <p style="width: 100%; text-align: center; margin: 0px; padding: 0px; font-size: 20px;">
+                                    <b style="color: white;">801&nbsp;167&nbsp;536</b>
+                                </p>
+                                <p style="width: 100%; text-align: center; margin: 0px; padding: 0px; font-size: 20px;">
+                                    <b style="color: white;">502&nbsp;167&nbsp;536</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <aside class="nav-menu">
+                
+    <ul class="left-nav" style="cursor: pointer;">
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/Default">INFORMACJE</a>
+        </li>
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosProblem">ZGŁOSZENIA / SKARGI / REKLAMACJE</a>
+        </li>
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosProblem?pochwaly=true">POCHWAŁY</a>
+        </li>
+        <li class="active">
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosSzkodeOC">ZGŁOŚ SZKODĘ OC</a>
+        </li>
+        <li>
+            <a href="https://opinie.orlen.pl/Forms/Mobile/DuplikatyNotyKorygujace.html">DUPLIKATY
+               <br />
+                ZMIANY DANYCH NA FAKTURZE</a>
+        </li>
+        <li>
+            <a href="https://www.orlenpaczka.pl/reklamacje/">ORLEN Paczka</a>
+        </li>
+         <li>
+     
+    <a href="https://opinie.orlen.pl/Forms/Mobile/OrlenCharge">ORLEN CHARGE</a>
+</li>
+    </ul>
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger-menu-items">
+            <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosSzkodeOC" class="hamburger-menu-link">ZGŁOŚ SZKODĘ OC</a>
+        </div>
+    </div>
+
+            </aside>
+            <section id="main">
+                
+    <link rel="stylesheet" type="text/css" href="https://opinie.orlen.pl/Content/MapsModal.css" />
+    <!--<link rel="stylesheet" type="text/css" href="https://orlen.com.co/content/opinie-styles.min.css" />-->
+    <script type="text/javascript">
+
+        
+
+        var vwidth = 680;
+        var winw = window.innerWidth;
+        if (winw < 1200) {
+            vwidth = 680 - ((1200 - winw) * 0.57);
+        }
+        if (winw < 920 && winw > 800) {
+            vwidth = 530;
+        }
+        else if ((winw <= 800 && winw > 700) || winw <= 540) {
+            vwidth = winw - 40;
+        }
+        else if (winw <= 700 && winw > 540) {
+            vwidth = 480 + ((winw - 480) * 0.3);
+
+        }
+        if (vwidth > 680) {
+            vwidth = 680;
+        }
+
+
+
+        window.orlenPluginInit = function () {
+            ORLEN.init({
+                width: '100%',
+                debug: false,
+                isLocal: true,
+                showFilters: true,
+                showResultsList: true,
+                showGenericLink: false,
+                $webserviceURL: 'https://wsp.orlen.pl/plugin/GasStations.svc',
+                $imagesURL: 'https://wsp.orlen.pl/neworlen/img/',
+                $mainCssFile: '', // remove old css plugin file
+                customCssFile: 'https://wsp.orlen.pl/neworlen/css/redesign.css',
+                languageCode: 'PL',
+                key: 'DC30EA3C-D0D0-4D4C-B75E-A477BA236ACA', //'4e627d3f-346e-4835-b313-4be940d3e6c5'
+                infowindow: '<div class="infowindow"><div class="infowindow__logo"><img src="https://opinie.orlen.pl/Forms/Mobile/%7B0%7D" alt="{8}" /></div><div class="infowindow__dsc"><strong>{1}</strong><br>{2}<br>{3}<br>{4}<br><br>{5}<br><br>{6} {7}</div></div>',
+                template: 'DlaKierowcowTemplates',
+                showStationsOnInit: true,
+                showStationsCounter: true,
+                dragAndDropGMap: true,
+                newLook: true,
+                newLookRedesign: true,
+                network: [1346, 1455, 1456, 1453, 1454, 1452],
+                clickMarkerCallback: function (id) {
+                    wybierzStacje(id);
+                },
+                afterInit: function () {
+                    $('.route_find').trigger('click');
+
+                    setTimeout(function () { // workaround for showing a route informations
+                        $('.petrol_find').trigger('click');
+                    }, 500);
+                }
+            });
+            $("a[id$='lnkWybierzStacje']").attr("href", "#");
+            setTimeout(function () { $("a[id$='lnkWybierzStacje']").removeAttr("disabled"); }, 1000);
+        };
+
+        // plugin mapy
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            //js.src = "http://ws.orlen.pl/plugin/js/main.min.js";
+            js.src = "https://wsp.orlen.pl/plugin/js/main.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'orlen-plugin-js'));
+
+
+        var mapInitialized = false;
+        function loadMapPlugin() {
+            try {
+                if (!mapInitialized) {
+                    $('#orlen_plugin').show();
+                    ORLEN.map.refreshMap();
+                    setTimeout("attachEnter()", 1000);
+                    mapInitialized = true;
+                }
+            }
+            catch (e) { }
+        }
+        function attachEnter() {
+            if ($('#_orlen_petrol_search_input').length > 0) {
+                $('#_orlen_petrol_search_input').keydown(function (e) {
+                    if (e.keyCode == 10 || e.keyCode == 13) {
+                        e.preventDefault();
+                        $("#_orlen_petrol_search_button").click();
+                    }
+                });
+            }
+            else
+                setTimeout("attachEnter()", 1000);
+        }
+    
+
+        $(window).on('beforeunload', function () {
+            document.getElementById("ctl00_cphMain_btnZapisz").disabled = true;
+        });
+
+        var isSaving = false;
+        var autosaveTimeout = 300;
+        var IsExternalForm =true;
+        var maxUploadSize = Math.round(5000000 / 1024 / 1024);
+        var userRoleId = '-1';
+        var allowedExtensions = 'doc, docx, xls, xlsx, pdf, jpg, jpeg, gif, tiff, msg';
+    </script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/damageMobile.js?v=20250214"></script>
+    <div id="ctl00_cphMain_pForm" class="form-validation">
+	
+        <div class="form-title-row">
+            <h1>ZGŁOSZENIE SZKODY Z UBEZPIECZENIA ODPOWIEDZIALNOŚCI CYWILNEJ</h1>
+        </div>
+        <div class="flex-row">
+            <div>
+                <input type="hidden" name="ctl00$cphMain$hfdGuid" id="ctl00_cphMain_hfdGuid" />
+                
+                <div id="ctl00_cphMain_rblZgloszenieSzkody_pDiv" class="form-row form-input-name-row rb appClassrblZgloszenieSzkody">
+		
+    <label for="ctl00_cphMain_rblZgloszenieSzkody_rbl" class="flex-label">
+        <span id="ctl00_cphMain_rblZgloszenieSzkody_lbl">Zgłoszenie szkody</span>
+    </label>
+    <div class="flex-input-container" style="padding-top: 3px; height: 34px !important;">
+        <span id="ctl00_cphMain_rblZgloszenieSzkody_rbl" style="text-align: left; padding-left: 0px;"><span style="margin-right: 15px;"><input id="ctl00_cphMain_rblZgloszenieSzkody_rbl_0" type="radio" name="ctl00$cphMain$rblZgloszenieSzkody$rbl" value="1" checked="checked" /><label for="ctl00_cphMain_rblZgloszenieSzkody_rbl_0">pojazd lub mienie</label></span><span style="margin-right: 15px;"><input id="ctl00_cphMain_rblZgloszenieSzkody_rbl_1" type="radio" name="ctl00$cphMain$rblZgloszenieSzkody$rbl" value="0" /><label for="ctl00_cphMain_rblZgloszenieSzkody_rbl_1">na osobie</label></span></span>
+        <span id="ctl00_cphMain_rblZgloszenieSzkody_RFVal" class="form-invalid-data-info requiredMessage" style="color:Red;visibility:hidden;">Pole wymagane</span>
+    </div>
+
+	</div>
+
+            </div>
+        </div>
+        <div class="form-title-row">
+            <h1>Dane poszkodowanego / zgłaszającego</h1>
+        </div>
+        <div class="flex-row">
+            <div>
+                <div id="ctl00_cphMain_tbImieKlienta_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbImieKlienta_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbImieKlienta_lbl">Imię</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbImieKlienta$txt" type="text" maxlength="50" id="ctl00_cphMain_tbImieKlienta_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbImieKlienta_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbImieKlienta_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbImieKlienta_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbNazwiskoKlienta_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbNazwiskoKlienta_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNazwiskoKlienta_lbl">Nazwisko</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNazwiskoKlienta$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNazwiskoKlienta_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNazwiskoKlienta_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNazwiskoKlienta_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbNazwiskoKlienta_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbNazwaFirmy_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbNazwaFirmy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNazwaFirmy_lbl">Nazwa firmy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNazwaFirmy$txt" type="text" maxlength="100" id="ctl00_cphMain_tbNazwaFirmy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNazwaFirmy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNazwaFirmy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbNazwaFirmy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbAdresUlica_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAdresUlica_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAdresUlica_lbl">Ulica, numer domu i nr lokalu</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAdresUlica$txt" type="text" maxlength="100" id="ctl00_cphMain_tbAdresUlica_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAdresUlica_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAdresUlica_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbAdresUlica_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbAdresMiasto_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAdresMiasto_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAdresMiasto_lbl">Miejscowość</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAdresMiasto$txt" type="text" maxlength="100" id="ctl00_cphMain_tbAdresMiasto_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAdresMiasto_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAdresMiasto_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbAdresMiasto_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbAdresKodPocztowy_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAdresKodPocztowy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAdresKodPocztowy_lbl">Kod pocztowy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAdresKodPocztowy$txt" type="text" maxlength="10" id="ctl00_cphMain_tbAdresKodPocztowy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAdresKodPocztowy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAdresKodPocztowy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 10 znaków</span>
+        <span id="ctl00_cphMain_tbAdresKodPocztowy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbTelefonKlienta_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbTelefonKlienta_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbTelefonKlienta_lbl">Numer telefonu</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbTelefonKlienta$txt" type="text" maxlength="20" id="ctl00_cphMain_tbTelefonKlienta_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbTelefonKlienta_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbTelefonKlienta_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 20 znaków</span>
+        <span id="ctl00_cphMain_tbTelefonKlienta_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbEmailKlienta_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbEmailKlienta_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbEmailKlienta_lbl">E-mail</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbEmailKlienta$txt" type="text" maxlength="50" id="ctl00_cphMain_tbEmailKlienta_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbEmailKlienta_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbEmailKlienta_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbEmailKlienta_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+            </div>
+        </div>
+        <div id="daneWlasciciela">
+            <div id="ctl00_cphMain_pnlDaneWlasciciela">
+		
+                    <div class="flex-row" style="justify-content: center">
+                        <div>
+                            <input type="button" name="ctl00$cphMain$btnZgloszenieDotyczyPojazduDodaj" value="Zgłoszenie dotyczy pojazdu" onclick="javascript:__doPostBack(&#39;ctl00$cphMain$btnZgloszenieDotyczyPojazduDodaj&#39;,&#39;&#39;)" id="ctl00_cphMain_btnZgloszenieDotyczyPojazduDodaj" style="margin-top: 30px;" />
+                            
+                            
+                        </div>
+                    </div>
+                    
+                
+	</div>
+        </div>
+        <div class="form-title-row">
+            <h1>Miejsce powstania szkody<br />
+                (dane z paragonu lub faktury)</h1>
+        </div>
+        <div class="flex-row">
+            <div>
+                <div id="ctl00_cphMain_rblZgloszenieDotyczy_pDiv" class="form-row rb form-input-name-row appClassrblZgloszenieDotyczy">
+		
+    <label for="ctl00_cphMain_rblZgloszenieDotyczy_rbl" class="flex-label" style="width: 250px;">
+        <span id="ctl00_cphMain_rblZgloszenieDotyczy_lbl">Zgłoszenie dotyczy konkretnej stacji</span>
+    </label>
+    <div class="flex-label rbField" style="padding-top: 3px; height: 34px !important;">
+        <span id="ctl00_cphMain_rblZgloszenieDotyczy_rbl" style="text-align: left; padding-left: 0px;"><span style="padding-right: 10px;"><input id="ctl00_cphMain_rblZgloszenieDotyczy_rbl_0" type="radio" name="ctl00$cphMain$rblZgloszenieDotyczy$rbl" value="1" checked="checked" /><label for="ctl00_cphMain_rblZgloszenieDotyczy_rbl_0">tak</label></span><input id="ctl00_cphMain_rblZgloszenieDotyczy_rbl_1" type="radio" name="ctl00$cphMain$rblZgloszenieDotyczy$rbl" value="0" /><label for="ctl00_cphMain_rblZgloszenieDotyczy_rbl_1">nie</label></span>
+        <span id="ctl00_cphMain_rblZgloszenieDotyczy_RFVal" class="form-invalid-data-info requiredMessage" style="color:Red;visibility:hidden;">Pole wymagane</span>
+    </div>
+
+	</div>
+
+                <div style="display: none;" id="nrStacji">
+                    <a href="https://opinie.orlen.pl/Forms/Mobile/ZglosSzkodeOC.htm#" id="ctl00_cphMain_lnkWybierzStacje" disabled="disabled" style="text-align: right; display: block; float: right;" onclick="showModal(); showMap(); loadMapPlugin(); return false;">Wybierz stację z mapy</a>
+                    <div id="ctl00_cphMain_tbNrStacji_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbNrStacji_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbNrStacji_lbl">Nr stacji</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbNrStacji$txt" type="text" maxlength="50" id="ctl00_cphMain_tbNrStacji_txt" class="form-control input-lg tbNrSP" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbNrStacji_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbNrStacji_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;"></span>
+        <span id="ctl00_cphMain_tbNrStacji_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                </div>
+
+
+
+                <div id="ctl00_cphMain_tbDataZdarzenia_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbDataZdarzenia_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbDataZdarzenia_lbl">Data szkody</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbDataZdarzenia$txt" type="text" maxlength="50" id="ctl00_cphMain_tbDataZdarzenia_txt" class="form-control input-lg DateControl" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbDataZdarzenia_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbDataZdarzenia_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;"></span>
+        <span id="ctl00_cphMain_tbDataZdarzenia_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                
+
+<div class="form-group flex-field">
+    <label class="flex-label">
+        <span id="ctl00_cphMain_ddlDataZdarzenia_lbl">Godzina szkody</span>
+    </label>
+    <div class="flex-input-container">
+        <table>
+            <tr>
+                <td style="width: 50%;">
+                    <select name="ctl00$cphMain$ddlDataZdarzenia$ddlHours" id="ctl00_cphMain_ddlDataZdarzenia_ddlHours" class="disabledGrey form-style" style="width: 115px; margin-right: 50px; height: 35px; padding-bottom: 0px; padding-top: 0px;">
+		<option value="00:">00:</option>
+		<option value="01:">01:</option>
+		<option value="02:">02:</option>
+		<option value="03:">03:</option>
+		<option value="04:">04:</option>
+		<option value="05:">05:</option>
+		<option value="06:">06:</option>
+		<option value="07:">07:</option>
+		<option value="08:">08:</option>
+		<option value="09:">09:</option>
+		<option value="10:">10:</option>
+		<option value="11:">11:</option>
+		<option value="12:">12:</option>
+		<option value="13:">13:</option>
+		<option value="14:">14:</option>
+		<option selected="selected" value="15:">15:</option>
+		<option value="16:">16:</option>
+		<option value="17:">17:</option>
+		<option value="18:">18:</option>
+		<option value="19:">19:</option>
+		<option value="20:">20:</option>
+		<option value="21:">21:</option>
+		<option value="22:">22:</option>
+		<option value="23:">23:</option>
+
+	</select>
+                </td>
+                <td>
+                    <select name="ctl00$cphMain$ddlDataZdarzenia$ddlMinutes" id="ctl00_cphMain_ddlDataZdarzenia_ddlMinutes" class="disabledGrey form-style" style="width: 115px; margin-right: 25px; height: 35px; padding-bottom: 0px; padding-top: 0px;">
+		<option value="00">00</option>
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<option value="04">04</option>
+		<option value="05">05</option>
+		<option value="06">06</option>
+		<option value="07">07</option>
+		<option value="08">08</option>
+		<option value="09">09</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>
+		<option value="31">31</option>
+		<option value="32">32</option>
+		<option value="33">33</option>
+		<option value="34">34</option>
+		<option value="35">35</option>
+		<option value="36">36</option>
+		<option value="37">37</option>
+		<option value="38">38</option>
+		<option selected="selected" value="39">39</option>
+		<option value="40">40</option>
+		<option value="41">41</option>
+		<option value="42">42</option>
+		<option value="43">43</option>
+		<option value="44">44</option>
+		<option value="45">45</option>
+		<option value="46">46</option>
+		<option value="47">47</option>
+		<option value="48">48</option>
+		<option value="49">49</option>
+		<option value="50">50</option>
+		<option value="51">51</option>
+		<option value="52">52</option>
+		<option value="53">53</option>
+		<option value="54">54</option>
+		<option value="55">55</option>
+		<option value="56">56</option>
+		<option value="57">57</option>
+		<option value="58">58</option>
+		<option value="59">59</option>
+
+	</select>
+                </td>
+            </tr>
+        </table>
+        <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div id="mapsModal" class="modal">
+            <div id="trMapaStacji" class="modal-content">
+                <span class="close">&times;</span>
+                <div id="orlen_plugin" style="overflow: auto;"></div>
+            </div>
+        </div>
+        <div class="form-title-row">
+            <h1>Szczegóły szkody</h1>
+        </div>
+        <div class="flex-row">
+            <div>
+                <div id="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_lbl">Opis zdarzenia (okoliczności powstania szkody)</span>
+    </label>
+    <div class="flex-input-container">
+        <textarea name="ctl00$cphMain$tbOkolicznosciPowstaniaSzkody$txt" rows="5" cols="20" id="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_txt" class="form-control input-lg tbMultiLinetbMultiLine" autocomplete="off" style="resize: none;">
+</textarea>
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 1000 znaków</span>
+        <span id="ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_cblOSzkodziePowiadomiono_pDiv" class="form-row form-input-name-row cb appClasscblOSzkodziePowiadomiono" style="text-align: left !important;">
+		
+    <label for="ctl00_cphMain_cblOSzkodziePowiadomiono_chb" class="flex-label cbl-label">
+        <span id="ctl00_cphMain_cblOSzkodziePowiadomiono_lbl">O szkodzie powiadomiono</span>
+    </label>
+    <div class="flex-input-container cbl-div">
+        <table id="ctl00_cphMain_cblOSzkodziePowiadomiono_chb" class="oSzkodziePowiadomiono" border="0">
+			<tr>
+				<td><input id="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_0" type="checkbox" name="ctl00$cphMain$cblOSzkodziePowiadomiono$chb$0" /><label for="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_0">Stację paliw</label></td>
+			</tr><tr>
+				<td><input id="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_1" type="checkbox" name="ctl00$cphMain$cblOSzkodziePowiadomiono$chb$1" /><label for="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_1">Policję</label></td>
+			</tr><tr>
+				<td><input id="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_2" type="checkbox" name="ctl00$cphMain$cblOSzkodziePowiadomiono$chb$2" /><label for="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_2">Straż pożarną</label></td>
+			</tr><tr>
+				<td><input id="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_3" type="checkbox" name="ctl00$cphMain$cblOSzkodziePowiadomiono$chb$3" /><label for="ctl00_cphMain_cblOSzkodziePowiadomiono_chb_3">Inne</label></td>
+			</tr>
+		</table>
+          <label for="oSzkodziePowiadomionoEsrrorMessage" id="oSzkodziePowiadomionoEsrrorMessage1" class="error1" style="color:red;">Pole wymagane</label>
+    </div>
+    
+  
+
+	</div>
+
+                <div style="display: none;" id="oSzkodziePowiadomionoInne">
+                    <div id="ctl00_cphMain_tbOSzkodziePowiadomionoInne_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbOSzkodziePowiadomionoInne_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOSzkodziePowiadomionoInne_lbl"></span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbOSzkodziePowiadomionoInne$txt" type="text" maxlength="100" id="ctl00_cphMain_tbOSzkodziePowiadomionoInne_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="form-title-row">
+            <h1>Dane do korespondencji</h1>
+        </div>
+        <div class="flex-row">
+            <div>
+                <div id="ctl00_cphMain_rblDaneDoKorespondencji_pDiv" class="form-row form-input-name-row rb appClassrblDaneDoKorespondencji">
+		
+    <label for="ctl00_cphMain_rblDaneDoKorespondencji_rbl" class="flex-label">
+        
+    </label>
+    <div class="flex-input-container" style="padding-top: 8px;">
+        <span id="ctl00_cphMain_rblDaneDoKorespondencji_rbl" style="text-align: left; padding-left: 0px;"><span style="display: inline-flex;"><input id="ctl00_cphMain_rblDaneDoKorespondencji_rbl_0" type="radio" name="ctl00$cphMain$rblDaneDoKorespondencji$rbl" value="0" checked="checked" /><label for="ctl00_cphMain_rblDaneDoKorespondencji_rbl_0">Takie same jak zgłaszającego / poszkodowanego</label></span><span style="display: inline-flex;"><input id="ctl00_cphMain_rblDaneDoKorespondencji_rbl_1" type="radio" name="ctl00$cphMain$rblDaneDoKorespondencji$rbl" value="1" /><label for="ctl00_cphMain_rblDaneDoKorespondencji_rbl_1">Inne (jakie?)</label></span></span>
+        <span id="ctl00_cphMain_rblDaneDoKorespondencji_RFVal" class="form-invalid-data-info requiredMessage" style="color:Red;visibility:hidden;">Pole wymagane</span>
+    </div>
+
+	</div>
+
+                <div style="display: none; margin-top: 15px;" id="daneDoKorespondencji">
+                    <div id="ctl00_cphMain_tbKorespondencjaImie_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbKorespondencjaImie_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbKorespondencjaImie_lbl">Imię</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbKorespondencjaImie$txt" type="text" maxlength="50" id="ctl00_cphMain_tbKorespondencjaImie_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbKorespondencjaImie_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbKorespondencjaImie_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbKorespondencjaImie_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbKorespondencjaNazwisko_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbKorespondencjaNazwisko_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbKorespondencjaNazwisko_lbl">Nazwisko</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbKorespondencjaNazwisko$txt" type="text" maxlength="50" id="ctl00_cphMain_tbKorespondencjaNazwisko_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbKorespondencjaNazwisko_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbKorespondencjaNazwisko_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 50 znaków</span>
+        <span id="ctl00_cphMain_tbKorespondencjaNazwisko_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbKorespondencjaNazwaFirmy_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbKorespondencjaNazwaFirmy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbKorespondencjaNazwaFirmy_lbl">Nazwa firmy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbKorespondencjaNazwaFirmy$txt" type="text" maxlength="100" id="ctl00_cphMain_tbKorespondencjaNazwaFirmy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbKorespondencjaUlica_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbKorespondencjaUlica_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbKorespondencjaUlica_lbl">Ulica, numer domu i nr lokalu</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbKorespondencjaUlica$txt" type="text" maxlength="100" id="ctl00_cphMain_tbKorespondencjaUlica_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbKorespondencjaUlica_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbKorespondencjaUlica_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbKorespondencjaUlica_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbKorespondencjaMiasto_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbKorespondencjaMiasto_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbKorespondencjaMiasto_lbl">Miejscowość</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbKorespondencjaMiasto$txt" type="text" maxlength="100" id="ctl00_cphMain_tbKorespondencjaMiasto_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbKorespondencjaMiasto_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbKorespondencjaMiasto_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbKorespondencjaMiasto_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbKorespondencjaKodPocztowy_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbKorespondencjaKodPocztowy_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbKorespondencjaKodPocztowy_lbl">Kod pocztowy</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbKorespondencjaKodPocztowy$txt" type="text" maxlength="10" id="ctl00_cphMain_tbKorespondencjaKodPocztowy_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 10 znaków</span>
+        <span id="ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="danePojazdu">
+            <div class="form-title-row">
+                <h1>Dane pojazdu</h1>
+            </div>
+            <div class="flex-row">
+                <div>
+                    <div id="ctl00_cphMain_tbAutoNrRejestracyjny_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAutoNrRejestracyjny_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAutoNrRejestracyjny_lbl">Numer rejestracyjny</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAutoNrRejestracyjny$txt" type="text" maxlength="10" id="ctl00_cphMain_tbAutoNrRejestracyjny_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAutoNrRejestracyjny_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAutoNrRejestracyjny_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 10 znaków</span>
+        <span id="ctl00_cphMain_tbAutoNrRejestracyjny_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbAutoMarka_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAutoMarka_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAutoMarka_lbl">Marka</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAutoMarka$txt" type="text" maxlength="100" id="ctl00_cphMain_tbAutoMarka_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAutoMarka_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAutoMarka_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbAutoMarka_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbAutoModel_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAutoModel_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAutoModel_lbl">Model</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAutoModel$txt" type="text" maxlength="100" id="ctl00_cphMain_tbAutoModel_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAutoModel_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAutoModel_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbAutoModel_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbAutoRodzaj_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbAutoRodzaj_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbAutoRodzaj_lbl">Rodzaj</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbAutoRodzaj$txt" type="text" maxlength="100" id="ctl00_cphMain_tbAutoRodzaj_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbAutoRodzaj_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbAutoRodzaj_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbAutoRodzaj_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                    <div id="ctl00_cphMain_tbMiejsceOgledzinPojazdu_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbMiejsceOgledzinPojazdu_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbMiejsceOgledzinPojazdu_lbl">Miejsce oględzin pojazdu / mienia</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbMiejsceOgledzinPojazdu$txt" type="text" maxlength="100" id="ctl00_cphMain_tbMiejsceOgledzinPojazdu_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="form-title-row">
+            <h1>Pozostałe informacje</h1>
+        </div>
+        <div class="flex-row">
+            <div>
+                
+
+
+
+
+
+
+
+                <div id="ctl00_cphMain_tbSwiadkowie_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbSwiadkowie_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbSwiadkowie_lbl">Nazwiska i imiona świadków</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbSwiadkowie$txt" type="text" maxlength="100" id="ctl00_cphMain_tbSwiadkowie_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbSwiadkowie_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbSwiadkowie_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">W polu wprowadź maksimum 100 znaków</span>
+        <span id="ctl00_cphMain_tbSwiadkowie_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+                <div id="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_txt" class="flex-label">
+        <span id="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_lbl">Orientacyjna wysokość szkody / roszczenia (PLN)</span>
+    </label>
+    <div class="flex-input-container">
+        <input name="ctl00$cphMain$tbOrientacyjnaWysokoscSzkody$txt" type="text" maxlength="50" id="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_txt" class="form-control input-lg" autocomplete="off" style="resize: none;" />
+        <span class="form-invalid-data-sign"><i class="fa fa-times"></i></span>
+        <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+        <span id="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal" class="requiredMessage" style="color:Red;font-size:12px;display:none;">Pole wymagane</span>
+        <span id="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal" class="RegularExpressionValidatorVisible" style="color:Red;display:none;">Wartość pola '' powinna być liczbą</span>
+        <span id="ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal" class="" style="color:Red;display:none;"></span>
+    </div>
+    
+
+	</div>
+
+
+            </div>
+        </div>
+        <div class="flex-row">
+            <div>
+
+                <div id="ctl00_cphMain_chbWyrazamZgode1_pDiv" class="form-group flex-field">
+		
+    <label for="ctl00_cphMain_chbWyrazamZgode1_chb" class="flex-label">
+        Niniejszym udzielam ORLEN S.A. z siedzibą w Płocku, pełnomocnictwa do czynności zgłoszenia szkody w moim imieniu do Towarzystwa Ubezpieczeń i Reasekuracji Warta S.A. z siedzibą w Warszawie.
+    </label>
+    <div class="flex-input-container">
+        <input id="ctl00_cphMain_chbWyrazamZgode1_chb" type="checkbox" name="ctl00$cphMain$chbWyrazamZgode1$chb" />
+    </div>
+
+	</div>
+
+                <div id="ctl00_cphMain_chbWyrazamZgode2_pDiv" class="form-group flex-field">
+		
+    <style>
+        .clauseLabel {
+            font-weight: normal
+        }
+    </style>
+
+    <label for="ctl00_cphMain_chbWyrazamZgode2_chb" class="flex-label">
+        Zapoznałem/am się z klauzulą informacyjną,&nbsp;<a data-toggle="collapse" href="https://opinie.orlen.pl/Forms/Mobile/ZglosSzkodeOC.htm#WyrazamZgodeClause" style="display: inline;"><b>więcej...</b></a>
+    </label>
+    <div class="flex-input-container">
+        <input id="ctl00_cphMain_chbWyrazamZgode2_chb" type="checkbox" name="ctl00$cphMain$chbWyrazamZgode2$chb" />
+    </div>
+
+	</div>
+
+<div id="WyrazamZgodeClause" class="collapse">
+    <span id="ctl00_cphMain_chbWyrazamZgode2_klauzulaLabel" class="clauseLabel flex-label">Klauzula informacyjna zgodnie z art. 13 ust. 1 i ust. 2 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych \'RODO') informujemy:<br />
+        <br />
+        1) Administratorem Pani/Pana danych osobowych jest ORLEN S.A. z siedzibą w Płocku, ul. Chemików 7, 09-411 Płock (dalej: ORLEN S.A.). Kontaktowe  numery  telefonów  do  administratora danych: (24) 256 00 00, (24) 365 00 00, (22) 778 00 00.<br />
+        <br />
+        2) ORLEN S.A. wyznaczył Inspektora Ochrony Danych, z którym może się Pani/Pan skontaktować poprzez następujący adres email: daneosobowe@orlen.pl lub pisemnie na adres naszej siedziby, wskazany w pkt 1, z dopiskiem „Inspektor Ochrony Danych”. <br />
+        <br />
+        3) Pani/Pana dane osobowe, w zależności od rodzaju występującego zdarzenia, mogą być przetwarzane przez ORLEN S.A. w celach:<br />
+        <ul>
+            <li >realizacji czynności związanych ze zgłoszeniem szkody do zakładu ubezpieczeń w celu rozpoczęcia procedury jej likwidacji na podstawie polisy odpowiedzialności cywilnej,</li>
+            <li >dochodzenia i obrony w razie zaistnienia wzajemnych roszczeń.</li>
+        </ul>
+        4) Podstawą prawną przetwarzania przez ORLEN S.A. Pani/Pana danych osobowych w celu wskazanym w pkt. 3 powyżej jest:<br />
+            <ul>
+            <li >wypełnianie obowiązków prawnych ciążących na administratorze (zgodnie z art. 6 ust. 1 lit. c RODO) wynikających m.in. z:</li>
+                <ul style="padding-left: 24px;">
+                    <li >ustawy o ubezpieczeniach obowiązkowych, Ubezpieczeniowym Funduszu Gwarancyjnym i Polskim Biurze Ubezpieczycieli Komunikacyjnych oraz ustawy o działalności ubezpieczeniowej i reasekuracyjnej,</li>
+                    <li >ordynacji podatkowej, ustawy o podatku od towarów i usług, ustawy o podatku dochodowym od osób prawnych w zakresie związanym z płaceniem podatków, w tym prowadzeniem i przechowywaniem ksiąg podatkowych i dokumentów związanych z prowadzeniem ksiąg podatkowych oraz przechowywaniem dowodów księgowych,</li>
+                    <li >przepisów o rachunkowości (ustawa o rachunkowości),</li>
+                    <li>ustawy o przeciwdziałaniu praniu pieniędzy w zakresie wystąpienia konieczności wypełnienia obowiązków prawnych ciążących na administratorze jako instytucji obowiązanej.</li>
+                </ul>
+            <li >prawnie uzasadniony interes ORLEN S.A. (zgodnie z art. 6. ust. 1 lit. f RODO) - w związku z realizacją zgłoszenia szkody ubezpieczycielowi i rozpoczęcia procedury jej likwidacji oraz zapewnienia możliwości dochodzenia i obrony w razie zaistnienia wzajemnych roszczeń.</li>
+        </ul>
+        5) Pani/Pana dane osobowe mogą być ujawniane przez ORLEN S.A. podmiotom z nim współpracującym (odbiorcom) w szczególności ubezpieczycielom, Prowadzącym Stacje Paliw, podmiotom świadczącym usługi z zakresu doręczania korespondencji i przesyłek, podmiotom świadczącym usługi rachunkowo-księgowe, prawne i windykacyjne, zajmującym się doradztwem podatkowym, podmiotom świadczącym usługi fakturowania oraz archiwizacji, organom ścigania – na ich wniosek.<br />
+        <br />
+        6) Pani/Pana dane osobowe przetwarzane będą przez okres wynikający z powszechnie obowiązujących przepisów prawa oraz do czasu wygaśnięcia wzajemnych roszczeń.<br />
+        <br />
+        7) Przysługują Pani/Panu prawa związane z przetwarzaniem danych osobowych:<br />
+        <ul>
+            <li >prawo dostępu do treści swoich danych osobowych,</li>
+            <li >prawo do ich sprostowania (poprawiania, uzupełniania np. w sytuacji, gdy są nieprawidłowe lub niekompletne),</li>
+            <li >prawo do usunięcia danych osobowych lub ograniczenia przetwarzania, </li>
+            <li>prawo do przenoszenia danych do innego administratora tj. prawo otrzymania od ORLEN S.A. danych osobowych, w ustrukturyzowanym, powszechnie używanym formacie informatycznym nadającym się do odczytu maszynowego. Może Pani/Pan przesłać te dane innemu administratorowi danych lub zażądać, aby ORLEN S.A. przesłał dane do innego administratora. Jednakże ORLEN S.A. zrobi to, tylko jeśli takie przesłanie jest technicznie możliwe. Prawo do przenoszenia danych osobowych przysługuje tylko co do danych,przetwarzanych na podstawie Pani/Pana zgody lub umowy, </li>
+            <li>prawo wniesienia sprzeciwu – w przypadkach, kiedy ORLEN S.A. przetwarza Pani/Pana dane osobowe na podstawie swojego prawnie uzasadnionego interesu; sprzeciw można wyrazić ze względu na szczególną sytuację na adres poczty elektronicznej: daneosobowe@orlen.pl lub adres siedziby ORLEN S.A. z dopiskiem „Inspektor Ochrony Danych”.</li>
+        </ul>
+        Przysługuje Panu/Pani prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</span>
+</div>
+
+            </div>
+        </div>
+    
+</div>
+    <div id="NavigationButtons" style="text-align: right;">
+        <input type="submit" name="ctl00$cphMain$btnZapisz" value="Wyślij zgłoszenie" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphMain$btnZapisz&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_cphMain_btnZapisz" class="SubmitButton" />
+        
+    </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".tbNrSP").after($("#ctl00_cphMain_lnkWybierzStacje"));
+        });
+
+    </script>
+    
+
+
+
+    <script type="text/javascript">
+
+
+        function cblValid() {
+            if (jQuery("input[id*='cblOSzkodziePowiadomiono']:checked").length === 0) {
+                $('html, body').animate({ scrollTop: $("#ctl00_cphMain_cblOSzkodziePowiadomiono_chb").offset().top }, 200);
+
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script type="text/javascript" src="https://opinie.orlen.pl/Scripts/MapsModal.js?v=20250214"></script>
+
+                <noscript>
+                    <div style="text-align: center; color: red; font-weight: bold; font-size: medium; margin-top: 20px">
+                        Do pełnej funkcjonalności strony potrzebujesz włączonej obsługi skryptów.<br />
+                        Tu znajdziesz <a href="http://www.enable-javascript.com/pl/" target="_blank">instrukcje, które pozwolą Ci włączyć skrypty w Twojej przeglądarce</a>.
+                    </div>
+                </noscript>
+            </section>
+            <footer>
+                <div style="float: left; cursor: pointer;">
+                    <a href="https://opinie.orlen.pl/Forms/Mobile/PolitykaPrywatnosci">Polityka prywatności i cookies</a>
+                </div>
+            </footer>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_cphMain_rblZgloszenieSzkody_RFVal"), document.getElementById("ctl00_cphMain_tbImieKlienta_RFVal"), document.getElementById("ctl00_cphMain_tbImieKlienta_REVal"), document.getElementById("ctl00_cphMain_tbImieKlienta_RVal"), document.getElementById("ctl00_cphMain_tbNazwiskoKlienta_RFVal"), document.getElementById("ctl00_cphMain_tbNazwiskoKlienta_REVal"), document.getElementById("ctl00_cphMain_tbNazwiskoKlienta_RVal"), document.getElementById("ctl00_cphMain_tbNazwaFirmy_RFVal"), document.getElementById("ctl00_cphMain_tbNazwaFirmy_REVal"), document.getElementById("ctl00_cphMain_tbNazwaFirmy_RVal"), document.getElementById("ctl00_cphMain_tbAdresUlica_RFVal"), document.getElementById("ctl00_cphMain_tbAdresUlica_REVal"), document.getElementById("ctl00_cphMain_tbAdresUlica_RVal"), document.getElementById("ctl00_cphMain_tbAdresMiasto_RFVal"), document.getElementById("ctl00_cphMain_tbAdresMiasto_REVal"), document.getElementById("ctl00_cphMain_tbAdresMiasto_RVal"), document.getElementById("ctl00_cphMain_tbAdresKodPocztowy_RFVal"), document.getElementById("ctl00_cphMain_tbAdresKodPocztowy_REVal"), document.getElementById("ctl00_cphMain_tbAdresKodPocztowy_RVal"), document.getElementById("ctl00_cphMain_tbTelefonKlienta_RFVal"), document.getElementById("ctl00_cphMain_tbTelefonKlienta_REVal"), document.getElementById("ctl00_cphMain_tbTelefonKlienta_RVal"), document.getElementById("ctl00_cphMain_tbEmailKlienta_RFVal"), document.getElementById("ctl00_cphMain_tbEmailKlienta_REVal"), document.getElementById("ctl00_cphMain_tbEmailKlienta_RVal"), document.getElementById("ctl00_cphMain_rblZgloszenieDotyczy_RFVal"), document.getElementById("ctl00_cphMain_tbNrStacji_RFVal"), document.getElementById("ctl00_cphMain_tbNrStacji_REVal"), document.getElementById("ctl00_cphMain_tbNrStacji_RVal"), document.getElementById("ctl00_cphMain_tbDataZdarzenia_RFVal"), document.getElementById("ctl00_cphMain_tbDataZdarzenia_REVal"), document.getElementById("ctl00_cphMain_tbDataZdarzenia_RVal"), document.getElementById("ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal"), document.getElementById("ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal"), document.getElementById("ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal"), document.getElementById("ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal"), document.getElementById("ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal"), document.getElementById("ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal"), document.getElementById("ctl00_cphMain_rblDaneDoKorespondencji_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaImie_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaImie_REVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaImie_RVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaNazwisko_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaNazwisko_REVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaNazwisko_RVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaUlica_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaUlica_REVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaUlica_RVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaMiasto_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaMiasto_REVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaMiasto_RVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal"), document.getElementById("ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal"), document.getElementById("ctl00_cphMain_tbAutoNrRejestracyjny_RFVal"), document.getElementById("ctl00_cphMain_tbAutoNrRejestracyjny_REVal"), document.getElementById("ctl00_cphMain_tbAutoNrRejestracyjny_RVal"), document.getElementById("ctl00_cphMain_tbAutoMarka_RFVal"), document.getElementById("ctl00_cphMain_tbAutoMarka_REVal"), document.getElementById("ctl00_cphMain_tbAutoMarka_RVal"), document.getElementById("ctl00_cphMain_tbAutoModel_RFVal"), document.getElementById("ctl00_cphMain_tbAutoModel_REVal"), document.getElementById("ctl00_cphMain_tbAutoModel_RVal"), document.getElementById("ctl00_cphMain_tbAutoRodzaj_RFVal"), document.getElementById("ctl00_cphMain_tbAutoRodzaj_REVal"), document.getElementById("ctl00_cphMain_tbAutoRodzaj_RVal"), document.getElementById("ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal"), document.getElementById("ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal"), document.getElementById("ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal"), document.getElementById("ctl00_cphMain_tbSwiadkowie_RFVal"), document.getElementById("ctl00_cphMain_tbSwiadkowie_REVal"), document.getElementById("ctl00_cphMain_tbSwiadkowie_RVal"), document.getElementById("ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal"), document.getElementById("ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal"), document.getElementById("ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_cphMain_rblZgloszenieSzkody_RFVal = document.all ? document.all["ctl00_cphMain_rblZgloszenieSzkody_RFVal"] : document.getElementById("ctl00_cphMain_rblZgloszenieSzkody_RFVal");
+ctl00_cphMain_rblZgloszenieSzkody_RFVal.controltovalidate = "ctl00_cphMain_rblZgloszenieSzkody_rbl";
+ctl00_cphMain_rblZgloszenieSzkody_RFVal.enabled = "False";
+ctl00_cphMain_rblZgloszenieSzkody_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_rblZgloszenieSzkody_RFVal.initialvalue = "";
+var ctl00_cphMain_tbImieKlienta_RFVal = document.all ? document.all["ctl00_cphMain_tbImieKlienta_RFVal"] : document.getElementById("ctl00_cphMain_tbImieKlienta_RFVal");
+ctl00_cphMain_tbImieKlienta_RFVal.controltovalidate = "ctl00_cphMain_tbImieKlienta_txt";
+ctl00_cphMain_tbImieKlienta_RFVal.display = "Dynamic";
+ctl00_cphMain_tbImieKlienta_RFVal.enabled = "False";
+ctl00_cphMain_tbImieKlienta_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbImieKlienta_RFVal.initialvalue = "";
+var ctl00_cphMain_tbImieKlienta_REVal = document.all ? document.all["ctl00_cphMain_tbImieKlienta_REVal"] : document.getElementById("ctl00_cphMain_tbImieKlienta_REVal");
+ctl00_cphMain_tbImieKlienta_REVal.controltovalidate = "ctl00_cphMain_tbImieKlienta_txt";
+ctl00_cphMain_tbImieKlienta_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbImieKlienta_REVal.display = "Dynamic";
+ctl00_cphMain_tbImieKlienta_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbImieKlienta_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbImieKlienta_RVal = document.all ? document.all["ctl00_cphMain_tbImieKlienta_RVal"] : document.getElementById("ctl00_cphMain_tbImieKlienta_RVal");
+ctl00_cphMain_tbImieKlienta_RVal.controltovalidate = "ctl00_cphMain_tbImieKlienta_txt";
+ctl00_cphMain_tbImieKlienta_RVal.display = "Dynamic";
+ctl00_cphMain_tbImieKlienta_RVal.enabled = "False";
+ctl00_cphMain_tbImieKlienta_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbImieKlienta_RVal.maximumvalue = "";
+ctl00_cphMain_tbImieKlienta_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNazwiskoKlienta_RFVal = document.all ? document.all["ctl00_cphMain_tbNazwiskoKlienta_RFVal"] : document.getElementById("ctl00_cphMain_tbNazwiskoKlienta_RFVal");
+ctl00_cphMain_tbNazwiskoKlienta_RFVal.controltovalidate = "ctl00_cphMain_tbNazwiskoKlienta_txt";
+ctl00_cphMain_tbNazwiskoKlienta_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNazwiskoKlienta_RFVal.enabled = "False";
+ctl00_cphMain_tbNazwiskoKlienta_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNazwiskoKlienta_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNazwiskoKlienta_REVal = document.all ? document.all["ctl00_cphMain_tbNazwiskoKlienta_REVal"] : document.getElementById("ctl00_cphMain_tbNazwiskoKlienta_REVal");
+ctl00_cphMain_tbNazwiskoKlienta_REVal.controltovalidate = "ctl00_cphMain_tbNazwiskoKlienta_txt";
+ctl00_cphMain_tbNazwiskoKlienta_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbNazwiskoKlienta_REVal.display = "Dynamic";
+ctl00_cphMain_tbNazwiskoKlienta_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNazwiskoKlienta_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbNazwiskoKlienta_RVal = document.all ? document.all["ctl00_cphMain_tbNazwiskoKlienta_RVal"] : document.getElementById("ctl00_cphMain_tbNazwiskoKlienta_RVal");
+ctl00_cphMain_tbNazwiskoKlienta_RVal.controltovalidate = "ctl00_cphMain_tbNazwiskoKlienta_txt";
+ctl00_cphMain_tbNazwiskoKlienta_RVal.display = "Dynamic";
+ctl00_cphMain_tbNazwiskoKlienta_RVal.enabled = "False";
+ctl00_cphMain_tbNazwiskoKlienta_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNazwiskoKlienta_RVal.maximumvalue = "";
+ctl00_cphMain_tbNazwiskoKlienta_RVal.minimumvalue = "";
+var ctl00_cphMain_tbNazwaFirmy_RFVal = document.all ? document.all["ctl00_cphMain_tbNazwaFirmy_RFVal"] : document.getElementById("ctl00_cphMain_tbNazwaFirmy_RFVal");
+ctl00_cphMain_tbNazwaFirmy_RFVal.controltovalidate = "ctl00_cphMain_tbNazwaFirmy_txt";
+ctl00_cphMain_tbNazwaFirmy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNazwaFirmy_RFVal.enabled = "False";
+ctl00_cphMain_tbNazwaFirmy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNazwaFirmy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNazwaFirmy_REVal = document.all ? document.all["ctl00_cphMain_tbNazwaFirmy_REVal"] : document.getElementById("ctl00_cphMain_tbNazwaFirmy_REVal");
+ctl00_cphMain_tbNazwaFirmy_REVal.controltovalidate = "ctl00_cphMain_tbNazwaFirmy_txt";
+ctl00_cphMain_tbNazwaFirmy_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbNazwaFirmy_REVal.display = "Dynamic";
+ctl00_cphMain_tbNazwaFirmy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNazwaFirmy_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbNazwaFirmy_RVal = document.all ? document.all["ctl00_cphMain_tbNazwaFirmy_RVal"] : document.getElementById("ctl00_cphMain_tbNazwaFirmy_RVal");
+ctl00_cphMain_tbNazwaFirmy_RVal.controltovalidate = "ctl00_cphMain_tbNazwaFirmy_txt";
+ctl00_cphMain_tbNazwaFirmy_RVal.display = "Dynamic";
+ctl00_cphMain_tbNazwaFirmy_RVal.enabled = "False";
+ctl00_cphMain_tbNazwaFirmy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNazwaFirmy_RVal.maximumvalue = "";
+ctl00_cphMain_tbNazwaFirmy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAdresUlica_RFVal = document.all ? document.all["ctl00_cphMain_tbAdresUlica_RFVal"] : document.getElementById("ctl00_cphMain_tbAdresUlica_RFVal");
+ctl00_cphMain_tbAdresUlica_RFVal.controltovalidate = "ctl00_cphMain_tbAdresUlica_txt";
+ctl00_cphMain_tbAdresUlica_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAdresUlica_RFVal.enabled = "False";
+ctl00_cphMain_tbAdresUlica_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresUlica_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAdresUlica_REVal = document.all ? document.all["ctl00_cphMain_tbAdresUlica_REVal"] : document.getElementById("ctl00_cphMain_tbAdresUlica_REVal");
+ctl00_cphMain_tbAdresUlica_REVal.controltovalidate = "ctl00_cphMain_tbAdresUlica_txt";
+ctl00_cphMain_tbAdresUlica_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbAdresUlica_REVal.display = "Dynamic";
+ctl00_cphMain_tbAdresUlica_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresUlica_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbAdresUlica_RVal = document.all ? document.all["ctl00_cphMain_tbAdresUlica_RVal"] : document.getElementById("ctl00_cphMain_tbAdresUlica_RVal");
+ctl00_cphMain_tbAdresUlica_RVal.controltovalidate = "ctl00_cphMain_tbAdresUlica_txt";
+ctl00_cphMain_tbAdresUlica_RVal.display = "Dynamic";
+ctl00_cphMain_tbAdresUlica_RVal.enabled = "False";
+ctl00_cphMain_tbAdresUlica_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresUlica_RVal.maximumvalue = "";
+ctl00_cphMain_tbAdresUlica_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAdresMiasto_RFVal = document.all ? document.all["ctl00_cphMain_tbAdresMiasto_RFVal"] : document.getElementById("ctl00_cphMain_tbAdresMiasto_RFVal");
+ctl00_cphMain_tbAdresMiasto_RFVal.controltovalidate = "ctl00_cphMain_tbAdresMiasto_txt";
+ctl00_cphMain_tbAdresMiasto_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAdresMiasto_RFVal.enabled = "False";
+ctl00_cphMain_tbAdresMiasto_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresMiasto_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAdresMiasto_REVal = document.all ? document.all["ctl00_cphMain_tbAdresMiasto_REVal"] : document.getElementById("ctl00_cphMain_tbAdresMiasto_REVal");
+ctl00_cphMain_tbAdresMiasto_REVal.controltovalidate = "ctl00_cphMain_tbAdresMiasto_txt";
+ctl00_cphMain_tbAdresMiasto_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbAdresMiasto_REVal.display = "Dynamic";
+ctl00_cphMain_tbAdresMiasto_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresMiasto_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbAdresMiasto_RVal = document.all ? document.all["ctl00_cphMain_tbAdresMiasto_RVal"] : document.getElementById("ctl00_cphMain_tbAdresMiasto_RVal");
+ctl00_cphMain_tbAdresMiasto_RVal.controltovalidate = "ctl00_cphMain_tbAdresMiasto_txt";
+ctl00_cphMain_tbAdresMiasto_RVal.display = "Dynamic";
+ctl00_cphMain_tbAdresMiasto_RVal.enabled = "False";
+ctl00_cphMain_tbAdresMiasto_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresMiasto_RVal.maximumvalue = "";
+ctl00_cphMain_tbAdresMiasto_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAdresKodPocztowy_RFVal = document.all ? document.all["ctl00_cphMain_tbAdresKodPocztowy_RFVal"] : document.getElementById("ctl00_cphMain_tbAdresKodPocztowy_RFVal");
+ctl00_cphMain_tbAdresKodPocztowy_RFVal.controltovalidate = "ctl00_cphMain_tbAdresKodPocztowy_txt";
+ctl00_cphMain_tbAdresKodPocztowy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAdresKodPocztowy_RFVal.enabled = "False";
+ctl00_cphMain_tbAdresKodPocztowy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresKodPocztowy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAdresKodPocztowy_REVal = document.all ? document.all["ctl00_cphMain_tbAdresKodPocztowy_REVal"] : document.getElementById("ctl00_cphMain_tbAdresKodPocztowy_REVal");
+ctl00_cphMain_tbAdresKodPocztowy_REVal.controltovalidate = "ctl00_cphMain_tbAdresKodPocztowy_txt";
+ctl00_cphMain_tbAdresKodPocztowy_REVal.errormessage = "W polu wprowadź maksimum 10 znaków";
+ctl00_cphMain_tbAdresKodPocztowy_REVal.display = "Dynamic";
+ctl00_cphMain_tbAdresKodPocztowy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresKodPocztowy_REVal.validationexpression = "^[\\s\\S]{0,10}$";
+var ctl00_cphMain_tbAdresKodPocztowy_RVal = document.all ? document.all["ctl00_cphMain_tbAdresKodPocztowy_RVal"] : document.getElementById("ctl00_cphMain_tbAdresKodPocztowy_RVal");
+ctl00_cphMain_tbAdresKodPocztowy_RVal.controltovalidate = "ctl00_cphMain_tbAdresKodPocztowy_txt";
+ctl00_cphMain_tbAdresKodPocztowy_RVal.display = "Dynamic";
+ctl00_cphMain_tbAdresKodPocztowy_RVal.enabled = "False";
+ctl00_cphMain_tbAdresKodPocztowy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAdresKodPocztowy_RVal.maximumvalue = "";
+ctl00_cphMain_tbAdresKodPocztowy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbTelefonKlienta_RFVal = document.all ? document.all["ctl00_cphMain_tbTelefonKlienta_RFVal"] : document.getElementById("ctl00_cphMain_tbTelefonKlienta_RFVal");
+ctl00_cphMain_tbTelefonKlienta_RFVal.controltovalidate = "ctl00_cphMain_tbTelefonKlienta_txt";
+ctl00_cphMain_tbTelefonKlienta_RFVal.display = "Dynamic";
+ctl00_cphMain_tbTelefonKlienta_RFVal.enabled = "False";
+ctl00_cphMain_tbTelefonKlienta_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbTelefonKlienta_RFVal.initialvalue = "";
+var ctl00_cphMain_tbTelefonKlienta_REVal = document.all ? document.all["ctl00_cphMain_tbTelefonKlienta_REVal"] : document.getElementById("ctl00_cphMain_tbTelefonKlienta_REVal");
+ctl00_cphMain_tbTelefonKlienta_REVal.controltovalidate = "ctl00_cphMain_tbTelefonKlienta_txt";
+ctl00_cphMain_tbTelefonKlienta_REVal.errormessage = "W polu wprowadź maksimum 20 znaków";
+ctl00_cphMain_tbTelefonKlienta_REVal.display = "Dynamic";
+ctl00_cphMain_tbTelefonKlienta_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbTelefonKlienta_REVal.validationexpression = "^[\\s\\S]{0,20}$";
+var ctl00_cphMain_tbTelefonKlienta_RVal = document.all ? document.all["ctl00_cphMain_tbTelefonKlienta_RVal"] : document.getElementById("ctl00_cphMain_tbTelefonKlienta_RVal");
+ctl00_cphMain_tbTelefonKlienta_RVal.controltovalidate = "ctl00_cphMain_tbTelefonKlienta_txt";
+ctl00_cphMain_tbTelefonKlienta_RVal.display = "Dynamic";
+ctl00_cphMain_tbTelefonKlienta_RVal.enabled = "False";
+ctl00_cphMain_tbTelefonKlienta_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbTelefonKlienta_RVal.maximumvalue = "";
+ctl00_cphMain_tbTelefonKlienta_RVal.minimumvalue = "";
+var ctl00_cphMain_tbEmailKlienta_RFVal = document.all ? document.all["ctl00_cphMain_tbEmailKlienta_RFVal"] : document.getElementById("ctl00_cphMain_tbEmailKlienta_RFVal");
+ctl00_cphMain_tbEmailKlienta_RFVal.controltovalidate = "ctl00_cphMain_tbEmailKlienta_txt";
+ctl00_cphMain_tbEmailKlienta_RFVal.display = "Dynamic";
+ctl00_cphMain_tbEmailKlienta_RFVal.enabled = "False";
+ctl00_cphMain_tbEmailKlienta_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbEmailKlienta_RFVal.initialvalue = "";
+var ctl00_cphMain_tbEmailKlienta_REVal = document.all ? document.all["ctl00_cphMain_tbEmailKlienta_REVal"] : document.getElementById("ctl00_cphMain_tbEmailKlienta_REVal");
+ctl00_cphMain_tbEmailKlienta_REVal.controltovalidate = "ctl00_cphMain_tbEmailKlienta_txt";
+ctl00_cphMain_tbEmailKlienta_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbEmailKlienta_REVal.display = "Dynamic";
+ctl00_cphMain_tbEmailKlienta_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbEmailKlienta_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbEmailKlienta_RVal = document.all ? document.all["ctl00_cphMain_tbEmailKlienta_RVal"] : document.getElementById("ctl00_cphMain_tbEmailKlienta_RVal");
+ctl00_cphMain_tbEmailKlienta_RVal.controltovalidate = "ctl00_cphMain_tbEmailKlienta_txt";
+ctl00_cphMain_tbEmailKlienta_RVal.display = "Dynamic";
+ctl00_cphMain_tbEmailKlienta_RVal.enabled = "False";
+ctl00_cphMain_tbEmailKlienta_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbEmailKlienta_RVal.maximumvalue = "";
+ctl00_cphMain_tbEmailKlienta_RVal.minimumvalue = "";
+var ctl00_cphMain_rblZgloszenieDotyczy_RFVal = document.all ? document.all["ctl00_cphMain_rblZgloszenieDotyczy_RFVal"] : document.getElementById("ctl00_cphMain_rblZgloszenieDotyczy_RFVal");
+ctl00_cphMain_rblZgloszenieDotyczy_RFVal.controltovalidate = "ctl00_cphMain_rblZgloszenieDotyczy_rbl";
+ctl00_cphMain_rblZgloszenieDotyczy_RFVal.enabled = "False";
+ctl00_cphMain_rblZgloszenieDotyczy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_rblZgloszenieDotyczy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNrStacji_RFVal = document.all ? document.all["ctl00_cphMain_tbNrStacji_RFVal"] : document.getElementById("ctl00_cphMain_tbNrStacji_RFVal");
+ctl00_cphMain_tbNrStacji_RFVal.controltovalidate = "ctl00_cphMain_tbNrStacji_txt";
+ctl00_cphMain_tbNrStacji_RFVal.display = "Dynamic";
+ctl00_cphMain_tbNrStacji_RFVal.enabled = "False";
+ctl00_cphMain_tbNrStacji_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbNrStacji_RFVal.initialvalue = "";
+var ctl00_cphMain_tbNrStacji_REVal = document.all ? document.all["ctl00_cphMain_tbNrStacji_REVal"] : document.getElementById("ctl00_cphMain_tbNrStacji_REVal");
+ctl00_cphMain_tbNrStacji_REVal.controltovalidate = "ctl00_cphMain_tbNrStacji_txt";
+ctl00_cphMain_tbNrStacji_REVal.display = "Dynamic";
+ctl00_cphMain_tbNrStacji_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbNrStacji_REVal.validationexpression = "^[0-9]*$";
+var ctl00_cphMain_tbNrStacji_RVal = document.all ? document.all["ctl00_cphMain_tbNrStacji_RVal"] : document.getElementById("ctl00_cphMain_tbNrStacji_RVal");
+ctl00_cphMain_tbNrStacji_RVal.controltovalidate = "ctl00_cphMain_tbNrStacji_txt";
+ctl00_cphMain_tbNrStacji_RVal.display = "Dynamic";
+ctl00_cphMain_tbNrStacji_RVal.enabled = "False";
+ctl00_cphMain_tbNrStacji_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbNrStacji_RVal.maximumvalue = "";
+ctl00_cphMain_tbNrStacji_RVal.minimumvalue = "";
+var ctl00_cphMain_tbDataZdarzenia_RFVal = document.all ? document.all["ctl00_cphMain_tbDataZdarzenia_RFVal"] : document.getElementById("ctl00_cphMain_tbDataZdarzenia_RFVal");
+ctl00_cphMain_tbDataZdarzenia_RFVal.controltovalidate = "ctl00_cphMain_tbDataZdarzenia_txt";
+ctl00_cphMain_tbDataZdarzenia_RFVal.display = "Dynamic";
+ctl00_cphMain_tbDataZdarzenia_RFVal.enabled = "False";
+ctl00_cphMain_tbDataZdarzenia_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbDataZdarzenia_RFVal.initialvalue = "";
+var ctl00_cphMain_tbDataZdarzenia_REVal = document.all ? document.all["ctl00_cphMain_tbDataZdarzenia_REVal"] : document.getElementById("ctl00_cphMain_tbDataZdarzenia_REVal");
+ctl00_cphMain_tbDataZdarzenia_REVal.controltovalidate = "ctl00_cphMain_tbDataZdarzenia_txt";
+ctl00_cphMain_tbDataZdarzenia_REVal.display = "Dynamic";
+ctl00_cphMain_tbDataZdarzenia_REVal.enabled = "False";
+ctl00_cphMain_tbDataZdarzenia_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+var ctl00_cphMain_tbDataZdarzenia_RVal = document.all ? document.all["ctl00_cphMain_tbDataZdarzenia_RVal"] : document.getElementById("ctl00_cphMain_tbDataZdarzenia_RVal");
+ctl00_cphMain_tbDataZdarzenia_RVal.controltovalidate = "ctl00_cphMain_tbDataZdarzenia_txt";
+ctl00_cphMain_tbDataZdarzenia_RVal.display = "Dynamic";
+ctl00_cphMain_tbDataZdarzenia_RVal.enabled = "False";
+ctl00_cphMain_tbDataZdarzenia_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbDataZdarzenia_RVal.maximumvalue = "";
+ctl00_cphMain_tbDataZdarzenia_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal = document.all ? document.all["ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal"] : document.getElementById("ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal");
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal.controltovalidate = "ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_txt";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal.enabled = "False";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal = document.all ? document.all["ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal"] : document.getElementById("ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal");
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal.controltovalidate = "ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_txt";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal.errormessage = "W polu wprowadź maksimum 1000 znaków";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal.display = "Dynamic";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal.validationexpression = "^[\\s\\S]{0,1000}$";
+var ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal = document.all ? document.all["ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal"] : document.getElementById("ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal");
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal.controltovalidate = "ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_txt";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal.display = "Dynamic";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal.enabled = "False";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal.maximumvalue = "";
+ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal = document.all ? document.all["ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal"] : document.getElementById("ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal");
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal.controltovalidate = "ctl00_cphMain_tbOSzkodziePowiadomionoInne_txt";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal.enabled = "False";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal = document.all ? document.all["ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal"] : document.getElementById("ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal");
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal.controltovalidate = "ctl00_cphMain_tbOSzkodziePowiadomionoInne_txt";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal.display = "Dynamic";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal = document.all ? document.all["ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal"] : document.getElementById("ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal");
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal.controltovalidate = "ctl00_cphMain_tbOSzkodziePowiadomionoInne_txt";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal.display = "Dynamic";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal.enabled = "False";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal.maximumvalue = "";
+ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal.minimumvalue = "";
+var ctl00_cphMain_rblDaneDoKorespondencji_RFVal = document.all ? document.all["ctl00_cphMain_rblDaneDoKorespondencji_RFVal"] : document.getElementById("ctl00_cphMain_rblDaneDoKorespondencji_RFVal");
+ctl00_cphMain_rblDaneDoKorespondencji_RFVal.controltovalidate = "ctl00_cphMain_rblDaneDoKorespondencji_rbl";
+ctl00_cphMain_rblDaneDoKorespondencji_RFVal.enabled = "False";
+ctl00_cphMain_rblDaneDoKorespondencji_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_rblDaneDoKorespondencji_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaImie_RFVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaImie_RFVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaImie_RFVal");
+ctl00_cphMain_tbKorespondencjaImie_RFVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaImie_txt";
+ctl00_cphMain_tbKorespondencjaImie_RFVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaImie_RFVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaImie_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaImie_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaImie_REVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaImie_REVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaImie_REVal");
+ctl00_cphMain_tbKorespondencjaImie_REVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaImie_txt";
+ctl00_cphMain_tbKorespondencjaImie_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbKorespondencjaImie_REVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaImie_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaImie_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbKorespondencjaImie_RVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaImie_RVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaImie_RVal");
+ctl00_cphMain_tbKorespondencjaImie_RVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaImie_txt";
+ctl00_cphMain_tbKorespondencjaImie_RVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaImie_RVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaImie_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaImie_RVal.maximumvalue = "";
+ctl00_cphMain_tbKorespondencjaImie_RVal.minimumvalue = "";
+var ctl00_cphMain_tbKorespondencjaNazwisko_RFVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaNazwisko_RFVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaNazwisko_RFVal");
+ctl00_cphMain_tbKorespondencjaNazwisko_RFVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaNazwisko_txt";
+ctl00_cphMain_tbKorespondencjaNazwisko_RFVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaNazwisko_RFVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaNazwisko_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaNazwisko_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaNazwisko_REVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaNazwisko_REVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaNazwisko_REVal");
+ctl00_cphMain_tbKorespondencjaNazwisko_REVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaNazwisko_txt";
+ctl00_cphMain_tbKorespondencjaNazwisko_REVal.errormessage = "W polu wprowadź maksimum 50 znaków";
+ctl00_cphMain_tbKorespondencjaNazwisko_REVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaNazwisko_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaNazwisko_REVal.validationexpression = "^[\\s\\S]{0,50}$";
+var ctl00_cphMain_tbKorespondencjaNazwisko_RVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaNazwisko_RVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaNazwisko_RVal");
+ctl00_cphMain_tbKorespondencjaNazwisko_RVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaNazwisko_txt";
+ctl00_cphMain_tbKorespondencjaNazwisko_RVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaNazwisko_RVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaNazwisko_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaNazwisko_RVal.maximumvalue = "";
+ctl00_cphMain_tbKorespondencjaNazwisko_RVal.minimumvalue = "";
+var ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal");
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaNazwaFirmy_txt";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal");
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaNazwaFirmy_txt";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal");
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaNazwaFirmy_txt";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal.maximumvalue = "";
+ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbKorespondencjaUlica_RFVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaUlica_RFVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaUlica_RFVal");
+ctl00_cphMain_tbKorespondencjaUlica_RFVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaUlica_txt";
+ctl00_cphMain_tbKorespondencjaUlica_RFVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaUlica_RFVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaUlica_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaUlica_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaUlica_REVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaUlica_REVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaUlica_REVal");
+ctl00_cphMain_tbKorespondencjaUlica_REVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaUlica_txt";
+ctl00_cphMain_tbKorespondencjaUlica_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbKorespondencjaUlica_REVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaUlica_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaUlica_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbKorespondencjaUlica_RVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaUlica_RVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaUlica_RVal");
+ctl00_cphMain_tbKorespondencjaUlica_RVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaUlica_txt";
+ctl00_cphMain_tbKorespondencjaUlica_RVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaUlica_RVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaUlica_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaUlica_RVal.maximumvalue = "";
+ctl00_cphMain_tbKorespondencjaUlica_RVal.minimumvalue = "";
+var ctl00_cphMain_tbKorespondencjaMiasto_RFVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaMiasto_RFVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaMiasto_RFVal");
+ctl00_cphMain_tbKorespondencjaMiasto_RFVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaMiasto_txt";
+ctl00_cphMain_tbKorespondencjaMiasto_RFVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaMiasto_RFVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaMiasto_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaMiasto_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaMiasto_REVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaMiasto_REVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaMiasto_REVal");
+ctl00_cphMain_tbKorespondencjaMiasto_REVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaMiasto_txt";
+ctl00_cphMain_tbKorespondencjaMiasto_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbKorespondencjaMiasto_REVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaMiasto_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaMiasto_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbKorespondencjaMiasto_RVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaMiasto_RVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaMiasto_RVal");
+ctl00_cphMain_tbKorespondencjaMiasto_RVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaMiasto_txt";
+ctl00_cphMain_tbKorespondencjaMiasto_RVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaMiasto_RVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaMiasto_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaMiasto_RVal.maximumvalue = "";
+ctl00_cphMain_tbKorespondencjaMiasto_RVal.minimumvalue = "";
+var ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal");
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaKodPocztowy_txt";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal.initialvalue = "";
+var ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal");
+ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaKodPocztowy_txt";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal.errormessage = "W polu wprowadź maksimum 10 znaków";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal.validationexpression = "^[\\s\\S]{0,10}$";
+var ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal = document.all ? document.all["ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal"] : document.getElementById("ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal");
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal.controltovalidate = "ctl00_cphMain_tbKorespondencjaKodPocztowy_txt";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal.display = "Dynamic";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal.enabled = "False";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal.maximumvalue = "";
+ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAutoNrRejestracyjny_RFVal = document.all ? document.all["ctl00_cphMain_tbAutoNrRejestracyjny_RFVal"] : document.getElementById("ctl00_cphMain_tbAutoNrRejestracyjny_RFVal");
+ctl00_cphMain_tbAutoNrRejestracyjny_RFVal.controltovalidate = "ctl00_cphMain_tbAutoNrRejestracyjny_txt";
+ctl00_cphMain_tbAutoNrRejestracyjny_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAutoNrRejestracyjny_RFVal.enabled = "False";
+ctl00_cphMain_tbAutoNrRejestracyjny_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoNrRejestracyjny_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAutoNrRejestracyjny_REVal = document.all ? document.all["ctl00_cphMain_tbAutoNrRejestracyjny_REVal"] : document.getElementById("ctl00_cphMain_tbAutoNrRejestracyjny_REVal");
+ctl00_cphMain_tbAutoNrRejestracyjny_REVal.controltovalidate = "ctl00_cphMain_tbAutoNrRejestracyjny_txt";
+ctl00_cphMain_tbAutoNrRejestracyjny_REVal.errormessage = "W polu wprowadź maksimum 10 znaków";
+ctl00_cphMain_tbAutoNrRejestracyjny_REVal.display = "Dynamic";
+ctl00_cphMain_tbAutoNrRejestracyjny_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoNrRejestracyjny_REVal.validationexpression = "^[\\s\\S]{0,10}$";
+var ctl00_cphMain_tbAutoNrRejestracyjny_RVal = document.all ? document.all["ctl00_cphMain_tbAutoNrRejestracyjny_RVal"] : document.getElementById("ctl00_cphMain_tbAutoNrRejestracyjny_RVal");
+ctl00_cphMain_tbAutoNrRejestracyjny_RVal.controltovalidate = "ctl00_cphMain_tbAutoNrRejestracyjny_txt";
+ctl00_cphMain_tbAutoNrRejestracyjny_RVal.display = "Dynamic";
+ctl00_cphMain_tbAutoNrRejestracyjny_RVal.enabled = "False";
+ctl00_cphMain_tbAutoNrRejestracyjny_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoNrRejestracyjny_RVal.maximumvalue = "";
+ctl00_cphMain_tbAutoNrRejestracyjny_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAutoMarka_RFVal = document.all ? document.all["ctl00_cphMain_tbAutoMarka_RFVal"] : document.getElementById("ctl00_cphMain_tbAutoMarka_RFVal");
+ctl00_cphMain_tbAutoMarka_RFVal.controltovalidate = "ctl00_cphMain_tbAutoMarka_txt";
+ctl00_cphMain_tbAutoMarka_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAutoMarka_RFVal.enabled = "False";
+ctl00_cphMain_tbAutoMarka_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoMarka_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAutoMarka_REVal = document.all ? document.all["ctl00_cphMain_tbAutoMarka_REVal"] : document.getElementById("ctl00_cphMain_tbAutoMarka_REVal");
+ctl00_cphMain_tbAutoMarka_REVal.controltovalidate = "ctl00_cphMain_tbAutoMarka_txt";
+ctl00_cphMain_tbAutoMarka_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbAutoMarka_REVal.display = "Dynamic";
+ctl00_cphMain_tbAutoMarka_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoMarka_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbAutoMarka_RVal = document.all ? document.all["ctl00_cphMain_tbAutoMarka_RVal"] : document.getElementById("ctl00_cphMain_tbAutoMarka_RVal");
+ctl00_cphMain_tbAutoMarka_RVal.controltovalidate = "ctl00_cphMain_tbAutoMarka_txt";
+ctl00_cphMain_tbAutoMarka_RVal.display = "Dynamic";
+ctl00_cphMain_tbAutoMarka_RVal.enabled = "False";
+ctl00_cphMain_tbAutoMarka_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoMarka_RVal.maximumvalue = "";
+ctl00_cphMain_tbAutoMarka_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAutoModel_RFVal = document.all ? document.all["ctl00_cphMain_tbAutoModel_RFVal"] : document.getElementById("ctl00_cphMain_tbAutoModel_RFVal");
+ctl00_cphMain_tbAutoModel_RFVal.controltovalidate = "ctl00_cphMain_tbAutoModel_txt";
+ctl00_cphMain_tbAutoModel_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAutoModel_RFVal.enabled = "False";
+ctl00_cphMain_tbAutoModel_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoModel_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAutoModel_REVal = document.all ? document.all["ctl00_cphMain_tbAutoModel_REVal"] : document.getElementById("ctl00_cphMain_tbAutoModel_REVal");
+ctl00_cphMain_tbAutoModel_REVal.controltovalidate = "ctl00_cphMain_tbAutoModel_txt";
+ctl00_cphMain_tbAutoModel_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbAutoModel_REVal.display = "Dynamic";
+ctl00_cphMain_tbAutoModel_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoModel_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbAutoModel_RVal = document.all ? document.all["ctl00_cphMain_tbAutoModel_RVal"] : document.getElementById("ctl00_cphMain_tbAutoModel_RVal");
+ctl00_cphMain_tbAutoModel_RVal.controltovalidate = "ctl00_cphMain_tbAutoModel_txt";
+ctl00_cphMain_tbAutoModel_RVal.display = "Dynamic";
+ctl00_cphMain_tbAutoModel_RVal.enabled = "False";
+ctl00_cphMain_tbAutoModel_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoModel_RVal.maximumvalue = "";
+ctl00_cphMain_tbAutoModel_RVal.minimumvalue = "";
+var ctl00_cphMain_tbAutoRodzaj_RFVal = document.all ? document.all["ctl00_cphMain_tbAutoRodzaj_RFVal"] : document.getElementById("ctl00_cphMain_tbAutoRodzaj_RFVal");
+ctl00_cphMain_tbAutoRodzaj_RFVal.controltovalidate = "ctl00_cphMain_tbAutoRodzaj_txt";
+ctl00_cphMain_tbAutoRodzaj_RFVal.display = "Dynamic";
+ctl00_cphMain_tbAutoRodzaj_RFVal.enabled = "False";
+ctl00_cphMain_tbAutoRodzaj_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoRodzaj_RFVal.initialvalue = "";
+var ctl00_cphMain_tbAutoRodzaj_REVal = document.all ? document.all["ctl00_cphMain_tbAutoRodzaj_REVal"] : document.getElementById("ctl00_cphMain_tbAutoRodzaj_REVal");
+ctl00_cphMain_tbAutoRodzaj_REVal.controltovalidate = "ctl00_cphMain_tbAutoRodzaj_txt";
+ctl00_cphMain_tbAutoRodzaj_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbAutoRodzaj_REVal.display = "Dynamic";
+ctl00_cphMain_tbAutoRodzaj_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoRodzaj_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbAutoRodzaj_RVal = document.all ? document.all["ctl00_cphMain_tbAutoRodzaj_RVal"] : document.getElementById("ctl00_cphMain_tbAutoRodzaj_RVal");
+ctl00_cphMain_tbAutoRodzaj_RVal.controltovalidate = "ctl00_cphMain_tbAutoRodzaj_txt";
+ctl00_cphMain_tbAutoRodzaj_RVal.display = "Dynamic";
+ctl00_cphMain_tbAutoRodzaj_RVal.enabled = "False";
+ctl00_cphMain_tbAutoRodzaj_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbAutoRodzaj_RVal.maximumvalue = "";
+ctl00_cphMain_tbAutoRodzaj_RVal.minimumvalue = "";
+var ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal = document.all ? document.all["ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal"] : document.getElementById("ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal");
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal.controltovalidate = "ctl00_cphMain_tbMiejsceOgledzinPojazdu_txt";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal.display = "Dynamic";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal.enabled = "False";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal.initialvalue = "";
+var ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal = document.all ? document.all["ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal"] : document.getElementById("ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal");
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal.controltovalidate = "ctl00_cphMain_tbMiejsceOgledzinPojazdu_txt";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal.display = "Dynamic";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal = document.all ? document.all["ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal"] : document.getElementById("ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal");
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal.controltovalidate = "ctl00_cphMain_tbMiejsceOgledzinPojazdu_txt";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal.display = "Dynamic";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal.enabled = "False";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal.maximumvalue = "";
+ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal.minimumvalue = "";
+var ctl00_cphMain_tbSwiadkowie_RFVal = document.all ? document.all["ctl00_cphMain_tbSwiadkowie_RFVal"] : document.getElementById("ctl00_cphMain_tbSwiadkowie_RFVal");
+ctl00_cphMain_tbSwiadkowie_RFVal.controltovalidate = "ctl00_cphMain_tbSwiadkowie_txt";
+ctl00_cphMain_tbSwiadkowie_RFVal.display = "Dynamic";
+ctl00_cphMain_tbSwiadkowie_RFVal.enabled = "False";
+ctl00_cphMain_tbSwiadkowie_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbSwiadkowie_RFVal.initialvalue = "";
+var ctl00_cphMain_tbSwiadkowie_REVal = document.all ? document.all["ctl00_cphMain_tbSwiadkowie_REVal"] : document.getElementById("ctl00_cphMain_tbSwiadkowie_REVal");
+ctl00_cphMain_tbSwiadkowie_REVal.controltovalidate = "ctl00_cphMain_tbSwiadkowie_txt";
+ctl00_cphMain_tbSwiadkowie_REVal.errormessage = "W polu wprowadź maksimum 100 znaków";
+ctl00_cphMain_tbSwiadkowie_REVal.display = "Dynamic";
+ctl00_cphMain_tbSwiadkowie_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbSwiadkowie_REVal.validationexpression = "^[\\s\\S]{0,100}$";
+var ctl00_cphMain_tbSwiadkowie_RVal = document.all ? document.all["ctl00_cphMain_tbSwiadkowie_RVal"] : document.getElementById("ctl00_cphMain_tbSwiadkowie_RVal");
+ctl00_cphMain_tbSwiadkowie_RVal.controltovalidate = "ctl00_cphMain_tbSwiadkowie_txt";
+ctl00_cphMain_tbSwiadkowie_RVal.display = "Dynamic";
+ctl00_cphMain_tbSwiadkowie_RVal.enabled = "False";
+ctl00_cphMain_tbSwiadkowie_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbSwiadkowie_RVal.maximumvalue = "";
+ctl00_cphMain_tbSwiadkowie_RVal.minimumvalue = "";
+var ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal = document.all ? document.all["ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal"] : document.getElementById("ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal");
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal.controltovalidate = "ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_txt";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal.display = "Dynamic";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal.enabled = "False";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal.initialvalue = "";
+var ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal = document.all ? document.all["ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal"] : document.getElementById("ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal");
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal.controltovalidate = "ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_txt";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal.errormessage = "Wartość pola \'\' powinna być liczbą";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal.display = "Dynamic";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal.validationexpression = "^-?[0-9]{0,8}(\\,[0-9]{1,2})?$";
+var ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal = document.all ? document.all["ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal"] : document.getElementById("ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal");
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal.controltovalidate = "ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_txt";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal.display = "Dynamic";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal.enabled = "False";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal.maximumvalue = "";
+ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal.minimumvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+document.getElementById('ctl00_cphMain_rblZgloszenieSzkody_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_rblZgloszenieSzkody_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbImieKlienta_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbImieKlienta_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbImieKlienta_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbImieKlienta_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbImieKlienta_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbImieKlienta_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNazwiskoKlienta_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNazwiskoKlienta_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNazwiskoKlienta_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNazwiskoKlienta_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNazwiskoKlienta_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNazwiskoKlienta_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNazwaFirmy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNazwaFirmy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNazwaFirmy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNazwaFirmy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNazwaFirmy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNazwaFirmy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresUlica_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresUlica_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresUlica_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresUlica_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresUlica_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresUlica_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresMiasto_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresMiasto_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresMiasto_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresMiasto_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresMiasto_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresMiasto_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresKodPocztowy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresKodPocztowy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresKodPocztowy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresKodPocztowy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAdresKodPocztowy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAdresKodPocztowy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbTelefonKlienta_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbTelefonKlienta_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbTelefonKlienta_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbTelefonKlienta_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbTelefonKlienta_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbTelefonKlienta_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbEmailKlienta_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbEmailKlienta_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbEmailKlienta_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbEmailKlienta_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbEmailKlienta_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbEmailKlienta_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_rblZgloszenieDotyczy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_rblZgloszenieDotyczy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNrStacji_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNrStacji_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNrStacji_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNrStacji_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbNrStacji_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbNrStacji_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbDataZdarzenia_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbDataZdarzenia_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbDataZdarzenia_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbDataZdarzenia_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbDataZdarzenia_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbDataZdarzenia_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOkolicznosciPowstaniaSzkody_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOSzkodziePowiadomionoInne_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOSzkodziePowiadomionoInne_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOSzkodziePowiadomionoInne_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_rblDaneDoKorespondencji_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_rblDaneDoKorespondencji_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaImie_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaImie_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaImie_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaImie_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaImie_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaImie_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaNazwisko_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaNazwisko_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaNazwisko_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaNazwisko_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaNazwisko_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaNazwisko_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaNazwaFirmy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaNazwaFirmy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaNazwaFirmy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaUlica_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaUlica_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaUlica_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaUlica_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaUlica_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaUlica_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaMiasto_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaMiasto_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaMiasto_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaMiasto_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaMiasto_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaMiasto_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaKodPocztowy_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaKodPocztowy_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbKorespondencjaKodPocztowy_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoNrRejestracyjny_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoNrRejestracyjny_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoNrRejestracyjny_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoNrRejestracyjny_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoNrRejestracyjny_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoNrRejestracyjny_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoMarka_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoMarka_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoMarka_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoMarka_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoMarka_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoMarka_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoModel_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoModel_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoModel_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoModel_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoModel_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoModel_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoRodzaj_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoRodzaj_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoRodzaj_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoRodzaj_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbAutoRodzaj_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbAutoRodzaj_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbMiejsceOgledzinPojazdu_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbMiejsceOgledzinPojazdu_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbMiejsceOgledzinPojazdu_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbSwiadkowie_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbSwiadkowie_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbSwiadkowie_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbSwiadkowie_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbSwiadkowie_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbSwiadkowie_RVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RFVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_REVal'));
+}
+
+document.getElementById('ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cphMain_tbOrientacyjnaWysokoscSzkody_RVal'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
