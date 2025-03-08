@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- _localBinding -->
+<!-- _lcid="1033" _version="" -->
+<html>
+<head>
+    <title>Sorry, the page cannot be found</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Expires" content="0" />
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/_layouts/spsredirect.aspx?noscript=1" />
+    </noscript>
+
+    <link rel="stylesheet" type="text/css" href="/_layouts/K2OrlenPL/_css/orlenpl404.css" media="all" />
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        function formatDateTime(nr) {
+            if (nr < 10) {
+                nr = "0" + nr;
+            }
+            return nr;
+        }
+
+        function getDate() {
+            var date = new Date();
+            var y, m, d, h, mi, s, completeDate;
+            y = date.getFullYear();
+            m = date.getMonth() + 1;
+            d = date.getDate();
+            h = date.getHours();
+            mi = date.getMinutes();
+            s = date.getSeconds();
+
+            completeDate = y + '.' + formatDateTime(m) + '.' + formatDateTime(d) + ', ' + formatDateTime(h) + ':' + formatDateTime(mi) + ':' + formatDateTime(s);
+            document.write(completeDate);
+        }
+        //]]>
+    </script>
+
+</head>
+<body>
+    <div id="header">
+        <div id="logo"><a href="/EN/"><img src="/_layouts/K2OrlenPL/_img/logo01.gif" alt="Back to main page" /></a></div>
+    </div>
+    <!-- header END -->
+    <!-- topNavigation START -->
+    <div id="topNavigation">
+        <ul> 
+            <li><a href="/EN/Company/Pages/default.aspx">Company</a></li> 
+            <li><a href="/EN/ForBusiness/Pages/default.aspx">For business</a></li> 
+            <li><a href="/EN/InvestorRelations/Pages/default.aspx">Investor relations</a></li> 
+            <li><a href="/EN/PressCenter/Pages/default.aspx">Press center</a></li> 
+            <li><a href="/EN/CSR/Pages/default.aspx">CSR</a></li>
+            <li class="oferta"><a href="/EN/OrlenGroupOffer/Pages/default.aspx">ORLEN Group Offer</a></li> 
+        </ul> 
+    </div>
+    <!-- topNavigation END -->
+
+    <!-- container01 START -->
+    <div class="container01">
+        <!-- content START-->
+        <div class="content">
+            <div class="orlen404">
+                <h3 class="pageContentTitle">
+                    Sorry, the page cannot be found</h3>
+                <p class="dateTime">
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        getDate();
+                        //]]>
+                    </script>
+
+                </p>
+                <p class="intro">
+                    Try one of the following:</p>
+                <p>
+                    1. Verify that the Web address typed into the browser is correct.</p>
+                <p>
+                    2. Go to the <a href="/EN/">homepage</a>.</p>
+                <p>
+                    3. Find a page on the <a href="/EN/SiteMap/">website map</a>.</p>
+                <p>
+                    4. Use <a href='/en/Search/'>advanced search</a>.</p>
+                    
+            </div>
+        </div>
+        <!-- content END-->
+
+        <!-- footer START -->
+        <div id="pageFooter">
+            <ul>
+                <li><a class="first" href="/EN/SiteMap/">website map</a></li>
+                <li><a href="/EN/Company/Tenders/">tenders</a></li>
+                <li><a href="/EN/PrivacyPolicy/Pages/default.aspx">privacy policy</a></li>
+                <li><a href="/EN/LegalDisclaimer/Pages/default.aspx">legal disclaimer</a></li>
+                <li><a class="last" href="/EN/Newsletter/">newsletter&nbsp;rss</a></li>
+            </ul>
+        </div>        
+        <!-- footer END -->
+        <!-- marks START -->
+        <div class="footerFlashTitle">Marki Grupy ORLEN</div>
+        <div id="footerFlash" style="position: relative; top: 10px">
+            <object align="middle" width="920" height="60" id="banner" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param value="sameDomain" name="allowScriptAccess"><param value="false" name="allowFullScreen"><param value="/_layouts/K2OrlenPL/_files/stopka_logotypy.swf" name="movie"><param value="high" name="quality"><param value="noscale" name="scale"><param value="#ffffff" name="bgcolor"> <embed align="middle" width="920" height="60" pluginspage="http://www.adobe.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="sameDomain" name="banner" bgcolor="#ffffff" scale="noscale" quality="high" src="/_layouts/K2OrlenPL/_files/stopka_logotypy.swf"></object>
+        </div>
+        <br />
+        <br />
+        <!-- marks END -->
+
+    </div>
+
+<script type="text/javascript">
+	        //<![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	        //]]>
+        </script>
+        <script type="text/javascript">
+   	        //<![CDATA[
+            try {
+                var pageTracker = _gat._getTracker("UA-12047053-1");
+                pageTracker._trackPageview();
+            } catch (err) { }
+   	        //]]>
+        </script> 
+</body>
+</html>
