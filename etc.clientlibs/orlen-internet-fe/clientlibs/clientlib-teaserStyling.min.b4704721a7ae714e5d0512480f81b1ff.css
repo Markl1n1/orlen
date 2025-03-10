@@ -1,6 +1,38 @@
-.common-styling{display:inline-block;padding:11px 23px;font-weight:600;text-transform:uppercase;text-decoration:none;cursor:pointer;margin-top:5px;margin-bottom:5px}
-.common-styling::after{content:"";display:block}
-.common-styling-fullBrand:hover{animation:none;filter:brightness(85%)}
-.common-styling-text{display:inline;padding:0;text-decoration:none;word-wrap:break-word;white-space:normal;margin-top:5px;margin-bottom:5px;font-size:16px;line-height:1.5rem;font-weight:400;letter-spacing:.16px}
-.common-styling-text::after{content:"";display:block}
-.common-styling-text:hover{text-decoration:underline}
+.common-styling {
+  display: inline-block;
+  padding: 11px 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.common-styling::after {
+  content: "";
+  display: block;
+}
+.common-styling-fullBrand:hover {
+  animation: none;
+  filter: brightness(85%);
+}
+.common-styling-text {
+  display: inline;
+  padding: 0;
+  text-decoration: none;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+.common-styling-text::after {
+  content: "";
+  display: block;
+}
+.common-styling-text:hover {
+  text-decoration: underline;
+}
