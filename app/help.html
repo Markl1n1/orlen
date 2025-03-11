@@ -1,233 +1,346 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-
-
+﻿<!doctype html>
 
 <html class="modern-browser">
-    <head>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144171163-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'UA-144171163-1');
-            </script>
-    
-        <title>
-        	
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-144171163-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-144171163-1");
+    </script>
 
+    <title>Platforma zakupowa Grupy ORLEN</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://connect.orlen.pl/css/css/open-sans.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://connect.orlen.pl/css/jquery-ui-1.9.1.custom.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://connect.orlen.pl/css/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://connect.orlen.pl/css/mpTooltip.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://connect.orlen.pl/pic/favicon.ico"
+      type="image/x-icon"
+    />
 
-	        Platforma zakupowa Grupy ORLEN
-	     </title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
-        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/css/open-sans.css">
-        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/jquery-ui-1.9.1.custom.css">
-        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/css/style.css">
-        <link rel="stylesheet" type="text/css" href="https://connect.orlen.pl/css/mpTooltip.css">
-        <link rel="shortcut icon" href="https://connect.orlen.pl/pic/favicon.ico" type="image/x-icon" />
-        
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/modernizr.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery-1.11.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery-migrate-1.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/jquery.inputmask.bundle.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/select2.full.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.qtip.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.ui-1.11.4.js"
+    ></script>
 
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.hc-sticky.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.dotdotdot.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/support-tickets.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.mpobjectlist2.js"
+    ></script>
 
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/promise-polyfill.js"
+    ></script>
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/css/sweetalert.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/sweetalert.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/jquery.contextMenu.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.comment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/support-capture.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/jquery.maxlength.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/purify.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/mpTooltip.js"
+    ></script>
 
-
-
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/modernizr.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery-migrate-1.4.1.min.js" ></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/jquery.inputmask.bundle.min.js" ></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/select2.full.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.qtip.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.ui-1.11.4.js"></script>
-
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.hc-sticky.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.dotdotdot.min.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/support-tickets.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.mpobjectlist2.js"></script>
-
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/promise-polyfill.js"></script>
-<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/css/sweetalert.css" />
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/sweetalert.min.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/jquery.contextMenu.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.comment.min.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/support-capture.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/jquery.maxlength.min.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/purify.min.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/mpTooltip.js"></script>
-
-<script type="text/javascript">
-var searchInputDefaultText = 'Zacznij pisać';
-var expandAllClosedText = 'rozwiń wszystkie';
-var expandAllOpenText = 'zwiń wszystkie';
-var checkAllText = 'zaznacz wszystkie';
-var uncheckAllText = 'odznacz wszystkie';
-var availableCategoriesTxt = 'Dostępne kategorie';
-var insertCategoryNameTxt = 'Wpisz nazwę kategorii';
-</script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/picker.js"></script>
-
+    <script type="text/javascript">
+      var searchInputDefaultText = "Zacznij pisać";
+      var expandAllClosedText = "rozwiń wszystkie";
+      var expandAllOpenText = "zwiń wszystkie";
+      var checkAllText = "zaznacz wszystkie";
+      var uncheckAllText = "odznacz wszystkie";
+      var availableCategoriesTxt = "Dostępne kategorie";
+      var insertCategoryNameTxt = "Wpisz nazwę kategorii";
+    </script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/picker.js"
+    ></script>
 
     <style>
-        .grecaptcha-badge {
-            bottom: 145px !important;
-            opacity: 0;
-            visibility: hidden;
-        }
+      .grecaptcha-badge {
+        bottom: 145px !important;
+        opacity: 0;
+        visibility: hidden;
+      }
     </style>
     <script src="https://www.google.com/recaptcha/api.js?render=6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG"></script>
     <script type="text/javascript">
-        function recaptchaCallbackFunction(actionName, formId){
-            grecaptcha.ready(function() {
-               grecaptcha.execute('6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG', {action: actionName}).then(function(token) {
-                   var parentForm = $('#'+formId);
-                   var captchaHidden = parentForm.find("input[name=recaptcha-response-code]");
-                   if(!captchaHidden || captchaHidden.length == 0){
-                       parentForm.append('<input type="hidden" name="recaptcha-response-code" value="">');
-                       captchaHidden = parentForm.find("input[name=recaptcha-response-code]");
-                   }
-                   captchaHidden.val(token);
-                   document.forms[formId].submit();
-               });
-           });
-        }
+      function recaptchaCallbackFunction(actionName, formId) {
+        grecaptcha.ready(function () {
+          grecaptcha
+            .execute("6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG", {
+              action: actionName,
+            })
+            .then(function (token) {
+              var parentForm = $("#" + formId);
+              var captchaHidden = parentForm.find(
+                "input[name=recaptcha-response-code]",
+              );
+              if (!captchaHidden || captchaHidden.length == 0) {
+                parentForm.append(
+                  '<input type="hidden" name="recaptcha-response-code" value="">',
+                );
+                captchaHidden = parentForm.find(
+                  "input[name=recaptcha-response-code]",
+                );
+              }
+              captchaHidden.val(token);
+              document.forms[formId].submit();
+            });
+        });
+      }
     </script>
 
-<script type="text/javascript">
-$.ajaxSetup({ 
-	traditional: true,
-	cache: false
-});
+    <script type="text/javascript">
+      $.ajaxSetup({
+        traditional: true,
+        cache: false,
+      });
 
-var uniqueRequest = 'Próbujesz ponownie wywołać akcję - zostanie ona wykonana zgodnie z czasem 1 żądania. Czas serwera: {1} Czas żądania: {0}';
-var defaultCancelButtonText = 'Anuluj';
-var defaultConfirmButtonText = 'Tak';
-var defaultSaveButtonText = 'Zapisz';
-var newsListReadedButtonText = 'Ukryj okno';
-var newsListCloseButtonText = 'Ukryj okno';
-var newsListAuthorText = 'Administrator Systemu';
-var newsListLinkText = 'Link:';
-var newsListAttachmentsText = 'Załączniki:';
-var newsListErrorText = 'Jesteś wylogowany';
-var defaultContextPath = '';
-var defaultMPpic = '/pic/mp';
-var jsCSRFToken = '';
-var gridAllValues = '999999999';
-var gridAllValuesTxt = 'Wyświetlenie wszystkich pozycji może spowodować spowolnienie działania systemu. Czy mimo to chcesz kontynuować?';
-var gridPageStart = 'GD_pagestart';
-var gridSortColumn = 'GD_sortCol';
-var gridSortOrder = 'GD_sortOrder';
-var gridPageSize = 'GD_pagesize';
-var rfxConfirmMessage = 'Czy na pewno chcesz kontynuowac? Niezapisane zmiany zostaną utracone.';
-var checkSpecialCharactersTextError = 'W jednym z pól tekstowych pojawił się znak specjalny';
-var specialCharactersNames = new Object();
-specialCharactersNames['\u0009'] = 'tabulator poziomy';
-specialCharactersNames['\u000B'] = 'Tabulacja pionowa';
-specialCharactersNames['\u23CE'] = 'enter internetowy';
-var modern = true;
-mpCaptureBox.capatureActions = {
-		accept: 'https://connect.orlen.pl/app/support/capture/accept',
-		reject: 'https://connect.orlen.pl/app/support/capture/reject',
-		finish: 'https://connect.orlen.pl/app/support/capture/finish'
-}
+      var uniqueRequest =
+        "Próbujesz ponownie wywołać akcję - zostanie ona wykonana zgodnie z czasem 1 żądania. Czas serwera: {1} Czas żądania: {0}";
+      var defaultCancelButtonText = "Anuluj";
+      var defaultConfirmButtonText = "Tak";
+      var defaultSaveButtonText = "Zapisz";
+      var newsListReadedButtonText = "Ukryj okno";
+      var newsListCloseButtonText = "Ukryj okno";
+      var newsListAuthorText = "Administrator Systemu";
+      var newsListLinkText = "Link:";
+      var newsListAttachmentsText = "Załączniki:";
+      var newsListErrorText = "Jesteś wylogowany";
+      var defaultContextPath = "";
+      var defaultMPpic = "/pic/mp";
+      var jsCSRFToken = "";
+      var gridAllValues = "999999999";
+      var gridAllValuesTxt =
+        "Wyświetlenie wszystkich pozycji może spowodować spowolnienie działania systemu. Czy mimo to chcesz kontynuować?";
+      var gridPageStart = "GD_pagestart";
+      var gridSortColumn = "GD_sortCol";
+      var gridSortOrder = "GD_sortOrder";
+      var gridPageSize = "GD_pagesize";
+      var rfxConfirmMessage =
+        "Czy na pewno chcesz kontynuowac? Niezapisane zmiany zostaną utracone.";
+      var checkSpecialCharactersTextError =
+        "W jednym z pól tekstowych pojawił się znak specjalny";
+      var specialCharactersNames = new Object();
+      specialCharactersNames["\u0009"] = "tabulator poziomy";
+      specialCharactersNames["\u000B"] = "Tabulacja pionowa";
+      specialCharactersNames["\u23CE"] = "enter internetowy";
+      var modern = true;
+      mpCaptureBox.capatureActions = {
+        accept: "https://connect.orlen.pl/app/support/capture/accept",
+        reject: "https://connect.orlen.pl/app/support/capture/reject",
+        finish: "https://connect.orlen.pl/app/support/capture/finish",
+      };
 
-mpCaptureBox.capatureText = {
-	accept_ok: 'Zaakceptowano żądanie zdalnego dostępu',
-	reject_ok: 'Odrzucono żądanie zdalnego dostępu',
-	finish_ok: 'Zakończono realizację żądania zdalnego dostępu',
-	unauthorizedAccess: 'Brak dostępu',
-	wrongCaptureRequestID: 'Błędny identyfikator żądania zdalnego dostępu',
-	wrongStatus: 'Sesja zdalnego dostępu została zakończona. W celu odświeżenia strony naciśnij F5',
-	wrongUser: 'Błędny użytkownik żądania zdalnego dostępu',
-	rejectComment_empty: 'components.capture.reject.rejectCommentEmpty',
-	defaultText: 'Wystąpił błąd'
-}
-var messageSourceAdminMode = false;
-var	messageSourceAdminModeUrl = 'https://connect.orlen.pl/app/messageSource/edit?code=';
-</script>
+      mpCaptureBox.capatureText = {
+        accept_ok: "Zaakceptowano żądanie zdalnego dostępu",
+        reject_ok: "Odrzucono żądanie zdalnego dostępu",
+        finish_ok: "Zakończono realizację żądania zdalnego dostępu",
+        unauthorizedAccess: "Brak dostępu",
+        wrongCaptureRequestID: "Błędny identyfikator żądania zdalnego dostępu",
+        wrongStatus:
+          "Sesja zdalnego dostępu została zakończona. W celu odświeżenia strony naciśnij F5",
+        wrongUser: "Błędny użytkownik żądania zdalnego dostępu",
+        rejectComment_empty: "components.capture.reject.rejectCommentEmpty",
+        defaultText: "Wystąpił błąd",
+      };
+      var messageSourceAdminMode = false;
+      var messageSourceAdminModeUrl =
+        "https://connect.orlen.pl/app/messageSource/edit?code=";
+    </script>
 
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/datepicker-pl.js"
+    ></script>
 
- <script type="text/javascript" src="https://connect.orlen.pl/js/js/datepicker-pl.js"></script> 
+    <!--[if lt IE 9]>
+      <script
+        type="text/javascript"
+        src="https://orlen.com.co/js/js/html5shiv.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://orlen.com.co/js/js/selectivizr.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://orlen.com.co/js/js/old-ie.js"
+      ></script>
+      <script type="text/javascript">
+        modern = false;
+      </script>
+    <![endif]-->
 
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/MP_js.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/mpFramework3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/app.js"
+    ></script>
 
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload-icon.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload.gears.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload.silverlight.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload.flash.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload.html4.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/plupload/plupload.html5.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/mpUploader.js"
+    ></script>
+    <script type="text/javascript">
+      /* initialize MPUploader messages and parameters */
+      MPUploader.UPLOAD_ERROR_TXT =
+        "Plik, który próbujesz wgrać nie został dodany.";
+      MPUploader.UPLOAD_ERROR_FILE_TO_LARGE =
+        "Wielkość pliku przekracza maksymalny rozmiar";
+      MPUploader.UPLOAD_OK_TXT = "Plik dodany";
+      MPUploader.UPLOAD_SERVER_ERROR_TXT = "repository.upload.server.error";
+      MPUploader.MAX_FILE_SIZE = 104999999;
+      MPUploader.NO_FLASH_OR_SILVERLIGHT =
+        "Aby załączyć plik zainstaluj wtyczkę Adobe Flash lub Silverlight";
+      MPUploader.UPLOAD_ERROR_INFECTED_FILE_TXT =
+        "Plik, który próbujesz wgrać został zidentyfikowany jako potencjalnie niebezpieczny. Nie został dodany.";
+      MPUploader.UPLOAD_ERROR_UNAUTHORIZED_TXT = "Błąd uwierzytelnienia";
+      MPUploader.NO_CONTENT = "Nie można dodać pustego pliku";
+    </script>
 
+    <style>
+      .filelist-info {
+        vertical-align: middle;
+        height: 16px;
+        display: none;
+      }
+    </style>
+  </head>
 
-<!--[if lt IE 9]>
-<script type="text/javascript" src="https://orlen.com.co/js/js/html5shiv.js"></script>
-<script type="text/javascript" src="https://orlen.com.co/js/js/selectivizr.js"></script>
-<script type="text/javascript" src="https://orlen.com.co/js/js/old-ie.js"></script>
-<script type="text/javascript">
-modern = false;
-</script>
-<![endif]-->
+  <style type="text/css" media="screen">
+    .btn.btn-primary,
+    .btn.ui-button.btn-primary {
+      border-color: #ed1c24;
+      background: #ed1c24;
+      color: #fff;
+    }
+  </style>
 
-<script type="text/javascript" src="https://connect.orlen.pl/js/MP_js.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/mpFramework3.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/js/app.js"></script>
-        
-
-
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload-icon.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.gears.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.silverlight.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.flash.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.html4.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/plupload/plupload.html5.js"></script>
-<script type="text/javascript" src="https://connect.orlen.pl/js/mpUploader.js"></script>
-<script type="text/javascript">
-/* initialize MPUploader messages and parameters */
-MPUploader.UPLOAD_ERROR_TXT = 'Plik, który próbujesz wgrać nie został dodany.';
-MPUploader.UPLOAD_ERROR_FILE_TO_LARGE = 'Wielkość pliku przekracza maksymalny rozmiar';
-MPUploader.UPLOAD_OK_TXT = 'Plik dodany';
-MPUploader.UPLOAD_SERVER_ERROR_TXT = 'repository.upload.server.error';
-MPUploader.MAX_FILE_SIZE = 104999999;
-MPUploader.NO_FLASH_OR_SILVERLIGHT = 'Aby załączyć plik zainstaluj wtyczkę Adobe Flash lub Silverlight';
-MPUploader.UPLOAD_ERROR_INFECTED_FILE_TXT = 'Plik, który próbujesz wgrać został zidentyfikowany jako potencjalnie niebezpieczny. Nie został dodany.';
-MPUploader.UPLOAD_ERROR_UNAUTHORIZED_TXT = 'Błąd uwierzytelnienia';
-MPUploader.NO_CONTENT = 'Nie można dodać pustego pliku';
-</script>
-
-<style>
-.filelist-info {
-	vertical-align: middle; 
-	height: 16px;
-	display: none;
-}
-</style>
-    </head>
-
-
-
-<style type="text/css" media="screen">
-    .btn.btn-primary,.btn.ui-button.btn-primary{border-color:#ed1c24;background:#ed1c24;color:#fff;}
-</style>
-
-<script language="javascript">
+  <script language="javascript">
     var readUrl = defaultContextPath + '/app/newsletter/__id__/read';
     var replacedReadUrl;
 
@@ -397,998 +510,1359 @@ MPUploader.NO_CONTENT = 'Nie można dodać pustego pliku';
             }
         });
     }
-</script>
-<style type="text/css" media="screen">
-             .btn.btn-primary,.btn.ui-button.btn-primary{border-color:#ed1c24;background:#ed1c24;color:#fff;}
-         </style>
+  </script>
+  <style type="text/css" media="screen">
+    .btn.btn-primary,
+    .btn.ui-button.btn-primary {
+      border-color: #ed1c24;
+      background: #ed1c24;
+      color: #fff;
+    }
+  </style>
 
-         
-         
-         
-         
-         
-         
-         
-         
-         
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if ("" && "" && "" && "") {
+        var newNewsletterDialog = $(
+          '<div id="new-newsletter-dialog"></div>',
+        ).appendTo("body");
 
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 if ('' && '' && '' && '') {
-                     
+        newNewsletterDialog.dialog({
+          modal: true,
+          autoOpen: false,
+          width: 800,
+          height: 300,
+          maxWidth: 800,
+          maxHeight: 600,
+          buttons: [
+            {
+              text: newsListReadedButtonText,
+              class: "btn btn-primary newsListReaded",
+              click: function () {
+                $.ajax({
+                  type: "POST",
+                  url:
+                    "https://connect.orlen.pl/app/newsletter//read?CSRFToken=" +
+                    jsCSRFToken,
+                  success: function (data) {
+                    if (data && data.status === "success") {
+                      newNewsletterDialog.dialog("close");
+                    } else {
+                      mpFrm3.showToastMessage(newsListErrorText, "error");
+                    }
+                  },
+                });
+              },
+            },
+          ],
+          closeOnEscape: false,
+          open: function (event, ui) {
+            $(".ui-dialog-titlebar-close").hide();
+          },
+        });
 
-                     var newNewsletterDialog = $('<div id="new-newsletter-dialog"></div>').appendTo('body');
+        newNewsletterDialog.html("");
+        newNewsletterDialog.append(
+          '<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>',
+        );
+        $("#newDateDiv").text(", " + newsListAuthorText);
+        var str = "";
+        str = str.replace(/(?:\r\n|\r|\n)/g, "<br>");
+        $("#newTextDiv").html(str);
 
-                     newNewsletterDialog.dialog({
-                         modal: true,
-                         autoOpen: false,
-                         width: 800,
-                         height: 300,
-                         maxWidth: 800,
-                         maxHeight: 600,
-                         buttons: [{
-                             text: newsListReadedButtonText,
-                             "class": 'btn btn-primary newsListReaded',
-                             click: function() {
-                                 $.ajax({
-                                     type: 'POST',
-                                     url: 'https://connect.orlen.pl/app/newsletter//read?CSRFToken=' + jsCSRFToken,
-                                     success: function (data) {
-                                         if (data && data.status === 'success') {
-                                             newNewsletterDialog.dialog("close");
-                                         } else {
-                                             mpFrm3.showToastMessage(newsListErrorText, 'error');
-                                         }
-                                     }
-                                 });
-                             }}
-                         ],
-                         closeOnEscape: false,
-                         open: function(event, ui) {
-                             $(".ui-dialog-titlebar-close").hide();
-                         }
-                     })
+        if ("") {
+          newNewsletterDialog.append(
+            '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
+              newsListAttachmentsText +
+              "</p>",
+          );
+        }
 
-                     newNewsletterDialog.html('');
-                     newNewsletterDialog.append('<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>');
-                     $('#newDateDiv').text(', ' + newsListAuthorText);
-                     var str = '';
-        		     str = str.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                     $('#newTextDiv').html(str);
+        newNewsletterDialog.dialog("option", "title", "").dialog("open");
+        $(".newsListReaded ").focus();
+        newNewsletterDialog.scrollTop("0");
+      }
+    });
+  </script>
 
-                     
-                     
-                     if ('') {
-                        newNewsletterDialog.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
-                        
-                     }
-
-                     newNewsletterDialog.dialog('option', 'title', '').dialog('open');
-                     $('.newsListReaded ').focus();
-                     newNewsletterDialog.scrollTop("0");
-                 }
-             });
-         </script>
-
-<body style="background: #ffffff url('/pic/instance/prd.png') repeat;" >
-	<script type="text/javascript" src="https://connect.orlen.pl/js/js/i18n/pl.js"></script>
-	<script type="text/javascript">
-	$.fn.select2.defaults.set('language', 'pl');
-	function headerChangeLang(language, country) {
-		document.forms.changeLocaleForm.country.value = country;
-		document.forms.changeLocaleForm.language.value = language;
-		document.forms.changeLocaleForm.submit();
-	}
-	var unreadNotificationsCountUrl = 'https://connect.orlen.pl/app/notification/unread/count';
-	function loadNotificationsCount() {
-		 $.ajax({
-	         type: 'post',
-	         url: unreadNotificationsCountUrl,
-	         async: true,
-	         contentType: "application/json; charset=utf-8",
-	         dataType: 'json',
-	         success:  function(result) {
-	        	$('#notifications-count span').text(result.unreadNotificationsCount);
-	         }
-	     });
-	}
-	var maxFileSize = 104999999;
-	$(function() {
-		if(false) {
-			loadNotificationsCount();
-		}
-		$("input[name='newFileContent']").change(function() {
-			checkFileSize(this);
-		});
-	});
-	function checkFileSize(input) {
-		if (input.files[0].size == 0) {
-            input.form.newFileContent.value='';
-            input.form.newFileDescription.value='';
-            mpFrm3.showToastMessage('Nie można dodać pustego pliku', 'error');
+  <body
+    style="background: #ffffff url(&quot;/pic/instance/prd.png&quot;) repeat"
+  >
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/i18n/pl.js"
+    ></script>
+    <script type="text/javascript">
+      $.fn.select2.defaults.set("language", "pl");
+      function headerChangeLang(language, country) {
+        document.forms.changeLocaleForm.country.value = country;
+        document.forms.changeLocaleForm.language.value = language;
+        document.forms.changeLocaleForm.submit();
+      }
+      var unreadNotificationsCountUrl =
+        "https://connect.orlen.pl/app/notification/unread/count";
+      function loadNotificationsCount() {
+        $.ajax({
+          type: "post",
+          url: unreadNotificationsCountUrl,
+          async: true,
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function (result) {
+            $("#notifications-count span").text(
+              result.unreadNotificationsCount,
+            );
+          },
+        });
+      }
+      var maxFileSize = 104999999;
+      $(function () {
+        if (false) {
+          loadNotificationsCount();
+        }
+        $("input[name='newFileContent']").change(function () {
+          checkFileSize(this);
+        });
+      });
+      function checkFileSize(input) {
+        if (input.files[0].size == 0) {
+          input.form.newFileContent.value = "";
+          input.form.newFileDescription.value = "";
+          mpFrm3.showToastMessage("Nie można dodać pustego pliku", "error");
         } else if (input.files[0].size >= maxFileSize) {
-			input.form.newFileContent.value='';
-			input.form.newFileDescription.value='';
-			mpFrm3.showToastMessage('Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.', 'error');
-		}
-	}
-	</script>
-	<form method="post" action="https://connect.orlen.pl/servlet/HomeServlet?" name="changeLocaleForm">
-	<input name="CSRFToken" type="hidden" value="" />
-		<input type="hidden" name="MP_module" value="common" />
-		<input type="hidden" name="MP_action" value="changeLocale" />
-		<input type="hidden" name="language" value="" />
-		<input type="hidden" name="country" value="" />
-	</form>
-	<div id="wrapper">
-		
-		
-		
-		
-			
-		
-		
-		
-	     <header id="header" class="normal">
-	         <div class="inner">
-	             <div id="logo">
-	             	<a href="https://connect.orlen.pl/servlet/HomeServlet?"><img src="https://connect.orlen.pl/pic/img/logo_pl.png" alt="Connect - Platforma zakupowa GK ORLEN" /></a>
-	             </div>
-	
-	             <nav>
-	             	<ul>
-				<li ><a href="https://connect.orlen.pl/app/dashboard">Strona główna</a></li>
-				<li ><a href="https://connect.orlen.pl/app/help.html"><span>Pomoc</span></a></li>
-				<li ><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact">Kontakt</a></li>
-			</ul>
-	             </nav>
-		
-			<nav id="auth-links">
-	                  <ul>
-						   <li>
-	                         	<a href="https://connect.orlen.pl/app/register/start">Zarejestruj</a>
-	                      </li>
-	                      <li>
-	                          <a href="https://connect.orlen.pl/app/login" >Zaloguj</a>
-	                      </li>
-	                  </ul>
-	              </nav>
-		
-	             <div id="lang-switcher">
-	                 <span>Wybierz język/Choose language</span>
-	                 <ul class="open">
-				<li > <a href="https://connect.orlen.pl/app/help.htm#" onclick="headerChangeLang('cs', 'CZ')">cz</a></li>
-				<li ><a href="https://connect.orlen.pl/app/help.htm#" onclick="headerChangeLang('en', 'EN')">en</a></li>
-				<li class="active"><a href="https://connect.orlen.pl/app/help.htm#" onclick="headerChangeLang('pl', 'PL')">pl</a></li>
-				<li ><a href="https://connect.orlen.pl/app/help.htm#" onclick="headerChangeLang('lt', 'LT')">lt</a></li>
-				<li ><a href="https://connect.orlen.pl/app/help.htm#" onclick="headerChangeLang('de', 'DE')">de</a></li>
-				<li ><a href="https://connect.orlen.pl/app/help.htm#" onclick="headerChangeLang('ru', 'RU')">ru</a></li>
-	                 </ul>
-	             </div>
-		
-	         </div>
-	     </header>
-	
-	     <section id="breadcrumb">
-	         <div class="inner">
-	            
-	         </div>
-	     </section>
-	
-	     <section id="content" class="inner">
-	         <div class="row">
-
-
-
-
-
-     <main class="col-xs-12" id="contact">
-         <div class="row">
-             <div class="col-xs-6">
-                 <h2>F.A.Q. - NAJCZĘŚCIEJ ZADAWANE PYTANIA</h2>
-
-                 <div id="faq">
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Je&#380;eli zapisa&#322;em ofert&#281; to mog&#281; uzna&#263;, &#380;e oferta jest z&#322;o&#380;ona?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Nie, oferta zosta&#322;a tylko zapisana. W celu z&#322;o&#380;enia oferty nale&#380;y wybra&#263; &quot;Z&#322;&oacute;&#380; ofert&#281;&quot;. Przy poprawnie z&#322;o&#380;onej ofercie zostanie wy&#347;wietlony komunikat &quot;oferta z&#322;o&#380;ona poprawnie&quot;.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Jak dokona&#263; rejestracji kilku oddzia&#322;&oacute;w jednej firmy?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Podobnie jak w przypadku rejestracji dodatkowych pracownik&oacute;w firmy dostawcy, nale&#380;y doda&#263; oddzia&#322; firmy wype&#322;niaj&#261;c formularz rejestracyjny. W celu uzyskania pomocy nale&#380;y skorzysta&#263; z formularza kontaktowego w zak&#322;adce &quot;Kontakt&quot;, podaj&#261;c pe&#322;ne dane teleadresowe (wraz z adresem email) oddzia&#322;u.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Gdzie dostawca mo&#380;e zobaczy&#263; otwarte zapytania ofertowe?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Oferent mo&#380;e za pomoc&#261; opcji 'Pozosta&#322;e zapytania RFX' w zak&#322;adce 'Portal dostawcy' podejrze&#263; og&oacute;lnodost&#281;pne zapytania ofertowe, do kt&oacute;rych chocia&#380; nie zosta&#322; bezpo&#347;rednio zaproszony mo&#380;e przyst&#261;pi&#263;, w celu z&#322;o&#380;enia oferty.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Gdzie dostawca mo&#380;e zobaczy&#263; z&#322;o&#380;one przez niego historyczne oferty?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        W celu podgl&#261;du ju&#380; z&#322;o&#380;onej oferty nale&#380;y w zak&#322;adce 'Portal dostawcy' wybra&#263; 'Moje zapytania Rfx'. Z rozwijanej listy 'Stan zapytania' wybra&#263; 'Zako&#324;czone'. Wy&#347;wietl&#261; si&#281; w&oacute;wczas wszystkie zapytania ofertowe, do kt&oacute;rych Dostawca z&#322;o&#380;y&#322; ofert&#281;.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Gdzie zg&#322;asza&#263; zauwa&#380;one b&#322;&#281;dy i problemy?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Wszelkie napotkane problemy i odnalezione b&#322;&#281;dy prosz&#281; zg&#322;asza&#263; konsultantowi za po&#347;rednictwem formularza zg&#322;oszeniowego. <br>Formularz zg&#322;oszeniowy jest dost&#281;pny dla zalogowanych u&#380;ytkownik&oacute;w na dole strony pod odno&#347;nikiem &quot;Zg&#322;o&#347;&quot;. <br>U&#380;ytkownicy nie posiadaj&#261;cy konta na Platformie Zakupowej Connect, mog&#261; zg&#322;osi&#263; problem wykorzystuj&#261;c formularz kontaktowy dost&#281;pny na dole strony pod odno&#347;nikiem &quot;Napisz&quot;.<br>Do Pa&#324;stwa dyspozycji jest r&oacute;wnie&#380; pomoc telefoniczna pod numerem telefonu: + 48 22 382 19 99.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Wype&#322;ni&#322;em formularz rejestracyjny, kiedy dostan&#281; has&#322;o do Platformy?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Wniosek rejestracyjny musi zosta&#263; zweryfikowany i zaakceptowany przez Administratora Systemu. Wnioski s&#261; akceptowane w kolejno&#347;ci nap&#322;ywania. Prosz&#281; wi&#281;c cierpliwie czeka&#263;, stosowna wiadomo&#347;&#263; email z has&#322;em tymczasowym na pewno przyjdzie do Pa&#324;stwa.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Jestem dostawc&#261;, chc&#281; zarejestrowa&#263; kilku pracownik&oacute;w swojej firmy. Jak to zrobi&#263;?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Ka&#380;dy pracownik danej firmy mo&#380;e zarejestrowa&#263; si&#281; na Platformie Zakupowej CONNECT poprzez wype&#322;nienie wniosku rejestracyjnego. Nale&#380;y w nim poda&#263; wszystkie dane firmy, nast&#281;pnie dane pracownika - wniosek jest jednakowy zar&oacute;wno dla os&oacute;b rejestruj&#261;cych si&#281; po raz pierwszy, jak i dla u&#380;ytkownik&oacute;w, kt&oacute;rzy chc&#261; by&#263; dodani do ju&#380; zarejestrowanego dostawcy. W przypadku problemu z rejestracj&#261;, prosz&#281; wys&#322;a&#263; wymagane dane poprzez formularz kontaktowy w zak&#322;adce 'Kontakt'. 
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Zapomnia&#322;em has&#322;a do Platformy, co mam zrobi&#263;?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Nale&#380;y w&oacute;wczas uruchomi&#263; funkcjonalno&#347;&#263; przypomnienia has&#322;a, dost&#281;pn&#261; przy logowaniu. W przypadku b&#322;&#281;du funkcjonalno&#347;ci przypominania has&#322;a prosz&#281; skontaktowa&#263; si&#281; za pomoc&#261; formularza kontaktowego z pro&#347;b&#261; o zresetowanie has&#322;a podaj&#261;c login u&#380;ytkownika.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Otrzymuj&#281; za du&#380;o powiadomie&#324; z Connect o nowych post&#281;powaniach. Jak je wy&#322;&#261;czy&#263;?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Logujemy si&#281; do Connect. Po zalogowaniu nale&#380;y wej&#347;&#263; w &lsquo;M&oacute;j Profil&rsquo; i wybra&#263; zak&#322;adk&#281; &lsquo;Dane u&#380;ytkownika&rsquo;. Wystarczy odznaczy&#263; pole &lsquo;Wysy&#322;aj powiadomienia o nowych og&#322;oszeniach w moich kategoriach zakupowych&rsquo;, a nast&#281;pnie zapisa&#263;.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Jak otrzymywa&#263; powiadomienia o nowych post&#281;powaniach tocz&#261;cych si&#281; w systemie Connect?
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Nale&#380;y zapisa&#263; si&#281; do Newslettera. Do tego wymagane jest konto. Po zalogowaniu nale&#380;y wej&#347;&#263; w &lsquo;M&oacute;j Profil&rsquo; i wybra&#263; zak&#322;adk&#281; &lsquo;Dane u&#380;ytkownika&rsquo;. Wystarczy zaznaczy&#263; pole &lsquo;Wysy&#322;aj powiadomienia o nowych og&#322;oszeniach w moich kategoriach zakupowych&rsquo;, a nast&#281;pnie zapisa&#263;.
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                      <article>
-                          <h3>
-                              <a href="https://connect.orlen.pl/app/help.htm#">
-                               
-								    
-								        Dane osobowe
-								    
-								    
-							   
-                              </a>
-                              <span></span>
-                          </h3>
-
-                          <div class="content">
-                              <p>
-                                  
-								    
-								        Administratorami Pani/Pana danych osobowych jest ORLEN S.A. z siedzib&#261; w P&#322;ocku, 09-411 P&#322;ock, ul.&nbsp;Chemik&oacute;w 7 oraz Sp&oacute;&#322;ka Grupy ORLEN/inny podmiot Grupy Kapita&#322;owej ORLEN (lista podmiot&oacute;w dost&#281;pna jest na stronie www.orlen.pl/pl/dane-osobowe).<br>Ustanowili&#347;my wsp&oacute;lny punkt kontaktowy, poprzez kt&oacute;ry mo&#380;e Pani/Pan skontaktowa&#263; si&#281; w sprawach ochrony swoich danych osobowych:<br>a) adres e-mail: daneosobowe.sgk@orlen.com.co<br>b) adres pocztowy: ORLEN S.A., Inspektor Ochrony Danych, ul. Chemik&oacute;w 7, 09-411 P&#322;ock<br>c) numer telefonu: +48 24 256 00 00.<br>
-								    
-								    
-								
-                              </p>
-                          </div>
-                     </article>
-                     
-                 </div>
-             </div>
-
-             <div class="col-xs-6">
-                 
-					
-				 
-                 <h2>Regulaminy i instrukcje</h2>
-
-                 <ol>
-	                  
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1241&amp;iRepository=39973267" data-link="pdf' />" >Technical requirements of the ARCHEO system ENG 2024.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1242&amp;iRepository=39973291" data-link="pdf' />" >Orlen ARCHEO - External User ENG.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1243&amp;iRepository=39973292" data-link="pdf' />" >Orlen ARCHEO - Instrukcja Użytkownika zewnętrznego.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1240&amp;iRepository=39973265" data-link="pdf' />" >Wymagania_techniczne_systemu_ARCHEO PL 2024.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1239&amp;iRepository=39334433" data-link="pdf' />" >CONNECT_Bidders_manual_v.3.14.4.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1238&amp;iRepository=39334254" data-link="pdf' />" >CONNECT_Instrukcja_Oferenta_v.3.14.4.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1231&amp;iRepository=37648675" data-link="pdf' />" >Pravidla nákupní platformy CONNECT a zásady ochrany osobních údajů CZK.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1232&amp;iRepository=37648676" data-link="pdf' />" >Regulamin i polityka prywatności Platformy Zakupowej CONNECT.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1233&amp;iRepository=37648677" data-link="pdf' />" >Regulations and privacy policy of the CONNECT Purchasing Platform ENG.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1234&amp;iRepository=37648678" data-link="pdf' />" >Регламент и политика конфиденциальности платформы закупок CONNECT RU.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1230&amp;iRepository=37648674" data-link="pdf' />" >Elektroninės pirkimų sistemos CONNECT reglamentas ir privatumo politika LT.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1223&amp;iRepository=37138955" data-link="pdf' />" >GK ORLEN Kodeks Postępowania dla Dostawców.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1222&amp;iRepository=37138953" data-link="pdf' />" >Code of conduct for ORLEN Group Suppliers.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1221&amp;iRepository=36714814" data-link="pdf' />" >OGÓLNE WARUNKI ZAKUPU TOWARÓW ORAZ ZAKUPU TOWARÓW I ŚWIADCZENIA USŁUG IT_kwiecień 2024.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1220&amp;iRepository=36714813" data-link="pdf' />" >OGÓLNE WARUNKI ŚWIADCZENIA USŁUG PROFESJONALNYCH DLA OBSZARU IT _kwiecień 2024.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1216&amp;iRepository=33180888" data-link="zip' />" >Ogólne Warunki Zakupu i Wykonania Usług Remontowych na terenie Terminali Paliw oraz Rurociagów Dalekosiężnych ORLEN S.A._Wrzesień 2023.zip</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1213&amp;iRepository=32349080" data-link="pdf' />" >Policy for Accepting and Giving Gifts in the ORLEN Group.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1212&amp;iRepository=32349079" data-link="pdf' />" >Polityka upominkowa ORLEN.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1211&amp;iRepository=32349078" data-link="pdf' />" >Human Rights Protection Policy in the ORLEN Capital Group.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1210&amp;iRepository=32349054" data-link="pdf' />" >Polityka ochrony praw człowieka w Grupie ORLEN.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1209&amp;iRepository=32349049" data-link="pdf' />" >Conflict of Interest Management Policy at the ORLEN Group.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1208&amp;iRepository=32349047" data-link="pdf' />" >Polityka zarządzania konfliktem interesów w Grupie ORLEN.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1207&amp;iRepository=32349045" data-link="pdf' />" >Anti-corruption policy of ORLEN Group.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1206&amp;iRepository=32349042" data-link="pdf' />" >Polityka antykorupcyjna ORLEN.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1205&amp;iRepository=32349018" data-link="pdf' />" >Poradnik antykorupcyjny ORLEN 2022.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1201&amp;iRepository=32314827" data-link="pdf' />" >Wyciąg z Zarządzenia operacyjnego 16 2023 GC Instrukcja o Ruchu Osobowym.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1202&amp;iRepository=32314828" data-link="pdf' />" >Wyciąg z Wytycznych Dyrektora Wykonawczego ds. Kontroli i Bezpieczeństwa do organizacji ruchu osobowego w ORLEN S A  wer.  5.0_eng.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1203&amp;iRepository=32314829" data-link="pdf' />" >Wyciąg z Zarządzenia operacyjnego 16 2023 GC Instruckja o Ruchu Osobowym_eng.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1200&amp;iRepository=32314826" data-link="pdf' />" >Wyciąg z Wytycznych Dyrektora Wykonawczego ds. Kontroli i Bezpieczeństwa do organizacji ruchu osobowego w ORLEN S A  wer.  5.0.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1197&amp;iRepository=32101062" data-link="pdf' />" >Ogólne warunki zakupu towarów oraz zakupu towarów i świadczenia usług_2012_ORLEN S.A..pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1196&amp;iRepository=32101060" data-link="pdf' />" >General terms and conditions for purchase of goods and services_2012.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1181&amp;iRepository=31776086" data-link="pdf' />" >GENERAL TERMS AND CONDITIONS FOR THE PURCHASE OF THE GOODS.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1180&amp;iRepository=31753221" data-link="pdf' />" >GUIDELINES OF THE EXECUTIVE DIRECTOR FOR CONTROL AND SECURITY OFFICE ON ORGANIZATION OF MATERIAL MOVEMENT IN ORLEN S.A._v2.2.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1179&amp;iRepository=31753134" data-link="pdf' />" >Wytyczne Dyrektora Biura Bezpieczeństwa do organizacji ruchu materiałowego w ORLEN SA_wer.2.2.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1172&amp;iRepository=31703015" data-link="pdf' />" >OGÓLNE WARUNKI ZAKUPU TOWARÓW 2023.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1164&amp;iRepository=31702882" data-link="pdf' />" >CONNECT problems reporting 3.14.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1163&amp;iRepository=31702864" data-link="pdf' />" >CONNECT Instrukcja zgłaszania problemów 3.14.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1162&amp;iRepository=31668322" data-link="pdf' />" >OWZ_USŁUGI_REMEDIACYJNE_REV _MAJ 2018.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1073&amp;iRepository=26382923" data-link="pdf' />" >Director of the Control and Safety &amp; Security Office Operational Disposition 24 2021.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1012&amp;iRepository=16346375" data-link="zip' />" >OGÓLNE WARUNKI ZAKUPU USŁUG I PRAC PROJEKTOWYCH, PRZEDPROJEKTOWYCH (OWZ) - kwiecień 2019.zip</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=995&amp;iRepository=15060373" data-link="zip' />" >OGÓLNE WARUNKI ZAKUPU - WYKONANIE DZIEŁA, ROBÓT BUDOWLANYCH, DOSTAW ORAZ DOKUMENTACJI - październik 2018.zip</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=991&amp;iRepository=14616357" data-link="zip' />" >OGÓLNE WARUNKI WYKONYWANIA PRAC REMONTOWYCH -luty 2018.zip</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=989&amp;iRepository=14344603" data-link="pdf' />" >OGÓLNE WARUNKI ŚWIADCZENIA USŁUG PROFESJONALNYCH - maj 2018.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=967&amp;iRepository=13958299" data-link="pdf' />" >CONNECT Naudojančių Tiekėjų Vadovas.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=962&amp;iRepository=13958218" data-link="pdf' />" >CONNECT Dodavatelsky manual.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=879&amp;iRepository=11618149" data-link="pdf' />" >GTCP_Repair_services on the premises of fuel terminals and long distance pipelines January_2017.pdf</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=861&amp;iRepository=11053478" data-link="docx' />" >FAKTORING dla Dostawców PKN ORLEN S.A._PL.docx</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=860&amp;iRepository=11053477" data-link="docx' />" >FAKTORING for Suppliers PKN ORLEN S.A._ENG.docx</a></li>
-					 
-						
-						<li><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=813&amp;iRepository=9634328" data-link="pdf' />" >CONNECT Anweisung fur Den Beiter DE.pdf</a></li>
-					 
-                </ol>    
-           </div>
-   		</div>
-  	</main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="adminHelpDialog" title="Tooltip" style="display: none;">
-	
-	<form id="adminHelpDialogForm" method="POST" enctype="application/x-www-form-urlencoded" action="https://connect.orlen.pl/app/help/save">
-		<input name="CSRFToken" type="hidden" value="" />
-		<table class="formTab" style="width: 100%;">
-			<tr><th>Wersja językowa</th><td><img src="https://connect.orlen.pl/wf/images/icon-flag-pl.png" alt="#" />&nbsp;PL</td></tr>
-			<tr><th>Klucz</th><td><div id="adminHelpDialog_key_div"></div><input id="adminHelpDialog_key_input" type="hidden" name="key" value="" /></td></tr>
-			<tr><th>Treść</th><td><div id="adminHelpDialog_msg_div"></div></td></tr>
-		</table>
-		<br/>
-		<center>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-    
-		
-	
-	
-
-
-
-	
-
-
-
-	
-
-
-
-
-<a title="Zapisz"   href="https://connect.orlen.pl/app/help.htm#" onclick="helpMessage.adminHelpDialogSubmit()" class="mp_button_first"><span>Zapisz</span></a>
-
-
-
-			</center>
-	</form>	
-	<link rel="stylesheet" href="https://connect.orlen.pl/js/tinyeditor/tinyeditor.css">
-	<script language="javascript" type="text/javascript" src="https://connect.orlen.pl/js/tinyeditor/tiny.editor.packed.js"></script>
-	<script language="javascript" type="text/javascript" >
-		var helpMessage = new function() {
-			var obj = null;
-			var editor = null;
-			var msgDiv = null;
-			var helpDialog = null;
-			
-			this.openAdminHelpDialog = function(icoObj, helpKey) {
-				this.obj = $(icoObj);
-				$('#adminHelpDialog_key_div').text(helpKey);
-				$('#adminHelpDialog_key_input').val(helpKey);
-				this.helpDialog.dialog('open')
-			};
-	
-			this.adminHelpDialogSubmit = function() {
-				this.editor.post();
-				var adminHelpDialogForm = $('#adminHelpDialogForm');
-				var message = $('#adminHelpDialog_msg_textarea').val();
-				var that = this;
-				$.ajax({
-					type: 'POST',
-					url: adminHelpDialogForm.attr('action'),
-					data: adminHelpDialogForm.serialize(),
-					success: function(statusObj) {
-						if(statusObj) {
-							if(statusObj.code=='unauthorizedAccess')
-								that.showMessage('error', 'adminHelpDialog.form.statusMessage.unauthorizedAccess');
-							else if(statusObj.code=='false')
-								that.showMessage('error', 'Wystąpił błąd podczas zapisu. Skontaktuj się z Administratorem');
-							else if(statusObj.code=='true') {
-								that.obj.attr('title', message);
-								that.obj.data('title', message);
-								that.obj.attr('src', '/wf/images/icon-info-blue.png');
-								that.helpDialog.dialog('close');
-								that.showMessage('success', 'Komunikat został zapisany');
-							} else  if(statusObj.code=='error') {
-								for (var i=0;i<statusObj.errors.length;i++)	{
-									that.showMessage('error', statusObj.errors[i].label);
-								}
-							}
-						} else {
-							that.showMessage('error', 'adminHelpDialog.form.statusMessage.error');
-						}
-					},
-					error: function() {
-						that.showMessage('error', 'adminHelpDialog.form.statusMessage.error');
-					}
-				});		
-			};
-			
-			this.showMessage = function (type, message) {
-				mpFrm3.showToastMessage(message, type);
-			};
-			
-			this.init = function() {
-				this.msgDiv = $("#adminHelpDialog_msg_div");
-				var that = this;
-				this.helpDialog =  $('#adminHelpDialog').dialog({autoOpen:false,width: 900,
-				    open: function(event, ui) {
-				    	var helpMsg = that.obj.data('title');
-				    	that.msgDiv.html('<textarea name="message" id="adminHelpDialog_msg_textarea">'+helpMsg+'</textarea>');
-				        that.editor = new TINY.editor.edit('editor',{
-				            id:'adminHelpDialog_msg_textarea',
-				            width:584,
-				            height:175,
-				        	cssclass: 'tinyeditor',
-				        	controlclass: 'tinyeditor-control',
-				        	rowclass: 'tinyeditor-header',
-				        	dividerclass: 'tinyeditor-divider',
-				        	controls: ['bold', 'italic', 'underline', 'strikethrough', '|', 'subscript', 'superscript', '|',
-				        		'orderedlist', 'unorderedlist', '|', 'outdent', 'indent', '|', 'leftalign',
-				        		'centeralign', 'rightalign', 'blockjustify', '|', 'unformat', '|', 'undo', 'redo', 'n',
-				        		'font', 'size', 'style', '|', 'image', 'hr', 'link', 'unlink'],
-				        	footer: true,
-				        	fonts: ['Verdana','Arial','Georgia','Trebuchet MS'],
-				        	xhtml: true,
-				        	bodyid: 'editor',
-				        	footerclass: 'tinyeditor-footer',
-				        	toggle: {text: 'source', activetext: 'wysiwyg', cssclass: 'toggle'},
-				        	resize: {cssclass: 'resize'}
-				        });
-				    }, 
-				    close: function(event, ui) {
-				    	that.msgDiv.html("");
-				    }			    
-				});	
-			};
-		};
-		
-		$(function() {
-			helpMessage.init();
-		});
-	</script>
-</div>
-
-
+          input.form.newFileContent.value = "";
+          input.form.newFileDescription.value = "";
+          mpFrm3.showToastMessage(
+            "Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.",
+            "error",
+          );
+        }
+      }
+    </script>
+    <form
+      method="post"
+      action="https://connect.orlen.pl/servlet/HomeServlet?"
+      name="changeLocaleForm"
+    >
+      <input name="CSRFToken" type="hidden" value="" />
+      <input type="hidden" name="MP_module" value="common" />
+      <input type="hidden" name="MP_action" value="changeLocale" />
+      <input type="hidden" name="language" value="" />
+      <input type="hidden" name="country" value="" />
+    </form>
+    <div id="wrapper">
+      <header id="header" class="normal">
+        <div class="inner">
+          <div id="logo">
+            <a href="https://connect.orlen.pl/servlet/HomeServlet?"
+              ><img
+                src="https://connect.orlen.pl/pic/img/logo_pl.png"
+                alt="Connect - Platforma zakupowa GK ORLEN"
+            /></a>
+          </div>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="https://connect.orlen.pl/app/dashboard"
+                  >Strona główna</a
+                >
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/help.html"
+                  ><span>Pomoc</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav id="auth-links">
+            <ul>
+              <li>
+                <a href="https://connect.orlen.pl/app/register/start"
+                  >Zarejestruj</a
+                >
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/login">Zaloguj</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="lang-switcher">
+            <span>Wybierz język/Choose language</span>
+            <ul class="open">
+              <li>
+                <a
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="headerChangeLang('cs', 'CZ')"
+                  >cz</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="headerChangeLang('en', 'EN')"
+                  >en</a
+                >
+              </li>
+              <li class="active">
+                <a
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="headerChangeLang('pl', 'PL')"
+                  >pl</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="headerChangeLang('lt', 'LT')"
+                  >lt</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="headerChangeLang('de', 'DE')"
+                  >de</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="headerChangeLang('ru', 'RU')"
+                  >ru</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section id="breadcrumb">
+        <div class="inner"></div>
+      </section>
+
+      <section id="content" class="inner">
+        <div class="row">
+          <main class="col-xs-12" id="contact">
+            <div class="row">
+              <div class="col-xs-6">
+                <h2>F.A.Q. - NAJCZĘŚCIEJ ZADAWANE PYTANIA</h2>
+
+                <div id="faq">
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Je&#380;eli zapisa&#322;em ofert&#281; to mog&#281;
+                        uzna&#263;, &#380;e oferta jest z&#322;o&#380;ona?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Nie, oferta zosta&#322;a tylko zapisana. W celu
+                        z&#322;o&#380;enia oferty nale&#380;y wybra&#263;
+                        &quot;Z&#322;&oacute;&#380; ofert&#281;&quot;. Przy
+                        poprawnie z&#322;o&#380;onej ofercie zostanie
+                        wy&#347;wietlony komunikat &quot;oferta
+                        z&#322;o&#380;ona poprawnie&quot;.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Jak dokona&#263; rejestracji kilku oddzia&#322;&oacute;w
+                        jednej firmy?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Podobnie jak w przypadku rejestracji dodatkowych
+                        pracownik&oacute;w firmy dostawcy, nale&#380;y
+                        doda&#263; oddzia&#322; firmy wype&#322;niaj&#261;c
+                        formularz rejestracyjny. W celu uzyskania pomocy
+                        nale&#380;y skorzysta&#263; z formularza kontaktowego w
+                        zak&#322;adce &quot;Kontakt&quot;, podaj&#261;c
+                        pe&#322;ne dane teleadresowe (wraz z adresem email)
+                        oddzia&#322;u.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Gdzie dostawca mo&#380;e zobaczy&#263; otwarte zapytania
+                        ofertowe?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Oferent mo&#380;e za pomoc&#261; opcji 'Pozosta&#322;e
+                        zapytania RFX' w zak&#322;adce 'Portal dostawcy'
+                        podejrze&#263; og&oacute;lnodost&#281;pne zapytania
+                        ofertowe, do kt&oacute;rych chocia&#380; nie zosta&#322;
+                        bezpo&#347;rednio zaproszony mo&#380;e
+                        przyst&#261;pi&#263;, w celu z&#322;o&#380;enia oferty.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Gdzie dostawca mo&#380;e zobaczy&#263; z&#322;o&#380;one
+                        przez niego historyczne oferty?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        W celu podgl&#261;du ju&#380; z&#322;o&#380;onej oferty
+                        nale&#380;y w zak&#322;adce 'Portal dostawcy'
+                        wybra&#263; 'Moje zapytania Rfx'. Z rozwijanej listy
+                        'Stan zapytania' wybra&#263; 'Zako&#324;czone'.
+                        Wy&#347;wietl&#261; si&#281; w&oacute;wczas wszystkie
+                        zapytania ofertowe, do kt&oacute;rych Dostawca
+                        z&#322;o&#380;y&#322; ofert&#281;.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Gdzie zg&#322;asza&#263; zauwa&#380;one b&#322;&#281;dy
+                        i problemy?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Wszelkie napotkane problemy i odnalezione
+                        b&#322;&#281;dy prosz&#281; zg&#322;asza&#263;
+                        konsultantowi za po&#347;rednictwem formularza
+                        zg&#322;oszeniowego.
+                        <br />Formularz zg&#322;oszeniowy jest dost&#281;pny dla
+                        zalogowanych u&#380;ytkownik&oacute;w na dole strony pod
+                        odno&#347;nikiem &quot;Zg&#322;o&#347;&quot;.
+                        <br />U&#380;ytkownicy nie posiadaj&#261;cy konta na
+                        Platformie Zakupowej Connect, mog&#261;
+                        zg&#322;osi&#263; problem wykorzystuj&#261;c formularz
+                        kontaktowy dost&#281;pny na dole strony pod
+                        odno&#347;nikiem &quot;Napisz&quot;. <br />Do
+                        Pa&#324;stwa dyspozycji jest r&oacute;wnie&#380; pomoc
+                        telefoniczna pod numerem telefonu: + 48 22 382 19 99.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Wype&#322;ni&#322;em formularz rejestracyjny, kiedy
+                        dostan&#281; has&#322;o do Platformy?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Wniosek rejestracyjny musi zosta&#263; zweryfikowany i
+                        zaakceptowany przez Administratora Systemu. Wnioski
+                        s&#261; akceptowane w kolejno&#347;ci nap&#322;ywania.
+                        Prosz&#281; wi&#281;c cierpliwie czeka&#263;, stosowna
+                        wiadomo&#347;&#263; email z has&#322;em tymczasowym na
+                        pewno przyjdzie do Pa&#324;stwa.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Jestem dostawc&#261;, chc&#281; zarejestrowa&#263; kilku
+                        pracownik&oacute;w swojej firmy. Jak to zrobi&#263;?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Ka&#380;dy pracownik danej firmy mo&#380;e
+                        zarejestrowa&#263; si&#281; na Platformie Zakupowej
+                        CONNECT poprzez wype&#322;nienie wniosku
+                        rejestracyjnego. Nale&#380;y w nim poda&#263; wszystkie
+                        dane firmy, nast&#281;pnie dane pracownika - wniosek
+                        jest jednakowy zar&oacute;wno dla os&oacute;b
+                        rejestruj&#261;cych si&#281; po raz pierwszy, jak i dla
+                        u&#380;ytkownik&oacute;w, kt&oacute;rzy chc&#261;
+                        by&#263; dodani do ju&#380; zarejestrowanego dostawcy. W
+                        przypadku problemu z rejestracj&#261;, prosz&#281;
+                        wys&#322;a&#263; wymagane dane poprzez formularz
+                        kontaktowy w zak&#322;adce 'Kontakt'.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Zapomnia&#322;em has&#322;a do Platformy, co mam
+                        zrobi&#263;?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Nale&#380;y w&oacute;wczas uruchomi&#263;
+                        funkcjonalno&#347;&#263; przypomnienia has&#322;a,
+                        dost&#281;pn&#261; przy logowaniu. W przypadku
+                        b&#322;&#281;du funkcjonalno&#347;ci przypominania
+                        has&#322;a prosz&#281; skontaktowa&#263; si&#281; za
+                        pomoc&#261; formularza kontaktowego z pro&#347;b&#261; o
+                        zresetowanie has&#322;a podaj&#261;c login
+                        u&#380;ytkownika.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Otrzymuj&#281; za du&#380;o powiadomie&#324; z Connect o
+                        nowych post&#281;powaniach. Jak je
+                        wy&#322;&#261;czy&#263;?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Logujemy si&#281; do Connect. Po zalogowaniu nale&#380;y
+                        wej&#347;&#263; w &lsquo;M&oacute;j Profil&rsquo; i
+                        wybra&#263; zak&#322;adk&#281; &lsquo;Dane
+                        u&#380;ytkownika&rsquo;. Wystarczy odznaczy&#263; pole
+                        &lsquo;Wysy&#322;aj powiadomienia o nowych
+                        og&#322;oszeniach w moich kategoriach zakupowych&rsquo;,
+                        a nast&#281;pnie zapisa&#263;.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Jak otrzymywa&#263; powiadomienia o nowych
+                        post&#281;powaniach tocz&#261;cych si&#281; w systemie
+                        Connect?
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Nale&#380;y zapisa&#263; si&#281; do Newslettera. Do
+                        tego wymagane jest konto. Po zalogowaniu nale&#380;y
+                        wej&#347;&#263; w &lsquo;M&oacute;j Profil&rsquo; i
+                        wybra&#263; zak&#322;adk&#281; &lsquo;Dane
+                        u&#380;ytkownika&rsquo;. Wystarczy zaznaczy&#263; pole
+                        &lsquo;Wysy&#322;aj powiadomienia o nowych
+                        og&#322;oszeniach w moich kategoriach zakupowych&rsquo;,
+                        a nast&#281;pnie zapisa&#263;.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <h3>
+                      <a href="https://connect.orlen.pl/app/help.htm#">
+                        Dane osobowe
+                      </a>
+                      <span></span>
+                    </h3>
+
+                    <div class="content">
+                      <p>
+                        Administratorami Pani/Pana danych osobowych jest ORLEN
+                        S.A. z siedzib&#261; w P&#322;ocku, 09-411 P&#322;ock,
+                        ul.&nbsp;Chemik&oacute;w 7 oraz Sp&oacute;&#322;ka Grupy
+                        ORLEN/inny podmiot Grupy Kapita&#322;owej ORLEN (lista
+                        podmiot&oacute;w dost&#281;pna jest na stronie
+                        www.orlen.pl/pl/dane-osobowe).
+                        <br />Ustanowili&#347;my wsp&oacute;lny punkt
+                        kontaktowy, poprzez kt&oacute;ry mo&#380;e Pani/Pan
+                        skontaktowa&#263; si&#281; w sprawach ochrony swoich
+                        danych osobowych: <br />a) adres e-mail:
+                        daneosobowe.sgk@orlen.com.co <br />b) adres pocztowy:
+                        ORLEN S.A., Inspektor Ochrony Danych, ul.
+                        Chemik&oacute;w 7, 09-411 P&#322;ock <br />c) numer
+                        telefonu: +48 24 256 00 00.
+                        <br />
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="col-xs-6">
+                <h2>Regulaminy i instrukcje</h2>
+
+                <ol>
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1241&amp;iRepository=39973267"
+                      data-link="pdf' />"
+                      >Technical requirements of the ARCHEO system ENG
+                      2024.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1242&amp;iRepository=39973291"
+                      data-link="pdf' />"
+                      >Orlen ARCHEO - External User ENG.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1243&amp;iRepository=39973292"
+                      data-link="pdf' />"
+                      >Orlen ARCHEO - Instrukcja Użytkownika zewnętrznego.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1240&amp;iRepository=39973265"
+                      data-link="pdf' />"
+                      >Wymagania_techniczne_systemu_ARCHEO PL 2024.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1239&amp;iRepository=39334433"
+                      data-link="pdf' />"
+                      >CONNECT_Bidders_manual_v.3.14.4.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1238&amp;iRepository=39334254"
+                      data-link="pdf' />"
+                      >CONNECT_Instrukcja_Oferenta_v.3.14.4.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1231&amp;iRepository=37648675"
+                      data-link="pdf' />"
+                      >Pravidla nákupní platformy CONNECT a zásady ochrany
+                      osobních údajů CZK.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1232&amp;iRepository=37648676"
+                      data-link="pdf' />"
+                      >Regulamin i polityka prywatności Platformy Zakupowej
+                      CONNECT.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1233&amp;iRepository=37648677"
+                      data-link="pdf' />"
+                      >Regulations and privacy policy of the CONNECT Purchasing
+                      Platform ENG.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1234&amp;iRepository=37648678"
+                      data-link="pdf' />"
+                      >Регламент и политика конфиденциальности платформы закупок
+                      CONNECT RU.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1230&amp;iRepository=37648674"
+                      data-link="pdf' />"
+                      >Elektroninės pirkimų sistemos CONNECT reglamentas ir
+                      privatumo politika LT.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1223&amp;iRepository=37138955"
+                      data-link="pdf' />"
+                      >GK ORLEN Kodeks Postępowania dla Dostawców.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1222&amp;iRepository=37138953"
+                      data-link="pdf' />"
+                      >Code of conduct for ORLEN Group Suppliers.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1221&amp;iRepository=36714814"
+                      data-link="pdf' />"
+                      >OGÓLNE WARUNKI ZAKUPU TOWARÓW ORAZ ZAKUPU TOWARÓW I
+                      ŚWIADCZENIA USŁUG IT_kwiecień 2024.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1220&amp;iRepository=36714813"
+                      data-link="pdf' />"
+                      >OGÓLNE WARUNKI ŚWIADCZENIA USŁUG PROFESJONALNYCH DLA
+                      OBSZARU IT _kwiecień 2024.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1216&amp;iRepository=33180888"
+                      data-link="zip' />"
+                      >Ogólne Warunki Zakupu i Wykonania Usług Remontowych na
+                      terenie Terminali Paliw oraz Rurociagów Dalekosiężnych
+                      ORLEN S.A._Wrzesień 2023.zip</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1213&amp;iRepository=32349080"
+                      data-link="pdf' />"
+                      >Policy for Accepting and Giving Gifts in the ORLEN
+                      Group.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1212&amp;iRepository=32349079"
+                      data-link="pdf' />"
+                      >Polityka upominkowa ORLEN.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1211&amp;iRepository=32349078"
+                      data-link="pdf' />"
+                      >Human Rights Protection Policy in the ORLEN Capital
+                      Group.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1210&amp;iRepository=32349054"
+                      data-link="pdf' />"
+                      >Polityka ochrony praw człowieka w Grupie ORLEN.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1209&amp;iRepository=32349049"
+                      data-link="pdf' />"
+                      >Conflict of Interest Management Policy at the ORLEN
+                      Group.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1208&amp;iRepository=32349047"
+                      data-link="pdf' />"
+                      >Polityka zarządzania konfliktem interesów w Grupie
+                      ORLEN.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1207&amp;iRepository=32349045"
+                      data-link="pdf' />"
+                      >Anti-corruption policy of ORLEN Group.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1206&amp;iRepository=32349042"
+                      data-link="pdf' />"
+                      >Polityka antykorupcyjna ORLEN.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1205&amp;iRepository=32349018"
+                      data-link="pdf' />"
+                      >Poradnik antykorupcyjny ORLEN 2022.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1201&amp;iRepository=32314827"
+                      data-link="pdf' />"
+                      >Wyciąg z Zarządzenia operacyjnego 16 2023 GC Instrukcja o
+                      Ruchu Osobowym.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1202&amp;iRepository=32314828"
+                      data-link="pdf' />"
+                      >Wyciąg z Wytycznych Dyrektora Wykonawczego ds. Kontroli i
+                      Bezpieczeństwa do organizacji ruchu osobowego w ORLEN S A
+                      wer. 5.0_eng.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1203&amp;iRepository=32314829"
+                      data-link="pdf' />"
+                      >Wyciąg z Zarządzenia operacyjnego 16 2023 GC Instruckja o
+                      Ruchu Osobowym_eng.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1200&amp;iRepository=32314826"
+                      data-link="pdf' />"
+                      >Wyciąg z Wytycznych Dyrektora Wykonawczego ds. Kontroli i
+                      Bezpieczeństwa do organizacji ruchu osobowego w ORLEN S A
+                      wer. 5.0.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1197&amp;iRepository=32101062"
+                      data-link="pdf' />"
+                      >Ogólne warunki zakupu towarów oraz zakupu towarów i
+                      świadczenia usług_2012_ORLEN S.A..pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1196&amp;iRepository=32101060"
+                      data-link="pdf' />"
+                      >General terms and conditions for purchase of goods and
+                      services_2012.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1181&amp;iRepository=31776086"
+                      data-link="pdf' />"
+                      >GENERAL TERMS AND CONDITIONS FOR THE PURCHASE OF THE
+                      GOODS.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1180&amp;iRepository=31753221"
+                      data-link="pdf' />"
+                      >GUIDELINES OF THE EXECUTIVE DIRECTOR FOR CONTROL AND
+                      SECURITY OFFICE ON ORGANIZATION OF MATERIAL MOVEMENT IN
+                      ORLEN S.A._v2.2.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1179&amp;iRepository=31753134"
+                      data-link="pdf' />"
+                      >Wytyczne Dyrektora Biura Bezpieczeństwa do organizacji
+                      ruchu materiałowego w ORLEN SA_wer.2.2.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1172&amp;iRepository=31703015"
+                      data-link="pdf' />"
+                      >OGÓLNE WARUNKI ZAKUPU TOWARÓW 2023.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1164&amp;iRepository=31702882"
+                      data-link="pdf' />"
+                      >CONNECT problems reporting 3.14.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1163&amp;iRepository=31702864"
+                      data-link="pdf' />"
+                      >CONNECT Instrukcja zgłaszania problemów 3.14.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1162&amp;iRepository=31668322"
+                      data-link="pdf' />"
+                      >OWZ_USŁUGI_REMEDIACYJNE_REV _MAJ 2018.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1073&amp;iRepository=26382923"
+                      data-link="pdf' />"
+                      >Director of the Control and Safety &amp; Security Office
+                      Operational Disposition 24 2021.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1012&amp;iRepository=16346375"
+                      data-link="zip' />"
+                      >OGÓLNE WARUNKI ZAKUPU USŁUG I PRAC PROJEKTOWYCH,
+                      PRZEDPROJEKTOWYCH (OWZ) - kwiecień 2019.zip</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=995&amp;iRepository=15060373"
+                      data-link="zip' />"
+                      >OGÓLNE WARUNKI ZAKUPU - WYKONANIE DZIEŁA, ROBÓT
+                      BUDOWLANYCH, DOSTAW ORAZ DOKUMENTACJI - październik
+                      2018.zip</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=991&amp;iRepository=14616357"
+                      data-link="zip' />"
+                      >OGÓLNE WARUNKI WYKONYWANIA PRAC REMONTOWYCH -luty
+                      2018.zip</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=989&amp;iRepository=14344603"
+                      data-link="pdf' />"
+                      >OGÓLNE WARUNKI ŚWIADCZENIA USŁUG PROFESJONALNYCH - maj
+                      2018.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=967&amp;iRepository=13958299"
+                      data-link="pdf' />"
+                      >CONNECT Naudojančių Tiekėjų Vadovas.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=962&amp;iRepository=13958218"
+                      data-link="pdf' />"
+                      >CONNECT Dodavatelsky manual.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=879&amp;iRepository=11618149"
+                      data-link="pdf' />"
+                      >GTCP_Repair_services on the premises of fuel terminals
+                      and long distance pipelines January_2017.pdf</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=861&amp;iRepository=11053478"
+                      data-link="docx' />"
+                      >FAKTORING dla Dostawców PKN ORLEN S.A._PL.docx</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=860&amp;iRepository=11053477"
+                      data-link="docx' />"
+                      >FAKTORING for Suppliers PKN ORLEN S.A._ENG.docx</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=813&amp;iRepository=9634328"
+                      data-link="pdf' />"
+                      >CONNECT Anweisung fur Den Beiter DE.pdf</a
+                    >
+                  </li>
+                </ol>
+              </div>
             </div>
+          </main>
+
+          <div id="adminHelpDialog" title="Tooltip" style="display: none">
+            <form
+              id="adminHelpDialogForm"
+              method="POST"
+              enctype="application/x-www-form-urlencoded"
+              action="https://connect.orlen.pl/app/help/save"
+            >
+              <input name="CSRFToken" type="hidden" value="" />
+              <table class="formTab" style="width: 100%">
+                <tr>
+                  <th>Wersja językowa</th>
+                  <td>
+                    <img
+                      src="https://connect.orlen.pl/wf/images/icon-flag-pl.png"
+                      alt="#"
+                    />&nbsp;PL
+                  </td>
+                </tr>
+                <tr>
+                  <th>Klucz</th>
+                  <td>
+                    <div id="adminHelpDialog_key_div"></div>
+                    <input
+                      id="adminHelpDialog_key_input"
+                      type="hidden"
+                      name="key"
+                      value=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Treść</th>
+                  <td><div id="adminHelpDialog_msg_div"></div></td>
+                </tr>
+              </table>
+              <br />
+              <center>
+                <a
+                  title="Zapisz"
+                  href="https://connect.orlen.pl/app/help.htm#"
+                  onclick="helpMessage.adminHelpDialogSubmit()"
+                  class="mp_button_first"
+                  ><span>Zapisz</span></a
+                >
+              </center>
+            </form>
+            <link
+              rel="stylesheet"
+              href="https://connect.orlen.pl/js/tinyeditor/tinyeditor.css"
+            />
+            <script
+              language="javascript"
+              type="text/javascript"
+              src="https://connect.orlen.pl/js/tinyeditor/tiny.editor.packed.js"
+            ></script>
+            <script language="javascript" type="text/javascript">
+              var helpMessage = new (function () {
+                var obj = null;
+                var editor = null;
+                var msgDiv = null;
+                var helpDialog = null;
+
+                this.openAdminHelpDialog = function (icoObj, helpKey) {
+                  this.obj = $(icoObj);
+                  $("#adminHelpDialog_key_div").text(helpKey);
+                  $("#adminHelpDialog_key_input").val(helpKey);
+                  this.helpDialog.dialog("open");
+                };
+
+                this.adminHelpDialogSubmit = function () {
+                  this.editor.post();
+                  var adminHelpDialogForm = $("#adminHelpDialogForm");
+                  var message = $("#adminHelpDialog_msg_textarea").val();
+                  var that = this;
+                  $.ajax({
+                    type: "POST",
+                    url: adminHelpDialogForm.attr("action"),
+                    data: adminHelpDialogForm.serialize(),
+                    success: function (statusObj) {
+                      if (statusObj) {
+                        if (statusObj.code == "unauthorizedAccess")
+                          that.showMessage(
+                            "error",
+                            "adminHelpDialog.form.statusMessage.unauthorizedAccess",
+                          );
+                        else if (statusObj.code == "false")
+                          that.showMessage(
+                            "error",
+                            "Wystąpił błąd podczas zapisu. Skontaktuj się z Administratorem",
+                          );
+                        else if (statusObj.code == "true") {
+                          that.obj.attr("title", message);
+                          that.obj.data("title", message);
+                          that.obj.attr("src", "/wf/images/icon-info-blue.png");
+                          that.helpDialog.dialog("close");
+                          that.showMessage(
+                            "success",
+                            "Komunikat został zapisany",
+                          );
+                        } else if (statusObj.code == "error") {
+                          for (var i = 0; i < statusObj.errors.length; i++) {
+                            that.showMessage(
+                              "error",
+                              statusObj.errors[i].label,
+                            );
+                          }
+                        }
+                      } else {
+                        that.showMessage(
+                          "error",
+                          "adminHelpDialog.form.statusMessage.error",
+                        );
+                      }
+                    },
+                    error: function () {
+                      that.showMessage(
+                        "error",
+                        "adminHelpDialog.form.statusMessage.error",
+                      );
+                    },
+                  });
+                };
+
+                this.showMessage = function (type, message) {
+                  mpFrm3.showToastMessage(message, type);
+                };
+
+                this.init = function () {
+                  this.msgDiv = $("#adminHelpDialog_msg_div");
+                  var that = this;
+                  this.helpDialog = $("#adminHelpDialog").dialog({
+                    autoOpen: false,
+                    width: 900,
+                    open: function (event, ui) {
+                      var helpMsg = that.obj.data("title");
+                      that.msgDiv.html(
+                        '<textarea name="message" id="adminHelpDialog_msg_textarea">' +
+                          helpMsg +
+                          "</textarea>",
+                      );
+                      that.editor = new TINY.editor.edit("editor", {
+                        id: "adminHelpDialog_msg_textarea",
+                        width: 584,
+                        height: 175,
+                        cssclass: "tinyeditor",
+                        controlclass: "tinyeditor-control",
+                        rowclass: "tinyeditor-header",
+                        dividerclass: "tinyeditor-divider",
+                        controls: [
+                          "bold",
+                          "italic",
+                          "underline",
+                          "strikethrough",
+                          "|",
+                          "subscript",
+                          "superscript",
+                          "|",
+                          "orderedlist",
+                          "unorderedlist",
+                          "|",
+                          "outdent",
+                          "indent",
+                          "|",
+                          "leftalign",
+                          "centeralign",
+                          "rightalign",
+                          "blockjustify",
+                          "|",
+                          "unformat",
+                          "|",
+                          "undo",
+                          "redo",
+                          "n",
+                          "font",
+                          "size",
+                          "style",
+                          "|",
+                          "image",
+                          "hr",
+                          "link",
+                          "unlink",
+                        ],
+                        footer: true,
+                        fonts: ["Verdana", "Arial", "Georgia", "Trebuchet MS"],
+                        xhtml: true,
+                        bodyid: "editor",
+                        footerclass: "tinyeditor-footer",
+                        toggle: {
+                          text: "source",
+                          activetext: "wysiwyg",
+                          cssclass: "toggle",
+                        },
+                        resize: { cssclass: "resize" },
+                      });
+                    },
+                    close: function (event, ui) {
+                      that.msgDiv.html("");
+                    },
+                  });
+                };
+              })();
+
+              $(function () {
+                helpMessage.init();
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+      <div id="push"></div>
+      <form
+        id="mpPostForm"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+        style="display: none"
+      >
+        <input name="CSRFToken" type="hidden" value="" /><input
+          type="hidden"
+          name="UNIQUE_ID"
+          value="1739544453456vgWCT7we4ynRPH048BP"
+        />
+      </form>
+    </div>
+    <footer id="footer">
+      <div
+        id="ticketFormPanel"
+        class="no-padding"
+        title="Formularz zgłaszania problemu"
+      ></div>
+      <div class="inner">
+        <div class="row">
+          <nav class="col-xs-8">
+            <ul>
+              <li>
+                <a href="https://connect.orlen.pl/app/dashboard"
+                  >Strona główna</a
+                >
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/login">Zaloguj</a>
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/register/start"
+                  >Zarejestruj</a
+                >
+              </li>
+              <li>
+                <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/help.html">Pomoc</a>
+              </li>
+            </ul>
+          </nav>
+
+          <section id="quick-help" class="col-xs-4">
+            <div class="lines">
+              <div class="line">
+                <span>Potrzebujesz pomocy?</span>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  class="mail-link"
+                  >Napisz</a
+                >
+              </div>
+              <div class="line">
+                <span>Zadzwoń:</span>
+                <a href="https://connect.orlen.pl/app/help.htm#"
+                  >+48 22 576 87 95<br />
+                  +48 22 382 19 99</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section id="copyright">
+          <span
+            >Wszystkie prawa zastrzeżone przez
+            <a href="http://www.orlen.pl">ORLEN S.A.</a> &copy;
+            <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span
+          >
+          <!--  <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+
+          <a
+            href="https://connect.orlen.pl/app/help.htm#"
+            onclick="showRegulationDiv('PL')"
+            >Regulamin</a
+          >
+
+          <a href="https://connect.orlen.pl/app/help.html">Instrukcje</a>
         </section>
-       	<div id="push"></div>
-       	<form id="mpPostForm" method="POST" enctype="application/x-www-form-urlencoded" style="display: none;">
-			<input name="CSRFToken" type="hidden" value="" /><input type="hidden" name="UNIQUE_ID" value="1739544453456vgWCT7we4ynRPH048BP" />
-		</form>
-       </div>
-       <footer id="footer">
-       	   <div id="ticketFormPanel" class="no-padding" title="Formularz zgłaszania problemu"></div>
-           <div class="inner">
-               <div class="row">
-                   <nav class="col-xs-8">
-                       <ul>
-                           <li>
-                              <a href="https://connect.orlen.pl/app/dashboard">Strona główna</a>
-                           </li>
-                           <li>
-                              <a href="https://connect.orlen.pl/app/login">Zaloguj</a>
-                           </li>
-                           <li>
-                              <a href="https://connect.orlen.pl/app/register/start">Zarejestruj</a>
-                           </li>
-                           <li>
-                            <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
-                           </li>
-                           <li>
-                               <a href="https://connect.orlen.pl/app/help.html">Pomoc</a>
-                           </li>
-                       </ul>
-                   </nav>
+      </div>
+    </footer>
 
-                   <section id="quick-help" class="col-xs-4">
-                       <div class="lines">
-	                       <div class="line">
-	                       		<span>Potrzebujesz pomocy?</span>
-	                       		<a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact" class="mail-link">Napisz</a>
-	                       </div>
-	                       <div class="line">
-	                       		<span>Zadzwoń:</span>
-	                       		<a href="https://connect.orlen.pl/app/help.htm#">+48 22 576 87 95<br>
-+48 22 382 19 99</a>
-	                       </div>
-	                       
-								
-							
-                       </div>
-                   </section>
-               </div>
+    <div id="overlay"></div>
+    <script>
+      $(document).ready(function () {
+        $("#currentYear").html(new Date().getFullYear());
+      });
+    </script>
 
+    <script type="text/javascript">
+      var isRegisterForm = false;
+      if ($("input[name='acceptedRegulation']").length) {
+        isRegisterForm = true;
+        if (!$("input[name='acceptedRegulation']").prop("checked")) {
+          $("input[name='acceptedRegulation']").prop("disabled", true);
+        }
+      }
+      function showRegulationDiv(languageVersion, regulationId) {
+        var url;
+        if (regulationId) {
+          url =
+            "/app/regulation/" +
+            regulationId +
+            "/version?languageVersion=" +
+            languageVersion;
+        } else {
+          url =
+            "/app/current/regulation/version/nl?languageVersion=" +
+            languageVersion;
+        }
+        $.getJSON(url, function (res) {
+          $("#regulationDivContent").html(res.content);
+          $("#regulationDiv").dialog({
+            height: $(window).height() * 0.8,
+            width: $(window).width() * 0.8,
+            modal: true,
+            resizable: false,
+            draggable: false,
+            open: function (event, ui) {
+              if (isRegisterForm) {
+                $(".ui-dialog-titlebar", ui.dialog | ui).hide();
+              }
+              if ($("#regulationDiv").hasScrollBar().vertical) {
+                $(this)
+                  .next(".ui-dialog-buttonpane")
+                  .eq(0)
+                  .prepend(
+                    "<a class='scrollBottom' href='https://connect.orlen.pl/app/help.htm#'><i class='arrow-down'></i></a>",
+                  );
+                $("#regulationDiv").scrollTop(0);
+                if (isRegisterForm) {
+                  $("#closeRegulationDialog").button(
+                    "option",
+                    "disabled",
+                    true,
+                  );
+                }
+              }
+              $("body").css({ overflow: "hidden" });
+            },
+            beforeClose: function (event, ui) {
+              $("body").css({ overflow: "inherit" });
+              if (isRegisterForm) {
+                $("input[name='acceptedRegulation']").prop("disabled", false);
+                if (!$("#regulationDiv").hasScrollBar().vertical) {
+                  $("input[name='acceptedRegulation']").prop("disabled", false);
+                }
+              }
+            },
+            buttons: [
+              {
+                id: "closeRegulationDialog",
+                text: "Zamknij",
+                click: function () {
+                  $(this).dialog("close");
+                },
+              },
+            ],
+          });
+        });
 
-			
-			
-				  
-				
-					
-				
-				
-				 
-					
-				
-			
-		
+        var textElement = document.getElementById("regulationDiv");
+        $("#regulationDiv").scroll(function () {
+          if (
+            Math.round(this.scrollTop + this.offsetHeight) >=
+            Math.round(this.scrollHeight - 10)
+          ) {
+            $(".scrollBottom").addClass("hidden");
+            if (isRegisterForm) {
+              $("#closeRegulationDialog").button("option", "disabled", false);
+              $("input[name='acceptedRegulation']").prop("disabled", false);
+            }
+          } else {
+            if ($(".scrollBottom").hasClass("hidden")) {
+              $(".scrollBottom").removeClass("hidden");
+            }
+          }
+        });
+      }
 
-               <section id="copyright">
-               
-                   <span>Wszystkie prawa zastrzeżone przez <a href="http://www.orlen.pl">ORLEN S.A.</a> &copy; <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span>
-                 <!--  <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
-                   
-                  		<a href="https://connect.orlen.pl/app/help.htm#" onclick="showRegulationDiv('PL')" >Regulamin</a>
-                  
-                  	<a href="https://connect.orlen.pl/app/help.html">Instrukcje</a>
-               </section>
-           </div>
-       </footer>
-       
-       <div id="overlay"></div>
-<script>
-    $(document).ready(function() {
-       $( "#currentYear" ).html(new Date().getFullYear());
-    })
-</script>
-       
- <script type="text/javascript">
- var isRegisterForm = false;
- if($("input[name='acceptedRegulation']").length) {
-   isRegisterForm = true;
-    if( !$("input[name='acceptedRegulation']").prop('checked')){
-		$("input[name='acceptedRegulation']").prop("disabled", true);
-   }
- }
-	function showRegulationDiv(languageVersion, regulationId) {
-		var url;
-		if (regulationId) {
-			url = '/app/regulation/'+regulationId+'/version?languageVersion='+languageVersion;
-		} else {
-			url = '/app/current/regulation/version/nl?languageVersion='+languageVersion;
-		} 
-		$.getJSON(url, function(res) {
-			$('#regulationDivContent').html(res.content);
-		    $('#regulationDiv').dialog({
-	        	height: $(window).height() * 0.8,
-	    		width: $(window).width() * 0.8,
-	    		modal: true,
-	    		resizable: false,
-	    		draggable: false,
-				open: function(event, ui) {
-					if(isRegisterForm) {
-						$(".ui-dialog-titlebar", ui.dialog | ui).hide();
-					}
-					if($('#regulationDiv').hasScrollBar().vertical) {
-						$(this).next(".ui-dialog-buttonpane").eq(0).prepend("<a class='scrollBottom' href='https://connect.orlen.pl/app/help.htm#'><i class='arrow-down'></i></a>");
-						$('#regulationDiv').scrollTop(0);
-		                if(isRegisterForm) {
-		                    $("#closeRegulationDialog").button("option", "disabled", true);
-		                }
-					}
-					$("body").css({ overflow: 'hidden' });
-				},
-				beforeClose: function(event, ui) {
-			    	$("body").css({ overflow: 'inherit' });
-		            if(isRegisterForm) {
-		                $("input[name='acceptedRegulation']").prop("disabled", false);
-						if(!$('#regulationDiv').hasScrollBar().vertical) {
-							$("input[name='acceptedRegulation']").prop("disabled", false);
-						}
-		            }
-				},
-	          	buttons: [
-		            {
-		              id: "closeRegulationDialog",
-		              text: "Zamknij",
-		              click: function() {
-		                $( this ).dialog( "close" );
-		              }
-		            }
-	          	]
-	        });
-		});
-		
-	    var textElement = document.getElementById("regulationDiv");
-	    $('#regulationDiv').scroll(function () {
-	        if (Math.round(this.scrollTop + this.offsetHeight) >= Math.round(this.scrollHeight - 10)){
-	            $(".scrollBottom").addClass("hidden");
-	            if(isRegisterForm) {
-	            	$("#closeRegulationDialog").button("option", "disabled", false);
-	            	$("input[name='acceptedRegulation']").prop("disabled", false);
-	            }
-	        } else {
-	          if ($(".scrollBottom").hasClass("hidden")) {
-	            $(".scrollBottom").removeClass("hidden")
-	          }
-	        }
-	    });
-	}
-
-	$(document).on("click", ".scrollBottom", function(e) {
-		e.preventDefault();
-	    var el = document.getElementById("regulationDiv");
-	    var current = el.scrollTop;
-	    var percentScroll = el.scrollHeight*0.10;
-		$('#regulationDiv').animate({
-	      scrollTop: current + percentScroll
-		}, 500);
-	});
-</script>
-  <div id="regulationDiv">
-   	<div id="regulationDivContent" class="regulationContent"></div>
-	</div>
-       
-       
-
-    </body>
+      $(document).on("click", ".scrollBottom", function (e) {
+        e.preventDefault();
+        var el = document.getElementById("regulationDiv");
+        var current = el.scrollTop;
+        var percentScroll = el.scrollHeight * 0.1;
+        $("#regulationDiv").animate(
+          {
+            scrollTop: current + percentScroll,
+          },
+          500,
+        );
+      });
+    </script>
+    <div id="regulationDiv">
+      <div id="regulationDivContent" class="regulationContent"></div>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
-

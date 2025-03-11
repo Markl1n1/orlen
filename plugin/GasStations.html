@@ -1,10 +1,72 @@
-﻿<HTML><HEAD><STYLE type="text/css">#content{ FONT-SIZE: 0.7em; PADDING-BOTTOM: 2em; MARGIN-LEFT: 30px}BODY{MARGIN-TOP: 0px; MARGIN-LEFT: 0px; COLOR: #000000; FONT-FAMILY: Verdana; BACKGROUND-COLOR: white}P{MARGIN-TOP: 0px; MARGIN-BOTTOM: 12px; COLOR: #000000; FONT-FAMILY: Verdana}PRE{BORDER-RIGHT: #f0f0e0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #f0f0e0 1px solid; MARGIN-TOP: -5px; PADDING-LEFT: 5px; FONT-SIZE: 1.2em; PADDING-BOTTOM: 5px; BORDER-LEFT: #f0f0e0 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #f0f0e0 1px solid; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e5e5cc}.heading1{MARGIN-TOP: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: 26px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 3px; MARGIN-LEFT: -30px; WIDTH: 100%; COLOR: #ffffff; PADDING-TOP: 10px; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #003366}.intro{MARGIN-LEFT: -15px}</STYLE>
-<TITLE>Service</TITLE></HEAD><BODY>
-<DIV id="content">
-<P class="heading1">Service</P>
-<BR/>
-<P class="intro">This is a Windows&#169; Communication Foundation service.<BR/><BR/><B>Metadata publishing for this service is currently disabled.</B><BR/><BR/>If you have access to the service, you can enable metadata publishing by completing the following steps to modify your web or application configuration file:<BR/><BR/>1. Create the following service behavior configuration, or add the &lt;serviceMetadata&gt; element to an existing service behavior configuration:</P>
-<PRE>
+﻿<html>
+  <head>
+    <style type="text/css">
+      #content {
+        font-size: 0.7em;
+        padding-bottom: 2em;
+        margin-left: 30px;
+      }
+      BODY {
+        margin-top: 0px;
+        margin-left: 0px;
+        color: #000000;
+        font-family: Verdana;
+        background-color: white;
+      }
+      P {
+        margin-top: 0px;
+        margin-bottom: 12px;
+        color: #000000;
+        font-family: Verdana;
+      }
+      PRE {
+        border-right: #f0f0e0 1px solid;
+        padding-right: 5px;
+        border-top: #f0f0e0 1px solid;
+        margin-top: -5px;
+        padding-left: 5px;
+        font-size: 1.2em;
+        padding-bottom: 5px;
+        border-left: #f0f0e0 1px solid;
+        padding-top: 5px;
+        border-bottom: #f0f0e0 1px solid;
+        font-family: Courier New;
+        background-color: #e5e5cc;
+      }
+      .heading1 {
+        margin-top: 0px;
+        padding-left: 15px;
+        font-weight: normal;
+        font-size: 26px;
+        margin-bottom: 0px;
+        padding-bottom: 3px;
+        margin-left: -30px;
+        width: 100%;
+        color: #ffffff;
+        padding-top: 10px;
+        font-family: Tahoma;
+        background-color: #003366;
+      }
+      .intro {
+        margin-left: -15px;
+      }
+    </style>
+    <title>Service</title>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Service</p>
+      <br />
+      <p class="intro">
+        This is a Windows&#169; Communication Foundation service.<br /><br /><b
+          >Metadata publishing for this service is currently disabled.</b
+        ><br /><br />If you have access to the service, you can enable metadata
+        publishing by completing the following steps to modify your web or
+        application configuration file:<br /><br />1. Create the following
+        service behavior configuration, or add the &lt;serviceMetadata&gt;
+        element to an existing service behavior configuration:
+      </p>
+      <pre>
 <font color="blue">&lt;<font color="darkred">behaviors</font>&gt;</font>
 <font color="blue">    &lt;<font color="darkred">serviceBehaviors</font>&gt;</font>
 <font color="blue">        &lt;<font color="darkred">behavior </font><font color="red">name</font>=<font color="black">"</font>MyServiceTypeBehaviors<font color="black">" </font>&gt;</font>
@@ -13,17 +75,25 @@
 <font color="blue">    &lt;<font color="darkred">/serviceBehaviors</font>&gt;</font>
 <font color="blue">&lt;<font color="darkred">/behaviors</font>&gt;</font>
 </PRE>
-<P class="intro">2. Add the behavior configuration to the service:</P>
-<PRE>
+      <p class="intro">2. Add the behavior configuration to the service:</p>
+      <pre>
 <font color="blue">&lt;<font color="darkred">service </font><font color="red">name</font>=<font color="black">"</font><i>MyNamespace.MyServiceType</i><font color="black">" </font><font color="red">behaviorConfiguration</font>=<font color="black">"</font><i>MyServiceTypeBehaviors</i><font color="black">" </font>&gt;</font>
 </PRE>
-<P class="intro">Note: the service name must match the configuration name for the service implementation.<BR/><BR/>3. Add the following endpoint to your service configuration:</P>
-<PRE>
+      <p class="intro">
+        Note: the service name must match the configuration name for the service
+        implementation.<br /><br />3. Add the following endpoint to your service
+        configuration:
+      </p>
+      <pre>
 <font color="blue">&lt;<font color="darkred">endpoint </font><font color="red">contract</font>=<font color="black">"</font>IMetadataExchange<font color="black">" </font><font color="red">binding</font>=<font color="black">"</font>mexHttpBinding<font color="black">" </font><font color="red">address</font>=<font color="black">"</font>mex<font color="black">" </font>/&gt;</font>
 </PRE>
 
-<P class="intro">Note: your service must have an http base address to add this endpoint.<BR/><BR/>The following is an example service configuration file with metadata publishing enabled:</P>
-<PRE>
+      <p class="intro">
+        Note: your service must have an http base address to add this
+        endpoint.<br /><br />The following is an example service configuration
+        file with metadata publishing enabled:
+      </p>
+      <pre>
 <font color="blue">&lt;<font color="darkred">configuration</font>&gt;</font>
 <font color="blue">    &lt;<font color="darkred">system.serviceModel</font>&gt;</font>
  
@@ -48,12 +118,13 @@
 <font color="blue">    &lt;<font color="darkred">/system.serviceModel</font>&gt;</font>
 <font color="blue">&lt;<font color="darkred">/configuration</font>&gt;</font>
 </PRE>
-<P class="intro">For more information on publishing metadata please see the following documentation: <a href="http://go.microsoft.com/fwlink/?LinkId=65455">http://go.microsoft.com/fwlink/?LinkId=65455</a>.</P>
-</DIV>
-</BODY></HTML>
-
-
-
-
-
-
+      <p class="intro">
+        For more information on publishing metadata please see the following
+        documentation:
+        <a href="http://go.microsoft.com/fwlink/?LinkId=65455"
+          >http://go.microsoft.com/fwlink/?LinkId=65455</a
+        >.
+      </p>
+    </div>
+  </body>
+</html>

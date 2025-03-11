@@ -1,2008 +1,2262 @@
-﻿<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+﻿<!doctype html>
 
 <html class="no-js">
-<head>
-	
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144171163-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-144171163-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-			gtag('config', 'UA-144171163-1');
-		</script>
-	
-	<meta charset="UTF-8" />
-	
-	<title>Platforma zakupowa Grupy ORLEN</title>
-	
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<link rel="shortcut icon" href="https://connect.orlen.pl/pic/favicon.ico" type="image/x-icon" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/css/open-sans.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/css/sweetalert.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/wf/css/style.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/wf/css/style-extra.css" />
-	<link media="print"	 rel="stylesheet" href="https://connect.orlen.pl/wf/css/print.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/dynatree/ui.dynatree.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/jquery-ui-1.9.1.custom.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/hlp.min.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/orlen_new.css" />
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/orlen_custom.css" />
+      gtag("config", "UA-144171163-1");
+    </script>
 
-	<!--[if IE 8]>
-		<link media="screen" rel="stylesheet" href="/wf/css/ie8.css" />
-	<![endif]-->
-	<link media="screen" rel="stylesheet" href="https://connect.orlen.pl/css/messageSource.css" />
-	
-	
-	
-	
-	<script>
-		var layoutFilesSubfolder = "/wf";
-		var messageSourceAdminMode = false;
-        var	messageSourceAdminModeUrl = 'https://connect.orlen.pl/app/messageSource/edit?code=';
-	</script>
-	<script src="https://connect.orlen.pl/js/js/knockout.js"></script>
-	<script src="https://connect.orlen.pl/js/js/knockout.mapping.js"></script>
-	<script src="https://connect.orlen.pl/wf/js/jq.js"></script>
-	<script src="https://connect.orlen.pl/wf/js/fx.js"></script>
-	<script src="https://connect.orlen.pl/js/js/jquery.ui-1.11.4.js"></script>
-	<script src="https://connect.orlen.pl/js/jquery.inputmask.bundle.min.js" ></script>
-	<script src="https://connect.orlen.pl/js/jquery.cookie.js"></script>
-	<script src="https://connect.orlen.pl/js/support-tickets.js"></script>
-	<script src="https://connect.orlen.pl/js/hlp.min.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://connect.orlen.pl/js/js/jquery.dotdotdot.min.js"></script>
-	<script type="text/javascript" src="https://connect.orlen.pl/js/js/promise-polyfill.js"></script>
-	<script type="text/javascript" src="https://connect.orlen.pl/js/js/sweetalert.min.js"></script>
-	<script src="https://connect.orlen.pl/js/mpFramework3.js"></script>
-	
-	<script src="https://connect.orlen.pl/js/support-capture.js"></script>
-	<script>
-	$.ajaxSetup({ 
-		traditional: true,
-		cache: false
-	});
+    <meta charset="UTF-8" />
 
-	mpCaptureBox.capatureActions = {
-			accept: 'https://connect.orlen.pl/app/support/capture/accept',
-			reject: 'https://connect.orlen.pl/app/support/capture/reject',
-			finish: 'https://connect.orlen.pl/app/support/capture/finish'
-	}
+    <title>Platforma zakupowa Grupy ORLEN</title>
 
-	mpCaptureBox.capatureText = {
-		accept_ok: 'Zaakceptowano żądanie zdalnego dostępu',
-		reject_ok: 'Odrzucono żądanie zdalnego dostępu',
-		finish_ok: 'Zakończono realizację żądania zdalnego dostępu',
-		unauthorizedAccess: 'Brak dostępu',
-		wrongCaptureRequestID: 'Błędny identyfikator żądania zdalnego dostępu',
-		wrongStatus: 'Sesja zdalnego dostępu została zakończona. W celu odświeżenia strony naciśnij F5',
-		wrongUser: 'Błędny użytkownik żądania zdalnego dostępu',
-		rejectComment_empty: 'components.capture.reject.rejectCommentEmpty',
-		defaultText: 'Wystąpił błąd'
-	}
-	var defaultContextPath = '';
-	var defaultMPpic = '/pic/mp';
-	var defaultCancelButtonText = 'Anuluj';
-	var defaultConfirmButtonText = 'Tak';
-	var defaultSaveButtonText = 'Zapisz';
-	var newsListReadedButtonText = 'Ukryj okno';
-    var newsListCloseButtonText = 'Ukryj okno';
-    var newsListAuthorText = 'Administrator Systemu';
-    var newsListLinkText = 'Link:';
-    var newsListAttachmentsText = 'Załączniki:';
-    var newsListErrorText = 'Jesteś wylogowany';
-	var jsCSRFToken = '';
-	</script>
-	
-	<!--[if lt IE 9]>
-	<script src="https://orlen.com.co/js/js/old-ie.js"></script>
-	<![endif]-->
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="shortcut icon"
+      href="https://connect.orlen.pl/pic/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/css/open-sans.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/css/sweetalert.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/wf/css/style.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/wf/css/style-extra.css"
+    />
+    <link
+      media="print"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/wf/css/print.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/dynatree/ui.dynatree.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/jquery-ui-1.9.1.custom.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/hlp.min.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/orlen_new.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/orlen_custom.css"
+    />
 
-<body style="background: #ffffff url('/pic/instance/prd.png') repeat;">
-<ul class="aural">
-	<li><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#nav">nawigacja</a></li>
-	<li><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#content">tresc</a></li>
-</ul>
+    <!--[if IE 8]>
+      <link media="screen" rel="stylesheet" href="/wf/css/ie8.css" />
+    <![endif]-->
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="https://connect.orlen.pl/css/messageSource.css"
+    />
 
+    <script>
+      var layoutFilesSubfolder = "/wf";
+      var messageSourceAdminMode = false;
+      var messageSourceAdminModeUrl =
+        "https://connect.orlen.pl/app/messageSource/edit?code=";
+    </script>
+    <script src="https://connect.orlen.pl/js/js/knockout.js"></script>
+    <script src="https://connect.orlen.pl/js/js/knockout.mapping.js"></script>
+    <script src="https://connect.orlen.pl/wf/js/jq.js"></script>
+    <script src="https://connect.orlen.pl/wf/js/fx.js"></script>
+    <script src="https://connect.orlen.pl/js/js/jquery.ui-1.11.4.js"></script>
+    <script src="https://connect.orlen.pl/js/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://connect.orlen.pl/js/jquery.cookie.js"></script>
+    <script src="https://connect.orlen.pl/js/support-tickets.js"></script>
+    <script
+      src="https://connect.orlen.pl/js/hlp.min.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/jquery.dotdotdot.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/promise-polyfill.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://connect.orlen.pl/js/js/sweetalert.min.js"
+    ></script>
+    <script src="https://connect.orlen.pl/js/mpFramework3.js"></script>
 
+    <script src="https://connect.orlen.pl/js/support-capture.js"></script>
+    <script>
+      $.ajaxSetup({
+        traditional: true,
+        cache: false,
+      });
 
+      mpCaptureBox.capatureActions = {
+        accept: "https://connect.orlen.pl/app/support/capture/accept",
+        reject: "https://connect.orlen.pl/app/support/capture/reject",
+        finish: "https://connect.orlen.pl/app/support/capture/finish",
+      };
 
+      mpCaptureBox.capatureText = {
+        accept_ok: "Zaakceptowano żądanie zdalnego dostępu",
+        reject_ok: "Odrzucono żądanie zdalnego dostępu",
+        finish_ok: "Zakończono realizację żądania zdalnego dostępu",
+        unauthorizedAccess: "Brak dostępu",
+        wrongCaptureRequestID: "Błędny identyfikator żądania zdalnego dostępu",
+        wrongStatus:
+          "Sesja zdalnego dostępu została zakończona. W celu odświeżenia strony naciśnij F5",
+        wrongUser: "Błędny użytkownik żądania zdalnego dostępu",
+        rejectComment_empty: "components.capture.reject.rejectCommentEmpty",
+        defaultText: "Wystąpił błąd",
+      };
+      var defaultContextPath = "";
+      var defaultMPpic = "/pic/mp";
+      var defaultCancelButtonText = "Anuluj";
+      var defaultConfirmButtonText = "Tak";
+      var defaultSaveButtonText = "Zapisz";
+      var newsListReadedButtonText = "Ukryj okno";
+      var newsListCloseButtonText = "Ukryj okno";
+      var newsListAuthorText = "Administrator Systemu";
+      var newsListLinkText = "Link:";
+      var newsListAttachmentsText = "Załączniki:";
+      var newsListErrorText = "Jesteś wylogowany";
+      var jsCSRFToken = "";
+    </script>
 
+    <!--[if lt IE 9]>
+      <script src="https://orlen.com.co/js/js/old-ie.js"></script>
+    <![endif]-->
+  </head>
 
+  <body
+    style="background: #ffffff url(&quot;/pic/instance/prd.png&quot;) repeat"
+  >
+    <ul class="aural">
+      <li>
+        <a href="https://connect.orlen.pl/servlet/HomeServlet.htm#nav"
+          >nawigacja</a
+        >
+      </li>
+      <li>
+        <a href="https://connect.orlen.pl/servlet/HomeServlet.htm#content"
+          >tresc</a
+        >
+      </li>
+    </ul>
 
+    <style type="text/css" media="screen">
+      .btn.btn-primary,
+      .btn.ui-button.btn-primary {
+        border-color: #ed1c24;
+        background: #ed1c24;
+        color: #fff;
+      }
+    </style>
 
+    <script language="javascript">
+      var readUrl = defaultContextPath + '/app/newsletter/__id__/read';
+      var replacedReadUrl;
 
+      $(document).ready(function () {
+          var newsletterDialog = $('<div id="newsletter-dialog"></div>').appendTo('body');
 
+          newsletterDialog.dialog({
+              modal: true,
+              autoOpen: false,
+              width: 800,
+              height: 300,
+              maxWidth: 800,
+              maxHeight: 600,
+              buttons: [{
+                  text: newsListReadedButtonText,
+                  "class": 'btn btn-primary newsListReaded',
+                  click: function() {
+                      $.ajax({
+                          type: 'POST',
+                          url: replacedReadUrl + '?CSRFToken=' + jsCSRFToken,
+                          success: function (data) {
+                              if (data && data.status === 'success') {
+                                  newsletterDialog.dialog("close");
+                              } else {
+                                  mpFrm3.showToastMessage(newsListErrorText, 'error');
+                              }
+                          }
+                      });
+                  }},
+                  {
+                  text: newsListCloseButtonText,
+                  "class": 'btn newsListClose',
+                  click: function() {
+                      newsletterDialog.dialog("close");
+                  }}
+              ],
+              closeOnEscape: false,
+              open: function(event, ui) {
+                  $(".ui-dialog-titlebar-close").hide();
+              }
+          });
 
+          if ($("#news-list-toggle").length) {
+              initNewsletter();
+          }
+      });
 
+      function initNewsletter() {
+          var messageListUrl = defaultContextPath + '/app/newsletter/list';
+      	var toggle = $('#news-list-toggle');
+      	var newsletter = $('#news-list');
+      	var template = newsletter.children();
 
+          $.ajax({
+              type: 'GET',
+              url: messageListUrl,
+              cache: false,
+              success: function (articles) {
+                  if (articles.length == 0) {
+                      $('#news-list-toggle').hide();
+                  } else {
+                      $('#news-list-toggle').show();
+                      toggle.find('.count').text('(' + articles.length + ')')
 
+                      for (var i = 0; i < articles.length; i++) {
+                          var a = articles[i];
+                          var article = template.clone();
 
+                          article.find('h5').text(a.dateValidFrom);
+                          article.find('h3').text(a.title);
+                          article.find('p').text(a.sAbstract);
+                          article.data('title', a.title);
+                          article.data('text', a.text);
+                          article.data('identity', a.identity);
 
+                          newsletter.append(article);
+                      }
 
+                      template.remove();
 
+                      articles = newsletter.find('li');
 
+                      toggle.on('click', function(e) {
+                          e.preventDefault();
 
+                          toggle.next('ul').stop().slideToggle();
+                          articles.trigger('destroy.dot');
+                          articles.dotdotdot();
+                      });
 
+                      articles.find('.more a').on('click', function(e) {
+                          e.preventDefault();
 
+                          var article = $(this).closest('li');
+                          openNewsletterDialog(article.data('identity'));
+                      })
 
-<style type="text/css" media="screen">
-    .btn.btn-primary,.btn.ui-button.btn-primary{border-color:#ed1c24;background:#ed1c24;color:#fff;}
-</style>
+                      articles.find('.more2').on('click', function(e) {
+                          e.preventDefault();
 
-<script language="javascript">
-    var readUrl = defaultContextPath + '/app/newsletter/__id__/read';
-    var replacedReadUrl;
+                          var article = $(this).closest('li');
+                          openNewsletterDialog(article.data('identity'));
+                      })
+                  }
+              }
+          })
+      }
 
-    $(document).ready(function () {
-        var newsletterDialog = $('<div id="newsletter-dialog"></div>').appendTo('body');
+      function openNewsletterDialog(id) {
+          var newsletterDialogSelector = $('#newsletter-dialog');
+          var messageUrl = defaultContextPath + '/app/newsletter/__id__';
+          var replacedMessageUrl = messageUrl.replace('__id__', id);
+          replacedReadUrl = readUrl.replace('__id__', id);
 
-        newsletterDialog.dialog({
+          $.ajax({
+              type: 'GET',
+              url: replacedMessageUrl,
+              cache: false,
+              success: function (data) {
+                  if (data != null) {
+                      newsletterDialogSelector.html('');
+                      newsletterDialogSelector.append('<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>');
+                      $('#dateDiv').text( data.dateValidFrom + ', ' + newsListAuthorText);
+                      var escaped = $('#textDiv').text(data.text).html();
+                      var str = escaped.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                      $('#textDiv').html(str);
+
+                      if(data.link){
+                          newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListLinkText + '</p>');
+                          newsletterDialogSelector.append('<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>');
+                          var newsletterLink = $("#newsletterLink");
+                          newsletterLink.text(data.link);
+                          newsletterLink.attr("href", data.link);
+                          newsletterDialogSelector.append('<br/>');
+                      }
+
+                      if (data.attachments.length > 0) {
+                          newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
+                          for (var i = 0; i < data.attachments.length; i++) {
+                              var attachment = data.attachments[i];
+                              var messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=intranetNewsletter&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
+                              if (data.public) {
+                                  messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
+                              }
+                              var replacedDownloadURL = messageDownloadURL.replace('__messageId__', data.identity).replace('__id__', attachment.identity);
+                              newsletterDialogSelector.append('<p style="text-align: left;"><a href="https://connect.orlen.pl/servlet/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
+                              $('#attachmentSpan_' + attachment.identity).text(attachment.name);
+                          }
+                      }
+
+                      newsletterDialogSelector.dialog('option', 'title', data.title).dialog('open');
+
+                       if (data.unread) {
+                          $(".newsListReaded").show();
+                          $(".newsListClose").hide();
+                          $('.newsListReaded ').focus();
+                      } else {
+                          $(".newsListReaded").hide();
+                          $(".newsListClose").show();
+                          $('.newsListClose ').focus();
+                      }
+
+                      newsletterDialogSelector.scrollTop("0");
+                  } else {
+                      mpFrm3.showToastMessage(newsListErrorText, 'error');
+                  }
+              }
+          });
+      }
+    </script>
+    <style type="text/css" media="screen">
+      .btn.btn-primary,
+      .btn.ui-button.btn-primary {
+        border-color: #ed1c24;
+        background: #ed1c24;
+        color: #fff;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if ("" && "" && "" && "") {
+          var newNewsletterDialog = $(
+            '<div id="new-newsletter-dialog"></div>',
+          ).appendTo("body");
+
+          newNewsletterDialog.dialog({
             modal: true,
             autoOpen: false,
             width: 800,
             height: 300,
             maxWidth: 800,
             maxHeight: 600,
-            buttons: [{
+            buttons: [
+              {
                 text: newsListReadedButtonText,
-                "class": 'btn btn-primary newsListReaded',
-                click: function() {
-                    $.ajax({
-                        type: 'POST',
-                        url: replacedReadUrl + '?CSRFToken=' + jsCSRFToken,
-                        success: function (data) {
-                            if (data && data.status === 'success') {
-                                newsletterDialog.dialog("close");
-                            } else {
-                                mpFrm3.showToastMessage(newsListErrorText, 'error');
-                            }
-                        }
-                    });
-                }},
-                {
-                text: newsListCloseButtonText,
-                "class": 'btn newsListClose',
-                click: function() {
-                    newsletterDialog.dialog("close");
-                }}
+                class: "btn btn-primary newsListReaded",
+                click: function () {
+                  $.ajax({
+                    type: "POST",
+                    url:
+                      "https://connect.orlen.pl/app/newsletter//read?CSRFToken=" +
+                      jsCSRFToken,
+                    success: function (data) {
+                      if (data && data.status === "success") {
+                        newNewsletterDialog.dialog("close");
+                      } else {
+                        mpFrm3.showToastMessage(newsListErrorText, "error");
+                      }
+                    },
+                  });
+                },
+              },
             ],
             closeOnEscape: false,
-            open: function(event, ui) {
-                $(".ui-dialog-titlebar-close").hide();
-            }
-        });
+            open: function (event, ui) {
+              $(".ui-dialog-titlebar-close").hide();
+            },
+          });
 
-        if ($("#news-list-toggle").length) {
-            initNewsletter();
+          newNewsletterDialog.html("");
+          newNewsletterDialog.append(
+            '<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>',
+          );
+          $("#newDateDiv").text(", " + newsListAuthorText);
+          var str = "";
+          str = str.replace(/(?:\r\n|\r|\n)/g, "<br>");
+          $("#newTextDiv").html(str);
+
+          if ("") {
+            newNewsletterDialog.append(
+              '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
+                newsListAttachmentsText +
+                "</p>",
+            );
+          }
+
+          newNewsletterDialog.dialog("option", "title", "").dialog("open");
+          $(".newsListReaded ").focus();
+          newNewsletterDialog.scrollTop("0");
         }
-    });
-
-    function initNewsletter() {
-        var messageListUrl = defaultContextPath + '/app/newsletter/list';
-    	var toggle = $('#news-list-toggle');
-    	var newsletter = $('#news-list');
-    	var template = newsletter.children();
-
-        $.ajax({
-            type: 'GET',
-            url: messageListUrl,
-            cache: false,
-            success: function (articles) {
-                if (articles.length == 0) {
-                    $('#news-list-toggle').hide();
-                } else {
-                    $('#news-list-toggle').show();
-                    toggle.find('.count').text('(' + articles.length + ')')
-
-                    for (var i = 0; i < articles.length; i++) {
-                        var a = articles[i];
-                        var article = template.clone();
-
-                        article.find('h5').text(a.dateValidFrom);
-                        article.find('h3').text(a.title);
-                        article.find('p').text(a.sAbstract);
-                        article.data('title', a.title);
-                        article.data('text', a.text);
-                        article.data('identity', a.identity);
-
-                        newsletter.append(article);
-                    }
-
-                    template.remove();
-
-                    articles = newsletter.find('li');
-
-                    toggle.on('click', function(e) {
-                        e.preventDefault();
-
-                        toggle.next('ul').stop().slideToggle();
-                        articles.trigger('destroy.dot');
-                        articles.dotdotdot();
-                    });
-
-                    articles.find('.more a').on('click', function(e) {
-                        e.preventDefault();
-
-                        var article = $(this).closest('li');
-                        openNewsletterDialog(article.data('identity'));
-                    })
-
-                    articles.find('.more2').on('click', function(e) {
-                        e.preventDefault();
-
-                        var article = $(this).closest('li');
-                        openNewsletterDialog(article.data('identity'));
-                    })
-                }
-            }
-        })
-    }
-
-    function openNewsletterDialog(id) {
-        var newsletterDialogSelector = $('#newsletter-dialog');
-        var messageUrl = defaultContextPath + '/app/newsletter/__id__';
-        var replacedMessageUrl = messageUrl.replace('__id__', id);
-        replacedReadUrl = readUrl.replace('__id__', id);
-
-        $.ajax({
-            type: 'GET',
-            url: replacedMessageUrl,
-            cache: false,
-            success: function (data) {
-                if (data != null) {
-                    newsletterDialogSelector.html('');
-                    newsletterDialogSelector.append('<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>');
-                    $('#dateDiv').text( data.dateValidFrom + ', ' + newsListAuthorText);
-                    var escaped = $('#textDiv').text(data.text).html();
-                    var str = escaped.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                    $('#textDiv').html(str);
-
-                    if(data.link){
-                        newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListLinkText + '</p>');
-                        newsletterDialogSelector.append('<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>');
-                        var newsletterLink = $("#newsletterLink");
-                        newsletterLink.text(data.link);
-                        newsletterLink.attr("href", data.link);
-                        newsletterDialogSelector.append('<br/>');
-                    }
-
-                    if (data.attachments.length > 0) {
-                        newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
-                        for (var i = 0; i < data.attachments.length; i++) {
-                            var attachment = data.attachments[i];
-                            var messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=intranetNewsletter&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
-                            if (data.public) {
-                                messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
-                            }
-                            var replacedDownloadURL = messageDownloadURL.replace('__messageId__', data.identity).replace('__id__', attachment.identity);
-                            newsletterDialogSelector.append('<p style="text-align: left;"><a href="https://connect.orlen.pl/servlet/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
-                            $('#attachmentSpan_' + attachment.identity).text(attachment.name);
-                        }
-                    }
-
-                    newsletterDialogSelector.dialog('option', 'title', data.title).dialog('open');
-
-                     if (data.unread) {
-                        $(".newsListReaded").show();
-                        $(".newsListClose").hide();
-                        $('.newsListReaded ').focus();
-                    } else {
-                        $(".newsListReaded").hide();
-                        $(".newsListClose").show();
-                        $('.newsListClose ').focus();
-                    }
-
-                    newsletterDialogSelector.scrollTop("0");
-                } else {
-                    mpFrm3.showToastMessage(newsListErrorText, 'error');
-                }
-            }
-        });
-    }
-</script>
-<style type="text/css" media="screen">
-             .btn.btn-primary,.btn.ui-button.btn-primary{border-color:#ed1c24;background:#ed1c24;color:#fff;}
-         </style>
-
-         
-         
-         
-         
-         
-         
-         
-         
-         
-
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 if ('' && '' && '' && '') {
-                     
-
-                     var newNewsletterDialog = $('<div id="new-newsletter-dialog"></div>').appendTo('body');
-
-                     newNewsletterDialog.dialog({
-                         modal: true,
-                         autoOpen: false,
-                         width: 800,
-                         height: 300,
-                         maxWidth: 800,
-                         maxHeight: 600,
-                         buttons: [{
-                             text: newsListReadedButtonText,
-                             "class": 'btn btn-primary newsListReaded',
-                             click: function() {
-                                 $.ajax({
-                                     type: 'POST',
-                                     url: 'https://connect.orlen.pl/app/newsletter//read?CSRFToken=' + jsCSRFToken,
-                                     success: function (data) {
-                                         if (data && data.status === 'success') {
-                                             newNewsletterDialog.dialog("close");
-                                         } else {
-                                             mpFrm3.showToastMessage(newsListErrorText, 'error');
-                                         }
-                                     }
-                                 });
-                             }}
-                         ],
-                         closeOnEscape: false,
-                         open: function(event, ui) {
-                             $(".ui-dialog-titlebar-close").hide();
-                         }
-                     })
-
-                     newNewsletterDialog.html('');
-                     newNewsletterDialog.append('<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>');
-                     $('#newDateDiv').text(', ' + newsListAuthorText);
-                     var str = '';
-        		     str = str.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                     $('#newTextDiv').html(str);
-
-                     
-                     
-                     if ('') {
-                        newNewsletterDialog.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
-                        
-                     }
-
-                     newNewsletterDialog.dialog('option', 'title', '').dialog('open');
-                     $('.newsListReaded ').focus();
-                     newNewsletterDialog.scrollTop("0");
-                 }
-             });
-         </script>
-<script type="text/javascript">
-<!--
-function headerChangeLang(language, country) {
-	document.forms.changeLocaleForm.country.value = country;
-	document.forms.changeLocaleForm.language.value = language;
-	document.forms.changeLocaleForm.submit();
-}
-//-->
-
-var unreadNotificationsCountUrl = 'https://connect.orlen.pl/app/notification/unread/count';
-function loadNotificationsCount() {
-	 $.ajax({
-         type: 'post',
-         url: unreadNotificationsCountUrl,
-         async: true,
-         contentType: "application/json; charset=utf-8",
-         dataType: 'json',
-         success:  function(result) {
-        	$('#notifications-count span').text(result.unreadNotificationsCount);
-         }
-     });
-}
-var maxFileSize = 104999999;
-$(function() {
-	if(false) {
-		loadNotificationsCount();
-	}
-	$("input[name='newFileContent'").change(function() {
-		checkFileSize(this);
-	});
-});
-function checkFileSize(input) {
-	if (input.files[0].size == 0) {
-        input.form.newFileContent.value='';
-        input.form.newFileDescription.value='';
-        mpFrm3.showToastMessage('Nie można dodać pustego pliku', 'error');
-    } else if (input.files[0].size >= maxFileSize) {
-		input.form.newFileContent.value='';
-		input.form.newFileDescription.value='';
-		mpFrm3.showToastMessage('Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.', 'error');
-	}
-}
-</script>
-
-
-
-
-	
-
-
-
-
-
-
-<form method="post" action="https://connect.orlen.pl/servlet/HomeServlet?" name="changeLocaleForm">
-	<input name="CSRFToken" type="hidden" value="" />
-	<input type="hidden" name="MP_module" value="common" />
-	<input type="hidden" name="MP_action" value="changeLocale" />
-	<input type="hidden" name="language" value="" />
-	<input type="hidden" name="country" value="" />
-</form>
-<div id="wrapper">
-     <header id="header-new" class="normal">
-         <div class="inner">
-             <div id="logo">
-             	<a href="https://connect.orlen.pl/servlet/HomeServlet?"><img src="https://connect.orlen.pl/pic/img/logo_pl.png" alt="Connect - Platforma zakupowa GK ORLEN" /></a>
-             </div>
-
-             <div class="nav">
-             	<ul>
-			<li class="active"><a href="https://connect.orlen.pl/app/dashboard">Strona główna</a></li>
-			<li ><a href="https://connect.orlen.pl/servlet/help.html">Pomoc</a></li>
-			<li ><a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact">Kontakt</a></li>
-		</ul>
-             </div>
-	
-		<div class="nav" id="auth-links">
-                  <ul>
-					  <li>
-                         	<a href="https://connect.orlen.pl/app/register/start">Zarejestruj</a>
-                      </li>	
-                      <li>
-                          <a href="https://connect.orlen.pl/app/login" >Zaloguj</a>
-                      </li>
-                  </ul>
-              </div>
-	
-             <div id="lang-switcher">
-                 <span>Wybierz język/Choose language</span>
-                 <ul class="open">
-			<li > <a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="headerChangeLang('cs', 'CZ')">cz</a></li>
-			<li ><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="headerChangeLang('en', 'EN')">en</a></li>
-			<li class="active"><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="headerChangeLang('pl', 'PL')">pl</a></li>
-			<li ><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="headerChangeLang('lt', 'LT')">lt</a></li>
-			<li ><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="headerChangeLang('de', 'DE')">de</a></li>
-			<li ><a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="headerChangeLang('ru', 'RU')">ru</a></li>
-                 </ul>
-             </div>
-	
-         </div>
-     </header>
-
-     <section id="breadcrumb">
-         <div class="inner">
-            
-         </div>
-     </section>
-   	<div id="top">
-	    <div id="content" role="main">
-	        
-            
-                
-            
-            
-        </div>
-        <br/>
-		<div id="advertising_banner" style="margin-bottom: 15px; text-align: center;">
-				<a href="mailto:energia@orlen.com.co?subject=Energia Elektryczna z PKN ORLEN S.A."><img src="https://connect.orlen.pl/wf/images/logo/energia.jpg" width="948" height="210" alt="#" /></a>
-		</div>
-
-
-<style>
-#demand-search-wrapper {
-	position: relative;
-	min-height: 38.5rem;
-    padding: 4px;
-	overflow: hidden;
-}
-#demand-search-wrapper .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(248, 248, 248, 0.8);
-	display: flex;
-    justify-content: center;
-    align-items: center;
-	visibility: hidden;
-	opacity: 0;
-	z-index: -1;
-	transition: all 0.3s ease-in-out;
-}
-#demand-search-wrapper .overlay.visible {
-	visibility: visible;
-	opacity: 1;
-	z-index: 0;
-}
-.demand-search-form {
-    display: flex;
-    justify-content: space-between;
-	align-items: center;
-}
-.demand-search-form > div:not(:first-of-type):not(:last-of-type) {
-	display: inline-flex;
-    margin-left: 16px;
-	padding: 0 4px;
-    justify-content: center;
-    align-items: center;
-	max-width: 18em;
-    overflow: hidden;
-}
-.demand-search-form > div.active {
-    z-index: 1;
-}
-.demand-search-form > div:not(:first-of-type):not(:last-of-type) > span {
-	color: #227cc9;
-	cursor: pointer;
-	font-weight: 500;
-	font-size: 14px;
-	display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-.demand-search-form > div:not(:first-of-type):not(:last-of-type) > span svg {
-    height: 14px;
-    width: 14px;
-	margin-right: 4px;
-}
-.demand-search-form-cats {
-	margin-right: auto;
-}
-.demand-search-form-clear span {
-	font-size: 12px;
-}
-.demand-search-categories-filter,
-.demand-search-form-name {
-    width: 35%;
-	display: flex;
-}
-.demand-search-categories-filter input,
-.demand-search-form-name input {
-    flex-grow: 1;
-	padding: 6px;
-    border: 1px solid #227cc9;
-    border-radius: 5px 0 0 5px;
-}
-.demand-search-categories-filter input:focus,
-.demand-search-form-name input:focus {
-	outline: none;
-}
-.demand-search-categories-filter span,
-.demand-search-form-name span {
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: auto;
-    text-align: center;
-    background-color: #227cc9;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-	cursor: pointer;
-}
-.demand-search-categories-filter span > svg,
-.demand-search-form-name span > svg {
-    stroke: #fff;
-    fill: none;
-    height: 16px;
-}
-.demand-search-form-sort {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-	margin-left: 18px;
-}
-.demand-search-form-sort b {
-	font-size: 14px;
-}
-.demand-search-form-sort span {
-	font-weight: 500;
-	cursor: pointer;
-}
-.demand-search-form-sort select {
-	background-color: #f3f3f3;
-	direction: rtl;
-	-webkit-appearance: none;
-	appearance: none;
-	cursor: pointer;
-}
-.demand-search-form-sort select::-ms-expand {
-    display: none;
-}
-.demand-search-form-sort select:focus {
-	outline: none;
-}
-.demand-search-cards-wrapper {
-	position: absolute;
-	left: 0;
-    right: 0;
-    background: #f8f8f8;
-	visibility: hidden;
-	height: 0;
-	opacity: 0;
-	z-index: -1;
-	transition: all 0.3s ease-in-out;
-}
-.demand-search-cards-wrapper.visible {
-	height: 36.75rem;
-	visibility: visible;
-	opacity: 1;
-	z-index: 1;
-}
-.demand-search-cards-wrapper .checkAll,
-.demand-search-cards-wrapper > span {
-    position: absolute;
-    right: 1rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    font-size: 12px;
-	color: #0169c2;
-	background: #f8f8f8;
-	z-index: 1;
-}
-.demand-search-cards-wrapper .applyFilter {
-	font-size: 16px;
-	font-weight: 500;
-}
-.demand-search-cards-wrapper > span:nth-of-type(1),
-.demand-search-cards-wrapper > span:nth-of-type(2), {
-	top: 0;
-}
-.demand-search-cards-wrapper > span:nth-of-type(1) {
-	right: unset;
-	left: 1rem;
-}
-.demand-search-cards-wrapper > span:last-of-type {
-	bottom: 0;
-}
-.demand-search-cards-wrapper .demand-search-cards.organizations .checkAll {
-    top: 0;
-}
-.demand-search-cards-wrapper .demand-search-cards.categories .checkAll {
-    top: -32px;
-    right: 0;
-}
-.demand-search-cards {
-	position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 1rem;
-	max-height: 33.75rem;
-    overflow-y: auto;
-}
-.demand-search-cards.categories,
-.demand-search-cards.breadcrumbs,
-.demand-search-cards.search-filter {
-    flex-basis: 100%;
-	padding: 0;
-	padding-bottom: 1rem;
-}
-.demand-search-cards.breadcrumbs:after,
-.demand-search-cards.search-filter:after {
-    display: block;
-    content: '';
-    width: 40%;
-    border-bottom: 1px solid #ccc;
-    position: absolute;
-    bottom: 0.5rem;
-	left: 0.75rem;
-}
-.demand-search-cards.breadcrumbs:after {
-	width: 50%;
-}
-.demand-search-cards.categories {
-	overflow: visible;
-}
-.demand-search-cards.organizations {
-    margin-top: 32px;
-    max-height: 31.25rem;
-}
-.demand-search-cards > div:not(.breadcrumbs):not(.search-filter) {
-    margin: 8px;
-    width: 18.34%;
-    max-width: 13.95em;
-	height: 7em;
-    display: flex;
-    justify-content: center;
-	align-items: center;
-	text-align: center;
-    background: #fff;
-    padding: 4px;
-	box-sizing: border-box;
-	border: 1px solid #e4e4e4;
-	cursor: pointer;
-	position: relative;
-}
-.demand-search-cards > div:not(.breadcrumbs):not(.search-filter):hover,
-.demand-search-cards > div.selected {
-	border-color: #ed1c24;
-	color: #ed1c24;
-}
-.demand-search-cards > div:not(.breadcrumbs):not(.search-filter):hover span,
-.demand-search-cards > div.selected span {
-	color: #ed1c24;
-}
-.demand-search-cards > div.selected:after,
-.demand-search-cards > div.indeterminate:after {
-    content: ' ';
-    border-color: transparent #ed1c23 transparent transparent;
-    display: block;
-    border-style: solid;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.demand-search-cards > div.selected:after {
-    border-width: 0 15px 15px 0;
-}
-.demand-search-cards > div.indeterminate:after {
-    border-width: 0 10px 10px 0;
-}
-.demand-search-cards > div span {
-	color: #0169c2;
-	max-height: 100%;
-    overflow: hidden;
-}
-.demand-item .demand-item-org span,
-.demand-search-cards-orgs-card span {
-	display: none;
-	max-width: 100%;
-}
-.demand-item .demand-item-org:hover span,
-.demand-search-cards-orgs-card:hover span {
-	display: block;
-}
-.demand-search-cards-orgs-card.selected img {
-	filter: none;
-}
-.demand-item .demand-item-org:hover img,
-.demand-search-cards-orgs-card:hover img {
-	display: none;
-}
-.demand-search-cards-orgs-card:hover span {
-	display: block;
-}
-.demand-item-org .country,
-.demand-search-cards-orgs-card .country {
-	position: absolute;
-    top: 4px;
-    left: 4px;
-    color: #ccc !important;
-}
-.demand-search-cards-cats-card .checkbox {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    display: none;
-}
-.demand-search-cards-cats-card:hover .checkbox {
-    display: inline-block;
-}
-.demand-search-cards-cats-card:hover .checkbox svg {
-    height: 16px;
-    width: 16px;
-    fill: #ccc;
-}
-.demand-search-cards-cats-card:hover .checkbox svg:hover {
-    fill: #ed1c24;
-}
-.demand-search-cards-cats-card .cats-card-depth,
-.demand-search-cards-cats-card .cats-card-depth:before {
-	display: none;
-	position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border: 1px solid #e4e4e4;
-	z-index: -1;
-}
-.demand-search-cards-cats-card.selected .cats-card-depth,
-.demand-search-cards-cats-card.selected .cats-card-depth:before {
-	border-color: #ed1c24;
-}
-
-.demand-search-cards-cats-card.depth0 .cats-card-depth,
-.demand-search-cards-cats-card.depth0 .cats-card-depth:before {
-	display: block;
-	top: -9px;
-	left: -9px;
-}
-.demand-search-cards-cats-card.depth0 .cats-card-depth:before {
-	display: block;
-	content: '';
-	top: 3px;
-	left: 3px;
-}
-.demand-search-cards-cats-card.depth1 .cats-card-depth {
-	display: block;
-	top: -4px;
-	left: -4px;
-}
-.demand-search-cards-cats-card.main-cats {
-    width: 7em !important;
-    background: #227cc9 !important;
-}
-.demand-search-cards-cats-card.main-cats:hover span,
-.demand-search-cards-cats-card.main-cats span {
-    color: #fff !important;
-}
-.demand-search-cards-cats-card.main-cats .cats-card-depth,
-.demand-search-cards-cats-card.main-cats .cats-card-depth:before {
-    background: #227cc9 !important;
-}
-.demand-search-cards .search-filter {
-	padding: 12px;
-}
-.demand-search-cards .search-filter > span {
-    width: 394px;
-}
-.demand-search-cards .search-filter input {
-	border-radius: 5px;
-}
-.demand-search-cards .search-filter > span.active input {
-	border-radius: 5px 0 0 5px;
-}
-.demand-search-results {
-	display: none;
-	visibility: visible;
-	opacity: 1;
-	z-index: 0;
-	height: auto;
-	transition: all 0.3s ease-in-out;
-}
-.demand-search-results.visible {
-	display: block;
-}
-.demand-search-results.hidden {
-	visibility: hidden;
-	opacity: 0;
-	z-index: -1;
-	height: 0;
-}
-.demand-item {
-	display: flex;
-	width: 100%;
-	background-color: #fdfdfd;
-	border: 2px solid #fdfdfd;
-	margin: 6px 0;
-	height: 84px;
-	cursor: pointer;
-}
-.demand-item:hover {
-	border-color: #227cc9;
-}
-.demand-item > div {
-	padding: 4px 8px;
-}
-.demand-search-cards > div > img,
-.demand-item > div > img {
-    max-width: 100%;
-	max-height: 100%;
-	filter: grayscale(1);
-}
-.demand-item > div > img {
-	width: 129.24px;
-	height: 70px;
-}
-.demand-search-cards > div > img {
-	width: 147.7px;
-	height: 80px;
-}
-.demand-item:hover > div > img {
-	filter: none;
-}
-.demand-item-col {
-	width: 120px;
-	flex-basis: 120px;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-	justify-content: center;
-	position: relative;
-}
-.demand-item-org {
-	text-align: center;
-	color: #ed1c24;
-}
-.demand-item-details {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-	width: 740px;
-    height: 70px;
-    justify-content: space-between;
-	align-items: flex-start;
-	position: relative;
-}
-.demand-item-details:before, .demand-item-details:after {
-    display: block;
-    content: ' ';
-    border-left: solid 1px #9e9e9e;
-    width: 1px;
-    height: 90%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-}
-.demand-item-details:after {
-    left: 100%;
-}
-.demand-item-details-header {
-    display: flex;
-    width: 100%;
-}
-.demand-item-details-exist-in-round {
-	font-size: 10px;
-    letter-spacing: 1px;
-    text-decoration: underline;
-    color: #a1ca00;
-    margin-left: auto;
-}
-.demand-item-details-name {
-	position: relative;
-	font-size: 15px;
-	line-height: normal;
-	letter-spacing: 1px;
-	display: block;
-    max-width: 100%;
-    max-height: 38px;
-    /* overflow: hidden; */
-}
-.demand-item-details-kind {
-	font-size: 11px;
-	font-weight: 500;
-}
-.demand-item-details-number {
-	font-size: 10px;
-	margin-left: 4px;
-}
-.demand-item-details-category {
-	font-size: 11px;
-	align-self: flex-end;
-	font-weight: 500;
-}
-.demand-item-time {
-	color: #227cc9;
-	margin-bottom: 12px;
-}
-.demand-item-time svg {
-    height: 16px;
-    width: 16px;
-    vertical-align: bottom;
-}
-.demand-item-to-details {
-	font-weight: bold;
-	font-size: 11px;
-    text-decoration: underline;
-    align-self: flex-end;
-	max-width: 100%;
-    overflow: hidden;
-}
-.demand-item-to-details:after {
-    content: ">";
-    display: inline-block;
-    text-decoration: none;
-    margin-left: 2px;
-}
-.demand-no-content-info {
-    padding: 2rem;
-    font-size: 14px;
-    text-align: center;
-}
-.demand-no-content-info span {
-    font-size: 16px;
-    font-weight: 500;
-}
-.demand-no-content-info a {
-	font-size: 12px;
-	font-style: italic;
-}
-.demand-load-more-wrapper {
-	padding: 0.5rem;
-	text-align: right;
-}
-</style>
-
-		<h4>Aktualne zapytania ofertowe</h4>
-		<div id="demand-search-wrapper">
-			<section class="demand-search-form">
-				<div class="demand-search-form-name">
-					<input name="demand-search-name" placeholder="Wyszukaj postępowanie" data-bind="textInput: searchName, event: {keyup: enterSubmit}" />
-					<span data-bind="click: searchDemands">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-							<defs/>
-							<circle cx="7.714" cy="7.563" r="5.404" stroke-miterlimit="10" stroke-width="2.5"/>
-							<path stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.5" d="M11.486 11.638l6.204 6.204"/>
-						</svg>
-					</span>
-				</div>
-				<div class="demand-search-form-orgs" data-bind="css: {active: orgCardsVisible}">
-					<span data-bind="click: openOrgCards">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-							<defs/>
-							<path fill="#3183D9" d="M0 0h15v2H0z"/>
-							<path fill="#BFC0C2" d="M0 2h15v1H0z"/>
-							<path fill="#3183D9" d="M0 6h15v2H0z"/>
-							<path fill="#BFC0C2" d="M0 8h15v1H0z"/>
-							<path fill="#3183D9" d="M0 12h15v2H0z"/>
-							<path fill="#BFC0C2" d="M0 14h15v1H0z"/>
-						</svg>
-						<span>Spółki</span>
-					</span>
-					| <em data-bind="text: countSelectedOrgs() === 0 || allSelected(organizations()) ? 'wszystkie' : countSelectedOrgs() "></em>
-				</div>
-				<div class="demand-search-form-cats" data-bind="css: {active: catsCardsVisible}">
-					<span data-bind="click: openCatCards">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-							<defs/>
-							<path fill="#3183D9" d="M0 0h15v2H0z"/>
-							<path fill="#BFC0C2" d="M0 2h15v1H0z"/>
-							<path fill="#3183D9" d="M0 6h15v2H0z"/>
-							<path fill="#BFC0C2" d="M0 8h15v1H0z"/>
-							<path fill="#3183D9" d="M0 12h15v2H0z"/>
-							<path fill="#BFC0C2" d="M0 14h15v1H0z"/>
-						</svg>
-						<span>Kategorie</span>
-					</span>
-					| <em data-bind="text: countSelectedCats() === 0 || allSelected(categories()) ? 'wszystkie' : countSelectedCats() "></em>
-				</div>
-				<div class="demand-search-form-clear" data-bind="css: {active: orgCardsVisible() || catsCardsVisible()}">
-					<span data-bind="if: areFiltersApplied, click: clearFilters">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-							<defs/>
-							<g fill="none" stroke="#3183D9" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.5">
-								<path d="M1.411 1.41l12.178 12.18M13.59 1.411L1.41 13.588"/>
-							</g>
-						</svg>
-						<span>wyczyść filtry</span>
-					</span>				
-				</div>
-				<div class="demand-search-form-sort">
-					<b>Sortowanie:</b>
-					<select data-bind="options: sortOptions, optionsValue: 'value', optionsText: 'caption', value: sortByLatest"></select>
-				</div>
-			</section>
-			<section data-bind="css: {visible: orgCardsVisible() || catsCardsVisible()}" class="demand-search-cards-wrapper">
-				<span data-bind="visible: categoriesBreadCrumbs().length > 0 || (categoriesFilter() && categoriesFilter().length), click: goBack">Wstecz</span>
-				<span class="applyFilter" data-bind="visible: orgCardsVisible() || catsCardsVisible(), click: searchDemands">Zastosuj i ukryj okno</span>
-				<div data-bind="visible: orgCardsVisible()" class="demand-search-cards organizations">
-					<span class="checkAll" data-bind="click: $root.checkAll">zaznacz / odznacz wszystko</span>
-					<!-- ko foreach: organizations -->
-						<div class="demand-search-cards-orgs-card" data-bind="css: { selected: selected }, click: function(){ $root.selectItem($data) }">
-							<!-- ko if: logo().length > 0 -->
-								<img data-bind="attr: {src: $root.generateURL( 'orgImg', {logo: logo()} )} " />
-							<!-- /ko -->
-							<span data-bind="text: name"></span>
-							<span class="country" data-bind="text: country"></span>
-						</div>
-					<!-- /ko -->
-				</div>
-				<div data-bind="with: categoriesToShow, visible: $root.catsCardsVisible() " class="demand-search-cards">
-					<div class="search-filter demand-search-cards">
-						<span class="demand-search-categories-filter" data-bind="css: {active: $root.categoriesFilter() && $root.categoriesFilter().length > 0}">
-							<input name="demand-search-categories-filter" placeholder="Wyszukaj kategorię" data-bind="textInput: $root.categoriesFilter, hasFocus: $root.categoriesFilter.focus, event: {keyup: $root.enterSubmit, focus: function(e){event.target.setSelectionRange($root.categoriesFilter.caret(), $root.categoriesFilter.caret())}}"/>
-							<span data-bind="click: $root.clearCategoriesFilter, visible: $root.categoriesFilter() && $root.categoriesFilter().length > 0">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-									<defs/>
-									<g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.5">
-										<path d="M1.411 1.41l12.178 12.18M13.59 1.411L1.41 13.588"/>
-									</g>
-								</svg>
-							</span>
-						</span>
-					</div>
-					<div class="breadcrumbs demand-search-cards" data-bind="visible: $root.categoriesBreadCrumbs().length > 0">
-						<div class="demand-search-cards-cats-card depth0 main-cats" data-bind="click: function(){ $root.showChildren(null)}">
-							<div class="cats-card-depth"></div>
-							<span>KATEGORIE GŁÓWNE</span>
-						</div>
-						<!-- ko template: { name: 'categoryTemplate', foreach: $root.categoriesBreadCrumbs, as: 'categoryBreadCrumb' } --><!-- /ko -->
-					</div>
-					<section class="demand-search-cards categories">
-						<span class="checkAll" data-bind="click: $root.checkAll">zaznacz / odznacz wszystko</span>
-						<!-- ko template: { name: 'categoryTemplate', foreach: $data, as: 'category' } --><!-- /ko -->
-					</section>
-
-					<script type="text/html" id="categoryTemplate">
-						<!-- ko if: children && children() === null -->
-						<div class="demand-search-cards-cats-card" data-bind="css: { selected: selected }, click: function(){ $root.selectItem($data) }">
-							<span class="cat-name" data-bind="html: name, event: { mouseenter: $root.scrollContent}"></span>							
-						</div>
-						<!-- /ko -->
-						<!-- ko if: children && children() !== null && children().length > 0 -->
-						<div class="demand-search-cards-cats-card" data-bind="css: { selected: selected, indeterminate: indeterminate, depth0: depth() === 0, depth1: depth() === 1 }, click: function(){ $root.showChildren($data) }">
-							<div class="cats-card-depth"></div>
-							<span class="cat-name" data-bind="html: name, event: { mouseenter: $root.scrollContent}"></span>
-							<span class="checkbox" data-bind="click: function(){ $root.selectItem($data) }, clickBubble: false">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 987.331 987.332">
-									<defs/>
-									<path d="M120 955.166h683.1c66.2 0 120-53.801 120-120v-467.1l-120 120v347.1H120v-683h547.3l96.3-96.3c9.101-9.1 19.101-17 29.801-23.7H120c-66.2 0-120 53.8-120 120v683.1c0 66.099 53.8 119.9 120 119.9z"/>
-									<path d="M958.2 99.465c-19.4-20.1-44.8-30.8-70.5-32.3-2.101-.1-4.101-.2-6.2-.2-27.3 0-54.6 10.4-75.5 31.3l-334 334c-11.3-12.101-81.1-82.4-81.1-82.4-20.801-20.8-48.2-31.3-75.5-31.3-27.3 0-54.601 10.4-75.5 31.3-41.7 41.7-41.7 109.3 0 151l81.8 81.801 75.5 75.5c20 20 47.2 31.301 75.5 31.301s55.5-11.201 75.5-31.301l406.2-406.2c41.6-41.7 44.8-110.2 3.8-152.501z"/>
-								</svg>
-							</span>
-						</div>
-						<!-- /ko -->
-					</script>
-
-				</div>
-				<span class="applyFilter" data-bind="visible: orgCardsVisible() || catsCardsVisible(), click: searchDemands">Zastosuj i ukryj okno</span>
-			</section>
-			<section class="demand-search-results" data-bind="css: {hidden: orgCardsVisible() || catsCardsVisible() || loaderVisible(), visible: initialized() }">
-			<!-- ko template: {foreach: demands, afterAdd: addElementAnimation} -->
-				<section class="demand-item" data-bind="click: $root.redirectToDetails">
-					<div class="demand-item-col demand-item-org">
-						<!-- ko if: org.logo().length > 0 -->
-							<img data-bind="attr: {src: $root.generateURL( 'orgImg', {logo: org.logo()} )} " />
-						<!-- /ko -->
-						<span data-bind="text: org.name"></span>
-						<span class="country" data-bind="text: org.country"></span>
-					</div>
-					<div class="demand-item-details">
-						<span class="demand-item-details-header">
-							<b class="demand-item-details-kind" data-bind="text: $root.getDemandTypeTranslation($data.kind())"></b>					
-							<b class="demand-item-details-number" data-bind="text: number"></b>
-							<!-- ko if: supplierExistInRound -->
-							<b class="demand-item-details-exist-in-round">Biorę udział w tym procesie</b>
-							<!-- /ko -->
-						</span>
-						<a class="demand-item-details-name" data-bind="text: name, attr: {href: $root.generateURL( 'demand', { id: $data.identity() } )}"></a>
-						<span class="demand-item-details-category"><b>Kategoria</b> | <span data-bind="text: category()"></span></span>
-					</div>
-					<div class="demand-item-col">
-						<div class="demand-item-time">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-								<defs/>
-								<circle cx="149.788" cy="150.309" r="129.338" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="21"/>
-								<path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="21" d="M152 157.5H90M152.5 168V69"/>
-								<path d="M93.38 155.42c.436 0 2.211-.84 1.239-.84-.435 0-2.211.84-1.239.84z"/>
-							</svg>
-							<span data-bind="html: $root.getTimeLeft($data)"></span>
-						</div>
-						<a class="demand-item-to-details" data-bind="attr: {href: $root.generateURL( 'demand', { id: $data.identity() } )}">Szczegóły</a>
-					</div>
-
-				</section>
-    		<!-- /ko -->
-    		<!-- ko if: loadMoreVisible -->
-				<div class="demand-load-more-wrapper">
-					<span data-bind="visible: smallLoaderVisible" class="loader"></span>
-					<a class="link-btn link-load-more" href="https://connect.orlen.pl/servlet/HomeServlet.htm#" data-bind="click: loadMore">Pokaż więcej</a>
-				</div>
-			<!-- /ko -->
-			<!-- ko if: demands().length === 0 -->
-				<div class="demand-no-content-info">
-					<span>Brak wyników</span>
-					<br>
-					<a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" data-bind="click: clearFilters">
-						(Kliknij tutaj aby wyczyścić filtry wyszukiwania)
-					</a>	
-				</div>
-			<!-- /ko -->
-			</section>
-			<div class="overlay visible" data-bind="css: {visible: orgCardsVisible() || catsCardsVisible() || overlayVisible()}">
-				<div data-bind="visible: loaderVisible">
-					<img src="https://connect.orlen.pl/pic/img/spinner.gif" alt="loader" />
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-	
+      });
+    </script>
     <script type="text/javascript">
+      <!--
+      function headerChangeLang(language, country) {
+        document.forms.changeLocaleForm.country.value = country;
+        document.forms.changeLocaleForm.language.value = language;
+        document.forms.changeLocaleForm.submit();
+      }
+      //-->
+
+      var unreadNotificationsCountUrl =
+        "https://connect.orlen.pl/app/notification/unread/count";
+      function loadNotificationsCount() {
+        $.ajax({
+          type: "post",
+          url: unreadNotificationsCountUrl,
+          async: true,
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function (result) {
+            $("#notifications-count span").text(
+              result.unreadNotificationsCount,
+            );
+          },
+        });
+      }
+      var maxFileSize = 104999999;
+      $(function () {
+        if (false) {
+          loadNotificationsCount();
+        }
+        $("input[name='newFileContent'").change(function () {
+          checkFileSize(this);
+        });
+      });
+      function checkFileSize(input) {
+        if (input.files[0].size == 0) {
+          input.form.newFileContent.value = "";
+          input.form.newFileDescription.value = "";
+          mpFrm3.showToastMessage("Nie można dodać pustego pliku", "error");
+        } else if (input.files[0].size >= maxFileSize) {
+          input.form.newFileContent.value = "";
+          input.form.newFileDescription.value = "";
+          mpFrm3.showToastMessage(
+            "Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.",
+            "error",
+          );
+        }
+      }
+    </script>
+
+    <form
+      method="post"
+      action="https://connect.orlen.pl/servlet/HomeServlet?"
+      name="changeLocaleForm"
+    >
+      <input name="CSRFToken" type="hidden" value="" />
+      <input type="hidden" name="MP_module" value="common" />
+      <input type="hidden" name="MP_action" value="changeLocale" />
+      <input type="hidden" name="language" value="" />
+      <input type="hidden" name="country" value="" />
+    </form>
+    <div id="wrapper">
+      <header id="header-new" class="normal">
+        <div class="inner">
+          <div id="logo">
+            <a href="https://connect.orlen.pl/servlet/HomeServlet?"
+              ><img
+                src="https://connect.orlen.pl/pic/img/logo_pl.png"
+                alt="Connect - Platforma zakupowa GK ORLEN"
+            /></a>
+          </div>
+
+          <div class="nav">
+            <ul>
+              <li class="active">
+                <a href="https://connect.orlen.pl/app/dashboard"
+                  >Strona główna</a
+                >
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/servlet/help.html">Pomoc</a>
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav" id="auth-links">
+            <ul>
+              <li>
+                <a href="https://connect.orlen.pl/app/register/start"
+                  >Zarejestruj</a
+                >
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/login">Zaloguj</a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="lang-switcher">
+            <span>Wybierz język/Choose language</span>
+            <ul class="open">
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  onclick="headerChangeLang('cs', 'CZ')"
+                  >cz</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  onclick="headerChangeLang('en', 'EN')"
+                  >en</a
+                >
+              </li>
+              <li class="active">
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  onclick="headerChangeLang('pl', 'PL')"
+                  >pl</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  onclick="headerChangeLang('lt', 'LT')"
+                  >lt</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  onclick="headerChangeLang('de', 'DE')"
+                  >de</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  onclick="headerChangeLang('ru', 'RU')"
+                  >ru</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section id="breadcrumb">
+        <div class="inner"></div>
+      </section>
+      <div id="top">
+        <div id="content" role="main"></div>
+        <br />
+        <div
+          id="advertising_banner"
+          style="margin-bottom: 15px; text-align: center"
+        >
+          <a
+            href="mailto:energia@orlen.com.co?subject=Energia Elektryczna z PKN ORLEN S.A."
+            ><img
+              src="https://connect.orlen.pl/wf/images/logo/energia.jpg"
+              width="948"
+              height="210"
+              alt="#"
+          /></a>
+        </div>
+
+        <style>
+          #demand-search-wrapper {
+            position: relative;
+            min-height: 38.5rem;
+            padding: 4px;
+            overflow: hidden;
+          }
+          #demand-search-wrapper .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(248, 248, 248, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+          }
+          #demand-search-wrapper .overlay.visible {
+            visibility: visible;
+            opacity: 1;
+            z-index: 0;
+          }
+          .demand-search-form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          .demand-search-form > div:not(:first-of-type):not(:last-of-type) {
+            display: inline-flex;
+            margin-left: 16px;
+            padding: 0 4px;
+            justify-content: center;
+            align-items: center;
+            max-width: 18em;
+            overflow: hidden;
+          }
+          .demand-search-form > div.active {
+            z-index: 1;
+          }
+          .demand-search-form
+            > div:not(:first-of-type):not(:last-of-type)
+            > span {
+            color: #227cc9;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .demand-search-form
+            > div:not(:first-of-type):not(:last-of-type)
+            > span
+            svg {
+            height: 14px;
+            width: 14px;
+            margin-right: 4px;
+          }
+          .demand-search-form-cats {
+            margin-right: auto;
+          }
+          .demand-search-form-clear span {
+            font-size: 12px;
+          }
+          .demand-search-categories-filter,
+          .demand-search-form-name {
+            width: 35%;
+            display: flex;
+          }
+          .demand-search-categories-filter input,
+          .demand-search-form-name input {
+            flex-grow: 1;
+            padding: 6px;
+            border: 1px solid #227cc9;
+            border-radius: 5px 0 0 5px;
+          }
+          .demand-search-categories-filter input:focus,
+          .demand-search-form-name input:focus {
+            outline: none;
+          }
+          .demand-search-categories-filter span,
+          .demand-search-form-name span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: auto;
+            text-align: center;
+            background-color: #227cc9;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+          }
+          .demand-search-categories-filter span > svg,
+          .demand-search-form-name span > svg {
+            stroke: #fff;
+            fill: none;
+            height: 16px;
+          }
+          .demand-search-form-sort {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: 18px;
+          }
+          .demand-search-form-sort b {
+            font-size: 14px;
+          }
+          .demand-search-form-sort span {
+            font-weight: 500;
+            cursor: pointer;
+          }
+          .demand-search-form-sort select {
+            background-color: #f3f3f3;
+            direction: rtl;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+          }
+          .demand-search-form-sort select::-ms-expand {
+            display: none;
+          }
+          .demand-search-form-sort select:focus {
+            outline: none;
+          }
+          .demand-search-cards-wrapper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: #f8f8f8;
+            visibility: hidden;
+            height: 0;
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+          }
+          .demand-search-cards-wrapper.visible {
+            height: 36.75rem;
+            visibility: visible;
+            opacity: 1;
+            z-index: 1;
+          }
+          .demand-search-cards-wrapper .checkAll,
+          .demand-search-cards-wrapper > span {
+            position: absolute;
+            right: 1rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 12px;
+            color: #0169c2;
+            background: #f8f8f8;
+            z-index: 1;
+          }
+          .demand-search-cards-wrapper .applyFilter {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .demand-search-cards-wrapper > span:nth-of-type(1),
+          .demand-search-cards-wrapper > span:nth-of-type(2) {
+            top: 0;
+          }
+          .demand-search-cards-wrapper > span:nth-of-type(1) {
+            right: unset;
+            left: 1rem;
+          }
+          .demand-search-cards-wrapper > span:last-of-type {
+            bottom: 0;
+          }
+          .demand-search-cards-wrapper
+            .demand-search-cards.organizations
+            .checkAll {
+            top: 0;
+          }
+          .demand-search-cards-wrapper
+            .demand-search-cards.categories
+            .checkAll {
+            top: -32px;
+            right: 0;
+          }
+          .demand-search-cards {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1.5rem 1rem;
+            max-height: 33.75rem;
+            overflow-y: auto;
+          }
+          .demand-search-cards.categories,
+          .demand-search-cards.breadcrumbs,
+          .demand-search-cards.search-filter {
+            flex-basis: 100%;
+            padding: 0;
+            padding-bottom: 1rem;
+          }
+          .demand-search-cards.breadcrumbs:after,
+          .demand-search-cards.search-filter:after {
+            display: block;
+            content: "";
+            width: 40%;
+            border-bottom: 1px solid #ccc;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.75rem;
+          }
+          .demand-search-cards.breadcrumbs:after {
+            width: 50%;
+          }
+          .demand-search-cards.categories {
+            overflow: visible;
+          }
+          .demand-search-cards.organizations {
+            margin-top: 32px;
+            max-height: 31.25rem;
+          }
+          .demand-search-cards > div:not(.breadcrumbs):not(.search-filter) {
+            margin: 8px;
+            width: 18.34%;
+            max-width: 13.95em;
+            height: 7em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #fff;
+            padding: 4px;
+            box-sizing: border-box;
+            border: 1px solid #e4e4e4;
+            cursor: pointer;
+            position: relative;
+          }
+          .demand-search-cards
+            > div:not(.breadcrumbs):not(.search-filter):hover,
+          .demand-search-cards > div.selected {
+            border-color: #ed1c24;
+            color: #ed1c24;
+          }
+          .demand-search-cards
+            > div:not(.breadcrumbs):not(.search-filter):hover
+            span,
+          .demand-search-cards > div.selected span {
+            color: #ed1c24;
+          }
+          .demand-search-cards > div.selected:after,
+          .demand-search-cards > div.indeterminate:after {
+            content: " ";
+            border-color: transparent #ed1c23 transparent transparent;
+            display: block;
+            border-style: solid;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          .demand-search-cards > div.selected:after {
+            border-width: 0 15px 15px 0;
+          }
+          .demand-search-cards > div.indeterminate:after {
+            border-width: 0 10px 10px 0;
+          }
+          .demand-search-cards > div span {
+            color: #0169c2;
+            max-height: 100%;
+            overflow: hidden;
+          }
+          .demand-item .demand-item-org span,
+          .demand-search-cards-orgs-card span {
+            display: none;
+            max-width: 100%;
+          }
+          .demand-item .demand-item-org:hover span,
+          .demand-search-cards-orgs-card:hover span {
+            display: block;
+          }
+          .demand-search-cards-orgs-card.selected img {
+            filter: none;
+          }
+          .demand-item .demand-item-org:hover img,
+          .demand-search-cards-orgs-card:hover img {
+            display: none;
+          }
+          .demand-search-cards-orgs-card:hover span {
+            display: block;
+          }
+          .demand-item-org .country,
+          .demand-search-cards-orgs-card .country {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            color: #ccc !important;
+          }
+          .demand-search-cards-cats-card .checkbox {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            display: none;
+          }
+          .demand-search-cards-cats-card:hover .checkbox {
+            display: inline-block;
+          }
+          .demand-search-cards-cats-card:hover .checkbox svg {
+            height: 16px;
+            width: 16px;
+            fill: #ccc;
+          }
+          .demand-search-cards-cats-card:hover .checkbox svg:hover {
+            fill: #ed1c24;
+          }
+          .demand-search-cards-cats-card .cats-card-depth,
+          .demand-search-cards-cats-card .cats-card-depth:before {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border: 1px solid #e4e4e4;
+            z-index: -1;
+          }
+          .demand-search-cards-cats-card.selected .cats-card-depth,
+          .demand-search-cards-cats-card.selected .cats-card-depth:before {
+            border-color: #ed1c24;
+          }
+
+          .demand-search-cards-cats-card.depth0 .cats-card-depth,
+          .demand-search-cards-cats-card.depth0 .cats-card-depth:before {
+            display: block;
+            top: -9px;
+            left: -9px;
+          }
+          .demand-search-cards-cats-card.depth0 .cats-card-depth:before {
+            display: block;
+            content: "";
+            top: 3px;
+            left: 3px;
+          }
+          .demand-search-cards-cats-card.depth1 .cats-card-depth {
+            display: block;
+            top: -4px;
+            left: -4px;
+          }
+          .demand-search-cards-cats-card.main-cats {
+            width: 7em !important;
+            background: #227cc9 !important;
+          }
+          .demand-search-cards-cats-card.main-cats:hover span,
+          .demand-search-cards-cats-card.main-cats span {
+            color: #fff !important;
+          }
+          .demand-search-cards-cats-card.main-cats .cats-card-depth,
+          .demand-search-cards-cats-card.main-cats .cats-card-depth:before {
+            background: #227cc9 !important;
+          }
+          .demand-search-cards .search-filter {
+            padding: 12px;
+          }
+          .demand-search-cards .search-filter > span {
+            width: 394px;
+          }
+          .demand-search-cards .search-filter input {
+            border-radius: 5px;
+          }
+          .demand-search-cards .search-filter > span.active input {
+            border-radius: 5px 0 0 5px;
+          }
+          .demand-search-results {
+            display: none;
+            visibility: visible;
+            opacity: 1;
+            z-index: 0;
+            height: auto;
+            transition: all 0.3s ease-in-out;
+          }
+          .demand-search-results.visible {
+            display: block;
+          }
+          .demand-search-results.hidden {
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
+            height: 0;
+          }
+          .demand-item {
+            display: flex;
+            width: 100%;
+            background-color: #fdfdfd;
+            border: 2px solid #fdfdfd;
+            margin: 6px 0;
+            height: 84px;
+            cursor: pointer;
+          }
+          .demand-item:hover {
+            border-color: #227cc9;
+          }
+          .demand-item > div {
+            padding: 4px 8px;
+          }
+          .demand-search-cards > div > img,
+          .demand-item > div > img {
+            max-width: 100%;
+            max-height: 100%;
+            filter: grayscale(1);
+          }
+          .demand-item > div > img {
+            width: 129.24px;
+            height: 70px;
+          }
+          .demand-search-cards > div > img {
+            width: 147.7px;
+            height: 80px;
+          }
+          .demand-item:hover > div > img {
+            filter: none;
+          }
+          .demand-item-col {
+            width: 120px;
+            flex-basis: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+          }
+          .demand-item-org {
+            text-align: center;
+            color: #ed1c24;
+          }
+          .demand-item-details {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 740px;
+            height: 70px;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+          }
+          .demand-item-details:before,
+          .demand-item-details:after {
+            display: block;
+            content: " ";
+            border-left: solid 1px #9e9e9e;
+            width: 1px;
+            height: 90%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+          }
+          .demand-item-details:after {
+            left: 100%;
+          }
+          .demand-item-details-header {
+            display: flex;
+            width: 100%;
+          }
+          .demand-item-details-exist-in-round {
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-decoration: underline;
+            color: #a1ca00;
+            margin-left: auto;
+          }
+          .demand-item-details-name {
+            position: relative;
+            font-size: 15px;
+            line-height: normal;
+            letter-spacing: 1px;
+            display: block;
+            max-width: 100%;
+            max-height: 38px;
+            /* overflow: hidden; */
+          }
+          .demand-item-details-kind {
+            font-size: 11px;
+            font-weight: 500;
+          }
+          .demand-item-details-number {
+            font-size: 10px;
+            margin-left: 4px;
+          }
+          .demand-item-details-category {
+            font-size: 11px;
+            align-self: flex-end;
+            font-weight: 500;
+          }
+          .demand-item-time {
+            color: #227cc9;
+            margin-bottom: 12px;
+          }
+          .demand-item-time svg {
+            height: 16px;
+            width: 16px;
+            vertical-align: bottom;
+          }
+          .demand-item-to-details {
+            font-weight: bold;
+            font-size: 11px;
+            text-decoration: underline;
+            align-self: flex-end;
+            max-width: 100%;
+            overflow: hidden;
+          }
+          .demand-item-to-details:after {
+            content: ">";
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 2px;
+          }
+          .demand-no-content-info {
+            padding: 2rem;
+            font-size: 14px;
+            text-align: center;
+          }
+          .demand-no-content-info span {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .demand-no-content-info a {
+            font-size: 12px;
+            font-style: italic;
+          }
+          .demand-load-more-wrapper {
+            padding: 0.5rem;
+            text-align: right;
+          }
+        </style>
+
+        <h4>Aktualne zapytania ofertowe</h4>
+        <div id="demand-search-wrapper">
+          <section class="demand-search-form">
+            <div class="demand-search-form-name">
+              <input
+                name="demand-search-name"
+                placeholder="Wyszukaj postępowanie"
+                data-bind="textInput: searchName, event: {keyup: enterSubmit}"
+              />
+              <span data-bind="click: searchDemands">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <defs />
+                  <circle
+                    cx="7.714"
+                    cy="7.563"
+                    r="5.404"
+                    stroke-miterlimit="10"
+                    stroke-width="2.5"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="2.5"
+                    d="M11.486 11.638l6.204 6.204"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="demand-search-form-orgs"
+              data-bind="css: {active: orgCardsVisible}"
+            >
+              <span data-bind="click: openOrgCards">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                  <defs />
+                  <path fill="#3183D9" d="M0 0h15v2H0z" />
+                  <path fill="#BFC0C2" d="M0 2h15v1H0z" />
+                  <path fill="#3183D9" d="M0 6h15v2H0z" />
+                  <path fill="#BFC0C2" d="M0 8h15v1H0z" />
+                  <path fill="#3183D9" d="M0 12h15v2H0z" />
+                  <path fill="#BFC0C2" d="M0 14h15v1H0z" />
+                </svg>
+                <span>Spółki</span>
+              </span>
+              |
+              <em
+                data-bind="text: countSelectedOrgs() === 0 || allSelected(organizations()) ? 'wszystkie' : countSelectedOrgs() "
+              ></em>
+            </div>
+            <div
+              class="demand-search-form-cats"
+              data-bind="css: {active: catsCardsVisible}"
+            >
+              <span data-bind="click: openCatCards">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                  <defs />
+                  <path fill="#3183D9" d="M0 0h15v2H0z" />
+                  <path fill="#BFC0C2" d="M0 2h15v1H0z" />
+                  <path fill="#3183D9" d="M0 6h15v2H0z" />
+                  <path fill="#BFC0C2" d="M0 8h15v1H0z" />
+                  <path fill="#3183D9" d="M0 12h15v2H0z" />
+                  <path fill="#BFC0C2" d="M0 14h15v1H0z" />
+                </svg>
+                <span>Kategorie</span>
+              </span>
+              |
+              <em
+                data-bind="text: countSelectedCats() === 0 || allSelected(categories()) ? 'wszystkie' : countSelectedCats() "
+              ></em>
+            </div>
+            <div
+              class="demand-search-form-clear"
+              data-bind="css: {active: orgCardsVisible() || catsCardsVisible()}"
+            >
+              <span data-bind="if: areFiltersApplied, click: clearFilters">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                  <defs />
+                  <g
+                    fill="none"
+                    stroke="#3183D9"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="2.5"
+                  >
+                    <path
+                      d="M1.411 1.41l12.178 12.18M13.59 1.411L1.41 13.588"
+                    />
+                  </g>
+                </svg>
+                <span>wyczyść filtry</span>
+              </span>
+            </div>
+            <div class="demand-search-form-sort">
+              <b>Sortowanie:</b>
+              <select
+                data-bind="options: sortOptions, optionsValue: 'value', optionsText: 'caption', value: sortByLatest"
+              ></select>
+            </div>
+          </section>
+          <section
+            data-bind="css: {visible: orgCardsVisible() || catsCardsVisible()}"
+            class="demand-search-cards-wrapper"
+          >
+            <span
+              data-bind="visible: categoriesBreadCrumbs().length > 0 || (categoriesFilter() && categoriesFilter().length), click: goBack"
+              >Wstecz</span
+            >
+            <span
+              class="applyFilter"
+              data-bind="visible: orgCardsVisible() || catsCardsVisible(), click: searchDemands"
+              >Zastosuj i ukryj okno</span
+            >
+            <div
+              data-bind="visible: orgCardsVisible()"
+              class="demand-search-cards organizations"
+            >
+              <span class="checkAll" data-bind="click: $root.checkAll"
+                >zaznacz / odznacz wszystko</span
+              >
+              <!-- ko foreach: organizations -->
+              <div
+                class="demand-search-cards-orgs-card"
+                data-bind="css: { selected: selected }, click: function(){ $root.selectItem($data) }"
+              >
+                <!-- ko if: logo().length > 0 -->
+                <img
+                  data-bind="attr: {src: $root.generateURL( 'orgImg', {logo: logo()} )} "
+                />
+                <!-- /ko -->
+                <span data-bind="text: name"></span>
+                <span class="country" data-bind="text: country"></span>
+              </div>
+              <!-- /ko -->
+            </div>
+            <div
+              data-bind="with: categoriesToShow, visible: $root.catsCardsVisible() "
+              class="demand-search-cards"
+            >
+              <div class="search-filter demand-search-cards">
+                <span
+                  class="demand-search-categories-filter"
+                  data-bind="css: {active: $root.categoriesFilter() && $root.categoriesFilter().length > 0}"
+                >
+                  <input
+                    name="demand-search-categories-filter"
+                    placeholder="Wyszukaj kategorię"
+                    data-bind="textInput: $root.categoriesFilter, hasFocus: $root.categoriesFilter.focus, event: {keyup: $root.enterSubmit, focus: function(e){event.target.setSelectionRange($root.categoriesFilter.caret(), $root.categoriesFilter.caret())}}"
+                  />
+                  <span
+                    data-bind="click: $root.clearCategoriesFilter, visible: $root.categoriesFilter() && $root.categoriesFilter().length > 0"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                      <defs />
+                      <g
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          d="M1.411 1.41l12.178 12.18M13.59 1.411L1.41 13.588"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="breadcrumbs demand-search-cards"
+                data-bind="visible: $root.categoriesBreadCrumbs().length > 0"
+              >
+                <div
+                  class="demand-search-cards-cats-card depth0 main-cats"
+                  data-bind="click: function(){ $root.showChildren(null)}"
+                >
+                  <div class="cats-card-depth"></div>
+                  <span>KATEGORIE GŁÓWNE</span>
+                </div>
+                <!-- ko template: { name: 'categoryTemplate', foreach: $root.categoriesBreadCrumbs, as: 'categoryBreadCrumb' } --><!-- /ko -->
+              </div>
+              <section class="demand-search-cards categories">
+                <span class="checkAll" data-bind="click: $root.checkAll"
+                  >zaznacz / odznacz wszystko</span
+                >
+                <!-- ko template: { name: 'categoryTemplate', foreach: $data, as: 'category' } --><!-- /ko -->
+              </section>
+
+              <script type="text/html" id="categoryTemplate">
+                <!-- ko if: children && children() === null -->
+                <div
+                  class="demand-search-cards-cats-card"
+                  data-bind="css: { selected: selected }, click: function(){ $root.selectItem($data) }"
+                >
+                  <span
+                    class="cat-name"
+                    data-bind="html: name, event: { mouseenter: $root.scrollContent}"
+                  ></span>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: children && children() !== null && children().length > 0 -->
+                <div
+                  class="demand-search-cards-cats-card"
+                  data-bind="css: { selected: selected, indeterminate: indeterminate, depth0: depth() === 0, depth1: depth() === 1 }, click: function(){ $root.showChildren($data) }"
+                >
+                  <div class="cats-card-depth"></div>
+                  <span
+                    class="cat-name"
+                    data-bind="html: name, event: { mouseenter: $root.scrollContent}"
+                  ></span>
+                  <span
+                    class="checkbox"
+                    data-bind="click: function(){ $root.selectItem($data) }, clickBubble: false"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 987.331 987.332"
+                    >
+                      <defs />
+                      <path
+                        d="M120 955.166h683.1c66.2 0 120-53.801 120-120v-467.1l-120 120v347.1H120v-683h547.3l96.3-96.3c9.101-9.1 19.101-17 29.801-23.7H120c-66.2 0-120 53.8-120 120v683.1c0 66.099 53.8 119.9 120 119.9z"
+                      />
+                      <path
+                        d="M958.2 99.465c-19.4-20.1-44.8-30.8-70.5-32.3-2.101-.1-4.101-.2-6.2-.2-27.3 0-54.6 10.4-75.5 31.3l-334 334c-11.3-12.101-81.1-82.4-81.1-82.4-20.801-20.8-48.2-31.3-75.5-31.3-27.3 0-54.601 10.4-75.5 31.3-41.7 41.7-41.7 109.3 0 151l81.8 81.801 75.5 75.5c20 20 47.2 31.301 75.5 31.301s55.5-11.201 75.5-31.301l406.2-406.2c41.6-41.7 44.8-110.2 3.8-152.501z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <!-- /ko -->
+              </script>
+            </div>
+            <span
+              class="applyFilter"
+              data-bind="visible: orgCardsVisible() || catsCardsVisible(), click: searchDemands"
+              >Zastosuj i ukryj okno</span
+            >
+          </section>
+          <section
+            class="demand-search-results"
+            data-bind="css: {hidden: orgCardsVisible() || catsCardsVisible() || loaderVisible(), visible: initialized() }"
+          >
+            <!-- ko template: {foreach: demands, afterAdd: addElementAnimation} -->
+            <section
+              class="demand-item"
+              data-bind="click: $root.redirectToDetails"
+            >
+              <div class="demand-item-col demand-item-org">
+                <!-- ko if: org.logo().length > 0 -->
+                <img
+                  data-bind="attr: {src: $root.generateURL( 'orgImg', {logo: org.logo()} )} "
+                />
+                <!-- /ko -->
+                <span data-bind="text: org.name"></span>
+                <span class="country" data-bind="text: org.country"></span>
+              </div>
+              <div class="demand-item-details">
+                <span class="demand-item-details-header">
+                  <b
+                    class="demand-item-details-kind"
+                    data-bind="text: $root.getDemandTypeTranslation($data.kind())"
+                  ></b>
+                  <b
+                    class="demand-item-details-number"
+                    data-bind="text: number"
+                  ></b>
+                  <!-- ko if: supplierExistInRound -->
+                  <b class="demand-item-details-exist-in-round"
+                    >Biorę udział w tym procesie</b
+                  >
+                  <!-- /ko -->
+                </span>
+                <a
+                  class="demand-item-details-name"
+                  data-bind="text: name, attr: {href: $root.generateURL( 'demand', { id: $data.identity() } )}"
+                ></a>
+                <span class="demand-item-details-category"
+                  ><b>Kategoria</b> | <span data-bind="text: category()"></span
+                ></span>
+              </div>
+              <div class="demand-item-col">
+                <div class="demand-item-time">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                    <defs />
+                    <circle
+                      cx="149.788"
+                      cy="150.309"
+                      r="129.338"
+                      fill="none"
+                      stroke="#000"
+                      stroke-miterlimit="10"
+                      stroke-width="21"
+                    />
+                    <path
+                      fill="none"
+                      stroke="#000"
+                      stroke-miterlimit="10"
+                      stroke-width="21"
+                      d="M152 157.5H90M152.5 168V69"
+                    />
+                    <path
+                      d="M93.38 155.42c.436 0 2.211-.84 1.239-.84-.435 0-2.211.84-1.239.84z"
+                    />
+                  </svg>
+                  <span data-bind="html: $root.getTimeLeft($data)"></span>
+                </div>
+                <a
+                  class="demand-item-to-details"
+                  data-bind="attr: {href: $root.generateURL( 'demand', { id: $data.identity() } )}"
+                  >Szczegóły</a
+                >
+              </div>
+            </section>
+            <!-- /ko -->
+            <!-- ko if: loadMoreVisible -->
+            <div class="demand-load-more-wrapper">
+              <span
+                data-bind="visible: smallLoaderVisible"
+                class="loader"
+              ></span>
+              <a
+                class="link-btn link-load-more"
+                href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                data-bind="click: loadMore"
+                >Pokaż więcej</a
+              >
+            </div>
+            <!-- /ko -->
+            <!-- ko if: demands().length === 0 -->
+            <div class="demand-no-content-info">
+              <span>Brak wyników</span>
+              <br />
+              <a
+                href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                data-bind="click: clearFilters"
+              >
+                (Kliknij tutaj aby wyczyścić filtry wyszukiwania)
+              </a>
+            </div>
+            <!-- /ko -->
+          </section>
+          <div
+            class="overlay visible"
+            data-bind="css: {visible: orgCardsVisible() || catsCardsVisible() || overlayVisible()}"
+          >
+            <div data-bind="visible: loaderVisible">
+              <img
+                src="https://connect.orlen.pl/pic/img/spinner.gif"
+                alt="loader"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
         var messagesArray = [];
-        var displayCenter = ('true' == 'false');
+        var displayCenter = "true" == "false";
         var localTimer;
         var localDisplayCenter;
         var localAdditionalText;
-        $(function() {
-            
-                
-                
-                    
-                    
-                    
-                    
-                
-            
+        $(function () {});
+      </script>
+
+      <div id="page"></div>
+
+      <script>
+        $(document).ready(function () {
+          $("#advertising_banner").hide();
         });
+
+        var MainPageModel = function () {
+          var self = this;
+
+          self.initialized = ko.observable(false);
+          self.addElementAnimation = function (elem) {
+            if (elem.nodeType === 1) $(elem).hide().slideDown();
+          };
+          self.scrollContent = function (data, event) {
+            var scrollContentElem = $(event.target);
+            var scrolling;
+            var scroll = function () {
+              if (
+                scrollContentElem.scrollTop() ===
+                scrollContentElem.prop("scrollHeight") -
+                  scrollContentElem.outerHeight()
+              ) {
+                window.clearInterval(scrolling);
+                window.setTimeout(function () {
+                  scrollContentElem.scrollTop(0);
+                  window.setTimeout(function () {
+                    scrolling = window.setInterval(scroll, 70);
+                  }, 500);
+                }, 500);
+              } else {
+                scrollContentElem.scrollTop(scrollContentElem.scrollTop() + 1);
+              }
+            };
+            scrolling = window.setInterval(scroll, 70);
+            scrollContentElem.on("mouseout", function () {
+              window.clearInterval(scrolling);
+              scrollContentElem.scrollTop(0);
+            });
+          };
+          self.generateURL = function (target, params) {
+            var url = "/app/";
+            switch (target) {
+              case "categories":
+                url += "category/tree/json";
+                break;
+
+              case "org":
+                url += "main/organization";
+                break;
+
+              case "demand":
+                url += "outRfx/" + params.id + "/supplier/status";
+                break;
+
+              case "orgImg":
+                url = "/wf/images/logo/" + params.logo;
+                break;
+
+              case "demands":
+                url += "main/recentDemands?specificOrgCode=";
+                break;
+
+              case "bannerAd":
+                url += "main/bannerAd";
+                break;
+            }
+            return url;
+          };
+
+          self.redirectToDetails = function (data) {
+            window.location.href = self.generateURL("demand", {
+              id: data.identity(),
+            });
+          };
+
+          self.getCategories = function () {
+            self.showLoader(true);
+            return $.ajax({
+              type: "get",
+              url: self.generateURL("categories"),
+            }).then(function (categories) {
+              ko.mapping.fromJS(categories, self.mapping, self.categories);
+              self.categoriesLoaded = true;
+              self.showLoader(false);
+            });
+          };
+
+          self.getOrgs = function () {
+            self.showLoader(true);
+            return $.ajax({
+              type: "get",
+              url: self.generateURL("org"),
+            }).then(function (orgs) {
+              orgs = orgs.sort(function (a, b) {
+                return a.order > b.order ? 1 : -1;
+              });
+              ko.mapping.fromJS(orgs, self.mapping, self.organizations);
+              self.organizationsLoaded = true;
+              self.showLoader(false);
+            });
+          };
+
+          self.getSearchData = function () {
+            return JSON.stringify({
+              results: self.resultsNum(),
+              startFrom: self.startFrom(),
+              searchName: self.searchName(),
+              searchCategories: self
+                .getSelected(self.categories())
+                .map(function (cat) {
+                  return cat.identity();
+                }),
+              searchedDemands: self.demands().map(function (demand) {
+                return demand.identity();
+              }),
+              searchOrgs: self
+                .getSelected(self.organizations())
+                .map(function (org) {
+                  return org.orgId();
+                }),
+              latest: self.sortByLatest(),
+            });
+          };
+
+          self.getDemands = function (push, optLength) {
+            if (!push) {
+              self.showLoader(true);
+              self.resultsNum(
+                self.demands().length > 15 ? self.demands().length : 15,
+              );
+            } else {
+              self.smallLoaderVisible(true);
+              self.resultsNum(15);
+            }
+
+            $.ajax({
+              type: "post",
+              url: self.generateURL("bannerAd"),
+              data: self.getSearchData(),
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+            }).then(function (manageAdObj) {
+              if (manageAdObj.objective === "hideBannerAd") {
+                $("#advertising_banner").hide();
+              } else {
+                $("#advertising_banner").show();
+              }
+            });
+
+            return $.ajax({
+              type: "post",
+              url: self.generateURL("demands"),
+              data: self.getSearchData(),
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+            }).then(function (demands) {
+              if (demands.length < 15) {
+                self.loadMoreVisible(false);
+              } else {
+                self.loadMoreVisible(true);
+              }
+              demands = demands.map(function (item) {
+                if (item.name && item.name.length > 150) {
+                  item.name = item.name.slice(0, 150) + "...";
+                }
+                return item;
+              });
+              // change this to knockout bindings for dynamic text truncate
+              if (push) {
+                demands = ko.mapping.fromJS(demands);
+                for (i in demands()) {
+                  self.demands.push(demands()[i]);
+                }
+                self.smallLoaderVisible(false);
+              } else {
+                self.showLoader(false);
+                ko.mapping.fromJS(demands, self.demands);
+              }
+            });
+          };
+
+          self.getTimeLeft = function (item) {
+            var timeString;
+            var now = new Date().getTime();
+            var delta = Math.abs(item.endDate() - now) / 1000;
+            var daysLeft = Math.floor(delta / 86400);
+            delta -= daysLeft * 86400;
+
+            var hoursLeft = Math.floor(delta / 3600) % 24;
+            delta -= hoursLeft * 3600;
+
+            var minutesLeft = Math.floor(delta / 60) % 60;
+            delta -= minutesLeft * 60;
+
+            if (daysLeft > 0) {
+              timeString =
+                daysLeft +
+                " <small>dni</small> " +
+                hoursLeft +
+                " <small>godz.</small>";
+            } else if (daysLeft === 0 && hoursLeft >= 0) {
+              timeString =
+                hoursLeft +
+                " <small>godz.</small> " +
+                minutesLeft +
+                " <small>min</small>";
+            } else {
+              // TODO if seconds
+            }
+            return timeString;
+          };
+
+          self.mapping = {
+            update: function (options) {
+              var item = options.data;
+              item.selected = false;
+              if (item.children && item.children.length > 0) {
+                item.indeterminate = false;
+                item.children = item.children.map(function (child) {
+                  child.parentId = item.identity;
+                  child.depth = 1;
+                  return child;
+                });
+                item.children = ko.mapping.fromJS(item.children, self.mapping);
+                if (!item.depth) {
+                  item.depth = 0;
+                }
+              } else if (item.hasOwnProperty("children") && !item.children) {
+                item.depth = 2;
+              }
+              if (item.title) {
+                item.code = item.title.split("~")[0];
+                item.name = item.title.split("~")[1];
+              }
+              return ko.mapping.fromJS(item);
+            },
+          };
+
+          self.init = function () {
+            // call only once!
+            self.loaderVisible = ko.observable(false);
+            self.smallLoaderVisible = ko.observable(false);
+            self.overlayVisible = ko.observable(false);
+            self.loadMoreVisible = ko.observable(true);
+            self.searchName = ko.observable();
+            self.categories = ko.mapping.fromJS([]);
+            self.categoriesToShow = ko.observable();
+            self.categoriesBreadCrumbs = ko.observableArray();
+            self.categoriesFilter = ko
+              .observable()
+              .extend({
+                rateLimit: { method: "notifyWhenChangesStop", timeout: 400 },
+              });
+            self.categoriesFilter.focus = ko.observable(false);
+            self.categoriesFilter.caret = ko.observable();
+            self.categoriesLoaded = false;
+            self.organizations = ko.mapping.fromJS([]);
+            self.organizationsLoaded = false;
+            self.demands = ko.mapping.fromJS([]);
+            self.startFrom = ko.observable(1);
+            self.resultsNum = ko.observable(15);
+            self.sortOptions = ko.observableArray([
+              { value: true, caption: "Najnowsze" },
+              { value: false, caption: "Kończące się" },
+            ]);
+            self.sortByLatest = ko.observable(true);
+            self.areFiltersApplied = ko.observable(false);
+            self.orgCardsVisible = ko.observable(false);
+            self.catsCardsVisible = ko.observable(false);
+
+            self.sortByLatest.subscribe(function (val) {
+              self.getDemands();
+              self.areFiltersApplied(true);
+            });
+            self.searchName.subscribe(function (val) {
+              if (val) {
+                self.areFiltersApplied(true);
+              }
+            });
+
+            self.categoriesFilter.subscribe(function (val) {
+              self.categoriesFilter.focus(true);
+              if (val && val.length > 2) {
+                self.filterCategories(val);
+              } else {
+                self.categoriesToShow(self.categories);
+              }
+            });
+
+            return self.getDemands();
+          };
+
+          self.loadMore = function () {
+            self.startFrom(self.demands().length + 1);
+            self.resultsNum(15);
+            self.getDemands(true).done(function () {
+              self.startFrom(1);
+            });
+          };
+
+          self.filterCategories = function (filter) {
+            self.categoriesBreadCrumbs([]);
+            self.categoriesToShow(
+              self.flatChildren(self.categories()).filter(function (cat) {
+                return (
+                  cat.name().toLowerCase().indexOf(filter.toLowerCase()) !== -1
+                );
+              }),
+            );
+          };
+
+          self.clearCategoriesFilter = function () {
+            self.categoriesFilter("");
+            self.categoriesToShow(self.categories);
+          };
+
+          self.searchDemands = function () {
+            if (self.areFiltersApplied()) {
+              self.getDemands();
+            }
+            self.orgCardsVisible(false);
+            self.catsCardsVisible(false);
+            self.categoriesBreadCrumbs([]);
+          };
+
+          self.getDemandTypeTranslation = function (prop) {
+            var translation;
+            if (prop === "requestForOffer") {
+              translation = "Zapytanie ofertowe";
+            } else if (prop === "requestForInformaction") {
+              translation = "Zapytanie o informację";
+            } else if (prop === "requestForPrice") {
+              translation = "Zapytanie o cenę";
+            } else {
+              translation = prop;
+            }
+            return translation;
+          };
+
+          self.enterSubmit = function (data, event) {
+            if (event.keyCode === 13 || event.which == 13) {
+              if (event.target.name === "demand-search-name") {
+                self.searchDemands();
+              } else if (
+                event.target.name === "demand-search-categories-filter"
+              ) {
+                self.filterCategories(self.categoriesFilter());
+              }
+            } else {
+              if (event.target.name === "demand-search-categories-filter") {
+                self.categoriesFilter.caret(event.target.selectionStart);
+              }
+            }
+          };
+
+          self.selectItem = function (item, state, skipParent) {
+            var selected =
+              typeof state !== "undefined" ? state : !item.selected();
+            item.selected(selected);
+            if (item.children && item.children() !== null) {
+              item.indeterminate(false);
+              self.selectAll(item.children(), !selected, true);
+            }
+
+            if (
+              !skipParent &&
+              item.hasOwnProperty("parentId") &&
+              item.parentId()
+            ) {
+              self.selectParent(item.parentId());
+            }
+            self.areFiltersApplied(true);
+          };
+
+          self.selectParent = function (parentId) {
+            var parent = self
+              .flatChildren(self.categories())
+              .filter(function (cat) {
+                return cat.identity() === parentId;
+              })[0];
+
+            if (self.allSelected(parent.children())) {
+              self.selectItem(parent, true);
+              return;
+            } else if (
+              self.getSelected(parent.children()).length > 0 &&
+              !self.allSelected(parent.children())
+            ) {
+              parent.indeterminate(true);
+              parent.selected(false);
+            } else {
+              parent.selected(false);
+              parent.indeterminate(false);
+            }
+
+            if (parent.parentId) {
+              self.selectParent(parent.parentId());
+            }
+          };
+
+          self.selectAll = function (array, reset, skipParent) {
+            var state = typeof reset !== "undefined" ? !reset : true;
+            array.forEach(function (item) {
+              self.selectItem(item, state, skipParent);
+            });
+          };
+
+          self.checkAll = function () {
+            if (self.orgCardsVisible()) {
+              if (self.allSelected(self.organizations())) {
+                self.selectAll(self.organizations(), true);
+              } else {
+                self.selectAll(self.organizations());
+              }
+            } else if (self.catsCardsVisible()) {
+              var categories =
+                typeof self.categoriesToShow() === "function"
+                  ? self.categoriesToShow()()
+                  : self.categoriesToShow();
+              if (self.allSelected(categories)) {
+                self.selectAll(categories, true);
+              } else {
+                self.selectAll(categories);
+              }
+            }
+          };
+
+          self.clearFilters = function () {
+            self.searchName(null);
+            self.selectAll(self.organizations(), true);
+            self.selectAll(self.categories(), true);
+            self.demands([]);
+            if (self.sortByLatest()) {
+              self.startFrom(1);
+              self.resultsNum(15);
+              self.getDemands();
+            } else {
+              self.sortByLatest(true);
+            }
+
+            self.areFiltersApplied(false);
+          };
+
+          self.countSelectedOrgs = function () {
+            return self.getSelected(self.organizations()).length;
+          };
+
+          self.countSelectedCats = function () {
+            return self.getSelected(self.categories(), 2).length;
+          };
+
+          self.flatChildren = function (array) {
+            var flat = [];
+            array.forEach(function (item) {
+              flat.push(item);
+              if (item.children && item.children() !== null) {
+                flat = flat.concat(self.flatChildren(item.children()));
+              }
+            });
+            return flat;
+          };
+
+          self.getSelected = function (array, depth) {
+            var selected = self.flatChildren(array).filter(function (item) {
+              return (
+                item.selected() && (depth == undefined || item.depth() == depth)
+              );
+            });
+            return selected;
+          };
+
+          self.openOrgCards = function () {
+            if (self.orgCardsVisible()) {
+              self.orgCardsVisible(false);
+              self.getDemands();
+            } else {
+              if (!self.organizationsLoaded) {
+                self.getOrgs().then(function () {
+                  self.orgCardsVisible(true);
+                });
+              } else {
+                self.orgCardsVisible(true);
+              }
+            }
+          };
+
+          self.openCatCards = function () {
+            self.categoriesBreadCrumbs([]);
+            if (self.catsCardsVisible()) {
+              self.catsCardsVisible(false);
+              self.getDemands();
+            } else {
+              self.categoriesFilter("");
+              if (!self.categoriesLoaded) {
+                self.getCategories().then(function () {
+                  self.catsCardsVisible(true);
+                  self.categoriesToShow(self.categories);
+                });
+              } else {
+                self.catsCardsVisible(true);
+                self.categoriesToShow(self.categories);
+              }
+            }
+          };
+
+          self.showChildren = function (item) {
+            if (!item) {
+              self.categoriesBreadCrumbs([]);
+              self.categoriesToShow(self.categories);
+            } else {
+              var indexOfExisting = self.categoriesBreadCrumbs.indexOf(item);
+              if (indexOfExisting >= 0) {
+                self.categoriesBreadCrumbs.splice(indexOfExisting + 1);
+              } else {
+                self.categoriesBreadCrumbs.push(item);
+              }
+              self.categoriesToShow(item.children);
+            }
+          };
+
+          self.allSelected = function (array) {
+            return (
+              self.getSelected(array).length === self.flatChildren(array).length
+            );
+          };
+
+          self.goBack = function () {
+            if (self.catsCardsVisible()) {
+              var lastParent = self.categoriesBreadCrumbs().length - 2;
+              console.log(lastParent);
+              if (lastParent >= 0) {
+                self.showChildren(self.categoriesBreadCrumbs()[lastParent]);
+              } else if (lastParent === -1) {
+                if (self.categoriesFilter().length > 2) {
+                  self.filterCategories(self.categoriesFilter());
+                } else {
+                  self.showChildren();
+                }
+              } else {
+                self.clearCategoriesFilter();
+              }
+            }
+          };
+
+          self.showLoader = function (state) {
+            self.overlayVisible(state);
+            self.loaderVisible(state);
+          };
+        };
+
+        var mainPageModel = new MainPageModel();
+        mainPageModel.init().done(function () {
+          ko.applyBindings(
+            mainPageModel,
+            document.getElementById("demand-search-wrapper"),
+          );
+          mainPageModel.initialized(true);
+        });
+      </script>
+
+      <form
+        id="mpPostForm"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+        style="display: none"
+      >
+        <input name="CSRFToken" type="hidden" value="" /><input
+          type="hidden"
+          name="UNIQUE_ID"
+          value="1739544335264MXCgncQFWA3k0oRaOkB"
+        />
+      </form>
+
+      <div id="push"></div>
+    </div>
+    <footer id="footer-new">
+      <div id="ticketFormPanel" title="Formularz zgłaszania problemu"></div>
+      <div class="inner">
+        <div class="row">
+          <div class="nav col-xs-8">
+            <ul>
+              <li>
+                <a href="https://connect.orlen.pl/app/dashboard"
+                  >Strona główna</a
+                >
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/login">Zaloguj</a>
+              </li>
+              <li>
+                <a href="https://connect.orlen.pl/app/register/start"
+                  >Zarejestruj</a
+                >
+              </li>
+              <li>
+                <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>
+                    </li>-->
+              </li>
+
+              <li>
+                <a href="https://connect.orlen.pl/servlet/help.html">Pomoc</a>
+              </li>
+            </ul>
+          </div>
+
+          <section id="quick-help" class="col-xs-4">
+            <div class="lines">
+              <div class="line">
+                <span>Potrzebujesz pomocy?</span>
+                <a
+                  href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  class="mail-link"
+                  >Napisz</a
+                >
+              </div>
+              <div class="line">
+                <span>Zadzwoń:</span>
+                <a href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+                  >+48 22 576 87 95<br />
+                  +48 22 382 19 99</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section id="copyright">
+          <span
+            >Wszystkie prawa zastrzeżone przez
+            <a href="http://www.orlen.pl">ORLEN S.A.</a> &copy;
+            <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span
+          >
+          <!--      <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>-->
+
+          <a
+            href="https://connect.orlen.pl/servlet/HomeServlet.htm#"
+            onclick="showRegulationDiv('PL')"
+            >Regulamin</a
+          >
+
+          <a href="https://connect.orlen.pl/servlet/help.html">Instrukcje</a>
+        </section>
+      </div>
+    </footer>
+    <script>
+      $(document).ready(function () {
+        $("#currentYear").html(new Date().getFullYear());
+      });
     </script>
 
-
-<div id="page">
-
-</div>  
-
-
-
-<script>
-$(document).ready(function() {
-    $('#advertising_banner').hide();
-});
-
-var MainPageModel = function() {
-	var self = this;
-
-	self.initialized = ko.observable(false);
-	self.addElementAnimation = function(elem) { if (elem.nodeType === 1) $(elem).hide().slideDown() }
-	self.scrollContent = function(data, event) {
-		var scrollContentElem = $(event.target);
-		var scrolling;
-		var scroll = function() {
-			if( scrollContentElem.scrollTop() === (scrollContentElem.prop('scrollHeight') - scrollContentElem.outerHeight())) {
-				window.clearInterval(scrolling);
-				window.setTimeout(function() {
-					scrollContentElem.scrollTop( 0 );
-					window.setTimeout(function() {
-						scrolling = window.setInterval(scroll, 70);									
-					}, 500);
-				}, 500);
-			} else {
-	            scrollContentElem.scrollTop( scrollContentElem.scrollTop() + 1 );
-			}
-
-        };
-		scrolling = window.setInterval(scroll, 70);
-		scrollContentElem.on("mouseout", function() {
-			window.clearInterval(scrolling);
-			scrollContentElem.scrollTop( 0 );
-		});
-		
-	}
-	self.generateURL = function(target, params) {
-		var url = '/app/';
-		switch (target) {
-			case 'categories':
-				url += 'category/tree/json';
-				break;
-
-			case 'org':
-				url += 'main/organization';
-				break;
-
-			case 'demand':
-				url += 'outRfx/'+params.id+'/supplier/status';
-				break;
-
-			case 'orgImg':
-				url = '/wf/images/logo/'+params.logo;
-				break;
-
-			case 'demands':
-				url += 'main/recentDemands?specificOrgCode=';
-				break;
-
-            case 'bannerAd':
-                url += 'main/bannerAd';
-                break;
-		}
-		return url;
-	}
-
-	self.redirectToDetails = function(data) {
-		window.location.href=self.generateURL('demand', {id: data.identity()});
-	}
-
-	self.getCategories = function() {
-		self.showLoader(true);
-		return $.ajax({
-            type: 'get',
-            url: self.generateURL('categories'),
-        }).then(function(categories) {
-		 	ko.mapping.fromJS(categories, self.mapping, self.categories);
-			self.categoriesLoaded = true;
-			self.showLoader(false);
-		});
-	}
-
-	self.getOrgs = function() {
-		self.showLoader(true);
-		return $.ajax({
-            type: 'get',
-            url: self.generateURL('org'),
-        }).then(function(orgs) {
-			orgs = orgs.sort(function(a, b) {
-				return a.order > b.order ? 1 : -1
-			});
-		 	ko.mapping.fromJS(orgs, self.mapping, self.organizations);
-			self.organizationsLoaded = true;
-			self.showLoader(false);
-		});
-	}
-
-	self.getSearchData = function() {
-		return JSON.stringify({
-			results: self.resultsNum(),
-			startFrom: self.startFrom(),
-			searchName: self.searchName(),
-			searchCategories: self.getSelected(self.categories()).map(function(cat) {
-				return cat.identity();
-			}),
-			searchedDemands: self.demands().map(function(demand) {
-                return demand.identity();
-            }),
-			searchOrgs: self.getSelected(self.organizations()).map(function(org) {
-				return org.orgId();
-			}),
-			latest: self.sortByLatest()
+    <script type="text/javascript">
+      var isRegisterForm = false;
+      if ($("input[name='acceptedRegulation']").length) {
+        isRegisterForm = true;
+        if (!$("input[name='acceptedRegulation']").prop("checked")) {
+          $("input[name='acceptedRegulation']").prop("disabled", true);
+        }
+      }
+      function showRegulationDiv(languageVersion, regulationId) {
+        var url;
+        if (regulationId) {
+          url =
+            "/app/regulation/" +
+            regulationId +
+            "/version?languageVersion=" +
+            languageVersion;
+        } else {
+          url =
+            "/app/current/regulation/version/nl?languageVersion=" +
+            languageVersion;
+        }
+        $.getJSON(url, function (res) {
+          $("#regulationDivContent").html(res.content);
+          $("#regulationDiv").dialog({
+            height: $(window).height() * 0.8,
+            width: $(window).width() * 0.8,
+            modal: true,
+            resizable: false,
+            draggable: false,
+            open: function (event, ui) {
+              if (isRegisterForm) {
+                $(".ui-dialog-titlebar", ui.dialog | ui).hide();
+              }
+              if ($("#regulationDiv").hasScrollBar().vertical) {
+                $(this)
+                  .next(".ui-dialog-buttonpane")
+                  .eq(0)
+                  .prepend(
+                    "<a class='scrollBottom' href='https://connect.orlen.pl/servlet/HomeServlet.htm#'><i class='arrow-down'></i></a>",
+                  );
+                $("#regulationDiv").scrollTop(0);
+                if (isRegisterForm) {
+                  $("#closeRegulationDialog").button(
+                    "option",
+                    "disabled",
+                    true,
+                  );
+                }
+              }
+              $("body").css({ overflow: "hidden" });
+            },
+            beforeClose: function (event, ui) {
+              $("body").css({ overflow: "inherit" });
+              if (isRegisterForm) {
+                $("input[name='acceptedRegulation']").prop("disabled", false);
+                if (!$("#regulationDiv").hasScrollBar().vertical) {
+                  $("input[name='acceptedRegulation']").prop("disabled", false);
+                }
+              }
+            },
+            buttons: [
+              {
+                id: "closeRegulationDialog",
+                text: "Zamknij",
+                click: function () {
+                  $(this).dialog("close");
+                },
+              },
+            ],
+          });
         });
-	}
 
-	self.getDemands = function(push, optLength) {
-		if (!push) {
-			self.showLoader(true);
-			self.resultsNum(self.demands().length > 15 ? self.demands().length : 15);
-		} else {
-			self.smallLoaderVisible(true);
-			self.resultsNum(15);
-		}
-
-		$.ajax({
-             type: 'post',
-             url: self.generateURL('bannerAd'),
-             data: self.getSearchData(),
-             contentType: "application/json; charset=utf-8",
-             dataType: 'json',
-        }).then(function(manageAdObj) {
-            if (manageAdObj.objective === 'hideBannerAd') {
-                $('#advertising_banner').hide();
-            } else {
-                $('#advertising_banner').show();
+        var textElement = document.getElementById("regulationDiv");
+        $("#regulationDiv").scroll(function () {
+          if (
+            Math.round(this.scrollTop + this.offsetHeight) >=
+            Math.round(this.scrollHeight - 10)
+          ) {
+            $(".scrollBottom").addClass("hidden");
+            if (isRegisterForm) {
+              $("#closeRegulationDialog").button("option", "disabled", false);
+              $("input[name='acceptedRegulation']").prop("disabled", false);
             }
+          } else {
+            if ($(".scrollBottom").hasClass("hidden")) {
+              $(".scrollBottom").removeClass("hidden");
+            }
+          }
         });
+      }
 
-        return $.ajax({
-             type: 'post',
-             url: self.generateURL('demands'),
-             data: self.getSearchData(),
-             contentType: "application/json; charset=utf-8",
-             dataType: 'json',
-        }).then(function(demands) {
-			if (demands.length < 15) {
-				self.loadMoreVisible(false);
-			} else {
-				self.loadMoreVisible(true);
-			}
-			demands = demands.map(function(item) {
-				if (item.name && item.name.length > 150) {
-					item.name = item.name.slice(0, 150) + '...';
-				}
-				return item;
-			});
-			// change this to knockout bindings for dynamic text truncate
-			if (push) {
-				demands = ko.mapping.fromJS(demands);
-				for (i in demands()) {
-					self.demands.push(demands()[i]);
-				}
-				self.smallLoaderVisible(false);
-			} else {
-				self.showLoader(false);
-				ko.mapping.fromJS(demands, self.demands);
-			}
-
-		});
-	}
-
-	self.getTimeLeft = function(item) {
-		var timeString;
-		var now = new Date().getTime();
-		var	delta = Math.abs(item.endDate() - now)/1000;
-		var daysLeft = Math.floor(delta / 86400);
-		delta -= daysLeft * 86400;
-
-		var hoursLeft = Math.floor(delta / 3600) % 24;
-		delta -= hoursLeft * 3600;
-
-		var minutesLeft = Math.floor(delta / 60) % 60;
-		delta -= minutesLeft * 60;
-
-
-		if (daysLeft > 0) {
-			timeString = daysLeft + ' <small>dni</small> ' + hoursLeft + ' <small>godz.</small>';
-		} else if (daysLeft === 0 && hoursLeft >= 0) {
-			timeString = hoursLeft + ' <small>godz.</small> ' + minutesLeft + ' <small>min</small>';
-		} else {
-			// TODO if seconds	
-		}
-		return timeString;
-	}
-
-	self.mapping = {
-		update: function(options) {
-			var item = options.data;
-			item.selected = false;
-			if (item.children && item.children.length > 0) {
-				item.indeterminate = false;
-				item.children = item.children.map(function(child) {
-					child.parentId = item.identity;
-					child.depth = 1;
-					return child;
-				});
-				item.children = ko.mapping.fromJS(item.children, self.mapping);
-				if (!item.depth) {
-					item.depth = 0;
-				}
-			} else if (item.hasOwnProperty('children') && !item.children) {
-				item.depth = 2;
-			}
-			if (item.title) {
-				item.code = item.title.split('~')[0];
-				item.name = item.title.split('~')[1];
-			}
-			return ko.mapping.fromJS(item);
-		},
-	};
-
-	self.init = function() { // call only once!
-		self.loaderVisible = ko.observable(false);
-		self.smallLoaderVisible = ko.observable(false);
-		self.overlayVisible = ko.observable(false);
-		self.loadMoreVisible = ko.observable(true);
-		self.searchName = ko.observable();
-		self.categories = ko.mapping.fromJS([]);
-		self.categoriesToShow = ko.observable();
-		self.categoriesBreadCrumbs = ko.observableArray();
-		self.categoriesFilter = ko.observable().extend({ rateLimit: { method: "notifyWhenChangesStop", timeout: 400 } });
-		self.categoriesFilter.focus = ko.observable(false);
-		self.categoriesFilter.caret = ko.observable();
-		self.categoriesLoaded = false;
-		self.organizations = ko.mapping.fromJS([]);
-		self.organizationsLoaded = false;
-		self.demands = ko.mapping.fromJS([]);
-		self.startFrom = ko.observable(1);
-		self.resultsNum = ko.observable(15);
-		self.sortOptions = ko.observableArray([
-			{ value: true, caption: 'Najnowsze' },
-			{ value: false, caption: 'Kończące się' }
-		]);
-		self.sortByLatest = ko.observable(true);
-		self.areFiltersApplied = ko.observable(false);
-		self.orgCardsVisible = ko.observable(false);
-		self.catsCardsVisible = ko.observable(false);
-		
-
-		self.sortByLatest.subscribe(function(val) {
-			self.getDemands();
-			self.areFiltersApplied(true);
-		});
-		self.searchName.subscribe(function(val) {
-			if (val) {
-				self.areFiltersApplied(true);
-			}
-		});
-
-		self.categoriesFilter.subscribe(function(val) {			
-			self.categoriesFilter.focus(true);
-			if (val && val.length > 2) {
-				self.filterCategories(val);
-			} else {
-				self.categoriesToShow(self.categories);
-			}
-		});
-
-		return self.getDemands();
-	}
-
-	self.loadMore = function() {
-		self.startFrom(self.demands().length + 1);
-		self.resultsNum(15);
-		self.getDemands(true).done(function() {
-			self.startFrom(1);
-		});
-	}
-
-	self.filterCategories = function(filter) {
-		self.categoriesBreadCrumbs([]);
-		self.categoriesToShow(self.flatChildren(self.categories()).filter(function(cat) {
-			return cat.name().toLowerCase().indexOf(filter.toLowerCase()) !== -1;
-		}));
-	}
-
-	self.clearCategoriesFilter = function() {
-		self.categoriesFilter('');
-		self.categoriesToShow(self.categories);
-	}
-	
-	self.searchDemands = function() {
-		if (self.areFiltersApplied()) {
-			self.getDemands();
-		}
-		self.orgCardsVisible(false);
-		self.catsCardsVisible(false);
-		self.categoriesBreadCrumbs([]);
-	}
-
-	self.getDemandTypeTranslation = function(prop) {
-		var translation;
-		if (prop === 'requestForOffer') {
-			translation = 'Zapytanie ofertowe';
-		} else if (prop === 'requestForInformaction') {
-			translation = 'Zapytanie o informację';
-		} else if (prop === 'requestForPrice') {
-			translation = 'Zapytanie o cenę';
-		} else {
-			translation = prop;
-		}
-		return translation;
-
-	}
-
-	self.enterSubmit = function(data, event) {
-		if (event.keyCode === 13 || event.which == 13) {
-			if (event.target.name === 'demand-search-name') {
-				self.searchDemands();
-			} else if (event.target.name === 'demand-search-categories-filter') {
-				self.filterCategories(self.categoriesFilter());
-			}
-		} else {
-			if (event.target.name === 'demand-search-categories-filter') {
-				self.categoriesFilter.caret(event.target.selectionStart);
-			}
-		}		
-	}
-
-	self.selectItem = function(item, state, skipParent) {
-		var selected = typeof state !== 'undefined' ? state : !item.selected();
-		item.selected(selected);
-		if (item.children && item.children() !== null) {
-			item.indeterminate(false);
-			self.selectAll(item.children(), !selected, true);
-		}
-		
-		if (!skipParent && item.hasOwnProperty('parentId') && item.parentId()) {
-			self.selectParent(item.parentId());
-		}
-		self.areFiltersApplied(true);
-	}
-
-	self.selectParent = function(parentId) {
-		var parent = self.flatChildren(self.categories()).filter(function(cat) {
-			return cat.identity() === parentId;
-		})[0];
-
-		if (self.allSelected(parent.children())) {
-			self.selectItem(parent, true);
-			return;
-		} else if (self.getSelected(parent.children()).length > 0 && !self.allSelected(parent.children())) {
-			parent.indeterminate(true);
-			parent.selected(false);
-		} else {
-			parent.selected(false);
-			parent.indeterminate(false);
-		}
-
-		if (parent.parentId) {
-			self.selectParent(parent.parentId())
-		}
-	}
-
-	self.selectAll = function(array, reset, skipParent) {
-		var state = typeof reset !== 'undefined' ? !reset : true;
-		array.forEach(function(item) {
-			self.selectItem(item, state, skipParent);
-		});
-	}
-
-	self.checkAll = function() {
-		if (self.orgCardsVisible()) {
-			if (self.allSelected(self.organizations())) {
-				self.selectAll(self.organizations(), true);
-			} else {
-				self.selectAll(self.organizations());
-			}
-		} else if (self.catsCardsVisible()) {
-			var categories = typeof self.categoriesToShow() === 'function' ? self.categoriesToShow()() : self.categoriesToShow();			
-			if (self.allSelected(categories)) {
-				self.selectAll(categories, true);
-			} else {
-				self.selectAll(categories);
-			}
-		}
-	}
-
-	self.clearFilters = function() {
-		self.searchName(null);
-		self.selectAll(self.organizations(), true);
-		self.selectAll(self.categories(), true);
-		self.demands([]);
-		if (self.sortByLatest()) {
-			self.startFrom(1);
-			self.resultsNum(15);
-			self.getDemands();
-
-		} else {
-			self.sortByLatest(true);
-		}
-		
-		self.areFiltersApplied(false);
-	}
-
-	self.countSelectedOrgs = function() {
-		return self.getSelected(self.organizations()).length;
-	}
-
-	self.countSelectedCats = function() {
-		return self.getSelected(self.categories(), 2).length;
-	}
-
-	self.flatChildren = function(array) {
-		var flat = [];
-		array.forEach(function(item) {
-			flat.push(item);
-			if (item.children && item.children() !== null) {
-				flat = flat.concat(self.flatChildren(item.children()));
-			}
-		});
-		return flat;
-	}
-
-	self.getSelected = function(array, depth) {
-		var selected = self.flatChildren(array).filter(function(item) {
-			return item.selected() && (depth == undefined || item.depth() == depth);
-		});
-		return selected;
-	}
-
-	self.openOrgCards = function() {
-		if (self.orgCardsVisible()) {
-			self.orgCardsVisible(false);
-			self.getDemands();
-		} else {
-			if (!self.organizationsLoaded) {
-				self.getOrgs().then(function() {
-					self.orgCardsVisible(true);
-				});
-			} else {
-				self.orgCardsVisible(true);
-			}
-		}
-	}
-
-	self.openCatCards = function() {
-		self.categoriesBreadCrumbs([]);
-		if (self.catsCardsVisible()) {
-			self.catsCardsVisible(false);
-			self.getDemands();
-		} else {
-			self.categoriesFilter('');
-			if (!self.categoriesLoaded) {
-				self.getCategories().then(function() {
-					self.catsCardsVisible(true);
-					self.categoriesToShow(self.categories);
-				});
-			} else {
-				self.catsCardsVisible(true);
-				self.categoriesToShow(self.categories);
-			}
-		}
-	}
-
-	self.showChildren = function(item) {
-		if (!item) {
-			self.categoriesBreadCrumbs([]);
-			self.categoriesToShow(self.categories);
-		} else {
-			var indexOfExisting = self.categoriesBreadCrumbs.indexOf(item);
-			if (indexOfExisting >= 0) {
-				self.categoriesBreadCrumbs.splice(indexOfExisting+1);
-			} else {
-				self.categoriesBreadCrumbs.push(item);
-			}
-			self.categoriesToShow(item.children);
-		}
-
-	}
-
-	self.allSelected = function(array) {
-		return self.getSelected(array).length === self.flatChildren(array).length;
-	}
-
-	self.goBack =  function() {
-		if (self.catsCardsVisible()) {
-			var lastParent = self.categoriesBreadCrumbs().length - 2;
-				console.log(lastParent);
-			if (lastParent >= 0) {
-				self.showChildren(self.categoriesBreadCrumbs()[lastParent]);
-			} else if (lastParent === -1) {
-				if (self.categoriesFilter().length > 2) {
-					self.filterCategories(self.categoriesFilter());
-				} else {
-					self.showChildren();
-				}
-			} else {
-				self.clearCategoriesFilter();
-			}
-		}
-	}
-
-	self.showLoader = function(state) {
-		self.overlayVisible(state);
-		self.loaderVisible(state);
-	}
-
-}
-
-var mainPageModel = new MainPageModel();
-mainPageModel.init().done(function(){
-	ko.applyBindings(mainPageModel, document.getElementById('demand-search-wrapper'));
-	mainPageModel.initialized(true);
-});
-
-
-</script>
-
- 
-<form id="mpPostForm" method="POST" enctype="application/x-www-form-urlencoded" style="display: none;">
-	<input name="CSRFToken" type="hidden" value="" /><input type="hidden" name="UNIQUE_ID" value="1739544335264MXCgncQFWA3k0oRaOkB" />
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="push"></div>
-     	
-</div>
-<footer id="footer-new">
-	<div id="ticketFormPanel" title="Formularz zgłaszania problemu"></div>
-    <div class="inner">
-        <div class="row">
-            <div class="nav col-xs-8">
-                <ul>
-                    <li>
-                       <a href="https://connect.orlen.pl/app/dashboard">Strona główna</a>
-                    </li>
-                    <li>
-                    	<a href="https://connect.orlen.pl/app/login">Zaloguj</a>
-                    </li>
-                    <li>
-                       <a href="https://connect.orlen.pl/app/register/start">Zarejestruj</a>
-                    </li>
-                    <li>
-                     <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>
-                    </li>-->
-                    <li>
-                        <a href="https://connect.orlen.pl/servlet/help.html">Pomoc</a>
-                    </li>
-                </ul>
-            </div>
-
-            <section id="quick-help" class="col-xs-4">
-            	 <div class="lines">
-                      <div class="line">
-                      		<span>Potrzebujesz pomocy?</span>
-                      		<a href="https://connect.orlen.pl/servlet/HomeServlet?MP_module=static&amp;MP_action=contact" class="mail-link">Napisz</a>
-                      </div>
-                      <div class="line">
-                      		<span>Zadzwoń:</span>
-                      		<a href="https://connect.orlen.pl/servlet/HomeServlet.htm#">+48 22 576 87 95<br>
-+48 22 382 19 99</a>
-                      </div>
-                      
-                  </div>
-            </section>
-        </div>
-		
-			
-			
-				  
-				
-					
-				
-				
-				 
-					
-				
-			
-		
-		
-		    <section id="copyright">
-	            <span>Wszystkie prawa zastrzeżone przez <a href="http://www.orlen.pl">ORLEN S.A.</a> &copy; <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span>
-	      <!--      <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>-->
-			    
-	           	<a href="https://connect.orlen.pl/servlet/HomeServlet.htm#" onclick="showRegulationDiv('PL')" >Regulamin</a>
-	           	
-                 <a href="https://connect.orlen.pl/servlet/help.html">Instrukcje</a>
-	        </section>
-       </div>
-   </footer>
-<script>
-    $(document).ready(function() {
-       $( "#currentYear" ).html(new Date().getFullYear());
-    })
-</script>
-  
-     <script type="text/javascript">
- var isRegisterForm = false;
- if($("input[name='acceptedRegulation']").length) {
-   isRegisterForm = true;
-    if( !$("input[name='acceptedRegulation']").prop('checked')){
-		$("input[name='acceptedRegulation']").prop("disabled", true);
-   }
- }
-	function showRegulationDiv(languageVersion, regulationId) {
-		var url;
-		if (regulationId) {
-			url = '/app/regulation/'+regulationId+'/version?languageVersion='+languageVersion;
-		} else {
-			url = '/app/current/regulation/version/nl?languageVersion='+languageVersion;
-		} 
-		$.getJSON(url, function(res) {
-			$('#regulationDivContent').html(res.content);
-		    $('#regulationDiv').dialog({
-	        	height: $(window).height() * 0.8,
-	    		width: $(window).width() * 0.8,
-	    		modal: true,
-	    		resizable: false,
-	    		draggable: false,
-				open: function(event, ui) {
-					if(isRegisterForm) {
-						$(".ui-dialog-titlebar", ui.dialog | ui).hide();
-					}
-					if($('#regulationDiv').hasScrollBar().vertical) {
-						$(this).next(".ui-dialog-buttonpane").eq(0).prepend("<a class='scrollBottom' href='https://connect.orlen.pl/servlet/HomeServlet.htm#'><i class='arrow-down'></i></a>");
-						$('#regulationDiv').scrollTop(0);
-		                if(isRegisterForm) {
-		                    $("#closeRegulationDialog").button("option", "disabled", true);
-		                }
-					}
-					$("body").css({ overflow: 'hidden' });
-				},
-				beforeClose: function(event, ui) {
-			    	$("body").css({ overflow: 'inherit' });
-		            if(isRegisterForm) {
-		                $("input[name='acceptedRegulation']").prop("disabled", false);
-						if(!$('#regulationDiv').hasScrollBar().vertical) {
-							$("input[name='acceptedRegulation']").prop("disabled", false);
-						}
-		            }
-				},
-	          	buttons: [
-		            {
-		              id: "closeRegulationDialog",
-		              text: "Zamknij",
-		              click: function() {
-		                $( this ).dialog( "close" );
-		              }
-		            }
-	          	]
-	        });
-		});
-		
-	    var textElement = document.getElementById("regulationDiv");
-	    $('#regulationDiv').scroll(function () {
-	        if (Math.round(this.scrollTop + this.offsetHeight) >= Math.round(this.scrollHeight - 10)){
-	            $(".scrollBottom").addClass("hidden");
-	            if(isRegisterForm) {
-	            	$("#closeRegulationDialog").button("option", "disabled", false);
-	            	$("input[name='acceptedRegulation']").prop("disabled", false);
-	            }
-	        } else {
-	          if ($(".scrollBottom").hasClass("hidden")) {
-	            $(".scrollBottom").removeClass("hidden")
-	          }
-	        }
-	    });
-	}
-
-	$(document).on("click", ".scrollBottom", function(e) {
-		e.preventDefault();
-	    var el = document.getElementById("regulationDiv");
-	    var current = el.scrollTop;
-	    var percentScroll = el.scrollHeight*0.10;
-		$('#regulationDiv').animate({
-	      scrollTop: current + percentScroll
-		}, 500);
-	});
-</script>
-  <div id="regulationDiv">
-   	<div id="regulationDivContent" class="regulationContent"></div>
-	</div>
-   
-
-</body>
+      $(document).on("click", ".scrollBottom", function (e) {
+        e.preventDefault();
+        var el = document.getElementById("regulationDiv");
+        var current = el.scrollTop;
+        var percentScroll = el.scrollHeight * 0.1;
+        $("#regulationDiv").animate(
+          {
+            scrollTop: current + percentScroll,
+          },
+          500,
+        );
+      });
+    </script>
+    <div id="regulationDiv">
+      <div id="regulationDivContent" class="regulationContent"></div>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-

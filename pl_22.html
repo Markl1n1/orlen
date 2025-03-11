@@ -1,1319 +1,1505 @@
-﻿
-<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 <html lang="pl">
-    <head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <title>PGNiG Bioevolution</title>
-    
-    
-    <meta name="template" content="page-content"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    
-    
+    <meta name="template" content="page-content" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
+    <!--Included gtm-head.html*/-->
 
-    
-<!--Included gtm-head.html*/-->
+    <link
+      rel="stylesheet"
+      href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-dependencies.min.d41d8cd98f00b204e9800998ecf8427e.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-site.min.33f241be5aadd410dd0a3f9169d2f48c.css"
+      type="text/css"
+    />
 
-    
-    
+    <meta name="format-detection" content="telephone=no" />
 
-
-
-    
-    
-        
-    
-<link rel="stylesheet" href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-dependencies.min.d41d8cd98f00b204e9800998ecf8427e.css" type="text/css">
-<link rel="stylesheet" href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-site.min.33f241be5aadd410dd0a3f9169d2f48c.css" type="text/css">
-
-
-
-    
-
-<meta name="format-detection" content="telephone=no"/>
-
-     <script>(function(C,oo,k,ie,b,o,t){
-        var a=C.scripts[0],d=C.createElement(k),e=/^\/([a-z]{2})([_-][a-z]{2})?(\/.*)?$/g.
-        exec(oo.pathname),f={au:"en",ca:"en",dk:"da",ee:"et",no:"nb",se:"sv",uk:"en",};
-        e=e?e[1]:/\.([a-z]{2,})$/.exec(oo.hostname)[1];e=e.length>2?"en":e;if(f[e])e=f[e];
-        d.id=ie;d.setAttribute(b,o);d.src="https://consent.cookiebot.com/uc.js?cbid="+t;
-        d.setAttribute("data-culture",e);d.async=!1;a.parentNode.insertBefore(d,a);})
-        (document,location,"script","Cookiebot","data-blockingmode","manual",
-        "b9718eca-dff6-43ba-a058-2496edde113a")
-      </script>
-
-
+    <script>
+      (function (C, oo, k, ie, b, o, t) {
+        var a = C.scripts[0],
+          d = C.createElement(k),
+          e = /^\/([a-z]{2})([_-][a-z]{2})?(\/.*)?$/g.exec(oo.pathname),
+          f = {
+            au: "en",
+            ca: "en",
+            dk: "da",
+            ee: "et",
+            no: "nb",
+            se: "sv",
+            uk: "en",
+          };
+        e = e ? e[1] : /\.([a-z]{2,})$/.exec(oo.hostname)[1];
+        e = e.length > 2 ? "en" : e;
+        if (f[e]) e = f[e];
+        d.id = ie;
+        d.setAttribute(b, o);
+        d.src = "https://consent.cookiebot.com/uc.js?cbid=" + t;
+        d.setAttribute("data-culture", e);
+        d.async = !1;
+        a.parentNode.insertBefore(d, a);
+      })(
+        document,
+        location,
+        "script",
+        "Cookiebot",
+        "data-blockingmode",
+        "manual",
+        "b9718eca-dff6-43ba-a058-2496edde113a",
+      );
+    </script>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer',"GTM-KX3G6ZB8");
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KX3G6ZB8");
     </script>
     <!-- End Google Tag Manager -->
 
+    <meta property="og:title" content="PGNiG Bioevolution" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bioevolution.orlen.pl/pl" />
+    <meta name="twitter:card" content="summary" />
 
+    <script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-dependencies.min.d41d8cd98f00b204e9800998ecf8427e.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-base.min.bef56f80acf5228b6326d24e5c4987ed.css"
+      type="text/css"
+    />
+  </head>
+  <body
+    class="page basicpage theme__header-transparent theme__hidden-breadcrumbs"
+    id="page-abe518696f"
+    data-cmp-data-layer-enabled
+  >
+    <script>
+      window.adobeDataLayer = window.adobeDataLayer || [];
+      adobeDataLayer.push({
+        page: JSON.parse(
+          "{\x22page\u002Dabe518696f\x22:{\x22@type\x22:\x22orlen\u002Dinternet\/components\/page\x22,\x22repo:modifyDate\x22:\x222024\u002D09\u002D10T14:28:38Z\x22,\x22dc:title\x22:\x22PGNiG Bioevolution\x22,\x22xdm:template\x22:\x22\/conf\/orlen\u002Dinternet\/settings\/wcm\/templates\/page\u002Dcontent\x22,\x22xdm:language\x22:\x22pl\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/internet\/pgnig\u002Dbioevolution\/pl\/pl.html\x22}}",
+        ),
+        event: "cmp:show",
+        eventInfo: {
+          path: "page.page\u002Dabe518696f",
+        },
+      });
+    </script>
 
-
-
-
-<meta property="og:title" content="PGNiG Bioevolution"/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://bioevolution.orlen.pl/pl"/>
-<meta name="twitter:card" content="summary"/>
-
-
-
-
-    
-    
-    
-
-    
-
-    
-    
-<script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-dependencies.min.d41d8cd98f00b204e9800998ecf8427e.js"></script>
-
-
-
-    
-    
-<link rel="stylesheet" href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-base.min.bef56f80acf5228b6326d24e5c4987ed.css" type="text/css">
-
-
-
-    
-
-    
-    
-</head>
-    <body class="page basicpage theme__header-transparent theme__hidden-breadcrumbs" id="page-abe518696f" data-cmp-data-layer-enabled>
-        <script>
-          window.adobeDataLayer = window.adobeDataLayer || [];
-          adobeDataLayer.push({
-              page: JSON.parse("{\x22page\u002Dabe518696f\x22:{\x22@type\x22:\x22orlen\u002Dinternet\/components\/page\x22,\x22repo:modifyDate\x22:\x222024\u002D09\u002D10T14:28:38Z\x22,\x22dc:title\x22:\x22PGNiG Bioevolution\x22,\x22xdm:template\x22:\x22\/conf\/orlen\u002Dinternet\/settings\/wcm\/templates\/page\u002Dcontent\x22,\x22xdm:language\x22:\x22pl\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/internet\/pgnig\u002Dbioevolution\/pl\/pl.html\x22}}"),
-              event:'cmp:show',
-              eventInfo: {
-                  path: 'page.page\u002Dabe518696f'
-              }
-          });
-        </script>
-        
-        
-            
-
-
-
-
-            
-
-
-
-            
-<!--Included gtm.html*/-->
+    <!--Included gtm.html*/-->
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX3G6ZB8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KX3G6ZB8"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-
-<div class="root container responsivegrid">
-
-    
-    
-    
-    <div id="container-c394ed9bd1" class="cmp-container">
-        
+    <div class="root container responsivegrid">
+      <div id="container-c394ed9bd1" class="cmp-container">
         <header class="experiencefragment header">
-<!--Added Selector filter for pagination ('page-' selector) because it was generating additional headers and footer cache
+          <!--Added Selector filter for pagination ('page-' selector) because it was generating additional headers and footer cache
 files with 'page-' selector what is unnecessary.-->
-<div id="experiencefragment-15bf2c9bd5" class="cmp-experiencefragment cmp-experiencefragment--header">
+          <div
+            id="experiencefragment-15bf2c9bd5"
+            class="cmp-experiencefragment cmp-experiencefragment--header"
+          >
+            <div id="container-b7497834de" class="cmp-container">
+              <div class="text">
+                <div id="text-2214e39b9f" class="cmp-text">
+                  <p><a href="pl_22.html#main-container"></a></p>
+                </div>
+              </div>
+              <div class="image header__default-logo">
+                <!--Added link target configuration feature.-->
 
+                <div
+                  data-cmp-is="image"
+                  data-cmp-lazy
+                  data-cmp-lazythreshold="0"
+                  data-cmp-src="https://orlen.com.co/media/pic/go-pgnig-bioevolution-rgb.jpeg"
+                  data-cmp-widths="320,480,600,800,1024,1200,1600,1920"
+                  data-asset="https://orlen.com.co/media/pic/GO-PGNiG_BioEvolution_RGB.jpg"
+                  data-title="logo ORLEN"
+                  id="image-8a5ea1e313"
+                  class="cmp-image"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    class="cmp-image__link"
+                    href="pl_22.html"
+                    data-cmp-hook-image="link"
+                  >
+                    <noscript data-cmp-hook-image="noscript">
+                      <img
+                        src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/image_2064652404_cop_1670031078.coreimg.jpeg/1715336360729/go-pgnig-bioevolution-rgb.jpeg"
+                        class="cmp-image__image"
+                        itemprop="contentUrl"
+                        data-cmp-hook-image="image"
+                        alt="logo ORLEN"
+                      />
+                    </noscript>
+                  </a>
+                </div>
+              </div>
+              <div class="image header__transparent-logo">
+                <!--Added link target configuration feature.-->
 
-    
-    
-    
-    <div id="container-b7497834de" class="cmp-container">
-        
-        <div class="text">
-<div id="text-2214e39b9f" class="cmp-text">
-    <p><a href="pl_22.html#main-container"></a></p>
+                <div
+                  data-cmp-is="image"
+                  data-cmp-lazy
+                  data-cmp-lazythreshold="0"
+                  data-cmp-src="https://orlen.com.co/media/pic/go-pgnig-bioevolution-rgb-1k-kon.png"
+                  data-cmp-widths="320,480,600,800,1024,1200,1600,1920"
+                  data-asset="https://orlen.com.co/media/pic/GO-PGNiG_BioEvolution_RGB_1K_kon.png"
+                  data-title="logo ORLEN"
+                  id="image-4d7ff46eaa"
+                  class="cmp-image"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    class="cmp-image__link"
+                    href="pl_22.html"
+                    data-cmp-hook-image="link"
+                  >
+                    <noscript data-cmp-hook-image="noscript">
+                      <img
+                        src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/image_2064652404_cop.coreimg.png/1715249012528/go-pgnig-bioevolution-rgb-1k-kon.png"
+                        class="cmp-image__image"
+                        itemprop="contentUrl"
+                        data-cmp-hook-image="image"
+                        alt="logo ORLEN"
+                      />
+                    </noscript>
+                  </a>
+                </div>
+              </div>
+              <div class="container responsivegrid header__mobile-panel">
+                <div id="header--mobile-panel" class="cmp-container">
+                  <div class="button header__mobile-intro-button--back">
+                    <!--Added icon positioning feature.-->
+                    <!--Added link target configuration feature.-->
+                    <!--Added logic for displaying button placeholder in the Edit mode.-->
+                    <button
+                      type="button"
+                      id="button-176fcc095c"
+                      class="cmp-button"
+                      aria-label="Powrót"
+                    >
+                      <span class="cmp-button__text">Powrót</span>
+                    </button>
+                  </div>
+                  <div class="navigationtabs tabs">
+                    <div
+                      id="navigationtabs-3c1937d5d6"
+                      class="cmp-navigationtabs"
+                    >
+                      <ol
+                        role="tablist"
+                        aria-controls="-tabpanel"
+                        class="cmp-navigationtabs__tablist"
+                        aria-multiselectable="false"
+                      >
+                        <li
+                          role="tab"
+                          id="navigationtabs-3c1937d5d6-item-bf55c93211-tab"
+                          class="cmp-navigationtabs__tab"
+                        >
+                          <a
+                            href="https://bioevolution.orlen.pl/pl_22.htm#"
+                            class="cmp-navigationtabs__tab-link"
+                            >O spółce</a
+                          >
+                        </li>
+                      </ol>
+                      <div
+                        id="navigationtabs-3c1937d5d6-item-bf55c93211"
+                        role="tabpanel"
+                        aria-labelledby="navigationtabs-3c1937d5d6-item-bf55c93211"
+                        tabindex="0"
+                        class="cmp-navigationtabs__tabpanel"
+                      >
+                        <div class="tabcontainer container responsivegrid">
+                          <div
+                            id="tabcontainer-bf55c93211"
+                            class="cmp-container"
+                          >
+                            <div class="tabcontent container responsivegrid">
+                              <div
+                                id="tabcontent-575d58dfa4"
+                                class="cmp-container"
+                              >
+                                <div
+                                  class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12"
+                                >
+                                  <div
+                                    class="container responsivegrid aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0"
+                                  >
+                                    <div
+                                      id="container-1d33eaf86b"
+                                      class="cmp-container"
+                                    >
+                                      <div
+                                        class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12"
+                                      >
+                                        <div
+                                          class="teaser header__content-intro aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"
+                                        >
+                                          <div
+                                            id="teaser-c411a11bca"
+                                            class="cmp-teaser"
+                                          >
+                                            <div class="cmp-teaser__content">
+                                              <h2 class="cmp-teaser__title">
+                                                <a
+                                                  class="cmp-teaser__title-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce"
+                                                  target="_self"
+                                                  >O nas</a
+                                                >
+                                              </h2>
 
-</div>
+                                              <div
+                                                class="cmp-teaser__description"
+                                              >
+                                                <p>
+                                                  Rozwijamy segment biogaz –
+                                                  biometan w Grupie ORLEN
+                                                  poprzez budowanie portfela
+                                                  około 100 aktywów biogazowych,
+                                                  które w 2030 roku zapewnią
+                                                  okokoło 1 mld m3 produkcji
+                                                  biogazu.
+                                                </p>
+                                              </div>
 
-    
+                                              <div
+                                                class="cmp-teaser__action-container"
+                                              >
+                                                <a
+                                                  class="cmp-teaser__action-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce"
+                                                  target="_self"
+                                                  >Przejdź do działu</a
+                                                >
 
-</div>
-<div class="image header__default-logo">
-<!--Added link target configuration feature.-->
+                                                <a
+                                                  class="cmp-teaser__action-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce"
+                                                  target="_self"
+                                                  >Więcej</a
+                                                >
+                                              </div>
 
+                                              <div
+                                                class="cmp-teaser__promo-wrapper"
+                                              >
+                                                <div
+                                                  class="cmp-teaser__price"
+                                                ></div>
+                                              </div>
+                                            </div>
+                                          </div>
 
+                                          <link
+                                            rel="stylesheet"
+                                            href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.b4704721a7ae714e5d0512480f81b1ff.css"
+                                            type="text/css"
+                                          />
+                                          <script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.f5f780cd717009170e8c4987cf982fed.js"></script>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="container responsivegrid header__navigation-wrapper aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0"
+                                  >
+                                    <div
+                                      id="container-a142cc47c6"
+                                      class="cmp-container"
+                                    >
+                                      <div
+                                        class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12"
+                                      >
+                                        <div
+                                          class="linksgroup aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"
+                                        >
+                                          <ul
+                                            class="cmp-linksgroup__list cmp-linksgroup__list--level-1"
+                                            data-level="1"
+                                          >
+                                            <!--Added link target configuration feature.-->
 
-    
-    <div data-cmp-is="image" data-cmp-lazy data-cmp-lazythreshold="0" data-cmp-src="https://orlen.com.co/media/pic/go-pgnig-bioevolution-rgb.jpeg" data-cmp-widths="320,480,600,800,1024,1200,1600,1920" data-asset="https://orlen.com.co/media/pic/GO-PGNiG_BioEvolution_RGB.jpg" data-title="logo ORLEN" id="image-8a5ea1e313" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
-        <a class="cmp-image__link" href="pl_22.html" data-cmp-hook-image="link">
-            <noscript data-cmp-hook-image="noscript">
-                
-    
-    <img src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/image_2064652404_cop_1670031078.coreimg.jpeg/1715336360729/go-pgnig-bioevolution-rgb.jpeg" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt="logo ORLEN"/>
-    
+                                            <li class="cmp-linksgroup__item">
+                                              <a
+                                                href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie"
+                                                target="_self"
+                                                class="cmp-linksgroup__item-link"
+                                                >Nasze biogazownie</a
+                                              >
+                                            </li>
 
-            </noscript>
-        </a>
-        
-    
-    
+                                            <!--Added link target configuration feature.-->
 
-    </div>
+                                            <li class="cmp-linksgroup__item">
+                                              <a
+                                                href="https://bioevolution.orlen.pl/pl_22.htm#"
+                                                target="_self"
+                                                class="cmp-linksgroup__item-link has-submenu"
+                                                >Organy i struktura spółki</a
+                                              >
 
+                                              <ul
+                                                class="cmp-linksgroup__list cmp-linksgroup__list--level-2"
+                                                data-level="2"
+                                              >
+                                                <!--Added link target configuration feature.-->
 
-    
+                                                <li
+                                                  class="cmp-linksgroup__item"
+                                                >
+                                                  <a
+                                                    href="https://bioevolution.orlen.pl/pl/o-spolce/organy-i-struktura-spolki/rada-nadzorcza"
+                                                    target="_self"
+                                                    class="cmp-linksgroup__item-link"
+                                                    >Rada nadzorcza</a
+                                                  >
+                                                </li>
 
-</div>
-<div class="image header__transparent-logo">
-<!--Added link target configuration feature.-->
+                                                <!--Added link target configuration feature.-->
 
+                                                <li
+                                                  class="cmp-linksgroup__item"
+                                                >
+                                                  <a
+                                                    href="https://bioevolution.orlen.pl/pl/o-spolce/organy-i-struktura-spolki/zarzad"
+                                                    target="_self"
+                                                    class="cmp-linksgroup__item-link"
+                                                    >Zarząd spółki</a
+                                                  >
+                                                </li>
+                                              </ul>
+                                            </li>
 
+                                            <!--Added link target configuration feature.-->
 
-    
-    <div data-cmp-is="image" data-cmp-lazy data-cmp-lazythreshold="0" data-cmp-src="https://orlen.com.co/media/pic/go-pgnig-bioevolution-rgb-1k-kon.png" data-cmp-widths="320,480,600,800,1024,1200,1600,1920" data-asset="https://orlen.com.co/media/pic/GO-PGNiG_BioEvolution_RGB_1K_kon.png" data-title="logo ORLEN" id="image-4d7ff46eaa" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
-        <a class="cmp-image__link" href="pl_22.html" data-cmp-hook-image="link">
-            <noscript data-cmp-hook-image="noscript">
-                
-    
-    <img src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/image_2064652404_cop.coreimg.png/1715249012528/go-pgnig-bioevolution-rgb-1k-kon.png" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt="logo ORLEN"/>
-    
+                                            <!--Added link target configuration feature.-->
 
-            </noscript>
-        </a>
-        
-    
-    
+                                            <li class="cmp-linksgroup__item">
+                                              <a
+                                                href="https://bioevolution.orlen.pl/pl/o-spolce/przetargi"
+                                                target="_self"
+                                                class="cmp-linksgroup__item-link"
+                                                >Przetargi i zapytania
+                                                ofertowe</a
+                                              >
+                                            </li>
 
-    </div>
+                                            <!--Added link target configuration feature.-->
 
+                                            <li class="cmp-linksgroup__item">
+                                              <a
+                                                href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci"
+                                                target="_self"
+                                                class="cmp-linksgroup__item-link"
+                                                >Aktualności</a
+                                              >
+                                            </li>
 
-    
+                                            <!--Added link target configuration feature.-->
 
-</div>
-<div class="container responsivegrid header__mobile-panel">
+                                            <li class="cmp-linksgroup__item">
+                                              <a
+                                                href="https://bioevolution.orlen.pl/pl_22.htm#"
+                                                target="_self"
+                                                class="cmp-linksgroup__item-link has-submenu"
+                                                >Kariera</a
+                                              >
 
-    
-    
-    
-    <div id="header--mobile-panel" class="cmp-container">
-        
-        <div class="button header__mobile-intro-button--back">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<button type="button" id="button-176fcc095c" class="cmp-button" aria-label="Powrót">
-    
-    
+                                              <ul
+                                                class="cmp-linksgroup__list cmp-linksgroup__list--level-2"
+                                                data-level="2"
+                                              >
+                                                <!--Added link target configuration feature.-->
 
-    <span class="cmp-button__text">Powrót</span>
-</button>
+                                                <li
+                                                  class="cmp-linksgroup__item"
+                                                >
+                                                  <a
+                                                    href="https://bioevolution.orlen.pl/pl/kariera/oferty-pracy"
+                                                    target="_blank"
+                                                    class="cmp-linksgroup__item-link"
+                                                    >Oferty pracy</a
+                                                  >
+                                                </li>
 
-    
+                                                <!--Added link target configuration feature.-->
 
-</div>
-<div class="navigationtabs tabs">
+                                                <li
+                                                  class="cmp-linksgroup__item"
+                                                >
+                                                  <a
+                                                    href="https://bioevolution.orlen.pl/pl/kariera/Zasady-rekrutacji"
+                                                    target="_self"
+                                                    class="cmp-linksgroup__item-link"
+                                                    >Zasady rekrutacji</a
+                                                  >
+                                                </li>
+                                              </ul>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="container responsivegrid header__editable-section aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--default--0"
+                                  >
+                                    <div
+                                      id="container-8b24afe3da"
+                                      class="cmp-container"
+                                    >
+                                      <div
+                                        class="aem-Grid aem-Grid--6 aem-Grid--default--6"
+                                      >
+                                        <div
+                                          class="teaser header__content-teaser aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--offset--default--0"
+                                        >
+                                          <div
+                                            id="teaser-37de9e36f6"
+                                            class="cmp-teaser"
+                                          >
+                                            <div class="cmp-teaser__image">
+                                              <!--Added link target configuration feature.-->
 
+                                              <div
+                                                data-cmp-is="image"
+                                                data-cmp-lazy
+                                                data-cmp-lazythreshold="0"
+                                                data-cmp-src="https://orlen.com.co/media/pic/biogazownie.jpeg"
+                                                data-cmp-widths="320,480,600,800,1024,1200,1600,1920"
+                                                data-asset="https://orlen.com.co/media/pic/Biogazownie.jpg"
+                                                data-title="Biopaliwa i inwestycje– Grupa ORLEN. Pole rzepaku symbolizujące troskę o zachowanie bioróżnorodności w rolnictwie. "
+                                                id="image-37de9e36f6"
+                                                class="cmp-image"
+                                                itemscope
+                                                itemtype="http://schema.org/ImageObject"
+                                              >
+                                                <noscript
+                                                  data-cmp-hook-image="noscript"
+                                                >
+                                                  <img
+                                                    src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/container_copy_copy/navigationtabs/item_1/tabcontent/aux_panel/teaser_copy_91082349_302616344.coreimg.jpeg/1711452959109/biogazownie.jpeg"
+                                                    class="cmp-image__image"
+                                                    itemprop="contentUrl"
+                                                    data-cmp-hook-image="image"
+                                                    alt="Biopaliwa i inwestycje– Grupa ORLEN. Pole rzepaku symbolizujące troskę o zachowanie bioróżnorodności w rolnictwie. "
+                                                  />
+                                                </noscript>
+                                              </div>
+                                            </div>
 
-  <div id="navigationtabs-3c1937d5d6" class="cmp-navigationtabs">
-    <ol role="tablist" aria-controls="-tabpanel" class="cmp-navigationtabs__tablist" aria-multiselectable="false">
-      <li role="tab" id="navigationtabs-3c1937d5d6-item-bf55c93211-tab" class="cmp-navigationtabs__tab">
-          <a href="https://bioevolution.orlen.pl/pl_22.htm#" class="cmp-navigationtabs__tab-link">O spółce</a>
-        </li>
-    </ol>
-    <div id="navigationtabs-3c1937d5d6-item-bf55c93211" role="tabpanel" aria-labelledby="navigationtabs-3c1937d5d6-item-bf55c93211" tabindex="0" class="cmp-navigationtabs__tabpanel"><div class="tabcontainer container responsivegrid">
+                                            <div class="cmp-teaser__content">
+                                              <h2 class="cmp-teaser__title">
+                                                <a
+                                                  class="cmp-teaser__title-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie"
+                                                  target="_self"
+                                                  >Nasze biogazownie</a
+                                                >
+                                              </h2>
 
-    
-    
-    
-    <div id="tabcontainer-bf55c93211" class="cmp-container">
-        
-        <div class="tabcontent container responsivegrid">
+                                              <div
+                                                class="cmp-teaser__action-container"
+                                              >
+                                                <a
+                                                  class="cmp-teaser__action-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie"
+                                                  target="_self"
+                                                  >Więcej</a
+                                                >
+                                              </div>
 
-    
-    <div id="tabcontent-575d58dfa4" class="cmp-container">
-        
+                                              <div
+                                                class="cmp-teaser__promo-wrapper"
+                                              >
+                                                <div
+                                                  class="cmp-teaser__price"
+                                                ></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="teaser header__content-teaser aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--offset--default--0"
+                                        >
+                                          <div
+                                            id="teaser-8fe0390006"
+                                            class="cmp-teaser"
+                                          >
+                                            <div class="cmp-teaser__image">
+                                              <!--Added link target configuration feature.-->
 
+                                              <div
+                                                data-cmp-is="image"
+                                                data-cmp-lazy
+                                                data-cmp-lazythreshold="0"
+                                                data-cmp-src="https://orlen.com.co/media/pic/orlen-administracja-us%C5%82ugi-archiwizacyjno-kancelaryjne.jpeg"
+                                                data-cmp-widths="320,480,600,800,1024,1200,1600,1920"
+                                                data-asset="https://orlen.com.co/media/pic/ORLEN Administracja usługi archiwizacyjno-kancelaryjne.jpg"
+                                                data-title="75627744"
+                                                id="image-8fe0390006"
+                                                class="cmp-image"
+                                                itemscope
+                                                itemtype="http://schema.org/ImageObject"
+                                              >
+                                                <noscript
+                                                  data-cmp-hook-image="noscript"
+                                                >
+                                                  <img
+                                                    src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/container_copy_copy/navigationtabs/item_1/tabcontent/aux_panel/teaser_copy_91082349.coreimg.jpeg/1716544797994/orlen-administracja-us%C5%82ugi-archiwizacyjno-kancelaryjne.jpeg"
+                                                    class="cmp-image__image"
+                                                    itemprop="contentUrl"
+                                                    data-cmp-hook-image="image"
+                                                    alt="Corner of stack of files, close-up"
+                                                    title="75627744"
+                                                  />
+                                                </noscript>
 
-<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
-    
-    <div class="container responsivegrid aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+                                                <meta
+                                                  itemprop="caption"
+                                                  content="75627744"
+                                                />
+                                              </div>
+                                            </div>
 
-    
-    <div id="container-1d33eaf86b" class="cmp-container">
-        
+                                            <div class="cmp-teaser__content">
+                                              <h2 class="cmp-teaser__title">
+                                                <a
+                                                  class="cmp-teaser__title-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce/przetargi"
+                                                  target="_self"
+                                                  >Przetargi i zapytania
+                                                  ofertowe</a
+                                                >
+                                              </h2>
 
+                                              <div
+                                                class="cmp-teaser__action-container"
+                                              >
+                                                <a
+                                                  class="cmp-teaser__action-link"
+                                                  href="https://bioevolution.orlen.pl/pl/o-spolce/przetargi"
+                                                  target="_self"
+                                                  >Więcej</a
+                                                >
+                                              </div>
 
-<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
-    
-    <div class="teaser header__content-intro aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3">
+                                              <div
+                                                class="cmp-teaser__promo-wrapper"
+                                              >
+                                                <div
+                                                  class="cmp-teaser__price"
+                                                ></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button header__group-menu-trigger">
+                    <!--Added icon positioning feature.-->
+                    <!--Added link target configuration feature.-->
+                    <!--Added logic for displaying button placeholder in the Edit mode.-->
+                    <button
+                      type="button"
+                      id="toggle-button--orlen-group"
+                      class="cmp-button"
+                    >
+                      <span class="cmp-button__text">Grupa ORLEN</span>
+                    </button>
+                  </div>
+                  <div class="button header__contact-link">
+                    <!--Added icon positioning feature.-->
+                    <!--Added link target configuration feature.-->
+                    <!--Added logic for displaying button placeholder in the Edit mode.-->
+                    <a
+                      id="button-76a1336897"
+                      class="cmp-button"
+                      href="https://bioevolution.orlen.pl/pl/kontakt/dane-kontaktowe-i-rejestrowe"
+                      target="_self"
+                    >
+                      <span class="cmp-button__text">Kontakt</span>
+                    </a>
+                  </div>
+                  <div class="text header__group-menu">
+                    <div id="header__orlen-group-navigation" class="cmp-text">
+                      <h3>Grupa ORLEN</h3>
+                      <ul>
+                        <li>
+                          <a
+                            title="ORLEN Administracja"
+                            href="http://administracja.orlen.pl/pl"
+                            target="_blank"
+                            >ORLEN Administracja</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            title="ORLEN Asfalt"
+                            href="http://asfalt.orlen.pl/pl"
+                            target="_blank"
+                            >ORLEN Asfalt</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://aviation.orlen.pl/pl" target="_blank"
+                            >ORLEN Aviation</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://www.orlen.lt/" target="_blank"
+                            >ORLEN Baltics Retail</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://budonaft.orlen.pl/pl" target="_blank"
+                            >ORLEN Budonaft</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://orlencapital.se/" target="_blank"
+                            >ORLEN Capital</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://cs.orlen.pl/pl" target="_blank"
+                            >ORLEN Centrum Serwisowe</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.orlen-deutschland.de/"
+                            target="_blank"
+                            >ORLEN Deutschland</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://eko.orlen.pl/pl" target="_blank"
+                            >ORLEN Eko</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://cuk.orlen.pl/pl" target="_blank"
+                            >ORLEN CUK</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="http://laboratorium.orlen.pl/pl"
+                            target="_blank"
+                            >ORLEN Laboratorium</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://www.orlenlietuva.lt/" target="_blank"
+                            >ORLEN Lietuva</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://bioevolution.orlen.pl/pl_2.html"
+                            target="_blank"
+                            >ORLEN Neptun</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://www.orlenochrona.pl/" target="_blank"
+                            >ORLEN Ochrona</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://www.orlenoil.pl/" target="_blank"
+                            >ORLEN OIL</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://bioevolution.orlen.pl/pl_11.html"
+                            target="_blank"
+                            >ORLEN Paliwa</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.orlenpoludnie.pl/"
+                            target="_blank"
+                            >ORLEN Południe</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://projekt.orlen.pl/pl" target="_blank"
+                            >ORLEN Projekt</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://serwis.orlen.pl/pl" target="_blank"
+                            >ORLEN Serwis</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://transport.orlen.pl/pl" target="_blank"
+                            >ORLEN Transport</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.orlenunipetrol.cz/"
+                            target="_blank"
+                            >ORLEN Unipetrol</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.orlenupstream.pl/"
+                            target="_blank"
+                            >ORLEN Upstream Polska</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.orlenupstream.ca/"
+                            target="_blank"
+                            >ORLEN Upstream Canada</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://ots.orlen.pl/en" target="_blank"
+                            >ORLEN Trading GmbH</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://vc.orlen.pl/pl" target="_blank"
+                            >ORLEN VC</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://fundacja.orlen.pl/pl" target="_blank"
+                            >Fundacja ORLEN</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://www.anwil.pl/" target="_blank"
+                            >ANWIL</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="http://fundacjaanwil.orlen.pl/pl"
+                            target="_blank"
+                            >Fundacja ANWIL</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="http://fundacjadlapomorza.orlen.pl/pl"
+                            target="_blank"
+                            >Fundacja ORLEN dla Pomorza</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://balticpower.pl/" target="_blank"
+                            >Baltic Power</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.centrumedukacji.pl/"
+                            target="_blank"
+                            >Centrum Edukacji</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://grupa.energa.pl/" target="_blank"
+                            >Grupa Energa</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://solino.orlen.pl/pl" target="_blank"
+                            >IKS Solino</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://polskapress.pl/pl" target="_blank"
+                            >Polska Press</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://www.pppt.pl/" target="_blank"
+                            >PPPT</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://ruch.com.pl/" target="_blank"
+                            >Ruch</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://sigma-media.pl/" target="_blank"
+                            >Sigma Bis</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://pgnig.pl/" target="_blank">PGNiG</a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://bioevolution.orlen.pl/pl_23.html"
+                            style="background-color: rgb(255, 255, 255)"
+                            >ORLEN Kolej</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button header__search-trigger">
+                <!--Added icon positioning feature.-->
+                <!--Added link target configuration feature.-->
+                <!--Added logic for displaying button placeholder in the Edit mode.-->
+                <button
+                  type="button"
+                  id="button-54c94def45"
+                  class="cmp-button"
+                  aria-label="Toggle search panel"
+                ></button>
+              </div>
+              <div class="button header__mobile-nav-trigger">
+                <!--Added icon positioning feature.-->
+                <!--Added link target configuration feature.-->
+                <!--Added logic for displaying button placeholder in the Edit mode.-->
+                <button
+                  type="button"
+                  id="button-ae97c752ea"
+                  class="cmp-button"
+                  aria-label="Menu toggle button"
+                ></button>
+              </div>
+              <div class="searchbox">
+                <div
+                  data-config="{&#34;searchUrl&#34;:&#34;/search-api/internet_bioevolution_pl_pl&#34;,&#34;searchUrlSecond&#34;:&#34;internet_orlen_pl_pl&#34;,&#34;tags&#34;:{&#34;orlen:newsletter/categories&#34;:&#34;Categories&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen/zadbaj-o-forme&#34;:&#34;Zadbaj o formę&#34;,&#34;orlen:areas/investors-relations&#34;:&#34;Relacje Inwestorskie&#34;,&#34;orlen:intranet/article-intra/kategorie/wydarzenie&#34;:&#34;Wydarzenie&#34;,&#34;orlen:areas/our-offer&#34;:&#34;Oferta&#34;,&#34;orlen:search/priority/100&#34;:&#34;100 - Lowest Priority&#34;,&#34;orlen:search/priority/500&#34;:&#34;500 - Highest Priority&#34;,&#34;orlen:categories/press-release/contracts-&amp;-agreements&#34;:&#34;Umowy &amp; Kontrakty&#34;,&#34;orlen:search/priority&#34;:&#34;Priority&#34;,&#34;orlen:intranet/article-intra/kategorie/koronawirus&#34;:&#34;Koronawirus&#34;,&#34;orlen:intranet/article-intra/kategorie/innowacje&#34;:&#34;Innowacje&#34;,&#34;orlen:newsletter/categories/innowacje&#34;:&#34;Innowacje&#34;,&#34;orlen:content-types/products-and-services&#34;:&#34;Produkty i Usługi&#34;,&#34;orlen:content-types/press-release/korporacyjne&#34;:&#34;Korporacyjne&#34;,&#34;orlen:newsletter/categories/moje-miejsce-pracy-lokalnie&#34;:&#34;Moje miejsce pracy - lokalnie&#34;,&#34;orlen:newsletter/locations/gdansk&#34;:&#34;Gdańsk&#34;,&#34;orlen:intranet/article-intra/kategorie/dla-pracownika&#34;:&#34;Dla pracownika&#34;,&#34;orlen:areas/for-business&#34;:&#34;Dla Biznesu&#34;,&#34;orlen:areas/area-and-office&#34;:&#34;Obszary i biura&#34;,&#34;orlen:areas/news&#34;:&#34;Aktualności&#34;,&#34;orlen:categories/press-release/investments&#34;:&#34;Inwestycje&#34;,&#34;orlen:categories/press-release/energetyka&#34;:&#34;Energetyka&#34;,&#34;orlen:newsletter/categories/aplikacje-sluzbowe&#34;:&#34;Aplikacje służbowe&#34;,&#34;orlen:newsletter/locations/wloclawek&#34;:&#34;Włocławek&#34;,&#34;orlen:newsletter/categories/csr&#34;:&#34;CSR&#34;,&#34;orlen:areas/technical-information&#34;:&#34;Informacje techniczne&#34;,&#34;orlen:intranet/article-intra/kategorie/informatyka&#34;:&#34;Informatyka&#34;,&#34;orlen:intranet/article-intra/kategorie/inwestycje&#34;:&#34;Inwestycje&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr&#34;:&#34;Obszar kadr&#34;,&#34;orlen:content-types/page&#34;:&#34;Strona&#34;,&#34;orlen:areas/press-releases&#34;:&#34;Komunikaty prasowe&#34;,&#34;orlen:categories/press-release/finanse&#34;:&#34;Finanse&#34;,&#34;orlen:newsletter/categories/bhp&#34;:&#34;BHP&#34;,&#34;orlen:categories/press-release/strategy&#34;:&#34;Strategia&#34;,&#34;orlen:intranet/article-intra/kategorie/kultura&#34;:&#34;Kultura&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp&#34;:&#34;HP&#34;,&#34;orlen:event-types/public-administration-report&#34;:&#34;Raport administracyjny&#34;,&#34;orlen:categories/press-release/management-&amp;-supervisory-board---changes&#34;:&#34;Zarząd &amp; Rada Nadzorcza - zmiany&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/lotos&#34;:&#34;Lotos&#34;,&#34;orlen:newsletter/categories/moje-miejsce-pracy-ogolnie&#34;:&#34;Moje miejsce pracy - ogólnie&#34;,&#34;orlen:categories/press-release&#34;:&#34;Press Release&#34;,&#34;orlen:search/priority/200&#34;:&#34;200 - Low Priority&#34;,&#34;orlen:content-types/document&#34;:&#34;Dokumenty&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr/marka-pracodawcy&#34;:&#34;Marka pracodawcy&#34;,&#34;orlen:categories/press-release/orlen-na-swiecie&#34;:&#34;ORLEN na świecie&#34;,&#34;orlen:newsletter/locations&#34;:&#34;Locations&#34;,&#34;orlen:areas/orlen-group-offer&#34;:&#34;Oferta Grupy Orlen&#34;,&#34;orlen:event-types/semi-annual-report&#34;:&#34;Raport półroczny&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/pgnig&#34;:&#34;PGNiG&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing/stop-cafe&#34;:&#34;Stop.Cafe&#34;,&#34;orlen:content-types/press-release/energetyka&#34;:&#34;Energetyka&#34;,&#34;orlen:newsletter/categories/wydarzenia&#34;:&#34;Wydarzenia&#34;,&#34;orlen:intranet/article-intra/kategorie/wod-r&#34;:&#34;Wodór&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing&#34;:&#34;Marketing&#34;,&#34;orlen:categories/press-release/inwestycje&#34;:&#34;Inwestycje&#34;,&#34;orlen:areas&#34;:&#34;Areas&#34;,&#34;orlen:content-types/reports&#34;:&#34;Raporty Bieżące&#34;,&#34;orlen:content-types/press-release/finanse&#34;:&#34;Finanse&#34;,&#34;orlen:categories/press-release/financial-information&#34;:&#34;Informacje Finansowe&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen&#34;:&#34;Fundacja ORLEN&#34;,&#34;orlen:categories/press-release/marketing-i-sponsoring&#34;:&#34;Marketing i sponsoring&#34;,&#34;orlen:intranet/article-intra/kategorie/oze&#34;:&#34;OZE&#34;,&#34;orlen:intranet/article-intra/kategorie/komunikat-prasowy&#34;:&#34;Komunikat Prasowy&#34;,&#34;orlen:search&#34;:&#34;Search&#34;,&#34;orlen:search/priority/1000000&#34;:&#34;1000000 - Top Priority&#34;,&#34;orlen:newsletter/categories/pozostale&#34;:&#34;Pozostałe&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny&#34;:&#34;Koncern multienergetyczny&#34;,&#34;orlen:search/priority/10000&#34;:&#34;10000 - Super High&#34;,&#34;orlen:areas/careers&#34;:&#34;Kariera&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-aktualnosci&#34;:&#34;HP aktualnosci&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/energa-media&#34;:&#34;Energa media&#34;,&#34;orlen:intranet/article-intra/kategorie/informatyka/cyberbezpieczenstwo&#34;:&#34;Cyberbezpieczeństwo&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/pgnig-media&#34;:&#34;PGNiG media&#34;,&#34;orlen:event-types/annual-report&#34;:&#34;Raport roczny&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/energa&#34;:&#34;Energa&#34;,&#34;orlen:areas/for-drivers&#34;:&#34;Dla Kierowców&#34;,&#34;orlen:areas/press-office&#34;:&#34;Biuro Prasowe&#34;,&#34;orlen:search/priority/300&#34;:&#34;300 - Medium Priority&#34;,&#34;orlen:areas/for-employee&#34;:&#34;Dla pracownika&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr/benefity&#34;:&#34;Benefity&#34;,&#34;orlen:intranet/article-intra/kategorie/strategia/strategia-2025&#34;:&#34;Strategia 2025&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/lotos-media&#34;:&#34;Lotos media&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen/wolontariat-fundacji&#34;:&#34;Wolontariat fundacji&#34;,&#34;orlen:event-types&#34;:&#34;Event Types&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen/badajmy-si-&#34;:&#34;Badajmy się&#34;,&#34;orlen:content-types/press-release/badania,-rozwoj,-innowacje&#34;:&#34;Badania, rozwój, innowacje&#34;,&#34;orlen:intranet/article-intra/kategorie/biznes&#34;:&#34;Biznes&#34;,&#34;orlen:event-types/quarterly-report&#34;:&#34;Raport kwartalny&#34;,&#34;orlen:categories/press-release/wydobycie&#34;:&#34;Wydobycie&#34;,&#34;orlen:newsletter/categories/o-firmie&#34;:&#34;O firmie&#34;,&#34;orlen:areas/work-at-a-gas-station&#34;:&#34;Praca na Stacji&#34;,&#34;orlen:newsletter/locations/regiony&#34;:&#34;Regiony&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr/rozwoj-i-szkolenia&#34;:&#34;Rozwoj i szkolenia&#34;,&#34;orlen:event-types/testtag-qa&#34;:&#34;TestTag-qa&#34;,&#34;orlen:content-types&#34;:&#34;Content Types&#34;,&#34;orlen:intranet/article-intra/kategorie/ukraina&#34;:&#34;Ukraina&#34;,&#34;orlen:newsletter/categories/sport&#34;:&#34;Sport&#34;,&#34;orlen:intranet/article-intra/kategorie/event&#34;:&#34;Event&#34;,&#34;orlen:categories/press-release/siec-detaliczna&#34;:&#34;Sieć detaliczna&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-informacje-hr&#34;:&#34;HP HR&#34;,&#34;orlen:newsletter/locations/warszawa&#34;:&#34;Warszawa&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing/kampania-detal&#34;:&#34;Kampania detal&#34;,&#34;orlen:content-types/press-release/srodowisko,-spoleczenstwo,-lad-korporacyjny&#34;:&#34;Środowisko, społeczeństwo, ład korporacyjny&#34;,&#34;orlen:content-types/press-release/siec-detaliczna&#34;:&#34;Sieć detaliczna&#34;,&#34;orlen:intranet/article-intra/kategorie/csr&#34;:&#34;CSR&#34;,&#34;orlen:newsletter/locations/plock&#34;:&#34;Płock&#34;,&#34;orlen:content-types/press-release&#34;:&#34;Komunikaty Prasowe&#34;,&#34;orlen:intranet/article-intra/kategorie/hp&#34;:&#34;HP&#34;,&#34;orlen:intranet/article-intra/kategorie/esg&#34;:&#34;ESG&#34;,&#34;orlen:categories/press-release/korporacyjne&#34;:&#34;Korporacyjne&#34;,&#34;orlen:content-types/press-release/inwestycje&#34;:&#34;Inwestycje&#34;,&#34;orlen:intranet&#34;:&#34;Intranet&#34;,&#34;orlen:search/priority/400&#34;:&#34;400 - High Priority&#34;,&#34;orlen:content-types/press-release/rafineria-i-petrochemia&#34;:&#34;Rafineria i petrochemia&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-nasze-sprawy&#34;:&#34;HP nasze sprawy&#34;,&#34;orlen:content-types/press-release/wydobycie&#34;:&#34;Wydobycie&#34;,&#34;orlen:newsletter/categories/benefity-pracownicze&#34;:&#34;Benefity pracownicze&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-polecamy&#34;:&#34;HP polecamy&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-sport&#34;:&#34;HP sport&#34;,&#34;orlen:categories/press-release/srodowisko,-spoleczenstwo,-lad-korporacyjny&#34;:&#34;Środowisko, społeczeństwo, ład korporacyjny&#34;,&#34;orlen:intranet/article-intra/kategorie/strategia&#34;:&#34;Strategia&#34;,&#34;orlen:categories/press-release/badania,-rozwoj,-innowacje&#34;:&#34;Badania, rozwój, innowacje&#34;,&#34;orlen:content-types/event&#34;:&#34;Wydarzenie&#34;,&#34;orlen:content-types/press-release/marketing-i-sponsoring&#34;:&#34;Marketing i sponsoring&#34;,&#34;orlen:areas/company&#34;:&#34;O firmie&#34;,&#34;orlen:categories/press-release/rafineria-i-petrochemia&#34;:&#34;Rafineria i petrochemia&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing/paliwa-i-uslugi&#34;:&#34;Paliwa i usługi&#34;,&#34;orlen:event-types/general-meeting&#34;:&#34;Walne zgromadzenie&#34;,&#34;orlen:content-types/news&#34;:&#34;Wydarzenia&#34;,&#34;orlen:content-types/article&#34;:&#34;Artykuł&#34;,&#34;orlen:newsletter&#34;:&#34;Newsletter&#34;,&#34;orlen:areas/csr&#34;:&#34;Odpowiedzialny Biznes&#34;,&#34;orlen:content-types/press-release/orlen-na-swiecie&#34;:&#34;ORLEN na świecie&#34;,&#34;orlen:newsletter/categories/hr&#34;:&#34;HR&#34;,&#34;orlen:intranet/article-intra/kategorie/o-firmie&#34;:&#34;O firmie&#34;,&#34;orlen:content-types/multimedia&#34;:&#34;Multimedia&#34;},&#34;qfParameter&#34;:&#34;qf=title^5 description^2 text^0.8&#34;}"
+                  class="cmp-searchbox"
+                >
+                  <div
+                    class="cmp-searchbox__content"
+                    id="searchbar-hhf4lt7w"
+                    role="search"
+                  >
+                    <form
+                      action="https://bioevolution.orlen.pl/pl_22.htm#"
+                      autocomplete="off"
+                      data-cmp-hook-searchbox="form"
+                      method="GET"
+                    >
+                      <div class="cmp-searchbox__field">
+                        <i
+                          class="cmp-searchbox__icon"
+                          data-cmp-hook-searchbox="form"
+                        ></i>
+                        <input
+                          class="cmp-searchbox__input"
+                          data-cmp-hook-searchbox="input"
+                          type="text"
+                          name="fulltext"
+                          placeholder="Szukaj"
+                          role="combobox"
+                          aria-label="Szukaj"
+                          aria-autocomplete="list"
+                          aria-haspopup="true"
+                          aria-owns="cmp-searchbox__results--hhf4lt7w"
+                        />
+                        <button
+                          type="button"
+                          class="cmp-searchbox__clear"
+                          data-cmp-hook-searchbox="clear"
+                          aria-label="Zamknij wyszukiwarkę"
+                        >
+                          <i class="cmp-searchbox__clear-icon"></i>
+                        </button>
+                      </div>
+                    </form>
+                    <div
+                      class="cmp-searchbox__results"
+                      id="cmp-searchbox__results--"
+                    >
+                      <div class="cmp-searchbox__results__shortcuts">
+                        <p class="cmp-searchbox__results__shortcuts-title">
+                          Na skróty
+                        </p>
+                        <ul class="cmp-searchbox__results__shortcuts-list">
+                          <li
+                            class="cmp-searchbox__results__shortcuts-list__item cmp-searchbox__results__shortcuts-list__item--initial"
+                          >
+                            <a
+                              href="http://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie"
+                              >Nasze biogazownie</a
+                            >
+                          </li>
 
-<div id="teaser-c411a11bca" class="cmp-teaser ">
-    
-    
+                          <li
+                            class="cmp-searchbox__results__shortcuts-list__item cmp-searchbox__results__shortcuts-list__item--initial"
+                          >
+                            <a href="http://bioevolution.orlen.pl/pl/kontakt"
+                              >Kontakt</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
 
-    <div class="cmp-teaser__content">
-        
-    
+                      <div class="cmp-searchbox__results__noresults">
+                        <p>
+                          Brak odpowiednich wyników.<br />
+                          Spróbuj zmienić kryteria wyszukiwania
+                        </p>
+                      </div>
+                      <div class="cmp-searchbox__results__footer">
+                        <p class="cmp-searchbox__results__footer-count">
+                          Liczba wyszukanych stron:
+                          <span
+                            class="cmp-searchbox__results__footer-count-value"
+                            >0</span
+                          >
+                        </p>
+                        <p class="cmp-searchbox__results__footer-page-link">
+                          <a href="http://bioevolution.orlen.pl/pl/wyszukiwarka"
+                            >Zobacz wyniki wyszukiwania</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="breadcrumb">
+          <!-- Overridden items to custom breadcrumbItems -->
+          <nav
+            id="breadcrumb-216fe74912"
+            class="cmp-breadcrumb"
+            aria-label="Właściwości"
+            data-cmp-data-layer="{&#34;breadcrumb-216fe74912&#34;:{&#34;@type&#34;:&#34;core/wcm/components/breadcrumb/v2/breadcrumb&#34;}}"
+          >
+            <ol
+              class="cmp-breadcrumb__list"
+              itemscope
+              itemtype="http://schema.org/BreadcrumbList"
+            >
+              <li
+                class="cmp-breadcrumb__item cmp-breadcrumb__item--active"
+                data-cmp-data-layer="{&#34;breadcrumb-216fe74912-item-abe518696f&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/breadcrumb/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-10T14:28:38Z&#34;,&#34;dc:title&#34;:&#34;Strona główna&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl.html&#34;}}"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/ListItem"
+              >
+                <span itemprop="name">Strona główna</span>
 
-        
-    <h2 class="cmp-teaser__title">
-        <a class="cmp-teaser__title-link" href="https://bioevolution.orlen.pl/pl/o-spolce" target="_self">O nas</a>
-    </h2>
-
-        
-    <div class="cmp-teaser__description"><p>Rozwijamy segment biogaz – biometan w Grupie ORLEN poprzez budowanie portfela około 100 aktywów biogazowych, które w 2030 roku zapewnią okokoło 1 mld m3 produkcji biogazu.</p>
-</div>
-
-        
-    <div class="cmp-teaser__action-container">
-        
-    <a class="cmp-teaser__action-link" href="https://bioevolution.orlen.pl/pl/o-spolce" target="_self">Przejdź do działu</a>
-
-    
-        
-    <a class="cmp-teaser__action-link" href="https://bioevolution.orlen.pl/pl/o-spolce" target="_self">Więcej</a>
-
-    </div>
-
-        
-    <div class="cmp-teaser__promo-wrapper">
-        <div class="cmp-teaser__price">
-            
-            
+                <meta itemprop="position" content="1" />
+              </li>
+            </ol>
+          </nav>
         </div>
-        
-    </div>
-
-    </div>
-</div>
-
-    
-
-
-    
-<link rel="stylesheet" href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.b4704721a7ae714e5d0512480f81b1ff.css" type="text/css">
-<script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.f5f780cd717009170e8c4987cf982fed.js"></script>
-
-
-
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</div>
-<div class="container responsivegrid header__navigation-wrapper aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
-
-    
-    <div id="container-a142cc47c6" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
-    
-    <div class="linksgroup aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3">
-<ul class="cmp-linksgroup__list cmp-linksgroup__list--level-1" data-level="1">
-    <!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie" target="_self" class="cmp-linksgroup__item-link">Nasze biogazownie</a>
-    
-    
-</li>
-
-    
-
-<!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl_22.htm#" target="_self" class="cmp-linksgroup__item-link has-submenu">Organy i struktura spółki</a>
-    
-<ul class="cmp-linksgroup__list cmp-linksgroup__list--level-2" data-level="2">
-    <!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/o-spolce/organy-i-struktura-spolki/rada-nadzorcza" target="_self" class="cmp-linksgroup__item-link">Rada nadzorcza</a>
-    
-    
-</li>
-
-    
-
-<!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/o-spolce/organy-i-struktura-spolki/zarzad" target="_self" class="cmp-linksgroup__item-link">Zarząd spółki</a>
-    
-    
-</li>
-
-    
-
-
-    
-</ul>
-
-    
-</li>
-
-    
-
-<!--Added link target configuration feature.-->
-
-
-
-    
-
-<!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/o-spolce/przetargi" target="_self" class="cmp-linksgroup__item-link">Przetargi i zapytania ofertowe</a>
-    
-    
-</li>
-
-    
-
-<!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci" target="_self" class="cmp-linksgroup__item-link">Aktualności</a>
-    
-    
-</li>
-
-    
-
-<!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl_22.htm#" target="_self" class="cmp-linksgroup__item-link has-submenu">Kariera</a>
-    
-<ul class="cmp-linksgroup__list cmp-linksgroup__list--level-2" data-level="2">
-    <!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/kariera/oferty-pracy" target="_blank" class="cmp-linksgroup__item-link">Oferty pracy</a>
-    
-    
-</li>
-
-    
-
-<!--Added link target configuration feature.-->
-
-<li class="cmp-linksgroup__item">
-    
-    <a href="https://bioevolution.orlen.pl/pl/kariera/Zasady-rekrutacji" target="_self" class="cmp-linksgroup__item-link">Zasady rekrutacji</a>
-    
-    
-</li>
-
-    
-
-
-    
-</ul>
-
-    
-</li>
-
-    
-
-
-    
-</ul>
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</div>
-<div class="container responsivegrid header__editable-section aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--default--0">
-
-    
-    <div id="container-8b24afe3da" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--6 aem-Grid--default--6 ">
-    
-    <div class="teaser header__content-teaser aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
-
-<div id="teaser-37de9e36f6" class="cmp-teaser ">
-    
-    <div class="cmp-teaser__image">
-<!--Added link target configuration feature.-->
-
-
-
-    
-    <div data-cmp-is="image" data-cmp-lazy data-cmp-lazythreshold="0" data-cmp-src="https://orlen.com.co/media/pic/biogazownie.jpeg" data-cmp-widths="320,480,600,800,1024,1200,1600,1920" data-asset="https://orlen.com.co/media/pic/Biogazownie.jpg" data-title="Biopaliwa i inwestycje– Grupa ORLEN. Pole rzepaku symbolizujące troskę o zachowanie bioróżnorodności w rolnictwie. " id="image-37de9e36f6" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
-        
-            <noscript data-cmp-hook-image="noscript">
-                
-    
-    <img src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/container_copy_copy/navigationtabs/item_1/tabcontent/aux_panel/teaser_copy_91082349_302616344.coreimg.jpeg/1711452959109/biogazownie.jpeg" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt="Biopaliwa i inwestycje– Grupa ORLEN. Pole rzepaku symbolizujące troskę o zachowanie bioróżnorodności w rolnictwie. "/>
-    
-
-            </noscript>
-        
-        
-    
-    
-
-    </div>
-
-
-    
-
-</div>
-
-    <div class="cmp-teaser__content">
-        
-    
-
-        
-    <h2 class="cmp-teaser__title">
-        <a class="cmp-teaser__title-link" href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie" target="_self">Nasze biogazownie</a>
-    </h2>
-
-        
-    
-
-        
-    <div class="cmp-teaser__action-container">
-        
-    <a class="cmp-teaser__action-link" href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie" target="_self">Więcej</a>
-
-    </div>
-
-        
-    <div class="cmp-teaser__promo-wrapper">
-        <div class="cmp-teaser__price">
-            
-            
-        </div>
-        
-    </div>
-
-    </div>
-</div>
-
-    
-
-
-    
-
-
-
-</div>
-<div class="teaser header__content-teaser aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
-
-<div id="teaser-8fe0390006" class="cmp-teaser ">
-    
-    <div class="cmp-teaser__image">
-<!--Added link target configuration feature.-->
-
-
-
-    
-    <div data-cmp-is="image" data-cmp-lazy data-cmp-lazythreshold="0" data-cmp-src="https://orlen.com.co/media/pic/orlen-administracja-us%C5%82ugi-archiwizacyjno-kancelaryjne.jpeg" data-cmp-widths="320,480,600,800,1024,1200,1600,1920" data-asset="https://orlen.com.co/media/pic/ORLEN Administracja usługi archiwizacyjno-kancelaryjne.jpg" data-title="75627744" id="image-8fe0390006" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
-        
-            <noscript data-cmp-hook-image="noscript">
-                
-    
-    <img src="https://bioevolution.orlen.pl/content/experience-fragments/internet/pgnig-bioevolution/pl/pl/site/header/master/_jcr_content/root/container_copy_copy/navigationtabs/item_1/tabcontent/aux_panel/teaser_copy_91082349.coreimg.jpeg/1716544797994/orlen-administracja-us%C5%82ugi-archiwizacyjno-kancelaryjne.jpeg" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt="Corner of stack of files, close-up" title="75627744"/>
-    
-
-            </noscript>
-        
-        
-    
-    <meta itemprop="caption" content="75627744"/>
-
-    </div>
-
-
-    
-
-</div>
-
-    <div class="cmp-teaser__content">
-        
-    
-
-        
-    <h2 class="cmp-teaser__title">
-        <a class="cmp-teaser__title-link" href="https://bioevolution.orlen.pl/pl/o-spolce/przetargi" target="_self">Przetargi i zapytania ofertowe</a>
-    </h2>
-
-        
-    
-
-        
-    <div class="cmp-teaser__action-container">
-        
-    <a class="cmp-teaser__action-link" href="https://bioevolution.orlen.pl/pl/o-spolce/przetargi" target="_self">Więcej</a>
-
-    </div>
-
-        
-    <div class="cmp-teaser__promo-wrapper">
-        <div class="cmp-teaser__price">
-            
-            
-        </div>
-        
-    </div>
-
-    </div>
-</div>
-
-    
-
-
-    
-
-
-
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</div>
-
-        
-    </div>
-
-</div>
-</div>
-
-  </div>
-</div>
-<div class="button header__group-menu-trigger">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<button type="button" id="toggle-button--orlen-group" class="cmp-button">
-    
-    
-
-    <span class="cmp-button__text">Grupa ORLEN</span>
-</button>
-
-    
-
-</div>
-<div class="button header__contact-link">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<a id="button-76a1336897" class="cmp-button" href="https://bioevolution.orlen.pl/pl/kontakt/dane-kontaktowe-i-rejestrowe" target="_self">
-    
-    
-
-    <span class="cmp-button__text">Kontakt</span>
-</a>
-
-    
-
-</div>
-<div class="text header__group-menu">
-<div id="header__orlen-group-navigation" class="cmp-text">
-    <h3>Grupa ORLEN</h3>
-<ul>
-<li><a title="ORLEN Administracja" href="http://administracja.orlen.pl/pl" target="_blank">ORLEN Administracja</a></li>
-<li><a title="ORLEN Asfalt" href="http://asfalt.orlen.pl/pl" target="_blank">ORLEN Asfalt</a></li>
-<li><a href="http://aviation.orlen.pl/pl" target="_blank">ORLEN Aviation</a></li>
-<li><a href="https://www.orlen.lt/" target="_blank">ORLEN Baltics Retail</a></li>
-<li><a href="http://budonaft.orlen.pl/pl" target="_blank">ORLEN Budonaft</a></li>
-<li><a href="https://orlencapital.se/" target="_blank">ORLEN Capital</a></li>
-<li><a href="http://cs.orlen.pl/pl" target="_blank">ORLEN Centrum Serwisowe</a></li>
-<li><a href="https://www.orlen-deutschland.de/" target="_blank">ORLEN Deutschland</a></li>
-<li><a href="http://eko.orlen.pl/pl" target="_blank">ORLEN Eko</a></li>
-<li><a href="http://cuk.orlen.pl/pl" target="_blank">ORLEN CUK</a></li>
-<li><a href="http://laboratorium.orlen.pl/pl" target="_blank">ORLEN Laboratorium</a></li>
-<li><a href="https://www.orlenlietuva.lt/" target="_blank">ORLEN Lietuva</a></li>
-<li><a href="https://bioevolution.orlen.pl/pl_2.html" target="_blank">ORLEN Neptun</a></li>
-<li><a href="https://www.orlenochrona.pl/" target="_blank">ORLEN Ochrona</a></li>
-<li><a href="https://www.orlenoil.pl/" target="_blank">ORLEN OIL</a></li>
-<li><a href="https://bioevolution.orlen.pl/pl_11.html" target="_blank">ORLEN Paliwa</a></li>
-<li><a href="https://www.orlenpoludnie.pl/" target="_blank">ORLEN Południe</a></li>
-<li><a href="http://projekt.orlen.pl/pl" target="_blank">ORLEN Projekt</a></li>
-<li><a href="http://serwis.orlen.pl/pl" target="_blank">ORLEN Serwis</a></li>
-<li><a href="http://transport.orlen.pl/pl" target="_blank">ORLEN Transport</a></li>
-<li><a href="https://www.orlenunipetrol.cz/" target="_blank">ORLEN Unipetrol</a></li>
-<li><a href="https://www.orlenupstream.pl/" target="_blank">ORLEN Upstream Polska</a></li>
-<li><a href="https://www.orlenupstream.ca/" target="_blank">ORLEN Upstream Canada</a></li>
-<li><a href="http://ots.orlen.pl/en" target="_blank">ORLEN Trading GmbH</a></li>
-<li><a href="http://vc.orlen.pl/pl" target="_blank">ORLEN VC</a></li>
-<li><a href="http://fundacja.orlen.pl/pl" target="_blank">Fundacja ORLEN</a></li>
-<li><a href="https://www.anwil.pl/" target="_blank">ANWIL</a></li>
-<li><a href="http://fundacjaanwil.orlen.pl/pl" target="_blank">Fundacja ANWIL</a></li>
-<li><a href="http://fundacjadlapomorza.orlen.pl/pl" target="_blank">Fundacja ORLEN dla Pomorza</a></li>
-<li><a href="https://balticpower.pl/" target="_blank">Baltic Power</a></li>
-<li><a href="https://www.centrumedukacji.pl/" target="_blank">Centrum Edukacji</a></li>
-<li><a href="https://grupa.energa.pl/" target="_blank">Grupa Energa</a></li>
-<li><a href="http://solino.orlen.pl/pl" target="_blank">IKS Solino</a></li>
-<li><a href="https://polskapress.pl/pl" target="_blank">Polska Press</a></li>
-<li><a href="https://www.pppt.pl/" target="_blank">PPPT</a></li>
-<li><a href="https://ruch.com.pl/" target="_blank">Ruch</a></li>
-<li><a href="https://sigma-media.pl/" target="_blank">Sigma Bis</a></li>
-<li><a href="https://pgnig.pl/" target="_blank">PGNiG</a></li>
-<li><a href="https://bioevolution.orlen.pl/pl_23.html" style="background-color: rgb(255,255,255);">ORLEN Kolej</a></li>
-</ul>
-
-</div>
-
-    
-
-</div>
-
-        
-    </div>
-
-</div>
-<div class="button header__search-trigger">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<button type="button" id="button-54c94def45" class="cmp-button" aria-label="Toggle search panel">
-    
-    
-
-    
-</button>
-
-    
-
-</div>
-<div class="button header__mobile-nav-trigger">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<button type="button" id="button-ae97c752ea" class="cmp-button" aria-label="Menu toggle button">
-    
-    
-
-    
-</button>
-
-    
-
-</div>
-<div class="searchbox"><div data-config="{&#34;searchUrl&#34;:&#34;/search-api/internet_bioevolution_pl_pl&#34;,&#34;searchUrlSecond&#34;:&#34;internet_orlen_pl_pl&#34;,&#34;tags&#34;:{&#34;orlen:newsletter/categories&#34;:&#34;Categories&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen/zadbaj-o-forme&#34;:&#34;Zadbaj o formę&#34;,&#34;orlen:areas/investors-relations&#34;:&#34;Relacje Inwestorskie&#34;,&#34;orlen:intranet/article-intra/kategorie/wydarzenie&#34;:&#34;Wydarzenie&#34;,&#34;orlen:areas/our-offer&#34;:&#34;Oferta&#34;,&#34;orlen:search/priority/100&#34;:&#34;100 - Lowest Priority&#34;,&#34;orlen:search/priority/500&#34;:&#34;500 - Highest Priority&#34;,&#34;orlen:categories/press-release/contracts-&amp;-agreements&#34;:&#34;Umowy &amp; Kontrakty&#34;,&#34;orlen:search/priority&#34;:&#34;Priority&#34;,&#34;orlen:intranet/article-intra/kategorie/koronawirus&#34;:&#34;Koronawirus&#34;,&#34;orlen:intranet/article-intra/kategorie/innowacje&#34;:&#34;Innowacje&#34;,&#34;orlen:newsletter/categories/innowacje&#34;:&#34;Innowacje&#34;,&#34;orlen:content-types/products-and-services&#34;:&#34;Produkty i Usługi&#34;,&#34;orlen:content-types/press-release/korporacyjne&#34;:&#34;Korporacyjne&#34;,&#34;orlen:newsletter/categories/moje-miejsce-pracy-lokalnie&#34;:&#34;Moje miejsce pracy - lokalnie&#34;,&#34;orlen:newsletter/locations/gdansk&#34;:&#34;Gdańsk&#34;,&#34;orlen:intranet/article-intra/kategorie/dla-pracownika&#34;:&#34;Dla pracownika&#34;,&#34;orlen:areas/for-business&#34;:&#34;Dla Biznesu&#34;,&#34;orlen:areas/area-and-office&#34;:&#34;Obszary i biura&#34;,&#34;orlen:areas/news&#34;:&#34;Aktualności&#34;,&#34;orlen:categories/press-release/investments&#34;:&#34;Inwestycje&#34;,&#34;orlen:categories/press-release/energetyka&#34;:&#34;Energetyka&#34;,&#34;orlen:newsletter/categories/aplikacje-sluzbowe&#34;:&#34;Aplikacje służbowe&#34;,&#34;orlen:newsletter/locations/wloclawek&#34;:&#34;Włocławek&#34;,&#34;orlen:newsletter/categories/csr&#34;:&#34;CSR&#34;,&#34;orlen:areas/technical-information&#34;:&#34;Informacje techniczne&#34;,&#34;orlen:intranet/article-intra/kategorie/informatyka&#34;:&#34;Informatyka&#34;,&#34;orlen:intranet/article-intra/kategorie/inwestycje&#34;:&#34;Inwestycje&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr&#34;:&#34;Obszar kadr&#34;,&#34;orlen:content-types/page&#34;:&#34;Strona&#34;,&#34;orlen:areas/press-releases&#34;:&#34;Komunikaty prasowe&#34;,&#34;orlen:categories/press-release/finanse&#34;:&#34;Finanse&#34;,&#34;orlen:newsletter/categories/bhp&#34;:&#34;BHP&#34;,&#34;orlen:categories/press-release/strategy&#34;:&#34;Strategia&#34;,&#34;orlen:intranet/article-intra/kategorie/kultura&#34;:&#34;Kultura&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp&#34;:&#34;HP&#34;,&#34;orlen:event-types/public-administration-report&#34;:&#34;Raport administracyjny&#34;,&#34;orlen:categories/press-release/management-&amp;-supervisory-board---changes&#34;:&#34;Zarząd &amp; Rada Nadzorcza - zmiany&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/lotos&#34;:&#34;Lotos&#34;,&#34;orlen:newsletter/categories/moje-miejsce-pracy-ogolnie&#34;:&#34;Moje miejsce pracy - ogólnie&#34;,&#34;orlen:categories/press-release&#34;:&#34;Press Release&#34;,&#34;orlen:search/priority/200&#34;:&#34;200 - Low Priority&#34;,&#34;orlen:content-types/document&#34;:&#34;Dokumenty&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr/marka-pracodawcy&#34;:&#34;Marka pracodawcy&#34;,&#34;orlen:categories/press-release/orlen-na-swiecie&#34;:&#34;ORLEN na świecie&#34;,&#34;orlen:newsletter/locations&#34;:&#34;Locations&#34;,&#34;orlen:areas/orlen-group-offer&#34;:&#34;Oferta Grupy Orlen&#34;,&#34;orlen:event-types/semi-annual-report&#34;:&#34;Raport półroczny&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/pgnig&#34;:&#34;PGNiG&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing/stop-cafe&#34;:&#34;Stop.Cafe&#34;,&#34;orlen:content-types/press-release/energetyka&#34;:&#34;Energetyka&#34;,&#34;orlen:newsletter/categories/wydarzenia&#34;:&#34;Wydarzenia&#34;,&#34;orlen:intranet/article-intra/kategorie/wod-r&#34;:&#34;Wodór&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing&#34;:&#34;Marketing&#34;,&#34;orlen:categories/press-release/inwestycje&#34;:&#34;Inwestycje&#34;,&#34;orlen:areas&#34;:&#34;Areas&#34;,&#34;orlen:content-types/reports&#34;:&#34;Raporty Bieżące&#34;,&#34;orlen:content-types/press-release/finanse&#34;:&#34;Finanse&#34;,&#34;orlen:categories/press-release/financial-information&#34;:&#34;Informacje Finansowe&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen&#34;:&#34;Fundacja ORLEN&#34;,&#34;orlen:categories/press-release/marketing-i-sponsoring&#34;:&#34;Marketing i sponsoring&#34;,&#34;orlen:intranet/article-intra/kategorie/oze&#34;:&#34;OZE&#34;,&#34;orlen:intranet/article-intra/kategorie/komunikat-prasowy&#34;:&#34;Komunikat Prasowy&#34;,&#34;orlen:search&#34;:&#34;Search&#34;,&#34;orlen:search/priority/1000000&#34;:&#34;1000000 - Top Priority&#34;,&#34;orlen:newsletter/categories/pozostale&#34;:&#34;Pozostałe&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny&#34;:&#34;Koncern multienergetyczny&#34;,&#34;orlen:search/priority/10000&#34;:&#34;10000 - Super High&#34;,&#34;orlen:areas/careers&#34;:&#34;Kariera&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-aktualnosci&#34;:&#34;HP aktualnosci&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/energa-media&#34;:&#34;Energa media&#34;,&#34;orlen:intranet/article-intra/kategorie/informatyka/cyberbezpieczenstwo&#34;:&#34;Cyberbezpieczeństwo&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/pgnig-media&#34;:&#34;PGNiG media&#34;,&#34;orlen:event-types/annual-report&#34;:&#34;Raport roczny&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/energa&#34;:&#34;Energa&#34;,&#34;orlen:areas/for-drivers&#34;:&#34;Dla Kierowców&#34;,&#34;orlen:areas/press-office&#34;:&#34;Biuro Prasowe&#34;,&#34;orlen:search/priority/300&#34;:&#34;300 - Medium Priority&#34;,&#34;orlen:areas/for-employee&#34;:&#34;Dla pracownika&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr/benefity&#34;:&#34;Benefity&#34;,&#34;orlen:intranet/article-intra/kategorie/strategia/strategia-2025&#34;:&#34;Strategia 2025&#34;,&#34;orlen:intranet/article-intra/kategorie/koncern-multienergetyczny/lotos-media&#34;:&#34;Lotos media&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen/wolontariat-fundacji&#34;:&#34;Wolontariat fundacji&#34;,&#34;orlen:event-types&#34;:&#34;Event Types&#34;,&#34;orlen:intranet/article-intra/kategorie/fundacja-orlen/badajmy-si-&#34;:&#34;Badajmy się&#34;,&#34;orlen:content-types/press-release/badania,-rozwoj,-innowacje&#34;:&#34;Badania, rozwój, innowacje&#34;,&#34;orlen:intranet/article-intra/kategorie/biznes&#34;:&#34;Biznes&#34;,&#34;orlen:event-types/quarterly-report&#34;:&#34;Raport kwartalny&#34;,&#34;orlen:categories/press-release/wydobycie&#34;:&#34;Wydobycie&#34;,&#34;orlen:newsletter/categories/o-firmie&#34;:&#34;O firmie&#34;,&#34;orlen:areas/work-at-a-gas-station&#34;:&#34;Praca na Stacji&#34;,&#34;orlen:newsletter/locations/regiony&#34;:&#34;Regiony&#34;,&#34;orlen:intranet/article-intra/kategorie/obszar-kadr/rozwoj-i-szkolenia&#34;:&#34;Rozwoj i szkolenia&#34;,&#34;orlen:event-types/testtag-qa&#34;:&#34;TestTag-qa&#34;,&#34;orlen:content-types&#34;:&#34;Content Types&#34;,&#34;orlen:intranet/article-intra/kategorie/ukraina&#34;:&#34;Ukraina&#34;,&#34;orlen:newsletter/categories/sport&#34;:&#34;Sport&#34;,&#34;orlen:intranet/article-intra/kategorie/event&#34;:&#34;Event&#34;,&#34;orlen:categories/press-release/siec-detaliczna&#34;:&#34;Sieć detaliczna&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-informacje-hr&#34;:&#34;HP HR&#34;,&#34;orlen:newsletter/locations/warszawa&#34;:&#34;Warszawa&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing/kampania-detal&#34;:&#34;Kampania detal&#34;,&#34;orlen:content-types/press-release/srodowisko,-spoleczenstwo,-lad-korporacyjny&#34;:&#34;Środowisko, społeczeństwo, ład korporacyjny&#34;,&#34;orlen:content-types/press-release/siec-detaliczna&#34;:&#34;Sieć detaliczna&#34;,&#34;orlen:intranet/article-intra/kategorie/csr&#34;:&#34;CSR&#34;,&#34;orlen:newsletter/locations/plock&#34;:&#34;Płock&#34;,&#34;orlen:content-types/press-release&#34;:&#34;Komunikaty Prasowe&#34;,&#34;orlen:intranet/article-intra/kategorie/hp&#34;:&#34;HP&#34;,&#34;orlen:intranet/article-intra/kategorie/esg&#34;:&#34;ESG&#34;,&#34;orlen:categories/press-release/korporacyjne&#34;:&#34;Korporacyjne&#34;,&#34;orlen:content-types/press-release/inwestycje&#34;:&#34;Inwestycje&#34;,&#34;orlen:intranet&#34;:&#34;Intranet&#34;,&#34;orlen:search/priority/400&#34;:&#34;400 - High Priority&#34;,&#34;orlen:content-types/press-release/rafineria-i-petrochemia&#34;:&#34;Rafineria i petrochemia&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-nasze-sprawy&#34;:&#34;HP nasze sprawy&#34;,&#34;orlen:content-types/press-release/wydobycie&#34;:&#34;Wydobycie&#34;,&#34;orlen:newsletter/categories/benefity-pracownicze&#34;:&#34;Benefity pracownicze&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-polecamy&#34;:&#34;HP polecamy&#34;,&#34;orlen:intranet/article-intra/kategorie/hp/hp-sport&#34;:&#34;HP sport&#34;,&#34;orlen:categories/press-release/srodowisko,-spoleczenstwo,-lad-korporacyjny&#34;:&#34;Środowisko, społeczeństwo, ład korporacyjny&#34;,&#34;orlen:intranet/article-intra/kategorie/strategia&#34;:&#34;Strategia&#34;,&#34;orlen:categories/press-release/badania,-rozwoj,-innowacje&#34;:&#34;Badania, rozwój, innowacje&#34;,&#34;orlen:content-types/event&#34;:&#34;Wydarzenie&#34;,&#34;orlen:content-types/press-release/marketing-i-sponsoring&#34;:&#34;Marketing i sponsoring&#34;,&#34;orlen:areas/company&#34;:&#34;O firmie&#34;,&#34;orlen:categories/press-release/rafineria-i-petrochemia&#34;:&#34;Rafineria i petrochemia&#34;,&#34;orlen:intranet/article-intra/kategorie/marketing/paliwa-i-uslugi&#34;:&#34;Paliwa i usługi&#34;,&#34;orlen:event-types/general-meeting&#34;:&#34;Walne zgromadzenie&#34;,&#34;orlen:content-types/news&#34;:&#34;Wydarzenia&#34;,&#34;orlen:content-types/article&#34;:&#34;Artykuł&#34;,&#34;orlen:newsletter&#34;:&#34;Newsletter&#34;,&#34;orlen:areas/csr&#34;:&#34;Odpowiedzialny Biznes&#34;,&#34;orlen:content-types/press-release/orlen-na-swiecie&#34;:&#34;ORLEN na świecie&#34;,&#34;orlen:newsletter/categories/hr&#34;:&#34;HR&#34;,&#34;orlen:intranet/article-intra/kategorie/o-firmie&#34;:&#34;O firmie&#34;,&#34;orlen:content-types/multimedia&#34;:&#34;Multimedia&#34;},&#34;qfParameter&#34;:&#34;qf=title^5 description^2 text^0.8&#34;}" class="cmp-searchbox">
-    <div class="cmp-searchbox__content" id="searchbar-hhf4lt7w" role="search">
-        <form action="https://bioevolution.orlen.pl/pl_22.htm#" autocomplete="off" data-cmp-hook-searchbox="form" method="GET">
-            <div class="cmp-searchbox__field">
-                <i class="cmp-searchbox__icon" data-cmp-hook-searchbox="form"></i>
-                <input class="cmp-searchbox__input" data-cmp-hook-searchbox="input" type="text" name="fulltext" placeholder="Szukaj" role="combobox" aria-label="Szukaj" aria-autocomplete="list" aria-haspopup="true" aria-owns="cmp-searchbox__results--hhf4lt7w"/>
-                <button type="button" class="cmp-searchbox__clear" data-cmp-hook-searchbox="clear" aria-label="Zamknij wyszukiwarkę">
-                    <i class="cmp-searchbox__clear-icon"></i>
-                </button>
+        <main class="container responsivegrid container--page-main">
+          <div id="main-container" class="cmp-container">
+            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+              <div
+                class="container responsivegrid aem-GridColumn aem-GridColumn--default--12"
+              >
+                <div id="container-202394fad0" class="cmp-container">
+                  <div
+                    class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12"
+                  >
+                    <div
+                      class="hero teaser hero--large aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"
+                    >
+                      <div
+                        id="hero-dcdcb34ee0"
+                        class="cmp-hero"
+                        data-cmp-data-layer="{&#34;teaser-dcdcb34ee0&#34;:{&#34;@type&#34;:&#34;core/wcm/components/teaser/v1/teaser&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-22T13:04:30Z&#34;,&#34;dc:title&#34;:&#34;Bioevolution&#34;}}"
+                      >
+                        <div class="cmp-hero__image">
+                          <!--Added link target configuration feature.-->
+
+                          <div
+                            data-cmp-is="image"
+                            data-cmp-lazy
+                            data-cmp-lazythreshold="0"
+                            data-cmp-src="https://orlen.com.co/media/pic/bioevolution-sg2.jpeg"
+                            data-cmp-widths="320,480,600,800,1024,1200,1600,1920"
+                            data-asset="https://orlen.com.co/media/pic/Bioevolution SG2.jpg"
+                            id="image-dcdcb34ee0"
+                            data-cmp-data-layer="{&#34;image-dcdcb34ee0&#34;:{&#34;@type&#34;:&#34;core/wcm/components/image/v2/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-22T13:04:30Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;20fa4491-bbea-464d-ac9f-77e0d1ff0b0a&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-22T13:04:15Z&#34;,&#34;@type&#34;:&#34;image/jpeg&#34;,&#34;repo:path&#34;:&#34;/content/dam/internet/pgnig-bioevolution/pl/pl/placeholder/Bioevolution SG2.jpg&#34;,&#34;xdm:tags&#34;:[],&#34;xdm:smartTags&#34;:{}}}}"
+                            class="cmp-image"
+                            itemscope
+                            itemtype="http://schema.org/ImageObject"
+                          >
+                            <noscript data-cmp-hook-image="noscript">
+                              <img
+                                src="https://bioevolution.orlen.pl/pl/_jcr_content/root/container/container/hero.coreimg.jpeg/1716383070481/bioevolution-sg2.jpeg"
+                                class="cmp-image__image"
+                                itemprop="contentUrl"
+                                data-cmp-hook-image="image"
+                                alt
+                              />
+                            </noscript>
+                          </div>
+                        </div>
+
+                        <div class="cmp-hero__content">
+                          <h1 class="cmp-hero__title">Bioevolution</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="teaser aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"
+                    >
+                      <div
+                        id="teaser-7f73c09afa"
+                        class="cmp-teaser"
+                        data-cmp-data-layer="{&#34;teaser-7f73c09afa&#34;:{&#34;@type&#34;:&#34;core/wcm/components/teaser/v1/teaser&#34;,&#34;repo:modifyDate&#34;:&#34;2024-04-18T12:27:50Z&#34;,&#34;dc:title&#34;:&#34;O spółce&#34;,&#34;dc:description&#34;:&#34;&lt;p>Rozwijamy segment biogaz – biometan w Grupie ORLEN. Budujemy portfel około 100 aktywów biogazowych, które w 2030 roku zapewnią około 1 mld m3&amp;nbsp;biogazu.&lt;/p>\r\n&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl/o-spolce.html&#34;}}"
+                      >
+                        <div class="cmp-teaser__image">
+                          <!--Added link target configuration feature.-->
+
+                          <div
+                            data-cmp-is="image"
+                            data-cmp-lazy
+                            data-cmp-lazythreshold="0"
+                            data-cmp-src="https://orlen.com.co/media/pic/bioevolution-o-spolce.jpeg"
+                            data-cmp-widths="320,480,600,800,1024,1200,1600,1920"
+                            data-asset="https://orlen.com.co/media/pic/Bioevolution o spolce.jpg"
+                            id="image-7f73c09afa"
+                            data-cmp-data-layer="{&#34;image-7f73c09afa&#34;:{&#34;@type&#34;:&#34;core/wcm/components/image/v2/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-04-18T12:27:50Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;41e08eff-337e-4d31-8a3a-4b06bf69f287&#34;,&#34;repo:modifyDate&#34;:&#34;2024-02-29T12:30:20Z&#34;,&#34;@type&#34;:&#34;image/jpeg&#34;,&#34;repo:path&#34;:&#34;/content/dam/internet/pgnig-bioevolution/pl/pl/o-spółce/obrazy/Bioevolution o spolce.jpg&#34;,&#34;xdm:tags&#34;:[],&#34;xdm:smartTags&#34;:{}}}}"
+                            class="cmp-image"
+                            itemscope
+                            itemtype="http://schema.org/ImageObject"
+                          >
+                            <noscript data-cmp-hook-image="noscript">
+                              <img
+                                src="https://bioevolution.orlen.pl/pl/_jcr_content/root/container/container/teaser.coreimg.jpeg/1713443270750/bioevolution-o-spolce.jpeg"
+                                class="cmp-image__image"
+                                itemprop="contentUrl"
+                                data-cmp-hook-image="image"
+                                alt
+                              />
+                            </noscript>
+                          </div>
+                        </div>
+
+                        <div class="cmp-teaser__content">
+                          <h3 class="cmp-teaser__title">
+                            <a
+                              class="cmp-teaser__title-link"
+                              href="https://bioevolution.orlen.pl/pl/o-spolce"
+                              target="_self"
+                              data-cmp-clickable
+                              >O spółce</a
+                            >
+                          </h3>
+
+                          <div class="cmp-teaser__description">
+                            <p>
+                              Rozwijamy segment biogaz – biometan w Grupie
+                              ORLEN. Budujemy portfel około 100 aktywów
+                              biogazowych, które w 2030 roku zapewnią około 1
+                              mld m3 biogazu.
+                            </p>
+                          </div>
+
+                          <div class="cmp-teaser__action-container">
+                            <a
+                              class="cmp-teaser__action-link"
+                              href="https://bioevolution.orlen.pl/pl/o-spolce"
+                              target="_self"
+                              >Więcej</a
+                            >
+                          </div>
+
+                          <div class="cmp-teaser__promo-wrapper">
+                            <div class="cmp-teaser__price"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <link
+                        rel="stylesheet"
+                        href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.b4704721a7ae714e5d0512480f81b1ff.css"
+                        type="text/css"
+                      />
+                      <script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.f5f780cd717009170e8c4987cf982fed.js"></script>
+                    </div>
+                    <div
+                      class="title typography--title-s aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--default--0"
+                    >
+                      <div
+                        data-cmp-data-layer="{&#34;title-232921ca79&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2022-05-11T11:32:34Z&#34;,&#34;dc:title&#34;:&#34;Aktualności&#34;}}"
+                        id="title-232921ca79"
+                        class="cmp-title"
+                      >
+                        <h2 class="cmp-title__text">Aktualności</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="newslist list newslist--no-item-border newslist-margin--legacy aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"
+                    >
+                      <ul
+                        id="newslist-97fdbf82df"
+                        data-cmp-data-layer="{&#34;list-97fdbf82df&#34;:{&#34;@type&#34;:&#34;core/wcm/components/list/v2/list&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-10T10:03:23Z&#34;}}"
+                        class="cmp-list"
+                      >
+                        <li class="cmp-list__item">
+                          <article>
+                            <a
+                              class="cmp-list__item-link"
+                              href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2025/ix-kongres-biogazu-w-warszawie"
+                            >
+                              <div class="cmp-list__item-pretitle-date">
+                                <span
+                                  class="cmp-list__item-pretitle"
+                                  aria-hidden="true"
+                                  >AKTUALNOŚCI</span
+                                >
+                                <span
+                                  class="cmp-list__item-date"
+                                  aria-label="09.01.2025"
+                                  >09.01.2025</span
+                                >
+                              </div>
+                              <h3 class="cmp-list__item-title">
+                                IX Kongres Biogazu w Warszawie
+                              </h3>
+
+                              <span
+                                class="cmp-list__item-readmore"
+                                aria-hidden="true"
+                                >Więcej</span
+                              >
+                            </a>
+                          </article>
+                        </li>
+
+                        <li class="cmp-list__item">
+                          <article>
+                            <a
+                              class="cmp-list__item-link"
+                              href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2024/XXII-Samorzadowe-Forum-Kapitalu-i-Finansow"
+                            >
+                              <div class="cmp-list__item-pretitle-date">
+                                <span
+                                  class="cmp-list__item-pretitle"
+                                  aria-hidden="true"
+                                  >Aktualności</span
+                                >
+                                <span
+                                  class="cmp-list__item-date"
+                                  aria-label="25.10.2024"
+                                  >25.10.2024</span
+                                >
+                              </div>
+                              <h3 class="cmp-list__item-title">
+                                XXII Samorządowe Forum Kapitału i Finansów
+                              </h3>
+
+                              <span
+                                class="cmp-list__item-readmore"
+                                aria-hidden="true"
+                                >Więcej</span
+                              >
+                            </a>
+                          </article>
+                        </li>
+
+                        <li class="cmp-list__item">
+                          <article>
+                            <a
+                              class="cmp-list__item-link"
+                              href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2024/Forum-Miasteczek-Polskich"
+                            >
+                              <div class="cmp-list__item-pretitle-date">
+                                <span
+                                  class="cmp-list__item-pretitle"
+                                  aria-hidden="true"
+                                  >Aktualności</span
+                                >
+                                <span
+                                  class="cmp-list__item-date"
+                                  aria-label="17.10.2024"
+                                  >17.10.2024</span
+                                >
+                              </div>
+                              <h3 class="cmp-list__item-title">
+                                Forum Miasteczek Polskich
+                              </h3>
+
+                              <span
+                                class="cmp-list__item-readmore"
+                                aria-hidden="true"
+                                >Więcej</span
+                              >
+                            </a>
+                          </article>
+                        </li>
+
+                        <li class="cmp-list__item">
+                          <article>
+                            <a
+                              class="cmp-list__item-link"
+                              href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2024/forum-inwestorow-transformacji-energetycznej"
+                            >
+                              <div class="cmp-list__item-pretitle-date">
+                                <span
+                                  class="cmp-list__item-pretitle"
+                                  aria-hidden="true"
+                                  >AKTUALNOŚCI</span
+                                >
+                                <span
+                                  class="cmp-list__item-date"
+                                  aria-label="17.09.2024"
+                                  >17.09.2024</span
+                                >
+                              </div>
+                              <h3 class="cmp-list__item-title">
+                                Forum Inwestorów Transformacji Energetycznej
+                              </h3>
+
+                              <span
+                                class="cmp-list__item-readmore"
+                                aria-hidden="true"
+                                >Więcej</span
+                              >
+                            </a>
+                          </article>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </form>
-        <div class="cmp-searchbox__results" id="cmp-searchbox__results--">
-            <div class="cmp-searchbox__results__shortcuts">
-                <p class="cmp-searchbox__results__shortcuts-title">Na skróty</p>
-                <ul class="cmp-searchbox__results__shortcuts-list">
-                    <li class="cmp-searchbox__results__shortcuts-list__item cmp-searchbox__results__shortcuts-list__item--initial">
-                        <a href="http://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie">Nasze biogazownie</a>
-                    </li>
-                
-                    <li class="cmp-searchbox__results__shortcuts-list__item cmp-searchbox__results__shortcuts-list__item--initial">
-                        <a href="http://bioevolution.orlen.pl/pl/kontakt">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="cmp-searchbox__results__noresults">
-                <p>Brak odpowiednich wyników.<br />
-Spróbuj zmienić kryteria wyszukiwania</p>
-
-            </div>
-            <div class="cmp-searchbox__results__footer">
-                <p class="cmp-searchbox__results__footer-count">
-                    Liczba wyszukanych stron: 
-                    <span class="cmp-searchbox__results__footer-count-value">0</span>
-                </p>
-                <p class="cmp-searchbox__results__footer-page-link">
-                    <a href="http://bioevolution.orlen.pl/pl/wyszukiwarka">Zobacz wyniki wyszukiwania</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-
-</div>
-
-        
-    </div>
-
-
-</div>
-
-    
-
-</header>
-<div class="breadcrumb">
-<!-- Overridden items to custom breadcrumbItems -->
-<nav id="breadcrumb-216fe74912" class="cmp-breadcrumb" aria-label="Właściwości" data-cmp-data-layer="{&#34;breadcrumb-216fe74912&#34;:{&#34;@type&#34;:&#34;core/wcm/components/breadcrumb/v2/breadcrumb&#34;}}">
-  <ol class="cmp-breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active" data-cmp-data-layer="{&#34;breadcrumb-216fe74912-item-abe518696f&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/breadcrumb/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-10T14:28:38Z&#34;,&#34;dc:title&#34;:&#34;Strona główna&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl.html&#34;}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      
-        <span itemprop="name">Strona główna</span>
-      
-      <meta itemprop="position" content="1"/>
-    </li>
-  </ol>
-</nav>
-
-    
-</div>
-<main class="container responsivegrid container--page-main">
-
-    
-    <div id="main-container" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
-    
-    <div class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
-
-    
-    <div id="container-202394fad0" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
-    
-    <div class="hero teaser hero--large aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"><div id="hero-dcdcb34ee0" class="cmp-hero " data-cmp-data-layer="{&#34;teaser-dcdcb34ee0&#34;:{&#34;@type&#34;:&#34;core/wcm/components/teaser/v1/teaser&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-22T13:04:30Z&#34;,&#34;dc:title&#34;:&#34;Bioevolution&#34;}}">
-    
-    <div class="cmp-hero__image">
-<!--Added link target configuration feature.-->
-
-
-
-    
-    <div data-cmp-is="image" data-cmp-lazy data-cmp-lazythreshold="0" data-cmp-src="https://orlen.com.co/media/pic/bioevolution-sg2.jpeg" data-cmp-widths="320,480,600,800,1024,1200,1600,1920" data-asset="https://orlen.com.co/media/pic/Bioevolution SG2.jpg" id="image-dcdcb34ee0" data-cmp-data-layer="{&#34;image-dcdcb34ee0&#34;:{&#34;@type&#34;:&#34;core/wcm/components/image/v2/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-22T13:04:30Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;20fa4491-bbea-464d-ac9f-77e0d1ff0b0a&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-22T13:04:15Z&#34;,&#34;@type&#34;:&#34;image/jpeg&#34;,&#34;repo:path&#34;:&#34;/content/dam/internet/pgnig-bioevolution/pl/pl/placeholder/Bioevolution SG2.jpg&#34;,&#34;xdm:tags&#34;:[],&#34;xdm:smartTags&#34;:{}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
-        
-            <noscript data-cmp-hook-image="noscript">
-                
-    
-    <img src="https://bioevolution.orlen.pl/pl/_jcr_content/root/container/container/hero.coreimg.jpeg/1716383070481/bioevolution-sg2.jpeg" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt/>
-    
-
-            </noscript>
-        
-        
-    
-    
-
-    </div>
-
-
-    
-
-</div>
-
-    
-    
-
-    <div class="cmp-hero__content">
-        
-    
-
-        
-    <h1 class="cmp-hero__title">
-        Bioevolution
-    </h1>
-
-        
-    
-
-        
-    
-
-    </div>
-</div>
-
-    
-
-</div>
-<div class="teaser aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
-
-<div id="teaser-7f73c09afa" class="cmp-teaser " data-cmp-data-layer="{&#34;teaser-7f73c09afa&#34;:{&#34;@type&#34;:&#34;core/wcm/components/teaser/v1/teaser&#34;,&#34;repo:modifyDate&#34;:&#34;2024-04-18T12:27:50Z&#34;,&#34;dc:title&#34;:&#34;O spółce&#34;,&#34;dc:description&#34;:&#34;&lt;p>Rozwijamy segment biogaz – biometan w Grupie ORLEN. Budujemy portfel około 100 aktywów biogazowych, które w 2030 roku zapewnią około 1 mld m3&amp;nbsp;biogazu.&lt;/p>\r\n&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl/o-spolce.html&#34;}}">
-    
-    <div class="cmp-teaser__image">
-<!--Added link target configuration feature.-->
-
-
-
-    
-    <div data-cmp-is="image" data-cmp-lazy data-cmp-lazythreshold="0" data-cmp-src="https://orlen.com.co/media/pic/bioevolution-o-spolce.jpeg" data-cmp-widths="320,480,600,800,1024,1200,1600,1920" data-asset="https://orlen.com.co/media/pic/Bioevolution o spolce.jpg" id="image-7f73c09afa" data-cmp-data-layer="{&#34;image-7f73c09afa&#34;:{&#34;@type&#34;:&#34;core/wcm/components/image/v2/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-04-18T12:27:50Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;41e08eff-337e-4d31-8a3a-4b06bf69f287&#34;,&#34;repo:modifyDate&#34;:&#34;2024-02-29T12:30:20Z&#34;,&#34;@type&#34;:&#34;image/jpeg&#34;,&#34;repo:path&#34;:&#34;/content/dam/internet/pgnig-bioevolution/pl/pl/o-spółce/obrazy/Bioevolution o spolce.jpg&#34;,&#34;xdm:tags&#34;:[],&#34;xdm:smartTags&#34;:{}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
-        
-            <noscript data-cmp-hook-image="noscript">
-                
-    
-    <img src="https://bioevolution.orlen.pl/pl/_jcr_content/root/container/container/teaser.coreimg.jpeg/1713443270750/bioevolution-o-spolce.jpeg" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt/>
-    
-
-            </noscript>
-        
-        
-    
-    
-
-    </div>
-
-
-    
-
-</div>
-
-    <div class="cmp-teaser__content">
-        
-    
-
-        
-    <h3 class="cmp-teaser__title">
-        <a class="cmp-teaser__title-link" href="https://bioevolution.orlen.pl/pl/o-spolce" target="_self" data-cmp-clickable>O spółce</a>
-    </h3>
-
-        
-    <div class="cmp-teaser__description"><p>Rozwijamy segment biogaz – biometan w Grupie ORLEN. Budujemy portfel około 100 aktywów biogazowych, które w 2030 roku zapewnią około 1 mld m3 biogazu.</p>
-</div>
-
-        
-    <div class="cmp-teaser__action-container">
-        
-    <a class="cmp-teaser__action-link" href="https://bioevolution.orlen.pl/pl/o-spolce" target="_self">Więcej</a>
-
-    </div>
-
-        
-    <div class="cmp-teaser__promo-wrapper">
-        <div class="cmp-teaser__price">
-            
-            
-        </div>
-        
-    </div>
-
-    </div>
-</div>
-
-    
-
-
-    
-<link rel="stylesheet" href="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.b4704721a7ae714e5d0512480f81b1ff.css" type="text/css">
-<script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-teaserStyling.min.f5f780cd717009170e8c4987cf982fed.js"></script>
-
-
-
-</div>
-<div class="title typography--title-s aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--default--0">
-<div data-cmp-data-layer="{&#34;title-232921ca79&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2022-05-11T11:32:34Z&#34;,&#34;dc:title&#34;:&#34;Aktualności&#34;}}" id="title-232921ca79" class="cmp-title">
-    <h2 class="cmp-title__text">Aktualności</h2>
-</div>
-
-    
-
-</div>
-<div class="newslist list newslist--no-item-border newslist-margin--legacy aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"><ul id="newslist-97fdbf82df" data-cmp-data-layer="{&#34;list-97fdbf82df&#34;:{&#34;@type&#34;:&#34;core/wcm/components/list/v2/list&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-10T10:03:23Z&#34;}}" class="cmp-list">
-    <li class="cmp-list__item">
-    <article>
-        <a class="cmp-list__item-link" href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2025/ix-kongres-biogazu-w-warszawie">
-            <div class="cmp-list__item-pretitle-date">
-                <span class="cmp-list__item-pretitle" aria-hidden="true">AKTUALNOŚCI</span>
-                <span class="cmp-list__item-date" aria-label="09.01.2025">09.01.2025</span>
-            </div>
-            <h3 class="cmp-list__item-title">IX Kongres Biogazu w Warszawie</h3>
-            
-            <span class="cmp-list__item-readmore" aria-hidden="true">Więcej</span>
-        </a>
-    </article>
-</li>
-
-    <li class="cmp-list__item">
-    <article>
-        <a class="cmp-list__item-link" href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2024/XXII-Samorzadowe-Forum-Kapitalu-i-Finansow">
-            <div class="cmp-list__item-pretitle-date">
-                <span class="cmp-list__item-pretitle" aria-hidden="true">Aktualności</span>
-                <span class="cmp-list__item-date" aria-label="25.10.2024">25.10.2024</span>
-            </div>
-            <h3 class="cmp-list__item-title">XXII Samorządowe Forum Kapitału i Finansów</h3>
-            
-            <span class="cmp-list__item-readmore" aria-hidden="true">Więcej</span>
-        </a>
-    </article>
-</li>
-
-    <li class="cmp-list__item">
-    <article>
-        <a class="cmp-list__item-link" href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2024/Forum-Miasteczek-Polskich">
-            <div class="cmp-list__item-pretitle-date">
-                <span class="cmp-list__item-pretitle" aria-hidden="true">Aktualności</span>
-                <span class="cmp-list__item-date" aria-label="17.10.2024">17.10.2024</span>
-            </div>
-            <h3 class="cmp-list__item-title">Forum Miasteczek Polskich</h3>
-            
-            <span class="cmp-list__item-readmore" aria-hidden="true">Więcej</span>
-        </a>
-    </article>
-</li>
-
-    <li class="cmp-list__item">
-    <article>
-        <a class="cmp-list__item-link" href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci/2024/forum-inwestorow-transformacji-energetycznej">
-            <div class="cmp-list__item-pretitle-date">
-                <span class="cmp-list__item-pretitle" aria-hidden="true">AKTUALNOŚCI</span>
-                <span class="cmp-list__item-date" aria-label="17.09.2024">17.09.2024</span>
-            </div>
-            <h3 class="cmp-list__item-title">Forum Inwestorów Transformacji Energetycznej</h3>
-            
-            <span class="cmp-list__item-readmore" aria-hidden="true">Więcej</span>
-        </a>
-    </article>
-</li>
-</ul>
-
-    
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</main>
-<footer class="experiencefragment">
-<!--Added Selector filter for pagination ('page-' selector) because it was generating additional headers and footer cache
+          </div>
+        </main>
+        <footer class="experiencefragment">
+          <!--Added Selector filter for pagination ('page-' selector) because it was generating additional headers and footer cache
 files with 'page-' selector what is unnecessary.-->
-<div id="experiencefragment-d0a69902a0" class="cmp-experiencefragment cmp-experiencefragment--footer">
+          <div
+            id="experiencefragment-d0a69902a0"
+            class="cmp-experiencefragment cmp-experiencefragment--footer"
+          >
+            <div id="container-53b1b3e7e8" class="cmp-container">
+              <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                <div
+                  class="container responsivegrid container--content aem-GridColumn aem-GridColumn--default--12"
+                >
+                  <div id="container-ff9b5dbd58" class="cmp-container">
+                    <div class="container responsivegrid footer__content-row">
+                      <div id="container-d2778714fd" class="cmp-container">
+                        <div
+                          class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12"
+                        >
+                          <section
+                            class="container responsivegrid footer__title-section aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn--phone--newline aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4"
+                          >
+                            <div
+                              id="container-64e60047d5"
+                              class="cmp-container"
+                            >
+                              <div class="text footer__title">
+                                <div id="text-ad0197f39b" class="cmp-text">
+                                  <p>PGNiG Bioevolution</p>
+                                </div>
+                              </div>
+                              <div class="text footer__copyright">
+                                <div id="text-4d081561d9" class="cmp-text">
+                                  <p>
+                                    Copyright © 2025<br />
+                                    Wszystkie prawa zastrzeżone
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section
+                            class="container responsivegrid footer__lists-section aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--phone--hide aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"
+                          >
+                            <div
+                              id="container-16cc4d5993"
+                              class="cmp-container"
+                            >
+                              <div
+                                class="aem-Grid aem-Grid--8 aem-Grid--tablet--12 aem-Grid--default--8 aem-Grid--phone--12"
+                              >
+                                <div
+                                  class="list footer__list-about aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--tablet--none aem-GridColumn--phone--8 aem-GridColumn aem-GridColumn--tablet--8 aem-GridColumn--default--8 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0"
+                                >
+                                  <div id="list-f1bad6dccb" class="cmp-list">
+                                    <div class="cmp-list__title">Na skróty</div>
+                                    <ul class="cmp-list__content">
+                                      <li
+                                        class="cmp-list__item"
+                                        data-cmp-data-layer="{&#34;list-f1bad6dccb-item-828b6f3df0&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/list/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T09:52:03Z&#34;,&#34;dc:title&#34;:&#34;Nasze biogazownie&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl/o-spolce/nasze-biogazownie.html&#34;}}"
+                                      >
+                                        <article>
+                                          <a
+                                            class="cmp-list__item-link"
+                                            href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie"
+                                            data-cmp-clickable
+                                          >
+                                            <span class="cmp-list__item-title"
+                                              >Nasze biogazownie</span
+                                            >
+                                          </a>
+                                        </article>
+                                      </li>
 
-
-    
-    <div id="container-53b1b3e7e8" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
-    
-    <div class="container responsivegrid container--content aem-GridColumn aem-GridColumn--default--12">
-
-    
-    
-    
-    <div id="container-ff9b5dbd58" class="cmp-container">
-        
-        <div class="container responsivegrid footer__content-row">
-
-    
-    <div id="container-d2778714fd" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
-    
-    <section class="container responsivegrid footer__title-section aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn--phone--newline aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
-
-    
-    
-    
-    <div id="container-64e60047d5" class="cmp-container">
-        
-        <div class="text footer__title">
-<div id="text-ad0197f39b" class="cmp-text">
-    <p>PGNiG Bioevolution</p>
-
-</div>
-
-    
-
-</div>
-<div class="text footer__copyright">
-<div id="text-4d081561d9" class="cmp-text">
-    <p>Copyright © 2025<br />
-Wszystkie prawa zastrzeżone</p>
-
-</div>
-
-    
-
-</div>
-
-        
+                                      <li
+                                        class="cmp-list__item"
+                                        data-cmp-data-layer="{&#34;list-f1bad6dccb-item-66f99f1420&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/list/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T09:51:59Z&#34;,&#34;dc:title&#34;:&#34;Aktualności&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl/o-spolce/aktualnosci.html&#34;}}"
+                                      >
+                                        <article>
+                                          <a
+                                            class="cmp-list__item-link"
+                                            href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci"
+                                            data-cmp-clickable
+                                          >
+                                            <span class="cmp-list__item-title"
+                                              >Aktualności</span
+                                            >
+                                          </a>
+                                        </article>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <section
+                      class="container responsivegrid footer__social-media-section"
+                    >
+                      <div
+                        id="container-341dcedeed"
+                        class="cmp-container"
+                      ></div>
+                    </section>
+                    <section
+                      class="container responsivegrid footer__bottom-links-section"
+                    >
+                      <div id="container-c1a7d7878e" class="cmp-container">
+                        <div class="button footer__bottom-links-item">
+                          <!--Added icon positioning feature.-->
+                          <!--Added link target configuration feature.-->
+                          <!--Added logic for displaying button placeholder in the Edit mode.-->
+                          <a
+                            id="button-c095b762b3"
+                            class="cmp-button"
+                            href="https://bioevolution.orlen.pl/pl/sitemap"
+                            target="_self"
+                          >
+                            <span class="cmp-button__text">Mapa serwisu</span>
+                          </a>
+                        </div>
+                        <div class="button footer__bottom-links-item">
+                          <!--Added icon positioning feature.-->
+                          <!--Added link target configuration feature.-->
+                          <!--Added logic for displaying button placeholder in the Edit mode.-->
+                          <a
+                            id="button-a9a5847ef6"
+                            class="cmp-button"
+                            href="http://orlen.com.co/pl/Polityka-prywatnosci"
+                          >
+                            <span class="cmp-button__text"
+                              >Polityka prywatności</span
+                            >
+                          </a>
+                        </div>
+                        <div class="button footer__bottom-links-item">
+                          <!--Added icon positioning feature.-->
+                          <!--Added link target configuration feature.-->
+                          <!--Added logic for displaying button placeholder in the Edit mode.-->
+                          <a
+                            id="button-7347612b40"
+                            class="cmp-button"
+                            href="http://orlen.com.co/pl/zastrzezenia-prawne"
+                            target="_blank"
+                          >
+                            <span class="cmp-button__text"
+                              >Zastrzeżenia prawne</span
+                            >
+                          </a>
+                        </div>
+                        <div class="button footer__bottom-links-item">
+                          <!--Added icon positioning feature.-->
+                          <!--Added link target configuration feature.-->
+                          <!--Added logic for displaying button placeholder in the Edit mode.-->
+                          <a
+                            id="button-5fdd3c2009"
+                            class="cmp-button"
+                            href="http://orlen.com.co/pl/dane-osobowe"
+                            target="_self"
+                          >
+                            <span class="cmp-button__text">Dane osobowe</span>
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
-</section>
-<section class="container responsivegrid footer__lists-section aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--phone--hide aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
-
-    
-    <div id="container-16cc4d5993" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--8 aem-Grid--tablet--12 aem-Grid--default--8 aem-Grid--phone--12 ">
-    
-    <div class="list footer__list-about aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--tablet--none aem-GridColumn--phone--8 aem-GridColumn aem-GridColumn--tablet--8 aem-GridColumn--default--8 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
-<div id="list-f1bad6dccb" class="cmp-list">
-  <div class="cmp-list__title">
-    Na skróty
-  </div>
-  <ul class="cmp-list__content">
-    <li class="cmp-list__item" data-cmp-data-layer="{&#34;list-f1bad6dccb-item-828b6f3df0&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/list/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T09:52:03Z&#34;,&#34;dc:title&#34;:&#34;Nasze biogazownie&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl/o-spolce/nasze-biogazownie.html&#34;}}">
-    <article>
-        <a class="cmp-list__item-link" href="https://bioevolution.orlen.pl/pl/o-spolce/nasze-biogazownie" data-cmp-clickable>
-            <span class="cmp-list__item-title">Nasze biogazownie</span>
-            
-        </a>
-        
-    </article>
-</li>
-  
-    <li class="cmp-list__item" data-cmp-data-layer="{&#34;list-f1bad6dccb-item-66f99f1420&#34;:{&#34;@type&#34;:&#34;orlen-internet/components/list/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T09:51:59Z&#34;,&#34;dc:title&#34;:&#34;Aktualności&#34;,&#34;xdm:linkURL&#34;:&#34;/content/internet/pgnig-bioevolution/pl/pl/o-spolce/aktualnosci.html&#34;}}">
-    <article>
-        <a class="cmp-list__item-link" href="https://bioevolution.orlen.pl/pl/o-spolce/aktualnosci" data-cmp-clickable>
-            <span class="cmp-list__item-title">Aktualności</span>
-            
-        </a>
-        
-    </article>
-</li>
-  </ul>
-</div>
-
-    
-
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-</section>
-
-    
-</div>
-
-    </div>
-
-    
-</div>
-<section class="container responsivegrid footer__social-media-section">
-
-    
-    
-    
-    <div id="container-341dcedeed" class="cmp-container">
-        
-        
-        
-    </div>
-
-</section>
-<section class="container responsivegrid footer__bottom-links-section">
-
-    
-    
-    
-    <div id="container-c1a7d7878e" class="cmp-container">
-        
-        <div class="button footer__bottom-links-item">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<a id="button-c095b762b3" class="cmp-button" href="https://bioevolution.orlen.pl/pl/sitemap" target="_self">
-    
-    
-
-    <span class="cmp-button__text">Mapa serwisu</span>
-</a>
-
-    
-
-</div>
-<div class="button footer__bottom-links-item">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<a id="button-a9a5847ef6" class="cmp-button" href="http://orlen.com.co/pl/Polityka-prywatnosci">
-    
-    
-
-    <span class="cmp-button__text">Polityka prywatności</span>
-</a>
-
-    
-
-</div>
-<div class="button footer__bottom-links-item">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<a id="button-7347612b40" class="cmp-button" href="http://orlen.com.co/pl/zastrzezenia-prawne" target="_blank">
-    
-    
-
-    <span class="cmp-button__text">Zastrzeżenia prawne</span>
-</a>
-
-    
-
-</div>
-<div class="button footer__bottom-links-item">
-<!--Added icon positioning feature.-->
-<!--Added link target configuration feature.-->
-<!--Added logic for displaying button placeholder in the Edit mode.-->
-<a id="button-5fdd3c2009" class="cmp-button" href="http://orlen.com.co/pl/dane-osobowe" target="_self">
-    
-    
-
-    <span class="cmp-button__text">Dane osobowe</span>
-</a>
-
-    
-
-</div>
-
-        
-    </div>
-
-</section>
-
-        
-    </div>
-
-</div>
-
-    
-</div>
-
-    </div>
-
-    
-
-</div>
-
-    
-
-</footer>
-
-        
-    </div>
-
-</div>
-
-
-
-
-
-
-
-            
-    
-    
-<script src="https://bioevolution.orlen.pl/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.425fc66dd77250d96ac69dd554a92778.js"></script>
-<script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-base.min.5928414a0298afeb3cda21de3bf99015.js"></script>
-
-
-
-    
-
-    
-    
-
-
-
-    
-    
-        
-    
-<script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-site.min.6ea5484f7727693776879b67af2c75b5.js"></script>
-
-
-
-    
-
-
-    
-
-    
-
-    
-    
-
-
-
-    
-    
-
-            
-
-        
-    </body>
+    <script src="https://bioevolution.orlen.pl/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.425fc66dd77250d96ac69dd554a92778.js"></script>
+    <script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-base.min.5928414a0298afeb3cda21de3bf99015.js"></script>
+
+    <script src="https://bioevolution.orlen.pl/etc.clientlibs/orlen-internet-fe/clientlibs/clientlib-site.min.6ea5484f7727693776879b67af2c75b5.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
