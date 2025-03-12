@@ -22,39 +22,6 @@
 
     <meta name="format-detection" content="telephone=no" />
 
-    <script>
-      (function (C, oo, k, ie, b, o, t) {
-        var a = C.scripts[0],
-          d = C.createElement(k),
-          e = /^\/([a-z]{2})([_-][a-z]{2})?(\/.*)?$/g.exec(oo.pathname),
-          f = {
-            au: "en",
-            ca: "en",
-            dk: "da",
-            ee: "et",
-            no: "nb",
-            se: "sv",
-            uk: "en",
-          };
-        e = e ? e[1] : /\.([a-z]{2,})$/.exec(oo.hostname)[1];
-        e = e.length > 2 ? "en" : e;
-        if (f[e]) e = f[e];
-        d.id = ie;
-        d.setAttribute(b, o);
-        d.src = "https://consent.cookiebot.com/uc.js?cbid=" + t;
-        d.setAttribute("data-culture", e);
-        d.async = !1;
-        a.parentNode.insertBefore(d, a);
-      })(
-        document,
-        location,
-        "script",
-        "Cookiebot",
-        "data-blockingmode",
-        "manual",
-        "99e05c20-a9a1-4667-b314-f1d83dce9663",
-      );
-    </script>
 
     <!-- Google Tag Manager -->
     <script>
