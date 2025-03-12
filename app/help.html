@@ -143,40 +143,9 @@
       src="https://connect.orlen.pl/js/js/picker.js"
     ></script>
 
-    <style>
-      .grecaptcha-badge {
-        bottom: 145px !important;
-        opacity: 0;
-        visibility: hidden;
-      }
-    </style>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG"></script>
-    <script type="text/javascript">
-      function recaptchaCallbackFunction(actionName, formId) {
-        grecaptcha.ready(function () {
-          grecaptcha
-            .execute("6Le4z9YZAAAAAJImUh0JFCmILHXfiqTLdxyfhhCG", {
-              action: actionName,
-            })
-            .then(function (token) {
-              var parentForm = $("#" + formId);
-              var captchaHidden = parentForm.find(
-                "input[name=recaptcha-response-code]",
-              );
-              if (!captchaHidden || captchaHidden.length == 0) {
-                parentForm.append(
-                  '<input type="hidden" name="recaptcha-response-code" value="">',
-                );
-                captchaHidden = parentForm.find(
-                  "input[name=recaptcha-response-code]",
-                );
-              }
-              captchaHidden.val(token);
-              document.forms[formId].submit();
-            });
-        });
-      }
-    </script>
+
+    
+
 
     <script type="text/javascript">
       $.ajaxSetup({
