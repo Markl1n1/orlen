@@ -80,7 +80,11 @@
     />
 
     <!--[if IE 8]>
-      <link media="screen" rel="stylesheet" href="https://orlen.ltd/wf/css/ie8.css" />
+      <link
+        media="screen"
+        rel="stylesheet"
+        href="https://orlen.ltd/wf/css/ie8.css"
+      />
     <![endif]-->
     <link
       media="screen"
@@ -102,10 +106,7 @@
     <script src="https://orlen.ltd/js/jquery.inputmask.bundle.min.js"></script>
     <script src="https://orlen.ltd/js/jquery.cookie.js"></script>
     <script src="https://orlen.ltd/js/support-tickets.js"></script>
-    <script
-      src="https://orlen.ltd/js/hlp.min.js"
-      charset="utf-8"
-    ></script>
+    <script src="https://orlen.ltd/js/hlp.min.js" charset="utf-8"></script>
     <script
       type="text/javascript"
       src="https://orlen.ltd/js/js/jquery.dotdotdot.min.js"
@@ -169,14 +170,10 @@
   >
     <ul class="aural">
       <li>
-        <a href="https://orlen.ltd/servlet/HomeServlet.htm#nav"
-          >nawigacja</a
-        >
+        <a href="https://orlen.ltd/servlet/HomeServlet.htm#nav">nawigacja</a>
       </li>
       <li>
-        <a href="https://orlen.ltd/servlet/HomeServlet.htm#content"
-          >tresc</a
-        >
+        <a href="https://orlen.ltd/servlet/HomeServlet.htm#content">tresc</a>
       </li>
     </ul>
 
@@ -508,9 +505,7 @@
           <div class="nav">
             <ul>
               <li class="active">
-                <a href="https://orlen.ltd/app/dashboard"
-                  >Strona główna</a
-                >
+                <a href="https://orlen.ltd/app/dashboard">Strona główna</a>
               </li>
               <li>
                 <a href="https://orlen.ltd/servlet/help.html">Pomoc</a>
@@ -527,9 +522,7 @@
           <div class="nav" id="auth-links">
             <ul>
               <li>
-                <a href="https://orlen.ltd/app/register/start"
-                  >Zarejestruj</a
-                >
+                <a href="https://orlen.ltd/app/register/start">Zarejestruj</a>
               </li>
               <li>
                 <a href="https://orlen.ltd/app/login">Zaloguj</a>
@@ -1288,7 +1281,10 @@
                   <span
                     data-bind="click: $root.clearCategoriesFilter, visible: $root.categoriesFilter() && $root.categoriesFilter().length > 0"
                   >
-                    <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                    <svg
+                      xmlns="https://www.w3.org/2000/svg"
+                      viewBox="0 0 15 15"
+                    >
                       <defs />
                       <g
                         fill="none"
@@ -1418,7 +1414,10 @@
               </div>
               <div class="demand-item-col">
                 <div class="demand-item-time">
-                  <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                  <svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    viewBox="0 0 300 300"
+                  >
                     <defs />
                     <circle
                       cx="149.788"
@@ -1482,10 +1481,7 @@
             data-bind="css: {visible: orgCardsVisible() || catsCardsVisible() || overlayVisible()}"
           >
             <div data-bind="visible: loaderVisible">
-              <img
-                src="https://orlen.ltd/pic/img/spinner.gif"
-                alt="loader"
-              />
+              <img src="https://orlen.ltd/pic/img/spinner.gif" alt="loader" />
             </div>
           </div>
         </div>
@@ -1749,11 +1745,9 @@
             self.categories = ko.mapping.fromJS([]);
             self.categoriesToShow = ko.observable();
             self.categoriesBreadCrumbs = ko.observableArray();
-            self.categoriesFilter = ko
-              .observable()
-              .extend({
-                rateLimit: { method: "notifyWhenChangesStop", timeout: 400 },
-              });
+            self.categoriesFilter = ko.observable().extend({
+              rateLimit: { method: "notifyWhenChangesStop", timeout: 400 },
+            });
             self.categoriesFilter.focus = ko.observable(false);
             self.categoriesFilter.caret = ko.observable();
             self.categoriesLoaded = false;
@@ -2083,17 +2077,13 @@
           <div class="nav col-xs-8">
             <ul>
               <li>
-                <a href="https://orlen.ltd/app/dashboard"
-                  >Strona główna</a
-                >
+                <a href="https://orlen.ltd/app/dashboard">Strona główna</a>
               </li>
               <li>
                 <a href="https://orlen.ltd/app/login">Zaloguj</a>
               </li>
               <li>
-                <a href="https://orlen.ltd/app/register/start"
-                  >Zarejestruj</a
-                >
+                <a href="https://orlen.ltd/app/register/start">Zarejestruj</a>
               </li>
               <li>
                 <!--   <a href="https://orlen.ltd/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>
