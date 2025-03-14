@@ -56208,7 +56208,7 @@
                 (e.prototype.bindEvents = function () {
                   document.addEventListener(
                     "click",
-                    this.onClick.bind(this),
+                    this.onclick.bind(this),
                     !0
                   ),
                     (this.ui = document.createElement("div")),
@@ -56320,7 +56320,7 @@
                     2 === this.datePicked.length
                   );
                 }),
-                (e.prototype.onClick = function (t) {
+                (e.prototype.onclick = function (t) {
                   var e = t.target;
                   if (
                     (t.target.shadowRoot && (e = t.composedPath()[0]),
@@ -76997,14 +76997,14 @@
           27 === t.keyCode &&
             (i.toggleMobileNavigation(), i.mobileNavigationTrigger.focus());
         }),
-        jt(this, "onMobileNavigationClickOutside", function (t) {
+        jt(this, "onMobileNavigationclickOutside", function (t) {
           u(t, i.mobileNavigationPanel) && i.toggleMobileNavigation();
         }),
         jt(this, "onDesktopNavigationPanelKeydown", function (t) {
           27 === t.keyCode &&
             (i.closeDesktopNavigation(), i.resetNavigationState());
         }),
-        jt(this, "onDesktopNavigationClickOutside", function (t) {
+        jt(this, "onDesktopNavigationclickOutside", function (t) {
           u(t, i.navigationtabs) &&
             (i.closeDesktopNavigation(), i.resetNavigationState());
         }),
@@ -77023,7 +77023,7 @@
                   ),
                   document.addEventListener(
                     "click",
-                    i.onDesktopNavigationClickOutside
+                    i.onDesktopNavigationclickOutside
                   ),
                   X(i.navigationtabs)),
               e.classList.add(Pt),
@@ -77067,7 +77067,7 @@
             }
           }
         }),
-        jt(this, "onMobileIntroBackButtonClick", function () {
+        jt(this, "onMobileIntroBackButtonclick", function () {
           i.resetNavigationState();
         }),
         jt(this, "onGroupNavigationTriggerClick", function (t) {
@@ -77079,7 +77079,7 @@
         jt(this, "onGroupNavigationPanelKeydown", function (t) {
           27 === t.keyCode && i.closeGroupNavigation();
         }),
-        jt(this, "onGroupNavigationClickOutside", function (t) {
+        jt(this, "onGroupNavigationclickOutside", function (t) {
           u(t, i.groupNavigationContainer) && i.closeGroupNavigation();
         }),
         jt(this, "openGroupNavigation", function () {
@@ -77091,7 +77091,7 @@
               "keydown",
               i.onGroupNavigationPanelKeydown
             ),
-            document.addEventListener("click", i.onGroupNavigationClickOutside),
+            document.addEventListener("click", i.onGroupNavigationclickOutside),
             X(i.groupNavigationContainer)),
             (i.state.isGroupNavigationActive = !0),
             i.header.classList.add(kt),
@@ -77117,7 +77117,7 @@
               ),
               document.removeEventListener(
                 "click",
-                i.onGroupNavigationClickOutside
+                i.onGroupNavigationclickOutside
               ),
               q(i.groupNavigationContainer)),
             i.header.classList.contains(Pt) ||
@@ -77284,7 +77284,7 @@
                   void 0 === e ||
                   e.addEventListener(
                     "click",
-                    this.onMobileIntroBackButtonClick
+                    this.onMobileIntroBackButtonclick
                   );
             },
           },
@@ -77302,7 +77302,7 @@
                   void 0 === e ||
                   e.removeEventListener(
                     "click",
-                    this.onMobileIntroBackButtonClick
+                    this.onMobileIntroBackButtonclick
                   );
             },
           },
@@ -77377,7 +77377,7 @@
                     ),
                     document.addEventListener(
                       "click",
-                      this.onMobileNavigationClickOutside
+                      this.onMobileNavigationclickOutside
                     ),
                     this.enableMobileNavigationPanelFocusableElements())
                   : (document.removeEventListener(
@@ -77386,7 +77386,7 @@
                     ),
                     document.removeEventListener(
                       "click",
-                      this.onMobileNavigationClickOutside
+                      this.onMobileNavigationclickOutside
                     ),
                     this.disableMobileNavigationPanelFocusableElements(),
                     this.resetNavigationState(),
@@ -77402,7 +77402,7 @@
               ),
                 document.removeEventListener(
                   "click",
-                  this.onDesktopNavigationClickOutside
+                  this.onDesktopNavigationclickOutside
                 ),
                 q(this.navigationtabs),
                 this.header.classList.remove(It);
@@ -80649,7 +80649,7 @@
                 ),
                 this.elements.facetsFilterButton.addEventListener(
                   "click",
-                  this.handleFilterButtonClick.bind(this)
+                  this.handleFilterButtonclick.bind(this)
                 ),
                 this.elements.facetsClearButton.addEventListener(
                   "click",
@@ -80742,7 +80742,7 @@
             },
           },
           {
-            key: "handleFilterButtonClick",
+            key: "handleFilterButtonclick",
             value: function (t) {
               this.handleSearchFormSubmission(t),
                 this.isMobile && this.closeMobileFacets();
@@ -86689,7 +86689,7 @@
         i[l]("pointerleave", t.onTouchEnd, { passive: !0 }),
         i[l]("contextmenu", t.onTouchEnd, { passive: !0 }),
         (n.preventClicks || n.preventClicksPropagation) &&
-          r[l]("click", t.onClick, !0),
+          r[l]("click", t.onclick, !0),
         n.cssMode && o[l]("scroll", t.onScroll),
         n.updateOnWindowResize
           ? t[c](
@@ -88159,7 +88159,7 @@
               (t.onTouchMove = co.bind(t)),
               (t.onTouchEnd = ho.bind(t)),
               i.cssMode && (t.onScroll = fo.bind(t)),
-              (t.onClick = po.bind(t)),
+              (t.onclick = po.bind(t)),
               (t.onLoad = go.bind(t)),
               mo || (e.addEventListener("touchstart", vo), (mo = !0)),
               yo(t, "on");

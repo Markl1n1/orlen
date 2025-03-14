@@ -3636,8 +3636,8 @@
             (f._curInstance || f._activateField(b),
             f.options.showCalendarIcon
               ? b.type === f.getEvent() &&
-                f._iconClicked &&
-                ((f._iconClicked = !1),
+                f._iconclicked &&
+                ((f._iconclicked = !1),
                 f._visible
                   ? (f._hide(), f._curInstance.$field.focus())
                   : f._show())
@@ -3664,7 +3664,7 @@
         this.keyboardAccessibility && e.attr("tabindex", 0),
         e
           .on(this.getEvent(), function (a) {
-            f._iconClicked = !0;
+            f._iconclicked = !0;
             b.click();
           })
           .on("keydown", function (a) {
@@ -10667,7 +10667,7 @@
     GUIDE_ELEMENT_FOCUS_CHANGED: "elementFocusChanged",
     GUIDE_ELEMENT_HELP_SHOWN: "elementHelpShown",
     GUIDE_ELEMENT_VALIDATION_STATUS_CHANGED: "elementValidationStatusChanged",
-    GUIDE_ELEMENT_BUTTON_CLICKED: "elementButtonClicked",
+    GUIDE_ELEMENT_BUTTON_CLICKED: "elementButtonclicked",
     GUIDE_VALIDATION_COMPLETE: "validationComplete",
     GUIDE_AUTO_SAVE_START: "guideAutoSaveStart",
     GUIDE_SAVE_START: "saveStarted",
@@ -14880,7 +14880,7 @@
     _defaultWidgetName: "xfaButton",
     handleClick: function (a) {
       this._triggerOnBridge(
-        "elementButtonClicked",
+        "elementButtonclicked",
         this._model,
         "click",
         "",
