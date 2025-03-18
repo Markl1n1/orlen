@@ -12434,7 +12434,7 @@
                       }),
                       (t.accessibility && !1 === t.accessibility.enabled) ||
                         R(
-                          'Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.',
+                          'Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning.',
                           !1,
                           this
                         ));
@@ -46377,7 +46377,7 @@
                       }),
                       (t.accessibility && !1 === t.accessibility.enabled) ||
                         R(
-                          'Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.',
+                          'Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning.',
                           !1,
                           this
                         ));
@@ -55573,9 +55573,9 @@
     /*!
      *
      * litepicker.umd.js
-     * Litepicker v2.0.12 (https://github.com/wakirin/Litepicker)
-     * Package: litepicker (https://www.npmjs.com/package/litepicker)
-     * License: MIT (https://github.com/wakirin/Litepicker/blob/master/LICENCE.md)
+     * Litepicker v2.0.12 (github.com/wakirin/Litepicker)
+     * Package: litepicker (www.npmjs.com/package/litepicker)
+     * License: MIT (github.com/wakirin/Litepicker/blob/master/LICENCE.md)
      * Copyright 2019-2021 Rinat G.
      *
      * Hash: 504eef9c08cb42543660
@@ -75402,9 +75402,9 @@
   function (t, e, i) {
     /*!
      *
-     *     Litepicker polyfills ie11 v0.0.1 (https://github.com/wakirin/Litepicker-polyfills-ie11)
-     *     Package: litepicker-polyfills-ie11 (https://www.npmjs.com/package/litepicker-polyfills-ie11)
-     *     License: MIT (https://github.com/wakirin/Litepicker-polyfills-ie11/blob/master/LICENCE.md)
+     *     Litepicker polyfills ie11 v0.0.1 (github.com/wakirin/Litepicker-polyfills-ie11)
+     *     Package: litepicker-polyfills-ie11 (www.npmjs.com/package/litepicker-polyfills-ie11)
+     *     License: MIT (github.com/wakirin/Litepicker-polyfills-ie11/blob/master/LICENCE.md)
      *     Copyright 2019-2021 Rinat G.
      *
      *     Hash: 9eade912101059ca519c
@@ -75525,7 +75525,7 @@
             });
         },
         function (t, e) {
-          /*! ie11CustomProperties.js v4.1.0 | MIT License | https://git.io/fjXMN */
+          /*! ie11CustomProperties.js v4.1.0 | MIT License  */
           !(function () {
             "use strict";
             var t = document.createElement("i");
