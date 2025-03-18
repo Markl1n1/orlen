@@ -7,7 +7,7 @@
     <meta name="template" content="page-content" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!--Included gtm-head.html*/-->
+    
 
     <link
       rel="stylesheet"
@@ -41,7 +41,7 @@
         if (f[e]) e = f[e];
         d.id = ie;
         d.setAttribute(b, o);
-        d.src = "https://consent.cookiebot.com/uc.js?cbid=" + t;
+        d.src = "#" + t;
         d.setAttribute("data-culture", e);
         d.async = !1;
         a.parentNode.insertBefore(d, a);
@@ -56,20 +56,7 @@
       );
     </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-TJFMNP4H");
-    </script>
-    <!-- End Google Tag Manager -->
+
 
     <meta property="og:title" content="ORLEN Kolej" />
     <meta property="og:type" content="website" />
@@ -107,7 +94,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-TJFMNP4H"
+        src="#"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
