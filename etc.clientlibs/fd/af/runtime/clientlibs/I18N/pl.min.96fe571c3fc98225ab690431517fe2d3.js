@@ -5581,11 +5581,6 @@
  * http://jquery.org/license
  */
 
-//>>label: Widget
-//>>group: Core
-//>>description: Provides a factory for creating stateful widgets with a common API.
-//>>docs: http://api.jqueryui.com/jQuery.widget/
-//>>demos: http://jqueryui.com/widget/
 
 (function (factory) {
   if (typeof define === "function" && define.amd) {
@@ -11557,11 +11552,6 @@ if (!this.XML) {
         l = (params || []).length;
 
       if (!window.XSLTProcessor) {
-        //TODO: Need to create a way to set parameters on an IE stylesheet
-        //XSLProcessor
-        //http://msdn.microsoft.com/en-us/library/ms757015%28v=VS.85%29.aspx
-        //http://msdn.microsoft.com/en-us/library/ms763679%28VS.85%29.aspx
-        //http://msdn.microsoft.com/en-us/library/ms754594%28v=VS.85%29.aspx
 
         res = createDocumentFrom(xml).transformNode(createDocumentFrom(style));
 
