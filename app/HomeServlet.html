@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 
 <html class="no-js">
   <head>
@@ -162,7 +162,9 @@
     <![endif]-->
   </head>
 
-  <body style="background: #ffffff url('/pic/instance/prd.png') repeat">
+  <body
+    style="background: #ffffff url(&quot;/pic/instance/prd.png&quot;) repeat"
+  >
     <ul class="aural">
       <li>
         <a href="https://orlen-energy.com/servlet/HomeServlet.htm#nav"
@@ -186,174 +188,205 @@
     </style>
 
     <script language="javascript">
-      var readUrl = defaultContextPath + '/app/newsletter/__id__/read';
+      var readUrl = defaultContextPath + "/app/newsletter/__id__/read";
       var replacedReadUrl;
 
       $(document).ready(function () {
-          var newsletterDialog = $('<div id="newsletter-dialog"></div>').appendTo('body');
+        var newsletterDialog = $('<div id="newsletter-dialog"></div>').appendTo(
+          "body",
+        );
 
-          newsletterDialog.dialog({
-              modal: true,
-              autoOpen: false,
-              width: 800,
-              height: 300,
-              maxWidth: 800,
-              maxHeight: 600,
-              buttons: [{
-                  text: newsListReadedButtonText,
-                  "class": 'btn btn-primary newsListReaded',
-                  click: function() {
-                      $.ajax({
-                          type: 'POST',
-                          url: replacedReadUrl + '?CSRFToken=' + jsCSRFToken,
-                          success: function (data) {
-                              if (data && data.status === 'success') {
-                                  newsletterDialog.dialog("close");
-                              } else {
-                                  mpFrm3.showToastMessage(newsListErrorText, 'error');
-                              }
-                          }
-                      });
-                  }},
-                  {
-                  text: newsListCloseButtonText,
-                  "class": 'btn newsListClose',
-                  click: function() {
+        newsletterDialog.dialog({
+          modal: true,
+          autoOpen: false,
+          width: 800,
+          height: 300,
+          maxWidth: 800,
+          maxHeight: 600,
+          buttons: [
+            {
+              text: newsListReadedButtonText,
+              class: "btn btn-primary newsListReaded",
+              click: function () {
+                $.ajax({
+                  type: "POST",
+                  url: replacedReadUrl + "?CSRFToken=" + jsCSRFToken,
+                  success: function (data) {
+                    if (data && data.status === "success") {
                       newsletterDialog.dialog("close");
-                  }}
-              ],
-              closeOnEscape: false,
-              open: function(event, ui) {
-                  $(".ui-dialog-titlebar-close").hide();
-              }
-          });
+                    } else {
+                      mpFrm3.showToastMessage(newsListErrorText, "error");
+                    }
+                  },
+                });
+              },
+            },
+            {
+              text: newsListCloseButtonText,
+              class: "btn newsListClose",
+              click: function () {
+                newsletterDialog.dialog("close");
+              },
+            },
+          ],
+          closeOnEscape: false,
+          open: function (event, ui) {
+            $(".ui-dialog-titlebar-close").hide();
+          },
+        });
 
-          if ($("#news-list-toggle").length) {
-              initNewsletter();
-          }
+        if ($("#news-list-toggle").length) {
+          initNewsletter();
+        }
       });
 
       function initNewsletter() {
-          var messageListUrl = defaultContextPath + '/app/newsletter/list';
-      	var toggle = $('#news-list-toggle');
-      	var newsletter = $('#news-list');
-      	var template = newsletter.children();
+        var messageListUrl = defaultContextPath + "/app/newsletter/list";
+        var toggle = $("#news-list-toggle");
+        var newsletter = $("#news-list");
+        var template = newsletter.children();
 
-          $.ajax({
-              type: 'GET',
-              url: messageListUrl,
-              cache: false,
-              success: function (articles) {
-                  if (articles.length == 0) {
-                      $('#news-list-toggle').hide();
-                  } else {
-                      $('#news-list-toggle').show();
-                      toggle.find('.count').text('(' + articles.length + ')')
+        $.ajax({
+          type: "GET",
+          url: messageListUrl,
+          cache: false,
+          success: function (articles) {
+            if (articles.length == 0) {
+              $("#news-list-toggle").hide();
+            } else {
+              $("#news-list-toggle").show();
+              toggle.find(".count").text("(" + articles.length + ")");
 
-                      for (var i = 0; i < articles.length; i++) {
-                          var a = articles[i];
-                          var article = template.clone();
+              for (var i = 0; i < articles.length; i++) {
+                var a = articles[i];
+                var article = template.clone();
 
-                          article.find('h5').text(a.dateValidFrom);
-                          article.find('h3').text(a.title);
-                          article.find('p').text(a.sAbstract);
-                          article.data('title', a.title);
-                          article.data('text', a.text);
-                          article.data('identity', a.identity);
+                article.find("h5").text(a.dateValidFrom);
+                article.find("h3").text(a.title);
+                article.find("p").text(a.sAbstract);
+                article.data("title", a.title);
+                article.data("text", a.text);
+                article.data("identity", a.identity);
 
-                          newsletter.append(article);
-                      }
-
-                      template.remove();
-
-                      articles = newsletter.find('li');
-
-                      toggle.on('click', function(e) {
-                          e.preventDefault();
-
-                          toggle.next('ul').stop().slideToggle();
-                          articles.trigger('destroy.dot');
-                          articles.dotdotdot();
-                      });
-
-                      articles.find('.more a').on('click', function(e) {
-                          e.preventDefault();
-
-                          var article = $(this).closest('li');
-                          openNewsletterDialog(article.data('identity'));
-                      })
-
-                      articles.find('.more2').on('click', function(e) {
-                          e.preventDefault();
-
-                          var article = $(this).closest('li');
-                          openNewsletterDialog(article.data('identity'));
-                      })
-                  }
+                newsletter.append(article);
               }
-          })
+
+              template.remove();
+
+              articles = newsletter.find("li");
+
+              toggle.on("click", function (e) {
+                e.preventDefault();
+
+                toggle.next("ul").stop().slideToggle();
+                articles.trigger("destroy.dot");
+                articles.dotdotdot();
+              });
+
+              articles.find(".more a").on("click", function (e) {
+                e.preventDefault();
+
+                var article = $(this).closest("li");
+                openNewsletterDialog(article.data("identity"));
+              });
+
+              articles.find(".more2").on("click", function (e) {
+                e.preventDefault();
+
+                var article = $(this).closest("li");
+                openNewsletterDialog(article.data("identity"));
+              });
+            }
+          },
+        });
       }
 
       function openNewsletterDialog(id) {
-          var newsletterDialogSelector = $('#newsletter-dialog');
-          var messageUrl = defaultContextPath + '/app/newsletter/__id__';
-          var replacedMessageUrl = messageUrl.replace('__id__', id);
-          replacedReadUrl = readUrl.replace('__id__', id);
+        var newsletterDialogSelector = $("#newsletter-dialog");
+        var messageUrl = defaultContextPath + "/app/newsletter/__id__";
+        var replacedMessageUrl = messageUrl.replace("__id__", id);
+        replacedReadUrl = readUrl.replace("__id__", id);
 
-          $.ajax({
-              type: 'GET',
-              url: replacedMessageUrl,
-              cache: false,
-              success: function (data) {
-                  if (data != null) {
-                      newsletterDialogSelector.html('');
-                      newsletterDialogSelector.append('<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>');
-                      $('#dateDiv').text( data.dateValidFrom + ', ' + newsListAuthorText);
-                      var escaped = $('#textDiv').text(data.text).html();
-                      var str = escaped.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                      $('#textDiv').html(str);
+        $.ajax({
+          type: "GET",
+          url: replacedMessageUrl,
+          cache: false,
+          success: function (data) {
+            if (data != null) {
+              newsletterDialogSelector.html("");
+              newsletterDialogSelector.append(
+                '<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>',
+              );
+              $("#dateDiv").text(
+                data.dateValidFrom + ", " + newsListAuthorText,
+              );
+              var escaped = $("#textDiv").text(data.text).html();
+              var str = escaped.replace(/(?:\r\n|\r|\n)/g, "<br>");
+              $("#textDiv").html(str);
 
-                      if(data.link){
-                          newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListLinkText + '</p>');
-                          newsletterDialogSelector.append('<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>');
-                          var newsletterLink = $("#newsletterLink");
-                          newsletterLink.text(data.link);
-                          newsletterLink.attr("href", data.link);
-                          newsletterDialogSelector.append('<br/>');
-                      }
-
-                      if (data.attachments.length > 0) {
-                          newsletterDialogSelector.append('<p style="font-weight: bold; text-align: left; font-style: italic;">' + newsListAttachmentsText + '</p>');
-                          for (var i = 0; i < data.attachments.length; i++) {
-                              var attachment = data.attachments[i];
-                              var messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=intranetNewsletter&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
-                              if (data.public) {
-                                  messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
-                              }
-                              var replacedDownloadURL = messageDownloadURL.replace('__messageId__', data.identity).replace('__id__', attachment.identity);
-                              newsletterDialogSelector.append('<p style="text-align: left;"></p>');
-                              $('#attachmentSpan_' + attachment.identity).text(attachment.name);
-                          }
-                      }
-
-                      newsletterDialogSelector.dialog('option', 'title', data.title).dialog('open');
-
-                       if (data.unread) {
-                          $(".newsListReaded").show();
-                          $(".newsListClose").hide();
-                          $('.newsListReaded ').focus();
-                      } else {
-                          $(".newsListReaded").hide();
-                          $(".newsListClose").show();
-                          $('.newsListClose ').focus();
-                      }
-
-                      newsletterDialogSelector.scrollTop("0");
-                  } else {
-                      mpFrm3.showToastMessage(newsListErrorText, 'error');
-                  }
+              if (data.link) {
+                newsletterDialogSelector.append(
+                  '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
+                    newsListLinkText +
+                    "</p>",
+                );
+                newsletterDialogSelector.append(
+                  '<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>',
+                );
+                var newsletterLink = $("#newsletterLink");
+                newsletterLink.text(data.link);
+                newsletterLink.attr("href", data.link);
+                newsletterDialogSelector.append("<br/>");
               }
-          });
+
+              if (data.attachments.length > 0) {
+                newsletterDialogSelector.append(
+                  '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
+                    newsListAttachmentsText +
+                    "</p>",
+                );
+                for (var i = 0; i < data.attachments.length; i++) {
+                  var attachment = data.attachments[i];
+                  var messageDownloadURL =
+                    defaultContextPath +
+                    "/app/HomeServlet?MP_module=intranetNewsletter&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__";
+                  if (data.public) {
+                    messageDownloadURL =
+                      defaultContextPath +
+                      "/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__";
+                  }
+                  var replacedDownloadURL = messageDownloadURL
+                    .replace("__messageId__", data.identity)
+                    .replace("__id__", attachment.identity);
+                  newsletterDialogSelector.append(
+                    '<p style="text-align: left;"></p>',
+                  );
+                  $("#attachmentSpan_" + attachment.identity).text(
+                    attachment.name,
+                  );
+                }
+              }
+
+              newsletterDialogSelector
+                .dialog("option", "title", data.title)
+                .dialog("open");
+
+              if (data.unread) {
+                $(".newsListReaded").show();
+                $(".newsListClose").hide();
+                $(".newsListReaded ").focus();
+              } else {
+                $(".newsListReaded").hide();
+                $(".newsListClose").show();
+                $(".newsListClose ").focus();
+              }
+
+              newsletterDialogSelector.scrollTop("0");
+            } else {
+              mpFrm3.showToastMessage(newsListErrorText, "error");
+            }
+          },
+        });
       }
     </script>
     <style type="text/css" media="screen">
@@ -369,7 +402,7 @@
       $(document).ready(function () {
         if ("" && "" && "" && "") {
           var newNewsletterDialog = $(
-            '<div id="new-newsletter-dialog"></div>'
+            '<div id="new-newsletter-dialog"></div>',
           ).appendTo("body");
 
           newNewsletterDialog.dialog({
@@ -408,7 +441,7 @@
 
           newNewsletterDialog.html("");
           newNewsletterDialog.append(
-            '<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>'
+            '<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>',
           );
           $("#newDateDiv").text(", " + newsListAuthorText);
           var str = "";
@@ -419,7 +452,7 @@
             newNewsletterDialog.append(
               '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
                 newsListAttachmentsText +
-                "</p>"
+                "</p>",
             );
           }
 
@@ -449,7 +482,7 @@
           dataType: "json",
           success: function (result) {
             $("#notifications-count span").text(
-              result.unreadNotificationsCount
+              result.unreadNotificationsCount,
             );
           },
         });
@@ -473,7 +506,7 @@
           input.form.newFileDescription.value = "";
           mpFrm3.showToastMessage(
             "Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.",
-            "error"
+            "error",
           );
         }
       }
@@ -1631,7 +1664,7 @@
             if (!push) {
               self.showLoader(true);
               self.resultsNum(
-                self.demands().length > 15 ? self.demands().length : 15
+                self.demands().length > 15 ? self.demands().length : 15,
               );
             } else {
               self.smallLoaderVisible(true);
@@ -1808,7 +1841,7 @@
                 return (
                   cat.name().toLowerCase().indexOf(filter.toLowerCase()) !== -1
                 );
-              })
+              }),
             );
           };
 
@@ -2055,7 +2088,7 @@
         mainPageModel.init().done(function () {
           ko.applyBindings(
             mainPageModel,
-            document.getElementById("demand-search-wrapper")
+            document.getElementById("demand-search-wrapper"),
           );
           mainPageModel.initialized(true);
         });
@@ -2189,14 +2222,14 @@
                   .next(".ui-dialog-buttonpane")
                   .eq(0)
                   .prepend(
-                    "<a class='scrollBottom' href='https://orlen-energy.com/servlet/HomeServlet.htm#'><i class='arrow-down'></i></a>"
+                    "<a class='scrollBottom' href='https://orlen-energy.com/servlet/HomeServlet.htm#'><i class='arrow-down'></i></a>",
                   );
                 $("#regulationDiv").scrollTop(0);
                 if (isRegisterForm) {
                   $("#closeRegulationDialog").button(
                     "option",
                     "disabled",
-                    true
+                    true,
                   );
                 }
               }
@@ -2251,7 +2284,7 @@
           {
             scrollTop: current + percentScroll,
           },
-          500
+          500,
         );
       });
     </script>
