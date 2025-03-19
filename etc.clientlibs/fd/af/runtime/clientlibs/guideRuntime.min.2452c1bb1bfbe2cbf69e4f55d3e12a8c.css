@@ -223,7 +223,9 @@ div#iEBox_Text {
   outline: 0;
 }
 #keyboard_Sign_Box::placeholder {
-  font: 1rem sans-serif, Georgia;
+  font:
+    1rem sans-serif,
+    Georgia;
   vertical-align: middle;
 }
 div#iEBox_Brush {

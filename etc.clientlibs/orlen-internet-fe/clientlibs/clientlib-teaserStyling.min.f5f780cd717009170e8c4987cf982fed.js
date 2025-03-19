@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       element.classList.add(
         "fullBrand-styling",
         "common-styling",
-        "common-styling-fullBrand"
+        "common-styling-fullBrand",
       );
       element.classList.remove("cmp-teaser__action-link");
     } else if (styling == "contourOnly") {

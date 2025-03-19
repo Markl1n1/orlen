@@ -54,7 +54,7 @@
     window.console &&
       console.warn(
         "CSRF data not available;The data may be unavailable by design, such as during non-authenticated requests: " +
-          a
+          a,
       );
   }
   function h() {
@@ -153,7 +153,7 @@
           },
           function () {
             m.apply(a, b);
-          }
+          },
         );
       }
     else m.apply(this, arguments);
@@ -178,7 +178,7 @@
             g(a.src) &&
             window.console &&
             console.error(
-              "Unable to attach CSRF token to an iframe element on the same origin"
+              "Unable to attach CSRF token to an iframe element on the same origin",
             );
         }
       return a;

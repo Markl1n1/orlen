@@ -31,7 +31,7 @@
             r,
             function (e) {
               return t[e];
-            }.bind(null, r)
+            }.bind(null, r),
           );
       return n;
     }),
@@ -97,7 +97,7 @@
           return this;
         })() ||
         Function("return this")();
-    }.call(this, i(153)));
+    }).call(this, i(153));
   },
   function (t, e) {
     t.exports = function (t) {
@@ -355,7 +355,7 @@
             t.dispatchEvent(
               new CustomEvent("HighchartsModuleLoaded", {
                 detail: { path: i, module: e[i] },
-              })
+              }),
             ));
       }
       var i = {};
@@ -382,7 +382,7 @@
                 (e.isSafari =
                   !e.isChrome && -1 !== e.userAgent.indexOf("Safari")),
                 (e.isTouchDevice = /(Mobile|Android|Windows Phone)/.test(
-                  e.userAgent
+                  e.userAgent,
                 )),
                 (e.isWebKit = -1 !== e.userAgent.indexOf("AppleWebKit")),
                 (e.deg2rad = (2 * Math.PI) / 360),
@@ -445,7 +445,7 @@
               function () {
                 if (n) throw Error(c);
                 w.console && -1 === e.messages.indexOf(c) && console.warn(c);
-              }
+              },
             ),
               e.messages.push(c);
           }
@@ -484,10 +484,10 @@
                 c(e)
                   ? t.setAttribute(i, e)
                   : o
-                  ? (r = t.getAttribute(i)) ||
-                    "class" !== i ||
-                    (r = t.getAttribute(i + "Name"))
-                  : t.removeAttribute(i);
+                    ? (r = t.getAttribute(i)) ||
+                      "class" !== i ||
+                      (r = t.getAttribute(i + "Name"))
+                    : t.removeAttribute(i);
               };
             return n(e) ? s(i, e) : m(e, s), r;
           }
@@ -618,14 +618,14 @@
                     !1,
                     void 0,
                     (((r = {})["Highcharts.".concat(n)] = "use Array.".concat(
-                      i
+                      i,
                     )),
-                    r)
+                    r),
                   ),
                   Array.prototype[i].apply(t, [].slice.call(arguments, 1))
                 );
               };
-            }
+            },
           );
           var C,
             T = (function () {
@@ -644,7 +644,7 @@
                     ? (new t[n(e[0]) ? e.shift() : "Chart"](
                         this[0],
                         e[0],
-                        e[1]
+                        e[1],
                       ),
                       this)
                     : b[h(this[0], "data-highcharts-chart")];
@@ -673,7 +673,7 @@
                             ? -1 !== i.indexOf("touch")
                             : r.passive,
                         capture: !1,
-                      }
+                      },
                     ),
                   o[i] || (o[i] = []),
                   o[i].push({
@@ -781,7 +781,7 @@
                       0,
                       o -
                         (a(r, "padding-left", !0) || 0) -
-                        (a(r, "padding-right", !0) || 0)
+                        (a(r, "padding-right", !0) || 0),
                     )
                   );
                 if ("height" === o)
@@ -789,7 +789,7 @@
                     0,
                     Math.min(r.offsetHeight, r.scrollHeight) -
                       (a(r, "padding-top", !0) || 0) -
-                      (a(r, "padding-bottom", !0) || 0)
+                      (a(r, "padding-bottom", !0) || 0),
                   );
                 if (
                   (w.getComputedStyle || e(27, !0),
@@ -893,7 +893,7 @@
               pad: function (t, e, i) {
                 return (
                   Array((e || 2) + 1 - String(t).replace("-", "").length).join(
-                    i || "0"
+                    i || "0",
                   ) + t
                 );
               },
@@ -951,7 +951,7 @@
                       function () {
                         return n.apply(e, arguments.length ? arguments : t);
                       },
-                    ].concat([].slice.call(arguments))
+                    ].concat([].slice.call(arguments)),
                   );
                 };
               },
@@ -1003,8 +1003,8 @@
                 return n && n !== e
                   ? new n(i)
                   : this instanceof e
-                  ? void this.init(i)
-                  : new e(i);
+                    ? void this.init(i)
+                    : new e(i);
               }
               return (
                 (e.parse = function (t) {
@@ -1063,8 +1063,8 @@
                     ? "rgb" === t || (!t && 1 === r[3])
                       ? "rgb(" + r[0] + "," + r[1] + "," + r[2] + ")"
                       : "a" === t
-                      ? "".concat(r[3])
-                      : "rgba(" + r.join(",") + ")"
+                        ? "".concat(r[3])
+                        : "rgba(" + r.join(",") + ")"
                     : e;
                 }),
                 (e.prototype.brighten = function (t) {
@@ -1118,13 +1118,13 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(i, "Core/Color/Palettes.js", [], function () {
           return {
             colors:
               "#7cb5ec #434348 #90ed7d #f7a35c #8085e9 #f15c80 #e4d354 #2b908f #f45b5b #91e8e1".split(
-                " "
+                " ",
               ),
           };
         }),
@@ -1222,7 +1222,7 @@
                       h(i, 1),
                       h(n, 0),
                       h(r, 0),
-                      h(o, 0)
+                      h(o, 0),
                     ).getTime();
                   return s;
                 }),
@@ -1292,13 +1292,13 @@
                         S: c(a.getSeconds()),
                         L: c(Math.floor(i % 1e3), 3),
                       },
-                      t.dateFormats
+                      t.dateFormats,
                     )),
                     l(a, function (t, n) {
                       for (; -1 !== e.indexOf("%" + n); )
                         e = e.replace(
                           "%" + n,
-                          "function" == typeof t ? t.call(s, i) : t
+                          "function" == typeof t ? t.call(s, i) : t,
                         );
                     }),
                     r ? e.substr(0, 1).toUpperCase() + e.substr(1) : e
@@ -1324,7 +1324,7 @@
                         u,
                         p >= d.second
                           ? 0
-                          : f * Math.floor(a.get("Milliseconds", u) / f)
+                          : f * Math.floor(a.get("Milliseconds", u) / f),
                       ),
                       p >= d.second &&
                         a.set(
@@ -1332,7 +1332,7 @@
                           u,
                           p >= d.minute
                             ? 0
-                            : f * Math.floor(a.get("Seconds", u) / f)
+                            : f * Math.floor(a.get("Seconds", u) / f),
                         ),
                       p >= d.minute &&
                         a.set(
@@ -1340,13 +1340,15 @@
                           u,
                           p >= d.hour
                             ? 0
-                            : f * Math.floor(a.get("Minutes", u) / f)
+                            : f * Math.floor(a.get("Minutes", u) / f),
                         ),
                       p >= d.hour &&
                         a.set(
                           "Hours",
                           u,
-                          p >= d.day ? 0 : f * Math.floor(a.get("Hours", u) / f)
+                          p >= d.day
+                            ? 0
+                            : f * Math.floor(a.get("Hours", u) / f),
                         ),
                       p >= d.day &&
                         a.set(
@@ -1354,14 +1356,14 @@
                           u,
                           p >= d.month
                             ? 1
-                            : Math.max(1, f * Math.floor(a.get("Date", u) / f))
+                            : Math.max(1, f * Math.floor(a.get("Date", u) / f)),
                         ),
                       p >= d.month)
                     ) {
                       a.set(
                         "Month",
                         u,
-                        p >= d.year ? 0 : f * Math.floor(a.get("Month", u) / f)
+                        p >= d.year ? 0 : f * Math.floor(a.get("Month", u) / f),
                       );
                       var g = a.get("FullYear", u);
                     }
@@ -1371,7 +1373,7 @@
                         a.set(
                           "Date",
                           u,
-                          a.get("Date", u) - g + r + (g < r ? -7 : 0)
+                          a.get("Date", u) - g + r + (g < r ? -7 : 0),
                         )),
                       (g = a.get("FullYear", u)),
                       (r = a.get("Month", u));
@@ -1394,16 +1396,16 @@
                           p === d.year
                             ? a.makeTime(g + u * f, 0)
                             : p === d.month
-                            ? a.makeTime(g, r + u * f)
-                            : !s || (p !== d.day && p !== d.week)
-                            ? s && p === d.hour && 1 < f
-                              ? a.makeTime(g, r, m, v + u * f)
-                              : e + p * f
-                            : a.makeTime(
-                                g,
-                                r,
-                                m + u * f * (p === d.day ? 1 : 7)
-                              )),
+                              ? a.makeTime(g, r + u * f)
+                              : !s || (p !== d.day && p !== d.week)
+                                ? s && p === d.hour && 1 < f
+                                  ? a.makeTime(g, r, m, v + u * f)
+                                  : e + p * f
+                                : a.makeTime(
+                                    g,
+                                    r,
+                                    m + u * f * (p === d.day ? 1 : 7),
+                                  )),
                         u++;
                     l.push(e),
                       p <= d.hour &&
@@ -1453,7 +1455,7 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -1482,15 +1484,15 @@
                   loading: "Loading...",
                   months:
                     "January February March April May June July August September October November December".split(
-                      " "
+                      " ",
                     ),
                   shortMonths:
                     "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(
-                      " "
+                      " ",
                     ),
                   weekdays:
                     "Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split(
-                      " "
+                      " ",
                     ),
                   decimalPoint: ".",
                   numericSymbols: "kMGTPE".split(""),
@@ -1645,7 +1647,7 @@
                 );
               },
             });
-          }
+          },
         ),
         e(
           i,
@@ -1702,8 +1704,8 @@
                   this[e + "Setter"]
                     ? this[e + "Setter"]()
                     : t.attr
-                    ? t.element && t.attr(e, i, null, !0)
-                    : (t.style[e] = i + this.unit),
+                      ? t.element && t.attr(e, i, null, !0)
+                      : (t.style[e] = i + this.unit),
                     n && n.call(t, i, this);
                 }),
                 (t.prototype.run = function (e, i, n) {
@@ -1826,14 +1828,14 @@
                     this.prop,
                     n(this.start).tweenTo(n(this.end), this.pos),
                     void 0,
-                    !0
+                    !0,
                   );
                 }),
                 (t.timers = []),
                 t
               );
             })();
-          }
+          },
         ),
         e(
           i,
@@ -1885,9 +1887,9 @@
                           (u = 0),
                           (d = 1))
                         : e.attr
-                        ? (u = e.attr(l))
-                        : ((u = parseFloat(o(e, l)) || 0),
-                          "opacity" !== l && (f = "px")),
+                          ? (u = e.attr(l))
+                          : ((u = parseFloat(o(e, l)) || 0),
+                            "opacity" !== l && (f = "px")),
                       d || (d = a),
                       "string" == typeof d &&
                         d.match("px") &&
@@ -1917,12 +1919,12 @@
                 e.renderer.globalAnimation = u(
                   t,
                   e.options.chart.animation,
-                  !0
+                  !0,
                 );
               },
               stop: n,
             };
-          }
+          },
         ),
         e(
           i,
@@ -2020,7 +2022,7 @@
                           else if (-1 !== e.allowedTags.indexOf(h) || p) {
                             h = t.doc.createElementNS(
                               "svg" === h ? i : l.namespaceURI || i,
-                              h
+                              h,
                             );
                             var g = a.attributes || {};
                             c(a, function (t, e) {
@@ -2054,7 +2056,7 @@
                   )
                     t = new DOMParser().parseFromString(
                       u ? u.createHTML(t) : t,
-                      "text/html"
+                      "text/html",
                     );
                   else {
                     var n = r("div");
@@ -2093,20 +2095,20 @@
                 }),
                 (e.allowedAttributes =
                   "aria-controls aria-describedby aria-expanded aria-haspopup aria-hidden aria-label aria-labelledby aria-live aria-pressed aria-readonly aria-roledescription aria-selected class clip-path color colspan cx cy d dx dy disabled fill height href id in markerHeight markerWidth offset opacity orient padding paddingLeft paddingRight patternUnits r refX refY role scope slope src startOffset stdDeviation stroke stroke-linecap stroke-width style tableValues result rowspan summary target tabindex text-align text-anchor textAnchor textLength title type valign width x x1 x2 xlink:href y y1 y2 zIndex".split(
-                    " "
+                    " ",
                   )),
                 (e.allowedReferences =
                   "https:// http:// mailto: / ../ ./ #".split(" ")),
                 (e.allowedTags =
                   "a abbr b br button caption circle clipPath code dd defs div dl dt em feComponentTransfer feFuncA feFuncB feFuncG feFuncR feGaussianBlur feOffset feMerge feMergeNode filter h1 h2 h3 h4 h5 h6 hr i img li linearGradient marker ol p path pattern pre rect small span stop strong style sub sup svg table text textPath thead title tbody tspan td th tr u ul #text".split(
-                    " "
+                    " ",
                   )),
                 (e.emptyHTML = d),
                 (e.bypassHTMLFiltering = !1),
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -2182,7 +2184,7 @@
                             a,
                             m,
                             u.decimalPoint,
-                            -1 < g.indexOf(",") ? u.thousandsSep : ""
+                            -1 < g.indexOf(",") ? u.thousandsSep : "",
                           ));
                       } else a = d.dateFormat(g, a);
                     p.push(a);
@@ -2193,7 +2195,7 @@
               },
               numberFormat: i,
             };
-          }
+          },
         ),
         e(
           i,
@@ -2248,7 +2250,7 @@
                         e[a - 1].pos + e[a - 1].size > e[a].pos &&
                         ((e[a - 1].size += e[a].size),
                         (e[a - 1].targets = e[a - 1].targets.concat(
-                          e[a].targets
+                          e[a].targets,
                         )),
                         (e[a - 1].align = 0.5),
                         e[a - 1].pos + e[a - 1].size > o &&
@@ -2282,7 +2284,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -2329,7 +2331,7 @@
                     (this.SVG_NS = h),
                     (this.symbolCustomAttribs =
                       "x y width height r start end innerR anchorX anchorY rounded".split(
-                        " "
+                        " ",
                       ));
                 }
                 return (
@@ -2339,7 +2341,7 @@
                         this[t + "Value"],
                         this[t],
                         this.element ? this.element.getAttribute(t) : null,
-                        0
+                        0,
                       )),
                       /^[\-0-9\.]+$/.test(t) && (t = parseFloat(t)),
                       t
@@ -2375,7 +2377,7 @@
                           function (t, e) {
                             return -1 === i.indexOf(e) && t.push(e), t;
                           },
-                          i ? [i] : []
+                          i ? [i] : [],
                         )
                         .join(" ")) !== i && this.attr("class", t),
                       this
@@ -2407,7 +2409,7 @@
                         i,
                         a[n],
                         "scrollablePlotBox" === n ? a.plotBox : void 0,
-                        a
+                        a,
                       )),
                       (n = t.align);
                     var c = t.verticalAlign;
@@ -2455,7 +2457,7 @@
                                   elem: this,
                                 });
                             },
-                            this
+                            this,
                           )),
                       this
                     );
@@ -2465,7 +2467,7 @@
                     -1 !== t.indexOf("contrast") &&
                       (t = t.replace(
                         /contrast/g,
-                        this.renderer.getContrast(e.style.fill)
+                        this.renderer.getContrast(e.style.fill),
                       ));
                     var n = t.split(" ");
                     if (
@@ -2504,7 +2506,7 @@
                         t.querySelectorAll("text tspan"),
                         function (t) {
                           o += Number(t.getAttribute("dy"));
-                        }
+                        },
                       ),
                         ((n = l.createElementNS(h, "tspan")).textContent = "​"),
                         p(n, { x: Number(e.getAttribute("x")), dy: -o }),
@@ -2528,7 +2530,7 @@
                         ? (h = (this[t + "Getter"] || this._defaultGetter).call(
                             this,
                             t,
-                            l
+                            l,
                           ))
                         : (T(
                             t,
@@ -2549,11 +2551,11 @@
                                   !this.styledMode &&
                                     this.shadows &&
                                     /^(width|height|visibility|x|y|d|transform|cx|cy|r)$/.test(
-                                      i
+                                      i,
                                     ) &&
                                     this.updateShadows(i, e, a));
                             },
-                            this
+                            this,
                           ),
                           this.afterSetters()),
                       i && i.call(this),
@@ -2563,7 +2565,9 @@
                   (t.prototype.clip = function (t) {
                     return this.attr(
                       "clip-path",
-                      t ? "url(" + this.renderer.url + "#" + t.id + ")" : "none"
+                      t
+                        ? "url(" + this.renderer.url + "#" + t.id + ")"
+                        : "none",
                     );
                   }),
                   (t.prototype.crisp = function (t, e) {
@@ -2573,10 +2577,10 @@
                       (t.x = Math.floor(t.x || this.x || 0) + i),
                       (t.y = Math.floor(t.y || this.y || 0) + i),
                       (t.width = Math.floor(
-                        (t.width || this.width || 0) - 2 * i
+                        (t.width || this.width || 0) - 2 * i,
                       )),
                       (t.height = Math.floor(
-                        (t.height || this.height || 0) - 2 * i
+                        (t.height || this.height || 0) - 2 * i,
                       )),
                       m(t.strokeWidth) && (t.strokeWidth = e),
                       t
@@ -2670,7 +2674,7 @@
                               return f;
                             });
                         }
-                      }
+                      },
                     );
                   }),
                   (t.prototype.css = function (t) {
@@ -2700,7 +2704,7 @@
                         ["textOutline", "textOverflow", "width"].forEach(
                           function (t) {
                             return s && delete s[t];
-                          }
+                          },
                         ),
                         g(n, s),
                         this.added &&
@@ -2756,7 +2760,7 @@
                           -1 <
                             t.getAttribute("clip-path").indexOf(o.element.id) &&
                             t.removeAttribute("clip-path");
-                        }
+                        },
                       ),
                         (t.clipPath = o.destroy());
                     }
@@ -2810,7 +2814,7 @@
                         complete: function () {
                           e.hide();
                         },
-                      }
+                      },
                     );
                   }),
                   (t.prototype.fillSetter = function (t, e, i) {
@@ -2852,7 +2856,7 @@
                             this.fakeTS &&
                             function (t) {
                               var e = r.querySelector(
-                                ".highcharts-text-outline"
+                                ".highcharts-text-outline",
                               );
                               e && g(e, { display: t });
                             };
@@ -2945,15 +2949,15 @@
                       ("" + this.attr("class"))
                         .replace(
                           S(t) ? new RegExp("(^| )".concat(t, "( |$)")) : t,
-                          " "
+                          " ",
                         )
                         .replace(/ +/g, " ")
-                        .trim()
+                        .trim(),
                     );
                   }),
                   (t.prototype.removeTextOutline = function () {
                     var t = this.element.querySelector(
-                      "tspan.highcharts-text-outline"
+                      "tspan.highcharts-text-outline",
                     );
                     t && this.safeRemoveChild(t);
                   }),
@@ -2985,7 +2989,7 @@
                           textAnchor: "middle",
                         },
                       },
-                      e
+                      e,
                     );
                     var n = this.renderer.url,
                       r = this.text || this,
@@ -3076,7 +3080,7 @@
                             u.setAttribute(
                               "class",
                               (u.getAttribute("class") || "") +
-                                " highcharts-shadow"
+                                " highcharts-shadow",
                             ),
                             i &&
                               (p(u, "height", Math.max(p(u, "height") - d, 0)),
@@ -3128,7 +3132,7 @@
                           e.y,
                           e.width,
                           e.height,
-                          e
+                          e,
                         ),
                       });
                   }),
@@ -3167,10 +3171,10 @@
                           "height" === t
                             ? Math.max(e - (n[r].cutHeight || 0), 0)
                             : "d" === t
-                            ? this.d
-                            : e,
+                              ? this.d
+                              : e,
                           t,
-                          n[r]
+                          n[r],
                         );
                   }),
                   (t.prototype.updateTransform = function () {
@@ -3198,7 +3202,7 @@
                             k(this.rotationOriginX, t.getAttribute("x"), 0) +
                             " " +
                             k(this.rotationOriginY, t.getAttribute("y") || 0) +
-                            ")"
+                            ")",
                         ),
                       (m(n) || m(r)) &&
                         o.push("scale(" + k(n, 1) + " " + k(r, 1) + ")"),
@@ -3273,7 +3277,7 @@
                   }),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -3298,7 +3302,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -3354,7 +3358,7 @@
                   p.addClass(
                     "button" === u
                       ? "highcharts-no-tooltip"
-                      : "highcharts-label"
+                      : "highcharts-label",
                   ),
                   u && p.addClass("highcharts-" + u),
                   (p.text = t.text(void 0, 0, 0, l).attr({ zIndex: 1 })),
@@ -3384,7 +3388,7 @@
                   (this.anchorX = t),
                     this.boxAttr(
                       e,
-                      Math.round(t) - this.getCrispAdjust() - this.xSetting
+                      Math.round(t) - this.getCrispAdjust() - this.xSetting,
                     );
                 }),
                 (c.prototype.anchorYSetter = function (t, e) {
@@ -3511,7 +3515,7 @@
                       s +
                       Math.min(
                         (this.text.firstLineMetrics || e).b,
-                        a.height || 1 / 0
+                        a.height || 1 / 0,
                       )),
                     this.heightSetting &&
                       (this.baselineOffset += (this.heightSetting - e.h) / 2),
@@ -3527,7 +3531,7 @@
                             : "highcharts-label-box") +
                             (this.className
                               ? " highcharts-" + this.className + "-box"
-                              : "")
+                              : ""),
                         ),
                         t.add(this)),
                       (t = this.getCrispAdjust()),
@@ -3585,12 +3589,12 @@
                 (c.emptyBBox = { width: 0, height: 0, x: 0, y: 0 }),
                 (c.textProps =
                   "color direction fontFamily fontSize fontStyle fontWeight lineHeight textAlign textDecoration textOutline textOverflow width".split(
-                    " "
+                    " ",
                   )),
                 c
               );
             })(t);
-          }
+          },
         ),
         e(
           i,
@@ -3607,7 +3611,7 @@
                 n = o.innerR;
                 var u = s(
                     o.open,
-                    0.001 > Math.abs((o.end || 0) - l - 2 * Math.PI)
+                    0.001 > Math.abs((o.end || 0) - l - 2 * Math.PI),
                   ),
                   d = Math.cos(l),
                   p = Math.sin(l),
@@ -3616,7 +3620,7 @@
                 (l = s(o.longArc, 0.001 > h - l - Math.PI ? 0 : 1)),
                   a.push(
                     ["M", t + c * d, e + i * p],
-                    ["A", c, i, 0, l, s(o.clockwise, 1), t + c * f, e + i * g]
+                    ["A", c, i, 0, l, s(o.clockwise, 1), t + c * f, e + i * g],
                   ),
                   r(n) &&
                     a.push(
@@ -3632,7 +3636,7 @@
                         r(o.clockwise) ? 1 - o.clockwise : 0,
                         t + n * d,
                         e + n * p,
-                      ]
+                      ],
                     ),
                   u || a.push(["Z"]);
               }
@@ -3682,7 +3686,7 @@
                             ["L", t + i, s - 6],
                             ["L", t + i + 6, s],
                             ["L", t + i, s + 6],
-                            ["L", t + i, e + r - a]
+                            ["L", t + i, e + r - a],
                           )
                         : h.splice(
                             3,
@@ -3690,47 +3694,47 @@
                             ["L", t + i, r / 2],
                             ["L", c, s],
                             ["L", t + i, r / 2],
-                            ["L", t + i, e + r - a]
+                            ["L", t + i, e + r - a],
                           )
                       : 0 >= t + c
-                      ? s > e + l && s < e + r - l
-                        ? h.splice(
-                            7,
-                            1,
-                            ["L", t, s + 6],
-                            ["L", t - 6, s],
-                            ["L", t, s - 6],
-                            ["L", t, e + a]
-                          )
-                        : h.splice(
-                            7,
-                            1,
-                            ["L", t, r / 2],
-                            ["L", c, s],
-                            ["L", t, r / 2],
-                            ["L", t, e + a]
-                          )
-                      : s && s > r && c > t + l && c < t + i - l
-                      ? h.splice(
-                          5,
-                          1,
-                          ["L", c + 6, e + r],
-                          ["L", c, e + r + 6],
-                          ["L", c - 6, e + r],
-                          ["L", t + a, e + r]
-                        )
-                      : s &&
-                        0 > s &&
-                        c > t + l &&
-                        c < t + i - l &&
-                        h.splice(
-                          1,
-                          1,
-                          ["L", c - 6, e],
-                          ["L", c, e - 6],
-                          ["L", c + 6, e],
-                          ["L", i - a, e]
-                        ),
+                        ? s > e + l && s < e + r - l
+                          ? h.splice(
+                              7,
+                              1,
+                              ["L", t, s + 6],
+                              ["L", t - 6, s],
+                              ["L", t, s - 6],
+                              ["L", t, e + a],
+                            )
+                          : h.splice(
+                              7,
+                              1,
+                              ["L", t, r / 2],
+                              ["L", c, s],
+                              ["L", t, r / 2],
+                              ["L", t, e + a],
+                            )
+                        : s && s > r && c > t + l && c < t + i - l
+                          ? h.splice(
+                              5,
+                              1,
+                              ["L", c + 6, e + r],
+                              ["L", c, e + r + 6],
+                              ["L", c - 6, e + r],
+                              ["L", t + a, e + r],
+                            )
+                          : s &&
+                            0 > s &&
+                            c > t + l &&
+                            c < t + i - l &&
+                            h.splice(
+                              1,
+                              1,
+                              ["L", c - 6, e],
+                              ["L", c, e - 6],
+                              ["L", c + 6, e],
+                              ["L", i - a, e],
+                            ),
                     h)
                   : h;
               },
@@ -3770,7 +3774,7 @@
                 ];
               },
             };
-          }
+          },
         ),
         e(
           i,
@@ -3846,11 +3850,11 @@
                             this.unescapeEntities(e.textStr || "", [
                               "&lt;",
                               "&gt;",
-                            ])
+                            ]),
                           ),
                         r && r.removeChild(i))
                       : i.appendChild(
-                          n.createTextNode(this.unescapeEntities(o))
+                          n.createTextNode(this.unescapeEntities(o)),
                         ),
                       c(this.textOutline) &&
                         e.applyTextOutline &&
@@ -3878,10 +3882,10 @@
                           1 === t.previousSibling.nodeType &&
                           (i.firstLineMetrics = i.renderer.fontMetrics(
                             void 0,
-                            t.previousSibling
+                            t.previousSibling,
                           )),
                         s(t, { dy: e.getLineHeight(t.nextSibling), x: a }));
-                    }
+                    },
                   );
                   var l = this.width || 0;
                   if (l) {
@@ -3904,7 +3908,7 @@
                               Math.max(0, l - parseInt(e.fontSize || 12, 10)),
                               function (t, e) {
                                 return t.substring(0, e) + "…";
-                              }
+                              },
                             );
                         else if (u) {
                           for (
@@ -3932,7 +3936,7 @@
                                     .slice(0, e)
                                     .join(" ")
                                     .replace(/- /g, "-");
-                                }
+                                },
                               ),
                               (f = i.actualWidth),
                               p++;
@@ -3943,7 +3947,7 @@
                               o.insertBefore(n.createTextNode(e), t),
                                 ((e = n.createElementNS(
                                   r,
-                                  "tspan"
+                                  "tspan",
                                 )).textContent = "​"),
                                 s(e, { dy: d, x: a }),
                                 o.insertBefore(e, t);
@@ -3978,7 +3982,7 @@
                       ? parseInt(this.textLineHeight.toString(), 10)
                       : this.renderer.fontMetrics(
                           e,
-                          t || this.svgElement.element
+                          t || this.svgElement.element,
                         ).h
                   );
                 }),
@@ -4008,7 +4012,7 @@
                               r.textContent &&
                               (r.textContent = r.textContent.replace(
                                 /^ +/gm,
-                                ""
+                                "",
                               )))
                           : "a" === c &&
                             s &&
@@ -4078,7 +4082,7 @@
                 e
               );
             })();
-          }
+          },
         ),
         e(
           i,
@@ -4163,7 +4167,7 @@
                       this.createElement("desc")
                         .add()
                         .element.appendChild(
-                          d.createTextNode("Created with Highcharts 10.3.2")
+                          d.createTextNode("Created with Highcharts 10.3.2"),
                         ),
                       (this.defs = this.createElement("defs").add()),
                       (this.allowHTML = o),
@@ -4251,7 +4255,7 @@
                           '"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif',
                         fontSize: "12px",
                       },
-                      t
+                      t,
                     ));
                   }),
                   (i.prototype.setStyle = function (t) {
@@ -4312,7 +4316,7 @@
                     a,
                     l,
                     c,
-                    h
+                    h,
                   ) {
                     void 0 === o && (o = {});
                     var u = this.label(
@@ -4324,7 +4328,7 @@
                         void 0,
                         h,
                         void 0,
-                        "button"
+                        "button",
                       ),
                       d = this.styledMode;
                     e = o.states || {};
@@ -4336,7 +4340,7 @@
                         cursor: "pointer",
                         fontWeight: "normal",
                       },
-                      o.style
+                      o.style,
                     );
                     delete o.style;
                     var m = t.filterUserAttributes(o);
@@ -4347,12 +4351,12 @@
                           stroke: "#cccccc",
                           "stroke-width": 1,
                         },
-                        m
+                        m,
                       );
                       var v = (s = P(
                         m,
                         { fill: "#e6e6e6" },
-                        t.filterUserAttributes(s || e.hover || {})
+                        t.filterUserAttributes(s || e.hover || {}),
                       )).style;
                       delete s.style;
                       var y = (a = P(
@@ -4361,13 +4365,13 @@
                           fill: "#e6ebf5",
                           style: { color: "#000000", fontWeight: "bold" },
                         },
-                        t.filterUserAttributes(a || e.select || {})
+                        t.filterUserAttributes(a || e.select || {}),
                       )).style;
                       delete a.style;
                       var b = (l = P(
                         m,
                         { style: { color: "#cccccc" } },
-                        t.filterUserAttributes(l || e.disabled || {})
+                        t.filterUserAttributes(l || e.disabled || {}),
                       )).style;
                       delete l.style;
                     }
@@ -4382,13 +4386,13 @@
                         1 !== t && (u.state = p = t),
                           u
                             .removeClass(
-                              /highcharts-button-(normal|hover|pressed|disabled)/
+                              /highcharts-button-(normal|hover|pressed|disabled)/,
                             )
                             .addClass(
                               "highcharts-button-" +
                                 ["normal", "hover", "pressed", "disabled"][
                                   t || 0
-                                ]
+                                ],
                             ),
                           d ||
                             (u.attr([m, s, a, l][t || 0]),
@@ -4453,13 +4457,13 @@
                       (t = O(t)
                         ? t
                         : void 0 === t
-                        ? {}
-                        : {
-                            x: t,
-                            y: e,
-                            width: Math.max(i, 0),
-                            height: Math.max(n, 0),
-                          }),
+                          ? {}
+                          : {
+                              x: t,
+                              y: e,
+                              width: Math.max(i, 0),
+                              height: Math.max(n, 0),
+                            }),
                       this.styledMode ||
                         (void 0 !== o &&
                           ((t["stroke-width"] = o), (t = s.crisp(t))),
@@ -4490,7 +4494,7 @@
                             });
                           },
                           duration: D(i, !0) ? void 0 : 0,
-                        }
+                        },
                       ),
                       this.alignElements();
                   }),
@@ -4505,7 +4509,7 @@
                           ? t.setAttributeNS(
                               "http://www.w3.org/1999/xlink",
                               "href",
-                              e
+                              e,
                             )
                           : t.setAttribute("hc-svg-href", e);
                       };
@@ -4521,7 +4525,7 @@
                       o
                         ? (a(
                             l.element,
-                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
                           ),
                           (i = new b.Image()),
                           x(i, "load", e),
@@ -4546,7 +4550,7 @@
                           Math.round(i || 0),
                           n || 0,
                           r || 0,
-                          o
+                          o,
                         ));
                       var f = this.path(s);
                       a.styledMode || f.attr("fill", "none"),
@@ -4588,7 +4592,7 @@
                               t ||
                                 this.translate(
                                   ((n || 0) - l * c) / 2,
-                                  ((r || 0) - l * c) / 2
+                                  ((r || 0) - l * c) / 2,
                                 );
                           }
                         };
@@ -4712,7 +4716,7 @@
                         t.splice(
                           r,
                           0,
-                          i[0].replace("M", "L").replace("m", "l")
+                          i[0].replace("M", "L").replace("m", "l"),
                         ),
                         "string" == typeof t[r] &&
                           (i.length && e.push(i.slice(0)), (i.length = 0)),
@@ -4746,7 +4750,7 @@
               n.registerRendererType("svg", i, !0),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -4902,7 +4906,7 @@
                             g,
                             a,
                             u,
-                            s
+                            s,
                           )),
                         l(e, {
                           left: r + (this.xCorr || 0) + "px",
@@ -4920,12 +4924,12 @@
                       o && !/Edge/.test(a.navigator.userAgent)
                         ? "-ms-transform"
                         : s
-                        ? "-webkit-transform"
-                        : r
-                        ? "MozTransform"
-                        : a.opera
-                        ? "-o-transform"
-                        : void 0;
+                          ? "-webkit-transform"
+                          : r
+                            ? "MozTransform"
+                            : a.opera
+                              ? "-o-transform"
+                              : void 0;
                   c &&
                     ((n[c] = n.transform = "rotate(" + t + "deg)"),
                     (n[c + (r ? "Origin" : "-origin")] = n.transformOrigin =
@@ -4936,7 +4940,7 @@
                 e
               );
             })(e);
-          }
+          },
         ),
         e(
           i,
@@ -5073,7 +5077,7 @@
                                       pointerEvents: h.pointerEvents,
                                       visibility: t.visibility,
                                     },
-                                    n || e
+                                    n || e,
                                   )).style;
                               a(t, {
                                 classSetter: (function (t) {
@@ -5090,7 +5094,7 @@
                                           element: i[0].div,
                                           onEvents: t.onEvents,
                                         },
-                                        arguments
+                                        arguments,
                                       ),
                                     t
                                   );
@@ -5116,7 +5120,7 @@
                 n
               );
             })(i);
-          }
+          },
         ),
         e(i, "Core/Axis/AxisDefaults.js", [], function () {
           var t;
@@ -5219,7 +5223,7 @@
                     formatter: function () {
                       return (0, this.axis.chart.numberFormatter)(
                         this.total || 0,
-                        -1
+                        -1,
                       );
                     },
                     style: {
@@ -5335,14 +5339,14 @@
                       var S = r.time.resolveDTLFormat(
                           n.dateTimeLabelFormats[
                             (!n.grid && m.higherRanks[f]) || m.unitName
-                          ]
+                          ],
                         ),
                         C = S.main;
                     else
                       h(a) &&
                         (C = i.dateTime.getXDateFormat(
                           a,
-                          n.dateTimeLabelFormats || {}
+                          n.dateTimeLabelFormats || {},
                         ));
                   (e.isFirst = v), (e.isLast = y);
                   var T = {
@@ -5361,9 +5365,9 @@
                     return g.formatter
                       ? g.formatter.call(e, e)
                       : g.format
-                      ? ((e.text = i.defaultLabelFormatter.call(e, e)),
-                        t.format(g.format, e, r))
-                      : i.defaultLabelFormatter.call(e, e);
+                        ? ((e.text = i.defaultLabelFormatter.call(e, e)),
+                          t.format(g.format, e, r))
+                        : i.defaultLabelFormatter.call(e, e);
                   };
                   n = k.call(T, T);
                   var E = S && S.list;
@@ -5430,7 +5434,9 @@
                       y: t
                         ? l - s.bottom + s.offset - (s.opposite ? s.height : 0)
                         : o(
-                            l - s.translate(e + i, void 0, void 0, n) - s.transB
+                            l -
+                              s.translate(e + i, void 0, void 0, n) -
+                              s.transB,
                           ),
                     }).y = r(t.y, -1e5, 1e5)),
                     c(this, "afterGetPosition", { pos: t }),
@@ -5445,7 +5451,7 @@
                   o,
                   a,
                   l,
-                  h
+                  h,
                 ) {
                   var u = this.axis,
                     d = u.transA,
@@ -5468,9 +5474,9 @@
                           ? -8
                           : -i.getBBox().height
                         : 2 === u.side
-                        ? g.y + 8
-                        : Math.cos(i.rotation * n) *
-                          (g.y - i.getBBox(!1, 0).height / 2)),
+                          ? g.y + 8
+                          : Math.cos(i.rotation * n) *
+                            (g.y - i.getBBox(!1, 0).height / 2)),
                     s(o.y) && (i = 0 === u.side && u.horiz ? o.y + i : o.y),
                     (t =
                       t + o.x + m + g.x - (a && r ? a * d * (p ? -1 : 1) : 0)),
@@ -5500,7 +5506,7 @@
                       ["M", t, e],
                       ["L", t + (r ? 0 : -i), e + (r ? i : 0)],
                     ],
-                    n
+                    n,
                   );
                 }),
                 (e.prototype.handleOverflow = function (t) {
@@ -5512,7 +5518,7 @@
                     a = p(e.labelLeft, Math.min(e.pos, s[3]));
                   s = p(
                     e.labelRight,
-                    Math.max(e.isRadial ? 0 : e.pos + e.len, o - s[1])
+                    Math.max(e.isRadial ? 0 : e.pos + e.len, o - s[1]),
                   );
                   var l,
                     c = this.label,
@@ -5623,7 +5629,7 @@
                           .path()
                           .attr(o)
                           .addClass(
-                            "highcharts-" + (a ? a + "-" : "") + "grid-line"
+                            "highcharts-" + (a ? a + "-" : "") + "grid-line",
                           )
                           .add(n.gridGroup))),
                     h &&
@@ -5648,7 +5654,7 @@
                   t = t.y;
                   var c = p(
                     r["minor" !== s ? "tickWidth" : "minorTickWidth"],
-                    !s && n.isXAxis ? 1 : 0
+                    !s && n.isXAxis ? 1 : 0,
                   );
                   r = r["minor" !== s ? "tickColor" : "minorTickColor"];
                   var h = this.mark,
@@ -5670,7 +5676,7 @@
                         a[0],
                         h.strokeWidth() * i,
                         n.horiz,
-                        o
+                        o,
                       ),
                       opacity: e,
                     }));
@@ -5722,7 +5728,7 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -5770,9 +5776,9 @@
                   void 0,
                   M(
                     t.options.allowDecimals,
-                    0.5 > e || void 0 !== t.tickAmount
+                    0.5 > e || void 0 !== t.tickAmount,
                   ),
-                  !!t.tickAmount
+                  !!t.tickAmount,
                 );
               };
             return (t = (function () {
@@ -5845,8 +5851,8 @@
                           ? 0
                           : 2
                         : this.opposite
-                        ? 1
-                        : 3
+                          ? 1
+                          : 3,
                     )),
                     this.setOptions(e);
                   var n = this.options,
@@ -5877,7 +5883,7 @@
                     (this.min = this.max = null),
                     (e = M(
                       n.crosshair,
-                      P(t.options.tooltip.crosshairs)[i ? 0 : 1]
+                      P(t.options.tooltip.crosshairs)[i ? 0 : 1],
                     )),
                     (this.crosshair = !0 === e ? {} : e),
                     -1 === t.axes.indexOf(this) &&
@@ -5905,7 +5911,7 @@
                       e.defaultBottomAxisOptions,
                       e.defaultLeftAxisOptions,
                     ][this.side],
-                    k(c[this.coll], t)
+                    k(c[this.coll], t),
                   )),
                     w(this, "afterSetOptions", { userOptions: t });
                 }),
@@ -6026,7 +6032,7 @@
                     !0,
                     !this.horiz,
                     void 0,
-                    !0
+                    !0,
                   );
                 }),
                 (t.prototype.getPlotLinePath = function (t) {
@@ -6085,7 +6091,7 @@
                                   ["M", i, n],
                                   ["L", r, o],
                                 ],
-                                p || 1
+                                p || 1,
                               ));
                     }),
                     t.path
@@ -6106,8 +6112,8 @@
                   return !0 === t.minorTicks
                     ? M(t.minorTickInterval, "auto")
                     : !1 === t.minorTicks
-                    ? null
-                    : t.minorTickInterval;
+                      ? null
+                      : t.minorTickInterval;
                 }),
                 (t.prototype.getMinorTickPositions = function () {
                   var t = this.options,
@@ -6124,7 +6130,7 @@
                         e &&
                           s.push.apply(
                             s,
-                            a.getLogTickPositions(i, n[e - 1], n[e], !0)
+                            a.getLogTickPositions(i, n[e - 1], n[e], !0),
                           );
                       });
                     else if (
@@ -6136,8 +6142,8 @@
                           this.dateTime.normalizeTimeTickInterval(i),
                           r,
                           n,
-                          t.startOfWeek
-                        )
+                          t.startOfWeek,
+                        ),
                       );
                     else
                       for (
@@ -6176,7 +6182,7 @@
                           }),
                           (this.minRange = Math.min(
                             5 * l,
-                            this.dataMax - this.dataMin
+                            this.dataMax - this.dataMin,
                           )))),
                     a - s < this.minRange)
                   ) {
@@ -6281,8 +6287,8 @@
                           var i = n
                               ? 1
                               : r
-                              ? M(e.options.pointRange, c, 0)
-                              : t.axisPointRange || 0,
+                                ? M(e.options.pointRange, c, 0)
+                                : t.axisPointRange || 0,
                             l = e.options.pointPlacement;
                           (o = Math.max(o, i)),
                             (t.single && !n) ||
@@ -6412,21 +6418,21 @@
                       void 0 === this.max
                         ? 1
                         : o &&
-                          this.linkedParent &&
-                          !u &&
-                          s === this.linkedParent.options.tickPixelInterval
-                        ? (u = this.linkedParent.tickInterval)
-                        : M(
-                            u,
-                            this.tickAmount
-                              ? (this.max - this.min) /
-                                  Math.max(this.tickAmount - 1, 1)
-                              : void 0,
-                            a
-                              ? 1
-                              : ((this.max - this.min) * s) /
-                                  Math.max(this.len, s)
-                          )),
+                            this.linkedParent &&
+                            !u &&
+                            s === this.linkedParent.options.tickPixelInterval
+                          ? (u = this.linkedParent.tickInterval)
+                          : M(
+                              u,
+                              this.tickAmount
+                                ? (this.max - this.min) /
+                                    Math.max(this.tickAmount - 1, 1)
+                                : void 0,
+                              a
+                                ? 1
+                                : ((this.max - this.min) * s) /
+                                    Math.max(this.len, s),
+                            )),
                     r && !t)
                   ) {
                     var x =
@@ -6444,7 +6450,7 @@
                       !u &&
                       (this.tickInterval = Math.max(
                         this.pointRange,
-                        this.tickInterval
+                        this.tickInterval,
                       )),
                     (t = M(
                       n.minTickInterval,
@@ -6453,7 +6459,7 @@
                           return t.noSharedTooltip;
                         })
                         ? this.closestPointRange
-                        : 0
+                        : 0,
                     )),
                     !u && this.tickInterval < t && (this.tickInterval = t),
                     this.dateTime ||
@@ -6506,20 +6512,20 @@
                         s = this.getTimeTicks(
                           this.dateTime.normalizeTimeTickInterval(
                             this.tickInterval,
-                            e.units
+                            e.units,
                           ),
                           this.min,
                           this.max,
                           e.startOfWeek,
                           this.ordinal && this.ordinal.positions,
                           this.closestPointRange,
-                          !0
+                          !0,
                         );
                       else if (this.logarithmic)
                         s = this.logarithmic.getLogTickPositions(
                           this.tickInterval,
                           this.min,
-                          this.max
+                          this.max,
                         );
                       else
                         for (
@@ -6528,7 +6534,7 @@
                           ((s = this.getLinearTickPositions(
                             this.tickInterval,
                             this.min,
-                            this.max
+                            this.max,
                           )),
                           this.tickAmount && s.length > this.tickAmount);
 
@@ -6646,7 +6652,7 @@
                         (this.threshold - (this.dataMin || 0)) /
                           ((this.dataMax || 0) - (this.dataMin || 0)),
                         0,
-                        1
+                        1,
                       )),
                       this.options.reversed && (t = 1 - t),
                       t
@@ -6799,7 +6805,7 @@
                           (i.displayBtn = void 0 !== e || void 0 !== o),
                           i.setExtremes(e, o, !1, void 0, { trigger: "zoom" })),
                           (t.zoomed = !0);
-                      }
+                      },
                     ),
                     t.zoomed
                   );
@@ -6810,17 +6816,17 @@
                     i = e.offsets || [0, 0, 0, 0],
                     n = this.horiz,
                     r = (this.width = Math.round(
-                      O(M(e.width, t.plotWidth - i[3] + i[1]), t.plotWidth)
+                      O(M(e.width, t.plotWidth - i[3] + i[1]), t.plotWidth),
                     )),
                     o = (this.height = Math.round(
-                      O(M(e.height, t.plotHeight - i[0] + i[2]), t.plotHeight)
+                      O(M(e.height, t.plotHeight - i[0] + i[2]), t.plotHeight),
                     )),
                     s = (this.top = Math.round(
-                      O(M(e.top, t.plotTop + i[0]), t.plotHeight, t.plotTop)
+                      O(M(e.top, t.plotTop + i[0]), t.plotHeight, t.plotTop),
                     ));
                   (e = this.left =
                     Math.round(
-                      O(M(e.left, t.plotLeft + i[3]), t.plotWidth, t.plotLeft)
+                      O(M(e.left, t.plotLeft + i[3]), t.plotWidth, t.plotLeft),
                     )),
                     (this.bottom = t.chartHeight - o - s),
                     (this.right = t.chartWidth - r - e),
@@ -6846,10 +6852,10 @@
                     null === t || -1 / 0 === t
                       ? (t = i)
                       : 1 / 0 === t
-                      ? (t = e)
-                      : i > t
-                      ? (t = i)
-                      : e < t && (t = e),
+                        ? (t = e)
+                        : i > t
+                          ? (t = i)
+                          : e < t && (t = e),
                     this.translate(t, 0, 1, 0, 1)
                   );
                 }),
@@ -6864,7 +6870,7 @@
                         15 < e && 165 > e
                           ? (t.align = "right")
                           : 195 < e && 345 > e && (t.align = "left");
-                      }
+                      },
                     ),
                     t.align
                   );
@@ -6873,7 +6879,7 @@
                   var e = this.options,
                     i = M(
                       e["tick" === t ? "tickWidth" : "minorTickWidth"],
-                      "tick" === t && this.isXAxis && !this.categories ? 1 : 0
+                      "tick" === t && this.isXAxis && !this.categories ? 1 : 0,
                     ),
                     n = e["tick" === t ? "tickLength" : "minorTickLength"];
                   if (i && n) {
@@ -6888,7 +6894,7 @@
                   var t = (this.tickPositions && this.tickPositions[0]) || 0;
                   return this.chart.renderer.fontMetrics(
                     this.options.labels.style.fontSize,
-                    this.ticks[t] && this.ticks[t].label
+                    this.ticks[t] && this.ticks[t].label,
                   );
                 }),
                 (t.prototype.unsquish = function () {
@@ -6949,7 +6955,7 @@
                     n = this.options.labels,
                     r = Math.max(
                       this.tickPositions.length - (this.categories ? 0 : 1),
-                      1
+                      1,
                     ),
                     o = e.margin[3];
                   if (t && C(t.slotWidth)) return t.slotWidth;
@@ -7024,24 +7030,26 @@
                         t.shortenLabel
                           ? t.shortenLabel()
                           : p &&
-                            !i &&
-                            "nowrap" !== o.whiteSpace &&
-                            (p < e.textPxLength || "SPAN" === e.element.tagName)
-                          ? ((r.width = p + "px"),
-                            u || (r.textOverflow = e.specificTextOverflow || f),
-                            e.css(r))
-                          : e.styles &&
-                            e.styles.width &&
-                            !r.width &&
-                            !i &&
-                            e.css({ width: null }),
+                              !i &&
+                              "nowrap" !== o.whiteSpace &&
+                              (p < e.textPxLength ||
+                                "SPAN" === e.element.tagName)
+                            ? ((r.width = p + "px"),
+                              u ||
+                                (r.textOverflow = e.specificTextOverflow || f),
+                              e.css(r))
+                            : e.styles &&
+                              e.styles.width &&
+                              !r.width &&
+                              !i &&
+                              e.css({ width: null }),
                         delete e.specificTextOverflow,
                         (t.rotation = c.rotation));
                     }, this),
                     (this.tickRotCorr = e.rotCorr(
                       h.b,
                       this.labelRotation || 0,
-                      0 !== this.side
+                      0 !== this.side,
                     ));
                 }),
                 (t.prototype.hasData = function () {
@@ -7125,7 +7133,7 @@
                             (t.isRadial
                               ? "highcharts-radial-axis".concat(i, " ")
                               : "") +
-                            (b || "")
+                            (b || ""),
                         )
                         .add(c);
                     };
@@ -7146,7 +7154,7 @@
                         M(
                           f.reserveSpace,
                           "center" === e.labelAlign || null,
-                          e.reserveSpaceDefault
+                          e.reserveSpaceDefault,
                         ) &&
                           a.forEach(function (t) {
                             C = Math.max(s[t].getLabelSize(), C);
@@ -7174,8 +7182,8 @@
                       0 === o
                         ? -e.labelMetrics().h
                         : 2 === o
-                        ? e.tickRotCorr.y
-                        : 0),
+                          ? e.tickRotCorr.y
+                          : 0),
                     (d = Math.abs(C) + S),
                     C &&
                       (d =
@@ -7191,7 +7199,7 @@
                         g[o],
                         (e.axisTitleMargin || 0) + x + y * e.offset,
                         d,
-                        a && a.length && n ? n[0] + y * e.offset : 0
+                        a && a.length && n ? n[0] + y * e.offset : 0,
                       )),
                       (r =
                         !e.axisLine || r.offset
@@ -7219,7 +7227,7 @@
                           r ? n : e.chartHeight - this.bottom,
                         ],
                       ],
-                      t
+                      t,
                     )
                   );
                 }),
@@ -7369,7 +7377,7 @@
                               !t[e[i]].isActive &&
                               (t[e[i]].destroy(), delete t[e[i]]);
                         },
-                        t !== f && n.hasRendered && i ? i : 0
+                        t !== f && n.hasRendered && i ? i : 0,
                       );
                   }),
                     y &&
@@ -7418,11 +7426,11 @@
                   if (
                     (w(this, "destroy", { keepEvents: t }),
                     t || L(e),
-                    [e.ticks, e.minorTicks, e.alternateBands].forEach(function (
-                      t
-                    ) {
-                      v(t);
-                    }),
+                    [e.ticks, e.minorTicks, e.alternateBands].forEach(
+                      function (t) {
+                        v(t);
+                      },
+                    ),
                     i)
                   )
                     for (t = i.length; t--; ) i[t].destroy();
@@ -7455,7 +7463,7 @@
                         ? m(e) &&
                           (n = M(
                             "colorAxis" !== this.coll ? e.crosshairPos : null,
-                            this.isXAxis ? e.plotX : this.len - e.plotY
+                            this.isXAxis ? e.plotX : this.len - e.plotY,
                           ))
                         : (n =
                             t &&
@@ -7486,7 +7494,7 @@
                             .addClass(
                               "highcharts-crosshair highcharts-crosshair-" +
                                 (o ? "category " : "thin ") +
-                                (r.className || "")
+                                (r.className || ""),
                             )
                             .attr({ zIndex: M(r.zIndex, 2) })
                             .add()),
@@ -7558,7 +7566,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -7575,7 +7583,7 @@
                 function e() {
                   return this.chart.time.getTimeTicks.apply(
                     this.chart.time,
-                    arguments
+                    arguments,
                   );
                 }
                 function s(t) {
@@ -7636,7 +7644,7 @@
                           count: (t = r(
                             t / a,
                             l,
-                            "year" === e[0] ? Math.max(n(t / a), 1) : 1
+                            "year" === e[0] ? Math.max(n(t / a), 1) : 1,
                           )),
                           unitName: e[0],
                         }
@@ -7650,7 +7658,7 @@
                             i.closestPointRange,
                             t,
                             i.options.startOfWeek,
-                            e
+                            e,
                           ) || n.resolveDTLFormat(e.year).main
                         : n.resolveDTLFormat(e.day).main;
                     }),
@@ -7661,7 +7669,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -7723,8 +7731,8 @@
                             0.3 < t
                               ? [1, 2, 4]
                               : 0.15 < t
-                              ? [1, 2, 4, 6, 8]
-                              : [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                                ? [1, 2, 4, 6, 8]
+                                : [1, 2, 3, 4, 5, 6, 7, 8, 9];
                           u < i + 1 && !d;
                           u++
                         ) {
@@ -7747,7 +7755,7 @@
                             "auto" === t ? null : t,
                             this.minorAutoInterval,
                             ((l.tickPixelInterval / (o ? 5 : 1)) * (i - e)) /
-                              ((o ? a / s.tickPositions.length : a) || 1)
+                              ((o ? a / s.tickPositions.length : a) || 1),
                           )),
                           (t = n(t)),
                           (c = s
@@ -7769,7 +7777,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -7841,7 +7849,7 @@
                               ["L", c[1], c[2]],
                               ["L", u[1], u[2]],
                               ["L", h[1], h[2]],
-                              ["Z"]
+                              ["Z"],
                             )),
                             (o.isFlat = a);
                         }
@@ -7906,7 +7914,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -8028,7 +8036,7 @@
                             y: i ? (S ? 16 : 10) : S ? 6 : -4,
                             rotation: i && !S && 90,
                           },
-                          g
+                          g,
                         )),
                         this.renderLabel(g, w, S, u))
                       : m && m.hide(),
@@ -8094,7 +8102,7 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -8178,7 +8186,7 @@
                       t.point.tooltipFormatter
                     ).call(
                       t.point,
-                      e[(t.point.formatPrefix || "point") + "Format"] || ""
+                      e[(t.point.formatPrefix || "point") + "Format"] || "",
                     );
                   });
                 }),
@@ -8196,7 +8204,7 @@
                     i = [t.tooltipFooterHeaderFormatter(e[0])];
                   return (
                     (i = i.concat(t.bodyFormatter(e))).push(
-                      t.tooltipFooterHeaderFormatter(e[0], !0)
+                      t.tooltipFooterHeaderFormatter(e[0], !0),
                     ),
                     i
                   );
@@ -8228,31 +8236,33 @@
                       ? (void 0 === e.chartX && (e = o.normalize(e)),
                         (o = [e.chartX - l, e.chartY - a]))
                       : t[0].tooltipPos
-                      ? (o = t[0].tooltipPos)
-                      : (t.forEach(function (t) {
-                          (i = t.series.yAxis),
-                            (n = t.series.xAxis),
-                            (c += t.plotX || 0),
-                            (h += t.plotLow
-                              ? (t.plotLow + (t.plotHigh || 0)) / 2
-                              : t.plotY || 0),
-                            n &&
-                              i &&
-                              (s
-                                ? ((c += a + r.plotHeight - n.len - n.pos),
-                                  (h += l + r.plotWidth - i.len - i.pos))
-                                : ((c += n.pos - l), (h += i.pos - a)));
-                        }),
-                        (c /= t.length),
-                        (h /= t.length),
-                        (o = [
-                          s ? r.plotWidth - h : c,
-                          s ? r.plotHeight - c : h,
-                        ]),
-                        this.shared &&
-                          1 < t.length &&
-                          e &&
-                          (s ? (o[0] = e.chartX - l) : (o[1] = e.chartY - a))),
+                        ? (o = t[0].tooltipPos)
+                        : (t.forEach(function (t) {
+                            (i = t.series.yAxis),
+                              (n = t.series.xAxis),
+                              (c += t.plotX || 0),
+                              (h += t.plotLow
+                                ? (t.plotLow + (t.plotHigh || 0)) / 2
+                                : t.plotY || 0),
+                              n &&
+                                i &&
+                                (s
+                                  ? ((c += a + r.plotHeight - n.len - n.pos),
+                                    (h += l + r.plotWidth - i.len - i.pos))
+                                  : ((c += n.pos - l), (h += i.pos - a)));
+                          }),
+                          (c /= t.length),
+                          (h /= t.length),
+                          (o = [
+                            s ? r.plotWidth - h : c,
+                            s ? r.plotHeight - c : h,
+                          ]),
+                          this.shared &&
+                            1 < t.length &&
+                            e &&
+                            (s
+                              ? (o[0] = e.chartX - l)
+                              : (o[1] = e.chartY - a))),
                     o.map(Math.round)
                   );
                 }),
@@ -8296,7 +8306,7 @@
                           pointerEvents: a,
                           zIndex: Math.max(
                             this.options.style.zIndex || 0,
-                            ((h && h.zIndex) || 0) + 3
+                            ((h && h.zIndex) || 0) + 3,
                           ),
                         }),
                         e.doc.body.appendChild(t),
@@ -8316,7 +8326,7 @@
                               void 0,
                               o.useHTML,
                               void 0,
-                              "tooltip"
+                              "tooltip",
                             )
                             .attr({ padding: o.padding, r: o.borderRadius })),
                           r ||
@@ -8366,7 +8376,7 @@
                           s.documentElement.scrollHeight,
                           s.body.offsetHeight,
                           s.documentElement.offsetHeight,
-                          s.documentElement.clientHeight
+                          s.documentElement.clientHeight,
                         )
                       : r.chartHeight,
                     d = r.pointer.getChartPosition(),
@@ -8389,7 +8399,7 @@
                               s
                                 ? r.plotLeft + r.plotWidth
                                 : r.plotTop + r.plotHeight,
-                            ]
+                            ],
                       );
                     },
                     f = p("y"),
@@ -8425,8 +8435,8 @@
                               r < i / 2
                                 ? 1
                                 : r > e - n / 2
-                                ? e - n - 2
-                                : r - i / 2),
+                                  ? e - n - 2
+                                  : r - i / 2),
                         s
                       );
                     },
@@ -8438,8 +8448,8 @@
                       !1 !== y.apply(0, f)
                         ? !1 !== b.apply(0, g) || n || (x(!0), w())
                         : n
-                        ? (a.x = a.y = 0)
-                        : (x(!0), w());
+                          ? (a.x = a.y = 0)
+                          : (x(!0), w());
                     };
                   return (r.inverted || 1 < this.len) && x(), w(), a;
                 }),
@@ -8462,7 +8472,7 @@
                     (this.shared = e.shared || this.split),
                     (this.outside = v(
                       e.outside,
-                      !(!t.scrollablePixelsX && !t.scrollablePixelsY)
+                      !(!t.scrollablePixelsX && !t.scrollablePixelsY),
                     ));
                 }),
                 (t.prototype.shouldStickOnContact = function (t) {
@@ -8472,7 +8482,7 @@
                     (t &&
                       !this.chart.pointer.inClass(
                         t.target,
-                        "highcharts-tooltip"
+                        "highcharts-tooltip",
                       ))
                   );
                 }),
@@ -8594,13 +8604,13 @@
                           (t = l(
                             t - r / 2,
                             E.left,
-                            E.right - r - (n.outside ? L : 0)
+                            E.right - r - (n.outside ? L : 0),
                           )))
                         : ((e -= P),
                           (t = l(
                             (t = o ? t - r - C : t + C),
                             o ? t : E.left,
-                            E.right
+                            E.right,
                           ))),
                       { x: t, y: e }
                     );
@@ -8663,7 +8673,7 @@
                             T[h ? "headerShape" : "shape"],
                             void 0,
                             void 0,
-                            T.useHTML
+                            T.useHTML,
                           )
                             .addClass(n.getClassName(o, !0, h))
                             .attr(c)
@@ -8733,7 +8743,7 @@
                           t.anchorY,
                           t.point.isHeader,
                           t.boxWidth,
-                          !1
+                          !1,
                         );
                         return u(t, { target: e.y, x: e.x });
                       })),
@@ -8801,7 +8811,7 @@
                           0 > i[1]
                             ? Math.max(
                                 Math.abs(i[1]),
-                                r.height - Math.abs(i[1])
+                                r.height - Math.abs(i[1]),
                               )
                             : Math.max(Math.abs(i[1]), r.height)),
                         this.tracker
@@ -8819,11 +8829,11 @@
                   return t
                     .replace(
                       'style="font-size: 10px"',
-                      'class="highcharts-header"'
+                      'class="highcharts-header"',
                     )
                     .replace(
                       /style="color:{(point|series)\.color}"/g,
-                      'class="highcharts-color-{$1.colorIndex} {series.options.className} {point.options.className}"'
+                      'class="highcharts-color-{$1.colorIndex} {series.options.className} {point.options.className}"',
                     );
                 }),
                 (t.prototype.tooltipFooterHeaderFormatter = function (t, e) {
@@ -8847,7 +8857,7 @@
                           ).forEach(function (t) {
                             l = l.replace(
                               "{point." + t + "}",
-                              "{point." + t + ":" + a + "}"
+                              "{point." + t + ":" + a + "}",
                             );
                           }),
                         i.chart.styledMode && (l = this.styledModeFormat(l)),
@@ -8871,7 +8881,7 @@
                       this,
                       r.width,
                       r.height,
-                      t
+                      t,
                     ),
                     s = t.plotX + e.plotLeft;
                   (t = t.plotY + e.plotTop),
@@ -8893,7 +8903,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -8946,7 +8956,7 @@
                     t[i] = t[i].animate(
                       "dataLabel" === i
                         ? { x: t[i].startXPos, y: t[i].startYPos, opacity: 0 }
-                        : e
+                        : e,
                     );
                   }),
                     i.plural.forEach(function (e) {
@@ -8957,8 +8967,8 @@
                               { x: t.startXPos },
                               e.startYPos
                                 ? { x: e.startXPos, y: e.startYPos }
-                                : {}
-                            )
+                                : {},
+                            ),
                           );
                       });
                     });
@@ -9076,7 +9086,7 @@
                           "dataLabel",
                           "dataLabelPath",
                           "dataLabelUpper",
-                          "connector"
+                          "connector",
                         ),
                       e = n.length;
                     e--;
@@ -9229,11 +9239,11 @@
                         (r || o) &&
                           (t = t.replace(
                             RegExp(e + "}", "g"),
-                            r + e + "}" + o
+                            r + e + "}" + o,
                           )),
                         (t = t.replace(
                           RegExp(e + "}", "g"),
-                          e + ":,." + n + "f}"
+                          e + ":,." + n + "f}",
                         ));
                     }),
                     a(t, { point: this, series: this.series }, e.chart)
@@ -9308,11 +9318,11 @@
                                 t.setState(
                                   r.hoverPoints && e.options.inactiveOtherPoints
                                     ? "inactive"
-                                    : ""
+                                    : "",
                                 ),
                                 t.firePointEvent("unselect"));
                             });
-                      }
+                      },
                     ),
                     delete this.selectedStaging;
                 }),
@@ -9397,7 +9407,11 @@
                       n &&
                         this.graphic.animate(
                           n,
-                          x(g.options.chart.animation, h.animation, l.animation)
+                          x(
+                            g.options.chart.animation,
+                            h.animation,
+                            l.animation,
+                          ),
                         ),
                         b && b.hide();
                     } else
@@ -9428,11 +9442,9 @@
                       a && a.size && b && "hidden" !== n && !this.isCluster
                         ? (y ||
                             (r.halo = y = g.renderer.path().add(b.parentGroup)),
-                          y
-                            .show()
-                            [i ? "animate" : "attr"]({
-                              d: this.haloPath(a.size),
-                            }),
+                          y.show()[i ? "animate" : "attr"]({
+                            d: this.haloPath(a.size),
+                          }),
                           y.attr({
                             class:
                               "highcharts-halo highcharts-color-" +
@@ -9449,8 +9461,8 @@
                                   fill: this.color || r.color,
                                   "fill-opacity": a.opacity,
                                 },
-                                t.filterUserAttributes(a.attributes || {})
-                              )
+                                t.filterUserAttributes(a.attributes || {}),
+                              ),
                             ))
                         : y &&
                           y.point &&
@@ -9464,13 +9476,13 @@
                     Math.floor(this.plotX) - t,
                     this.plotY - t,
                     2 * t,
-                    2 * t
+                    2 * t,
                   );
                 }),
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -9596,7 +9608,7 @@
                     (d < n ? (d = n) : d > n + s && (d = n + s),
                     p < o ? (p = o) : p > o + a && (p = o + a),
                     (this.hasDragged = Math.sqrt(
-                      Math.pow(l - d, 2) + Math.pow(c - p, 2)
+                      Math.pow(l - d, 2) + Math.pow(c - p, 2),
                     )),
                     10 < this.hasDragged &&
                       ((n = e.isInsidePlot(l - n, c - o, {
@@ -9726,12 +9738,12 @@
                           (0 !== r && e
                             ? r
                             : 0 !== o
-                            ? o
-                            : 0 !== s
-                            ? s
-                            : n.series.index > t.series.index
-                            ? -1
-                            : 1);
+                              ? o
+                              : 0 !== s
+                                ? s
+                                : n.series.index > t.series.index
+                                  ? -1
+                                  : 1);
                       }
                       r && (n = t);
                     }),
@@ -9944,7 +9956,7 @@
                         !e.isInsidePlot(
                           t.chartX - e.plotLeft,
                           t.chartY - e.plotTop,
-                          { visiblePlotOnly: !0 }
+                          { visiblePlotOnly: !0 },
                         )) ||
                       (i && i.shouldStickOnContact(t)) ||
                       (this.inClass(t.target, "highcharts-no-tooltip")
@@ -9974,7 +9986,7 @@
                       e.isInsidePlot(
                         t.chartX - e.plotLeft,
                         t.chartY - e.plotTop,
-                        { visiblePlotOnly: !0 }
+                        { visiblePlotOnly: !0 },
                       ) ||
                       (i && i.shouldStickOnContact(t)) ||
                       this.inClass(t.target, "highcharts-tracker") ||
@@ -10022,10 +10034,16 @@
                             var e = i.bounds[t.horiz ? "h" : "v"],
                               n = t.minPixelPadding,
                               r = t.toPixels(
-                                Math.min(y(t.options.min, t.dataMin), t.dataMin)
+                                Math.min(
+                                  y(t.options.min, t.dataMin),
+                                  t.dataMin,
+                                ),
                               ),
                               o = t.toPixels(
-                                Math.max(y(t.options.max, t.dataMax), t.dataMax)
+                                Math.max(
+                                  y(t.options.max, t.dataMax),
+                                  t.dataMax,
+                                ),
                               ),
                               s = Math.max(r, o);
                             (e.min = Math.min(t.pos, Math.min(r, o) - n)),
@@ -10034,17 +10052,17 @@
                         }),
                         (e.res = !0))
                       : f
-                      ? this.runPointActions(e.normalize(t))
-                      : n.length &&
-                        (p(i, "touchpan", { originalEvent: t }, function () {
-                          g ||
-                            (e.selectionMarker = g =
-                              u({ destroy: s, touch: !0 }, i.plotBox)),
-                            e.pinchTranslate(n, r, c, g, d, a),
-                            (e.hasPinched = l),
-                            e.scaleGroups(c, d);
-                        }),
-                        e.res && ((e.res = !1), this.reset(!1, 0)));
+                        ? this.runPointActions(e.normalize(t))
+                        : n.length &&
+                          (p(i, "touchpan", { originalEvent: t }, function () {
+                            g ||
+                              (e.selectionMarker = g =
+                                u({ destroy: s, touch: !0 }, i.plotBox)),
+                              e.pinchTranslate(n, r, c, g, d, a),
+                              (e.hasPinched = l),
+                              e.scaleGroups(c, d);
+                          }),
+                          e.res && ((e.res = !1), this.reset(!1, 0)));
                 }),
                 (t.prototype.pinchTranslate = function (t, e, i, n, r, o) {
                   this.zoomHor &&
@@ -10060,7 +10078,7 @@
                   r,
                   o,
                   s,
-                  a
+                  a,
                 ) {
                   var l = this.chart,
                     c = t ? "x" : "y",
@@ -10164,7 +10182,7 @@
                     (!e || "touchmove" !== e.type) &&
                       (!!i || (h && h.directTouch && this.isDirectTouch)),
                     l,
-                    e
+                    e,
                   )),
                     (c = i.hoverPoint),
                     (h = i.hoverSeries);
@@ -10207,7 +10225,7 @@
                       function (e) {
                         var i = o[t.hoverChartIndex];
                         i && i.pointer.onDocumentMouseMove(e);
-                      }
+                      },
                     )),
                     this.eventsToUnbind.push(this.unDocMouseMove)),
                     r.axes.forEach(function (t) {
@@ -10243,16 +10261,16 @@
                     (n.onmousemove = this.onContainerMouseMove.bind(this)),
                     (n.onclick = this.onContainerClick.bind(this)),
                     this.eventsToUnbind.push(
-                      a(n, "mouseenter", this.onContainerMouseEnter.bind(this))
+                      a(n, "mouseenter", this.onContainerMouseEnter.bind(this)),
                     ),
                     this.eventsToUnbind.push(
-                      a(n, "mouseleave", this.onContainerMouseLeave.bind(this))
+                      a(n, "mouseleave", this.onContainerMouseLeave.bind(this)),
                     ),
                     t.unbindDocumentMouseUp ||
                       (t.unbindDocumentMouseUp = a(
                         r,
                         "mouseup",
-                        this.onDocumentMouseUp.bind(this)
+                        this.onDocumentMouseUp.bind(this),
                       ));
                   for (
                     var o = this.chart.renderTo.parentElement;
@@ -10262,7 +10280,7 @@
                     this.eventsToUnbind.push(
                       a(o, "scroll", function () {
                         delete i.chartPosition;
-                      })
+                      }),
                     ),
                       (o = o.parentElement);
                   e.hasTouch &&
@@ -10271,20 +10289,20 @@
                         n,
                         "touchstart",
                         this.onContainerTouchStart.bind(this),
-                        { passive: !1 }
-                      )
+                        { passive: !1 },
+                      ),
                     ),
                     this.eventsToUnbind.push(
                       a(n, "touchmove", this.onContainerTouchMove.bind(this), {
                         passive: !1,
-                      })
+                      }),
                     ),
                     t.unbindDocumentTouchEnd ||
                       (t.unbindDocumentTouchEnd = a(
                         r,
                         "touchend",
                         this.onDocumentTouchEnd.bind(this),
-                        { passive: !1 }
+                        { passive: !1 },
                       )));
                 }),
                 (t.prototype.setHoverChartIndex = function () {
@@ -10305,7 +10323,7 @@
                       i.isInsidePlot(
                         t.chartX - i.plotLeft,
                         t.chartY - i.plotTop,
-                        { visiblePlotOnly: !0 }
+                        { visiblePlotOnly: !0 },
                       ) && !i.openMenu)
                     ) {
                       if (
@@ -10316,7 +10334,7 @@
                           4 <=
                             Math.sqrt(
                               Math.pow(e[0].chartX - t.chartX, 2) +
-                                Math.pow(e[0].chartY - t.chartY, 2)
+                                Math.pow(e[0].chartY - t.chartY, 2),
                             );
                       y(n, !0) && this.pinch(t);
                     } else e && this.reset();
@@ -10344,7 +10362,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -10429,17 +10447,17 @@
                   t(
                     this.chart.container,
                     m ? "pointerdown" : "MSPointerDown",
-                    this.onContainerPointerDown
+                    this.onContainerPointerDown,
                   ),
                     t(
                       this.chart.container,
                       m ? "pointermove" : "MSPointerMove",
-                      this.onContainerPointerMove
+                      this.onContainerPointerMove,
                     ),
                     t(
                       a,
                       m ? "pointerup" : "MSPointerUp",
-                      this.onDocumentPointerUp
+                      this.onDocumentPointerUp,
                     );
                 }),
                 (i.prototype.destroy = function () {
@@ -10483,7 +10501,7 @@
                 i
               );
             })(e);
-          }
+          },
         ),
         e(
           i,
@@ -10565,7 +10583,7 @@
                             function () {
                               this.legend.proximatePositions(),
                                 this.legend.positionItems();
-                            }
+                            },
                           ))
                         : this.unchartrender && this.unchartrender());
                 }),
@@ -10576,7 +10594,7 @@
                       ((this.itemStyle = t.itemStyle),
                       (this.itemHiddenStyle = b(
                         this.itemStyle,
-                        t.itemHiddenStyle
+                        t.itemHiddenStyle,
                       ))),
                     (this.itemMarginTop = t.itemMarginTop || 0),
                     (this.itemMarginBottom = t.itemMarginBottom || 0),
@@ -10605,7 +10623,7 @@
                     ((i = i.symbol),
                     n &&
                       n[e ? "removeClass" : "addClass"](
-                        "highcharts-legend-item-hidden"
+                        "highcharts-legend-item-hidden",
                       ),
                     !this.chart.styledMode)
                   ) {
@@ -10652,7 +10670,7 @@
                         void 0,
                         function () {
                           v(e, "afterPositionItem", { item: t });
-                        }
+                        },
                       )),
                     o && ((o.x = r), (o.y = i));
                 }),
@@ -10676,7 +10694,7 @@
                   for (
                     t = 0,
                       e = "clipRect up down pager nav box title group".split(
-                        " "
+                        " ",
                       );
                     t < e.length;
                     t++
@@ -10726,7 +10744,7 @@
                           void 0,
                           t.useHTML,
                           void 0,
-                          "legend-title"
+                          "legend-title",
                         )
                         .attr({ zIndex: 1 })),
                       this.chart.styledMode || this.title.css(i.style),
@@ -10774,7 +10792,7 @@
                             "-series highcharts-color-" +
                             t.colorIndex +
                             (m ? " " + m : "") +
-                            (u ? " highcharts-series-" + t.index : "")
+                            (u ? " highcharts-series-" + t.index : ""),
                         )
                         .attr({ zIndex: 1 })
                         .add(this.scrollGroup)),
@@ -10787,7 +10805,7 @@
                       this.baseline ||
                         ((this.fontMetrics = n.fontMetrics(
                           i.styledMode ? 12 : a.fontSize,
-                          v
+                          v,
                         )),
                         (this.baseline =
                           this.fontMetrics.f + 3 + this.itemMarginTop),
@@ -10797,7 +10815,7 @@
                         r.squareSymbol &&
                           ((this.symbolWidth = x(
                             r.symbolWidth,
-                            Math.max(this.symbolHeight, 16)
+                            Math.max(this.symbolHeight, 16),
                           )),
                           (p = this.symbolWidth + s + c + (f ? 20 : 0)),
                           h && v.attr("x", this.symbolWidth + s))),
@@ -10824,12 +10842,12 @@
                       r.itemWidth || e.labelWidth || i.width + p),
                     (this.maxItemWidth = Math.max(
                       this.maxItemWidth,
-                      t.itemWidth
+                      t.itemWidth,
                     )),
                     (this.totalItemWidth += t.itemWidth),
                     (this.itemHeight = t.itemHeight =
                       Math.round(
-                        e.labelHeight || (i.height > 1.5 * n ? i.height : n)
+                        e.labelHeight || (i.height > 1.5 * n ? i.height : n),
                       ));
                 }),
                 (t.prototype.layoutItem = function (t) {
@@ -10863,7 +10881,7 @@
                       this.widthOption ||
                       Math.max(
                         (n ? this.itemX - i - (t.checkbox ? 0 : a) : e) + i,
-                        this.offsetWidth
+                        this.offsetWidth,
                       ));
                 }),
                 (t.prototype.getAllItems = function () {
@@ -10875,7 +10893,7 @@
                         x(i.showInLegend, !f(i.linkedTo) && void 0, !0) &&
                         (t = t.concat(
                           (e.legendItem || {}).labels ||
-                            ("point" === i.legendType ? e.data : e)
+                            ("point" === i.legendType ? e.data : e),
                         ));
                     }),
                     v(this, "afterGetAllItems", { allItems: t }),
@@ -10887,10 +10905,10 @@
                   return this.proximate
                     ? t.align.charAt(0) + "tv"
                     : t.floating
-                    ? ""
-                    : t.align.charAt(0) +
-                      t.verticalAlign.charAt(0) +
-                      t.layout.charAt(0);
+                      ? ""
+                      : t.align.charAt(0) +
+                        t.verticalAlign.charAt(0) +
+                        t.layout.charAt(0);
                 }),
                 (t.prototype.adjustMargins = function (t, e) {
                   var i = this.chart,
@@ -10913,7 +10931,7 @@
                             [1, -1, -1, 1][s] * n[s % 2 ? "x" : "y"] +
                             x(n.margin, 12) +
                             e[s] +
-                            (i.titleOffset[s] || 0)
+                            (i.titleOffset[s] || 0),
                         ));
                     });
                 }),
@@ -10931,7 +10949,7 @@
                             o ? n.points : n.points.slice(0).reverse(),
                             function (t) {
                               return y(t.plotY);
-                            }
+                            },
                           )),
                         (o =
                           this.itemMarginTop +
@@ -11024,8 +11042,8 @@
                         s.crisp.call(
                           {},
                           { x: 0, y: 0, width: r, height: l },
-                          s.strokeWidth()
-                        )
+                          s.strokeWidth(),
+                        ),
                       ),
                     o[a ? "show" : "hide"](),
                     t.styledMode &&
@@ -11057,7 +11075,7 @@
                         verticalAlign: this.proximate ? "top" : i.verticalAlign,
                       }),
                       !0,
-                      t
+                      t,
                     );
                 }),
                 (t.prototype.handleOverflow = function (t) {
@@ -11251,7 +11269,7 @@
                         .on("mouseout", function () {
                           r.chart.styledMode ||
                             e.css(
-                              b(t.visible ? r.itemStyle : r.itemHiddenStyle)
+                              b(t.visible ? r.itemStyle : r.itemHiddenStyle),
                             ),
                             h(""),
                             s.removeClass(l),
@@ -11279,7 +11297,7 @@
                       defaultChecked: t.selected,
                     },
                     this.options.itemCheckboxStyle,
-                    this.chart.container
+                    this.chart.container,
                   )),
                     u(t.checkbox, "click", function (e) {
                       v(
@@ -11288,14 +11306,14 @@
                         { checked: e.target.checked, item: t },
                         function () {
                           t.select();
-                        }
+                        },
                       );
                     });
                 }),
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -11338,7 +11356,7 @@
               })(r || (r = {})),
               r
             );
-          }
+          },
         ),
         e(
           i,
@@ -11651,7 +11669,7 @@
                             F(
                               t,
                               "afterSetExtremes",
-                              j(t.eventArgs, t.getExtremes())
+                              j(t.eventArgs, t.getExtremes()),
                             ),
                               delete t.eventArgs;
                           })),
@@ -11736,7 +11754,7 @@
                     n = this.options[t] = Y(
                       !this.styledMode && { style: n },
                       this.options[t],
-                      e
+                      e,
                     );
                     var r = this[t];
                     r && e && (this[t] = r = r.destroy()),
@@ -11777,8 +11795,8 @@
                               ? -3
                               : 0
                             : "top" === a
-                            ? e[0] + 2
-                            : 0),
+                              ? e[0] + 2
+                              : 0),
                         o)
                       ) {
                         this.styledMode || (r = s.style && s.style.fontSize),
@@ -11792,7 +11810,7 @@
                         o.align(
                           j({ y: "bottom" === a ? r : t + r, height: l }, s),
                           !1,
-                          "spacingBox"
+                          "spacingBox",
                         ),
                           s.floating ||
                             ("top" === a
@@ -11828,14 +11846,14 @@
                       I(t) || (this.containerHeight = G(i, "height")),
                       (this.chartWidth = Math.max(
                         0,
-                        e || this.containerWidth || 600
+                        e || this.containerWidth || 600,
                       )),
                       (this.chartHeight = Math.max(
                         0,
                         K(t, this.chartWidth) ||
                           (1 < this.containerHeight
                             ? this.containerHeight
-                            : 400)
+                            : 400),
                       ));
                   }),
                   (t.prototype.temporaryDisplay = function (t) {
@@ -11868,7 +11886,7 @@
                             e.style.setProperty(
                               "display",
                               "block",
-                              "important"
+                              "important",
                             )),
                         (e = e.parentNode) !== C.body);
 
@@ -11912,7 +11930,7 @@
                             "touch-action": "manipulation",
                             outline: "none",
                           },
-                          i.style || {}
+                          i.style || {},
                         )),
                       (this.container = n = P("div", { id: n }, t, r)),
                       (this._cursor = n.style.cursor),
@@ -11925,7 +11943,7 @@
                         void 0,
                         i.forExport,
                         e.exporting && e.exporting.allowHTML,
-                        this.styledMode
+                        this.styledMode,
                       )),
                       v(void 0, this),
                       this.setClassName(i.className),
@@ -11948,7 +11966,7 @@
                         !I(i[2]) &&
                         (this.marginBottom = Math.max(
                           this.marginBottom,
-                          n[2] + e[2]
+                          n[2] + e[2],
                         )),
                       this.legend &&
                         this.legend.display &&
@@ -11992,7 +12010,7 @@
                             function () {
                               e.container && e.setSize(void 0, void 0, !1);
                             },
-                            t ? 100 : 0
+                            t ? 100 : 0,
                           ))),
                         (e.containerWidth = o),
                         (e.containerHeight = i));
@@ -12026,7 +12044,7 @@
                             width: n.chartWidth + "px",
                             height: n.chartHeight + "px",
                           },
-                          i
+                          i,
                         ),
                       n.setChartSize(!0),
                       r.setSize(n.chartWidth, n.chartHeight, i),
@@ -12084,11 +12102,13 @@
                         x: a,
                         y: l,
                         width: Math.floor(
-                          this.plotSizeX - Math.max(o, u[1]) / 2 - a
+                          this.plotSizeX - Math.max(o, u[1]) / 2 - a,
                         ),
                         height: Math.max(
                           0,
-                          Math.floor(this.plotSizeY - Math.max(o, u[2]) / 2 - l)
+                          Math.floor(
+                            this.plotSizeY - Math.max(o, u[2]) / 2 - l,
+                          ),
                         ),
                       }),
                       t ||
@@ -12105,12 +12125,11 @@
                     ["margin", "spacing"].forEach(function (i) {
                       var n = e[i],
                         r = U(n) ? n : [n, n, n, n];
-                      ["Top", "Right", "Bottom", "Left"].forEach(function (
-                        n,
-                        o
-                      ) {
-                        t[i][o] = V(e[i + n], r[o]);
-                      });
+                      ["Top", "Right", "Bottom", "Left"].forEach(
+                        function (n, o) {
+                          t[i][o] = V(e[i + n], r[o]);
+                        },
+                      );
                     }),
                       T.forEach(function (e, i) {
                         t[e] = V(t.margin[i], t.spacing[i]);
@@ -12200,8 +12219,8 @@
                       b[x](
                         b.crisp(
                           { x: h, y: u, width: d, height: p },
-                          -b.strokeWidth()
-                        )
+                          -b.strokeWidth(),
+                        ),
                       ),
                       (this.isDirtyBox = !1),
                       F(this, "afterDrawChartBox");
@@ -12245,7 +12264,7 @@
                           (e.visible = V(
                             e.options.visible,
                             i.options.visible,
-                            e.visible
+                            e.visible,
                           )));
                       }),
                       F(this, "afterLinkSeries");
@@ -12300,7 +12319,7 @@
                       });
                     var a = (this.plotHeight = Math.max(
                       this.plotHeight - o,
-                      0
+                      0,
                     ));
                     t.forEach(function (t) {
                       t.setScale();
@@ -12408,11 +12427,11 @@
                       t.temporaryDisplay(!0));
                   }),
                   (t.prototype.onload = function () {
-                    this.callbacks
-                      .concat([this.callback])
-                      .forEach(function (t) {
-                        t && void 0 !== this.index && t.apply(this, [this]);
-                      }, this),
+                    this.callbacks.concat([this.callback]).forEach(function (
+                      t,
+                    ) {
+                      t && void 0 !== this.index && t.apply(this, [this]);
+                    }, this),
                       F(this, "load"),
                       F(this, "render"),
                       I(this.index) &&
@@ -12436,7 +12455,7 @@
                         R(
                           'Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning.',
                           !1,
-                          this
+                          this,
                         ));
                   }),
                   (t.prototype.addSeries = function (t, e, i) {
@@ -12474,7 +12493,10 @@
                     return (
                       (t = new e(
                         this,
-                        Y(i.axis, { index: this[t].length, isX: "xAxis" === t })
+                        Y(i.axis, {
+                          index: this[t].length,
+                          isX: "xAxis" === t,
+                        }),
                       )),
                       V(i.redraw, !0) && this.redraw(i.animation),
                       t
@@ -12504,7 +12526,7 @@
                               "highcharts-loading highcharts-loading-hidden",
                           },
                           null,
-                          e.container
+                          e.container,
                         )),
                       s ||
                         ((e.loadingSpan = s =
@@ -12512,7 +12534,7 @@
                             "span",
                             { className: "highcharts-loading-inner" },
                             null,
-                            o
+                            o,
                           )),
                         M(e, "redraw", r)),
                       (o.className = "highcharts-loading"),
@@ -12525,7 +12547,7 @@
                           g(
                             o,
                             { opacity: n.style.opacity || 0.5 },
-                            { duration: n.showDuration || 0 }
+                            { duration: n.showDuration || 0 },
                           ))),
                       (e.loadingShown = !0),
                       r();
@@ -12545,7 +12567,7 @@
                             complete: function () {
                               D(e, { display: "none" });
                             },
-                          }
+                          },
                         )),
                       (this.loadingShown = !1);
                   }),
@@ -12601,10 +12623,10 @@
                         s[i] && "function" == typeof s[i].update
                           ? s[i].update(e, !1)
                           : "function" == typeof s[a[i]]
-                          ? s[a[i]](e)
-                          : "colors" !== i &&
-                            -1 === s.collectionsWithUpdate.indexOf(i) &&
-                            Y(!0, s.options[i], t[i]),
+                            ? s[a[i]](e)
+                            : "colors" !== i &&
+                              -1 === s.collectionsWithUpdate.indexOf(i) &&
+                              Y(!0, s.options[i], t[i]),
                           "chart" !== i &&
                             -1 !== s.propsRequireUpdateSeries.indexOf(i) &&
                             (r = !0);
@@ -12636,7 +12658,7 @@
                                     s,
                                     [t]
                                       .concat(s.collectionsWithInit[e][1] || [])
-                                      .concat([!1])
+                                      .concat([!1]),
                                   ).touched = !0);
                             }),
                             i &&
@@ -12728,7 +12750,7 @@
                             i.isInsidePlot(
                               n.mouseDownX - i.plotLeft,
                               n.mouseDownY - i.plotTop,
-                              { axis: o }
+                              { axis: o },
                             )) ||
                             !I(i.inverted ? n.mouseDownX : n.mouseDownY)) &&
                             ((e = o.zoom(t.min, t.max)),
@@ -12743,8 +12765,8 @@
                           V(
                             i.options.chart.animation,
                             t && t.animation,
-                            100 > i.pointCount
-                          )
+                            100 > i.pointCount,
+                          ),
                         );
                   }),
                   (t.prototype.pan = function (t, e) {
@@ -12804,12 +12826,12 @@
                                   ((g.startMin = Math.min(
                                     V(t.options.threshold, 1 / 0),
                                     e.dataMin,
-                                    g.startMin
+                                    g.startMin,
                                   )),
                                   (g.startMax = Math.max(
                                     V(t.options.threshold, -1 / 0),
                                     e.dataMax,
-                                    g.startMax
+                                    g.startMax,
                                   )));
                             }),
                             (h = Math.min(
@@ -12817,16 +12839,16 @@
                               c
                                 ? u.min
                                 : e.toValue(
-                                    e.toPixels(u.min) - e.minPixelPadding
-                                  )
+                                    e.toPixels(u.min) - e.minPixelPadding,
+                                  ),
                             )),
                             (p = Math.max(
                               V(g && g.startMax, u.dataMax),
                               c
                                 ? u.max
                                 : e.toValue(
-                                    e.toPixels(u.max) + e.minPixelPadding
-                                  )
+                                    e.toPixels(u.max) + e.minPixelPadding,
+                                  ),
                             )),
                             (e.panningState = g),
                             e.isOrdinal ||
@@ -12869,20 +12891,20 @@
                 collectionsWithUpdate: ["xAxis", "yAxis", "series"],
                 propsRequireDirtyBox:
                   "backgroundColor borderColor borderWidth borderRadius plotBackgroundColor plotBackgroundImage plotBorderColor plotBorderWidth plotShadow shadow".split(
-                    " "
+                    " ",
                   ),
                 propsRequireReflow:
                   "margin marginTop marginRight marginBottom marginLeft spacing spacingTop spacingRight spacingBottom spacingLeft".split(
-                    " "
+                    " ",
                   ),
                 propsRequireUpdateSeries:
                   "chart.inverted chart.polar chart.ignoreHiddenSeries chart.type colors plotOptions time tooltip".split(
-                    " "
+                    " ",
                   ),
               }),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -12930,7 +12952,7 @@
                             t - r,
                             2 * r,
                             2 * r,
-                            u
+                            u,
                           )
                           .addClass("highcharts-point")
                           .add(c)),
@@ -12946,7 +12968,7 @@
                         t.baseline - i + 1,
                         r ? i : t.symbolWidth,
                         i,
-                        n(t.options.symbolRadius, i / 2)
+                        n(t.options.symbolRadius, i / 2),
                       )
                       .addClass("highcharts-point")
                       .attr({ zIndex: 3 })
@@ -12955,7 +12977,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(i, "Core/Series/SeriesDefaults.js", [], function () {
           return {
@@ -13181,7 +13203,7 @@
                         : function (t) {
                             Array.prototype[e].apply(
                               i[t + "Data"],
-                              Array.prototype.slice.call(n, 2)
+                              Array.prototype.slice.call(n, 2),
                             );
                           };
                     i.parallelArrays.forEach(r);
@@ -13211,9 +13233,9 @@
                         "day" === n
                           ? o.set("Date", i, o.get("Date", i) + e)
                           : "month" === n
-                          ? o.set("Month", i, o.get("Month", i) + e)
-                          : "year" === n &&
-                            o.set("FullYear", i, o.get("FullYear", i) + e),
+                            ? o.set("Month", i, o.get("Month", i) + e)
+                            : "year" === n &&
+                              o.set("FullYear", i, o.get("FullYear", i) + e),
                         (e = i.getTime() - s)),
                       r && P(t) ? s + e : ((this.xIncrement = s + e), s)
                     );
@@ -13244,7 +13266,7 @@
                         s,
                         n.series,
                         r.plotOptions && r.plotOptions[this.type],
-                        t
+                        t,
                       )),
                       (this.tooltipOptions = I(
                         d.tooltip,
@@ -13253,7 +13275,7 @@
                         i.tooltip.userOptions,
                         n.series && n.series.tooltip,
                         n[this.type].tooltip,
-                        t.tooltip
+                        t.tooltip,
                       )),
                       (this.stickyTracking = N(
                         t.stickyTracking,
@@ -13261,7 +13283,7 @@
                         a.series && a.series.stickyTracking,
                         !(
                           !this.tooltipOptions.shared || this.noSharedTooltip
-                        ) || r.stickyTracking
+                        ) || r.stickyTracking,
                       )),
                       null === s.marker && delete r.marker,
                       (this.zoneAxis = r.zoneAxis),
@@ -13282,7 +13304,7 @@
                         n.push(
                           e
                             ? {}
-                            : { color: this.color, fillColor: this.fillColor }
+                            : { color: this.color, fillColor: this.fillColor },
                         ),
                       M(this, "afterSetOptions", { options: r }),
                       r
@@ -13313,12 +13335,13 @@
                     this.chart.styledMode
                       ? this.getCyclic("color")
                       : this.options.colorByPoint
-                      ? (this.color = "#cccccc")
-                      : this.getCyclic(
-                          "color",
-                          this.options.color || d.plotOptions[this.type].color,
-                          this.chart.options.colors
-                        );
+                        ? (this.color = "#cccccc")
+                        : this.getCyclic(
+                            "color",
+                            this.options.color ||
+                              d.plotOptions[this.type].color,
+                            this.chart.options.colors,
+                          );
                   }),
                   (t.prototype.getPointsCollection = function () {
                     return (
@@ -13329,7 +13352,7 @@
                     this.getCyclic(
                       "symbol",
                       this.options.marker.symbol,
-                      this.chart.options.symbols
+                      this.chart.options.symbols,
                     );
                   }),
                   (t.prototype.findPointIndex = function (t, e) {
@@ -13390,7 +13413,7 @@
                             (C(t) &&
                               this.pointClass.prototype.optionsToObject.call(
                                 { series: this },
-                                t
+                                t,
                               )) ||
                             {},
                           u = n.x;
@@ -13399,10 +13422,10 @@
                             void 0 === n
                               ? l.push(t)
                               : a[n] && t !== o.data[n]
-                              ? (a[n].update(t, !1, null, !1),
-                                (a[n].touched = !0),
-                                c && (r = n + 1))
-                              : a[n] && (a[n].touched = !0),
+                                ? (a[n].update(t, !1, null, !1),
+                                  (a[n].touched = !0),
+                                  c && (r = n + 1))
+                                : a[n] && (a[n].touched = !0),
                             (!h ||
                               e !== n ||
                               (s && s.enabled) ||
@@ -13545,7 +13568,7 @@
                           (C(e) &&
                             t.pointClass.prototype.optionsToObject.call(
                               { series: t },
-                              e
+                              e,
                             )) ||
                           {}
                         );
@@ -13824,11 +13847,11 @@
                                 0,
                                 1,
                                 h,
-                                "flags" === this.type
+                                "flags" === this.type,
                               ),
                               -1e5,
-                              1e5
-                            )
+                              1e5,
+                            ),
                           )),
                         n && this.visible && k && k[v])
                       ) {
@@ -13849,7 +13872,7 @@
                           this.irregularWidths ||
                             y.setOffset(
                               this.pointXOffset || 0,
-                              this.barW || 0
+                              this.barW || 0,
                             )),
                         (m.yBottom = C(T)
                           ? x(a.translate(T, 0, 1, 0, 1), -1e5, 1e5)
@@ -13970,7 +13993,7 @@
                       _(this.chart.sharedClips, function (e, i, n) {
                         e &&
                           !t.chart.container.querySelector(
-                            '[clip-path="url(#'.concat(e.id, ')"]')
+                            '[clip-path="url(#'.concat(e.id, ')"]'),
                           ) &&
                           (e.destroy(), delete n[i]);
                       }),
@@ -13989,7 +14012,7 @@
                         r.enabled,
                         !(s && !s.isRadial) || null,
                         this.closestPointRangePx >=
-                          r.enabledThreshold * r.radius
+                          r.enabledThreshold * r.radius,
                       );
                     if (!1 !== r.enabled || this._hasPointMarkers)
                       for (e = 0; e < t.length; e++) {
@@ -14021,7 +14044,7 @@
                                     p.y,
                                     p.width,
                                     p.height,
-                                    u ? h : r
+                                    u ? h : r,
                                   )
                                   .add(o)),
                               this.enabledDataSorting &&
@@ -14033,7 +14056,7 @@
                             i &&
                               !n.styledMode &&
                               i[c](
-                                this.pointAttribs(l, l.selected && "select")
+                                this.pointAttribs(l, l.selected && "select"),
                               ),
                             i && i.addClass(l.getClassName(), !0);
                         } else i && (l.graphic = i.destroy());
@@ -14052,7 +14075,7 @@
                         (s = N(
                           e && e.radius,
                           n && n.radius,
-                          s && s + ((n && n.radiusPlus) || 0)
+                          s && s + ((n && n.radiusPlus) || 0),
                         ))),
                       (t.hasImage = o && 0 === o.indexOf("url")),
                       t.hasImage && (s = 0),
@@ -14086,7 +14109,7 @@
                       (t = N(
                         e.lineWidth,
                         i.lineWidth,
-                        t + N(e.lineWidthPlus, i.lineWidthPlus, 0)
+                        t + N(e.lineWidthPlus, i.lineWidthPlus, 0),
                       )),
                       (o = e.fillColor || i.fillColor || o),
                       {
@@ -14167,13 +14190,13 @@
                             ? c.plotWidth
                             : 0
                           : w
-                          ? 0
-                          : m.toPixels(S.min) || 0),
+                            ? 0
+                            : m.toPixels(S.min) || 0),
                           (t = x(N(e, t), 0, g)),
                           (e = x(
                             Math.round(m.toPixels(N(u.value, S.max), !0) || 0),
                             0,
-                            g
+                            g,
                           )),
                           y && (t = e = m.toPixels(S.max)),
                           (n = Math.abs(t - e)),
@@ -14245,7 +14268,7 @@
                           (o.hasClass("highcharts-tracker")
                             ? " highcharts-tracker"
                             : ""),
-                        !0
+                        !0,
                       ),
                       o.attr(i)[s ? "attr" : "animate"](this.getPlotBox(e)),
                       o
@@ -14302,7 +14325,7 @@
                         "markers",
                         r,
                         o,
-                        a
+                        a,
                       )),
                       !1 !== i.clip && t.setClip(),
                       t.animate && e && t.animate(!0),
@@ -14339,7 +14362,7 @@
                         plotY: r ? n.len - t.chartX + n.pos : t.chartY - n.pos,
                       },
                       e,
-                      t
+                      t,
                     );
                   }),
                   (t.prototype.buildKDTree = function (t) {
@@ -14370,7 +14393,7 @@
                         },
                         e.options.kdNow || (t && "touchstart" === t.type)
                           ? 0
-                          : 1
+                          : 1,
                       );
                   }),
                   (t.prototype.searchKDTree = function (t, e, i) {
@@ -14459,7 +14482,7 @@
                           .addClass(
                             i
                               ? "highcharts-tracker-area"
-                              : "highcharts-tracker-line"
+                              : "highcharts-tracker-line",
                           )
                           .add(t.group)),
                         r.styledMode ||
@@ -14485,7 +14508,7 @@
                                 t.css({ cursor: e.cursor }),
                               f) &&
                               t.on("touchstart", c);
-                          }
+                          },
                         )),
                       M(this, "afterDrawTracker");
                   }),
@@ -14536,7 +14559,7 @@
                             o || { series: n },
                             "splice",
                             t,
-                            1
+                            1,
                           ),
                           o && o.destroy(),
                           (n.isDirty = !0),
@@ -14608,7 +14631,7 @@
                           "minY",
                           "maxY",
                           "minX",
-                          "maxX"
+                          "maxX",
                         ),
                         !1 !== t.visible && h.push("area", "graph"),
                         i.parallelArrays.forEach(function (t) {
@@ -14626,11 +14649,11 @@
                           pointStart: N(
                             s && s.series && s.series.pointStart,
                             r.pointStart,
-                            i.xData[0]
+                            i.xData[0],
                           ),
                         },
                         !d && { data: i.options.data },
-                        t
+                        t,
                       )),
                       d && t.data && (t.data = i.options.data),
                       (h = [
@@ -14705,7 +14728,7 @@
                           N(
                             i && i[this.type] && i[this.type][t],
                             i && i.series && i.series[t],
-                            e
+                            e,
                           );
                   }),
                   (t.prototype.onMouseOver = function () {
@@ -14741,7 +14764,7 @@
                       s = n.states,
                       a = N(
                         s[t || "normal"] && s[t || "normal"].animation,
-                        i.chart.options.chart.animation
+                        i.chart.options.chart.animation,
                       ),
                       l = n.lineWidth,
                       c = 0,
@@ -14755,7 +14778,7 @@
                               (i.state &&
                                 e.removeClass("highcharts-series-" + i.state),
                               t && e.addClass("highcharts-series-" + t));
-                          }
+                          },
                         ),
                         (i.state = t),
                         !i.chart.styledMode))
@@ -14873,7 +14896,7 @@
               (a.series = t),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -14933,7 +14956,7 @@
                           this[i] = n - r[t.side].value;
                           var o = e.prototype.getPlotLinePath.apply(
                             this,
-                            arguments
+                            arguments,
                           );
                           return (this[i] = n), o;
                         })
@@ -14961,13 +14984,13 @@
                     "div",
                     { className: "highcharts-scrolling-parent" },
                     { position: "relative" },
-                    this.renderTo
+                    this.renderTo,
                   )),
                   (this.scrollingContainer = l(
                     "div",
                     { className: "highcharts-scrolling" },
                     i,
-                    this.scrollingParent
+                    this.scrollingParent,
                   )),
                   a(this.scrollingContainer, "scroll", function () {
                     e.pointer &&
@@ -14979,7 +15002,7 @@
                     "div",
                     { className: "highcharts-inner-container" },
                     null,
-                    this.scrollingContainer
+                    this.scrollingContainer,
                   )),
                   this.innerContainer.appendChild(this.container),
                   (this.setUpScrolling = null);
@@ -14990,20 +15013,20 @@
                   i = this.fixedRenderer,
                   n =
                     ".highcharts-contextbutton .highcharts-credits .highcharts-legend .highcharts-legend-checkbox .highcharts-navigator-series .highcharts-navigator-xaxis .highcharts-navigator-yaxis .highcharts-navigator .highcharts-reset-zoom .highcharts-drillup-button .highcharts-scrollbar .highcharts-subtitle .highcharts-title".split(
-                      " "
+                      " ",
                     );
                 this.scrollablePixelsX && !this.inverted
                   ? (t = ".highcharts-yaxis")
                   : (this.scrollablePixelsX && this.inverted) ||
-                    (this.scrollablePixelsY && !this.inverted)
-                  ? (t = ".highcharts-xaxis")
-                  : this.scrollablePixelsY &&
-                    this.inverted &&
-                    (t = ".highcharts-yaxis"),
+                      (this.scrollablePixelsY && !this.inverted)
+                    ? (t = ".highcharts-xaxis")
+                    : this.scrollablePixelsY &&
+                      this.inverted &&
+                      (t = ".highcharts-yaxis"),
                   t &&
                     n.push(
                       t + ":not(.highcharts-radial-axis)",
-                      t + "-labels:not(.highcharts-radial-axis-labels)"
+                      t + "-labels:not(.highcharts-radial-axis-labels)",
                     ),
                   n.forEach(function (t) {
                     [].forEach.call(e.querySelectorAll(t), function (t) {
@@ -15032,12 +15055,12 @@
                         top: 0,
                       },
                       null,
-                      !0
+                      !0,
                     )),
                     this.scrollingContainer &&
                       this.scrollingContainer.parentNode.insertBefore(
                         this.fixedDiv,
-                        this.scrollingContainer
+                        this.scrollingContainer,
                       ),
                     (this.renderTo.style.overflow = "visible"),
                     (this.fixedRenderer = e =
@@ -15045,7 +15068,7 @@
                         this.fixedDiv,
                         this.chartWidth,
                         this.chartHeight,
-                        this.options.chart.style
+                        this.options.chart.style,
                       )),
                     (this.scrollableMask = e
                       .path()
@@ -15061,7 +15084,7 @@
                     a(this, "afterLayOutTitles", this.moveFixedElements))
                   : this.fixedRenderer.setSize(
                       this.chartWidth,
-                      this.chartHeight
+                      this.chartHeight,
                     ),
                   (this.scrollableDirty || t) &&
                     ((this.scrollableDirty = !1), this.moveFixedElements()),
@@ -15112,19 +15135,19 @@
                       ["Z"],
                     ]
                   : this.scrollablePixelsY
-                  ? [
-                      ["M", i, 0],
-                      ["L", i, this.plotTop - 1],
-                      ["L", n, this.plotTop - 1],
-                      ["L", n, 0],
-                      ["Z"],
-                      ["M", i, c],
-                      ["L", i, this.chartHeight],
-                      ["L", n, this.chartHeight],
-                      ["L", n, c],
-                      ["Z"],
-                    ]
-                  : [["M", 0, 0]]),
+                    ? [
+                        ["M", i, 0],
+                        ["L", i, this.plotTop - 1],
+                        ["L", n, this.plotTop - 1],
+                        ["L", n, 0],
+                        ["Z"],
+                        ["M", i, c],
+                        ["L", i, this.chartHeight],
+                        ["L", n, this.chartHeight],
+                        ["L", n, c],
+                        ["Z"],
+                      ]
+                    : [["M", 0, 0]]),
                   "adjustHeight" !== this.redrawTrigger &&
                     this.scrollableMask.attr({ d: t });
               }),
@@ -15134,7 +15157,7 @@
               a(n, "show", function () {
                 this.chart.scrollableDirty = !0;
               });
-          }
+          },
         ),
         e(
           i,
@@ -15193,7 +15216,7 @@
                           null,
                           i.useHTML,
                           !1,
-                          "stack-labels"
+                          "stack-labels",
                         )),
                         (r = {
                           r: i.borderRadius || 0,
@@ -15219,7 +15242,7 @@
                     0,
                     0,
                     0,
-                    1
+                    1,
                   )),
                     (i = c.translate(i || 0)),
                     (t = l(s, h.xAxis[0].translate(this.x)) + t),
@@ -15240,14 +15263,14 @@
                           ? -s
                           : s
                         : "right" === u
-                        ? t.width
-                        : h.inverted && "center" === u
-                        ? t.width / 2
-                        : h.inverted
-                        ? i
-                          ? t.width + s
-                          : -s
-                        : t.width / 2),
+                          ? t.width
+                          : h.inverted && "center" === u
+                            ? t.width / 2
+                            : h.inverted
+                              ? i
+                                ? t.width + s
+                                : -s
+                              : t.width / 2),
                     (i = h.inverted ? t.height / 2 : i ? -s : t.height),
                     (this.alignOptions.x = l(this.options.x, 0)),
                     (this.alignOptions.y = l(this.options.y, 0)),
@@ -15256,7 +15279,7 @@
                     e.align(this.alignOptions, null, c),
                     h.isInsidePlot(
                       e.alignAttr.x + u - this.alignOptions.x,
-                      e.alignAttr.y + i - this.alignOptions.y
+                      e.alignAttr.y + i - this.alignOptions.y,
                     )
                       ? e.show()
                       : (e.hide(), (n = !1)),
@@ -15267,7 +15290,7 @@
                         this.alignOptions,
                         e.alignAttr,
                         t,
-                        c
+                        c,
                       ),
                     e.attr({ x: e.alignAttr.x, y: e.alignAttr.y }),
                     l(!n && this.options.crop, !0) &&
@@ -15299,7 +15322,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -15434,7 +15457,7 @@
                             e.options.stackLabels,
                             !!u,
                             b,
-                            l
+                            l,
                           ))),
                     (k = g[k][b]),
                     null !== x
@@ -15455,9 +15478,9 @@
                               Math.max(u.total, k.total) + Math.abs(x) || 0))
                           : (k.total = v(k.total + (Math.abs(x) || 0))))
                       : "group" === i
-                      ? (w(x) && (x = x[0]),
-                        null !== x && (k.total = (k.total || 0) + 1))
-                      : (k.total = v(k.total + (x || 0))),
+                        ? (w(x) && (x = x[0]),
+                          null !== x && (k.total = (k.total || 0) + 1))
+                        : (k.total = v(k.total + (x || 0))),
                     (k.cumulative =
                       "group" === i
                         ? (k.total || 1) - 1
@@ -15539,7 +15562,7 @@
                       e,
                       (t.options.stackLabels &&
                         t.options.stackLabels.animation) ||
-                        !1
+                        !1,
                     );
                     var r = (this.stackTotalGroup =
                       this.stackTotalGroup ||
@@ -15577,7 +15600,7 @@
               })(p || (p = {})),
               p
             );
-          }
+          },
         ),
         e(
           i,
@@ -15637,7 +15660,7 @@
                     n ||
                       r[0].push(
                         e.lineColor || this.color || "#cccccc",
-                        e.dashStyle
+                        e.dashStyle,
                       ),
                       (r = t.getZonesGraphs(r)).forEach(function (r, o) {
                         var s = r[0],
@@ -15685,7 +15708,7 @@
                       (t = this.getValidPoints(
                         t,
                         !1,
-                        !(s.connectNulls && !e && !i)
+                        !(s.connectNulls && !e && !i),
                       )).forEach(function (h, u) {
                         var d = h.plotX,
                           p = h.plotY,
@@ -15694,26 +15717,34 @@
                           h.isNull && !r(e) && 0 < u
                             ? (n = !s.connectNulls)
                             : h.isNull && !e
-                            ? (n = !0)
-                            : (0 === u || n
-                                ? (u = [["M", h.plotX, h.plotY]])
-                                : o.getPointSpline
-                                ? (u = [o.getPointSpline(t, h, u)])
-                                : c
-                                ? (u =
-                                    1 === c
-                                      ? [["L", f.plotX, p]]
-                                      : 2 === c
-                                      ? [
-                                          ["L", (f.plotX + d) / 2, f.plotY],
-                                          ["L", (f.plotX + d) / 2, p],
-                                        ]
-                                      : [["L", d, f.plotY]]).push(["L", d, p])
-                                : (u = [["L", d, p]]),
-                              l.push(h.x),
-                              c && (l.push(h.x), 2 === c && l.push(h.x)),
-                              a.push.apply(a, u),
-                              (n = !1));
+                              ? (n = !0)
+                              : (0 === u || n
+                                  ? (u = [["M", h.plotX, h.plotY]])
+                                  : o.getPointSpline
+                                    ? (u = [o.getPointSpline(t, h, u)])
+                                    : c
+                                      ? (u =
+                                          1 === c
+                                            ? [["L", f.plotX, p]]
+                                            : 2 === c
+                                              ? [
+                                                  [
+                                                    "L",
+                                                    (f.plotX + d) / 2,
+                                                    f.plotY,
+                                                  ],
+                                                  ["L", (f.plotX + d) / 2, p],
+                                                ]
+                                              : [["L", d, f.plotY]]).push([
+                                          "L",
+                                          d,
+                                          p,
+                                        ])
+                                      : (u = [["L", d, p]]),
+                                l.push(h.x),
+                                c && (l.push(h.x), 2 === c && l.push(h.x)),
+                                a.push.apply(a, u),
+                                (n = !1));
                       }),
                       (a.xMap = l),
                       (o.graphPath = a)
@@ -15732,7 +15763,7 @@
                           this.chart.styledMode ||
                             i.push(
                               e.color || this.color,
-                              e.dashStyle || this.options.dashStyle
+                              e.dashStyle || this.options.dashStyle,
                             ),
                           t.push(i);
                       }, this),
@@ -15746,7 +15777,7 @@
               e.registerSeriesType("line", i),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -15838,7 +15869,7 @@
                           e.chart.styledMode ||
                             (s.fill = c(
                               t[3],
-                              o(t[2]).setOpacity(c(n.fillOpacity, 0.75)).get()
+                              o(t[2]).setOpacity(c(n.fillOpacity, 0.75)).get(),
                             )),
                           a[l](s),
                           (a.startX = i.xMap),
@@ -15990,7 +16021,7 @@
               i.registerSeriesType("area", n),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -16097,7 +16128,7 @@
               t.registerSeriesType("spline", e),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -16162,12 +16193,12 @@
                   getStackPoints: o.getStackPoints,
                   drawGraph: o.drawGraph,
                   drawLegendSymbol: e.drawRectangle,
-                }
+                },
               ),
               i.registerSeriesType("areaspline", n),
               n
             );
-          }
+          },
         ),
         e(i, "Series/Column/ColumnSeriesDefaults.js", [], function () {
           return {
@@ -16281,7 +16312,7 @@
                               ((o[s] = a + n.pos * (i.pos - a)),
                               e.group.attr(o));
                           },
-                        })
+                        }),
                       );
                     }
                   }),
@@ -16329,14 +16360,14 @@
                             i.closestPointRange ||
                             i.tickInterval ||
                             1),
-                        i.len
+                        i.len,
                       ),
                       c = l * e.groupPadding,
                       h = (l - 2 * c) / (a || 1);
                     return (
                       (e = Math.min(
                         e.maxPointWidth || i.len,
-                        b(e.pointWidth, h * (1 - 2 * e.pointPadding))
+                        b(e.pointWidth, h * (1 - 2 * e.pointPadding)),
                       )),
                       (t.columnMetrics = {
                         width: e,
@@ -16402,7 +16433,7 @@
                                   (a = t.indexOf(r.index)),
                                   (l = t.length)));
                           }
-                        }
+                        },
                       ),
                         (t =
                           (i.plotX || 0) +
@@ -16468,7 +16499,7 @@
                                 d(
                                   s.len + s.pos - e.plotLeft - x,
                                   s.pos - e.plotLeft,
-                                  s.len + s.pos - e.plotLeft
+                                  s.len + s.pos - e.plotLeft,
                                 ),
                                 r.len + r.pos - e.plotTop - k - E / 2,
                                 C,
@@ -16478,7 +16509,7 @@
                                 d(
                                   x + s.pos - e.plotTop,
                                   s.pos - e.plotTop,
-                                  s.len + s.pos - e.plotTop
+                                  s.len + s.pos - e.plotTop,
                                 ),
                                 C,
                               ]),
@@ -16486,13 +16517,13 @@
                             t.pointClass.prototype.shapeType || "rect"),
                           (n.shapeArgs = t.crispCol.apply(
                             t,
-                            n.isNull ? [k, l, E, 0] : [k, S, E, C]
+                            n.isNull ? [k, l, E, 0] : [k, S, E, C],
                           ));
                       });
                   }),
                   (e.prototype.drawGraph = function () {
                     this.group[this.dense ? "addClass" : "removeClass"](
-                      "highcharts-dense-data"
+                      "highcharts-dense-data",
                     );
                   }),
                   (e.prototype.pointAttribs = function (t, e) {
@@ -16521,7 +16552,7 @@
                         t &&
                         ((e = (t = y(
                           i.states[e],
-                          (t.options.states && t.options.states[e]) || {}
+                          (t.options.states && t.options.states[e]) || {},
                         )).brightness),
                         (s =
                           t.color ||
@@ -16573,11 +16604,11 @@
                           r.borderRadius && a[c]({ r: r.borderRadius }),
                           n.styledMode ||
                             a[c](
-                              i.pointAttribs(t, t.selected && "select")
+                              i.pointAttribs(t, t.selected && "select"),
                             ).shadow(
                               !1 !== t.allowShadow && r.shadow,
                               null,
-                              r.stacking && !r.borderRadius
+                              r.stacking && !r.borderRadius,
                             ),
                           a &&
                             (a.addClass(t.getClassName(), !0),
@@ -16602,8 +16633,8 @@
                       (e = m(t.dataLabels)
                         ? t.dataLabels
                         : t.dataLabel
-                        ? [t.dataLabel]
-                        : []),
+                          ? [t.dataLabel]
+                          : []),
                         t.graphic && (t.graphic.element.point = t),
                         e.forEach(function (e) {
                           e.div ? (e.div.point = t) : (e.element.point = t);
@@ -16650,7 +16681,7 @@
               s.registerSeriesType("column", a),
               a
             );
-          }
+          },
         ),
         e(
           i,
@@ -16718,7 +16749,7 @@
                     var x = [0, 0],
                       w = l.renderer.fontMetrics(
                         l.styledMode ? void 0 : i.style.fontSize,
-                        e
+                        e,
                       ).b;
                     (n = a(
                       {
@@ -16727,7 +16758,7 @@
                         width: 0,
                         height: 0,
                       },
-                      n
+                      n,
                     )),
                       a(i, { width: g.width, height: g.height }),
                       f
@@ -16787,7 +16818,7 @@
                     v = m.backgroundColor;
                   m = m.plotBackgroundColor;
                   var y = u.getContrast(
-                      (h(m) && m) || (h(v) && v) || "#000000"
+                      (h(m) && m) || (h(v) && v) || "#000000",
                     ),
                     b = n.dataLabels;
                   if (
@@ -16800,9 +16831,9 @@
                           i.options.plotOptions.series.dataLabels,
                         i.options.plotOptions &&
                           i.options.plotOptions[e.type] &&
-                          i.options.plotOptions[e.type].dataLabels
+                          i.options.plotOptions[e.type].dataLabels,
                       ),
-                      b
+                      b,
                     )),
                     l(this, "drawDataLabels"),
                     c(b) || b.enabled || e._hasPointLabels)
@@ -16811,7 +16842,7 @@
                       "dataLabelsGroup",
                       "data-labels",
                       a ? "inherit" : "hidden",
-                      b.zIndex || 6
+                      b.zIndex || 6,
                     );
                     x.attr({ opacity: +a }),
                       !a &&
@@ -16822,8 +16853,8 @@
                         f(
                           g(
                             b,
-                            t.dlOptions || (t.options && t.options.dataLabels)
-                          )
+                            t.dlOptions || (t.options && t.options.dataLabels),
+                          ),
                         ).forEach(function (r, a) {
                           var l =
                               r.enabled &&
@@ -16862,11 +16893,11 @@
                                 r.color,
                                 v.color,
                                 e.color,
-                                "#000000"
+                                "#000000",
                               )),
                               "contrast" === v.color
                                 ? ((t.contrastColor = u.getContrast(
-                                    t.color || e.color
+                                    t.color || e.color,
                                   )),
                                   (v.color =
                                     (!s(g) && r.inside) || 0 > g || n.stacking
@@ -16926,7 +16957,7 @@
                                             null,
                                             r.useHTML,
                                             null,
-                                            "data-label"
+                                            "data-label",
                                           )),
                                     a || (t.dataLabel = h),
                                     h.addClass(
@@ -16934,7 +16965,9 @@
                                         t.colorIndex +
                                         " " +
                                         (r.className || "") +
-                                        (r.useHTML ? " highcharts-tracker" : "")
+                                        (r.useHTML
+                                          ? " highcharts-tracker"
+                                          : ""),
                                     )),
                                 (h.options = r),
                                 h.attr(w),
@@ -16947,7 +16980,7 @@
                                     (t.getDataLabelPath &&
                                       t.getDataLabelPath(h)) ||
                                       t.graphic,
-                                    a
+                                    a,
                                   ),
                                   t.dataLabelPath &&
                                     !a.enabled &&
@@ -17056,7 +17089,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -17099,11 +17132,11 @@
                         : ((n.y += d ? n.height : 0), (n.height = 0)))),
                     (i.align = s(
                       i.align,
-                      !l || p ? "center" : d ? "right" : "left"
+                      !l || p ? "center" : d ? "right" : "left",
                     )),
                     (i.verticalAlign = s(
                       i.verticalAlign,
-                      l || p ? "middle" : d ? "top" : "bottom"
+                      l || p ? "middle" : d ? "top" : "bottom",
                     )),
                     r.prototype.alignDataLabel.call(this, t, e, i, n, a),
                     i.inside &&
@@ -17119,7 +17152,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -17173,12 +17206,12 @@
                     n(i, e), (i.defaultOptions = o(t.defaultOptions, {})), i
                   );
                 })(t)).prototype,
-                { inverted: !0 }
+                { inverted: !0 },
               ),
               e.registerSeriesType("bar", i),
               i
             );
-          }
+          },
         ),
         e(i, "Series/Scatter/ScatterSeriesDefaults.js", [], function () {
           return {
@@ -17285,7 +17318,7 @@
                   noSharedTooltip: !0,
                   trackerGroups: ["group", "markerGroup", "dataLabelsGroup"],
                   takeOrdinalPosition: !1,
-                }
+                },
               ),
               r(i, "afterTranslate", function () {
                 this.applyJitter();
@@ -17293,7 +17326,7 @@
               e.registerSeriesType("scatter", i),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -17357,7 +17390,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -17424,7 +17457,7 @@
                         this,
                         { x: t.final.x, y: t.final.y, alignment: t.alignment },
                         t.connectorPosition,
-                        e
+                        e,
                       )
                     );
                   }),
@@ -17442,7 +17475,7 @@
                           e.y,
                           e.r + t,
                           e.r + t,
-                          { innerR: e.r - 1, start: e.start, end: e.end }
+                          { innerR: e.r - 1, start: e.start, end: e.end },
                         );
                   }),
                   (e.prototype.init = function () {
@@ -17560,7 +17593,7 @@
               }),
               e
             );
-          }
+          },
         ),
         e(i, "Series/Pie/PieSeriesDefaults.js", [], function () {
           return {
@@ -17677,7 +17710,7 @@
                           }),
                           i.animate(
                             { r: r.r, start: r.start, end: r.end },
-                            e.options.animation
+                            e.options.animation,
                           ));
                       });
                   }),
@@ -17716,7 +17749,7 @@
                         (e.graphic = e.graphic.destroy()),
                         e.graphic ||
                           ((e.graphic = t[e.shapeType](e.shapeArgs).add(
-                            e.series.group
+                            e.series.group,
                           )),
                           (e.delayedRendering = !0));
                     });
@@ -17729,7 +17762,7 @@
                       r = this.radii ? this.radii[i.index] || 0 : n[2] / 2;
                     return (
                       (t = Math.asin(
-                        d((t - n[1]) / (r + i.labelDistance), -1, 1)
+                        d((t - n[1]) / (r + i.labelDistance), -1, 1),
                       )),
                       n[0] +
                         (e ? -1 : 1) * Math.cos(t) * (r + i.labelDistance) +
@@ -17833,12 +17866,12 @@
                         (d.shapeArgs = y),
                         (d.labelDistance = m(
                           d.options.dataLabels && d.options.dataLabels.distance,
-                          a
+                          a,
                         )),
                         (d.labelDistance = v(d.labelDistance, y.r)),
                         (this.maxLabelDistance = Math.max(
                           this.maxLabelDistance || 0,
-                          d.labelDistance
+                          d.labelDistance,
                         )),
                         (g = (g + p) / 2) > 1.5 * Math.PI
                           ? (g -= 2 * Math.PI)
@@ -17863,8 +17896,8 @@
                             0 > d.labelDistance
                               ? "center"
                               : d.half
-                              ? "right"
-                              : "left",
+                                ? "right"
+                                : "left",
                           connectorPosition: {
                             breakAt: {
                               x: t[0] + y + Math.cos(g) * p,
@@ -17914,7 +17947,7 @@
               a.registerSeriesType("pie", c),
               c
             );
-          }
+          },
         ),
         e(
           i,
@@ -17988,7 +18021,7 @@
                               !u(
                                 t.options.dataLabels &&
                                   t.options.dataLabels.style &&
-                                  t.options.dataLabels.style.width
+                                  t.options.dataLabels.style.width,
                               ) &&
                               t.dataLabel.getBBox().width > E &&
                               (t.dataLabel.css({
@@ -18011,7 +18044,7 @@
                           var b = Math.max(0, O - M - y.maxLabelDistance),
                             E = Math.min(
                               O + M + y.maxLabelDistance,
-                              x.plotHeight
+                              x.plotHeight,
                             );
                           e.forEach(function (t) {
                             0 < t.labelDistance &&
@@ -18019,7 +18052,7 @@
                               ((t.top = Math.max(0, O - M - t.labelDistance)),
                               (t.bottom = Math.min(
                                 O + M + t.labelDistance,
-                                x.plotHeight
+                                x.plotHeight,
                               )),
                               (l = t.dataLabel.getBBox().height || 21),
                               (t.distributeBox = {
@@ -18086,7 +18119,7 @@
                                 : f + s / 2 > T &&
                                   (P[2] = Math.max(
                                     Math.round(f + s / 2 - T),
-                                    P[2]
+                                    P[2],
                                   )),
                               (n.sideOverflow = b));
                         }
@@ -18111,7 +18144,7 @@
                                   .addClass(
                                     "highcharts-data-label-connector  highcharts-color-" +
                                       t.colorIndex +
-                                      (t.className ? " " + t.className : "")
+                                      (t.className ? " " + t.className : ""),
                                   )
                                   .add(y.dataLabelsGroup)),
                               x.styledMode ||
@@ -18137,7 +18170,7 @@
                         ? (i.sideOverflow &&
                             ((i._attr.width = Math.max(
                               i.getBBox().width - i.sideOverflow,
-                              0
+                              0,
                             )),
                             i.css({
                               width: i._attr.width + "px",
@@ -18175,7 +18208,7 @@
                             i.thickness
                               ? Math.max(0, s - 2 * i.thickness)
                               : Math.max(0, f(i.innerSize || 0, s)),
-                            s
+                            s,
                           )),
                           this.translate(e),
                           this.drawDataLabels && this.drawDataLabels())
@@ -18192,7 +18225,7 @@
                       return t.getX(
                         i < e.top + 2 || i > e.bottom - 2 ? n : i,
                         e.half,
-                        e
+                        e,
                       );
                     },
                     justify: function (t, e, i) {
@@ -18225,7 +18258,7 @@
               })(o || (o = {})),
               o
             );
-          }
+          },
         ),
         e(
           i,
@@ -18239,7 +18272,7 @@
                 t.oldOpacity !== n &&
                   (t.alignAttr && t.placed
                     ? (t[n ? "removeClass" : "addClass"](
-                        "highcharts-data-label-hidden"
+                        "highcharts-data-label-hidden",
                       ),
                       (i = !0),
                       (t.alignAttr.opacity = n),
@@ -18249,7 +18282,7 @@
                         function () {
                           e.styledMode ||
                             t.css({ pointerEvents: n ? "auto" : "none" });
-                        }
+                        },
                       ),
                       r(e, "afterHideOverlappingLabel"))
                     : t.attr({ opacity: n })),
@@ -18289,14 +18322,14 @@
                           (o(n.dataLabels)
                             ? n.dataLabels
                             : n.dataLabel
-                            ? [n.dataLabel]
-                            : []
+                              ? [n.dataLabel]
+                              : []
                           ).forEach(function (r) {
                             var o = r.options;
                             (r.labelrank = l(
                               o.labelrank,
                               n.labelrank,
-                              n.shapeArgs && n.shapeArgs.height
+                              n.shapeArgs && n.shapeArgs.height,
                             )),
                               o.allowOverlap
                                 ? ((r.oldOpacity = r.opacity),
@@ -18384,7 +18417,7 @@
                 }),
                   h && r(a, "afterHideAllOverlappingLabels");
               });
-          }
+          },
         ),
         e(i, "Core/Responsive.js", [i["Core/Utilities.js"]], function (t) {
           var e,
@@ -18479,7 +18512,7 @@
                           })
                           .map(function (t) {
                             return t && t.chartOptions;
-                          })
+                          }),
                       )).isResponsiveOptions = !0),
                       (a = a.toString() || void 0) !== (o && o.ruleIds) &&
                         (o && this.update(o.undoOptions, t, !0),
@@ -18576,7 +18609,7 @@
             P,
             D,
             I,
-            _
+            _,
           ) {
             return (
               (t.animate = r.animate),
@@ -18668,7 +18701,7 @@
               C.compose(d, S, k),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -18796,7 +18829,7 @@
                                   r.options.stackLabels,
                                   !1,
                                   n,
-                                  this.stack
+                                  this.stack,
                                 )).total = 0)),
                           (n = i));
                   return this.getGraphPath(e);
@@ -18920,13 +18953,13 @@
                               e,
                               i,
                               o,
-                              s
+                              s,
                             );
                           }),
                           (r.setAxisTranslation = function () {
                             if (
                               (r.constructor.prototype.setAxisTranslation.call(
-                                this
+                                this,
                               ),
                               (n.unitLength = void 0),
                               n.hasBreaks)
@@ -19014,7 +19047,7 @@
               })(i || (i = {})),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -19022,7 +19055,7 @@
           [i["Core/Globals.js"], i["Core/Axis/BrokenAxis.js"]],
           function (t, e) {
             e.compose(t.Axis, t.Series);
-          }
+          },
         ),
         e(
           i,
@@ -19030,7 +19063,7 @@
           [],
           function () {
             return {};
-          }
+          },
         ),
         e(
           i,
@@ -19071,8 +19104,8 @@
                   return t.length
                     ? t[t.length - 1]
                     : t.hasNulls
-                    ? null
-                    : void 0;
+                      ? null
+                      : void 0;
                 },
                 high: function (t) {
                   return t.length ? r(t) : t.hasNulls ? null : void 0;
@@ -19109,8 +19142,8 @@
                     l(e) || l(i)
                       ? [e, i]
                       : null === e && null === i
-                      ? null
-                      : void 0
+                        ? null
+                        : void 0
                   );
                 },
                 sum: n,
@@ -19118,7 +19151,7 @@
               a(t, e),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -19175,7 +19208,7 @@
                 ["year", null],
               ],
             };
-          }
+          },
         ),
         e(
           i,
@@ -19207,7 +19240,7 @@
                 (i = n[r].options.dataGrouping) &&
                   ((o = Math.max(
                     o,
-                    h(i.groupPixelWidth, t.common.groupPixelWidth)
+                    h(i.groupPixelWidth, t.common.groupPixelWidth),
                   )),
                   (e = (n[r].processedXData || n[r].data).length),
                   (n[r].groupPixelWidth ||
@@ -19258,7 +19291,7 @@
                     }));
               },
             };
-          }
+          },
         ),
         e(
           i,
@@ -19312,13 +19345,13 @@
                     (o = t.getTimeTicks(
                       i.Additions.prototype.normalizeTimeTickInterval(
                         ((p * (m - y)) / o) * u,
-                        r.units || e.units
+                        r.units || e.units,
                       ),
                       Math.min(y, c[0]),
                       Math.max(m, c[c.length - 1]),
                       t.options.startOfWeek,
                       c,
-                      this.closestPointRange
+                      this.closestPointRange,
                     )),
                     (c = (p = d.groupData.apply(this, [
                       c,
@@ -19432,12 +19465,12 @@
               return this.is("arearange")
                 ? "range"
                 : this.is("ohlc")
-                ? "ohlc"
-                : this.is("hlc")
-                ? "hlc"
-                : this.is("column")
-                ? "sum"
-                : "average";
+                  ? "ohlc"
+                  : this.is("hlc")
+                    ? "hlc"
+                    : this.is("column")
+                      ? "sum"
+                      : "average";
             }
             function h(e, i, n, r) {
               var o = this,
@@ -19462,11 +19495,11 @@
                   "function" == typeof r
                     ? r
                     : r && t[r]
-                    ? t[r]
-                    : t[
-                        (o.getDGApproximation && o.getDGApproximation()) ||
-                          "average"
-                      ]),
+                      ? t[r]
+                      : t[
+                          (o.getDGApproximation && o.getDGApproximation()) ||
+                            "average"
+                        ]),
                 m)
               )
                 for (var C = g.length; C--; ) p.push([]);
@@ -19491,8 +19524,8 @@
                         ((o.dataGroupInfo.options = y(
                           o.pointClass.prototype.optionsToObject.call(
                             { series: o },
-                            o.options.data[o.cropStart + S]
-                          )
+                            o.options.data[o.cropStart + S],
+                          ),
                         )),
                         b.forEach(function (t) {
                           delete o.dataGroupInfo.options[t];
@@ -19517,7 +19550,7 @@
                         (s && s[k]) ||
                         o.pointClass.prototype.applyOptions.apply(
                           { series: o },
-                          [a[k]]
+                          [a[k]],
                         ));
                     var A = void 0;
                     for (k = 0; k < m; k++)
@@ -19550,7 +19583,7 @@
                     !t.isInternal &&
                       l &&
                       v(l.selected) &&
-                      l.buttonOptions[l.selected].dataGrouping
+                      l.buttonOptions[l.selected].dataGrouping,
                   ));
               }
             }
@@ -19586,7 +19619,7 @@
               },
               groupData: h,
             };
-          }
+          },
         ),
         e(
           i,
@@ -19627,7 +19660,7 @@
                     u.dateTime &&
                     (d = u.dateTime.getXDateFormat(
                       r.x,
-                      a.dateTimeLabelFormats
+                      a.dateTimeLabelFormats,
                     ));
                 (d = n.dateFormat(d, r.key)),
                   g && (d += n.dateFormat(g, r.key + f.totalRange - 1)),
@@ -19635,7 +19668,7 @@
                   (t.text = s(
                     p,
                     { point: l(r.point, { key: d }), series: o },
-                    i
+                    i,
                   )),
                   t.preventDefault();
               }
@@ -19654,7 +19687,7 @@
               },
               groupData: i.groupData,
             });
-          }
+          },
         ),
         e(
           i,
@@ -19668,7 +19701,7 @@
           function (t, e, i, n) {
             (t.dataGrouping = { approximationDefaults: e, approximations: i }),
               n.compose(t.Axis, t.Series, t.Tooltip);
-          }
+          },
         ),
         e(
           i,
@@ -19709,7 +19742,7 @@
                       t = t.replace(
                         "{point." + n + "}",
                         (0 < e[n] && "change" === n ? "+" : "") +
-                          i(e[n], f(e.series.tooltipOptions.changeDecimals, 2))
+                          i(e[n], f(e.series.tooltipOptions.changeDecimals, 2)),
                       );
                     };
                   return (
@@ -19768,7 +19801,7 @@
                     for (
                       this.pointArrayMap &&
                         (o = this.pointArrayMap.indexOf(
-                          this.options.pointValKey || this.pointValKey || "y"
+                          this.options.pointValKey || this.pointValKey || "y",
                         )),
                         t = 0;
                       t < n - r;
@@ -19891,7 +19924,7 @@
               })(r || (r = {})),
               r
             );
-          }
+          },
         ),
         e(
           i,
@@ -19965,7 +19998,7 @@
                 );
               })();
             return u;
-          }
+          },
         ),
         e(
           i,
@@ -20052,7 +20085,7 @@
                 },
               })
             );
-          }
+          },
         ),
         e(i, "Stock/Navigator/NavigatorSymbols.js", [], function () {
           return {
@@ -20207,7 +20240,7 @@
                   -1 === T.indexOf(v) && (T.push(v), w(m, { navigator: n }));
               },
             };
-          }
+          },
         ),
         e(
           i,
@@ -20248,7 +20281,7 @@
                         (t.scrollbar = new o(
                           t.chart.renderer,
                           t.options.scrollbar,
-                          t.chart
+                          t.chart,
                         )),
                         e(t.scrollbar, "changed", function (e) {
                           var n = s(t),
@@ -20269,7 +20302,7 @@
                                   !0,
                                   "mousemove" !== e.DOMType &&
                                     "touchmove" !== e.DOMType,
-                                  e
+                                  e,
                                 )
                               : this.setRange(this.from, this.to));
                         }));
@@ -20293,7 +20326,7 @@
                                 o[1] -
                                 (this.opposite ? a : 0),
                               this.width,
-                              this.height
+                              this.height,
                             ),
                             this.opposite || (o[1] += a),
                             (r = 1))
@@ -20306,11 +20339,11 @@
                                     o[0] -
                                     (this.opposite ? 0 : a)
                                 : this.opposite
-                                ? 0
-                                : a,
+                                  ? 0
+                                  : a,
                               this.top,
                               this.width,
-                              this.height
+                              this.height,
                             ),
                             this.opposite && (o[0] += a),
                             (r = 0)),
@@ -20345,7 +20378,7 @@
                 t
               );
             })();
-          }
+          },
         ),
         e(
           i,
@@ -20374,7 +20407,7 @@
               trackBorderColor: "#f2f2f2",
               trackBorderWidth: 1,
             };
-          }
+          },
         ),
         e(
           i,
@@ -20462,7 +20495,7 @@
                         t.push(
                           [n, "touchstart", o],
                           [n.ownerDocument, "touchmove", a],
-                          [n.ownerDocument, "touchend", l]
+                          [n.ownerDocument, "touchend", l],
                         ),
                       t.forEach(function (t) {
                         s.apply(null, t);
@@ -20546,8 +20579,8 @@
                             height: o + 1,
                             r: r.buttonBorderRadius,
                           },
-                          s.strokeWidth()
-                        )
+                          s.strokeWidth(),
+                        ),
                       ),
                       (s = i
                         .path(
@@ -20557,8 +20590,8 @@
                               ["L", o / 2 + (e ? -1 : 1), o / 2 + 3],
                               ["L", o / 2 + (e ? 2 : -2), o / 2],
                             ],
-                            r.vertical
-                          )
+                            r.vertical,
+                          ),
                         )
                         .addClass("highcharts-scrollbar-arrow")
                         .add(n[e])),
@@ -20700,8 +20733,8 @@
                               ["M", 3, n / 4],
                               ["L", 3, (2 * n) / 3],
                             ],
-                            i.vertical
-                          )
+                            i.vertical,
+                          ),
                         )
                         .addClass("highcharts-scrollbar-rifles")
                         .add(this.scrollbarGroup)),
@@ -20719,7 +20752,7 @@
                         this.scrollbar.strokeWidth()),
                       this.scrollbarGroup.translate(
                         (-this.scrollbarStrokeWidth % 2) / 2,
-                        (-this.scrollbarStrokeWidth % 2) / 2
+                        (-this.scrollbarStrokeWidth % 2) / 2,
                       ),
                       this.drawScrollbarButton(0),
                       this.drawScrollbarButton(1);
@@ -20771,7 +20804,7 @@
                     return (
                       d(
                         this.options.liveRedraw,
-                        e.svg && !e.isTouchDevice && !this.chart.boosted
+                        e.svg && !e.isTouchDevice && !this.chart.boosted,
                       ) ||
                       "mouseup" === t ||
                       "touchend" === t ||
@@ -20799,7 +20832,7 @@
                       this.init(
                         this.chart.renderer,
                         u(!0, this.options, t),
-                        this.chart
+                        this.chart,
                       );
                   }),
                   (t.prototype.updatePosition = function (t, e) {
@@ -20815,7 +20848,7 @@
               (o.scrollbar = u(!0, t.defaultOptions, o.scrollbar)),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -20890,15 +20923,15 @@
                       ? {
                           translateX: Math.round(this.left + this.height / 2),
                           translateY: Math.round(
-                            this.top + parseInt(t, 10) + 0.5 - r
+                            this.top + parseInt(t, 10) + 0.5 - r,
                           ),
                         }
                       : {
                           translateX: Math.round(this.left + parseInt(t, 10)),
                           translateY: Math.round(
-                            this.top + this.height / 2 - r / 2 - 1
+                            this.top + this.height / 2 - r / 2 - 1,
                           ),
-                        }
+                        },
                   );
                 }),
                 (e.prototype.drawOutline = function (t, e, i, n) {
@@ -20967,7 +21000,7 @@
                         .rect()
                         .addClass(
                           "highcharts-navigator-mask" +
-                            (1 === a ? "-inside" : "-outside")
+                            (1 === a ? "-inside" : "-outside"),
                         )
                         .add(s);
                       n.styledMode ||
@@ -20996,7 +21029,7 @@
                         0,
                         c,
                         l,
-                        a
+                        a,
                       )),
                         n.inverted &&
                           t.handles[e].attr({
@@ -21008,7 +21041,7 @@
                           .attr({ zIndex: 7 - e })
                           .addClass(
                             "highcharts-navigator-handle highcharts-navigator-handle-" +
-                              ["left", "right"][e]
+                              ["left", "right"][e],
                           )
                           .add(s),
                         n.styledMode ||
@@ -21051,7 +21084,7 @@
                     }
                     this.left = S(
                       s.left,
-                      o.plotLeft + v + (u ? o.plotWidth : 0)
+                      o.plotLeft + v + (u ? o.plotWidth : 0),
                     );
                     var y =
                       (this.size =
@@ -21080,7 +21113,7 @@
                           ? this.zoomedMax - this.fixedWidth
                           : Math.min(i, n),
                         0,
-                        y
+                        y,
                       )),
                       (this.range = this.zoomedMax - this.zoomedMin),
                       (y = Math.round(this.zoomedMax)),
@@ -21108,7 +21141,7 @@
                         this.scrollbar.position(l, u, o, v),
                         this.scrollbar.setRange(
                           this.zoomedMin / (r || 1),
-                          this.zoomedMax / (r || 1)
+                          this.zoomedMax / (r || 1),
                         )),
                       (this.rendered = !0);
                   }
@@ -21130,12 +21163,12 @@
                       }),
                     (o = i.getPartsEvents("mousedown")).push(
                       u(n.renderTo, "mousemove", t),
-                      u(r.ownerDocument, "mouseup", e)
+                      u(r.ownerDocument, "mouseup", e),
                     ),
                     c &&
                       (o.push(
                         u(n.renderTo, "touchmove", t),
-                        u(r.ownerDocument, "touchend", e)
+                        u(r.ownerDocument, "touchend", e),
                       ),
                       o.concat(i.getPartsEvents("touchstart"))),
                     (i.eventsToUnbind = o),
@@ -21144,7 +21177,7 @@
                       o.push(
                         u(i.series[0].xAxis, "foundExtremes", function () {
                           n.navigator.modifyNavigatorAxisExtremes();
-                        })
+                        }),
                       );
                 }),
                 (e.prototype.getPartsEvents = function (t) {
@@ -21156,7 +21189,7 @@
                         i.push(
                           u(r.element, t, function (t) {
                             e[n + "Mousedown"](t, o);
-                          })
+                          }),
                         );
                       });
                     }),
@@ -21192,7 +21225,7 @@
                           Math.max(e.min, e.max),
                           !0,
                           null,
-                          { trigger: "navigator" }
+                          { trigger: "navigator" },
                         ));
                   }
                 }),
@@ -21225,17 +21258,17 @@
                       ? ((e.hasDragged = !0),
                         e.render(0, 0, n - l, e.otherHandlePos))
                       : e.grabbedRight
-                      ? ((e.hasDragged = !0),
-                        e.render(0, 0, e.otherHandlePos, n - l))
-                      : e.grabbedCenter &&
-                        ((e.hasDragged = !0),
-                        n < s ? (n = s) : n > r + s - o && (n = r + s - o),
-                        e.render(0, 0, n - s, n - s + o)),
+                        ? ((e.hasDragged = !0),
+                          e.render(0, 0, e.otherHandlePos, n - l))
+                        : e.grabbedCenter &&
+                          ((e.hasDragged = !0),
+                          n < s ? (n = s) : n > r + s - o && (n = r + s - o),
+                          e.render(0, 0, n - s, n - s + o)),
                     e.hasDragged &&
                       e.scrollbar &&
                       S(
                         e.scrollbar.options.liveRedraw,
-                        i.svg && !h && !this.chart.boosted
+                        i.svg && !h && !this.chart.boosted,
                       ) &&
                       ((t.DOMType = t.type),
                       setTimeout(function () {
@@ -21268,7 +21301,7 @@
                         this.zoomedMin,
                         this.zoomedMax,
                         a,
-                        l
+                        l,
                       )),
                       f(i.min) &&
                         e.xAxis[0].setExtremes(
@@ -21280,7 +21313,7 @@
                             trigger: "navigator",
                             triggerOp: "navigator-drag",
                             DOMEvent: r,
-                          }
+                          },
                         );
                   }
                   "mousemove" !== t.DOMType &&
@@ -21327,7 +21360,7 @@
                       C(
                         t[0].xAxis,
                         "foundExtremes",
-                        this.modifyBaseAxisExtremes
+                        this.modifyBaseAxisExtremes,
                       ));
                 }),
                 (e.prototype.init = function (e) {
@@ -21383,8 +21416,8 @@
                             },
                             e.inverted
                               ? { offsets: [h, 0, -h, 0], width: i }
-                              : { offsets: [0, -h, 0, h], height: i }
-                          )
+                              : { offsets: [0, -h, 0, h], height: i },
+                          ),
                         )),
                         (d.yAxis = new t(
                           e,
@@ -21399,12 +21432,12 @@
                               reversed: S(
                                 r.yAxis && r.yAxis.reversed,
                                 e.yAxis[0] && e.yAxis[0].reversed,
-                                !1
+                                !1,
                               ),
                               zoomEnabled: !1,
                             },
-                            e.inverted ? { width: i } : { height: i }
-                          )
+                            e.inverted ? { width: i } : { height: i },
+                          ),
                         )),
                         s || r.series.data
                           ? d.updateNavigatorSeries(!1)
@@ -21442,7 +21475,7 @@
                         (d.xAxis.navigatorAxis.axis = d.xAxis),
                         (d.xAxis.navigatorAxis.toFixedRange =
                           n.prototype.toFixedRange.bind(
-                            d.xAxis.navigatorAxis
+                            d.xAxis.navigatorAxis,
                           ))),
                     e.options.scrollbar.enabled &&
                       ((e.scrollbar = d.scrollbar =
@@ -21452,7 +21485,7 @@
                             margin: d.navigatorEnabled ? 0 : 10,
                             vertical: e.inverted,
                           }),
-                          e
+                          e,
                         )),
                       u(d.scrollbar, "changed", function (t) {
                         var e = d.size,
@@ -21479,11 +21512,11 @@
                       (e = {
                         dataMin: S(
                           r && r.min,
-                          a("min", o.min, i.dataMin, n.dataMin, n.min)
+                          a("min", o.min, i.dataMin, n.dataMin, n.min),
                         ),
                         dataMax: S(
                           r && r.max,
-                          a("max", o.max, i.dataMax, n.dataMax, n.max)
+                          a("max", o.max, i.dataMax, n.dataMax, n.max),
                         ),
                       }),
                     e
@@ -21549,7 +21582,7 @@
                       var d = t.navigatorSeries,
                         p = v(
                           { color: t.color, visible: t.visible },
-                          b(u) ? l.navigator.series : u
+                          b(u) ? l.navigator.series : u,
                         );
                       (d && !1 === o.navigatorOptions.adaptToUpdatedData) ||
                         ((c.name = "Navigator " + a.length),
@@ -21559,7 +21592,7 @@
                         ((n = w(i, c, p, r)).pointRange = S(
                           p.pointRange,
                           r.pointRange,
-                          l.plotOptions[n.type || "line"].pointRange
+                          l.plotOptions[n.type || "line"].pointRange,
                         )),
                         (p = r.data || p.data),
                         (o.hasNavigatorData = o.hasNavigatorData || !!p),
@@ -21585,7 +21618,7 @@
                                 s.options.colors[0],
                             },
                             c,
-                            t
+                            t,
                           )).data = t.data),
                           n.data &&
                             ((o.hasNavigatorData = !0),
@@ -21603,26 +21636,26 @@
                       u(
                         i[0].xAxis,
                         "foundExtremes",
-                        this.modifyBaseAxisExtremes
-                      )
+                        this.modifyBaseAxisExtremes,
+                      ),
                     ),
                     i.forEach(function (i) {
                       i.eventsToUnbind.push(
                         u(i, "show", function () {
                           this.navigatorSeries &&
                             this.navigatorSeries.setVisible(!0, !1);
-                        })
+                        }),
                       ),
                         i.eventsToUnbind.push(
                           u(i, "hide", function () {
                             this.navigatorSeries &&
                               this.navigatorSeries.setVisible(!1, !1);
-                          })
+                          }),
                         ),
                         !1 !== t.navigatorOptions.adaptToUpdatedData &&
                           i.xAxis &&
                           i.eventsToUnbind.push(
-                            u(i, "updatedData", t.updatedDataHandler)
+                            u(i, "updatedData", t.updatedDataHandler),
                           ),
                         i.eventsToUnbind.push(
                           u(i, "remove", function () {
@@ -21631,7 +21664,7 @@
                               f(this.navigatorSeries.options) &&
                                 this.navigatorSeries.remove(!1),
                               delete this.navigatorSeries);
-                          })
+                          }),
                         );
                     });
                 }),
@@ -21639,7 +21672,7 @@
                   return this.baseSeries.reduce(function (t, e) {
                     return Math.min(
                       t,
-                      e.xData && e.xData.length ? e.xData[0] : t
+                      e.xData && e.xData.length ? e.xData[0] : t,
                     );
                   }, t);
                 }),
@@ -21677,8 +21710,8 @@
                           i,
                           h - e,
                           t.getBaseSeriesMin(
-                            a && a.xData ? a.xData[0] : -Number.MAX_VALUE
-                          )
+                            a && a.xData ? a.xData[0] : -Number.MAX_VALUE,
+                          ),
                         ))),
                       l &&
                         (r || o) &&
@@ -21696,7 +21729,7 @@
                       this.chart.options.navigator.stickToMax,
                     t.reversedExtremes
                       ? 0 === Math.round(t.zoomedMin)
-                      : Math.round(t.zoomedMax) >= Math.round(t.size)
+                      : Math.round(t.zoomedMax) >= Math.round(t.size),
                   )),
                     (t.stickToMin = t.shouldStickToMin(this, t)),
                     e &&
@@ -21738,7 +21771,7 @@
                               ? t.outlineHeight
                               : 0) +
                             t.navigatorOptions.margin);
-                      })
+                      }),
                     );
                 }),
                 (e.prototype.destroy = function () {
@@ -21765,7 +21798,7 @@
                 e
               );
             })();
-          }
+          },
         ),
         e(i, "Stock/RangeSelector/RangeSelectorDefaults.js", [], function () {
           return {
@@ -21841,7 +21874,7 @@
                   void 0 === s && (s = r(o, t.count)),
                   (this.newMax = Math.min(
                     o + s,
-                    x(this.dataMax, Number.MAX_VALUE)
+                    x(this.dataMax, Number.MAX_VALUE),
                   ))),
                 y(i)
                   ? !y(t) && t && t._offsetMin && (o += t._offsetMin)
@@ -21992,7 +22025,7 @@
                     m(d.lang, e.lang));
               },
             };
-          }
+          },
         ),
         e(
           i,
@@ -22061,7 +22094,7 @@
                           e.prototype.setDataGrouping.call(
                             o || { chart: this.chart },
                             c,
-                            !1
+                            !1,
                           ),
                           (this.frozenStates = r.preserveDataGrouping)),
                         "month" === a || "year" === a)
@@ -22162,7 +22195,7 @@
                                 !e.frozenStates &&
                                 this.setDataGrouping(!1, !1);
                             });
-                        })
+                        }),
                       );
                   }),
                   (i.prototype.updateButtonStates = function () {
@@ -22200,9 +22233,10 @@
                         r - 36e5 <= 864e5 * { month: 31, year: 366 }[m] * v + b
                           ? (g = !0)
                           : "ytd" === m
-                          ? ((g = h - c + b === r), (C = !x))
-                          : "all" === m &&
-                            ((g = n.max - n.min >= l - a), (T = !x && f && g)),
+                            ? ((g = h - c + b === r), (C = !x))
+                            : "all" === m &&
+                              ((g = n.max - n.min >= l - a),
+                              (T = !x && f && g)),
                         (m = !d && (w || S || T || o)),
                         (v =
                           (x && g) || (g && !f && !C) || (x && t.frozenStates)),
@@ -22261,7 +22295,7 @@
                         (r.value = n.dateFormat(
                           this.inputTypeFormats[r.type] ||
                             i.inputEditDateFormat,
-                          o
+                          o,
                         )),
                         t &&
                           t.attr({ text: n.dateFormat(i.inputDateFormat, o) });
@@ -22303,12 +22337,12 @@
                                 left:
                                   Math.min(
                                     Math.round(
-                                      e.x + r - (t.offsetWidth - e.width) / 2
+                                      e.x + r - (t.offsetWidth - e.width) / 2,
                                     ),
-                                    this.chart.chartWidth - t.offsetWidth
+                                    this.chart.chartWidth - t.offsetWidth,
                                   ) + "px",
                                 top: n - (t.offsetHeight - e.height) / 2 + "px",
-                              }
+                              },
                         );
                     }
                   }),
@@ -22374,7 +22408,7 @@
                             p ? r.max : l,
                             void 0,
                             void 0,
-                            { trigger: "rangeSelectorInput" }
+                            { trigger: "rangeSelectorInput" },
                           ));
                     }
                     var i = this.chart,
@@ -22418,7 +22452,7 @@
                       "input",
                       { name: t, className: "highcharts-range-selector" },
                       void 0,
-                      r
+                      r,
                     );
                     y.setAttribute(
                       "type",
@@ -22433,11 +22467,11 @@
                         return e && i
                           ? "datetime-local"
                           : e
-                          ? "date"
-                          : i
-                          ? "time"
-                          : "text";
-                      })(d.inputDateFormat || "%b %e, %Y")
+                            ? "date"
+                            : i
+                              ? "time"
+                              : "text";
+                      })(d.inputDateFormat || "%b %e, %Y"),
                     ),
                       i.styledMode ||
                         (g.css(v(l, d.labelStyle)),
@@ -22457,8 +22491,8 @@
                               fontFamily: l.fontFamily,
                               top: "-9999em",
                             },
-                            d.inputStyle
-                          )
+                            d.inputStyle,
+                          ),
                         )),
                       (y.onfocus = function () {
                         s.showInput(t);
@@ -22556,13 +22590,14 @@
                             this.setInputExtremes(
                               "min",
                               t.dataMin,
-                              Math.min(t.dataMax, this.getInputValue("max")) - i
+                              Math.min(t.dataMax, this.getInputValue("max")) -
+                                i,
                             ),
                             this.setInputExtremes(
                               "max",
                               Math.max(t.dataMin, this.getInputValue("min")) +
                                 i,
-                              t.dataMax
+                              t.dataMax,
                             )),
                           this.inputGroup))
                       ) {
@@ -22609,7 +22644,7 @@
                         cursor: "pointer",
                         opacity: 1e-4,
                       },
-                      this.div
+                      this.div,
                     ));
                     l(d, "touchstart", function () {
                       d.style.fontSize = "16px";
@@ -22642,14 +22677,14 @@
                         "option",
                         { textContent: this.zoomText.textStr, disabled: !0 },
                         void 0,
-                        d
+                        d,
                       ),
                       this.buttonOptions.forEach(function (i, n) {
                         c(
                           "option",
                           { textContent: i.title || i.text },
                           void 0,
-                          d
+                          d,
                         ),
                           (e[n] = o
                             .button(
@@ -22666,7 +22701,7 @@
                               s,
                               h && h.hover,
                               h && h.select,
-                              h && h.disabled
+                              h && h.disabled,
                             )
                             .attr({ "text-align": "center", width: u })
                             .add(t.buttonGroup)),
@@ -22738,7 +22773,7 @@
                               x: h.x + f - 2,
                             },
                             !0,
-                            n.spacingBox
+                            n.spacingBox,
                           ),
                           (o.placed = n.hasLoaded)),
                         this.handleCollision(e),
@@ -22806,7 +22841,7 @@
                             x: s,
                           },
                           !0,
-                          i.spacingBox
+                          i.spacingBox,
                         );
                   }),
                   (i.prototype.positionButtons = function () {
@@ -22915,12 +22950,12 @@
                           paddingLeft: x(
                             o.buttonTheme.paddingLeft,
                             a.padding,
-                            8
+                            8,
                           ),
                           paddingRight: x(
                             o.buttonTheme.paddingRight,
                             a.padding,
-                            8
+                            8,
                           ),
                         };
                       };
@@ -22940,7 +22975,7 @@
                       ("right" !== i && "center" !== i) ||
                         this.alignButtonGroup(
                           t,
-                          e[this.currentButtonIndex()].getBBox().width
+                          e[this.currentButtonIndex()].getBBox().width,
                         ),
                       this.showDropdown();
                   }),
@@ -22959,7 +22994,7 @@
                             paddingLeft: x(i.buttonTheme.paddingLeft, "unset"),
                             paddingRight: x(
                               i.buttonTheme.paddingRight,
-                              "unset"
+                              "unset",
                             ),
                           }),
                           2 > n.state && n.setState(0);
@@ -23041,7 +23076,7 @@
                               : n instanceof t.HTMLElement && p(n)),
                             n !== i.prototype[r] && (e[r] = null);
                         },
-                        this
+                        this,
                       );
                   }),
                   i
@@ -23079,7 +23114,7 @@
               }),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -23254,7 +23289,7 @@
                   this.ordinal &&
                     (this.ordinal.beforeSetTickPositions(),
                     (this.tickInterval = this.ordinal.postProcessTickInterval(
-                      this.tickInterval
+                      this.tickInterval,
                     )));
                 }
                 function b(t) {
@@ -23307,7 +23342,7 @@
                           void 0,
                           void 0,
                           f.apply(v, [g.apply(v, [h, !0]) + s]),
-                          f.apply(y, [g.apply(y, [u, !0]) + s])
+                          f.apply(y, [g.apply(y, [u, !0]) + s]),
                         )).min >= Math.min(l.dataMin, h) &&
                           m.max <= Math.max(c, u) + i &&
                           e.setExtremes(m.min, m.max, !0, !1, {
@@ -23351,8 +23386,8 @@
                       t >= o[0] && t <= o[s - 1]
                         ? (t = f(o, t) - n)
                         : t < o[0]
-                        ? (t = -n - (t = o[0] - t) / r)
-                        : (t = (t -= o[s - 1]) / r + s - n);
+                          ? (t = -n - (t = o[0] - t) / r)
+                          : (t = (t -= o[s - 1]) / r + s - n);
                   }
                   return e ? t : r * (t || 0) + i.offset;
                 }
@@ -23441,9 +23476,9 @@
                             (2 === m
                               ? (u = c[1] - c[0])
                               : 1 === m
-                              ? ((u = t.options.overscroll),
-                                (c = [c[0], c[0] + u]))
-                              : (u = e.overscrollPointsRange));
+                                ? ((u = t.options.overscroll),
+                                  (c = [c[0], c[0] + u]))
+                                : (u = e.overscrollPointsRange));
                         d || t.forceOrdinal
                           ? (t.options.overscroll &&
                               ((e.overscrollPointsRange = u),
@@ -23452,13 +23487,13 @@
                             (v = t.ordinal2lin(Math.max(n, c[0]), !0)),
                             (a = Math.max(
                               t.ordinal2lin(Math.min(r, c[c.length - 1]), !0),
-                              1
+                              1,
                             )),
                             (e.slope = r = (r - n) / (a - v)),
                             (e.offset = n - v * r))
                           : ((e.overscrollPointsRange = h(
                               t.closestPointRange,
-                              e.overscrollPointsRange
+                              e.overscrollPointsRange,
                             )),
                             (e.positions =
                               t.ordinal.slope =
@@ -23513,7 +23548,7 @@
                               getProcessedData: i.prototype.getProcessedData,
                               applyGrouping: i.prototype.applyGrouping,
                             }).xData = h.xData.concat(
-                              t.getOverscrollPositions()
+                              t.getOverscrollPositions(),
                             )),
                               (h.options = {
                                 dataGrouping: s
@@ -23607,7 +23642,7 @@
               })(r || (r = {})),
               r
             );
-          }
+          },
         ),
         e(
           i,
@@ -23654,7 +23689,7 @@
               }
               return e(i, t), i;
             })(t.seriesTypes.column.prototype.pointClass);
-          }
+          },
         ),
         e(i, "Series/HLC/HLCSeriesDefaults.js", [], function () {
           return {
@@ -23758,7 +23793,7 @@
                         (e = e.getPointPath(t, n)),
                         n[n ? "animate" : "attr"]({ d: e }).addClass(
                           t.getClassName(),
-                          !0
+                          !0,
                         ));
                     }),
                     (i.prototype.drawPoints = function () {
@@ -23786,7 +23821,7 @@
                           [],
                         r = n.map(function (t) {
                           return "plot".concat(
-                            t.charAt(0).toUpperCase() + t.slice(1)
+                            t.charAt(0).toUpperCase() + t.slice(1),
                           );
                         });
                       r.push("yBottom"),
@@ -23817,12 +23852,12 @@
                     "stroke-width": "lineWidth",
                   },
                   pointValKey: "close",
-                }
+                },
               ),
               i.registerSeriesType("hlc", n),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -23898,7 +23933,7 @@
                 i
               );
             })(t.seriesTypes.hlc.prototype.pointClass);
-          }
+          },
         ),
         e(i, "Series/OHLC/OHLCSeriesDefaults.js", [], function () {
           return {
@@ -24021,7 +24056,7 @@
               i.registerSeriesType("ohlc", d),
               d
             );
-          }
+          },
         ),
         e(
           i,
@@ -24036,7 +24071,7 @@
               upColor: "#ffffff",
               stickyTracking: !0,
             };
-          }
+          },
         ),
         e(
           i,
@@ -24127,7 +24162,7 @@
                           this.chart.styledMode ||
                             o
                               .attr(
-                                this.pointAttribs(r, r.selected && "select")
+                                this.pointAttribs(r, r.selected && "select"),
                               )
                               .shadow(this.options.shadow);
                         var a = (o.strokeWidth() % 2) / 2,
@@ -24162,11 +24197,11 @@
                               "L",
                               l,
                               p ? Math.round(e ? r.plotHigh : r.yBottom) : c,
-                            ]
+                            ],
                           ),
                           o[s ? "attr" : "animate"]({ d: a }).addClass(
                             r.getClassName(),
-                            !0
+                            !0,
                           );
                       }
                     }
@@ -24175,7 +24210,7 @@
                     a.defaultOptions,
                     o.plotOptions,
                     { tooltip: a.defaultOptions.tooltip },
-                    t
+                    t,
                   )),
                   i
                 );
@@ -24183,7 +24218,7 @@
               i.registerSeriesType("candlestick", n),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -24235,7 +24270,7 @@
                 e
               );
             })(t.seriesTypes.column.prototype.pointClass);
-          }
+          },
         ),
         e(i, "Series/Flags/FlagsSeriesDefaults.js", [], function () {
           return {
@@ -24273,7 +24308,7 @@
                       ["L", t + i, e],
                       ["L", t + i, e + n],
                       ["L", t, e + n],
-                      ["Z"]
+                      ["Z"],
                     ),
                     s
                   );
@@ -24319,7 +24354,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -24342,7 +24377,7 @@
                     (this.options.onSeries &&
                       this.chart.get(this.options.onSeries)) ||
                       this,
-                    t
+                    t,
                   );
                 }
                 function i() {
@@ -24427,7 +24462,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -24532,7 +24567,7 @@
                                     x,
                                     null,
                                     null,
-                                    o.useHTML
+                                    o.useHTML,
                                   )
                                   .addClass("highcharts-point")
                                   .add(this.markerGroup)),
@@ -24560,7 +24595,7 @@
                               (c[d.plotX]
                                 ? (c[d.plotX].size = Math.max(
                                     c[d.plotX].size,
-                                    b.width
+                                    b.width,
                                   ))
                                 : (c[d.plotX] = {
                                     align: C ? 0.5 : 0,
@@ -24599,7 +24634,7 @@
                       v(this.markerGroup, "on", function (t) {
                         return a.prototype.on.apply(
                           t.apply(this, [].slice.call(arguments, 1)),
-                          [].slice.call(arguments, 1)
+                          [].slice.call(arguments, 1),
                         );
                       });
                   }),
@@ -24628,7 +24663,7 @@
                                     (r.graphic.attr({ y: r._y }),
                                     (r.raised = !1));
                                 }
-                              }
+                              },
                             )));
                         },
                         n = 0;
@@ -24661,7 +24696,7 @@
                         this.sharedClipKey &&
                         this.markerGroup &&
                         this.markerGroup.clip(
-                          this.chart.sharedClips[this.sharedClipKey]
+                          this.chart.sharedClips[this.sharedClipKey],
                         );
                   }),
                   (n.compose = i.compose),
@@ -24685,7 +24720,7 @@
               s.registerSeriesType("flags", l),
               l
             );
-          }
+          },
         ),
         e(
           i,
@@ -24715,13 +24750,13 @@
                     showLastLabel: !0,
                   }
                 : "yAxis" === t
-                ? {
-                    labels: { y: -2 },
-                    opposite: S(e.opposite, !0),
-                    showLastLabel: !(!e.categories && "category" !== e.type),
-                    title: { text: null },
-                  }
-                : {};
+                  ? {
+                      labels: { y: -2 },
+                      opposite: S(e.opposite, !0),
+                      showLastLabel: !(!e.categories && "category" !== e.type),
+                      title: { text: null },
+                    }
+                  : {};
             }
             function u(t, e) {
               return "xAxis" === t
@@ -24787,7 +24822,7 @@
                         c = S(
                           e.navigator && e.navigator.enabled,
                           r.enabled,
-                          !0
+                          !0,
                         );
                       (e.xAxis = e.yAxis = void 0),
                         (c = w(
@@ -24809,7 +24844,7 @@
                             legend: { enabled: !1 },
                           },
                           e,
-                          { isStock: !0 }
+                          { isStock: !0 },
                         )),
                         (e.xAxis = a),
                         (e.yAxis = l),
@@ -24819,7 +24854,7 @@
                             n.xAxis,
                             n.xAxis && n.xAxis[i],
                             t,
-                            u("xAxis", e)
+                            u("xAxis", e),
                           );
                         })),
                         (c.yAxis = C(e.yAxis || {}).map(function (t, e) {
@@ -24827,7 +24862,7 @@
                             h("yAxis", t),
                             n.yAxis,
                             n.yAxis && n.yAxis[e],
-                            t
+                            t,
                           );
                         })),
                         t.prototype.init.call(this, c, i);
@@ -24837,14 +24872,14 @@
                         (i.axis = w(
                           h(e, i.axis),
                           i.axis,
-                          u(e, this.userOptions)
+                          u(e, this.userOptions),
                         )),
                         t.prototype.createAxis.call(this, e, i)
                       );
                     }),
                     e
                   );
-                })(e)) || (c = {})
+                })(e)) || (c = {}),
               ),
               i(a, "setOptions", function (t) {
                 var e;
@@ -24857,7 +24892,7 @@
                   e &&
                     (t.plotOptions[this.type] = w(
                       t.plotOptions[this.type],
-                      e
+                      e,
                     )));
               }),
               i(t, "autoLabelAlign", function (t) {
@@ -24918,10 +24953,10 @@
                         b(t)
                           ? [a[e][t]]
                           : x(t)
-                          ? [a.get(t)]
-                          : s.map(function (t) {
-                              return t[e];
-                            })
+                            ? [a.get(t)]
+                            : s.map(function (t) {
+                                return t[e];
+                              })
                       );
                     })(o.coll)),
                     (o.isXAxis ? a.yAxis : a.xAxis).forEach(function (t) {
@@ -25016,12 +25051,12 @@
                     (r = s
                       ? "center"
                       : a
-                      ? "right" === this.labelAlign
-                        ? "right"
-                        : "left"
-                      : "left" === this.labelAlign
-                      ? "left"
-                      : "center"),
+                        ? "right" === this.labelAlign
+                          ? "right"
+                          : "left"
+                        : "left" === this.labelAlign
+                          ? "left"
+                          : "center"),
                     h ||
                       ((h = this.crossLabel =
                         n.renderer
@@ -25030,7 +25065,7 @@
                             "highcharts-crosshair-label highcharts-color-" +
                               (t && t.series
                                 ? t.series.colorIndex
-                                : this.series[0] && this.series[0].colorIndex)
+                                : this.series[0] && this.series[0].colorIndex),
                           )
                           .attr({
                             align: o.align || r,
@@ -25057,8 +25092,8 @@
                                 fontSize: "11px",
                                 textAlign: "center",
                               },
-                              o.style || {}
-                            )
+                              o.style || {},
+                            ),
                           )),
                     s
                       ? ((r = g ? (t.plotX || 0) + l : y.chartX),
@@ -25131,7 +25166,7 @@
               }),
               c
             );
-          }
+          },
         ),
         e(
           i,
@@ -25159,7 +25194,7 @@
               o.compose(t.Axis, t.Series, t.Chart),
               n.compose(t.Axis, t.Chart),
               r.compose(t.Axis);
-          }
+          },
         ),
         e(
           i,
@@ -25167,7 +25202,7 @@
           [i["masters/highcharts.src.js"]],
           function (t) {
             return (t.product = "Highstock"), t;
-          }
+          },
         ),
         (i["masters/highstock.src.js"]._modules = i),
         i["masters/highstock.src.js"]
@@ -25616,8 +25651,8 @@
           return o(i) && e instanceof i
             ? i.prototype
             : e instanceof h
-            ? u
-            : null;
+              ? u
+              : null;
         };
   },
   function (t, e, i) {
@@ -25631,10 +25666,10 @@
         void 0 === e
           ? t
           : o
-          ? s(t, e)
-          : function () {
-              return t.apply(e, arguments);
-            }
+            ? s(t, e)
+            : function () {
+                return t.apply(e, arguments);
+              }
       );
     };
   },
@@ -25652,7 +25687,7 @@
             try {
               (t = n(
                 Object.getOwnPropertyDescriptor(Object.prototype, "__proto__")
-                  .set
+                  .set,
               ))(i, []),
                 (e = i instanceof Array);
             } catch (t) {}
@@ -25699,8 +25734,8 @@
           return T
             ? (s(t), E ? A(t[0], t[1], M) : A(t[0], t[1]))
             : E
-            ? A(t, M)
-            : A(t);
+              ? A(t, M)
+              : A(t);
         };
       if (k) n = t;
       else {
@@ -25787,7 +25822,7 @@
               function () {
                 return 1;
               },
-            1
+            1,
           );
         })
       );
@@ -25888,7 +25923,7 @@
           $(X, "length")),
         n(
           { target: "Object", stat: !0, forced: !H },
-          { getOwnPropertyDescriptor: Q, defineProperty: tt }
+          { getOwnPropertyDescriptor: Q, defineProperty: tt },
         ),
         (t.exports = function (t, e, i) {
           var s = t.match(/\d+$/)[0] / 8,
@@ -25928,14 +25963,14 @@
                         ? void 0 !== n
                           ? new p(e, m(i, s), n)
                           : void 0 !== i
-                          ? new p(e, m(i, s))
-                          : new p(e)
+                            ? new p(e, m(i, s))
+                            : new p(e)
                         : q(e)
-                        ? K(v, e)
-                        : o(E, v, e)
+                          ? K(v, e)
+                          : o(E, v, e)
                       : new p(g(e)),
                     t,
-                    v
+                    v,
                   )
                 );
               })),
@@ -26033,7 +26068,7 @@
         s(
           (function () {
             return arguments;
-          })()
+          })(),
         );
     t.exports = r
       ? s
@@ -26042,19 +26077,19 @@
           return void 0 === t
             ? "Undefined"
             : null === t
-            ? "Null"
-            : "string" ==
-              typeof (i = (function (t, e) {
-                try {
-                  return t[e];
-                } catch (t) {}
-              })((e = l(t)), a))
-            ? i
-            : c
-            ? s(e)
-            : "Object" == (n = s(e)) && o(e.callee)
-            ? "Arguments"
-            : n;
+              ? "Null"
+              : "string" ==
+                  typeof (i = (function (t, e) {
+                    try {
+                      return t[e];
+                    } catch (t) {}
+                  })((e = l(t)), a))
+                ? i
+                : c
+                  ? s(e)
+                  : "Object" == (n = s(e)) && o(e.callee)
+                    ? "Arguments"
+                    : n;
         };
   },
   function (t, e, i) {
@@ -26133,7 +26168,7 @@
               }),
               n(
                 { target: "Object", stat: !0, forced: !0 },
-                { getOwnPropertyNames: h.f }
+                { getOwnPropertyNames: h.f },
               ));
         },
         fastKey: function (t, e) {
@@ -26250,8 +26285,8 @@
         return null == t
           ? t + ""
           : "object" == typeof t || "function" == typeof t
-          ? u[d.call(t)] || "object"
-          : typeof t;
+            ? u[d.call(t)] || "object"
+            : typeof t;
       }
       var C = function (t, e) {
         return new C.fn.init(t, e);
@@ -26279,8 +26314,8 @@
             return null == t
               ? a.call(this)
               : t < 0
-              ? this[t + this.length]
-              : this[t];
+                ? this[t + this.length]
+                : this[t];
           },
           pushStack: function (t) {
             var e = C.merge(this.constructor(), t);
@@ -26293,7 +26328,7 @@
             return this.pushStack(
               C.map(this, function (e, i) {
                 return t.call(e, i, e);
-              })
+              }),
             );
           },
           slice: function () {
@@ -26309,14 +26344,14 @@
             return this.pushStack(
               C.grep(this, function (t, e) {
                 return (e + 1) % 2;
-              })
+              }),
             );
           },
           odd: function () {
             return this.pushStack(
               C.grep(this, function (t, e) {
                 return e % 2;
-              })
+              }),
             );
           },
           eq: function (t) {
@@ -26361,8 +26396,8 @@
                             r && !Array.isArray(i)
                               ? []
                               : r || C.isPlainObject(i)
-                              ? i
-                              : {}),
+                                ? i
+                                : {}),
                           (r = !1),
                           (s[e] = C.extend(c, o, n)))
                         : void 0 !== n && (s[e] = n));
@@ -26442,11 +26477,11 @@
           (C.fn[Symbol.iterator] = o[Symbol.iterator]),
         C.each(
           "Boolean Number String Function Array Date RegExp Object Error Symbol".split(
-            " "
+            " ",
           ),
           function (t, e) {
             u["[object " + e + "]"] = e.toLowerCase();
-          }
+          },
         );
       var k =
         /*!
@@ -26524,7 +26559,7 @@
             z = new RegExp(j + "+", "g"),
             H = new RegExp(
               "^" + j + "+|((?:^|[^\\\\])(?:\\\\.)*)" + j + "+$",
-              "g"
+              "g",
             ),
             U = new RegExp("^" + j + "*," + j + "*"),
             W = new RegExp("^" + j + "*([>+~]|" + j + ")" + j + "*"),
@@ -26547,7 +26582,7 @@
                   "*(\\d+)|))" +
                   j +
                   "*\\)|)",
-                "i"
+                "i",
               ),
               bool: new RegExp("^(?:" + R + ")$", "i"),
               needsContext: new RegExp(
@@ -26558,7 +26593,7 @@
                   "*((?:-\\d)?\\d*)" +
                   j +
                   "*\\)|)(?=[^-]|$)",
-                "i"
+                "i",
               ),
             },
             K = /HTML$/i,
@@ -26569,7 +26604,7 @@
             tt = /[+~]/,
             et = new RegExp(
               "\\\\[\\da-fA-F]{1,6}" + j + "?|\\\\([^\\r\\n\\f])",
-              "g"
+              "g",
             ),
             it = function (t, e) {
               var i = "0x" + t.slice(1) - 65536;
@@ -26600,7 +26635,7 @@
                   !0 === t.disabled && "fieldset" === t.nodeName.toLowerCase()
                 );
               },
-              { dir: "parentNode", next: "legend" }
+              { dir: "parentNode", next: "legend" },
             );
           try {
             I.apply((L = _.call(w.childNodes)), w.childNodes),
@@ -26861,8 +26896,8 @@
                         return void 0 !== e.getElementsByTagName
                           ? e.getElementsByTagName(t)
                           : i.qsa
-                          ? e.querySelectorAll(t)
-                          : void 0;
+                            ? e.querySelectorAll(t)
+                            : void 0;
                       }
                     : function (t, e) {
                         var i,
@@ -26902,7 +26937,7 @@
                         t.appendChild(e),
                         t.querySelectorAll("[name='']").length ||
                           m.push(
-                            "\\[" + j + "*name" + j + "*=" + j + "*(?:''|\"\")"
+                            "\\[" + j + "*name" + j + "*=" + j + "*(?:''|\"\")",
                           ),
                         t.querySelectorAll(":checked").length ||
                           m.push(":checked"),
@@ -26933,7 +26968,7 @@
                       f.webkitMatchesSelector ||
                       f.mozMatchesSelector ||
                       f.oMatchesSelector ||
-                      f.msMatchesSelector)
+                      f.msMatchesSelector),
                   )) &&
                     ht(function (t) {
                       (i.disconnectedMatch = y.call(t, "*")),
@@ -26984,13 +27019,13 @@
                             ? t == p || (t.ownerDocument == w && b(w, t))
                               ? -1
                               : e == p || (e.ownerDocument == w && b(w, e))
-                              ? 1
-                              : h
-                              ? N(h, t) - N(h, e)
-                              : 0
+                                ? 1
+                                : h
+                                  ? N(h, t) - N(h, e)
+                                  : 0
                             : 4 & n
-                            ? -1
-                            : 1)
+                              ? -1
+                              : 1)
                         );
                       }
                     : function (t, e) {
@@ -27005,14 +27040,14 @@
                           return t == p
                             ? -1
                             : e == p
-                            ? 1
-                            : r
-                            ? -1
-                            : o
-                            ? 1
-                            : h
-                            ? N(h, t) - N(h, e)
-                            : 0;
+                              ? 1
+                              : r
+                                ? -1
+                                : o
+                                  ? 1
+                                  : h
+                                    ? N(h, t) - N(h, e)
+                                    : 0;
                         if (r === o) return dt(t, e);
                         for (i = t; (i = i.parentNode); ) s.unshift(i);
                         for (i = e; (i = i.parentNode); ) a.unshift(i);
@@ -27020,10 +27055,10 @@
                         return n
                           ? dt(s[n], a[n])
                           : s[n] == w
-                          ? -1
-                          : a[n] == w
-                          ? 1
-                          : 0;
+                            ? -1
+                            : a[n] == w
+                              ? 1
+                              : 0;
                       }),
                   p)
                 : p;
@@ -27066,10 +27101,10 @@
             return void 0 !== o
               ? o
               : i.attributes || !g
-              ? t.getAttribute(e)
-              : (o = t.getAttributeNode(e)) && o.specified
-              ? o.value
-              : null;
+                ? t.getAttribute(e)
+                : (o = t.getAttributeNode(e)) && o.specified
+                  ? o.value
+                  : null;
           }),
           (at.escape = function (t) {
             return (t + "").replace(nt, rt);
@@ -27178,7 +27213,7 @@
                           ("string" == typeof t.className && t.className) ||
                             (void 0 !== t.getAttribute &&
                               t.getAttribute("class")) ||
-                            ""
+                            "",
                         );
                       }))
                   );
@@ -27193,18 +27228,21 @@
                           "=" === e
                             ? r === i
                             : "!=" === e
-                            ? r !== i
-                            : "^=" === e
-                            ? i && 0 === r.indexOf(i)
-                            : "*=" === e
-                            ? i && r.indexOf(i) > -1
-                            : "$=" === e
-                            ? i && r.slice(-i.length) === i
-                            : "~=" === e
-                            ? (" " + r.replace(z, " ") + " ").indexOf(i) > -1
-                            : "|=" === e &&
-                              (r === i ||
-                                r.slice(0, i.length + 1) === i + "-"));
+                              ? r !== i
+                              : "^=" === e
+                                ? i && 0 === r.indexOf(i)
+                                : "*=" === e
+                                  ? i && r.indexOf(i) > -1
+                                  : "$=" === e
+                                    ? i && r.slice(-i.length) === i
+                                    : "~=" === e
+                                      ? (" " + r.replace(z, " ") + " ").indexOf(
+                                          i,
+                                        ) > -1
+                                      : "|=" === e &&
+                                        (r === i ||
+                                          r.slice(0, i.length + 1) ===
+                                            i + "-"));
                   };
                 },
                 CHILD: function (t, e, i, n, r) {
@@ -27301,16 +27339,16 @@
                   return r[x]
                     ? r(e)
                     : r.length > 1
-                    ? ((i = [t, t, "", e]),
-                      n.setFilters.hasOwnProperty(t.toLowerCase())
-                        ? ct(function (t, i) {
-                            for (var n, o = r(t, e), s = o.length; s--; )
-                              t[(n = N(t, o[s]))] = !(i[n] = o[s]);
-                          })
-                        : function (t) {
-                            return r(t, 0, i);
-                          })
-                    : r;
+                      ? ((i = [t, t, "", e]),
+                        n.setFilters.hasOwnProperty(t.toLowerCase())
+                          ? ct(function (t, i) {
+                              for (var n, o = r(t, e), s = o.length; s--; )
+                                t[(n = N(t, o[s]))] = !(i[n] = o[s]);
+                            })
+                          : function (t) {
+                              return r(t, 0, i);
+                            })
+                      : r;
                 },
               },
               pseudos: {
@@ -27543,7 +27581,9 @@
                         (c = r ? N(o, u) : d[h]) > -1 &&
                         (o[c] = !(s[c] = u));
                   }
-                } else (v = St(v === s ? v.splice(f, v.length) : v)), r ? r(null, s, v, l) : I.apply(s, v);
+                } else
+                  (v = St(v === s ? v.splice(f, v.length) : v)),
+                    r ? r(null, s, v, l) : I.apply(s, v);
               })
             );
           }
@@ -27561,14 +27601,14 @@
                     return t === e;
                   },
                   a,
-                  !0
+                  !0,
                 ),
                 u = xt(
                   function (t) {
                     return N(e, t) > -1;
                   },
                   a,
-                  !0
+                  !0,
                 ),
                 d = [
                   function (t, i, n) {
@@ -27591,12 +27631,12 @@
                       bt(
                         t
                           .slice(0, l - 1)
-                          .concat({ value: " " === t[l - 2].type ? "*" : "" })
+                          .concat({ value: " " === t[l - 2].type ? "*" : "" }),
                       ).replace(H, "$1"),
                     i,
                     l < r && Tt(t.slice(l, r)),
                     r < o && Tt((t = t.slice(r))),
-                    r < o && bt(t)
+                    r < o && bt(t),
                   );
                 }
                 d.push(i);
@@ -27699,7 +27739,7 @@
                           return h && ((S = T), (c = w)), b;
                         };
                       return i ? ct(o) : o;
-                    })(o, r)
+                    })(o, r),
                   )).selector = t;
                 }
                 return a;
@@ -27738,7 +27778,7 @@
                       (u = n.find[h]) &&
                       (r = u(
                         c.matches[0].replace(et, it),
-                        (tt.test(l[0].type) && vt(e.parentNode)) || e
+                        (tt.test(l[0].type) && vt(e.parentNode)) || e,
                       ))
                     ) {
                       if ((l.splice(o, 1), !(t = r.length && bt(l))))
@@ -27752,7 +27792,7 @@
                     e,
                     !g,
                     i,
-                    !e || (tt.test(t) && vt(e.parentNode)) || e
+                    !e || (tt.test(t) && vt(e.parentNode)) || e,
                   ),
                   i
                 );
@@ -27794,8 +27834,8 @@
                   return !0 === t[e]
                     ? e.toLowerCase()
                     : (n = t.getAttributeNode(e)) && n.specified
-                    ? n.value
-                    : null;
+                      ? n.value
+                      : null;
               }),
             at
           );
@@ -27832,14 +27872,14 @@
               return !!e.call(t, n, t) !== i;
             })
           : e.nodeType
-          ? C.grep(t, function (t) {
-              return (t === e) !== i;
-            })
-          : "string" != typeof e
-          ? C.grep(t, function (t) {
-              return h.call(e, t) > -1 !== i;
-            })
-          : C.filter(e, t, i);
+            ? C.grep(t, function (t) {
+                return (t === e) !== i;
+              })
+            : "string" != typeof e
+              ? C.grep(t, function (t) {
+                  return h.call(e, t) > -1 !== i;
+                })
+              : C.filter(e, t, i);
       }
       (C.filter = function (t, e, i) {
         var n = e[0];
@@ -27853,7 +27893,7 @@
                 t,
                 C.grep(e, function (t) {
                   return 1 === t.nodeType;
-                })
+                }),
               )
         );
       }),
@@ -27867,7 +27907,7 @@
               return this.pushStack(
                 C(t).filter(function () {
                   for (e = 0; e < n; e++) if (C.contains(r[e], this)) return !0;
-                })
+                }),
               );
             for (i = this.pushStack([]), e = 0; e < n; e++) C.find(t, r[e], i);
             return n > 1 ? C.uniqueSort(i) : i;
@@ -27882,7 +27922,7 @@
             return !!P(
               this,
               "string" == typeof t && M.test(t) ? C(t) : t || [],
-              !1
+              !1,
             ).length;
           },
         });
@@ -27910,8 +27950,8 @@
                 C.parseHTML(
                   n[1],
                   e && e.nodeType ? e.ownerDocument || e : b,
-                  !0
-                )
+                  !0,
+                ),
               ),
               L.test(n[1]) && C.isPlainObject(e))
             )
@@ -27926,10 +27966,10 @@
         return t.nodeType
           ? ((this[0] = t), (this.length = 1), this)
           : v(t)
-          ? void 0 !== i.ready
-            ? i.ready(t)
-            : t(C)
-          : C.makeArray(t, this);
+            ? void 0 !== i.ready
+              ? i.ready(t)
+              : t(C)
+            : C.makeArray(t, this);
       }).prototype = C.fn),
         (D = C(b));
       var _ = /^(?:parents|prev(?:Until|All))/,
@@ -27972,15 +28012,15 @@
               ? h.call(C(t), this[0])
               : h.call(this, t.jquery ? t[0] : t)
             : this[0] && this[0].parentNode
-            ? this.first().prevAll().length
-            : -1;
+              ? this.first().prevAll().length
+              : -1;
         },
         add: function (t, e) {
           return this.pushStack(C.uniqueSort(C.merge(this.get(), C(t, e))));
         },
         addBack: function (t) {
           return this.add(
-            null == t ? this.prevObject : this.prevObject.filter(t)
+            null == t ? this.prevObject : this.prevObject.filter(t),
           );
         },
       }),
@@ -28038,7 +28078,7 @@
                 this.pushStack(r)
               );
             };
-          }
+          },
         );
       var j = /[^\x20\t\r\n\f]+/g;
       function B(t) {
@@ -28053,8 +28093,8 @@
           t && v((r = t.promise))
             ? r.call(t).done(e).fail(i)
             : t && v((r = t.then))
-            ? r.call(t, e, i)
-            : e.apply(void 0, [t].slice(n));
+              ? r.call(t, e, i)
+              : e.apply(void 0, [t].slice(n));
         } catch (t) {
           i.apply(void 0, [t]);
         }
@@ -28229,7 +28269,7 @@
                                       i,
                                       s(o, e, B, r),
                                       s(o, e, F, r),
-                                      s(o, e, B, e.notifyWith)
+                                      s(o, e, B, e.notifyWith),
                                     ))
                                 : (n !== B && ((a = void 0), (l = [i])),
                                   (r || e.resolveWith)(a, l));
@@ -28279,7 +28319,7 @@
                       e[3 - t][2].disable,
                       e[3 - t][3].disable,
                       e[0][2].lock,
-                      e[0][3].lock
+                      e[0][3].lock,
                     ),
                   s.add(i[3].fire),
                   (o[i[0]] = function () {
@@ -28438,8 +28478,8 @@
                 i = (e = Array.isArray(e)
                   ? e.map(q)
                   : (e = q(e)) in n
-                  ? [e]
-                  : e.match(j) || []).length;
+                    ? [e]
+                    : e.match(j) || []).length;
                 for (; i--; ) delete n[e[i]];
               }
               (void 0 === e || C.isEmptyObject(n)) &&
@@ -28472,10 +28512,10 @@
                     ("null" === t
                       ? null
                       : t === +t + ""
-                      ? +t
-                      : Q.test(t)
-                      ? JSON.parse(t)
-                      : t))
+                        ? +t
+                        : Q.test(t)
+                          ? JSON.parse(t)
+                          : t))
                 );
               })(i);
             } catch (t) {}
@@ -28541,7 +28581,7 @@
                   e,
                   arguments.length > 1,
                   null,
-                  !0
+                  !0,
                 );
           },
           removeData: function (t) {
@@ -28579,7 +28619,7 @@
                   function () {
                     C.dequeue(t, e);
                   },
-                  o
+                  o,
                 )),
               !n && o && o.empty.fire();
           },
@@ -28603,12 +28643,14 @@
               arguments.length < i
                 ? C.queue(this[0], t)
                 : void 0 === e
-                ? this
-                : this.each(function () {
-                    var i = C.queue(this, t, e);
-                    C._queueHooks(this, t),
-                      "fx" === t && "inprogress" !== i[0] && C.dequeue(this, t);
-                  })
+                  ? this
+                  : this.each(function () {
+                      var i = C.queue(this, t, e);
+                      C._queueHooks(this, t),
+                        "fx" === t &&
+                          "inprogress" !== i[0] &&
+                          C.dequeue(this, t);
+                    })
             );
           },
           dequeue: function (t) {
@@ -28767,8 +28809,8 @@
             void 0 !== t.getElementsByTagName
               ? t.getElementsByTagName(e || "*")
               : void 0 !== t.querySelectorAll
-              ? t.querySelectorAll(e || "*")
-              : []),
+                ? t.querySelectorAll(e || "*")
+                : []),
           void 0 === e || (e && O(t, e)) ? C.merge([t], i) : i
         );
       }
@@ -28901,7 +28943,7 @@
                       value: C.event.trigger(
                         C.extend(o[0], C.Event.prototype),
                         o.slice(1),
-                        this
+                        this,
                       ),
                     }),
                     t.stopImmediatePropagation());
@@ -28958,7 +29000,7 @@
                       needsContext: r && C.expr.match.needsContext.test(r),
                       namespace: f.join("."),
                     },
-                    o
+                    o,
                   )),
                   (d = l[p]) ||
                     (((d = l[p] = []).delegateCount = 0),
@@ -28996,7 +29038,7 @@
                     a =
                       a[2] &&
                       new RegExp(
-                        "(^|\\.)" + f.join("\\.(?:.*\\.|)") + "(\\.|$)"
+                        "(^|\\.)" + f.join("\\.(?:.*\\.|)") + "(\\.|$)",
                       ),
                     s = o = d.length;
                   o--;
@@ -29233,7 +29275,7 @@
             touches: !0,
             which: !0,
           },
-          C.event.addProp
+          C.event.addProp,
         ),
         C.each({ focus: "focusin", blur: "focusout" }, function (t, e) {
           C.event.special[t] = {
@@ -29274,7 +29316,7 @@
                 );
               },
             };
-          }
+          },
         ),
         C.fn.extend({
           on: function (t, e, i, n) {
@@ -29291,7 +29333,7 @@
                 C(t.delegateTarget).off(
                   n.namespace ? n.origType + "." + n.namespace : n.origType,
                   n.selector,
-                  n.handler
+                  n.handler,
                 ),
                 this
               );
@@ -29393,7 +29435,7 @@
                       C._evalUrl(
                         c.src,
                         { nonce: c.nonce || c.getAttribute("nonce") },
-                        h
+                        h,
                       )
                     : w(c.textContent.replace(Pt, ""), c, h));
         }
@@ -29478,7 +29520,7 @@
               },
               null,
               t,
-              arguments.length
+              arguments.length,
             );
           },
           append: function () {
@@ -29552,7 +29594,7 @@
               },
               null,
               t,
-              arguments.length
+              arguments.length,
             );
           },
           replaceWith: function () {
@@ -29565,7 +29607,7 @@
                 C.inArray(this, t) < 0 &&
                   (C.cleanData(bt(this)), i && i.replaceChild(e, this));
               },
-              t
+              t,
             );
           },
         }),
@@ -29589,7 +29631,7 @@
                   c.apply(n, i.get());
               return this.pushStack(n);
             };
-          }
+          },
         );
       var Ft = new RegExp("^(" + it + ")(?!px)[a-z%]+$", "i"),
         Gt = /^--/,
@@ -29608,7 +29650,7 @@
         Ut = new RegExp(rt.join("|"), "i"),
         Wt = new RegExp(
           "^[\\x20\\t\\r\\n\\f]+|((?:^|[^\\\\])(?:\\\\.)*)[\\x20\\t\\r\\n\\f]+$",
-          "g"
+          "g",
         );
       function Yt(t, e, i) {
         var n,
@@ -29774,8 +29816,8 @@
                     o -
                     l -
                     a -
-                    0.5
-                )
+                    0.5,
+                ),
               ) || 0),
           l
         );
@@ -29917,7 +29959,7 @@
                     t["offset" + e[0].toUpperCase() + e.slice(1)] -
                       parseFloat(o[e]) -
                       ee(t, e, "border", !1, o) -
-                      0.5
+                      0.5,
                   )),
                 l &&
                   (r = nt.exec(i)) &&
@@ -29972,7 +30014,7 @@
               },
               t,
               e,
-              arguments.length > 1
+              arguments.length > 1,
             );
           },
         }),
@@ -30003,7 +30045,7 @@
                       this.options.duration * t,
                       0,
                       1,
-                      this.options.duration
+                      this.options.duration,
                     ))
                 : (this.pos = e = t),
               (this.now = (this.end - this.start) * e + this.start),
@@ -30023,16 +30065,16 @@
                 (null != t.elem[t.prop] && null == t.elem.style[t.prop])
                 ? t.elem[t.prop]
                 : (e = C.css(t.elem, t.prop, "")) && "auto" !== e
-                ? e
-                : 0;
+                  ? e
+                  : 0;
             },
             set: function (t) {
               C.fx.step[t.prop]
                 ? C.fx.step[t.prop](t)
                 : 1 !== t.elem.nodeType ||
-                  (!C.cssHooks[t.prop] && null == t.elem.style[$t(t.prop)])
-                ? (t.elem[t.prop] = t.now)
-                : C.style(t.elem, t.prop, t.now + t.unit);
+                    (!C.cssHooks[t.prop] && null == t.elem.style[$t(t.prop)])
+                  ? (t.elem[t.prop] = t.now)
+                  : C.style(t.elem, t.prop, t.now + t.unit);
             },
           },
         }),
@@ -30124,7 +30166,7 @@
             opts: C.extend(
               !0,
               { specialEasing: {}, easing: C.easing._default },
-              i
+              i,
             ),
             originalProperties: e,
             originalOptions: i,
@@ -30137,7 +30179,7 @@
                 c.opts,
                 e,
                 i,
-                c.opts.specialEasing[e] || c.opts.easing
+                c.opts.specialEasing[e] || c.opts.easing,
               );
               return c.tweens.push(n), n;
             },
@@ -30413,7 +30455,7 @@
             C.fn[t] = function (t, i, n) {
               return this.animate(e, t, i, n);
             };
-          }
+          },
         ),
         (C.timers = []),
         (C.fx.tick = function () {
@@ -30487,13 +30529,13 @@
                     ? null === i
                       ? void C.removeAttr(t, e)
                       : r && "set" in r && void 0 !== (n = r.set(t, i, e))
-                      ? n
-                      : (t.setAttribute(e, i + ""), i)
+                        ? n
+                        : (t.setAttribute(e, i + ""), i)
                     : r && "get" in r && null !== (n = r.get(t, e))
-                    ? n
-                    : null == (n = C.find.attr(t, e))
-                    ? void 0
-                    : n);
+                      ? n
+                      : null == (n = C.find.attr(t, e))
+                        ? void 0
+                        : n);
           },
           attrHooks: {
             type: {
@@ -30571,8 +30613,8 @@
                     ? n
                     : (t[e] = i)
                   : r && "get" in r && null !== (n = r.get(t, e))
-                  ? n
-                  : t[e]
+                    ? n
+                    : t[e]
               );
           },
           propHooks: {
@@ -30582,8 +30624,8 @@
                 return e
                   ? parseInt(e, 10)
                   : ge.test(t.nodeName) || (me.test(t.nodeName) && t.href)
-                  ? 0
-                  : -1;
+                    ? 0
+                    : -1;
               },
             },
           },
@@ -30616,7 +30658,7 @@
           ],
           function () {
             C.propFix[this.toLowerCase()] = this;
-          }
+          },
         ),
         C.fn.extend({
           addClass: function (t) {
@@ -30626,18 +30668,18 @@
                   C(this).addClass(t.call(this, e, ye(this)));
                 })
               : (e = be(t)).length
-              ? this.each(function () {
-                  if (
-                    ((n = ye(this)),
-                    (i = 1 === this.nodeType && " " + ve(n) + " "))
-                  ) {
-                    for (o = 0; o < e.length; o++)
-                      (r = e[o]),
-                        i.indexOf(" " + r + " ") < 0 && (i += r + " ");
-                    (s = ve(i)), n !== s && this.setAttribute("class", s);
-                  }
-                })
-              : this;
+                ? this.each(function () {
+                    if (
+                      ((n = ye(this)),
+                      (i = 1 === this.nodeType && " " + ve(n) + " "))
+                    ) {
+                      for (o = 0; o < e.length; o++)
+                        (r = e[o]),
+                          i.indexOf(" " + r + " ") < 0 && (i += r + " ");
+                      (s = ve(i)), n !== s && this.setAttribute("class", s);
+                    }
+                  })
+                : this;
           },
           removeClass: function (t) {
             var e, i, n, r, o, s;
@@ -30646,20 +30688,20 @@
                   C(this).removeClass(t.call(this, e, ye(this)));
                 })
               : arguments.length
-              ? (e = be(t)).length
-                ? this.each(function () {
-                    if (
-                      ((n = ye(this)),
-                      (i = 1 === this.nodeType && " " + ve(n) + " "))
-                    ) {
-                      for (o = 0; o < e.length; o++)
-                        for (r = e[o]; i.indexOf(" " + r + " ") > -1; )
-                          i = i.replace(" " + r + " ", " ");
-                      (s = ve(i)), n !== s && this.setAttribute("class", s);
-                    }
-                  })
-                : this
-              : this.attr("class", "");
+                ? (e = be(t)).length
+                  ? this.each(function () {
+                      if (
+                        ((n = ye(this)),
+                        (i = 1 === this.nodeType && " " + ve(n) + " "))
+                      ) {
+                        for (o = 0; o < e.length; o++)
+                          for (r = e[o]; i.indexOf(" " + r + " ") > -1; )
+                            i = i.replace(" " + r + " ", " ");
+                        (s = ve(i)), n !== s && this.setAttribute("class", s);
+                      }
+                    })
+                  : this
+                : this.attr("class", "");
           },
           toggleClass: function (t, e) {
             var i,
@@ -30673,26 +30715,26 @@
                   C(this).toggleClass(t.call(this, i, ye(this), e), e);
                 })
               : "boolean" == typeof e && a
-              ? e
-                ? this.addClass(t)
-                : this.removeClass(t)
-              : ((i = be(t)),
-                this.each(function () {
-                  if (a)
-                    for (o = C(this), r = 0; r < i.length; r++)
-                      (n = i[r]),
-                        o.hasClass(n) ? o.removeClass(n) : o.addClass(n);
-                  else
-                    (void 0 !== t && "boolean" !== s) ||
-                      ((n = ye(this)) && Z.set(this, "__className__", n),
-                      this.setAttribute &&
-                        this.setAttribute(
-                          "class",
-                          n || !1 === t
-                            ? ""
-                            : Z.get(this, "__className__") || ""
-                        ));
-                }));
+                ? e
+                  ? this.addClass(t)
+                  : this.removeClass(t)
+                : ((i = be(t)),
+                  this.each(function () {
+                    if (a)
+                      for (o = C(this), r = 0; r < i.length; r++)
+                        (n = i[r]),
+                          o.hasClass(n) ? o.removeClass(n) : o.addClass(n);
+                    else
+                      (void 0 !== t && "boolean" !== s) ||
+                        ((n = ye(this)) && Z.set(this, "__className__", n),
+                        this.setAttribute &&
+                          this.setAttribute(
+                            "class",
+                            n || !1 === t
+                              ? ""
+                              : Z.get(this, "__className__") || "",
+                          ));
+                  }));
           },
           hasClass: function (t) {
             var e,
@@ -30719,11 +30761,11 @@
                   (null == (r = n ? t.call(this, i, C(this).val()) : t)
                     ? (r = "")
                     : "number" == typeof r
-                    ? (r += "")
-                    : Array.isArray(r) &&
-                      (r = C.map(r, function (t) {
-                        return null == t ? "" : t + "";
-                      })),
+                      ? (r += "")
+                      : Array.isArray(r) &&
+                        (r = C.map(r, function (t) {
+                          return null == t ? "" : t + "";
+                        })),
                   ((e =
                     C.valHooks[this.type] ||
                     C.valHooks[this.nodeName.toLowerCase()]) &&
@@ -30732,17 +30774,17 @@
                     (this.value = r));
               }))
             : r
-            ? (e =
-                C.valHooks[r.type] || C.valHooks[r.nodeName.toLowerCase()]) &&
-              "get" in e &&
-              void 0 !== (i = e.get(r, "value"))
-              ? i
-              : "string" == typeof (i = r.value)
-              ? i.replace(xe, "")
-              : null == i
-              ? ""
-              : i
-            : void 0;
+              ? (e =
+                  C.valHooks[r.type] || C.valHooks[r.nodeName.toLowerCase()]) &&
+                "get" in e &&
+                void 0 !== (i = e.get(r, "value"))
+                ? i
+                : "string" == typeof (i = r.value)
+                  ? i.replace(xe, "")
+                  : null == i
+                    ? ""
+                    : i
+              : void 0;
         },
       }),
         C.extend({
@@ -30935,7 +30977,7 @@
                   ? C.map(n.childNodes, function (t) {
                       return t.textContent;
                     }).join("\n")
-                  : t)
+                  : t),
             ),
           e
         );
@@ -30954,7 +30996,7 @@
                   t + "[" + ("object" == typeof r && null != r ? e : "") + "]",
                   r,
                   i,
-                  n
+                  n,
                 );
           });
         else if (i || "object" !== S(e)) n(t, e);
@@ -31002,10 +31044,10 @@
                 return null == i
                   ? null
                   : Array.isArray(i)
-                  ? C.map(i, function (t) {
-                      return { name: e.name, value: t.replace(Ae, "\r\n") };
-                    })
-                  : { name: e.name, value: i.replace(Ae, "\r\n") };
+                    ? C.map(i, function (t) {
+                        return { name: e.name, value: t.replace(Ae, "\r\n") };
+                      })
+                    : { name: e.name, value: i.replace(Ae, "\r\n") };
               })
               .get();
           },
@@ -31070,7 +31112,7 @@
             type: "GET",
             isLocal:
               /^(?:about|app|app-storage|.+-extension|file|res|widget):$/.test(
-                Ce.protocol
+                Ce.protocol,
               ),
             global: !0,
             processData: !0,
@@ -31167,7 +31209,7 @@
               (m.promise(T),
               (p.url = ((t || p.url || Ce.href) + "").replace(
                 Re,
-                Ce.protocol + "//"
+                Ce.protocol + "//",
               )),
               (p.type = e.method || e.type || p.method || p.type),
               (p.dataTypes = (p.dataType || "*").toLowerCase().match(j) || [
@@ -31205,7 +31247,7 @@
                 p.processData &&
                 0 ===
                   (p.contentType || "").indexOf(
-                    "application/x-www-form-urlencoded"
+                    "application/x-www-form-urlencoded",
                   ) &&
                 (p.data = p.data.replace(Pe, "+"))
               : ((d = p.url.slice(r.length)),
@@ -31228,7 +31270,7 @@
               p.dataTypes[0] && p.accepts[p.dataTypes[0]]
                 ? p.accepts[p.dataTypes[0]] +
                     ("*" !== p.dataTypes[0] ? ", " + Fe + "; q=0.01" : "")
-                : p.accepts["*"]
+                : p.accepts["*"],
             ),
             p.headers))
               T.setRequestHeader(u, p.headers[u]);
@@ -31361,8 +31403,8 @@
                     204 === t || "HEAD" === p.type
                       ? (S = "nocontent")
                       : 304 === t
-                      ? (S = "notmodified")
-                      : ((S = x.state), (d = x.data), (u = !(b = x.error))))
+                        ? (S = "notmodified")
+                        : ((S = x.state), (d = x.data), (u = !(b = x.error))))
                   : ((b = S), (!t && S) || ((S = "error"), t < 0 && (t = 0))),
                 (T.status = t),
                 (T.statusText = (e || S) + ""),
@@ -31392,8 +31434,8 @@
               C.ajax(
                 C.extend(
                   { url: t, type: e, dataType: r, data: i, success: n },
-                  C.isPlainObject(t) && t
-                )
+                  C.isPlainObject(t) && t,
+                ),
               )
             );
           };
@@ -31517,18 +31559,18 @@
                       "abort" === t
                         ? a.abort()
                         : "error" === t
-                        ? "number" != typeof a.status
-                          ? o(0, "error")
-                          : o(a.status, a.statusText)
-                        : o(
-                            We[a.status] || a.status,
-                            a.statusText,
-                            "text" !== (a.responseType || "text") ||
-                              "string" != typeof a.responseText
-                              ? { binary: a.response }
-                              : { text: a.responseText },
-                            a.getAllResponseHeaders()
-                          ));
+                          ? "number" != typeof a.status
+                            ? o(0, "error")
+                            : o(a.status, a.statusText)
+                          : o(
+                              We[a.status] || a.status,
+                              a.statusText,
+                              "text" !== (a.responseType || "text") ||
+                                "string" != typeof a.responseText
+                                ? { binary: a.response }
+                                : { text: a.responseText },
+                              a.getAllResponseHeaders(),
+                            ));
                   };
                 }),
                   (a.onload = e()),
@@ -31586,7 +31628,7 @@
                       e.remove(),
                         (i = null),
                         t && r("error" === t.type ? 404 : 200, t.type);
-                    })
+                    }),
                   )),
                   b.head.appendChild(e[0]);
               },
@@ -31616,7 +31658,7 @@
                 : "string" == typeof t.data &&
                   0 ===
                     (t.contentType || "").indexOf(
-                      "application/x-www-form-urlencoded"
+                      "application/x-www-form-urlencoded",
                     ) &&
                   qe.test(t.data) &&
                   "data");
@@ -31657,7 +31699,7 @@
                 (m.createHTMLDocument
                   ? (((n = (e =
                       b.implementation.createHTMLDocument("")).createElement(
-                      "base"
+                      "base",
                     )).href = b.location.href),
                     e.head.appendChild(n))
                   : (e = b)),
@@ -31692,7 +31734,7 @@
                       s.each(function () {
                         i.apply(this, o || [t.responseText, e, t]);
                       });
-                    }
+                    },
                 ),
             this
           );
@@ -31810,10 +31852,10 @@
                 },
                 t,
                 n,
-                arguments.length
+                arguments.length,
               );
             };
-          }
+          },
         ),
         C.each(["top", "left"], function (t, e) {
           C.cssHooks[e] = Xt(m.pixelPosition, function (t, i) {
@@ -31837,24 +31879,24 @@
                         ? e["inner" + t]
                         : e.document.documentElement["client" + t]
                       : 9 === e.nodeType
-                      ? ((o = e.documentElement),
-                        Math.max(
-                          e.body["scroll" + t],
-                          o["scroll" + t],
-                          e.body["offset" + t],
-                          o["offset" + t],
-                          o["client" + t]
-                        ))
-                      : void 0 === r
-                      ? C.css(e, i, a)
-                      : C.style(e, i, r, a);
+                        ? ((o = e.documentElement),
+                          Math.max(
+                            e.body["scroll" + t],
+                            o["scroll" + t],
+                            e.body["offset" + t],
+                            o["offset" + t],
+                            o["client" + t],
+                          ))
+                        : void 0 === r
+                          ? C.css(e, i, a)
+                          : C.style(e, i, r, a);
                   },
                   e,
                   s ? r : void 0,
-                  s
+                  s,
                 );
               };
-            }
+            },
           );
         }),
         C.each(
@@ -31870,7 +31912,7 @@
             C.fn[e] = function (t) {
               return this.on(e, t);
             };
-          }
+          },
         ),
         C.fn.extend({
           bind: function (t, e, i) {
@@ -31893,7 +31935,7 @@
         }),
         C.each(
           "blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(
-            " "
+            " ",
           ),
           function (t, e) {
             C.fn[e] = function (t, i) {
@@ -31901,7 +31943,7 @@
                 ? this.on(e, null, t, i)
                 : this.trigger(e);
             };
-          }
+          },
         );
       var Ke = /^[\s\uFEFF\xA0]+|([^\s\uFEFF\xA0])[\s\uFEFF\xA0]+$/g;
       (C.proxy = function (t, e) {
@@ -32313,7 +32355,7 @@
           n = function (t) {
             t(
               function () {},
-              function () {}
+              function () {},
             );
           };
         return (
@@ -32519,12 +32561,12 @@
         return !e || n >= e.length
           ? ((t.target = void 0), { value: void 0, done: !0 })
           : "keys" == i
-          ? { value: n, done: !1 }
-          : "values" == i
-          ? { value: e[n], done: !1 }
-          : { value: [n, e[n]], done: !1 };
+            ? { value: n, done: !1 }
+            : "values" == i
+              ? { value: e[n], done: !1 }
+              : { value: [n, e[n]], done: !1 };
       },
-      "values"
+      "values",
     );
     var p = (o.Arguments = o.Array);
     if ((r("keys"), r("values"), r("entries"), !c && h && "values" !== p.name))
@@ -32684,7 +32726,7 @@
                 tt(this, t, (e << 24) >> 24);
               },
             },
-            { unsafe: !0 }
+            { unsafe: !0 },
           );
     } else
       (L = (O = function (t) {
@@ -32726,7 +32768,7 @@
           },
           getInt32: function (t) {
             return U(
-              V(this, 4, t, arguments.length > 1 ? arguments[1] : void 0)
+              V(this, 4, t, arguments.length > 1 ? arguments[1] : void 0),
             );
           },
           getUint32: function (t) {
@@ -32738,13 +32780,13 @@
           getFloat32: function (t) {
             return F(
               V(this, 4, t, arguments.length > 1 ? arguments[1] : void 0),
-              23
+              23,
             );
           },
           getFloat64: function (t) {
             return F(
               V(this, 8, t, arguments.length > 1 ? arguments[1] : void 0),
-              52
+              52,
             );
           },
           setInt8: function (t, e) {
@@ -32826,20 +32868,20 @@
                   return e(this, 0 === t ? 0 : t), this;
                 }
               : "delete" == t
-              ? function (t) {
-                  return !(y && !d(t)) && e(this, 0 === t ? 0 : t);
-                }
-              : "get" == t
-              ? function (t) {
-                  return y && !d(t) ? void 0 : e(this, 0 === t ? 0 : t);
-                }
-              : "has" == t
-              ? function (t) {
-                  return !(y && !d(t)) && e(this, 0 === t ? 0 : t);
-                }
-              : function (t, i) {
-                  return e(this, 0 === t ? 0 : t, i), this;
-                }
+                ? function (t) {
+                    return !(y && !d(t)) && e(this, 0 === t ? 0 : t);
+                  }
+                : "get" == t
+                  ? function (t) {
+                      return y && !d(t) ? void 0 : e(this, 0 === t ? 0 : t);
+                    }
+                  : "has" == t
+                    ? function (t) {
+                        return !(y && !d(t)) && e(this, 0 === t ? 0 : t);
+                      }
+                    : function (t, i) {
+                        return e(this, 0 === t ? 0 : t, i), this;
+                      },
           );
         };
       if (
@@ -32852,7 +32894,7 @@
                 !p(function () {
                   new x().entries().next();
                 }))
-            )
+            ),
         )
       )
         (S = i.getConstructor(e, t, v, b)), l.enable();
@@ -32919,8 +32961,8 @@
             return 0 == (t = +t)
               ? t
               : t > -1e-6 && t < 1e-6
-              ? t + (t * t) / 2
-              : n(t) - 1;
+                ? t + (t * t) / 2
+                : n(t) - 1;
           }
         : i;
   },
@@ -33013,30 +33055,31 @@
             w.nextTick(O(t));
           })
         : S && S.now
-        ? (r = function (t) {
-            S.now(O(t));
-          })
-        : T && !v
-        ? ((s = (o = new T()).port2),
-          (o.port1.onmessage = L),
-          (r = c(s.postMessage, s)))
-        : a.addEventListener &&
-          h(a.postMessage) &&
-          !a.importScripts &&
-          n &&
-          "file:" !== n.protocol &&
-          !d(P)
-        ? ((r = P), a.addEventListener("message", L, !1))
-        : (r =
-            "onreadystatechange" in g("script")
-              ? function (t) {
-                  p.appendChild(g("script")).onreadystatechange = function () {
-                    p.removeChild(this), M(t);
-                  };
-                }
-              : function (t) {
-                  setTimeout(O(t), 0);
-                })),
+          ? (r = function (t) {
+              S.now(O(t));
+            })
+          : T && !v
+            ? ((s = (o = new T()).port2),
+              (o.port1.onmessage = L),
+              (r = c(s.postMessage, s)))
+            : a.addEventListener &&
+                h(a.postMessage) &&
+                !a.importScripts &&
+                n &&
+                "file:" !== n.protocol &&
+                !d(P)
+              ? ((r = P), a.addEventListener("message", L, !1))
+              : (r =
+                  "onreadystatechange" in g("script")
+                    ? function (t) {
+                        p.appendChild(g("script")).onreadystatechange =
+                          function () {
+                            p.removeChild(this), M(t);
+                          };
+                      }
+                    : function (t) {
+                        setTimeout(O(t), 0);
+                      })),
       (t.exports = { set: b, clear: x });
   },
   function (t, e, i) {
@@ -33169,16 +33212,16 @@
               ? ""
               : void 0
             : (n = l(u, d)) < 55296 ||
-              n > 56319 ||
-              d + 1 === p ||
-              (h = l(u, d + 1)) < 56320 ||
-              h > 57343
-            ? t
-              ? a(u, d)
-              : n
-            : t
-            ? c(u, d, d + 2)
-            : h - 56320 + ((n - 55296) << 10) + 65536;
+                n > 56319 ||
+                d + 1 === p ||
+                (h = l(u, d + 1)) < 56320 ||
+                h > 57343
+              ? t
+                ? a(u, d)
+                : n
+              : t
+                ? c(u, d, d + 2)
+                : h - 56320 + ((n - 55296) << 10) + 65536;
         };
       };
     t.exports = { codeAt: h(!1), charAt: h(!0) };
@@ -33576,8 +33619,8 @@
                 ? e[s++]
                 : i[a++]
               : s < r
-              ? e[s++]
-              : i[a++];
+                ? e[s++]
+                : i[a++];
         return t;
       };
     t.exports = o;
@@ -33794,7 +33837,7 @@
             g(t, e) ||
               t.setAttribute(
                 "class",
-                (t.getAttribute("class") || "").trim() + " " + e
+                (t.getAttribute("class") || "").trim() + " " + e,
               );
           },
           v = function (t, e) {
@@ -33802,7 +33845,7 @@
             (i = g(t, e)) &&
               t.setAttribute(
                 "class",
-                (t.getAttribute("class") || "").replace(i, " ")
+                (t.getAttribute("class") || "").replace(i, " "),
               );
           },
           y = function (t, e, i) {
@@ -34127,7 +34170,7 @@
                 (j = i.now()),
                   (n.elements = e.getElementsByClassName(r.lazyClass)),
                   (I = e.getElementsByClassName(
-                    r.lazyClass + " " + r.preloadClass
+                    r.lazyClass + " " + r.preloadClass,
                   )),
                   a("scroll", et, !0),
                   a("resize", et, !0),
@@ -34291,7 +34334,7 @@
             t.dispatchEvent(
               new CustomEvent("HighchartsModuleLoaded", {
                 detail: { path: i, module: e[i] },
-              })
+              }),
             ));
       }
       var i = {};
@@ -34318,7 +34361,7 @@
                 (e.isSafari =
                   !e.isChrome && -1 !== e.userAgent.indexOf("Safari")),
                 (e.isTouchDevice = /(Mobile|Android|Windows Phone)/.test(
-                  e.userAgent
+                  e.userAgent,
                 )),
                 (e.isWebKit = -1 !== e.userAgent.indexOf("AppleWebKit")),
                 (e.deg2rad = (2 * Math.PI) / 360),
@@ -34381,7 +34424,7 @@
               function () {
                 if (n) throw Error(c);
                 w.console && -1 === e.messages.indexOf(c) && console.warn(c);
-              }
+              },
             ),
               e.messages.push(c);
           }
@@ -34420,10 +34463,10 @@
                 c(e)
                   ? t.setAttribute(i, e)
                   : o
-                  ? (r = t.getAttribute(i)) ||
-                    "class" !== i ||
-                    (r = t.getAttribute(i + "Name"))
-                  : t.removeAttribute(i);
+                    ? (r = t.getAttribute(i)) ||
+                      "class" !== i ||
+                      (r = t.getAttribute(i + "Name"))
+                    : t.removeAttribute(i);
               };
             return n(e) ? s(i, e) : m(e, s), r;
           }
@@ -34554,14 +34597,14 @@
                     !1,
                     void 0,
                     (((r = {})["Highcharts.".concat(n)] = "use Array.".concat(
-                      i
+                      i,
                     )),
-                    r)
+                    r),
                   ),
                   Array.prototype[i].apply(t, [].slice.call(arguments, 1))
                 );
               };
-            }
+            },
           );
           var C,
             T = (function () {
@@ -34580,7 +34623,7 @@
                     ? (new t[n(e[0]) ? e.shift() : "Chart"](
                         this[0],
                         e[0],
-                        e[1]
+                        e[1],
                       ),
                       this)
                     : b[h(this[0], "data-highcharts-chart")];
@@ -34609,7 +34652,7 @@
                             ? -1 !== i.indexOf("touch")
                             : r.passive,
                         capture: !1,
-                      }
+                      },
                     ),
                   o[i] || (o[i] = []),
                   o[i].push({
@@ -34717,7 +34760,7 @@
                       0,
                       o -
                         (a(r, "padding-left", !0) || 0) -
-                        (a(r, "padding-right", !0) || 0)
+                        (a(r, "padding-right", !0) || 0),
                     )
                   );
                 if ("height" === o)
@@ -34725,7 +34768,7 @@
                     0,
                     Math.min(r.offsetHeight, r.scrollHeight) -
                       (a(r, "padding-top", !0) || 0) -
-                      (a(r, "padding-bottom", !0) || 0)
+                      (a(r, "padding-bottom", !0) || 0),
                   );
                 if (
                   (w.getComputedStyle || e(27, !0),
@@ -34829,7 +34872,7 @@
               pad: function (t, e, i) {
                 return (
                   Array((e || 2) + 1 - String(t).replace("-", "").length).join(
-                    i || "0"
+                    i || "0",
                   ) + t
                 );
               },
@@ -34887,7 +34930,7 @@
                       function () {
                         return n.apply(e, arguments.length ? arguments : t);
                       },
-                    ].concat([].slice.call(arguments))
+                    ].concat([].slice.call(arguments)),
                   );
                 };
               },
@@ -34939,8 +34982,8 @@
                 return n && n !== e
                   ? new n(i)
                   : this instanceof e
-                  ? void this.init(i)
-                  : new e(i);
+                    ? void this.init(i)
+                    : new e(i);
               }
               return (
                 (e.parse = function (t) {
@@ -34999,8 +35042,8 @@
                     ? "rgb" === t || (!t && 1 === r[3])
                       ? "rgb(" + r[0] + "," + r[1] + "," + r[2] + ")"
                       : "a" === t
-                      ? "".concat(r[3])
-                      : "rgba(" + r.join(",") + ")"
+                        ? "".concat(r[3])
+                        : "rgba(" + r.join(",") + ")"
                     : e;
                 }),
                 (e.prototype.brighten = function (t) {
@@ -35054,13 +35097,13 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(i, "Core/Color/Palettes.js", [], function () {
           return {
             colors:
               "#7cb5ec #434348 #90ed7d #f7a35c #8085e9 #f15c80 #e4d354 #2b908f #f45b5b #91e8e1".split(
-                " "
+                " ",
               ),
           };
         }),
@@ -35158,7 +35201,7 @@
                       h(i, 1),
                       h(n, 0),
                       h(r, 0),
-                      h(o, 0)
+                      h(o, 0),
                     ).getTime();
                   return s;
                 }),
@@ -35228,13 +35271,13 @@
                         S: c(a.getSeconds()),
                         L: c(Math.floor(i % 1e3), 3),
                       },
-                      t.dateFormats
+                      t.dateFormats,
                     )),
                     l(a, function (t, n) {
                       for (; -1 !== e.indexOf("%" + n); )
                         e = e.replace(
                           "%" + n,
-                          "function" == typeof t ? t.call(s, i) : t
+                          "function" == typeof t ? t.call(s, i) : t,
                         );
                     }),
                     r ? e.substr(0, 1).toUpperCase() + e.substr(1) : e
@@ -35260,7 +35303,7 @@
                         u,
                         p >= d.second
                           ? 0
-                          : f * Math.floor(a.get("Milliseconds", u) / f)
+                          : f * Math.floor(a.get("Milliseconds", u) / f),
                       ),
                       p >= d.second &&
                         a.set(
@@ -35268,7 +35311,7 @@
                           u,
                           p >= d.minute
                             ? 0
-                            : f * Math.floor(a.get("Seconds", u) / f)
+                            : f * Math.floor(a.get("Seconds", u) / f),
                         ),
                       p >= d.minute &&
                         a.set(
@@ -35276,13 +35319,15 @@
                           u,
                           p >= d.hour
                             ? 0
-                            : f * Math.floor(a.get("Minutes", u) / f)
+                            : f * Math.floor(a.get("Minutes", u) / f),
                         ),
                       p >= d.hour &&
                         a.set(
                           "Hours",
                           u,
-                          p >= d.day ? 0 : f * Math.floor(a.get("Hours", u) / f)
+                          p >= d.day
+                            ? 0
+                            : f * Math.floor(a.get("Hours", u) / f),
                         ),
                       p >= d.day &&
                         a.set(
@@ -35290,14 +35335,14 @@
                           u,
                           p >= d.month
                             ? 1
-                            : Math.max(1, f * Math.floor(a.get("Date", u) / f))
+                            : Math.max(1, f * Math.floor(a.get("Date", u) / f)),
                         ),
                       p >= d.month)
                     ) {
                       a.set(
                         "Month",
                         u,
-                        p >= d.year ? 0 : f * Math.floor(a.get("Month", u) / f)
+                        p >= d.year ? 0 : f * Math.floor(a.get("Month", u) / f),
                       );
                       var g = a.get("FullYear", u);
                     }
@@ -35307,7 +35352,7 @@
                         a.set(
                           "Date",
                           u,
-                          a.get("Date", u) - g + r + (g < r ? -7 : 0)
+                          a.get("Date", u) - g + r + (g < r ? -7 : 0),
                         )),
                       (g = a.get("FullYear", u)),
                       (r = a.get("Month", u));
@@ -35330,16 +35375,16 @@
                           p === d.year
                             ? a.makeTime(g + u * f, 0)
                             : p === d.month
-                            ? a.makeTime(g, r + u * f)
-                            : !s || (p !== d.day && p !== d.week)
-                            ? s && p === d.hour && 1 < f
-                              ? a.makeTime(g, r, m, v + u * f)
-                              : e + p * f
-                            : a.makeTime(
-                                g,
-                                r,
-                                m + u * f * (p === d.day ? 1 : 7)
-                              )),
+                              ? a.makeTime(g, r + u * f)
+                              : !s || (p !== d.day && p !== d.week)
+                                ? s && p === d.hour && 1 < f
+                                  ? a.makeTime(g, r, m, v + u * f)
+                                  : e + p * f
+                                : a.makeTime(
+                                    g,
+                                    r,
+                                    m + u * f * (p === d.day ? 1 : 7),
+                                  )),
                         u++;
                     l.push(e),
                       p <= d.hour &&
@@ -35389,7 +35434,7 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -35418,15 +35463,15 @@
                   loading: "Loading...",
                   months:
                     "January February March April May June July August September October November December".split(
-                      " "
+                      " ",
                     ),
                   shortMonths:
                     "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(
-                      " "
+                      " ",
                     ),
                   weekdays:
                     "Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split(
-                      " "
+                      " ",
                     ),
                   decimalPoint: ".",
                   numericSymbols: "kMGTPE".split(""),
@@ -35581,7 +35626,7 @@
                 );
               },
             });
-          }
+          },
         ),
         e(
           i,
@@ -35638,8 +35683,8 @@
                   this[e + "Setter"]
                     ? this[e + "Setter"]()
                     : t.attr
-                    ? t.element && t.attr(e, i, null, !0)
-                    : (t.style[e] = i + this.unit),
+                      ? t.element && t.attr(e, i, null, !0)
+                      : (t.style[e] = i + this.unit),
                     n && n.call(t, i, this);
                 }),
                 (t.prototype.run = function (e, i, n) {
@@ -35762,14 +35807,14 @@
                     this.prop,
                     n(this.start).tweenTo(n(this.end), this.pos),
                     void 0,
-                    !0
+                    !0,
                   );
                 }),
                 (t.timers = []),
                 t
               );
             })();
-          }
+          },
         ),
         e(
           i,
@@ -35821,9 +35866,9 @@
                           (u = 0),
                           (d = 1))
                         : e.attr
-                        ? (u = e.attr(l))
-                        : ((u = parseFloat(o(e, l)) || 0),
-                          "opacity" !== l && (f = "px")),
+                          ? (u = e.attr(l))
+                          : ((u = parseFloat(o(e, l)) || 0),
+                            "opacity" !== l && (f = "px")),
                       d || (d = a),
                       "string" == typeof d &&
                         d.match("px") &&
@@ -35853,12 +35898,12 @@
                 e.renderer.globalAnimation = u(
                   t,
                   e.options.chart.animation,
-                  !0
+                  !0,
                 );
               },
               stop: n,
             };
-          }
+          },
         ),
         e(
           i,
@@ -35956,7 +36001,7 @@
                           else if (-1 !== e.allowedTags.indexOf(h) || p) {
                             h = t.doc.createElementNS(
                               "svg" === h ? i : l.namespaceURI || i,
-                              h
+                              h,
                             );
                             var g = a.attributes || {};
                             c(a, function (t, e) {
@@ -35990,7 +36035,7 @@
                   )
                     t = new DOMParser().parseFromString(
                       u ? u.createHTML(t) : t,
-                      "text/html"
+                      "text/html",
                     );
                   else {
                     var n = r("div");
@@ -36029,20 +36074,20 @@
                 }),
                 (e.allowedAttributes =
                   "aria-controls aria-describedby aria-expanded aria-haspopup aria-hidden aria-label aria-labelledby aria-live aria-pressed aria-readonly aria-roledescription aria-selected class clip-path color colspan cx cy d dx dy disabled fill height href id in markerHeight markerWidth offset opacity orient padding paddingLeft paddingRight patternUnits r refX refY role scope slope src startOffset stdDeviation stroke stroke-linecap stroke-width style tableValues result rowspan summary target tabindex text-align text-anchor textAnchor textLength title type valign width x x1 x2 xlink:href y y1 y2 zIndex".split(
-                    " "
+                    " ",
                   )),
                 (e.allowedReferences =
                   "https:// http:// mailto: / ../ ./ #".split(" ")),
                 (e.allowedTags =
                   "a abbr b br button caption circle clipPath code dd defs div dl dt em feComponentTransfer feFuncA feFuncB feFuncG feFuncR feGaussianBlur feOffset feMerge feMergeNode filter h1 h2 h3 h4 h5 h6 hr i img li linearGradient marker ol p path pattern pre rect small span stop strong style sub sup svg table text textPath thead title tbody tspan td th tr u ul #text".split(
-                    " "
+                    " ",
                   )),
                 (e.emptyHTML = d),
                 (e.bypassHTMLFiltering = !1),
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -36118,7 +36163,7 @@
                             a,
                             m,
                             u.decimalPoint,
-                            -1 < g.indexOf(",") ? u.thousandsSep : ""
+                            -1 < g.indexOf(",") ? u.thousandsSep : "",
                           ));
                       } else a = d.dateFormat(g, a);
                     p.push(a);
@@ -36129,7 +36174,7 @@
               },
               numberFormat: i,
             };
-          }
+          },
         ),
         e(
           i,
@@ -36184,7 +36229,7 @@
                         e[a - 1].pos + e[a - 1].size > e[a].pos &&
                         ((e[a - 1].size += e[a].size),
                         (e[a - 1].targets = e[a - 1].targets.concat(
-                          e[a].targets
+                          e[a].targets,
                         )),
                         (e[a - 1].align = 0.5),
                         e[a - 1].pos + e[a - 1].size > o &&
@@ -36218,7 +36263,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -36265,7 +36310,7 @@
                     (this.SVG_NS = h),
                     (this.symbolCustomAttribs =
                       "x y width height r start end innerR anchorX anchorY rounded".split(
-                        " "
+                        " ",
                       ));
                 }
                 return (
@@ -36275,7 +36320,7 @@
                         this[t + "Value"],
                         this[t],
                         this.element ? this.element.getAttribute(t) : null,
-                        0
+                        0,
                       )),
                       /^[\-0-9\.]+$/.test(t) && (t = parseFloat(t)),
                       t
@@ -36311,7 +36356,7 @@
                           function (t, e) {
                             return -1 === i.indexOf(e) && t.push(e), t;
                           },
-                          i ? [i] : []
+                          i ? [i] : [],
                         )
                         .join(" ")) !== i && this.attr("class", t),
                       this
@@ -36343,7 +36388,7 @@
                         i,
                         a[n],
                         "scrollablePlotBox" === n ? a.plotBox : void 0,
-                        a
+                        a,
                       )),
                       (n = t.align);
                     var c = t.verticalAlign;
@@ -36391,7 +36436,7 @@
                                   elem: this,
                                 });
                             },
-                            this
+                            this,
                           )),
                       this
                     );
@@ -36401,7 +36446,7 @@
                     -1 !== t.indexOf("contrast") &&
                       (t = t.replace(
                         /contrast/g,
-                        this.renderer.getContrast(e.style.fill)
+                        this.renderer.getContrast(e.style.fill),
                       ));
                     var n = t.split(" ");
                     if (
@@ -36440,7 +36485,7 @@
                         t.querySelectorAll("text tspan"),
                         function (t) {
                           o += Number(t.getAttribute("dy"));
-                        }
+                        },
                       ),
                         ((n = l.createElementNS(h, "tspan")).textContent = "​"),
                         p(n, { x: Number(e.getAttribute("x")), dy: -o }),
@@ -36464,7 +36509,7 @@
                         ? (h = (this[t + "Getter"] || this._defaultGetter).call(
                             this,
                             t,
-                            l
+                            l,
                           ))
                         : (T(
                             t,
@@ -36485,11 +36530,11 @@
                                   !this.styledMode &&
                                     this.shadows &&
                                     /^(width|height|visibility|x|y|d|transform|cx|cy|r)$/.test(
-                                      i
+                                      i,
                                     ) &&
                                     this.updateShadows(i, e, a));
                             },
-                            this
+                            this,
                           ),
                           this.afterSetters()),
                       i && i.call(this),
@@ -36499,7 +36544,9 @@
                   (t.prototype.clip = function (t) {
                     return this.attr(
                       "clip-path",
-                      t ? "url(" + this.renderer.url + "#" + t.id + ")" : "none"
+                      t
+                        ? "url(" + this.renderer.url + "#" + t.id + ")"
+                        : "none",
                     );
                   }),
                   (t.prototype.crisp = function (t, e) {
@@ -36509,10 +36556,10 @@
                       (t.x = Math.floor(t.x || this.x || 0) + i),
                       (t.y = Math.floor(t.y || this.y || 0) + i),
                       (t.width = Math.floor(
-                        (t.width || this.width || 0) - 2 * i
+                        (t.width || this.width || 0) - 2 * i,
                       )),
                       (t.height = Math.floor(
-                        (t.height || this.height || 0) - 2 * i
+                        (t.height || this.height || 0) - 2 * i,
                       )),
                       m(t.strokeWidth) && (t.strokeWidth = e),
                       t
@@ -36606,7 +36653,7 @@
                               return f;
                             });
                         }
-                      }
+                      },
                     );
                   }),
                   (t.prototype.css = function (t) {
@@ -36636,7 +36683,7 @@
                         ["textOutline", "textOverflow", "width"].forEach(
                           function (t) {
                             return s && delete s[t];
-                          }
+                          },
                         ),
                         g(n, s),
                         this.added &&
@@ -36692,7 +36739,7 @@
                           -1 <
                             t.getAttribute("clip-path").indexOf(o.element.id) &&
                             t.removeAttribute("clip-path");
-                        }
+                        },
                       ),
                         (t.clipPath = o.destroy());
                     }
@@ -36746,7 +36793,7 @@
                         complete: function () {
                           e.hide();
                         },
-                      }
+                      },
                     );
                   }),
                   (t.prototype.fillSetter = function (t, e, i) {
@@ -36788,7 +36835,7 @@
                             this.fakeTS &&
                             function (t) {
                               var e = r.querySelector(
-                                ".highcharts-text-outline"
+                                ".highcharts-text-outline",
                               );
                               e && g(e, { display: t });
                             };
@@ -36881,15 +36928,15 @@
                       ("" + this.attr("class"))
                         .replace(
                           S(t) ? new RegExp("(^| )".concat(t, "( |$)")) : t,
-                          " "
+                          " ",
                         )
                         .replace(/ +/g, " ")
-                        .trim()
+                        .trim(),
                     );
                   }),
                   (t.prototype.removeTextOutline = function () {
                     var t = this.element.querySelector(
-                      "tspan.highcharts-text-outline"
+                      "tspan.highcharts-text-outline",
                     );
                     t && this.safeRemoveChild(t);
                   }),
@@ -36921,7 +36968,7 @@
                           textAnchor: "middle",
                         },
                       },
-                      e
+                      e,
                     );
                     var n = this.renderer.url,
                       r = this.text || this,
@@ -37012,7 +37059,7 @@
                             u.setAttribute(
                               "class",
                               (u.getAttribute("class") || "") +
-                                " highcharts-shadow"
+                                " highcharts-shadow",
                             ),
                             i &&
                               (p(u, "height", Math.max(p(u, "height") - d, 0)),
@@ -37064,7 +37111,7 @@
                           e.y,
                           e.width,
                           e.height,
-                          e
+                          e,
                         ),
                       });
                   }),
@@ -37103,10 +37150,10 @@
                           "height" === t
                             ? Math.max(e - (n[r].cutHeight || 0), 0)
                             : "d" === t
-                            ? this.d
-                            : e,
+                              ? this.d
+                              : e,
                           t,
-                          n[r]
+                          n[r],
                         );
                   }),
                   (t.prototype.updateTransform = function () {
@@ -37134,7 +37181,7 @@
                             k(this.rotationOriginX, t.getAttribute("x"), 0) +
                             " " +
                             k(this.rotationOriginY, t.getAttribute("y") || 0) +
-                            ")"
+                            ")",
                         ),
                       (m(n) || m(r)) &&
                         o.push("scale(" + k(n, 1) + " " + k(r, 1) + ")"),
@@ -37209,7 +37256,7 @@
                   }),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -37234,7 +37281,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -37290,7 +37337,7 @@
                   p.addClass(
                     "button" === u
                       ? "highcharts-no-tooltip"
-                      : "highcharts-label"
+                      : "highcharts-label",
                   ),
                   u && p.addClass("highcharts-" + u),
                   (p.text = t.text(void 0, 0, 0, l).attr({ zIndex: 1 })),
@@ -37320,7 +37367,7 @@
                   (this.anchorX = t),
                     this.boxAttr(
                       e,
-                      Math.round(t) - this.getCrispAdjust() - this.xSetting
+                      Math.round(t) - this.getCrispAdjust() - this.xSetting,
                     );
                 }),
                 (c.prototype.anchorYSetter = function (t, e) {
@@ -37447,7 +37494,7 @@
                       s +
                       Math.min(
                         (this.text.firstLineMetrics || e).b,
-                        a.height || 1 / 0
+                        a.height || 1 / 0,
                       )),
                     this.heightSetting &&
                       (this.baselineOffset += (this.heightSetting - e.h) / 2),
@@ -37463,7 +37510,7 @@
                             : "highcharts-label-box") +
                             (this.className
                               ? " highcharts-" + this.className + "-box"
-                              : "")
+                              : ""),
                         ),
                         t.add(this)),
                       (t = this.getCrispAdjust()),
@@ -37521,12 +37568,12 @@
                 (c.emptyBBox = { width: 0, height: 0, x: 0, y: 0 }),
                 (c.textProps =
                   "color direction fontFamily fontSize fontStyle fontWeight lineHeight textAlign textDecoration textOutline textOverflow width".split(
-                    " "
+                    " ",
                   )),
                 c
               );
             })(t);
-          }
+          },
         ),
         e(
           i,
@@ -37543,7 +37590,7 @@
                 n = o.innerR;
                 var u = s(
                     o.open,
-                    0.001 > Math.abs((o.end || 0) - l - 2 * Math.PI)
+                    0.001 > Math.abs((o.end || 0) - l - 2 * Math.PI),
                   ),
                   d = Math.cos(l),
                   p = Math.sin(l),
@@ -37552,7 +37599,7 @@
                 (l = s(o.longArc, 0.001 > h - l - Math.PI ? 0 : 1)),
                   a.push(
                     ["M", t + c * d, e + i * p],
-                    ["A", c, i, 0, l, s(o.clockwise, 1), t + c * f, e + i * g]
+                    ["A", c, i, 0, l, s(o.clockwise, 1), t + c * f, e + i * g],
                   ),
                   r(n) &&
                     a.push(
@@ -37568,7 +37615,7 @@
                         r(o.clockwise) ? 1 - o.clockwise : 0,
                         t + n * d,
                         e + n * p,
-                      ]
+                      ],
                     ),
                   u || a.push(["Z"]);
               }
@@ -37618,7 +37665,7 @@
                             ["L", t + i, s - 6],
                             ["L", t + i + 6, s],
                             ["L", t + i, s + 6],
-                            ["L", t + i, e + r - a]
+                            ["L", t + i, e + r - a],
                           )
                         : h.splice(
                             3,
@@ -37626,47 +37673,47 @@
                             ["L", t + i, r / 2],
                             ["L", c, s],
                             ["L", t + i, r / 2],
-                            ["L", t + i, e + r - a]
+                            ["L", t + i, e + r - a],
                           )
                       : 0 >= t + c
-                      ? s > e + l && s < e + r - l
-                        ? h.splice(
-                            7,
-                            1,
-                            ["L", t, s + 6],
-                            ["L", t - 6, s],
-                            ["L", t, s - 6],
-                            ["L", t, e + a]
-                          )
-                        : h.splice(
-                            7,
-                            1,
-                            ["L", t, r / 2],
-                            ["L", c, s],
-                            ["L", t, r / 2],
-                            ["L", t, e + a]
-                          )
-                      : s && s > r && c > t + l && c < t + i - l
-                      ? h.splice(
-                          5,
-                          1,
-                          ["L", c + 6, e + r],
-                          ["L", c, e + r + 6],
-                          ["L", c - 6, e + r],
-                          ["L", t + a, e + r]
-                        )
-                      : s &&
-                        0 > s &&
-                        c > t + l &&
-                        c < t + i - l &&
-                        h.splice(
-                          1,
-                          1,
-                          ["L", c - 6, e],
-                          ["L", c, e - 6],
-                          ["L", c + 6, e],
-                          ["L", i - a, e]
-                        ),
+                        ? s > e + l && s < e + r - l
+                          ? h.splice(
+                              7,
+                              1,
+                              ["L", t, s + 6],
+                              ["L", t - 6, s],
+                              ["L", t, s - 6],
+                              ["L", t, e + a],
+                            )
+                          : h.splice(
+                              7,
+                              1,
+                              ["L", t, r / 2],
+                              ["L", c, s],
+                              ["L", t, r / 2],
+                              ["L", t, e + a],
+                            )
+                        : s && s > r && c > t + l && c < t + i - l
+                          ? h.splice(
+                              5,
+                              1,
+                              ["L", c + 6, e + r],
+                              ["L", c, e + r + 6],
+                              ["L", c - 6, e + r],
+                              ["L", t + a, e + r],
+                            )
+                          : s &&
+                            0 > s &&
+                            c > t + l &&
+                            c < t + i - l &&
+                            h.splice(
+                              1,
+                              1,
+                              ["L", c - 6, e],
+                              ["L", c, e - 6],
+                              ["L", c + 6, e],
+                              ["L", i - a, e],
+                            ),
                     h)
                   : h;
               },
@@ -37706,7 +37753,7 @@
                 ];
               },
             };
-          }
+          },
         ),
         e(
           i,
@@ -37782,11 +37829,11 @@
                             this.unescapeEntities(e.textStr || "", [
                               "&lt;",
                               "&gt;",
-                            ])
+                            ]),
                           ),
                         r && r.removeChild(i))
                       : i.appendChild(
-                          n.createTextNode(this.unescapeEntities(o))
+                          n.createTextNode(this.unescapeEntities(o)),
                         ),
                       c(this.textOutline) &&
                         e.applyTextOutline &&
@@ -37814,10 +37861,10 @@
                           1 === t.previousSibling.nodeType &&
                           (i.firstLineMetrics = i.renderer.fontMetrics(
                             void 0,
-                            t.previousSibling
+                            t.previousSibling,
                           )),
                         s(t, { dy: e.getLineHeight(t.nextSibling), x: a }));
-                    }
+                    },
                   );
                   var l = this.width || 0;
                   if (l) {
@@ -37840,7 +37887,7 @@
                               Math.max(0, l - parseInt(e.fontSize || 12, 10)),
                               function (t, e) {
                                 return t.substring(0, e) + "…";
-                              }
+                              },
                             );
                         else if (u) {
                           for (
@@ -37868,7 +37915,7 @@
                                     .slice(0, e)
                                     .join(" ")
                                     .replace(/- /g, "-");
-                                }
+                                },
                               ),
                               (f = i.actualWidth),
                               p++;
@@ -37879,7 +37926,7 @@
                               o.insertBefore(n.createTextNode(e), t),
                                 ((e = n.createElementNS(
                                   r,
-                                  "tspan"
+                                  "tspan",
                                 )).textContent = "​"),
                                 s(e, { dy: d, x: a }),
                                 o.insertBefore(e, t);
@@ -37914,7 +37961,7 @@
                       ? parseInt(this.textLineHeight.toString(), 10)
                       : this.renderer.fontMetrics(
                           e,
-                          t || this.svgElement.element
+                          t || this.svgElement.element,
                         ).h
                   );
                 }),
@@ -37944,7 +37991,7 @@
                               r.textContent &&
                               (r.textContent = r.textContent.replace(
                                 /^ +/gm,
-                                ""
+                                "",
                               )))
                           : "a" === c &&
                             s &&
@@ -38014,7 +38061,7 @@
                 e
               );
             })();
-          }
+          },
         ),
         e(
           i,
@@ -38099,7 +38146,7 @@
                       this.createElement("desc")
                         .add()
                         .element.appendChild(
-                          d.createTextNode("Created with Highcharts 10.3.2")
+                          d.createTextNode("Created with Highcharts 10.3.2"),
                         ),
                       (this.defs = this.createElement("defs").add()),
                       (this.allowHTML = o),
@@ -38187,7 +38234,7 @@
                           '"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif',
                         fontSize: "12px",
                       },
-                      t
+                      t,
                     ));
                   }),
                   (i.prototype.setStyle = function (t) {
@@ -38248,7 +38295,7 @@
                     a,
                     l,
                     c,
-                    h
+                    h,
                   ) {
                     void 0 === o && (o = {});
                     var u = this.label(
@@ -38260,7 +38307,7 @@
                         void 0,
                         h,
                         void 0,
-                        "button"
+                        "button",
                       ),
                       d = this.styledMode;
                     e = o.states || {};
@@ -38272,7 +38319,7 @@
                         cursor: "pointer",
                         fontWeight: "normal",
                       },
-                      o.style
+                      o.style,
                     );
                     delete o.style;
                     var m = t.filterUserAttributes(o);
@@ -38283,12 +38330,12 @@
                           stroke: "#cccccc",
                           "stroke-width": 1,
                         },
-                        m
+                        m,
                       );
                       var v = (s = P(
                         m,
                         { fill: "#e6e6e6" },
-                        t.filterUserAttributes(s || e.hover || {})
+                        t.filterUserAttributes(s || e.hover || {}),
                       )).style;
                       delete s.style;
                       var y = (a = P(
@@ -38297,13 +38344,13 @@
                           fill: "#e6ebf5",
                           style: { color: "#000000", fontWeight: "bold" },
                         },
-                        t.filterUserAttributes(a || e.select || {})
+                        t.filterUserAttributes(a || e.select || {}),
                       )).style;
                       delete a.style;
                       var b = (l = P(
                         m,
                         { style: { color: "#cccccc" } },
-                        t.filterUserAttributes(l || e.disabled || {})
+                        t.filterUserAttributes(l || e.disabled || {}),
                       )).style;
                       delete l.style;
                     }
@@ -38318,13 +38365,13 @@
                         1 !== t && (u.state = p = t),
                           u
                             .removeClass(
-                              /highcharts-button-(normal|hover|pressed|disabled)/
+                              /highcharts-button-(normal|hover|pressed|disabled)/,
                             )
                             .addClass(
                               "highcharts-button-" +
                                 ["normal", "hover", "pressed", "disabled"][
                                   t || 0
-                                ]
+                                ],
                             ),
                           d ||
                             (u.attr([m, s, a, l][t || 0]),
@@ -38389,13 +38436,13 @@
                       (t = O(t)
                         ? t
                         : void 0 === t
-                        ? {}
-                        : {
-                            x: t,
-                            y: e,
-                            width: Math.max(i, 0),
-                            height: Math.max(n, 0),
-                          }),
+                          ? {}
+                          : {
+                              x: t,
+                              y: e,
+                              width: Math.max(i, 0),
+                              height: Math.max(n, 0),
+                            }),
                       this.styledMode ||
                         (void 0 !== o &&
                           ((t["stroke-width"] = o), (t = s.crisp(t))),
@@ -38426,7 +38473,7 @@
                             });
                           },
                           duration: D(i, !0) ? void 0 : 0,
-                        }
+                        },
                       ),
                       this.alignElements();
                   }),
@@ -38441,7 +38488,7 @@
                           ? t.setAttributeNS(
                               "http://www.w3.org/1999/xlink",
                               "href",
-                              e
+                              e,
                             )
                           : t.setAttribute("hc-svg-href", e);
                       };
@@ -38457,7 +38504,7 @@
                       o
                         ? (a(
                             l.element,
-                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
                           ),
                           (i = new b.Image()),
                           x(i, "load", e),
@@ -38482,7 +38529,7 @@
                           Math.round(i || 0),
                           n || 0,
                           r || 0,
-                          o
+                          o,
                         ));
                       var f = this.path(s);
                       a.styledMode || f.attr("fill", "none"),
@@ -38524,7 +38571,7 @@
                               t ||
                                 this.translate(
                                   ((n || 0) - l * c) / 2,
-                                  ((r || 0) - l * c) / 2
+                                  ((r || 0) - l * c) / 2,
                                 );
                           }
                         };
@@ -38648,7 +38695,7 @@
                         t.splice(
                           r,
                           0,
-                          i[0].replace("M", "L").replace("m", "l")
+                          i[0].replace("M", "L").replace("m", "l"),
                         ),
                         "string" == typeof t[r] &&
                           (i.length && e.push(i.slice(0)), (i.length = 0)),
@@ -38682,7 +38729,7 @@
               n.registerRendererType("svg", i, !0),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -38838,7 +38885,7 @@
                             g,
                             a,
                             u,
-                            s
+                            s,
                           )),
                         l(e, {
                           left: r + (this.xCorr || 0) + "px",
@@ -38856,12 +38903,12 @@
                       o && !/Edge/.test(a.navigator.userAgent)
                         ? "-ms-transform"
                         : s
-                        ? "-webkit-transform"
-                        : r
-                        ? "MozTransform"
-                        : a.opera
-                        ? "-o-transform"
-                        : void 0;
+                          ? "-webkit-transform"
+                          : r
+                            ? "MozTransform"
+                            : a.opera
+                              ? "-o-transform"
+                              : void 0;
                   c &&
                     ((n[c] = n.transform = "rotate(" + t + "deg)"),
                     (n[c + (r ? "Origin" : "-origin")] = n.transformOrigin =
@@ -38872,7 +38919,7 @@
                 e
               );
             })(e);
-          }
+          },
         ),
         e(
           i,
@@ -39009,7 +39056,7 @@
                                       pointerEvents: h.pointerEvents,
                                       visibility: t.visibility,
                                     },
-                                    n || e
+                                    n || e,
                                   )).style;
                               a(t, {
                                 classSetter: (function (t) {
@@ -39026,7 +39073,7 @@
                                           element: i[0].div,
                                           onEvents: t.onEvents,
                                         },
-                                        arguments
+                                        arguments,
                                       ),
                                     t
                                   );
@@ -39052,7 +39099,7 @@
                 n
               );
             })(i);
-          }
+          },
         ),
         e(i, "Core/Axis/AxisDefaults.js", [], function () {
           var t;
@@ -39155,7 +39202,7 @@
                     formatter: function () {
                       return (0, this.axis.chart.numberFormatter)(
                         this.total || 0,
-                        -1
+                        -1,
                       );
                     },
                     style: {
@@ -39271,14 +39318,14 @@
                       var S = r.time.resolveDTLFormat(
                           n.dateTimeLabelFormats[
                             (!n.grid && m.higherRanks[f]) || m.unitName
-                          ]
+                          ],
                         ),
                         C = S.main;
                     else
                       h(a) &&
                         (C = i.dateTime.getXDateFormat(
                           a,
-                          n.dateTimeLabelFormats || {}
+                          n.dateTimeLabelFormats || {},
                         ));
                   (e.isFirst = v), (e.isLast = y);
                   var T = {
@@ -39297,9 +39344,9 @@
                     return g.formatter
                       ? g.formatter.call(e, e)
                       : g.format
-                      ? ((e.text = i.defaultLabelFormatter.call(e, e)),
-                        t.format(g.format, e, r))
-                      : i.defaultLabelFormatter.call(e, e);
+                        ? ((e.text = i.defaultLabelFormatter.call(e, e)),
+                          t.format(g.format, e, r))
+                        : i.defaultLabelFormatter.call(e, e);
                   };
                   n = k.call(T, T);
                   var E = S && S.list;
@@ -39366,7 +39413,9 @@
                       y: t
                         ? l - s.bottom + s.offset - (s.opposite ? s.height : 0)
                         : o(
-                            l - s.translate(e + i, void 0, void 0, n) - s.transB
+                            l -
+                              s.translate(e + i, void 0, void 0, n) -
+                              s.transB,
                           ),
                     }).y = r(t.y, -1e5, 1e5)),
                     c(this, "afterGetPosition", { pos: t }),
@@ -39381,7 +39430,7 @@
                   o,
                   a,
                   l,
-                  h
+                  h,
                 ) {
                   var u = this.axis,
                     d = u.transA,
@@ -39404,9 +39453,9 @@
                           ? -8
                           : -i.getBBox().height
                         : 2 === u.side
-                        ? g.y + 8
-                        : Math.cos(i.rotation * n) *
-                          (g.y - i.getBBox(!1, 0).height / 2)),
+                          ? g.y + 8
+                          : Math.cos(i.rotation * n) *
+                            (g.y - i.getBBox(!1, 0).height / 2)),
                     s(o.y) && (i = 0 === u.side && u.horiz ? o.y + i : o.y),
                     (t =
                       t + o.x + m + g.x - (a && r ? a * d * (p ? -1 : 1) : 0)),
@@ -39436,7 +39485,7 @@
                       ["M", t, e],
                       ["L", t + (r ? 0 : -i), e + (r ? i : 0)],
                     ],
-                    n
+                    n,
                   );
                 }),
                 (e.prototype.handleOverflow = function (t) {
@@ -39448,7 +39497,7 @@
                     a = p(e.labelLeft, Math.min(e.pos, s[3]));
                   s = p(
                     e.labelRight,
-                    Math.max(e.isRadial ? 0 : e.pos + e.len, o - s[1])
+                    Math.max(e.isRadial ? 0 : e.pos + e.len, o - s[1]),
                   );
                   var l,
                     c = this.label,
@@ -39559,7 +39608,7 @@
                           .path()
                           .attr(o)
                           .addClass(
-                            "highcharts-" + (a ? a + "-" : "") + "grid-line"
+                            "highcharts-" + (a ? a + "-" : "") + "grid-line",
                           )
                           .add(n.gridGroup))),
                     h &&
@@ -39584,7 +39633,7 @@
                   t = t.y;
                   var c = p(
                     r["minor" !== s ? "tickWidth" : "minorTickWidth"],
-                    !s && n.isXAxis ? 1 : 0
+                    !s && n.isXAxis ? 1 : 0,
                   );
                   r = r["minor" !== s ? "tickColor" : "minorTickColor"];
                   var h = this.mark,
@@ -39606,7 +39655,7 @@
                         a[0],
                         h.strokeWidth() * i,
                         n.horiz,
-                        o
+                        o,
                       ),
                       opacity: e,
                     }));
@@ -39658,7 +39707,7 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -39706,9 +39755,9 @@
                   void 0,
                   M(
                     t.options.allowDecimals,
-                    0.5 > e || void 0 !== t.tickAmount
+                    0.5 > e || void 0 !== t.tickAmount,
                   ),
-                  !!t.tickAmount
+                  !!t.tickAmount,
                 );
               };
             return (t = (function () {
@@ -39781,8 +39830,8 @@
                           ? 0
                           : 2
                         : this.opposite
-                        ? 1
-                        : 3
+                          ? 1
+                          : 3,
                     )),
                     this.setOptions(e);
                   var n = this.options,
@@ -39813,7 +39862,7 @@
                     (this.min = this.max = null),
                     (e = M(
                       n.crosshair,
-                      P(t.options.tooltip.crosshairs)[i ? 0 : 1]
+                      P(t.options.tooltip.crosshairs)[i ? 0 : 1],
                     )),
                     (this.crosshair = !0 === e ? {} : e),
                     -1 === t.axes.indexOf(this) &&
@@ -39841,7 +39890,7 @@
                       e.defaultBottomAxisOptions,
                       e.defaultLeftAxisOptions,
                     ][this.side],
-                    k(c[this.coll], t)
+                    k(c[this.coll], t),
                   )),
                     w(this, "afterSetOptions", { userOptions: t });
                 }),
@@ -39962,7 +40011,7 @@
                     !0,
                     !this.horiz,
                     void 0,
-                    !0
+                    !0,
                   );
                 }),
                 (t.prototype.getPlotLinePath = function (t) {
@@ -40021,7 +40070,7 @@
                                   ["M", i, n],
                                   ["L", r, o],
                                 ],
-                                p || 1
+                                p || 1,
                               ));
                     }),
                     t.path
@@ -40042,8 +40091,8 @@
                   return !0 === t.minorTicks
                     ? M(t.minorTickInterval, "auto")
                     : !1 === t.minorTicks
-                    ? null
-                    : t.minorTickInterval;
+                      ? null
+                      : t.minorTickInterval;
                 }),
                 (t.prototype.getMinorTickPositions = function () {
                   var t = this.options,
@@ -40060,7 +40109,7 @@
                         e &&
                           s.push.apply(
                             s,
-                            a.getLogTickPositions(i, n[e - 1], n[e], !0)
+                            a.getLogTickPositions(i, n[e - 1], n[e], !0),
                           );
                       });
                     else if (
@@ -40072,8 +40121,8 @@
                           this.dateTime.normalizeTimeTickInterval(i),
                           r,
                           n,
-                          t.startOfWeek
-                        )
+                          t.startOfWeek,
+                        ),
                       );
                     else
                       for (
@@ -40112,7 +40161,7 @@
                           }),
                           (this.minRange = Math.min(
                             5 * l,
-                            this.dataMax - this.dataMin
+                            this.dataMax - this.dataMin,
                           )))),
                     a - s < this.minRange)
                   ) {
@@ -40217,8 +40266,8 @@
                           var i = n
                               ? 1
                               : r
-                              ? M(e.options.pointRange, c, 0)
-                              : t.axisPointRange || 0,
+                                ? M(e.options.pointRange, c, 0)
+                                : t.axisPointRange || 0,
                             l = e.options.pointPlacement;
                           (o = Math.max(o, i)),
                             (t.single && !n) ||
@@ -40348,21 +40397,21 @@
                       void 0 === this.max
                         ? 1
                         : o &&
-                          this.linkedParent &&
-                          !u &&
-                          s === this.linkedParent.options.tickPixelInterval
-                        ? (u = this.linkedParent.tickInterval)
-                        : M(
-                            u,
-                            this.tickAmount
-                              ? (this.max - this.min) /
-                                  Math.max(this.tickAmount - 1, 1)
-                              : void 0,
-                            a
-                              ? 1
-                              : ((this.max - this.min) * s) /
-                                  Math.max(this.len, s)
-                          )),
+                            this.linkedParent &&
+                            !u &&
+                            s === this.linkedParent.options.tickPixelInterval
+                          ? (u = this.linkedParent.tickInterval)
+                          : M(
+                              u,
+                              this.tickAmount
+                                ? (this.max - this.min) /
+                                    Math.max(this.tickAmount - 1, 1)
+                                : void 0,
+                              a
+                                ? 1
+                                : ((this.max - this.min) * s) /
+                                    Math.max(this.len, s),
+                            )),
                     r && !t)
                   ) {
                     var x =
@@ -40380,7 +40429,7 @@
                       !u &&
                       (this.tickInterval = Math.max(
                         this.pointRange,
-                        this.tickInterval
+                        this.tickInterval,
                       )),
                     (t = M(
                       n.minTickInterval,
@@ -40389,7 +40438,7 @@
                           return t.noSharedTooltip;
                         })
                         ? this.closestPointRange
-                        : 0
+                        : 0,
                     )),
                     !u && this.tickInterval < t && (this.tickInterval = t),
                     this.dateTime ||
@@ -40442,20 +40491,20 @@
                         s = this.getTimeTicks(
                           this.dateTime.normalizeTimeTickInterval(
                             this.tickInterval,
-                            e.units
+                            e.units,
                           ),
                           this.min,
                           this.max,
                           e.startOfWeek,
                           this.ordinal && this.ordinal.positions,
                           this.closestPointRange,
-                          !0
+                          !0,
                         );
                       else if (this.logarithmic)
                         s = this.logarithmic.getLogTickPositions(
                           this.tickInterval,
                           this.min,
-                          this.max
+                          this.max,
                         );
                       else
                         for (
@@ -40464,7 +40513,7 @@
                           ((s = this.getLinearTickPositions(
                             this.tickInterval,
                             this.min,
-                            this.max
+                            this.max,
                           )),
                           this.tickAmount && s.length > this.tickAmount);
 
@@ -40582,7 +40631,7 @@
                         (this.threshold - (this.dataMin || 0)) /
                           ((this.dataMax || 0) - (this.dataMin || 0)),
                         0,
-                        1
+                        1,
                       )),
                       this.options.reversed && (t = 1 - t),
                       t
@@ -40735,7 +40784,7 @@
                           (i.displayBtn = void 0 !== e || void 0 !== o),
                           i.setExtremes(e, o, !1, void 0, { trigger: "zoom" })),
                           (t.zoomed = !0);
-                      }
+                      },
                     ),
                     t.zoomed
                   );
@@ -40746,17 +40795,17 @@
                     i = e.offsets || [0, 0, 0, 0],
                     n = this.horiz,
                     r = (this.width = Math.round(
-                      O(M(e.width, t.plotWidth - i[3] + i[1]), t.plotWidth)
+                      O(M(e.width, t.plotWidth - i[3] + i[1]), t.plotWidth),
                     )),
                     o = (this.height = Math.round(
-                      O(M(e.height, t.plotHeight - i[0] + i[2]), t.plotHeight)
+                      O(M(e.height, t.plotHeight - i[0] + i[2]), t.plotHeight),
                     )),
                     s = (this.top = Math.round(
-                      O(M(e.top, t.plotTop + i[0]), t.plotHeight, t.plotTop)
+                      O(M(e.top, t.plotTop + i[0]), t.plotHeight, t.plotTop),
                     ));
                   (e = this.left =
                     Math.round(
-                      O(M(e.left, t.plotLeft + i[3]), t.plotWidth, t.plotLeft)
+                      O(M(e.left, t.plotLeft + i[3]), t.plotWidth, t.plotLeft),
                     )),
                     (this.bottom = t.chartHeight - o - s),
                     (this.right = t.chartWidth - r - e),
@@ -40782,10 +40831,10 @@
                     null === t || -1 / 0 === t
                       ? (t = i)
                       : 1 / 0 === t
-                      ? (t = e)
-                      : i > t
-                      ? (t = i)
-                      : e < t && (t = e),
+                        ? (t = e)
+                        : i > t
+                          ? (t = i)
+                          : e < t && (t = e),
                     this.translate(t, 0, 1, 0, 1)
                   );
                 }),
@@ -40800,7 +40849,7 @@
                         15 < e && 165 > e
                           ? (t.align = "right")
                           : 195 < e && 345 > e && (t.align = "left");
-                      }
+                      },
                     ),
                     t.align
                   );
@@ -40809,7 +40858,7 @@
                   var e = this.options,
                     i = M(
                       e["tick" === t ? "tickWidth" : "minorTickWidth"],
-                      "tick" === t && this.isXAxis && !this.categories ? 1 : 0
+                      "tick" === t && this.isXAxis && !this.categories ? 1 : 0,
                     ),
                     n = e["tick" === t ? "tickLength" : "minorTickLength"];
                   if (i && n) {
@@ -40824,7 +40873,7 @@
                   var t = (this.tickPositions && this.tickPositions[0]) || 0;
                   return this.chart.renderer.fontMetrics(
                     this.options.labels.style.fontSize,
-                    this.ticks[t] && this.ticks[t].label
+                    this.ticks[t] && this.ticks[t].label,
                   );
                 }),
                 (t.prototype.unsquish = function () {
@@ -40885,7 +40934,7 @@
                     n = this.options.labels,
                     r = Math.max(
                       this.tickPositions.length - (this.categories ? 0 : 1),
-                      1
+                      1,
                     ),
                     o = e.margin[3];
                   if (t && C(t.slotWidth)) return t.slotWidth;
@@ -40960,24 +41009,26 @@
                         t.shortenLabel
                           ? t.shortenLabel()
                           : p &&
-                            !i &&
-                            "nowrap" !== o.whiteSpace &&
-                            (p < e.textPxLength || "SPAN" === e.element.tagName)
-                          ? ((r.width = p + "px"),
-                            u || (r.textOverflow = e.specificTextOverflow || f),
-                            e.css(r))
-                          : e.styles &&
-                            e.styles.width &&
-                            !r.width &&
-                            !i &&
-                            e.css({ width: null }),
+                              !i &&
+                              "nowrap" !== o.whiteSpace &&
+                              (p < e.textPxLength ||
+                                "SPAN" === e.element.tagName)
+                            ? ((r.width = p + "px"),
+                              u ||
+                                (r.textOverflow = e.specificTextOverflow || f),
+                              e.css(r))
+                            : e.styles &&
+                              e.styles.width &&
+                              !r.width &&
+                              !i &&
+                              e.css({ width: null }),
                         delete e.specificTextOverflow,
                         (t.rotation = c.rotation));
                     }, this),
                     (this.tickRotCorr = e.rotCorr(
                       h.b,
                       this.labelRotation || 0,
-                      0 !== this.side
+                      0 !== this.side,
                     ));
                 }),
                 (t.prototype.hasData = function () {
@@ -41061,7 +41112,7 @@
                             (t.isRadial
                               ? "highcharts-radial-axis".concat(i, " ")
                               : "") +
-                            (b || "")
+                            (b || ""),
                         )
                         .add(c);
                     };
@@ -41082,7 +41133,7 @@
                         M(
                           f.reserveSpace,
                           "center" === e.labelAlign || null,
-                          e.reserveSpaceDefault
+                          e.reserveSpaceDefault,
                         ) &&
                           a.forEach(function (t) {
                             C = Math.max(s[t].getLabelSize(), C);
@@ -41110,8 +41161,8 @@
                       0 === o
                         ? -e.labelMetrics().h
                         : 2 === o
-                        ? e.tickRotCorr.y
-                        : 0),
+                          ? e.tickRotCorr.y
+                          : 0),
                     (d = Math.abs(C) + S),
                     C &&
                       (d =
@@ -41127,7 +41178,7 @@
                         g[o],
                         (e.axisTitleMargin || 0) + x + y * e.offset,
                         d,
-                        a && a.length && n ? n[0] + y * e.offset : 0
+                        a && a.length && n ? n[0] + y * e.offset : 0,
                       )),
                       (r =
                         !e.axisLine || r.offset
@@ -41155,7 +41206,7 @@
                           r ? n : e.chartHeight - this.bottom,
                         ],
                       ],
-                      t
+                      t,
                     )
                   );
                 }),
@@ -41305,7 +41356,7 @@
                               !t[e[i]].isActive &&
                               (t[e[i]].destroy(), delete t[e[i]]);
                         },
-                        t !== f && n.hasRendered && i ? i : 0
+                        t !== f && n.hasRendered && i ? i : 0,
                       );
                   }),
                     y &&
@@ -41354,11 +41405,11 @@
                   if (
                     (w(this, "destroy", { keepEvents: t }),
                     t || L(e),
-                    [e.ticks, e.minorTicks, e.alternateBands].forEach(function (
-                      t
-                    ) {
-                      v(t);
-                    }),
+                    [e.ticks, e.minorTicks, e.alternateBands].forEach(
+                      function (t) {
+                        v(t);
+                      },
+                    ),
                     i)
                   )
                     for (t = i.length; t--; ) i[t].destroy();
@@ -41391,7 +41442,7 @@
                         ? m(e) &&
                           (n = M(
                             "colorAxis" !== this.coll ? e.crosshairPos : null,
-                            this.isXAxis ? e.plotX : this.len - e.plotY
+                            this.isXAxis ? e.plotX : this.len - e.plotY,
                           ))
                         : (n =
                             t &&
@@ -41422,7 +41473,7 @@
                             .addClass(
                               "highcharts-crosshair highcharts-crosshair-" +
                                 (o ? "category " : "thin ") +
-                                (r.className || "")
+                                (r.className || ""),
                             )
                             .attr({ zIndex: M(r.zIndex, 2) })
                             .add()),
@@ -41494,7 +41545,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -41511,7 +41562,7 @@
                 function e() {
                   return this.chart.time.getTimeTicks.apply(
                     this.chart.time,
-                    arguments
+                    arguments,
                   );
                 }
                 function s(t) {
@@ -41572,7 +41623,7 @@
                           count: (t = r(
                             t / a,
                             l,
-                            "year" === e[0] ? Math.max(n(t / a), 1) : 1
+                            "year" === e[0] ? Math.max(n(t / a), 1) : 1,
                           )),
                           unitName: e[0],
                         }
@@ -41586,7 +41637,7 @@
                             i.closestPointRange,
                             t,
                             i.options.startOfWeek,
-                            e
+                            e,
                           ) || n.resolveDTLFormat(e.year).main
                         : n.resolveDTLFormat(e.day).main;
                     }),
@@ -41597,7 +41648,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -41659,8 +41710,8 @@
                             0.3 < t
                               ? [1, 2, 4]
                               : 0.15 < t
-                              ? [1, 2, 4, 6, 8]
-                              : [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                                ? [1, 2, 4, 6, 8]
+                                : [1, 2, 3, 4, 5, 6, 7, 8, 9];
                           u < i + 1 && !d;
                           u++
                         ) {
@@ -41683,7 +41734,7 @@
                             "auto" === t ? null : t,
                             this.minorAutoInterval,
                             ((l.tickPixelInterval / (o ? 5 : 1)) * (i - e)) /
-                              ((o ? a / s.tickPositions.length : a) || 1)
+                              ((o ? a / s.tickPositions.length : a) || 1),
                           )),
                           (t = n(t)),
                           (c = s
@@ -41705,7 +41756,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -41777,7 +41828,7 @@
                               ["L", c[1], c[2]],
                               ["L", u[1], u[2]],
                               ["L", h[1], h[2]],
-                              ["Z"]
+                              ["Z"],
                             )),
                             (o.isFlat = a);
                         }
@@ -41842,7 +41893,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -41964,7 +42015,7 @@
                             y: i ? (S ? 16 : 10) : S ? 6 : -4,
                             rotation: i && !S && 90,
                           },
-                          g
+                          g,
                         )),
                         this.renderLabel(g, w, S, u))
                       : m && m.hide(),
@@ -42030,7 +42081,7 @@
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -42114,7 +42165,7 @@
                       t.point.tooltipFormatter
                     ).call(
                       t.point,
-                      e[(t.point.formatPrefix || "point") + "Format"] || ""
+                      e[(t.point.formatPrefix || "point") + "Format"] || "",
                     );
                   });
                 }),
@@ -42132,7 +42183,7 @@
                     i = [t.tooltipFooterHeaderFormatter(e[0])];
                   return (
                     (i = i.concat(t.bodyFormatter(e))).push(
-                      t.tooltipFooterHeaderFormatter(e[0], !0)
+                      t.tooltipFooterHeaderFormatter(e[0], !0),
                     ),
                     i
                   );
@@ -42164,31 +42215,33 @@
                       ? (void 0 === e.chartX && (e = o.normalize(e)),
                         (o = [e.chartX - l, e.chartY - a]))
                       : t[0].tooltipPos
-                      ? (o = t[0].tooltipPos)
-                      : (t.forEach(function (t) {
-                          (i = t.series.yAxis),
-                            (n = t.series.xAxis),
-                            (c += t.plotX || 0),
-                            (h += t.plotLow
-                              ? (t.plotLow + (t.plotHigh || 0)) / 2
-                              : t.plotY || 0),
-                            n &&
-                              i &&
-                              (s
-                                ? ((c += a + r.plotHeight - n.len - n.pos),
-                                  (h += l + r.plotWidth - i.len - i.pos))
-                                : ((c += n.pos - l), (h += i.pos - a)));
-                        }),
-                        (c /= t.length),
-                        (h /= t.length),
-                        (o = [
-                          s ? r.plotWidth - h : c,
-                          s ? r.plotHeight - c : h,
-                        ]),
-                        this.shared &&
-                          1 < t.length &&
-                          e &&
-                          (s ? (o[0] = e.chartX - l) : (o[1] = e.chartY - a))),
+                        ? (o = t[0].tooltipPos)
+                        : (t.forEach(function (t) {
+                            (i = t.series.yAxis),
+                              (n = t.series.xAxis),
+                              (c += t.plotX || 0),
+                              (h += t.plotLow
+                                ? (t.plotLow + (t.plotHigh || 0)) / 2
+                                : t.plotY || 0),
+                              n &&
+                                i &&
+                                (s
+                                  ? ((c += a + r.plotHeight - n.len - n.pos),
+                                    (h += l + r.plotWidth - i.len - i.pos))
+                                  : ((c += n.pos - l), (h += i.pos - a)));
+                          }),
+                          (c /= t.length),
+                          (h /= t.length),
+                          (o = [
+                            s ? r.plotWidth - h : c,
+                            s ? r.plotHeight - c : h,
+                          ]),
+                          this.shared &&
+                            1 < t.length &&
+                            e &&
+                            (s
+                              ? (o[0] = e.chartX - l)
+                              : (o[1] = e.chartY - a))),
                     o.map(Math.round)
                   );
                 }),
@@ -42232,7 +42285,7 @@
                           pointerEvents: a,
                           zIndex: Math.max(
                             this.options.style.zIndex || 0,
-                            ((h && h.zIndex) || 0) + 3
+                            ((h && h.zIndex) || 0) + 3,
                           ),
                         }),
                         e.doc.body.appendChild(t),
@@ -42252,7 +42305,7 @@
                               void 0,
                               o.useHTML,
                               void 0,
-                              "tooltip"
+                              "tooltip",
                             )
                             .attr({ padding: o.padding, r: o.borderRadius })),
                           r ||
@@ -42302,7 +42355,7 @@
                           s.documentElement.scrollHeight,
                           s.body.offsetHeight,
                           s.documentElement.offsetHeight,
-                          s.documentElement.clientHeight
+                          s.documentElement.clientHeight,
                         )
                       : r.chartHeight,
                     d = r.pointer.getChartPosition(),
@@ -42325,7 +42378,7 @@
                               s
                                 ? r.plotLeft + r.plotWidth
                                 : r.plotTop + r.plotHeight,
-                            ]
+                            ],
                       );
                     },
                     f = p("y"),
@@ -42361,8 +42414,8 @@
                               r < i / 2
                                 ? 1
                                 : r > e - n / 2
-                                ? e - n - 2
-                                : r - i / 2),
+                                  ? e - n - 2
+                                  : r - i / 2),
                         s
                       );
                     },
@@ -42374,8 +42427,8 @@
                       !1 !== y.apply(0, f)
                         ? !1 !== b.apply(0, g) || n || (x(!0), w())
                         : n
-                        ? (a.x = a.y = 0)
-                        : (x(!0), w());
+                          ? (a.x = a.y = 0)
+                          : (x(!0), w());
                     };
                   return (r.inverted || 1 < this.len) && x(), w(), a;
                 }),
@@ -42398,7 +42451,7 @@
                     (this.shared = e.shared || this.split),
                     (this.outside = v(
                       e.outside,
-                      !(!t.scrollablePixelsX && !t.scrollablePixelsY)
+                      !(!t.scrollablePixelsX && !t.scrollablePixelsY),
                     ));
                 }),
                 (t.prototype.shouldStickOnContact = function (t) {
@@ -42408,7 +42461,7 @@
                     (t &&
                       !this.chart.pointer.inClass(
                         t.target,
-                        "highcharts-tooltip"
+                        "highcharts-tooltip",
                       ))
                   );
                 }),
@@ -42530,13 +42583,13 @@
                           (t = l(
                             t - r / 2,
                             E.left,
-                            E.right - r - (n.outside ? L : 0)
+                            E.right - r - (n.outside ? L : 0),
                           )))
                         : ((e -= P),
                           (t = l(
                             (t = o ? t - r - C : t + C),
                             o ? t : E.left,
-                            E.right
+                            E.right,
                           ))),
                       { x: t, y: e }
                     );
@@ -42599,7 +42652,7 @@
                             T[h ? "headerShape" : "shape"],
                             void 0,
                             void 0,
-                            T.useHTML
+                            T.useHTML,
                           )
                             .addClass(n.getClassName(o, !0, h))
                             .attr(c)
@@ -42669,7 +42722,7 @@
                           t.anchorY,
                           t.point.isHeader,
                           t.boxWidth,
-                          !1
+                          !1,
                         );
                         return u(t, { target: e.y, x: e.x });
                       })),
@@ -42737,7 +42790,7 @@
                           0 > i[1]
                             ? Math.max(
                                 Math.abs(i[1]),
-                                r.height - Math.abs(i[1])
+                                r.height - Math.abs(i[1]),
                               )
                             : Math.max(Math.abs(i[1]), r.height)),
                         this.tracker
@@ -42755,11 +42808,11 @@
                   return t
                     .replace(
                       'style="font-size: 10px"',
-                      'class="highcharts-header"'
+                      'class="highcharts-header"',
                     )
                     .replace(
                       /style="color:{(point|series)\.color}"/g,
-                      'class="highcharts-color-{$1.colorIndex} {series.options.className} {point.options.className}"'
+                      'class="highcharts-color-{$1.colorIndex} {series.options.className} {point.options.className}"',
                     );
                 }),
                 (t.prototype.tooltipFooterHeaderFormatter = function (t, e) {
@@ -42783,7 +42836,7 @@
                           ).forEach(function (t) {
                             l = l.replace(
                               "{point." + t + "}",
-                              "{point." + t + ":" + a + "}"
+                              "{point." + t + ":" + a + "}",
                             );
                           }),
                         i.chart.styledMode && (l = this.styledModeFormat(l)),
@@ -42807,7 +42860,7 @@
                       this,
                       r.width,
                       r.height,
-                      t
+                      t,
                     ),
                     s = t.plotX + e.plotLeft;
                   (t = t.plotY + e.plotTop),
@@ -42829,7 +42882,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -42882,7 +42935,7 @@
                     t[i] = t[i].animate(
                       "dataLabel" === i
                         ? { x: t[i].startXPos, y: t[i].startYPos, opacity: 0 }
-                        : e
+                        : e,
                     );
                   }),
                     i.plural.forEach(function (e) {
@@ -42893,8 +42946,8 @@
                               { x: t.startXPos },
                               e.startYPos
                                 ? { x: e.startXPos, y: e.startYPos }
-                                : {}
-                            )
+                                : {},
+                            ),
                           );
                       });
                     });
@@ -43012,7 +43065,7 @@
                           "dataLabel",
                           "dataLabelPath",
                           "dataLabelUpper",
-                          "connector"
+                          "connector",
                         ),
                       e = n.length;
                     e--;
@@ -43165,11 +43218,11 @@
                         (r || o) &&
                           (t = t.replace(
                             RegExp(e + "}", "g"),
-                            r + e + "}" + o
+                            r + e + "}" + o,
                           )),
                         (t = t.replace(
                           RegExp(e + "}", "g"),
-                          e + ":,." + n + "f}"
+                          e + ":,." + n + "f}",
                         ));
                     }),
                     a(t, { point: this, series: this.series }, e.chart)
@@ -43244,11 +43297,11 @@
                                 t.setState(
                                   r.hoverPoints && e.options.inactiveOtherPoints
                                     ? "inactive"
-                                    : ""
+                                    : "",
                                 ),
                                 t.firePointEvent("unselect"));
                             });
-                      }
+                      },
                     ),
                     delete this.selectedStaging;
                 }),
@@ -43333,7 +43386,11 @@
                       n &&
                         this.graphic.animate(
                           n,
-                          x(g.options.chart.animation, h.animation, l.animation)
+                          x(
+                            g.options.chart.animation,
+                            h.animation,
+                            l.animation,
+                          ),
                         ),
                         b && b.hide();
                     } else
@@ -43364,11 +43421,9 @@
                       a && a.size && b && "hidden" !== n && !this.isCluster
                         ? (y ||
                             (r.halo = y = g.renderer.path().add(b.parentGroup)),
-                          y
-                            .show()
-                            [i ? "animate" : "attr"]({
-                              d: this.haloPath(a.size),
-                            }),
+                          y.show()[i ? "animate" : "attr"]({
+                            d: this.haloPath(a.size),
+                          }),
                           y.attr({
                             class:
                               "highcharts-halo highcharts-color-" +
@@ -43385,8 +43440,8 @@
                                   fill: this.color || r.color,
                                   "fill-opacity": a.opacity,
                                 },
-                                t.filterUserAttributes(a.attributes || {})
-                              )
+                                t.filterUserAttributes(a.attributes || {}),
+                              ),
                             ))
                         : y &&
                           y.point &&
@@ -43400,13 +43455,13 @@
                     Math.floor(this.plotX) - t,
                     this.plotY - t,
                     2 * t,
-                    2 * t
+                    2 * t,
                   );
                 }),
                 e
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -43532,7 +43587,7 @@
                     (d < n ? (d = n) : d > n + s && (d = n + s),
                     p < o ? (p = o) : p > o + a && (p = o + a),
                     (this.hasDragged = Math.sqrt(
-                      Math.pow(l - d, 2) + Math.pow(c - p, 2)
+                      Math.pow(l - d, 2) + Math.pow(c - p, 2),
                     )),
                     10 < this.hasDragged &&
                       ((n = e.isInsidePlot(l - n, c - o, {
@@ -43662,12 +43717,12 @@
                           (0 !== r && e
                             ? r
                             : 0 !== o
-                            ? o
-                            : 0 !== s
-                            ? s
-                            : n.series.index > t.series.index
-                            ? -1
-                            : 1);
+                              ? o
+                              : 0 !== s
+                                ? s
+                                : n.series.index > t.series.index
+                                  ? -1
+                                  : 1);
                       }
                       r && (n = t);
                     }),
@@ -43880,7 +43935,7 @@
                         !e.isInsidePlot(
                           t.chartX - e.plotLeft,
                           t.chartY - e.plotTop,
-                          { visiblePlotOnly: !0 }
+                          { visiblePlotOnly: !0 },
                         )) ||
                       (i && i.shouldStickOnContact(t)) ||
                       (this.inClass(t.target, "highcharts-no-tooltip")
@@ -43910,7 +43965,7 @@
                       e.isInsidePlot(
                         t.chartX - e.plotLeft,
                         t.chartY - e.plotTop,
-                        { visiblePlotOnly: !0 }
+                        { visiblePlotOnly: !0 },
                       ) ||
                       (i && i.shouldStickOnContact(t)) ||
                       this.inClass(t.target, "highcharts-tracker") ||
@@ -43958,10 +44013,16 @@
                             var e = i.bounds[t.horiz ? "h" : "v"],
                               n = t.minPixelPadding,
                               r = t.toPixels(
-                                Math.min(y(t.options.min, t.dataMin), t.dataMin)
+                                Math.min(
+                                  y(t.options.min, t.dataMin),
+                                  t.dataMin,
+                                ),
                               ),
                               o = t.toPixels(
-                                Math.max(y(t.options.max, t.dataMax), t.dataMax)
+                                Math.max(
+                                  y(t.options.max, t.dataMax),
+                                  t.dataMax,
+                                ),
                               ),
                               s = Math.max(r, o);
                             (e.min = Math.min(t.pos, Math.min(r, o) - n)),
@@ -43970,17 +44031,17 @@
                         }),
                         (e.res = !0))
                       : f
-                      ? this.runPointActions(e.normalize(t))
-                      : n.length &&
-                        (p(i, "touchpan", { originalEvent: t }, function () {
-                          g ||
-                            (e.selectionMarker = g =
-                              u({ destroy: s, touch: !0 }, i.plotBox)),
-                            e.pinchTranslate(n, r, c, g, d, a),
-                            (e.hasPinched = l),
-                            e.scaleGroups(c, d);
-                        }),
-                        e.res && ((e.res = !1), this.reset(!1, 0)));
+                        ? this.runPointActions(e.normalize(t))
+                        : n.length &&
+                          (p(i, "touchpan", { originalEvent: t }, function () {
+                            g ||
+                              (e.selectionMarker = g =
+                                u({ destroy: s, touch: !0 }, i.plotBox)),
+                              e.pinchTranslate(n, r, c, g, d, a),
+                              (e.hasPinched = l),
+                              e.scaleGroups(c, d);
+                          }),
+                          e.res && ((e.res = !1), this.reset(!1, 0)));
                 }),
                 (t.prototype.pinchTranslate = function (t, e, i, n, r, o) {
                   this.zoomHor &&
@@ -43996,7 +44057,7 @@
                   r,
                   o,
                   s,
-                  a
+                  a,
                 ) {
                   var l = this.chart,
                     c = t ? "x" : "y",
@@ -44100,7 +44161,7 @@
                     (!e || "touchmove" !== e.type) &&
                       (!!i || (h && h.directTouch && this.isDirectTouch)),
                     l,
-                    e
+                    e,
                   )),
                     (c = i.hoverPoint),
                     (h = i.hoverSeries);
@@ -44143,7 +44204,7 @@
                       function (e) {
                         var i = o[t.hoverChartIndex];
                         i && i.pointer.onDocumentMouseMove(e);
-                      }
+                      },
                     )),
                     this.eventsToUnbind.push(this.unDocMouseMove)),
                     r.axes.forEach(function (t) {
@@ -44179,16 +44240,16 @@
                     (n.onmousemove = this.onContainerMouseMove.bind(this)),
                     (n.onclick = this.onContainerClick.bind(this)),
                     this.eventsToUnbind.push(
-                      a(n, "mouseenter", this.onContainerMouseEnter.bind(this))
+                      a(n, "mouseenter", this.onContainerMouseEnter.bind(this)),
                     ),
                     this.eventsToUnbind.push(
-                      a(n, "mouseleave", this.onContainerMouseLeave.bind(this))
+                      a(n, "mouseleave", this.onContainerMouseLeave.bind(this)),
                     ),
                     t.unbindDocumentMouseUp ||
                       (t.unbindDocumentMouseUp = a(
                         r,
                         "mouseup",
-                        this.onDocumentMouseUp.bind(this)
+                        this.onDocumentMouseUp.bind(this),
                       ));
                   for (
                     var o = this.chart.renderTo.parentElement;
@@ -44198,7 +44259,7 @@
                     this.eventsToUnbind.push(
                       a(o, "scroll", function () {
                         delete i.chartPosition;
-                      })
+                      }),
                     ),
                       (o = o.parentElement);
                   e.hasTouch &&
@@ -44207,20 +44268,20 @@
                         n,
                         "touchstart",
                         this.onContainerTouchStart.bind(this),
-                        { passive: !1 }
-                      )
+                        { passive: !1 },
+                      ),
                     ),
                     this.eventsToUnbind.push(
                       a(n, "touchmove", this.onContainerTouchMove.bind(this), {
                         passive: !1,
-                      })
+                      }),
                     ),
                     t.unbindDocumentTouchEnd ||
                       (t.unbindDocumentTouchEnd = a(
                         r,
                         "touchend",
                         this.onDocumentTouchEnd.bind(this),
-                        { passive: !1 }
+                        { passive: !1 },
                       )));
                 }),
                 (t.prototype.setHoverChartIndex = function () {
@@ -44241,7 +44302,7 @@
                       i.isInsidePlot(
                         t.chartX - i.plotLeft,
                         t.chartY - i.plotTop,
-                        { visiblePlotOnly: !0 }
+                        { visiblePlotOnly: !0 },
                       ) && !i.openMenu)
                     ) {
                       if (
@@ -44252,7 +44313,7 @@
                           4 <=
                             Math.sqrt(
                               Math.pow(e[0].chartX - t.chartX, 2) +
-                                Math.pow(e[0].chartY - t.chartY, 2)
+                                Math.pow(e[0].chartY - t.chartY, 2),
                             );
                       y(n, !0) && this.pinch(t);
                     } else e && this.reset();
@@ -44280,7 +44341,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -44365,17 +44426,17 @@
                   t(
                     this.chart.container,
                     m ? "pointerdown" : "MSPointerDown",
-                    this.onContainerPointerDown
+                    this.onContainerPointerDown,
                   ),
                     t(
                       this.chart.container,
                       m ? "pointermove" : "MSPointerMove",
-                      this.onContainerPointerMove
+                      this.onContainerPointerMove,
                     ),
                     t(
                       a,
                       m ? "pointerup" : "MSPointerUp",
-                      this.onDocumentPointerUp
+                      this.onDocumentPointerUp,
                     );
                 }),
                 (i.prototype.destroy = function () {
@@ -44419,7 +44480,7 @@
                 i
               );
             })(e);
-          }
+          },
         ),
         e(
           i,
@@ -44501,7 +44562,7 @@
                             function () {
                               this.legend.proximatePositions(),
                                 this.legend.positionItems();
-                            }
+                            },
                           ))
                         : this.unchartrender && this.unchartrender());
                 }),
@@ -44512,7 +44573,7 @@
                       ((this.itemStyle = t.itemStyle),
                       (this.itemHiddenStyle = b(
                         this.itemStyle,
-                        t.itemHiddenStyle
+                        t.itemHiddenStyle,
                       ))),
                     (this.itemMarginTop = t.itemMarginTop || 0),
                     (this.itemMarginBottom = t.itemMarginBottom || 0),
@@ -44541,7 +44602,7 @@
                     ((i = i.symbol),
                     n &&
                       n[e ? "removeClass" : "addClass"](
-                        "highcharts-legend-item-hidden"
+                        "highcharts-legend-item-hidden",
                       ),
                     !this.chart.styledMode)
                   ) {
@@ -44588,7 +44649,7 @@
                         void 0,
                         function () {
                           v(e, "afterPositionItem", { item: t });
-                        }
+                        },
                       )),
                     o && ((o.x = r), (o.y = i));
                 }),
@@ -44612,7 +44673,7 @@
                   for (
                     t = 0,
                       e = "clipRect up down pager nav box title group".split(
-                        " "
+                        " ",
                       );
                     t < e.length;
                     t++
@@ -44662,7 +44723,7 @@
                           void 0,
                           t.useHTML,
                           void 0,
-                          "legend-title"
+                          "legend-title",
                         )
                         .attr({ zIndex: 1 })),
                       this.chart.styledMode || this.title.css(i.style),
@@ -44710,7 +44771,7 @@
                             "-series highcharts-color-" +
                             t.colorIndex +
                             (m ? " " + m : "") +
-                            (u ? " highcharts-series-" + t.index : "")
+                            (u ? " highcharts-series-" + t.index : ""),
                         )
                         .attr({ zIndex: 1 })
                         .add(this.scrollGroup)),
@@ -44723,7 +44784,7 @@
                       this.baseline ||
                         ((this.fontMetrics = n.fontMetrics(
                           i.styledMode ? 12 : a.fontSize,
-                          v
+                          v,
                         )),
                         (this.baseline =
                           this.fontMetrics.f + 3 + this.itemMarginTop),
@@ -44733,7 +44794,7 @@
                         r.squareSymbol &&
                           ((this.symbolWidth = x(
                             r.symbolWidth,
-                            Math.max(this.symbolHeight, 16)
+                            Math.max(this.symbolHeight, 16),
                           )),
                           (p = this.symbolWidth + s + c + (f ? 20 : 0)),
                           h && v.attr("x", this.symbolWidth + s))),
@@ -44760,12 +44821,12 @@
                       r.itemWidth || e.labelWidth || i.width + p),
                     (this.maxItemWidth = Math.max(
                       this.maxItemWidth,
-                      t.itemWidth
+                      t.itemWidth,
                     )),
                     (this.totalItemWidth += t.itemWidth),
                     (this.itemHeight = t.itemHeight =
                       Math.round(
-                        e.labelHeight || (i.height > 1.5 * n ? i.height : n)
+                        e.labelHeight || (i.height > 1.5 * n ? i.height : n),
                       ));
                 }),
                 (t.prototype.layoutItem = function (t) {
@@ -44799,7 +44860,7 @@
                       this.widthOption ||
                       Math.max(
                         (n ? this.itemX - i - (t.checkbox ? 0 : a) : e) + i,
-                        this.offsetWidth
+                        this.offsetWidth,
                       ));
                 }),
                 (t.prototype.getAllItems = function () {
@@ -44811,7 +44872,7 @@
                         x(i.showInLegend, !f(i.linkedTo) && void 0, !0) &&
                         (t = t.concat(
                           (e.legendItem || {}).labels ||
-                            ("point" === i.legendType ? e.data : e)
+                            ("point" === i.legendType ? e.data : e),
                         ));
                     }),
                     v(this, "afterGetAllItems", { allItems: t }),
@@ -44823,10 +44884,10 @@
                   return this.proximate
                     ? t.align.charAt(0) + "tv"
                     : t.floating
-                    ? ""
-                    : t.align.charAt(0) +
-                      t.verticalAlign.charAt(0) +
-                      t.layout.charAt(0);
+                      ? ""
+                      : t.align.charAt(0) +
+                        t.verticalAlign.charAt(0) +
+                        t.layout.charAt(0);
                 }),
                 (t.prototype.adjustMargins = function (t, e) {
                   var i = this.chart,
@@ -44849,7 +44910,7 @@
                             [1, -1, -1, 1][s] * n[s % 2 ? "x" : "y"] +
                             x(n.margin, 12) +
                             e[s] +
-                            (i.titleOffset[s] || 0)
+                            (i.titleOffset[s] || 0),
                         ));
                     });
                 }),
@@ -44867,7 +44928,7 @@
                             o ? n.points : n.points.slice(0).reverse(),
                             function (t) {
                               return y(t.plotY);
-                            }
+                            },
                           )),
                         (o =
                           this.itemMarginTop +
@@ -44960,8 +45021,8 @@
                         s.crisp.call(
                           {},
                           { x: 0, y: 0, width: r, height: l },
-                          s.strokeWidth()
-                        )
+                          s.strokeWidth(),
+                        ),
                       ),
                     o[a ? "show" : "hide"](),
                     t.styledMode &&
@@ -44993,7 +45054,7 @@
                         verticalAlign: this.proximate ? "top" : i.verticalAlign,
                       }),
                       !0,
-                      t
+                      t,
                     );
                 }),
                 (t.prototype.handleOverflow = function (t) {
@@ -45187,7 +45248,7 @@
                         .on("mouseout", function () {
                           r.chart.styledMode ||
                             e.css(
-                              b(t.visible ? r.itemStyle : r.itemHiddenStyle)
+                              b(t.visible ? r.itemStyle : r.itemHiddenStyle),
                             ),
                             h(""),
                             s.removeClass(l),
@@ -45215,7 +45276,7 @@
                       defaultChecked: t.selected,
                     },
                     this.options.itemCheckboxStyle,
-                    this.chart.container
+                    this.chart.container,
                   )),
                     u(t.checkbox, "click", function (e) {
                       v(
@@ -45224,14 +45285,14 @@
                         { checked: e.target.checked, item: t },
                         function () {
                           t.select();
-                        }
+                        },
                       );
                     });
                 }),
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -45274,7 +45335,7 @@
               })(r || (r = {})),
               r
             );
-          }
+          },
         ),
         e(
           i,
@@ -45587,7 +45648,7 @@
                             F(
                               t,
                               "afterSetExtremes",
-                              j(t.eventArgs, t.getExtremes())
+                              j(t.eventArgs, t.getExtremes()),
                             ),
                               delete t.eventArgs;
                           })),
@@ -45672,7 +45733,7 @@
                     n = this.options[t] = Y(
                       !this.styledMode && { style: n },
                       this.options[t],
-                      e
+                      e,
                     );
                     var r = this[t];
                     r && e && (this[t] = r = r.destroy()),
@@ -45713,8 +45774,8 @@
                               ? -3
                               : 0
                             : "top" === a
-                            ? e[0] + 2
-                            : 0),
+                              ? e[0] + 2
+                              : 0),
                         o)
                       ) {
                         this.styledMode || (r = s.style && s.style.fontSize),
@@ -45728,7 +45789,7 @@
                         o.align(
                           j({ y: "bottom" === a ? r : t + r, height: l }, s),
                           !1,
-                          "spacingBox"
+                          "spacingBox",
                         ),
                           s.floating ||
                             ("top" === a
@@ -45764,14 +45825,14 @@
                       I(t) || (this.containerHeight = G(i, "height")),
                       (this.chartWidth = Math.max(
                         0,
-                        e || this.containerWidth || 600
+                        e || this.containerWidth || 600,
                       )),
                       (this.chartHeight = Math.max(
                         0,
                         K(t, this.chartWidth) ||
                           (1 < this.containerHeight
                             ? this.containerHeight
-                            : 400)
+                            : 400),
                       ));
                   }),
                   (t.prototype.temporaryDisplay = function (t) {
@@ -45804,7 +45865,7 @@
                             e.style.setProperty(
                               "display",
                               "block",
-                              "important"
+                              "important",
                             )),
                         (e = e.parentNode) !== C.body);
 
@@ -45848,7 +45909,7 @@
                             "touch-action": "manipulation",
                             outline: "none",
                           },
-                          i.style || {}
+                          i.style || {},
                         )),
                       (this.container = n = P("div", { id: n }, t, r)),
                       (this._cursor = n.style.cursor),
@@ -45861,7 +45922,7 @@
                         void 0,
                         i.forExport,
                         e.exporting && e.exporting.allowHTML,
-                        this.styledMode
+                        this.styledMode,
                       )),
                       v(void 0, this),
                       this.setClassName(i.className),
@@ -45884,7 +45945,7 @@
                         !I(i[2]) &&
                         (this.marginBottom = Math.max(
                           this.marginBottom,
-                          n[2] + e[2]
+                          n[2] + e[2],
                         )),
                       this.legend &&
                         this.legend.display &&
@@ -45928,7 +45989,7 @@
                             function () {
                               e.container && e.setSize(void 0, void 0, !1);
                             },
-                            t ? 100 : 0
+                            t ? 100 : 0,
                           ))),
                         (e.containerWidth = o),
                         (e.containerHeight = i));
@@ -45962,7 +46023,7 @@
                             width: n.chartWidth + "px",
                             height: n.chartHeight + "px",
                           },
-                          i
+                          i,
                         ),
                       n.setChartSize(!0),
                       r.setSize(n.chartWidth, n.chartHeight, i),
@@ -46020,11 +46081,13 @@
                         x: a,
                         y: l,
                         width: Math.floor(
-                          this.plotSizeX - Math.max(o, u[1]) / 2 - a
+                          this.plotSizeX - Math.max(o, u[1]) / 2 - a,
                         ),
                         height: Math.max(
                           0,
-                          Math.floor(this.plotSizeY - Math.max(o, u[2]) / 2 - l)
+                          Math.floor(
+                            this.plotSizeY - Math.max(o, u[2]) / 2 - l,
+                          ),
                         ),
                       }),
                       t ||
@@ -46041,12 +46104,11 @@
                     ["margin", "spacing"].forEach(function (i) {
                       var n = e[i],
                         r = U(n) ? n : [n, n, n, n];
-                      ["Top", "Right", "Bottom", "Left"].forEach(function (
-                        n,
-                        o
-                      ) {
-                        t[i][o] = V(e[i + n], r[o]);
-                      });
+                      ["Top", "Right", "Bottom", "Left"].forEach(
+                        function (n, o) {
+                          t[i][o] = V(e[i + n], r[o]);
+                        },
+                      );
                     }),
                       T.forEach(function (e, i) {
                         t[e] = V(t.margin[i], t.spacing[i]);
@@ -46136,8 +46198,8 @@
                       b[x](
                         b.crisp(
                           { x: h, y: u, width: d, height: p },
-                          -b.strokeWidth()
-                        )
+                          -b.strokeWidth(),
+                        ),
                       ),
                       (this.isDirtyBox = !1),
                       F(this, "afterDrawChartBox");
@@ -46181,7 +46243,7 @@
                           (e.visible = V(
                             e.options.visible,
                             i.options.visible,
-                            e.visible
+                            e.visible,
                           )));
                       }),
                       F(this, "afterLinkSeries");
@@ -46236,7 +46298,7 @@
                       });
                     var a = (this.plotHeight = Math.max(
                       this.plotHeight - o,
-                      0
+                      0,
                     ));
                     t.forEach(function (t) {
                       t.setScale();
@@ -46344,11 +46406,11 @@
                       t.temporaryDisplay(!0));
                   }),
                   (t.prototype.onload = function () {
-                    this.callbacks
-                      .concat([this.callback])
-                      .forEach(function (t) {
-                        t && void 0 !== this.index && t.apply(this, [this]);
-                      }, this),
+                    this.callbacks.concat([this.callback]).forEach(function (
+                      t,
+                    ) {
+                      t && void 0 !== this.index && t.apply(this, [this]);
+                    }, this),
                       F(this, "load"),
                       F(this, "render"),
                       I(this.index) &&
@@ -46372,7 +46434,7 @@
                         R(
                           'Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning.',
                           !1,
-                          this
+                          this,
                         ));
                   }),
                   (t.prototype.addSeries = function (t, e, i) {
@@ -46410,7 +46472,10 @@
                     return (
                       (t = new e(
                         this,
-                        Y(i.axis, { index: this[t].length, isX: "xAxis" === t })
+                        Y(i.axis, {
+                          index: this[t].length,
+                          isX: "xAxis" === t,
+                        }),
                       )),
                       V(i.redraw, !0) && this.redraw(i.animation),
                       t
@@ -46440,7 +46505,7 @@
                               "highcharts-loading highcharts-loading-hidden",
                           },
                           null,
-                          e.container
+                          e.container,
                         )),
                       s ||
                         ((e.loadingSpan = s =
@@ -46448,7 +46513,7 @@
                             "span",
                             { className: "highcharts-loading-inner" },
                             null,
-                            o
+                            o,
                           )),
                         M(e, "redraw", r)),
                       (o.className = "highcharts-loading"),
@@ -46461,7 +46526,7 @@
                           g(
                             o,
                             { opacity: n.style.opacity || 0.5 },
-                            { duration: n.showDuration || 0 }
+                            { duration: n.showDuration || 0 },
                           ))),
                       (e.loadingShown = !0),
                       r();
@@ -46481,7 +46546,7 @@
                             complete: function () {
                               D(e, { display: "none" });
                             },
-                          }
+                          },
                         )),
                       (this.loadingShown = !1);
                   }),
@@ -46537,10 +46602,10 @@
                         s[i] && "function" == typeof s[i].update
                           ? s[i].update(e, !1)
                           : "function" == typeof s[a[i]]
-                          ? s[a[i]](e)
-                          : "colors" !== i &&
-                            -1 === s.collectionsWithUpdate.indexOf(i) &&
-                            Y(!0, s.options[i], t[i]),
+                            ? s[a[i]](e)
+                            : "colors" !== i &&
+                              -1 === s.collectionsWithUpdate.indexOf(i) &&
+                              Y(!0, s.options[i], t[i]),
                           "chart" !== i &&
                             -1 !== s.propsRequireUpdateSeries.indexOf(i) &&
                             (r = !0);
@@ -46572,7 +46637,7 @@
                                     s,
                                     [t]
                                       .concat(s.collectionsWithInit[e][1] || [])
-                                      .concat([!1])
+                                      .concat([!1]),
                                   ).touched = !0);
                             }),
                             i &&
@@ -46664,7 +46729,7 @@
                             i.isInsidePlot(
                               n.mouseDownX - i.plotLeft,
                               n.mouseDownY - i.plotTop,
-                              { axis: o }
+                              { axis: o },
                             )) ||
                             !I(i.inverted ? n.mouseDownX : n.mouseDownY)) &&
                             ((e = o.zoom(t.min, t.max)),
@@ -46679,8 +46744,8 @@
                           V(
                             i.options.chart.animation,
                             t && t.animation,
-                            100 > i.pointCount
-                          )
+                            100 > i.pointCount,
+                          ),
                         );
                   }),
                   (t.prototype.pan = function (t, e) {
@@ -46740,12 +46805,12 @@
                                   ((g.startMin = Math.min(
                                     V(t.options.threshold, 1 / 0),
                                     e.dataMin,
-                                    g.startMin
+                                    g.startMin,
                                   )),
                                   (g.startMax = Math.max(
                                     V(t.options.threshold, -1 / 0),
                                     e.dataMax,
-                                    g.startMax
+                                    g.startMax,
                                   )));
                             }),
                             (h = Math.min(
@@ -46753,16 +46818,16 @@
                               c
                                 ? u.min
                                 : e.toValue(
-                                    e.toPixels(u.min) - e.minPixelPadding
-                                  )
+                                    e.toPixels(u.min) - e.minPixelPadding,
+                                  ),
                             )),
                             (p = Math.max(
                               V(g && g.startMax, u.dataMax),
                               c
                                 ? u.max
                                 : e.toValue(
-                                    e.toPixels(u.max) + e.minPixelPadding
-                                  )
+                                    e.toPixels(u.max) + e.minPixelPadding,
+                                  ),
                             )),
                             (e.panningState = g),
                             e.isOrdinal ||
@@ -46805,20 +46870,20 @@
                 collectionsWithUpdate: ["xAxis", "yAxis", "series"],
                 propsRequireDirtyBox:
                   "backgroundColor borderColor borderWidth borderRadius plotBackgroundColor plotBackgroundImage plotBorderColor plotBorderWidth plotShadow shadow".split(
-                    " "
+                    " ",
                   ),
                 propsRequireReflow:
                   "margin marginTop marginRight marginBottom marginLeft spacing spacingTop spacingRight spacingBottom spacingLeft".split(
-                    " "
+                    " ",
                   ),
                 propsRequireUpdateSeries:
                   "chart.inverted chart.polar chart.ignoreHiddenSeries chart.type colors plotOptions time tooltip".split(
-                    " "
+                    " ",
                   ),
               }),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -46866,7 +46931,7 @@
                             t - r,
                             2 * r,
                             2 * r,
-                            u
+                            u,
                           )
                           .addClass("highcharts-point")
                           .add(c)),
@@ -46882,7 +46947,7 @@
                         t.baseline - i + 1,
                         r ? i : t.symbolWidth,
                         i,
-                        n(t.options.symbolRadius, i / 2)
+                        n(t.options.symbolRadius, i / 2),
                       )
                       .addClass("highcharts-point")
                       .attr({ zIndex: 3 })
@@ -46891,7 +46956,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(i, "Core/Series/SeriesDefaults.js", [], function () {
           return {
@@ -47117,7 +47182,7 @@
                         : function (t) {
                             Array.prototype[e].apply(
                               i[t + "Data"],
-                              Array.prototype.slice.call(n, 2)
+                              Array.prototype.slice.call(n, 2),
                             );
                           };
                     i.parallelArrays.forEach(r);
@@ -47147,9 +47212,9 @@
                         "day" === n
                           ? o.set("Date", i, o.get("Date", i) + e)
                           : "month" === n
-                          ? o.set("Month", i, o.get("Month", i) + e)
-                          : "year" === n &&
-                            o.set("FullYear", i, o.get("FullYear", i) + e),
+                            ? o.set("Month", i, o.get("Month", i) + e)
+                            : "year" === n &&
+                              o.set("FullYear", i, o.get("FullYear", i) + e),
                         (e = i.getTime() - s)),
                       r && P(t) ? s + e : ((this.xIncrement = s + e), s)
                     );
@@ -47180,7 +47245,7 @@
                         s,
                         n.series,
                         r.plotOptions && r.plotOptions[this.type],
-                        t
+                        t,
                       )),
                       (this.tooltipOptions = I(
                         d.tooltip,
@@ -47189,7 +47254,7 @@
                         i.tooltip.userOptions,
                         n.series && n.series.tooltip,
                         n[this.type].tooltip,
-                        t.tooltip
+                        t.tooltip,
                       )),
                       (this.stickyTracking = N(
                         t.stickyTracking,
@@ -47197,7 +47262,7 @@
                         a.series && a.series.stickyTracking,
                         !(
                           !this.tooltipOptions.shared || this.noSharedTooltip
-                        ) || r.stickyTracking
+                        ) || r.stickyTracking,
                       )),
                       null === s.marker && delete r.marker,
                       (this.zoneAxis = r.zoneAxis),
@@ -47218,7 +47283,7 @@
                         n.push(
                           e
                             ? {}
-                            : { color: this.color, fillColor: this.fillColor }
+                            : { color: this.color, fillColor: this.fillColor },
                         ),
                       M(this, "afterSetOptions", { options: r }),
                       r
@@ -47249,12 +47314,13 @@
                     this.chart.styledMode
                       ? this.getCyclic("color")
                       : this.options.colorByPoint
-                      ? (this.color = "#cccccc")
-                      : this.getCyclic(
-                          "color",
-                          this.options.color || d.plotOptions[this.type].color,
-                          this.chart.options.colors
-                        );
+                        ? (this.color = "#cccccc")
+                        : this.getCyclic(
+                            "color",
+                            this.options.color ||
+                              d.plotOptions[this.type].color,
+                            this.chart.options.colors,
+                          );
                   }),
                   (t.prototype.getPointsCollection = function () {
                     return (
@@ -47265,7 +47331,7 @@
                     this.getCyclic(
                       "symbol",
                       this.options.marker.symbol,
-                      this.chart.options.symbols
+                      this.chart.options.symbols,
                     );
                   }),
                   (t.prototype.findPointIndex = function (t, e) {
@@ -47326,7 +47392,7 @@
                             (C(t) &&
                               this.pointClass.prototype.optionsToObject.call(
                                 { series: this },
-                                t
+                                t,
                               )) ||
                             {},
                           u = n.x;
@@ -47335,10 +47401,10 @@
                             void 0 === n
                               ? l.push(t)
                               : a[n] && t !== o.data[n]
-                              ? (a[n].update(t, !1, null, !1),
-                                (a[n].touched = !0),
-                                c && (r = n + 1))
-                              : a[n] && (a[n].touched = !0),
+                                ? (a[n].update(t, !1, null, !1),
+                                  (a[n].touched = !0),
+                                  c && (r = n + 1))
+                                : a[n] && (a[n].touched = !0),
                             (!h ||
                               e !== n ||
                               (s && s.enabled) ||
@@ -47481,7 +47547,7 @@
                           (C(e) &&
                             t.pointClass.prototype.optionsToObject.call(
                               { series: t },
-                              e
+                              e,
                             )) ||
                           {}
                         );
@@ -47760,11 +47826,11 @@
                                 0,
                                 1,
                                 h,
-                                "flags" === this.type
+                                "flags" === this.type,
                               ),
                               -1e5,
-                              1e5
-                            )
+                              1e5,
+                            ),
                           )),
                         n && this.visible && k && k[v])
                       ) {
@@ -47785,7 +47851,7 @@
                           this.irregularWidths ||
                             y.setOffset(
                               this.pointXOffset || 0,
-                              this.barW || 0
+                              this.barW || 0,
                             )),
                         (m.yBottom = C(T)
                           ? x(a.translate(T, 0, 1, 0, 1), -1e5, 1e5)
@@ -47906,7 +47972,7 @@
                       _(this.chart.sharedClips, function (e, i, n) {
                         e &&
                           !t.chart.container.querySelector(
-                            '[clip-path="url(#'.concat(e.id, ')"]')
+                            '[clip-path="url(#'.concat(e.id, ')"]'),
                           ) &&
                           (e.destroy(), delete n[i]);
                       }),
@@ -47925,7 +47991,7 @@
                         r.enabled,
                         !(s && !s.isRadial) || null,
                         this.closestPointRangePx >=
-                          r.enabledThreshold * r.radius
+                          r.enabledThreshold * r.radius,
                       );
                     if (!1 !== r.enabled || this._hasPointMarkers)
                       for (e = 0; e < t.length; e++) {
@@ -47957,7 +48023,7 @@
                                     p.y,
                                     p.width,
                                     p.height,
-                                    u ? h : r
+                                    u ? h : r,
                                   )
                                   .add(o)),
                               this.enabledDataSorting &&
@@ -47969,7 +48035,7 @@
                             i &&
                               !n.styledMode &&
                               i[c](
-                                this.pointAttribs(l, l.selected && "select")
+                                this.pointAttribs(l, l.selected && "select"),
                               ),
                             i && i.addClass(l.getClassName(), !0);
                         } else i && (l.graphic = i.destroy());
@@ -47988,7 +48054,7 @@
                         (s = N(
                           e && e.radius,
                           n && n.radius,
-                          s && s + ((n && n.radiusPlus) || 0)
+                          s && s + ((n && n.radiusPlus) || 0),
                         ))),
                       (t.hasImage = o && 0 === o.indexOf("url")),
                       t.hasImage && (s = 0),
@@ -48022,7 +48088,7 @@
                       (t = N(
                         e.lineWidth,
                         i.lineWidth,
-                        t + N(e.lineWidthPlus, i.lineWidthPlus, 0)
+                        t + N(e.lineWidthPlus, i.lineWidthPlus, 0),
                       )),
                       (o = e.fillColor || i.fillColor || o),
                       {
@@ -48103,13 +48169,13 @@
                             ? c.plotWidth
                             : 0
                           : w
-                          ? 0
-                          : m.toPixels(S.min) || 0),
+                            ? 0
+                            : m.toPixels(S.min) || 0),
                           (t = x(N(e, t), 0, g)),
                           (e = x(
                             Math.round(m.toPixels(N(u.value, S.max), !0) || 0),
                             0,
-                            g
+                            g,
                           )),
                           y && (t = e = m.toPixels(S.max)),
                           (n = Math.abs(t - e)),
@@ -48181,7 +48247,7 @@
                           (o.hasClass("highcharts-tracker")
                             ? " highcharts-tracker"
                             : ""),
-                        !0
+                        !0,
                       ),
                       o.attr(i)[s ? "attr" : "animate"](this.getPlotBox(e)),
                       o
@@ -48238,7 +48304,7 @@
                         "markers",
                         r,
                         o,
-                        a
+                        a,
                       )),
                       !1 !== i.clip && t.setClip(),
                       t.animate && e && t.animate(!0),
@@ -48275,7 +48341,7 @@
                         plotY: r ? n.len - t.chartX + n.pos : t.chartY - n.pos,
                       },
                       e,
-                      t
+                      t,
                     );
                   }),
                   (t.prototype.buildKDTree = function (t) {
@@ -48306,7 +48372,7 @@
                         },
                         e.options.kdNow || (t && "touchstart" === t.type)
                           ? 0
-                          : 1
+                          : 1,
                       );
                   }),
                   (t.prototype.searchKDTree = function (t, e, i) {
@@ -48395,7 +48461,7 @@
                           .addClass(
                             i
                               ? "highcharts-tracker-area"
-                              : "highcharts-tracker-line"
+                              : "highcharts-tracker-line",
                           )
                           .add(t.group)),
                         r.styledMode ||
@@ -48421,7 +48487,7 @@
                                 t.css({ cursor: e.cursor }),
                               f) &&
                               t.on("touchstart", c);
-                          }
+                          },
                         )),
                       M(this, "afterDrawTracker");
                   }),
@@ -48472,7 +48538,7 @@
                             o || { series: n },
                             "splice",
                             t,
-                            1
+                            1,
                           ),
                           o && o.destroy(),
                           (n.isDirty = !0),
@@ -48544,7 +48610,7 @@
                           "minY",
                           "maxY",
                           "minX",
-                          "maxX"
+                          "maxX",
                         ),
                         !1 !== t.visible && h.push("area", "graph"),
                         i.parallelArrays.forEach(function (t) {
@@ -48562,11 +48628,11 @@
                           pointStart: N(
                             s && s.series && s.series.pointStart,
                             r.pointStart,
-                            i.xData[0]
+                            i.xData[0],
                           ),
                         },
                         !d && { data: i.options.data },
-                        t
+                        t,
                       )),
                       d && t.data && (t.data = i.options.data),
                       (h = [
@@ -48641,7 +48707,7 @@
                           N(
                             i && i[this.type] && i[this.type][t],
                             i && i.series && i.series[t],
-                            e
+                            e,
                           );
                   }),
                   (t.prototype.onMouseOver = function () {
@@ -48677,7 +48743,7 @@
                       s = n.states,
                       a = N(
                         s[t || "normal"] && s[t || "normal"].animation,
-                        i.chart.options.chart.animation
+                        i.chart.options.chart.animation,
                       ),
                       l = n.lineWidth,
                       c = 0,
@@ -48691,7 +48757,7 @@
                               (i.state &&
                                 e.removeClass("highcharts-series-" + i.state),
                               t && e.addClass("highcharts-series-" + t));
-                          }
+                          },
                         ),
                         (i.state = t),
                         !i.chart.styledMode))
@@ -48809,7 +48875,7 @@
               (a.series = t),
               t
             );
-          }
+          },
         ),
         e(
           i,
@@ -48869,7 +48935,7 @@
                           this[i] = n - r[t.side].value;
                           var o = e.prototype.getPlotLinePath.apply(
                             this,
-                            arguments
+                            arguments,
                           );
                           return (this[i] = n), o;
                         })
@@ -48897,13 +48963,13 @@
                     "div",
                     { className: "highcharts-scrolling-parent" },
                     { position: "relative" },
-                    this.renderTo
+                    this.renderTo,
                   )),
                   (this.scrollingContainer = l(
                     "div",
                     { className: "highcharts-scrolling" },
                     i,
-                    this.scrollingParent
+                    this.scrollingParent,
                   )),
                   a(this.scrollingContainer, "scroll", function () {
                     e.pointer &&
@@ -48915,7 +48981,7 @@
                     "div",
                     { className: "highcharts-inner-container" },
                     null,
-                    this.scrollingContainer
+                    this.scrollingContainer,
                   )),
                   this.innerContainer.appendChild(this.container),
                   (this.setUpScrolling = null);
@@ -48926,20 +48992,20 @@
                   i = this.fixedRenderer,
                   n =
                     ".highcharts-contextbutton .highcharts-credits .highcharts-legend .highcharts-legend-checkbox .highcharts-navigator-series .highcharts-navigator-xaxis .highcharts-navigator-yaxis .highcharts-navigator .highcharts-reset-zoom .highcharts-drillup-button .highcharts-scrollbar .highcharts-subtitle .highcharts-title".split(
-                      " "
+                      " ",
                     );
                 this.scrollablePixelsX && !this.inverted
                   ? (t = ".highcharts-yaxis")
                   : (this.scrollablePixelsX && this.inverted) ||
-                    (this.scrollablePixelsY && !this.inverted)
-                  ? (t = ".highcharts-xaxis")
-                  : this.scrollablePixelsY &&
-                    this.inverted &&
-                    (t = ".highcharts-yaxis"),
+                      (this.scrollablePixelsY && !this.inverted)
+                    ? (t = ".highcharts-xaxis")
+                    : this.scrollablePixelsY &&
+                      this.inverted &&
+                      (t = ".highcharts-yaxis"),
                   t &&
                     n.push(
                       t + ":not(.highcharts-radial-axis)",
-                      t + "-labels:not(.highcharts-radial-axis-labels)"
+                      t + "-labels:not(.highcharts-radial-axis-labels)",
                     ),
                   n.forEach(function (t) {
                     [].forEach.call(e.querySelectorAll(t), function (t) {
@@ -48968,12 +49034,12 @@
                         top: 0,
                       },
                       null,
-                      !0
+                      !0,
                     )),
                     this.scrollingContainer &&
                       this.scrollingContainer.parentNode.insertBefore(
                         this.fixedDiv,
-                        this.scrollingContainer
+                        this.scrollingContainer,
                       ),
                     (this.renderTo.style.overflow = "visible"),
                     (this.fixedRenderer = e =
@@ -48981,7 +49047,7 @@
                         this.fixedDiv,
                         this.chartWidth,
                         this.chartHeight,
-                        this.options.chart.style
+                        this.options.chart.style,
                       )),
                     (this.scrollableMask = e
                       .path()
@@ -48997,7 +49063,7 @@
                     a(this, "afterLayOutTitles", this.moveFixedElements))
                   : this.fixedRenderer.setSize(
                       this.chartWidth,
-                      this.chartHeight
+                      this.chartHeight,
                     ),
                   (this.scrollableDirty || t) &&
                     ((this.scrollableDirty = !1), this.moveFixedElements()),
@@ -49048,19 +49114,19 @@
                       ["Z"],
                     ]
                   : this.scrollablePixelsY
-                  ? [
-                      ["M", i, 0],
-                      ["L", i, this.plotTop - 1],
-                      ["L", n, this.plotTop - 1],
-                      ["L", n, 0],
-                      ["Z"],
-                      ["M", i, c],
-                      ["L", i, this.chartHeight],
-                      ["L", n, this.chartHeight],
-                      ["L", n, c],
-                      ["Z"],
-                    ]
-                  : [["M", 0, 0]]),
+                    ? [
+                        ["M", i, 0],
+                        ["L", i, this.plotTop - 1],
+                        ["L", n, this.plotTop - 1],
+                        ["L", n, 0],
+                        ["Z"],
+                        ["M", i, c],
+                        ["L", i, this.chartHeight],
+                        ["L", n, this.chartHeight],
+                        ["L", n, c],
+                        ["Z"],
+                      ]
+                    : [["M", 0, 0]]),
                   "adjustHeight" !== this.redrawTrigger &&
                     this.scrollableMask.attr({ d: t });
               }),
@@ -49070,7 +49136,7 @@
               a(n, "show", function () {
                 this.chart.scrollableDirty = !0;
               });
-          }
+          },
         ),
         e(
           i,
@@ -49129,7 +49195,7 @@
                           null,
                           i.useHTML,
                           !1,
-                          "stack-labels"
+                          "stack-labels",
                         )),
                         (r = {
                           r: i.borderRadius || 0,
@@ -49155,7 +49221,7 @@
                     0,
                     0,
                     0,
-                    1
+                    1,
                   )),
                     (i = c.translate(i || 0)),
                     (t = l(s, h.xAxis[0].translate(this.x)) + t),
@@ -49176,14 +49242,14 @@
                           ? -s
                           : s
                         : "right" === u
-                        ? t.width
-                        : h.inverted && "center" === u
-                        ? t.width / 2
-                        : h.inverted
-                        ? i
-                          ? t.width + s
-                          : -s
-                        : t.width / 2),
+                          ? t.width
+                          : h.inverted && "center" === u
+                            ? t.width / 2
+                            : h.inverted
+                              ? i
+                                ? t.width + s
+                                : -s
+                              : t.width / 2),
                     (i = h.inverted ? t.height / 2 : i ? -s : t.height),
                     (this.alignOptions.x = l(this.options.x, 0)),
                     (this.alignOptions.y = l(this.options.y, 0)),
@@ -49192,7 +49258,7 @@
                     e.align(this.alignOptions, null, c),
                     h.isInsidePlot(
                       e.alignAttr.x + u - this.alignOptions.x,
-                      e.alignAttr.y + i - this.alignOptions.y
+                      e.alignAttr.y + i - this.alignOptions.y,
                     )
                       ? e.show()
                       : (e.hide(), (n = !1)),
@@ -49203,7 +49269,7 @@
                         this.alignOptions,
                         e.alignAttr,
                         t,
-                        c
+                        c,
                       ),
                     e.attr({ x: e.alignAttr.x, y: e.alignAttr.y }),
                     l(!n && this.options.crop, !0) &&
@@ -49235,7 +49301,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           i,
@@ -49370,7 +49436,7 @@
                             e.options.stackLabels,
                             !!u,
                             b,
-                            l
+                            l,
                           ))),
                     (k = g[k][b]),
                     null !== x
@@ -49391,9 +49457,9 @@
                               Math.max(u.total, k.total) + Math.abs(x) || 0))
                           : (k.total = v(k.total + (Math.abs(x) || 0))))
                       : "group" === i
-                      ? (w(x) && (x = x[0]),
-                        null !== x && (k.total = (k.total || 0) + 1))
-                      : (k.total = v(k.total + (x || 0))),
+                        ? (w(x) && (x = x[0]),
+                          null !== x && (k.total = (k.total || 0) + 1))
+                        : (k.total = v(k.total + (x || 0))),
                     (k.cumulative =
                       "group" === i
                         ? (k.total || 1) - 1
@@ -49475,7 +49541,7 @@
                       e,
                       (t.options.stackLabels &&
                         t.options.stackLabels.animation) ||
-                        !1
+                        !1,
                     );
                     var r = (this.stackTotalGroup =
                       this.stackTotalGroup ||
@@ -49513,7 +49579,7 @@
               })(p || (p = {})),
               p
             );
-          }
+          },
         ),
         e(
           i,
@@ -49573,7 +49639,7 @@
                     n ||
                       r[0].push(
                         e.lineColor || this.color || "#cccccc",
-                        e.dashStyle
+                        e.dashStyle,
                       ),
                       (r = t.getZonesGraphs(r)).forEach(function (r, o) {
                         var s = r[0],
@@ -49621,7 +49687,7 @@
                       (t = this.getValidPoints(
                         t,
                         !1,
-                        !(s.connectNulls && !e && !i)
+                        !(s.connectNulls && !e && !i),
                       )).forEach(function (h, u) {
                         var d = h.plotX,
                           p = h.plotY,
@@ -49630,26 +49696,34 @@
                           h.isNull && !r(e) && 0 < u
                             ? (n = !s.connectNulls)
                             : h.isNull && !e
-                            ? (n = !0)
-                            : (0 === u || n
-                                ? (u = [["M", h.plotX, h.plotY]])
-                                : o.getPointSpline
-                                ? (u = [o.getPointSpline(t, h, u)])
-                                : c
-                                ? (u =
-                                    1 === c
-                                      ? [["L", f.plotX, p]]
-                                      : 2 === c
-                                      ? [
-                                          ["L", (f.plotX + d) / 2, f.plotY],
-                                          ["L", (f.plotX + d) / 2, p],
-                                        ]
-                                      : [["L", d, f.plotY]]).push(["L", d, p])
-                                : (u = [["L", d, p]]),
-                              l.push(h.x),
-                              c && (l.push(h.x), 2 === c && l.push(h.x)),
-                              a.push.apply(a, u),
-                              (n = !1));
+                              ? (n = !0)
+                              : (0 === u || n
+                                  ? (u = [["M", h.plotX, h.plotY]])
+                                  : o.getPointSpline
+                                    ? (u = [o.getPointSpline(t, h, u)])
+                                    : c
+                                      ? (u =
+                                          1 === c
+                                            ? [["L", f.plotX, p]]
+                                            : 2 === c
+                                              ? [
+                                                  [
+                                                    "L",
+                                                    (f.plotX + d) / 2,
+                                                    f.plotY,
+                                                  ],
+                                                  ["L", (f.plotX + d) / 2, p],
+                                                ]
+                                              : [["L", d, f.plotY]]).push([
+                                          "L",
+                                          d,
+                                          p,
+                                        ])
+                                      : (u = [["L", d, p]]),
+                                l.push(h.x),
+                                c && (l.push(h.x), 2 === c && l.push(h.x)),
+                                a.push.apply(a, u),
+                                (n = !1));
                       }),
                       (a.xMap = l),
                       (o.graphPath = a)
@@ -49668,7 +49742,7 @@
                           this.chart.styledMode ||
                             i.push(
                               e.color || this.color,
-                              e.dashStyle || this.options.dashStyle
+                              e.dashStyle || this.options.dashStyle,
                             ),
                           t.push(i);
                       }, this),
@@ -49682,7 +49756,7 @@
               e.registerSeriesType("line", i),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -49774,7 +49848,7 @@
                           e.chart.styledMode ||
                             (s.fill = c(
                               t[3],
-                              o(t[2]).setOpacity(c(n.fillOpacity, 0.75)).get()
+                              o(t[2]).setOpacity(c(n.fillOpacity, 0.75)).get(),
                             )),
                           a[l](s),
                           (a.startX = i.xMap),
@@ -49926,7 +50000,7 @@
               i.registerSeriesType("area", n),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -50033,7 +50107,7 @@
               t.registerSeriesType("spline", e),
               e
             );
-          }
+          },
         ),
         e(
           i,
@@ -50098,12 +50172,12 @@
                   getStackPoints: o.getStackPoints,
                   drawGraph: o.drawGraph,
                   drawLegendSymbol: e.drawRectangle,
-                }
+                },
               ),
               i.registerSeriesType("areaspline", n),
               n
             );
-          }
+          },
         ),
         e(i, "Series/Column/ColumnSeriesDefaults.js", [], function () {
           return {
@@ -50217,7 +50291,7 @@
                               ((o[s] = a + n.pos * (i.pos - a)),
                               e.group.attr(o));
                           },
-                        })
+                        }),
                       );
                     }
                   }),
@@ -50265,14 +50339,14 @@
                             i.closestPointRange ||
                             i.tickInterval ||
                             1),
-                        i.len
+                        i.len,
                       ),
                       c = l * e.groupPadding,
                       h = (l - 2 * c) / (a || 1);
                     return (
                       (e = Math.min(
                         e.maxPointWidth || i.len,
-                        b(e.pointWidth, h * (1 - 2 * e.pointPadding))
+                        b(e.pointWidth, h * (1 - 2 * e.pointPadding)),
                       )),
                       (t.columnMetrics = {
                         width: e,
@@ -50338,7 +50412,7 @@
                                   (a = t.indexOf(r.index)),
                                   (l = t.length)));
                           }
-                        }
+                        },
                       ),
                         (t =
                           (i.plotX || 0) +
@@ -50404,7 +50478,7 @@
                                 d(
                                   s.len + s.pos - e.plotLeft - x,
                                   s.pos - e.plotLeft,
-                                  s.len + s.pos - e.plotLeft
+                                  s.len + s.pos - e.plotLeft,
                                 ),
                                 r.len + r.pos - e.plotTop - k - E / 2,
                                 C,
@@ -50414,7 +50488,7 @@
                                 d(
                                   x + s.pos - e.plotTop,
                                   s.pos - e.plotTop,
-                                  s.len + s.pos - e.plotTop
+                                  s.len + s.pos - e.plotTop,
                                 ),
                                 C,
                               ]),
@@ -50422,13 +50496,13 @@
                             t.pointClass.prototype.shapeType || "rect"),
                           (n.shapeArgs = t.crispCol.apply(
                             t,
-                            n.isNull ? [k, l, E, 0] : [k, S, E, C]
+                            n.isNull ? [k, l, E, 0] : [k, S, E, C],
                           ));
                       });
                   }),
                   (e.prototype.drawGraph = function () {
                     this.group[this.dense ? "addClass" : "removeClass"](
-                      "highcharts-dense-data"
+                      "highcharts-dense-data",
                     );
                   }),
                   (e.prototype.pointAttribs = function (t, e) {
@@ -50457,7 +50531,7 @@
                         t &&
                         ((e = (t = y(
                           i.states[e],
-                          (t.options.states && t.options.states[e]) || {}
+                          (t.options.states && t.options.states[e]) || {},
                         )).brightness),
                         (s =
                           t.color ||
@@ -50509,11 +50583,11 @@
                           r.borderRadius && a[c]({ r: r.borderRadius }),
                           n.styledMode ||
                             a[c](
-                              i.pointAttribs(t, t.selected && "select")
+                              i.pointAttribs(t, t.selected && "select"),
                             ).shadow(
                               !1 !== t.allowShadow && r.shadow,
                               null,
-                              r.stacking && !r.borderRadius
+                              r.stacking && !r.borderRadius,
                             ),
                           a &&
                             (a.addClass(t.getClassName(), !0),
@@ -50538,8 +50612,8 @@
                       (e = m(t.dataLabels)
                         ? t.dataLabels
                         : t.dataLabel
-                        ? [t.dataLabel]
-                        : []),
+                          ? [t.dataLabel]
+                          : []),
                         t.graphic && (t.graphic.element.point = t),
                         e.forEach(function (e) {
                           e.div ? (e.div.point = t) : (e.element.point = t);
@@ -50586,7 +50660,7 @@
               s.registerSeriesType("column", a),
               a
             );
-          }
+          },
         ),
         e(
           i,
@@ -50654,7 +50728,7 @@
                     var x = [0, 0],
                       w = l.renderer.fontMetrics(
                         l.styledMode ? void 0 : i.style.fontSize,
-                        e
+                        e,
                       ).b;
                     (n = a(
                       {
@@ -50663,7 +50737,7 @@
                         width: 0,
                         height: 0,
                       },
-                      n
+                      n,
                     )),
                       a(i, { width: g.width, height: g.height }),
                       f
@@ -50723,7 +50797,7 @@
                     v = m.backgroundColor;
                   m = m.plotBackgroundColor;
                   var y = u.getContrast(
-                      (h(m) && m) || (h(v) && v) || "#000000"
+                      (h(m) && m) || (h(v) && v) || "#000000",
                     ),
                     b = n.dataLabels;
                   if (
@@ -50736,9 +50810,9 @@
                           i.options.plotOptions.series.dataLabels,
                         i.options.plotOptions &&
                           i.options.plotOptions[e.type] &&
-                          i.options.plotOptions[e.type].dataLabels
+                          i.options.plotOptions[e.type].dataLabels,
                       ),
-                      b
+                      b,
                     )),
                     l(this, "drawDataLabels"),
                     c(b) || b.enabled || e._hasPointLabels)
@@ -50747,7 +50821,7 @@
                       "dataLabelsGroup",
                       "data-labels",
                       a ? "inherit" : "hidden",
-                      b.zIndex || 6
+                      b.zIndex || 6,
                     );
                     x.attr({ opacity: +a }),
                       !a &&
@@ -50758,8 +50832,8 @@
                         f(
                           g(
                             b,
-                            t.dlOptions || (t.options && t.options.dataLabels)
-                          )
+                            t.dlOptions || (t.options && t.options.dataLabels),
+                          ),
                         ).forEach(function (r, a) {
                           var l =
                               r.enabled &&
@@ -50798,11 +50872,11 @@
                                 r.color,
                                 v.color,
                                 e.color,
-                                "#000000"
+                                "#000000",
                               )),
                               "contrast" === v.color
                                 ? ((t.contrastColor = u.getContrast(
-                                    t.color || e.color
+                                    t.color || e.color,
                                   )),
                                   (v.color =
                                     (!s(g) && r.inside) || 0 > g || n.stacking
@@ -50862,7 +50936,7 @@
                                             null,
                                             r.useHTML,
                                             null,
-                                            "data-label"
+                                            "data-label",
                                           )),
                                     a || (t.dataLabel = h),
                                     h.addClass(
@@ -50870,7 +50944,9 @@
                                         t.colorIndex +
                                         " " +
                                         (r.className || "") +
-                                        (r.useHTML ? " highcharts-tracker" : "")
+                                        (r.useHTML
+                                          ? " highcharts-tracker"
+                                          : ""),
                                     )),
                                 (h.options = r),
                                 h.attr(w),
@@ -50883,7 +50959,7 @@
                                     (t.getDataLabelPath &&
                                       t.getDataLabelPath(h)) ||
                                       t.graphic,
-                                    a
+                                    a,
                                   ),
                                   t.dataLabelPath &&
                                     !a.enabled &&
@@ -50992,7 +51068,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -51035,11 +51111,11 @@
                         : ((n.y += d ? n.height : 0), (n.height = 0)))),
                     (i.align = s(
                       i.align,
-                      !l || p ? "center" : d ? "right" : "left"
+                      !l || p ? "center" : d ? "right" : "left",
                     )),
                     (i.verticalAlign = s(
                       i.verticalAlign,
-                      l || p ? "middle" : d ? "top" : "bottom"
+                      l || p ? "middle" : d ? "top" : "bottom",
                     )),
                     r.prototype.alignDataLabel.call(this, t, e, i, n, a),
                     i.inside &&
@@ -51055,7 +51131,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -51109,12 +51185,12 @@
                     n(i, e), (i.defaultOptions = o(t.defaultOptions, {})), i
                   );
                 })(t)).prototype,
-                { inverted: !0 }
+                { inverted: !0 },
               ),
               e.registerSeriesType("bar", i),
               i
             );
-          }
+          },
         ),
         e(i, "Series/Scatter/ScatterSeriesDefaults.js", [], function () {
           return {
@@ -51221,7 +51297,7 @@
                   noSharedTooltip: !0,
                   trackerGroups: ["group", "markerGroup", "dataLabelsGroup"],
                   takeOrdinalPosition: !1,
-                }
+                },
               ),
               r(i, "afterTranslate", function () {
                 this.applyJitter();
@@ -51229,7 +51305,7 @@
               e.registerSeriesType("scatter", i),
               i
             );
-          }
+          },
         ),
         e(
           i,
@@ -51293,7 +51369,7 @@
               })(n || (n = {})),
               n
             );
-          }
+          },
         ),
         e(
           i,
@@ -51360,7 +51436,7 @@
                         this,
                         { x: t.final.x, y: t.final.y, alignment: t.alignment },
                         t.connectorPosition,
-                        e
+                        e,
                       )
                     );
                   }),
@@ -51378,7 +51454,7 @@
                           e.y,
                           e.r + t,
                           e.r + t,
-                          { innerR: e.r - 1, start: e.start, end: e.end }
+                          { innerR: e.r - 1, start: e.start, end: e.end },
                         );
                   }),
                   (e.prototype.init = function () {
@@ -51496,7 +51572,7 @@
               }),
               e
             );
-          }
+          },
         ),
         e(i, "Series/Pie/PieSeriesDefaults.js", [], function () {
           return {
@@ -51613,7 +51689,7 @@
                           }),
                           i.animate(
                             { r: r.r, start: r.start, end: r.end },
-                            e.options.animation
+                            e.options.animation,
                           ));
                       });
                   }),
@@ -51652,7 +51728,7 @@
                         (e.graphic = e.graphic.destroy()),
                         e.graphic ||
                           ((e.graphic = t[e.shapeType](e.shapeArgs).add(
-                            e.series.group
+                            e.series.group,
                           )),
                           (e.delayedRendering = !0));
                     });
@@ -51665,7 +51741,7 @@
                       r = this.radii ? this.radii[i.index] || 0 : n[2] / 2;
                     return (
                       (t = Math.asin(
-                        d((t - n[1]) / (r + i.labelDistance), -1, 1)
+                        d((t - n[1]) / (r + i.labelDistance), -1, 1),
                       )),
                       n[0] +
                         (e ? -1 : 1) * Math.cos(t) * (r + i.labelDistance) +
@@ -51769,12 +51845,12 @@
                         (d.shapeArgs = y),
                         (d.labelDistance = m(
                           d.options.dataLabels && d.options.dataLabels.distance,
-                          a
+                          a,
                         )),
                         (d.labelDistance = v(d.labelDistance, y.r)),
                         (this.maxLabelDistance = Math.max(
                           this.maxLabelDistance || 0,
-                          d.labelDistance
+                          d.labelDistance,
                         )),
                         (g = (g + p) / 2) > 1.5 * Math.PI
                           ? (g -= 2 * Math.PI)
@@ -51799,8 +51875,8 @@
                             0 > d.labelDistance
                               ? "center"
                               : d.half
-                              ? "right"
-                              : "left",
+                                ? "right"
+                                : "left",
                           connectorPosition: {
                             breakAt: {
                               x: t[0] + y + Math.cos(g) * p,
@@ -51850,7 +51926,7 @@
               a.registerSeriesType("pie", c),
               c
             );
-          }
+          },
         ),
         e(
           i,
@@ -51924,7 +52000,7 @@
                               !u(
                                 t.options.dataLabels &&
                                   t.options.dataLabels.style &&
-                                  t.options.dataLabels.style.width
+                                  t.options.dataLabels.style.width,
                               ) &&
                               t.dataLabel.getBBox().width > E &&
                               (t.dataLabel.css({
@@ -51947,7 +52023,7 @@
                           var b = Math.max(0, O - M - y.maxLabelDistance),
                             E = Math.min(
                               O + M + y.maxLabelDistance,
-                              x.plotHeight
+                              x.plotHeight,
                             );
                           e.forEach(function (t) {
                             0 < t.labelDistance &&
@@ -51955,7 +52031,7 @@
                               ((t.top = Math.max(0, O - M - t.labelDistance)),
                               (t.bottom = Math.min(
                                 O + M + t.labelDistance,
-                                x.plotHeight
+                                x.plotHeight,
                               )),
                               (l = t.dataLabel.getBBox().height || 21),
                               (t.distributeBox = {
@@ -52022,7 +52098,7 @@
                                 : f + s / 2 > T &&
                                   (P[2] = Math.max(
                                     Math.round(f + s / 2 - T),
-                                    P[2]
+                                    P[2],
                                   )),
                               (n.sideOverflow = b));
                         }
@@ -52047,7 +52123,7 @@
                                   .addClass(
                                     "highcharts-data-label-connector  highcharts-color-" +
                                       t.colorIndex +
-                                      (t.className ? " " + t.className : "")
+                                      (t.className ? " " + t.className : ""),
                                   )
                                   .add(y.dataLabelsGroup)),
                               x.styledMode ||
@@ -52073,7 +52149,7 @@
                         ? (i.sideOverflow &&
                             ((i._attr.width = Math.max(
                               i.getBBox().width - i.sideOverflow,
-                              0
+                              0,
                             )),
                             i.css({
                               width: i._attr.width + "px",
@@ -52111,7 +52187,7 @@
                             i.thickness
                               ? Math.max(0, s - 2 * i.thickness)
                               : Math.max(0, f(i.innerSize || 0, s)),
-                            s
+                            s,
                           )),
                           this.translate(e),
                           this.drawDataLabels && this.drawDataLabels())
@@ -52128,7 +52204,7 @@
                       return t.getX(
                         i < e.top + 2 || i > e.bottom - 2 ? n : i,
                         e.half,
-                        e
+                        e,
                       );
                     },
                     justify: function (t, e, i) {
@@ -52161,7 +52237,7 @@
               })(o || (o = {})),
               o
             );
-          }
+          },
         ),
         e(
           i,
@@ -52175,7 +52251,7 @@
                 t.oldOpacity !== n &&
                   (t.alignAttr && t.placed
                     ? (t[n ? "removeClass" : "addClass"](
-                        "highcharts-data-label-hidden"
+                        "highcharts-data-label-hidden",
                       ),
                       (i = !0),
                       (t.alignAttr.opacity = n),
@@ -52185,7 +52261,7 @@
                         function () {
                           e.styledMode ||
                             t.css({ pointerEvents: n ? "auto" : "none" });
-                        }
+                        },
                       ),
                       r(e, "afterHideOverlappingLabel"))
                     : t.attr({ opacity: n })),
@@ -52225,14 +52301,14 @@
                           (o(n.dataLabels)
                             ? n.dataLabels
                             : n.dataLabel
-                            ? [n.dataLabel]
-                            : []
+                              ? [n.dataLabel]
+                              : []
                           ).forEach(function (r) {
                             var o = r.options;
                             (r.labelrank = l(
                               o.labelrank,
                               n.labelrank,
-                              n.shapeArgs && n.shapeArgs.height
+                              n.shapeArgs && n.shapeArgs.height,
                             )),
                               o.allowOverlap
                                 ? ((r.oldOpacity = r.opacity),
@@ -52320,7 +52396,7 @@
                 }),
                   h && r(a, "afterHideAllOverlappingLabels");
               });
-          }
+          },
         ),
         e(i, "Core/Responsive.js", [i["Core/Utilities.js"]], function (t) {
           var e,
@@ -52415,7 +52491,7 @@
                           })
                           .map(function (t) {
                             return t && t.chartOptions;
-                          })
+                          }),
                       )).isResponsiveOptions = !0),
                       (a = a.toString() || void 0) !== (o && o.ruleIds) &&
                         (o && this.update(o.undoOptions, t, !0),
@@ -52512,7 +52588,7 @@
             P,
             D,
             I,
-            _
+            _,
           ) {
             return (
               (t.animate = r.animate),
@@ -52604,7 +52680,7 @@
               C.compose(d, S, k),
               t
             );
-          }
+          },
         ),
         (i["masters/highcharts.src.js"]._modules = i),
         i["masters/highcharts.src.js"]
@@ -52629,7 +52705,7 @@
             window.dispatchEvent(
               new CustomEvent("HighchartsModuleLoaded", {
                 detail: { path: e, module: t[e] },
-              })
+              }),
             ));
       }
       e(
@@ -52664,7 +52740,7 @@
             })(t || (t = {})),
             t
           );
-        }
+        },
       ),
         e(
           t,
@@ -52693,7 +52769,7 @@
                       titleKey: "contextButtonTitle",
                       menuItems:
                         "viewFullscreen printChart separator downloadPNG downloadJPEG downloadPDF downloadSVG".split(
-                          " "
+                          " ",
                         ),
                     },
                   },
@@ -52781,7 +52857,7 @@
                 },
               }
             );
-          }
+          },
         ),
         e(t, "Extensions/Exporting/ExportingSymbols.js", [], function () {
           var t;
@@ -52803,7 +52879,7 @@
                   (n = []).concat(
                     this.circle(i - t, e, t, t),
                     this.circle(i - t, e + t + 4, t, t),
-                    this.circle(i - t, e + 2 * (t + 4), t, t)
+                    this.circle(i - t, e + 2 * (t + 4), t, t),
                   )
                 );
               }
@@ -52842,23 +52918,23 @@
                             exitFullscreen: "exitFullscreen",
                           })
                         : t.mozRequestFullScreen
-                        ? (this.browserProps = {
-                            fullscreenChange: "mozfullscreenchange",
-                            requestFullscreen: "mozRequestFullScreen",
-                            exitFullscreen: "mozCancelFullScreen",
-                          })
-                        : t.webkitRequestFullScreen
-                        ? (this.browserProps = {
-                            fullscreenChange: "webkitfullscreenchange",
-                            requestFullscreen: "webkitRequestFullScreen",
-                            exitFullscreen: "webkitExitFullscreen",
-                          })
-                        : t.msRequestFullscreen &&
-                          (this.browserProps = {
-                            fullscreenChange: "MSFullscreenChange",
-                            requestFullscreen: "msRequestFullscreen",
-                            exitFullscreen: "msExitFullscreen",
-                          }));
+                          ? (this.browserProps = {
+                              fullscreenChange: "mozfullscreenchange",
+                              requestFullscreen: "mozRequestFullScreen",
+                              exitFullscreen: "mozCancelFullScreen",
+                            })
+                          : t.webkitRequestFullScreen
+                            ? (this.browserProps = {
+                                fullscreenChange: "webkitfullscreenchange",
+                                requestFullscreen: "webkitRequestFullScreen",
+                                exitFullscreen: "webkitExitFullscreen",
+                              })
+                            : t.msRequestFullscreen &&
+                              (this.browserProps = {
+                                fullscreenChange: "MSFullscreenChange",
+                                requestFullscreen: "msRequestFullscreen",
+                                exitFullscreen: "msExitFullscreen",
+                              }));
                 }
                 return (
                   (e.compose = function (t) {
@@ -52910,7 +52986,7 @@
                                 : (e.setSize(null, null, !1),
                                   (t.isOpen = !0),
                                   t.setButtonText());
-                            }
+                            },
                           ),
                           o = n(e, "destroy", r);
                         t.unbindFullscreenEvent = function () {
@@ -52920,7 +52996,7 @@
                         s &&
                           s.catch(function () {
                             alert(
-                              "Full screen is not supported inside a frame."
+                              "Full screen is not supported inside a frame.",
                             );
                           });
                       }
@@ -52945,7 +53021,7 @@
                           this.isOpen
                             ? e.exitFullscreen
                             : n.menuItemDefinitions.viewFullscreen.text ||
-                                e.viewFullscreen
+                                e.viewFullscreen,
                         );
                   }),
                   (e.prototype.toggle = function () {
@@ -52955,7 +53031,7 @@
                 );
               })();
             return s;
-          }
+          },
         ),
         e(
           t,
@@ -52981,7 +53057,7 @@
                     (t.headers && t.headers["Content-Type"]) ||
                       i.setRequestHeader(
                         "Content-Type",
-                        e[t.dataType || "json"] || e.text
+                        e[t.dataType || "json"] || e.text,
                       ),
                     s(t.headers, function (t, e) {
                       i.setRequestHeader(e, t);
@@ -53027,17 +53103,17 @@
                         action: t,
                         enctype: "multipart/form-data",
                       },
-                      a
+                      a,
                     ),
                     { display: "none" },
-                    i.body
+                    i.body,
                   );
                   s(e, function (t, e) {
                     n(
                       "input",
                       { type: "hidden", name: e, value: t },
                       void 0,
-                      l
+                      l,
                     );
                   }),
                     l.submit(),
@@ -53045,7 +53121,7 @@
                 },
               };
             return a;
-          }
+          },
         ),
         e(
           t,
@@ -53116,7 +53192,7 @@
                                 c.translateY,
                                 c.width,
                                 c.height,
-                                c
+                                c,
                               ),
                               c.setState(2);
                           }),
@@ -53143,7 +53219,7 @@
                         void 0,
                         void 0,
                         void 0,
-                        n.useHTML
+                        n.useHTML,
                       )
                       .addClass(t.className)
                       .attr({
@@ -53161,7 +53237,7 @@
                           n.symbolY - s / 2,
                           s,
                           s,
-                          { width: s, height: s }
+                          { width: s, height: s },
                         )
                         .addClass("highcharts-button-symbol")
                         .attr({ zIndex: 1 })
@@ -53178,7 +53254,7 @@
                       .align(
                         x(n, { width: c.width, x: E(n.x, e.buttonOffset) }),
                         !0,
-                        "spacingBox"
+                        "spacingBox",
                       ),
                       (e.buttonOffset +=
                         (c.width + n.buttonSpacing) *
@@ -53252,13 +53328,13 @@
                             padding: b + "px",
                             pointerEvents: "auto",
                           },
-                          l.fixedDiv || l.container
+                          l.fixedDiv || l.container,
                         );
                     var T = y(
                       "ul",
                       { className: "highcharts-menu" },
                       { listStyle: "none", margin: 0, padding: 0 },
-                      w
+                      w,
                     );
                     l.styledMode ||
                       v(
@@ -53269,8 +53345,8 @@
                             WebkitBoxShadow: "3px 3px 10px #888",
                             boxShadow: "3px 3px 10px #888",
                           },
-                          h.menuStyle
-                        )
+                          h.menuStyle,
+                        ),
                       ),
                       (w.hideMenu = function () {
                         v(w, { display: "none" }),
@@ -53293,7 +53369,7 @@
                         }),
                         m(w, "click", function () {
                           l.openMenu && w.hideMenu();
-                        })
+                        }),
                       ),
                       i.forEach(function (e) {
                         if (
@@ -53319,11 +53395,11 @@
                                   },
                                 },
                                 void 0,
-                                T
+                                T,
                               )),
                               t.setElementHTML(
                                 i,
-                                e.text || l.options.lang[e.textKey]
+                                e.text || l.options.lang[e.textKey],
                               ),
                               l.styledMode ||
                                 ((i.onmouseover = function () {
@@ -53336,8 +53412,8 @@
                                   i,
                                   x(
                                     { cursor: "pointer" },
-                                    h.menuItemStyle || {}
-                                  )
+                                    h.menuItemStyle || {},
+                                  ),
                                 ))),
                             l.exportDivElements.push(i);
                         }
@@ -53411,7 +53487,7 @@
                         scale: t.scale,
                         svg: e,
                       },
-                      t.formAttributes
+                      t.formAttributes,
                     );
                 }
                 function _() {
@@ -53443,7 +53519,7 @@
                     i = T(this.options, t);
                   (i.plotOptions = T(
                     this.userOptions.plotOptions,
-                    t && t.plotOptions
+                    t && t.plotOptions,
                   )),
                     (i.time = T(this.userOptions.time, t && t.time));
                   var n = y(
@@ -53455,7 +53531,7 @@
                         width: this.chartWidth + "px",
                         height: this.chartHeight + "px",
                       },
-                      p.body
+                      p.body,
                     ),
                     r = this.renderTo.style.width,
                     o = this.renderTo.style.height;
@@ -53495,7 +53571,7 @@
                       t.options.isInternal ||
                         (s[t.coll] || ((s[t.coll] = !0), (i[t.coll] = [])),
                         i[t.coll].push(
-                          T(t.userOptions, { visible: t.visible })
+                          T(t.userOptions, { visible: t.visible }),
                         ));
                   });
                   var a = new this.constructor(i, this.callback);
@@ -53536,7 +53612,7 @@
                         sourceWidth: (t && t.sourceWidth) || i.sourceWidth,
                         sourceHeight: (t && t.sourceHeight) || i.sourceHeight,
                       },
-                    })
+                    }),
                   );
                 }
                 function B(t) {
@@ -53701,13 +53777,13 @@
                       .replace(/url\([^#]+#/g, "url(#")
                       .replace(
                         /<svg /,
-                        '<svg xmlns:xlink="http://www.w3.org/1999/xlink" '
+                        '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ',
                       )
                       .replace(/ (|NS[0-9]+:)href=/g, " xlink:href=")
                       .replace(/\n/, " ")
                       .replace(
                         /(fill|stroke)="rgba\(([ 0-9]+,[ 0-9]+,[ 0-9]+),([ 0-9\.]+)\)"/g,
-                        '$1="rgb($2)" $1-opacity="$3"'
+                        '$1="rgb($2)" $1-opacity="$3"',
                       )
                       .replace(/&nbsp;/g, " ")
                       .replace(/&shy;/g, "­")),
@@ -53730,7 +53806,7 @@
                   ],
                   V =
                     "fill stroke strokeLinecap strokeLinejoin strokeWidth textAnchor x y".split(
-                      " "
+                      " ",
                     );
                 e.inlineAllowlist = [];
                 var q,
@@ -53770,7 +53846,7 @@
               })(h || (h = {})),
               h
             );
-          }
+          },
         ),
         e(
           t,
@@ -53786,7 +53862,7 @@
               (t.getJSON = i.getJSON),
               (t.post = i.post),
               e.compose(t.Chart, t.Renderer);
-          }
+          },
         );
     });
   },
@@ -53852,7 +53928,7 @@
           {
             attributes: { value: Object.freeze(n) },
             converter: { value: Object.freeze(i) },
-          }
+          },
         );
       })(
         {
@@ -53865,11 +53941,11 @@
           write: function (t) {
             return encodeURIComponent(t).replace(
               /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
-              decodeURIComponent
+              decodeURIComponent,
             );
           },
         },
-        { path: "/" }
+        { path: "/" },
       );
     })();
   },
@@ -53989,7 +54065,7 @@
           function (t) {
             return n(i, this);
           },
-          { arity: 1 }
+          { arity: 1 },
         );
     };
   },
@@ -54062,7 +54138,7 @@
               r = o(T ? E : g, null, n);
             return k && "string" == typeof r ? b(r, w, A) : r;
           },
-        }
+        },
       );
   },
   function (t, e, i) {
@@ -54167,7 +54243,7 @@
               get: function () {
                 return this === t;
               },
-            })
+            }),
           );
           if ("true" !== l.call(t)) return !0;
         }
@@ -54539,7 +54615,7 @@
                   add: function (t) {
                     return v(this, (t = 0 === t ? 0 : t), t);
                   },
-                }
+                },
           ),
           u &&
             n(p, "size", {
@@ -54567,13 +54643,13 @@
               ? "keys" == e
                 ? { value: i.key, done: !1 }
                 : "values" == e
-                ? { value: i.value, done: !1 }
-                : { value: [i.key, i.value], done: !1 }
+                  ? { value: i.value, done: !1 }
+                  : { value: [i.key, i.value], done: !1 }
               : ((t.target = void 0), { value: void 0, done: !0 });
           },
           i ? "entries" : "values",
           !i,
-          !0
+          !0,
         ),
           h(e);
       },
@@ -54676,8 +54752,8 @@
                     p(this, "b", { value: 3, enumerable: !1 });
                   },
                 }),
-                { b: 2 }
-              )
+                { b: 2 },
+              ),
             ).b
         )
           return !0;
@@ -54783,13 +54859,13 @@
               h(n);
             }))
           : y
-          ? (s = function () {
-              w.nextTick(n);
-            })
-          : ((f = d(f, u)),
-            (s = function () {
-              f(n);
-            }))
+            ? (s = function () {
+                w.nextTick(n);
+              })
+            : ((f = d(f, u)),
+              (s = function () {
+                f(n);
+              }))
         : ((a = !0),
           (l = x.createTextNode("")),
           new b(n).observe(l, { characterData: !0 }),
@@ -54859,14 +54935,14 @@
         return r >= i.length
           ? { value: void 0, done: !0 }
           : ((t = n(i, r)), (e.index += t.length), { value: t, done: !1 });
-      }
+      },
     );
   },
   function (t, e, i) {
     var n = i(43);
     t.exports =
       /Version\/10(?:\.\d+){1,2}(?: [\w./]+)?(?: Mobile\/\w+)? Safari\//.test(
-        n
+        n,
       );
   },
   function (t, e, i) {
@@ -54906,10 +54982,10 @@
                 return 0 === d
                   ? r
                   : d <= f
-                  ? void 0 === n[d - 1]
-                    ? s(a, 1)
-                    : n[d - 1] + s(a, 1)
-                  : r;
+                    ? void 0 === n[d - 1]
+                      ? s(a, 1)
+                      : n[d - 1] + s(a, 1)
+                    : r;
               }
               c = n[h - 1];
           }
@@ -55084,7 +55160,7 @@
                     add: function (t) {
                       return m(this, t, !0);
                     },
-                  }
+                  },
             ),
             h
           );
@@ -55197,7 +55273,7 @@
                       r(s, this, c);
                     }
                   : s,
-                i
+                i,
               );
             }
           : t;
@@ -55348,12 +55424,12 @@
                 "keys" === e
                   ? n.key
                   : "values" === e
-                  ? n.value
-                  : [n.key, n.value]),
+                    ? n.value
+                    : [n.key, n.value]),
             i
           );
         },
-        !0
+        !0,
       ),
       lt = function (t) {
         (this.entries = []),
@@ -55362,7 +55438,7 @@
             (x(t)
               ? this.parseObject(t)
               : this.parseQuery(
-                  "string" == typeof t ? ("?" === W(t, 0) ? Z(t, 1) : t) : w(t)
+                  "string" == typeof t ? ("?" === W(t, 0) ? Z(t, 1) : t) : w(t),
                 ));
       };
     lt.prototype = {
@@ -55503,7 +55579,7 @@
             return new at(this, "entries");
           },
         },
-        { enumerable: !0 }
+        { enumerable: !0 },
       ),
       c(ht, O, ht.entries, { name: "entries" }),
       c(
@@ -55512,7 +55588,7 @@
         function () {
           return P(this).serialize();
         },
-        { enumerable: !0 }
+        { enumerable: !0 },
       ),
       u(ct, "URLSearchParams"),
       n({ global: !0, forced: !l }, { URLSearchParams: ct }),
@@ -55531,7 +55607,7 @@
                   dt(
                     e,
                     "content-type",
-                    "application/x-www-form-urlencoded;charset=UTF-8"
+                    "application/x-www-form-urlencoded;charset=UTF-8",
                   ),
                 S(t, { body: C(0, w(i)), headers: C(0, e) })
               );
@@ -55546,7 +55622,7 @@
               fetch: function (t) {
                 return N(t, arguments.length > 1 ? pt(arguments[1]) : {});
               },
-            }
+            },
           ),
         g(R))
       ) {
@@ -55610,7 +55686,7 @@
                   r,
                   function (e) {
                     return t[e];
-                  }.bind(null, r)
+                  }.bind(null, r),
                 );
             return n;
           }),
@@ -55644,10 +55720,10 @@
                   "object" == typeof i && null !== i
                     ? i.parse(e instanceof t ? e.clone().toJSDate() : e)
                     : "string" == typeof i
-                    ? t.parseDateTime(e, i, n)
-                    : e
-                    ? t.parseDateTime(e)
-                    : t.parseDateTime(new Date())),
+                      ? t.parseDateTime(e, i, n)
+                      : e
+                        ? t.parseDateTime(e)
+                        : t.parseDateTime(new Date())),
                 (this.lang = n);
             }
             return (
@@ -55693,9 +55769,9 @@
                       s.month
                         ? (b = Number(v[s.month]) - 1)
                         : s.shortMonth
-                        ? (b = t.shortMonths(n).indexOf(v[s.shortMonth]))
-                        : s.longMonth &&
-                          (b = t.longMonths(n).indexOf(v[s.longMonth]));
+                          ? (b = t.shortMonths(n).indexOf(v[s.shortMonth]))
+                          : s.longMonth &&
+                            (b = t.longMonths(n).indexOf(v[s.longMonth]));
                       var x = Number(v[s.day]) || 1;
                       return new Date(y, b, x, 0, 0, 0, 0);
                     }
@@ -55720,7 +55796,7 @@
                   0,
                   0,
                   0,
-                  0
+                  0,
                 );
               }),
               (t.shortMonths = function (e) {
@@ -55860,12 +55936,12 @@
                       new Date(
                         t.getFullYear(),
                         t.getMonth(),
-                        t.getDate()
+                        t.getDate(),
                       ).getTime() >
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        this.getDate()
+                        this.getDate(),
                       ).getTime()
                     );
                   case "month":
@@ -55891,12 +55967,12 @@
                       new Date(
                         t.getFullYear(),
                         t.getMonth(),
-                        t.getDate()
+                        t.getDate(),
                       ).getTime() >=
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        this.getDate()
+                        this.getDate(),
                       ).getTime()
                     );
                   case "month":
@@ -55919,12 +55995,12 @@
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        this.getDate()
+                        this.getDate(),
                       ).getTime() >
                       new Date(
                         t.getFullYear(),
                         t.getMonth(),
-                        t.getDate()
+                        t.getDate(),
                       ).getTime()
                     );
                   case "month":
@@ -55933,7 +56009,7 @@
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        1
+                        1,
                       ).getTime() >
                       new Date(t.getFullYear(), t.getMonth(), 1).getTime()
                     );
@@ -55954,12 +56030,12 @@
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        this.getDate()
+                        this.getDate(),
                       ).getTime() >=
                       new Date(
                         t.getFullYear(),
                         t.getMonth(),
-                        t.getDate()
+                        t.getDate(),
                       ).getTime()
                     );
                   case "month":
@@ -55968,7 +56044,7 @@
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        1
+                        1,
                       ).getTime() >=
                       new Date(t.getFullYear(), t.getMonth(), 1).getTime()
                     );
@@ -55986,12 +56062,12 @@
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        this.getDate()
+                        this.getDate(),
                       ).getTime() ===
                       new Date(
                         t.getFullYear(),
                         t.getMonth(),
-                        t.getDate()
+                        t.getDate(),
                       ).getTime()
                     );
                   case "month":
@@ -56000,7 +56076,7 @@
                       new Date(
                         this.getFullYear(),
                         this.getMonth(),
-                        1
+                        1,
                       ).getTime() ===
                       new Date(t.getFullYear(), t.getMonth(), 1).getTime()
                     );
@@ -56072,7 +56148,7 @@
                       r[u + 1] &&
                         (n += e.substring(
                           h.index + h[0].length,
-                          r[u + 1].index
+                          r[u + 1].index,
                         )),
                       u === r.length - 1 &&
                         (n += e.substring(h.index + h[0].length));
@@ -56088,7 +56164,7 @@
                   0,
                   0,
                   0,
-                  0
+                  0,
                 ).getTime();
               }),
               (t.prototype.formatTokens = function (e, i) {
@@ -56192,7 +56268,7 @@
                         this.options.numberOfMonths > 1 &&
                           i.isAfter(e) &&
                           i.setMonth(
-                            i.getMonth() - (this.options.numberOfMonths - 1)
+                            i.getMonth() - (this.options.numberOfMonths - 1),
                           ),
                         (this.calendars[0] = i.clone()))
                       : (e.setDate(1), (this.calendars[0] = e.clone()));
@@ -56202,7 +56278,7 @@
                   document.addEventListener(
                     "click",
                     this.onclick.bind(this),
-                    !0
+                    !0,
                   ),
                     (this.ui = document.createElement("div")),
                     (this.ui.className = l.litepicker),
@@ -56210,37 +56286,37 @@
                     this.ui.addEventListener(
                       "mouseenter",
                       this.onMouseEnter.bind(this),
-                      !0
+                      !0,
                     ),
                     this.ui.addEventListener(
                       "mouseleave",
                       this.onMouseLeave.bind(this),
-                      !1
+                      !1,
                     ),
                     this.options.autoRefresh
                       ? (this.options.element instanceof HTMLElement &&
                           this.options.element.addEventListener(
                             "keyup",
                             this.onInput.bind(this),
-                            !0
+                            !0,
                           ),
                         this.options.elementEnd instanceof HTMLElement &&
                           this.options.elementEnd.addEventListener(
                             "keyup",
                             this.onInput.bind(this),
-                            !0
+                            !0,
                           ))
                       : (this.options.element instanceof HTMLElement &&
                           this.options.element.addEventListener(
                             "change",
                             this.onInput.bind(this),
-                            !0
+                            !0,
                           ),
                         this.options.elementEnd instanceof HTMLElement &&
                           this.options.elementEnd.addEventListener(
                             "change",
                             this.onInput.bind(this),
-                            !0
+                            !0,
                           )),
                     this.options.parentEl
                       ? this.options.parentEl instanceof HTMLElement
@@ -56249,10 +56325,10 @@
                             .querySelector(this.options.parentEl)
                             .appendChild(this.ui)
                       : this.options.inlineMode
-                      ? this.options.element instanceof HTMLInputElement
-                        ? this.options.element.parentNode.appendChild(this.ui)
-                        : this.options.element.appendChild(this.ui)
-                      : document.body.appendChild(this.ui),
+                        ? this.options.element instanceof HTMLInputElement
+                          ? this.options.element.parentNode.appendChild(this.ui)
+                          : this.options.element.appendChild(this.ui)
+                        : document.body.appendChild(this.ui),
                     this.updateInput(),
                     this.init(),
                     "function" == typeof this.options.setup &&
@@ -56267,7 +56343,7 @@
                     if (this.options.singleMode && t)
                       this.options.element.value = t.format(
                         this.options.format,
-                        this.options.lang
+                        this.options.lang,
                       );
                     else if (!this.options.singleMode && t && e) {
                       var i = t.format(this.options.format, this.options.lang),
@@ -56349,7 +56425,7 @@
                               this.shouldCheckLockDays() &&
                                 c.rangeIsLocked(
                                   this.datePicked,
-                                  this.options
+                                  this.options,
                                 ) &&
                                 (this.emit("error:range", this.datePicked),
                                 (this.datePicked.length = 0)),
@@ -56360,8 +56436,8 @@
                                   ["preselect"],
                                   o(this.datePicked).map(function (t) {
                                     return t.clone();
-                                  })
-                                )
+                                  }),
+                                ),
                               ),
                               void (
                                 this.options.autoApply &&
@@ -56373,7 +56449,7 @@
                                     2 !== this.datePicked.length ||
                                     (this.setDateRange(
                                       this.datePicked[0],
-                                      this.datePicked[1]
+                                      this.datePicked[1],
                                     ),
                                     this.hide()))
                               )
@@ -56391,13 +56467,13 @@
                             }
                             return (
                               this.calendars[n].setMonth(
-                                this.calendars[n].getMonth() - r
+                                this.calendars[n].getMonth() - r,
                               ),
                               this.gotoDate(this.calendars[n], n),
                               void this.emit(
                                 "change:month",
                                 this.calendars[n],
-                                n
+                                n,
                               )
                             );
                           }
@@ -56413,13 +56489,13 @@
                                 (n = c.findNestedMonthItem(s)),
                                 (r = 1)),
                               this.calendars[n].setMonth(
-                                this.calendars[n].getMonth() + r
+                                this.calendars[n].getMonth() + r,
                               ),
                               this.gotoDate(this.calendars[n], n),
                               void this.emit(
                                 "change:month",
                                 this.calendars[n],
-                                n
+                                n,
                               )
                             );
                           e.classList.contains(l.buttonCancel) &&
@@ -56434,13 +56510,13 @@
                                   2 !== this.datePicked.length ||
                                   this.setDateRange(
                                     this.datePicked[0],
-                                    this.datePicked[1]
+                                    this.datePicked[1],
                                   ),
                               this.hide(),
                               this.emit(
                                 "button:apply",
                                 this.options.startDate,
-                                this.options.endDate
+                                this.options.endDate,
                               ));
                         }
                     } else this.hide();
@@ -56466,7 +56542,7 @@
                 }),
                 (e.prototype.hideTooltip = function () {
                   this.ui.querySelector(
-                    "." + l.containerTooltip
+                    "." + l.containerTooltip,
                   ).style.visibility = "hidden";
                 }),
                 (e.prototype.shouldAllowMouseEnter = function (t) {
@@ -56505,7 +56581,7 @@
                           l.dayItem +
                           '[data-time="' +
                           this.datePicked[0].getTime() +
-                          '"]'
+                          '"]',
                       ),
                       r = this.datePicked[0].clone(),
                       o = new a.DateTime(i.dataset.time),
@@ -56573,15 +56649,15 @@
                         i.format(r) === this.options.element.value &&
                         n.format(r) === this.options.elementEnd.value
                       : this.options.singleMode
-                      ? i instanceof a.DateTime &&
-                        i.format(r) === this.options.element.value
-                      : i instanceof a.DateTime &&
-                        n instanceof a.DateTime &&
-                        "" +
-                          i.format(r) +
-                          this.options.delimiter +
-                          n.format(r) ===
-                          this.options.element.value
+                        ? i instanceof a.DateTime &&
+                          i.format(r) === this.options.element.value
+                        : i instanceof a.DateTime &&
+                          n instanceof a.DateTime &&
+                          "" +
+                            i.format(r) +
+                            this.options.delimiter +
+                            n.format(r) ===
+                            this.options.element.value
                   ) {
                     if (n && i.getTime() > n.getTime()) {
                       var o = i.clone();
@@ -56590,13 +56666,13 @@
                     (this.options.startDate = new a.DateTime(
                       i,
                       this.options.format,
-                      this.options.lang
+                      this.options.lang,
                     )),
                       n &&
                         (this.options.endDate = new a.DateTime(
                           n,
                           this.options.format,
-                          this.options.lang
+                          this.options.lang,
                         )),
                       this.updateInput(),
                       this.render();
@@ -56609,7 +56685,7 @@
                       this.emit(
                         "selected",
                         this.getStartDate(),
-                        this.getEndDate()
+                        this.getEndDate(),
                       ),
                       this.gotoDate(s, l);
                   }
@@ -56665,7 +56741,7 @@
                     this,
                     t[0].clone(),
                     t[1].clone(),
-                    t
+                    t,
                   )),
                 i
               );
@@ -56746,7 +56822,7 @@
                     a["columns" + this.options.numberOfColumns] &&
                       (i.classList.remove(a.columns2, a.columns3, a.columns4),
                       i.classList.add(
-                        a["columns" + this.options.numberOfColumns]
+                        a["columns" + this.options.numberOfColumns],
                       )),
                     this.options.splitView && i.classList.add(a.splitView),
                     this.options.showWeekNumbers &&
@@ -56816,10 +56892,10 @@
                     for (var d = 0; d < 12; d += 1) {
                       var p = document.createElement("option"),
                         f = new s.DateTime(
-                          new Date(t.getFullYear(), d, 2, 0, 0, 0)
+                          new Date(t.getFullYear(), d, 2, 0, 0, 0),
                         ),
                         g = new s.DateTime(
-                          new Date(t.getFullYear(), d, 1, 0, 0, 0)
+                          new Date(t.getFullYear(), d, 1, 0, 0, 0),
                         );
                       (p.value = String(d)),
                         (p.text = f.toLocaleString(this.options.lang, {
@@ -56829,12 +56905,12 @@
                           (this.options.minDate &&
                             g.isBefore(
                               new s.DateTime(this.options.minDate),
-                              "month"
+                              "month",
                             )) ||
                           (this.options.maxDate &&
                             g.isAfter(
                               new s.DateTime(this.options.maxDate),
-                              "month"
+                              "month",
                             ))),
                         (p.selected = g.getMonth() === t.getMonth()),
                         u.appendChild(p);
@@ -56868,7 +56944,7 @@
                     for (
                       t.getFullYear() > y &&
                         (((p = document.createElement("option")).value = String(
-                          t.getFullYear()
+                          t.getFullYear(),
                         )),
                         (p.text = String(t.getFullYear())),
                         (p.selected = !0),
@@ -56886,12 +56962,12 @@
                           (this.options.minDate &&
                             b.isBefore(
                               new s.DateTime(this.options.minDate),
-                              "year"
+                              "year",
                             )) ||
                           (this.options.maxDate &&
                             b.isAfter(
                               new s.DateTime(this.options.maxDate),
-                              "year"
+                              "year",
                             ))),
                         (p.selected = t.getFullYear() === d),
                         m.appendChild(p);
@@ -56899,7 +56975,7 @@
                     if (
                       (t.getFullYear() < v &&
                         (((p = document.createElement("option")).value = String(
-                          t.getFullYear()
+                          t.getFullYear(),
                         )),
                         (p.text = String(t.getFullYear())),
                         (p.selected = !0),
@@ -56947,13 +57023,13 @@
                     this.options.minDate &&
                       n.isSameOrBefore(
                         new s.DateTime(this.options.minDate),
-                        "month"
+                        "month",
                       ) &&
                       o.classList.add(a.noPreviousMonth),
                     this.options.maxDate &&
                       n.isSameOrAfter(
                         new s.DateTime(this.options.maxDate),
-                        "month"
+                        "month",
                       ) &&
                       o.classList.add(a.noNextMonth);
                   var T = document.createElement("div");
@@ -57096,7 +57172,7 @@
                     if (1 === this.datePicked.length) {
                       var e = this.datePicked[0].format(
                         this.options.format,
-                        this.options.lang
+                        this.options.lang,
                       );
                       t.querySelector("." + a.previewDateRange).innerHTML = e;
                     }
@@ -57109,11 +57185,11 @@
                   ) {
                     e = this.datePicked[0].format(
                       this.options.format,
-                      this.options.lang
+                      this.options.lang,
                     );
                     var i = this.datePicked[1].format(
                       this.options.format,
-                      this.options.lang
+                      this.options.lang,
                     );
                     t.querySelector("." + a.previewDateRange).innerHTML =
                       "" + e + this.options.delimiter + i;
@@ -57139,7 +57215,7 @@
                     void 0 === e && (e = "short"),
                     new Date(1970, 0, t, 12, 0, 0, 0).toLocaleString(
                       this.options.lang,
-                      { weekday: e }
+                      { weekday: e },
                     )
                   );
                 }),
@@ -57267,12 +57343,12 @@
                   i.options.lockDays.length &&
                     (i.options.lockDays = a.DateTime.convertArray(
                       i.options.lockDays,
-                      i.options.lockDaysFormat
+                      i.options.lockDaysFormat,
                     )),
                   i.options.highlightedDays.length &&
                     (i.options.highlightedDays = a.DateTime.convertArray(
                       i.options.highlightedDays,
-                      i.options.highlightedDaysFormat
+                      i.options.highlightedDaysFormat,
                     ));
                 var l = i.parseInput(),
                   c = l[0],
@@ -57282,14 +57358,14 @@
                   (c = new a.DateTime(
                     i.options.startDate,
                     i.options.format,
-                    i.options.lang
+                    i.options.lang,
                   )),
                   c &&
                     i.options.endDate &&
                     (h = new a.DateTime(
                       i.options.endDate,
                       i.options.format,
-                      i.options.lang
+                      i.options.lang,
                     )),
                   c instanceof a.DateTime &&
                     !isNaN(c.getTime()) &&
@@ -57363,7 +57439,7 @@
                       l.Litepicker.prototype.hasOwnProperty(e)
                         ? l.Litepicker.prototype[e].init.call(t, t)
                         : console.warn(
-                            "Litepicker: plugin «" + e + "» not found."
+                            "Litepicker: plugin «" + e + "» not found.",
                           );
                     });
                 }),
@@ -57384,11 +57460,11 @@
                       return [
                         new a.DateTime(
                           this.options.element.value,
-                          this.options.format
+                          this.options.format,
                         ),
                         new a.DateTime(
                           this.options.elementEnd.value,
-                          this.options.format
+                          this.options.format,
                         ),
                       ];
                   } else if (this.options.singleMode) {
@@ -57399,7 +57475,7 @@
                       return [
                         new a.DateTime(
                           this.options.element.value,
-                          this.options.format
+                          this.options.format,
                         ),
                       ];
                   } else if (
@@ -57469,14 +57545,14 @@
             r && "function" == typeof r.ownKeys
               ? r.ownKeys
               : Object.getOwnPropertySymbols
-              ? function (t) {
-                  return Object.getOwnPropertyNames(t).concat(
-                    Object.getOwnPropertySymbols(t)
-                  );
-                }
-              : function (t) {
-                  return Object.getOwnPropertyNames(t);
-                };
+                ? function (t) {
+                    return Object.getOwnPropertyNames(t).concat(
+                      Object.getOwnPropertySymbols(t),
+                    );
+                  }
+                : function (t) {
+                    return Object.getOwnPropertyNames(t);
+                  };
           var s =
             Number.isNaN ||
             function (t) {
@@ -57501,7 +57577,7 @@
             if ("function" != typeof i)
               throw new TypeError(
                 'The "listener" argument must be of type Function. Received type ' +
-                  typeof i
+                  typeof i,
               );
             if (
               (void 0 === (o = t._events)
@@ -57517,8 +57593,8 @@
               ("function" == typeof s
                 ? (s = o[e] = n ? [i, s] : [s, i])
                 : n
-                ? s.unshift(i)
-                : s.push(i),
+                  ? s.unshift(i)
+                  : s.push(i),
               (r = c(t)) > 0 && s.length > r && !s.warned)
             ) {
               s.warned = !0;
@@ -57527,7 +57603,7 @@
                   s.length +
                   " " +
                   String(e) +
-                  " listeners added. Use emitter.setMaxListeners() to increase limit"
+                  " listeners added. Use emitter.setMaxListeners() to increase limit",
               );
               (l.name = "MaxListenersExceededWarning"),
                 (l.emitter = t),
@@ -57564,16 +57640,20 @@
             return void 0 === r
               ? []
               : "function" == typeof r
-              ? i
-                ? [r.listener || r]
-                : [r]
-              : i
-              ? (function (t) {
-                  for (var e = new Array(t.length), i = 0; i < e.length; ++i)
-                    e[i] = t[i].listener || t[i];
-                  return e;
-                })(r)
-              : g(r, r.length);
+                ? i
+                  ? [r.listener || r]
+                  : [r]
+                : i
+                  ? (function (t) {
+                      for (
+                        var e = new Array(t.length), i = 0;
+                        i < e.length;
+                        ++i
+                      )
+                        e[i] = t[i].listener || t[i];
+                      return e;
+                    })(r)
+                  : g(r, r.length);
           }
           function f(t) {
             var e = this._events;
@@ -57598,7 +57678,7 @@
                 throw new RangeError(
                   'The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' +
                     t +
-                    "."
+                    ".",
                 );
               l = t;
             },
@@ -57614,7 +57694,7 @@
                 throw new RangeError(
                   'The value of "n" is out of range. It must be a non-negative number. Received ' +
                     t +
-                    "."
+                    ".",
                 );
               return (this._maxListeners = t), this;
             }),
@@ -57632,7 +57712,7 @@
                 var s;
                 if ((e.length > 0 && (s = e[0]), s instanceof Error)) throw s;
                 var a = new Error(
-                  "Unhandled error." + (s ? " (" + s.message + ")" : "")
+                  "Unhandled error." + (s ? " (" + s.message + ")" : ""),
                 );
                 throw ((a.context = s), a);
               }
@@ -57657,7 +57737,7 @@
               if ("function" != typeof e)
                 throw new TypeError(
                   'The "listener" argument must be of type Function. Received type ' +
-                    typeof e
+                    typeof e,
                 );
               return this.on(t, d(this, t, e)), this;
             }),
@@ -57665,7 +57745,7 @@
               if ("function" != typeof e)
                 throw new TypeError(
                   'The "listener" argument must be of type Function. Received type ' +
-                    typeof e
+                    typeof e,
                 );
               return this.prependListener(t, d(this, t, e)), this;
             }),
@@ -57674,7 +57754,7 @@
               if ("function" != typeof e)
                 throw new TypeError(
                   'The "listener" argument must be of type Function. Received type ' +
-                    typeof e
+                    typeof e,
                 );
               if (void 0 === (n = this._events)) return this;
               if (void 0 === (i = n[t])) return this;
@@ -57813,11 +57893,11 @@
                       var a =
                           ((i = s),
                           (n = btoa(
-                            unescape(encodeURIComponent(JSON.stringify(i)))
+                            unescape(encodeURIComponent(JSON.stringify(i))),
                           )),
                           (r =
                             "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(
-                              n
+                              n,
                             )),
                           "/*# ".concat(r, " */")),
                         l = s.sources.map(function (t) {
@@ -57920,7 +58000,7 @@
               var r = o(t.insert || "head");
               if (!r)
                 throw new Error(
-                  "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+                  "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.",
                 );
               r.appendChild(e);
             }
@@ -57953,7 +58033,7 @@
                 (n +=
                   "\n/*# sourceMappingURL=data:application/json;base64,".concat(
                     btoa(unescape(encodeURIComponent(JSON.stringify(o)))),
-                    " */"
+                    " */",
                   )),
               t.styleSheet)
             )
@@ -58004,7 +58084,7 @@
                 (e.singleton =
                   (void 0 === n &&
                     (n = Boolean(
-                      window && document && document.all && !window.atob
+                      window && document && document.all && !window.atob,
                     )),
                   n));
             var i = s(t, e);
@@ -58106,7 +58186,7 @@
                 ((this.options.startDate = new r.DateTime(
                   t,
                   this.options.format,
-                  this.options.lang
+                  this.options.lang,
                 )),
                 this.updateInput());
             }),
@@ -58115,7 +58195,7 @@
                 ((this.options.endDate = new r.DateTime(
                   t,
                   this.options.format,
-                  this.options.lang
+                  this.options.lang,
                 )),
                 this.options.startDate.getTime() >
                   this.options.endDate.getTime() &&
@@ -58123,7 +58203,7 @@
                   (this.options.startDate = new r.DateTime(
                     t,
                     this.options.format,
-                    this.options.lang
+                    this.options.lang,
                   ))),
                 this.updateInput());
             }),
@@ -58143,7 +58223,7 @@
                   this.emit(
                     "selected",
                     this.getStartDate(),
-                    this.getEndDate()
+                    this.getEndDate(),
                   ));
             }),
             (o.Litepicker.prototype.gotoDate = function (t, e) {
@@ -58154,14 +58234,14 @@
             (o.Litepicker.prototype.setLockDays = function (t) {
               (this.options.lockDays = r.DateTime.convertArray(
                 t,
-                this.options.lockDaysFormat
+                this.options.lockDaysFormat,
               )),
                 this.render();
             }),
             (o.Litepicker.prototype.setHighlightedDays = function (t) {
               (this.options.highlightedDays = r.DateTime.convertArray(
                 t,
-                this.options.highlightedDaysFormat
+                this.options.highlightedDaysFormat,
               )),
                 this.render();
             }),
@@ -58173,13 +58253,13 @@
                   (t.startDate = new r.DateTime(
                     t.startDate,
                     this.options.format,
-                    this.options.lang
+                    this.options.lang,
                   )),
                 t.endDate &&
                   (t.endDate = new r.DateTime(
                     t.endDate,
                     this.options.format,
-                    this.options.lang
+                    this.options.lang,
                   ));
               var e = n(n({}, this.options.dropdowns), t.dropdowns),
                 i = n(n({}, this.options.buttonText), t.buttonText),
@@ -58208,12 +58288,12 @@
               this.options.lockDays.length &&
                 (this.options.lockDays = r.DateTime.convertArray(
                   this.options.lockDays,
-                  this.options.lockDaysFormat
+                  this.options.lockDaysFormat,
                 )),
                 this.options.highlightedDays.length &&
                   (this.options.highlightedDays = r.DateTime.convertArray(
                     this.options.highlightedDays,
-                    this.options.highlightedDaysFormat
+                    this.options.highlightedDaysFormat,
                   )),
                 this.render(),
                 this.options.inlineMode && this.show(),
@@ -58254,7 +58334,7 @@
             window.dispatchEvent(
               new CustomEvent("HighchartsModuleLoaded", {
                 detail: { path: e, module: t[e] },
-              })
+              }),
             ));
       }
       e(
@@ -58284,7 +58364,7 @@
                     t.shiftKey,
                     t.metaKey,
                     t.button,
-                    t.relatedTarget
+                    t.relatedTarget,
                   ),
                   e
                 );
@@ -58310,26 +58390,26 @@
                     clientY: e.y,
                   })
                 : r.createEvent &&
-                  (i = r.createEvent("MouseEvent")).initMouseEvent
-                ? (i.initMouseEvent(
-                    t,
-                    !0,
-                    !0,
-                    o,
-                    "click" === t ? 1 : 0,
-                    e.x,
-                    e.y,
-                    e.x,
-                    e.y,
-                    !1,
-                    !1,
-                    !1,
-                    !1,
-                    0,
-                    null
-                  ),
-                  i)
-                : { type: t }
+                    (i = r.createEvent("MouseEvent")).initMouseEvent
+                  ? (i.initMouseEvent(
+                      t,
+                      !0,
+                      !0,
+                      o,
+                      "click" === t ? 1 : 0,
+                      e.x,
+                      e.y,
+                      e.x,
+                      e.y,
+                      !1,
+                      !1,
+                      !1,
+                      !1,
+                      0,
+                      null,
+                    ),
+                    i)
+                  : { type: t }
             );
           }
           var r = t.doc,
@@ -58407,8 +58487,8 @@
                   return n
                     ? e(n)
                     : (t = t.parentElement)
-                    ? ((n = t.tagName), /H[1-6]/.test(n) ? e(n) : i(t))
-                    : "p";
+                      ? ((n = t.tagName), /H[1-6]/.test(n) ? e(n) : i(t))
+                      : "p";
                 };
               return i(t);
             },
@@ -58449,7 +58529,7 @@
               });
             },
           };
-        }
+        },
       ),
         e(
           t,
@@ -58560,7 +58640,7 @@
                         return t + e.value;
                       }, ""),
                       e,
-                      i
+                      i,
                     )
                   );
                 }
@@ -58582,7 +58662,7 @@
               })(i || (i = {})),
               i
             );
-          }
+          },
         ),
         e(
           t,
@@ -58625,15 +58705,15 @@
                     ? e.dispatchEvent(i)
                     : e.fireEvent(n, i)
                   : r && r[n]
-                  ? c(e, n, i)
-                  : e.element && t(e.element, i);
+                    ? c(e, n, i)
+                    : e.element && t(e.element, i);
               },
               getChartTitle: function (t) {
                 return s(
                   t.options.title.text ||
                     t.langFormat("accessibility.defaultChartTitle", {
                       chart: t,
-                    })
+                    }),
                 );
               },
               getAxisDescription: function (t) {
@@ -58655,66 +58735,69 @@
                   void 0 !== e.accessibility.rangeDescription
                   ? e.accessibility.rangeDescription
                   : t.categories
-                  ? ((e = t.chart),
-                    (t =
-                      t.dataMax && t.dataMin
-                        ? e.langFormat("accessibility.axis.rangeCategories", {
-                            chart: e,
-                            axis: t,
-                            numCategories: t.dataMax - t.dataMin + 1,
-                          })
-                        : ""))
-                  : !t.dateTime || (0 !== t.min && 0 !== t.dataMin)
-                  ? (function (t) {
-                      var e = t.chart,
-                        i = e.options,
-                        n =
-                          (i &&
-                            i.accessibility &&
-                            i.accessibility.screenReaderSection
-                              .axisRangeDateFormat) ||
-                          "",
-                        r = {
-                          min: t.dataMin || t.min || 0,
-                          max: t.dataMax || t.max || 0,
-                        };
-                      return (
-                        (i = function (i) {
-                          return t.dateTime
-                            ? e.time.dateFormat(n, r[i])
-                            : r[i].toString();
-                        }),
-                        e.langFormat("accessibility.axis.rangeFromTo", {
-                          chart: e,
-                          axis: t,
-                          rangeFrom: i("min"),
-                          rangeTo: i("max"),
-                        })
-                      );
-                    })(t)
-                  : (function (t) {
-                      var e = t.chart,
-                        i = {},
-                        n = "Seconds";
-                      (i.Seconds =
-                        ((t.dataMax || t.max || 0) -
-                          (t.dataMin || t.min || 0)) /
-                        1e3),
-                        (i.Minutes = i.Seconds / 60),
-                        (i.Hours = i.Minutes / 60),
-                        (i.Days = i.Hours / 24),
-                        ["Minutes", "Hours", "Days"].forEach(function (t) {
-                          2 < i[t] && (n = t);
-                        });
-                      var r = i[n].toFixed(
-                        "Seconds" !== n && "Minutes" !== n ? 1 : 0
-                      );
-                      return e.langFormat("accessibility.axis.timeRange" + n, {
-                        chart: e,
-                        axis: t,
-                        range: r.replace(".0", ""),
-                      });
-                    })(t);
+                    ? ((e = t.chart),
+                      (t =
+                        t.dataMax && t.dataMin
+                          ? e.langFormat("accessibility.axis.rangeCategories", {
+                              chart: e,
+                              axis: t,
+                              numCategories: t.dataMax - t.dataMin + 1,
+                            })
+                          : ""))
+                    : !t.dateTime || (0 !== t.min && 0 !== t.dataMin)
+                      ? (function (t) {
+                          var e = t.chart,
+                            i = e.options,
+                            n =
+                              (i &&
+                                i.accessibility &&
+                                i.accessibility.screenReaderSection
+                                  .axisRangeDateFormat) ||
+                              "",
+                            r = {
+                              min: t.dataMin || t.min || 0,
+                              max: t.dataMax || t.max || 0,
+                            };
+                          return (
+                            (i = function (i) {
+                              return t.dateTime
+                                ? e.time.dateFormat(n, r[i])
+                                : r[i].toString();
+                            }),
+                            e.langFormat("accessibility.axis.rangeFromTo", {
+                              chart: e,
+                              axis: t,
+                              rangeFrom: i("min"),
+                              rangeTo: i("max"),
+                            })
+                          );
+                        })(t)
+                      : (function (t) {
+                          var e = t.chart,
+                            i = {},
+                            n = "Seconds";
+                          (i.Seconds =
+                            ((t.dataMax || t.max || 0) -
+                              (t.dataMin || t.min || 0)) /
+                            1e3),
+                            (i.Minutes = i.Seconds / 60),
+                            (i.Hours = i.Minutes / 60),
+                            (i.Days = i.Hours / 24),
+                            ["Minutes", "Hours", "Days"].forEach(function (t) {
+                              2 < i[t] && (n = t);
+                            });
+                          var r = i[n].toFixed(
+                            "Seconds" !== n && "Minutes" !== n ? 1 : 0,
+                          );
+                          return e.langFormat(
+                            "accessibility.axis.timeRange" + n,
+                            {
+                              chart: e,
+                              axis: t,
+                              range: r.replace(".0", ""),
+                            },
+                          );
+                        })(t);
               },
               getPointFromXY: function (t, e, i) {
                 for (var n, r = t.length; r--; )
@@ -58744,7 +58827,7 @@
                       function (t) {
                         t.hasAttribute("aria-hidden") ||
                           t.setAttribute("aria-hidden", !0);
-                      }
+                      },
                     ),
                     t(e, i.parentNode));
               },
@@ -58773,7 +58856,7 @@
                 }
               },
             };
-          }
+          },
         ),
         e(
           t,
@@ -58800,7 +58883,7 @@
                 t
               );
             })();
-          }
+          },
         ),
         e(
           t,
@@ -58826,7 +58909,7 @@
                 e
               );
             })();
-          }
+          },
         ),
         e(
           t,
@@ -58899,7 +58982,7 @@
               }),
               n
             );
-          }
+          },
         ),
         e(
           t,
@@ -58940,7 +59023,7 @@
                 t
               );
             })());
-          }
+          },
         ),
         e(
           t,
@@ -59001,7 +59084,7 @@
                     i = c(
                       t.langFormat("accessibility.svgContainerTitle", {
                         chartTitle: a(t),
-                      })
+                      }),
                     );
                   if (i.length) {
                     var n = (this.svgTitleElement =
@@ -59049,7 +59132,7 @@
                         "aria-label",
                         t.langFormat("accessibility.credits", {
                           creditsStr: c(e.textStr),
-                        })
+                        }),
                       ),
                     s(t, e.element));
                 }),
@@ -59072,7 +59155,7 @@
                 i
               );
             })(t);
-          }
+          },
         ),
         e(
           t,
@@ -59135,8 +59218,8 @@
                       "middle" === this.attr("text-anchor")
                         ? (g = m = 0.5)
                         : this.rotation
-                        ? (g = 0.25)
-                        : (m = 0.75),
+                          ? (g = 0.25)
+                          : (m = 0.75),
                         (g = { x: g, y: m });
                     }
                     m = +this.attr("x");
@@ -59157,7 +59240,7 @@
                       h,
                       u,
                       d,
-                      parseInt(((i && i.r) || 0).toString(), 10) / l
+                      parseInt(((i && i.r) || 0).toString(), 10) / l,
                     )
                     .addClass("highcharts-focus-border")
                     .attr({ zIndex: 99 })
@@ -59200,12 +59283,12 @@
                 function l() {
                   !(function (t) {
                     t.focusBorderUpdateHooks &&
-                      (Object.keys(t.focusBorderUpdateHooks).forEach(function (
-                        e
-                      ) {
-                        var i = t.focusBorderUpdateHooks[e];
-                        i === t._defaultSetter ? delete t[e] : (t[e] = i);
-                      }),
+                      (Object.keys(t.focusBorderUpdateHooks).forEach(
+                        function (e) {
+                          var i = t.focusBorderUpdateHooks[e];
+                          i === t._defaultSetter ? delete t[e] : (t[e] = i);
+                        },
+                      ),
                       delete t.focusBorderUpdateHooks);
                   })(this),
                     this.focusBorderDestroyHook &&
@@ -59229,7 +59312,7 @@
               })(i || (i = {})),
               i
             );
-          }
+          },
         ),
         e(
           t,
@@ -59266,7 +59349,7 @@
                         (i.announceRegion.innerHTML = t.emptyHTML),
                           delete i.clearAnnouncementRegionTimer;
                       },
-                      1e3
+                      1e3,
                     ));
                 }),
                 (i.prototype.addAnnounceRegion = function (t) {
@@ -59299,7 +59382,7 @@
                 i
               );
             })();
-          }
+          },
         ),
         e(
           t,
@@ -59382,7 +59465,7 @@
                   ? ((t = r(t)),
                     '<ul style="list-style-type: none">'.concat(
                       t.join(" "),
-                      "</ul>"
+                      "</ul>",
                     ))
                   : "";
               },
@@ -59399,7 +59482,7 @@
                   : [];
               },
             };
-          }
+          },
         ),
         e(
           t,
@@ -59523,11 +59606,11 @@
                   (this.linkedDescriptionElement =
                     this.getLinkedDescriptionElement()),
                     this.setLinkedDescriptionAttrs(),
-                    Object.keys(this.screenReaderSections).forEach(function (
-                      e
-                    ) {
-                      t.updateScreenReaderSection(e);
-                    });
+                    Object.keys(this.screenReaderSections).forEach(
+                      function (e) {
+                        t.updateScreenReaderSection(e);
+                      },
+                    );
                 }),
                 (n.prototype.getLinkedDescriptionElement = function () {
                   var t = this.chart.options.accessibility.linkedDescription;
@@ -59567,7 +59650,7 @@
                   var i = this.chart,
                     n = i.langFormat(
                       "accessibility.screenReaderSection." + e + "RegionLabel",
-                      { chart: i, chartTitle: f(i) }
+                      { chart: i, chartTitle: f(i) },
                     );
                   (e = "highcharts-screen-reader-region-"
                     .concat(e, "-")
@@ -59579,7 +59662,7 @@
                         "role",
                         "all" === i.options.accessibility.landmarkVerbosity
                           ? "region"
-                          : "group"
+                          : "group",
                       );
                 }),
                 (n.prototype.defaultBeforeChartFormatter = function () {
@@ -59598,7 +59681,7 @@
                     a = u(e),
                     l = e.langFormat(
                       "accessibility.screenReaderSection.annotations.heading",
-                      { chart: e }
+                      { chart: e },
                     );
                   return (
                     (n = {
@@ -59665,27 +59748,27 @@
                           )
                             return t.langFormat(
                               "accessibility.chartTypes.emptyChart",
-                              n
+                              n,
                             );
                           if ("map" === i)
                             return n.mapTitle
                               ? t.langFormat(
                                   "accessibility.chartTypes.mapTypeDescription",
-                                  n
+                                  n,
                                 )
                               : t.langFormat(
                                   "accessibility.chartTypes.unknownMap",
-                                  n
+                                  n,
                                 );
                           if (1 < t.types.length)
                             return t.langFormat(
                               "accessibility.chartTypes.combinationChart",
-                              n
+                              n,
                             );
                           (e = e[0]),
                             (i = t.langFormat(
                               "accessibility.seriesTypeDescriptions." + e,
-                              n
+                              n,
                             ));
                           var r =
                             t.series && 2 > t.series.length
@@ -59694,11 +59777,11 @@
                           return (
                             (t.langFormat(
                               "accessibility.chartTypes." + e + r,
-                              n
+                              n,
                             ) ||
                               t.langFormat(
                                 "accessibility.chartTypes.default" + r,
-                                n
+                                n,
                               )) + (i ? " " + i : "")
                           );
                         })(t, t.types)
@@ -59712,7 +59795,7 @@
                     '">' +
                     (e = e.langFormat(
                       "accessibility.table.viewAsDataTableButtonText",
-                      { chart: e, chartTitle: f(e) }
+                      { chart: e, chartTitle: f(e) },
                     )) +
                     "</button>"
                   );
@@ -59727,7 +59810,7 @@
                         '">' +
                         (e = e.langFormat(
                           "accessibility.sonification.playAsSoundButtonText",
-                          { chart: e, chartTitle: f(e) }
+                          { chart: e, chartTitle: f(e) },
                         )) +
                         "</button>";
                 }),
@@ -59739,7 +59822,7 @@
                   var t = this.chart,
                     e = t.langFormat(
                       "accessibility.screenReaderSection.endOfChartMarker",
-                      { chart: t }
+                      { chart: t },
                     );
                   return (
                     '<div id="highcharts-end-of-chart-marker-' +
@@ -59755,13 +59838,13 @@
                     this.viewDataTableButton &&
                       this.viewDataTableButton.setAttribute(
                         "aria-expanded",
-                        "true"
+                        "true",
                       );
                     var i = t.tree.attributes || {};
                     (i.tabindex = -1),
                       (i.summary = e.langFormat(
                         "accessibility.table.tableSummary",
-                        { chart: e }
+                        { chart: e },
                       )),
                       (t.tree.attributes = i);
                   }
@@ -59784,7 +59867,7 @@
                         t.stopPropagation(),
                         (t = n.langFormat(
                           "accessibility.sonification.playAsSoundClickAnnouncement",
-                          { chart: n }
+                          { chart: n },
                         )),
                         e.announcer.announce(t),
                         setTimeout(function () {
@@ -59828,7 +59911,7 @@
                           T(
                             e[0].options.accessibility &&
                               e[0].options.accessibility.enabled,
-                            i
+                            i,
                           ))
                       );
                     },
@@ -59864,7 +59947,7 @@
                         return p(t);
                       }),
                       numAxes: i.length,
-                    }
+                    },
                   );
                 }),
                 (n.prototype.destroy = function () {
@@ -59873,7 +59956,7 @@
                 n
               );
             })(e);
-          }
+          },
         ),
         e(
           t,
@@ -60007,7 +60090,7 @@
                       this.exportButtonProxy &&
                         this.exportButtonProxy.buttonElement.setAttribute(
                           "aria-expanded",
-                          t
+                          t,
                         );
                     }),
                     (e.prototype.onChartRender = function () {
@@ -60022,7 +60105,7 @@
                           (e.focusBorder
                             ? t.setFocusToElement(
                                 e,
-                                this.exportButtonProxy.buttonElement
+                                this.exportButtonProxy.buttonElement,
                               )
                             : i &&
                               i.keyboardNavigation.tabindexContainer.focus());
@@ -60046,11 +60129,11 @@
                           {
                             "aria-label": t.langFormat(
                               "accessibility.exporting.menuButtonLabel",
-                              { chart: t, chartTitle: l(t) }
+                              { chart: t, chartTitle: l(t) },
                             ),
                             "aria-expanded": !1,
                             title: t.options.lang.contextButtonTitle || null,
-                          }
+                          },
                         ));
                     }),
                     (e.prototype.createProxyGroup = function () {
@@ -60075,7 +60158,7 @@
                             "aria-hidden": void 0,
                             "aria-label": t.langFormat(
                               "accessibility.exporting.chartMenuLabel",
-                              { chart: t }
+                              { chart: t },
                             ),
                             role: "list",
                           }));
@@ -60160,11 +60243,11 @@
                     }),
                     e
                   );
-                })(i)) || (e = {})
+                })(i)) || (e = {}),
               ),
               e
             );
-          }
+          },
         ),
         e(
           t,
@@ -60232,14 +60315,14 @@
                           "keydown",
                           function (t) {
                             return i.onKeydown(t);
-                          }
+                          },
                         ),
                         r.addEvent(
                           this.tabindexContainer,
                           "focus",
                           function (t) {
                             return i.onFocus(t);
-                          }
+                          },
                         ),
                         ["mouseup", "touchend"].forEach(function (t) {
                           return r.addEvent(o, t, function (t) {
@@ -60276,7 +60359,7 @@
                     }),
                     (t.prototype.updateExitAnchor = function () {
                       var t = "highcharts-end-of-chart-marker-".concat(
-                        this.chart.index
+                        this.chart.index,
                       );
                       (t = c(t)),
                         this.removeExitAnchor(),
@@ -60352,8 +60435,8 @@
                         n === i.response.success
                           ? (e = !0)
                           : n === i.response.prev
-                          ? (e = this.move(-1))
-                          : n === i.response.next && (e = this.move(1)),
+                            ? (e = this.move(-1))
+                            : n === i.response.next && (e = this.move(1)),
                           e && (t.preventDefault(), t.stopPropagation());
                       }
                     }),
@@ -60390,7 +60473,7 @@
                       this.exitAnchor &&
                         this.exitAnchor.parentNode &&
                         (this.exitAnchor.parentNode.removeChild(
-                          this.exitAnchor
+                          this.exitAnchor,
                         ),
                         delete this.exitAnchor);
                     }),
@@ -60434,11 +60517,11 @@
                     }),
                     t
                   );
-                })()) || (i = {})
+                })()) || (i = {}),
               ),
               i
             );
-          }
+          },
         ),
         e(
           t,
@@ -60543,7 +60626,7 @@
                     e.a11yProxyElement &&
                     e.a11yProxyElement.buttonElement.setAttribute(
                       "aria-pressed",
-                      t.visible ? "true" : "false"
+                      t.visible ? "true" : "false",
                     );
                 }
                 var n = [];
@@ -60571,12 +60654,12 @@
                         this.addEvent(i, "afterScroll", function () {
                           this.chart === t.chart &&
                             (t.proxyProvider.updateGroupProxyElementPositions(
-                              "legend"
+                              "legend",
                             ),
                             t.updateLegendItemProxyVisibility(),
                             -1 < t.highlightedLegendItemIx &&
                               this.chart.highlightLegendItem(
-                                t.highlightedLegendItemIx
+                                t.highlightedLegendItemIx,
                               ));
                         }),
                         this.addEvent(i, "afterPositionItem", function (e) {
@@ -60588,13 +60671,15 @@
                           this.chart === t.chart &&
                             this.chart.renderer &&
                             t.recreateProxies() &&
-                            v(function () {
-                              return t.proxyProvider.updateGroupProxyElementPositions(
-                                "legend"
-                              );
-                            }, u(
-                              m(this.chart.renderer.globalAnimation, !0)
-                            ).duration);
+                            v(
+                              function () {
+                                return t.proxyProvider.updateGroupProxyElementPositions(
+                                  "legend",
+                                );
+                              },
+                              u(m(this.chart.renderer.globalAnimation, !0))
+                                .duration,
+                            );
                         });
                     }),
                     (e.prototype.updateLegendItemProxyVisibility = function () {
@@ -60659,7 +60744,7 @@
                           this.updateLegendTitle(),
                           t &&
                             this.chart.highlightLegendItem(
-                              this.highlightedLegendItemIx
+                              this.highlightedLegendItemIx,
                             ),
                           !0)
                       );
@@ -60675,12 +60760,12 @@
                               t.legend.options.title &&
                               t.legend.options.title.text) ||
                             ""
-                          ).replace(/<br ?\/?>/g, " ")
+                          ).replace(/<br ?\/?>/g, " "),
                         );
                       (t = t.langFormat(
                         "accessibility.legend.legendLabel" +
                           (e ? "" : "NoTitle"),
-                        { chart: t, legendTitle: e, chartTitle: y(t) }
+                        { chart: t, legendTitle: e, chartTitle: y(t) },
                       )),
                         this.proxyProvider.updateGroupAttrs("legend", {
                           "aria-label": t,
@@ -60697,7 +60782,7 @@
                             this.chart.options.accessibility.landmarkVerbosity
                               ? "region"
                               : null,
-                        }
+                        },
                       );
                     }),
                     (e.prototype.proxyLegendItems = function () {
@@ -60708,7 +60793,7 @@
                           (t = i.legendItem || {}).label &&
                             t.label.element &&
                             e.proxyLegendItem(i);
-                        }
+                        },
                       );
                     }),
                     (e.prototype.proxyLegendItem = function (t) {
@@ -60716,7 +60801,7 @@
                       if (e.label && e.group) {
                         var i = this.chart.langFormat(
                           "accessibility.legend.legendItem",
-                          { chart: this.chart, itemName: b(t.name), item: t }
+                          { chart: this.chart, itemName: b(t.name), item: t },
                         );
                         t.a11yProxyElement = this.proxyProvider.addProxyElement(
                           "legend",
@@ -60728,7 +60813,7 @@
                             tabindex: -1,
                             "aria-pressed": t.visible,
                             "aria-label": i,
-                          }
+                          },
                         );
                       }
                     }),
@@ -60755,7 +60840,7 @@
                             function (i) {
                               return (
                                 e.highlightAdjacentLegendPage(
-                                  i === t.pageDown ? 1 : -1
+                                  i === t.pageDown ? 1 : -1,
                                 ),
                                 this.response.success
                               );
@@ -60815,11 +60900,11 @@
                     }),
                     e
                   );
-                })(r)) || (t = {})
+                })(r)) || (t = {}),
               ),
               t
             );
-          }
+          },
         ),
         e(
           t,
@@ -60874,7 +60959,7 @@
                         i.valueDecimals ||
                         -1,
                       n.decimalPoint,
-                      n.accessibility.thousandsSep || n.thousandsSep
+                      n.accessibility.thousandsSep || n.thousandsSep,
                     )
                   : e
               );
@@ -60882,7 +60967,7 @@
             function l(t, e) {
               return t.chart.langFormat(
                 "accessibility.series." + e + "Description",
-                { name: p(t[e]), series: t }
+                { name: p(t[e]), series: t },
               );
             }
             function c(t) {
@@ -60899,7 +60984,7 @@
                   n.xAxis &&
                     n.xAxis.options.accessibility &&
                     n.xAxis.options.accessibility.enabled,
-                  !r.angular
+                  !r.angular,
                 )))
               ) {
                 var s = t.series,
@@ -60912,7 +60997,7 @@
                 (s = s.xAxis && s.xAxis.dateTime)
                   ? ((s = s.getXDateFormat(
                       t.x || 0,
-                      l.options.tooltip.dateTimeLabelFormats
+                      l.options.tooltip.dateTimeLabelFormats,
                     )),
                     (c =
                       (c.dateFormatter && c.dateFormatter(t)) ||
@@ -60946,16 +61031,16 @@
                       point: t,
                     })
                   : h.pointArrayMap
-                  ? (function (t, e, i) {
-                      var n = e || "",
-                        r = i || "";
-                      return t.series.pointArrayMap.reduce(function (e, i) {
-                        e += e.length ? ", " : "";
-                        var o = a(t, C(t[i], t.options[i]));
-                        return e + (i + ": ") + n + o + r;
-                      }, "");
-                    })(t, s, u)
-                  : s + p + u),
+                    ? (function (t, e, i) {
+                        var n = e || "",
+                          r = i || "";
+                        return t.series.pointArrayMap.reduce(function (e, i) {
+                          e += e.length ? ", " : "";
+                          var o = a(t, C(t[i], t.options[i]));
+                          return e + (i + ": ") + n + o + r;
+                        }, "");
+                      })(t, s, u)
+                    : s + p + u),
                 (r = v(
                   o,
                   {
@@ -60965,7 +61050,7 @@
                     value: h,
                     separator: n ? ", " : "",
                   },
-                  r
+                  r,
                 )),
                 (o = (o =
                   t.options &&
@@ -60979,7 +61064,7 @@
                 (i = n.length
                   ? i.langFormat(
                       "accessibility.series.pointAnnotationsDescription",
-                      l
+                      l,
                     )
                   : ""),
                 (t.accessibility = t.accessibility || {}),
@@ -61034,7 +61119,7 @@
                             opacity: 0,
                             "fill-opacity": 0,
                             "stroke-opacity": 0,
-                          }
+                          },
                         ),
                         s && s.element
                           ? ((i.graphic = a),
@@ -61042,7 +61127,7 @@
                             a.add(s),
                             s.element.insertBefore(
                               a.element,
-                              r ? r.element : null
+                              r ? r.element : null,
                             ),
                             (r = a.element))
                           : (r = void 0);
@@ -61070,7 +61155,7 @@
                                   a.descriptionFormatter(i)) ||
                                   (s.descriptionFormatter &&
                                     s.descriptionFormatter(i)) ||
-                                  c(i)
+                                  c(i),
                               )),
                               r.setAttribute("role", "img"),
                               r.setAttribute("aria-label", i))
@@ -61103,7 +61188,7 @@
                 (c =
                   e.langFormat(
                     "accessibility.series.summary." + t.type + i,
-                    c
+                    c,
                   ) ||
                   e.langFormat("accessibility.series.summary.default" + i, c)),
                 (r =
@@ -61119,7 +61204,7 @@
                     chart: e,
                     seriesNumber: o,
                   },
-                  void 0
+                  void 0,
                 )
               );
             }
@@ -61160,8 +61245,8 @@
                       (t.options.accessibility || {}).exposeAsGroupOnly
                         ? n.setAttribute("role", "img")
                         : "all" === i
-                        ? n.setAttribute("role", "region")
-                        : n.setAttribute("role", "group"),
+                          ? n.setAttribute("role", "region")
+                          : n.setAttribute("role", "group"),
                       n.setAttribute("tabindex", "-1"),
                       t.chart.styledMode || (n.style.outline = "none"),
                       n.setAttribute(
@@ -61169,13 +61254,13 @@
                         x(
                           (e.series.descriptionFormatter &&
                             e.series.descriptionFormatter(t)) ||
-                            u(t)
-                        )
+                            u(t),
+                        ),
                       ));
                 }
               },
             };
-          }
+          },
         ),
         e(
           t,
@@ -61288,7 +61373,7 @@
                               return t.dirty.allSeries[e];
                             }),
                             this.dirty.newSeries,
-                            e
+                            e,
                           ),
                           (this.dirty = { allSeries: {} });
                       }
@@ -61301,21 +61386,22 @@
                         (r = Math.max(
                           0,
                           r.minAnnounceInterval -
-                            (o - this.lastAnnouncementTime)
+                            (o - this.lastAnnouncementTime),
                         )),
                           (t = (function (t, e) {
-                            var i = (t || [])
-                              .concat(e || [])
-                              .reduce(function (t, e) {
-                                return (t[e.name + e.index] = e), t;
-                              }, {});
+                            var i = (t || []).concat(e || []).reduce(function (
+                              t,
+                              e,
+                            ) {
+                              return (t[e.name + e.index] = e), t;
+                            }, {});
                             return Object.keys(i).map(function (t) {
                               return i[t];
                             });
                           })(
                             this.queuedAnnouncement &&
                               this.queuedAnnouncement.series,
-                            t
+                            t,
                           )),
                           (e = this.buildAnnouncementMessage(t, e, i)) &&
                             (this.queuedAnnouncement &&
@@ -61331,12 +61417,12 @@
                                   n.announcer &&
                                   ((n.lastAnnouncementTime = +new Date()),
                                   n.announcer.announce(
-                                    n.queuedAnnouncement.message
+                                    n.queuedAnnouncement.message,
                                   ),
                                   delete n.queuedAnnouncement,
                                   delete n.queuedAnnouncementTimer);
                               },
-                              r
+                              r,
                             )));
                       }
                     }),
@@ -61355,8 +61441,8 @@
                           (e = i
                             ? "newSeriesAnnounce" + e
                             : n
-                            ? "newPointAnnounce" + e
-                            : "newDataAnnounce"),
+                              ? "newPointAnnounce" + e
+                              : "newDataAnnounce"),
                           (o = l(r)),
                           r.langFormat("accessibility.announceNewData." + e, {
                             chartTitle: o,
@@ -61368,11 +61454,11 @@
                     }),
                     e
                   );
-                })()) || (e = {})
+                })()) || (e = {}),
               ),
               e
             );
-          }
+          },
         ),
         e(
           t,
@@ -61431,11 +61517,11 @@
                         {
                           "aria-label": this.getTargetAttr(
                             t.click,
-                            "aria-label"
+                            "aria-label",
                           ),
                         },
-                        i
-                      )
+                        i,
+                      ),
                     ),
                     this.eventProvider.removeAddedEvents(),
                     this.addProxyEventsToButton(this.buttonElement, t.click),
@@ -61486,7 +61572,7 @@
                             t.stopPropagation(),
                             r || t.preventDefault();
                         },
-                        { passive: !1 }
+                        { passive: !1 },
                       );
                     });
                 }),
@@ -61534,7 +61620,7 @@
                 t
               );
             })();
-          }
+          },
         ),
         e(
           t,
@@ -61571,7 +61657,7 @@
                   var n = this.groups[t];
                   if (!n)
                     throw Error(
-                      "ProxyProvider.addProxyElement: Invalid group key " + t
+                      "ProxyProvider.addProxyElement: Invalid group key " + t,
                     );
                   return (
                     (t = new o(this.chart, e, n.type, i)),
@@ -61611,7 +61697,7 @@
                   var i = this.groups[t];
                   if (!i)
                     throw Error(
-                      "ProxyProvider.updateGroupAttrs: Invalid group key " + t
+                      "ProxyProvider.updateGroupAttrs: Invalid group key " + t,
                     );
                   a(i.groupElement, e);
                 }),
@@ -61649,7 +61735,7 @@
                   var e = this.groups[t];
                   if (!e)
                     throw Error(
-                      "ProxyProvider.clearGroup: Invalid group key " + t
+                      "ProxyProvider.clearGroup: Invalid group key " + t,
                     );
                   u(e.proxyContainerElement);
                 }),
@@ -61664,7 +61750,7 @@
                 }),
                 (t.prototype.updateProxyElementPositions = function () {
                   Object.keys(this.groups).forEach(
-                    this.updateGroupProxyElementPositions.bind(this)
+                    this.updateGroupProxyElementPositions.bind(this),
                   );
                 }),
                 (t.prototype.updateGroupProxyElementPositions = function (t) {
@@ -61740,11 +61826,11 @@
                     var e = t.renderer.box;
                     t.container.insertBefore(
                       this.afterChartProxyPosContainer,
-                      e.nextSibling
+                      e.nextSibling,
                     ),
                       t.container.insertBefore(
                         this.beforeChartProxyPosContainer,
-                        e
+                        e,
                       ),
                       c(this.chart, this.afterChartProxyPosContainer),
                       c(this.chart, this.beforeChartProxyPosContainer);
@@ -61753,7 +61839,7 @@
                 t
               );
             })();
-          }
+          },
         ),
         e(t, "Stock/RangeSelector/RangeSelectorDefaults.js", [], function () {
           return {
@@ -61829,7 +61915,7 @@
                   void 0 === s && (s = r(o, t.count)),
                   (this.newMax = Math.min(
                     o + s,
-                    x(this.dataMax, Number.MAX_VALUE)
+                    x(this.dataMax, Number.MAX_VALUE),
                   ))),
                 y(i)
                   ? !y(t) && t && t._offsetMin && (o += t._offsetMin)
@@ -61980,7 +62066,7 @@
                     m(d.lang, e.lang));
               },
             };
-          }
+          },
         ),
         e(
           t,
@@ -62049,7 +62135,7 @@
                           t.prototype.setDataGrouping.call(
                             o || { chart: this.chart },
                             c,
-                            !1
+                            !1,
                           ),
                           (this.frozenStates = r.preserveDataGrouping)),
                         "month" === l || "year" === l)
@@ -62150,7 +62236,7 @@
                                 !e.frozenStates &&
                                 this.setDataGrouping(!1, !1);
                             });
-                        })
+                        }),
                       );
                   }),
                   (e.prototype.updateButtonStates = function () {
@@ -62188,9 +62274,10 @@
                         r - 36e5 <= 864e5 * { month: 31, year: 366 }[m] * v + b
                           ? (g = !0)
                           : "ytd" === m
-                          ? ((g = h - c + b === r), (C = !x))
-                          : "all" === m &&
-                            ((g = n.max - n.min >= l - a), (T = !x && f && g)),
+                            ? ((g = h - c + b === r), (C = !x))
+                            : "all" === m &&
+                              ((g = n.max - n.min >= l - a),
+                              (T = !x && f && g)),
                         (m = !d && (w || S || T || o)),
                         (v =
                           (x && g) || (g && !f && !C) || (x && t.frozenStates)),
@@ -62249,7 +62336,7 @@
                         (r.value = n.dateFormat(
                           this.inputTypeFormats[r.type] ||
                             i.inputEditDateFormat,
-                          o
+                          o,
                         )),
                         t &&
                           t.attr({ text: n.dateFormat(i.inputDateFormat, o) });
@@ -62291,12 +62378,12 @@
                                 left:
                                   Math.min(
                                     Math.round(
-                                      e.x + r - (t.offsetWidth - e.width) / 2
+                                      e.x + r - (t.offsetWidth - e.width) / 2,
                                     ),
-                                    this.chart.chartWidth - t.offsetWidth
+                                    this.chart.chartWidth - t.offsetWidth,
                                   ) + "px",
                                 top: n - (t.offsetHeight - e.height) / 2 + "px",
-                              }
+                              },
                         );
                     }
                   }),
@@ -62362,7 +62449,7 @@
                             f ? r.max : l,
                             void 0,
                             void 0,
-                            { trigger: "rangeSelectorInput" }
+                            { trigger: "rangeSelectorInput" },
                           ));
                     }
                     var n = this.chart,
@@ -62406,7 +62493,7 @@
                       "input",
                       { name: t, className: "highcharts-range-selector" },
                       void 0,
-                      r
+                      r,
                     );
                     y.setAttribute(
                       "type",
@@ -62421,11 +62508,11 @@
                         return e && i
                           ? "datetime-local"
                           : e
-                          ? "date"
-                          : i
-                          ? "time"
-                          : "text";
-                      })(d.inputDateFormat || "%b %e, %Y")
+                            ? "date"
+                            : i
+                              ? "time"
+                              : "text";
+                      })(d.inputDateFormat || "%b %e, %Y"),
                     ),
                       n.styledMode ||
                         (v.css(m(h, d.labelStyle)),
@@ -62445,8 +62532,8 @@
                               fontFamily: h.fontFamily,
                               top: "-9999em",
                             },
-                            d.inputStyle
-                          )
+                            d.inputStyle,
+                          ),
                         )),
                       (y.onfocus = function () {
                         a.showInput(t);
@@ -62544,13 +62631,14 @@
                             this.setInputExtremes(
                               "min",
                               t.dataMin,
-                              Math.min(t.dataMax, this.getInputValue("max")) - i
+                              Math.min(t.dataMax, this.getInputValue("max")) -
+                                i,
                             ),
                             this.setInputExtremes(
                               "max",
                               Math.max(t.dataMin, this.getInputValue("min")) +
                                 i,
-                              t.dataMax
+                              t.dataMax,
                             )),
                           this.inputGroup))
                       ) {
@@ -62597,7 +62685,7 @@
                         cursor: "pointer",
                         opacity: 1e-4,
                       },
-                      this.div
+                      this.div,
                     ));
                     a(d, "touchstart", function () {
                       d.style.fontSize = "16px";
@@ -62630,14 +62718,14 @@
                         "option",
                         { textContent: this.zoomText.textStr, disabled: !0 },
                         void 0,
-                        d
+                        d,
                       ),
                       this.buttonOptions.forEach(function (i, n) {
                         l(
                           "option",
                           { textContent: i.title || i.text },
                           void 0,
-                          d
+                          d,
                         ),
                           (e[n] = o
                             .button(
@@ -62654,7 +62742,7 @@
                               c,
                               h && h.hover,
                               h && h.select,
-                              h && h.disabled
+                              h && h.disabled,
                             )
                             .attr({ "text-align": "center", width: u })
                             .add(t.buttonGroup)),
@@ -62726,7 +62814,7 @@
                               x: h.x + f - 2,
                             },
                             !0,
-                            n.spacingBox
+                            n.spacingBox,
                           ),
                           (o.placed = n.hasLoaded)),
                         this.handleCollision(e),
@@ -62794,7 +62882,7 @@
                             x: s,
                           },
                           !0,
-                          i.spacingBox
+                          i.spacingBox,
                         );
                   }),
                   (e.prototype.positionButtons = function () {
@@ -62903,12 +62991,12 @@
                           paddingLeft: b(
                             o.buttonTheme.paddingLeft,
                             a.padding,
-                            8
+                            8,
                           ),
                           paddingRight: b(
                             o.buttonTheme.paddingRight,
                             a.padding,
-                            8
+                            8,
                           ),
                         };
                       };
@@ -62928,7 +63016,7 @@
                       ("right" !== i && "center" !== i) ||
                         this.alignButtonGroup(
                           t,
-                          e[this.currentButtonIndex()].getBBox().width
+                          e[this.currentButtonIndex()].getBBox().width,
                         ),
                       this.showDropdown();
                   }),
@@ -62947,7 +63035,7 @@
                             paddingLeft: b(i.buttonTheme.paddingLeft, "unset"),
                             paddingRight: b(
                               i.buttonTheme.paddingRight,
-                              "unset"
+                              "unset",
                             ),
                           }),
                           2 > n.state && n.setState(0);
@@ -63029,7 +63117,7 @@
                               : i instanceof window.HTMLElement && d(i)),
                             i !== e.prototype[n] && (t[n] = null);
                         },
-                        this
+                        this,
                       );
                   }),
                   e
@@ -63067,7 +63155,7 @@
               }),
               e
             );
-          }
+          },
         ),
         e(
           t,
@@ -63175,7 +63263,7 @@
                                 n,
                                 "accessibility.rangeSelector." +
                                   (r ? "max" : "min") +
-                                  "InputLabel"
+                                  "InputLabel",
                               ));
                           }));
                     }),
@@ -63200,7 +63288,7 @@
                       e &&
                         ((t = t.langFormat(
                           "accessibility.rangeSelector.dropdownLabel",
-                          { rangeTitle: t.options.lang.rangeSelectorZoom }
+                          { rangeTitle: t.options.lang.rangeSelectorZoom },
                         )),
                         e.setAttribute("aria-label", t),
                         e.setAttribute("tabindex", -1));
@@ -63224,12 +63312,12 @@
                       return (
                         (e = e === n.left || e === n.up ? -1 : 1),
                         r.highlightRangeSelectorButton(
-                          r.highlightedRangeSelectorItemIx + e
+                          r.highlightedRangeSelectorItemIx + e,
                         )
                           ? i.success
                           : o
-                          ? (t.init(e), i.success)
-                          : i[0 < e ? "next" : "prev"]
+                            ? (t.init(e), i.success)
+                            : i[0 < e ? "next" : "prev"]
                       );
                     }),
                     (e.prototype.onButtonNavKbdClick = function (t) {
@@ -63240,7 +63328,7 @@
                           this.fakeClickEvent(
                             e.rangeSelector.buttons[
                               e.highlightedRangeSelectorItemIx
-                            ].element
+                            ].element,
                           ),
                         t.success
                       );
@@ -63250,7 +63338,7 @@
                         e = l(t.xAxis[0]);
                       (t = t.langFormat(
                         "accessibility.rangeSelector.clickButtonAnnouncement",
-                        { chart: t, axisRangeDescription: e }
+                        { chart: t, axisRangeDescription: e },
                       )) && this.announcer.announce(t);
                     }),
                     (e.prototype.onInputKbdMove = function (t) {
@@ -63325,9 +63413,9 @@
                               n &&
                                 (n.keyboardNavigation.tabindexContainer.focus(),
                                 n.keyboardNavigation.move(
-                                  i.shiftKey ? -1 : 1
+                                  i.shiftKey ? -1 : 1,
                                 )));
-                          }
+                          },
                         )));
                     }),
                     (e.prototype.getRangeSelectorButtonNavigation =
@@ -63412,11 +63500,11 @@
                     }),
                     e
                   );
-                })(e)) || (e = {})
+                })(e)) || (e = {}),
               ),
               e
             );
-          }
+          },
         ),
         e(
           t,
@@ -63464,7 +63552,7 @@
                 function s(t) {
                   this.resetA11yMarkerOptions = n(
                     t.options.marker || {},
-                    this.userOptions.marker || {}
+                    this.userOptions.marker || {},
                   );
                 }
                 function a() {
@@ -63534,7 +63622,7 @@
               })(e || (e = {})),
               e
             );
-          }
+          },
         ),
         e(
           t,
@@ -63895,7 +63983,7 @@
                       var i = this.keyCodes;
                       return this.attemptHighlightAdjacentPoint(
                         t,
-                        e === i.right || e === i.down
+                        e === i.right || e === i.down,
                       );
                     }),
                     (i.prototype.onHandlerInit = function (t) {
@@ -63941,7 +64029,7 @@
                     }),
                     (i.prototype.attemptHighlightAdjacentPoint = function (
                       t,
-                      e
+                      e,
                     ) {
                       var i = this.chart,
                         n =
@@ -63963,11 +64051,11 @@
                     }),
                     i
                   );
-                })()) || (i = {})
+                })()) || (i = {}),
               ),
               i
             );
-          }
+          },
         ),
         e(
           t,
@@ -64025,7 +64113,7 @@
                     this.newDataAnnouncer.init(),
                     (this.keyboardNavigation = new o(
                       this.chart,
-                      this.keyCodes
+                      this.keyCodes,
                     )),
                     this.keyboardNavigation.init(),
                     this.hideTooltipFromATWhenShown(),
@@ -64049,7 +64137,7 @@
                         t.labelBySeries &&
                           t.labelBySeries.attr("aria-hidden", !0);
                       });
-                    }
+                    },
                   );
                 }),
                 (e.prototype.onChartRender = function () {
@@ -64071,7 +64159,7 @@
                 e
               );
             })(t);
-          }
+          },
         ),
         e(
           t,
@@ -64142,7 +64230,7 @@
                       s(t, i.element),
                         e.setMapNavButtonAttrs(
                           i.element,
-                          "accessibility.zoom.mapZoom" + (n ? "Out" : "In")
+                          "accessibility.zoom.mapZoom" + (n ? "Out" : "In"),
                         );
                     });
                 }),
@@ -64163,7 +64251,7 @@
                         "resetZoomProxyButton",
                         t.langFormat("accessibility.zoom.resetZoomButton", {
                           chart: t,
-                        })
+                        }),
                       ),
                     t.drillUpButton &&
                       t.breadcrumbs &&
@@ -64174,16 +64262,16 @@
                         t.langFormat("accessibility.drillUpButton", {
                           chart: t,
                           buttonText: t.breadcrumbs.getButtonText(
-                            t.breadcrumbs.list[t.breadcrumbs.list.length - 1]
+                            t.breadcrumbs.list[t.breadcrumbs.list.length - 1],
                           ),
-                        })
+                        }),
                       );
                 }),
                 (e.prototype.createZoomProxyButton = function (t, e, i) {
                   this[e] = this.proxyProvider.addProxyElement(
                     "zoom",
                     { click: t },
-                    { "aria-label": i, tabindex: -1 }
+                    { "aria-label": i, tabindex: -1 },
                   );
                 }),
                 (e.prototype.getMapZoomNavigation = function () {
@@ -64276,7 +64364,7 @@
                     this.fakeClickEvent(
                       this.chart.mapNavigation.navButtons[
                         this.focusedMapNavButtonIx
-                      ].element
+                      ].element,
                     ),
                     t.response.success
                   );
@@ -64331,14 +64419,14 @@
                       "resetZoomProxyButton",
                       function (t, e) {
                         e.zoomOut();
-                      }
+                      },
                     ),
                     this.simpleButtonNavigation(
                       "drillUpButton",
                       "drillUpProxyButton",
                       function (t, e) {
                         return e.drillUp(), t.response.prev;
-                      }
+                      },
                     ),
                     this.getMapZoomNavigation(),
                   ];
@@ -64346,7 +64434,7 @@
                 e
               );
             })(t);
-          }
+          },
         ),
         e(
           t,
@@ -64365,7 +64453,7 @@
                   ((t = e.createElement("div")).style.backgroundImage =
                     "url(".concat(
                       "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                      ")"
+                      ")",
                     )),
                     e.body.appendChild(t);
                   var r = (t.currentStyle || n.getComputedStyle(t))
@@ -64396,14 +64484,14 @@
                               color: i.color || "windowText",
                               borderColor: i.borderColor || "window",
                             },
-                            !1
+                            !1,
                           );
                       });
                   }),
                   t.redraw();
               },
             };
-          }
+          },
         ),
         e(t, "Accessibility/HighContrastTheme.js", [], function () {
           return {
@@ -64800,7 +64888,7 @@
                     t,
                     (((c = {})[i.join(".") + "." + s] =
                       r.join(".") + "." + o[s].join(".")),
-                    c)
+                    c),
                   ));
               });
             }
@@ -64820,7 +64908,7 @@
                       t,
                       (((o = {})["chart.".concat(r)] =
                         "use accessibility.".concat(r)),
-                      o)
+                      o),
                     ));
                 });
               })(t),
@@ -64872,7 +64960,7 @@
                             (e(
                               r.options,
                               i[o],
-                              "skipKeyboardNavigation" === o ? !a : a
+                              "skipKeyboardNavigation" === o ? !a : a,
                             ),
                             n(
                               32,
@@ -64880,7 +64968,7 @@
                               t,
                               (((s = {})["series.".concat(o)] =
                                 "series." + i[o].join(".")),
-                              s)
+                              s),
                             ));
                       });
                     });
@@ -64923,7 +65011,7 @@
                   t,
                   ["accessibility", "keyboardNavigation"],
                   ["accessibility", "keyboardNavigation", "seriesNavigation"],
-                  { skipNullPoints: ["skipNullPoints"], mode: ["mode"] }
+                  { skipNullPoints: ["skipNullPoints"], mode: ["mode"] },
                 ),
                 i(t, ["lang", "accessibility"], ["lang", "accessibility"], {
                   legendItem: ["legend", "legendItem"],
@@ -64943,7 +65031,7 @@
                   tableSummary: ["table", "tableSummary"],
                 });
             };
-          }
+          },
         ),
         e(
           t,
@@ -64992,7 +65080,7 @@
             v,
             y,
             b,
-            x
+            x,
           ) {
             t = t.defaultOptions;
             var w = e.doc,
@@ -65040,8 +65128,8 @@
                       : ((this.accessibility = e = new t(this)),
                         !e.zombie && e.update())
                     : e
-                    ? (e.destroy && e.destroy(), delete this.accessibility)
-                    : this.renderTo.setAttribute("aria-hidden", !0);
+                      ? (e.destroy && e.destroy(), delete this.accessibility)
+                      : this.renderTo.setAttribute("aria-hidden", !0);
                 }
                 function a() {
                   this.series.chart.accessibility &&
@@ -65069,25 +65157,25 @@
                             this.a11yDirty = !0;
                           });
                         }),
-                        ["afterApplyDrilldown", "drillupall"].forEach(function (
-                          e
-                        ) {
-                          S(t, e, function () {
-                            var t = this.accessibility;
-                            t && !t.zombie && t.update();
-                          });
-                        })),
+                        ["afterApplyDrilldown", "drillupall"].forEach(
+                          function (e) {
+                            S(t, e, function () {
+                              var t = this.accessibility;
+                              t && !t.zombie && t.update();
+                            });
+                          },
+                        )),
                       -1 === d.indexOf(m) && (d.push(m), S(m, "update", a)),
                       -1 === d.indexOf(v) &&
                         (d.push(v),
-                        ["update", "updatedData", "remove"].forEach(function (
-                          t
-                        ) {
-                          S(v, t, function () {
-                            this.chart.accessibility &&
-                              (this.chart.a11yDirty = !0);
-                          });
-                        }));
+                        ["update", "updatedData", "remove"].forEach(
+                          function (t) {
+                            S(v, t, function () {
+                              this.chart.accessibility &&
+                                (this.chart.a11yDirty = !0);
+                            });
+                          },
+                        ));
                   });
               })(
                 (e = (function () {
@@ -65108,7 +65196,7 @@
                             this.initComponents(),
                             (this.keyboardNavigation = new l(
                               t,
-                              this.components
+                              this.components,
                             )))
                           : ((this.zombie = !0),
                             (this.components = {}),
@@ -65189,12 +65277,12 @@
                     }),
                     t
                   );
-                })()) || (e = {})
+                })()) || (e = {}),
               ),
               k(!0, t, y, { accessibility: { highContrastTheme: v }, lang: b }),
               e
             );
-          }
+          },
         ),
         e(
           t,
@@ -65221,9 +65309,9 @@
                 t.Point,
                 t.Series,
                 t.SVGElement,
-                t.RangeSelector
+                t.RangeSelector,
               );
-          }
+          },
         );
     });
   },
@@ -65245,7 +65333,7 @@
             window.dispatchEvent(
               new CustomEvent("HighchartsModuleLoaded", {
                 detail: { path: e, module: t[e] },
-              })
+              }),
             ));
       }
       e(
@@ -65279,7 +65367,7 @@
               hideData: "Hide data table",
             },
           };
-        }
+        },
       ),
         e(t, "Extensions/DownloadURL.js", [t["Core/Globals.js"]], function (t) {
           var e = t.isSafari,
@@ -65364,7 +65452,7 @@
               T(
                 m(t, "text/csv") ||
                   "data:text/csv,\ufeff" + encodeURIComponent(t),
-                this.getFilename() + ".csv"
+                this.getFilename() + ".csv",
               );
             }
             function l() {
@@ -65376,7 +65464,7 @@
                 m(t, "application/vnd.ms-excel") ||
                   "data:application/vnd.ms-excel;base64," +
                     w.btoa(unescape(encodeURIComponent(t))),
-                this.getFilename() + ".xls"
+                this.getFilename() + ".xls",
               );
             }
             function c(t) {
@@ -65385,7 +65473,9 @@
                 n = this.options.exporting.csv,
                 r = j(
                   n.decimalPoint,
-                  "," !== n.itemDelimiter && t ? (1.1).toLocaleString()[1] : "."
+                  "," !== n.itemDelimiter && t
+                    ? (1.1).toLocaleString()[1]
+                    : ".",
                 ),
                 o = j(n.itemDelimiter, "," === r ? ";" : ","),
                 s = n.lineDelimiter;
@@ -65529,7 +65619,7 @@
                         s[l].seriesIndices = b(
                           b([], s[l].seriesIndices, !0),
                           [S.index],
-                          !1
+                          !1,
                         );
                       h < v;
 
@@ -65540,7 +65630,7 @@
                           w.dateTimeValueAxisMap[e]
                             ? n.dateFormat(r.dateFormat, t)
                             : null,
-                          t
+                          t,
                         )),
                         h++;
                   }),
@@ -65629,7 +65719,7 @@
                   attributes: { class: "highcharts-table-caption" },
                   textContent: j(
                     n.exporting.tableCaption,
-                    n.title.text ? n.title.text : "Chart"
+                    n.title.text ? n.title.text : "Chart",
                   ),
                 });
               for (var c = 0, h = t.length; c < h; ++c)
@@ -65659,31 +65749,31 @@
                       h === u
                         ? ++c
                         : c
-                        ? (a.push(
-                            l(
+                          ? (a.push(
+                              l(
+                                "th",
+                                "highcharts-table-topheading",
+                                { scope: "col", colspan: c + 1 },
+                                h,
+                              ),
+                            ),
+                            (c = 0))
+                          : (h === e[s]
+                              ? n.exporting.useRowspanHeaders
+                                ? ((u = 2), delete e[s])
+                                : ((u = 1), (e[s] = ""))
+                              : (u = 1),
+                            (h = l(
                               "th",
                               "highcharts-table-topheading",
-                              { scope: "col", colspan: c + 1 },
-                              h
-                            )
-                          ),
-                          (c = 0))
-                        : (h === e[s]
-                            ? n.exporting.useRowspanHeaders
-                              ? ((u = 2), delete e[s])
-                              : ((u = 1), (e[s] = ""))
-                            : (u = 1),
-                          (h = l(
-                            "th",
-                            "highcharts-table-topheading",
-                            { scope: "col" },
-                            h
-                          )),
-                          1 < u &&
-                            h.attributes &&
-                            ((h.attributes.valign = "top"),
-                            (h.attributes.rowspan = u)),
-                          a.push(h));
+                              { scope: "col" },
+                              h,
+                            )),
+                            1 < u &&
+                              h.attributes &&
+                              ((h.attributes.valign = "top"),
+                              (h.attributes.rowspan = u)),
+                            a.push(h));
                     }
                     r.push({ tagName: "tr", children: a });
                   }
@@ -65694,14 +65784,14 @@
                     r.push({ tagName: "tr", children: a });
                   }
                   return { tagName: "thead", children: r };
-                })(s, a, Math.max(e, a.length))
+                })(s, a, Math.max(e, a.length)),
               );
               var u = [];
               return (
                 t.forEach(function (t) {
                   for (var i = [], n = 0; n < e; n++)
                     i.push(
-                      l(n ? "td" : "th", null, n ? {} : { scope: "row" }, t[n])
+                      l(n ? "td" : "th", null, n ? {} : { scope: "row" }, t[n]),
                     );
                   u.push({ tagName: "tr", children: i });
                 }),
@@ -65729,7 +65819,7 @@
                   (this.dataTableDiv.className = "highcharts-data-table"),
                   this.renderTo.parentNode.insertBefore(
                     this.dataTableDiv,
-                    this.renderTo.nextSibling
+                    this.renderTo.nextSibling,
                   )),
                 this.dataTableDiv)
               ) {
@@ -65761,7 +65851,7 @@
                   (i = i[r.indexOf("viewData")]) &&
                   t.setElementHTML(
                     i,
-                    this.isDataTableVisible ? e.hideData : e.viewData
+                    this.isDataTableVisible ? e.hideData : e.viewData,
                   );
             }
             function g() {
@@ -65780,7 +65870,7 @@
                 }
                 if (!n)
                   return r.createObjectURL(
-                    new w.Blob(["\ufeff" + t], { type: e })
+                    new w.Blob(["\ufeff" + t], { type: e }),
                   );
               } catch (t) {}
             }
@@ -65810,8 +65900,8 @@
                           };
                         })(
                           o.indexOf(i),
-                          (t.ascendingOrderInTable = !t.ascendingOrderInTable)
-                        )
+                          (t.ascendingOrderInTable = !t.ascendingOrderInTable),
+                        ),
                       )
                       .forEach(function (t) {
                         n.appendChild(t);
@@ -65827,7 +65917,7 @@
                       i.classList.add(
                         t.ascendingOrderInTable
                           ? "highcharts-sort-ascending"
-                          : "highcharts-sort-descending"
+                          : "highcharts-sort-descending",
                       );
                   });
                 });
@@ -65912,7 +66002,7 @@
                           "separator",
                           "downloadCSV",
                           "downloadXLS",
-                          "viewData"
+                          "viewData",
                         )),
                     C(e)),
                   E &&
@@ -65934,7 +66024,7 @@
                     (B.push(L), (L.prototype.exportKey = "name"));
               },
             };
-          }
+          },
         ),
         e(
           t,
@@ -65942,7 +66032,7 @@
           [t["Core/Globals.js"], t["Extensions/ExportData/ExportData.js"]],
           function (t, e) {
             e.compose(t.Chart);
-          }
+          },
         );
     });
   },
@@ -66258,7 +66348,7 @@
                 get: function () {
                   return q(this, "a", { value: 7 }).a;
                 },
-              })
+              }),
             ).a
           );
         })
@@ -66358,7 +66448,7 @@
         "toString",
         function () {
           return z(this).tag;
-        }
+        },
       ),
       A(U, "withoutSetter", function (t) {
         return nt(P(t), t);
@@ -66393,7 +66483,7 @@
           useSimple: function () {
             et = !1;
           },
-        }
+        },
       ),
       n(
         { target: "Object", stat: !0, forced: !c, sham: !l },
@@ -66404,11 +66494,11 @@
           defineProperty: rt,
           defineProperties: ot,
           getOwnPropertyDescriptor: at,
-        }
+        },
       ),
       n(
         { target: "Object", stat: !0, forced: !c },
-        { getOwnPropertyNames: lt }
+        { getOwnPropertyNames: lt },
       ),
       N(),
       R(U, "Symbol"),
@@ -66451,7 +66541,7 @@
           var i = r("Symbol")(e);
           return (c[e] = i), (h[i] = e), i;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66469,7 +66559,7 @@
           if (!o(t)) throw TypeError(s(t) + " is not a symbol");
           if (r(c, t)) return c[t];
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66493,7 +66583,7 @@
           var e = s.f;
           return e ? e(a(t)) : [];
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66728,9 +66818,9 @@
             };
           },
           c,
-          !0
+          !0,
         ),
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66750,7 +66840,7 @@
             a = n >= 0 ? n : i + n;
           return a < 0 || a >= i ? void 0 : e[a];
         },
-      }
+      },
     ),
       a("at");
   },
@@ -66806,7 +66896,7 @@
             }
           return (a.length = d), a;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66825,7 +66915,7 @@
         every: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66844,7 +66934,7 @@
         filter: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66863,7 +66953,7 @@
           find: function (t) {
             return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
           },
-        }
+        },
       ),
       o("find");
   },
@@ -66883,7 +66973,7 @@
           findIndex: function (t) {
             return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
           },
-        }
+        },
       ),
       o("findIndex");
   },
@@ -66905,7 +66995,7 @@
             n = l(e, 0);
           return (n.length = r(n, e, e, i, 0, void 0 === t ? 1 : a(t))), n;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66933,12 +67023,12 @@
               0,
               1,
               t,
-              arguments.length > 1 ? arguments[1] : void 0
+              arguments.length > 1 ? arguments[1] : void 0,
             )),
             e
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -66958,7 +67048,7 @@
           Array.from(t);
         }),
       },
-      { from: r }
+      { from: r },
     );
   },
   function (t, e, i) {
@@ -66990,7 +67080,7 @@
         includes: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     ),
       s("includes");
   },
@@ -67010,7 +67100,7 @@
           var e = arguments.length > 1 ? arguments[1] : void 0;
           return l ? a(this, t, e) || 0 : o(this, t, e);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67032,7 +67122,7 @@
         join: function (t) {
           return l(s(this), void 0 === t ? "," : t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67040,7 +67130,7 @@
       r = i(177);
     n(
       { target: "Array", proto: !0, forced: r !== [].lastIndexOf },
-      { lastIndexOf: r }
+      { lastIndexOf: r },
     );
   },
   function (t, e, i) {
@@ -67053,7 +67143,7 @@
         map: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67083,7 +67173,7 @@
             a(i, t, arguments[t++]);
           return (i.length = e), i;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67104,7 +67194,7 @@
           var e = arguments.length;
           return r(this, t, e, e > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67126,10 +67216,10 @@
             this,
             t,
             arguments.length,
-            arguments.length > 1 ? arguments[1] : void 0
+            arguments.length > 1 ? arguments[1] : void 0,
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67145,7 +67235,7 @@
         reverse: function () {
           return o(this) && (this.length = this.length), s(this);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67194,7 +67284,7 @@
             g in d && u(n, r, d[g]);
           return (n.length = r), n;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67207,7 +67297,7 @@
         some: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67294,14 +67384,14 @@
                   return void 0 === i
                     ? -1
                     : void 0 === e
-                    ? 1
-                    : void 0 !== t
-                    ? +t(e, i) || 0
-                    : l(e) > l(i)
-                    ? 1
-                    : -1;
+                      ? 1
+                      : void 0 !== t
+                        ? +t(e, i) || 0
+                        : l(e) > l(i)
+                          ? 1
+                          : -1;
                 };
-              })(t)
+              })(t),
             ),
               i = r.length,
               n = 0;
@@ -67312,7 +67402,7 @@
           for (; n < c; ) delete e[n++];
           return e;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67350,8 +67440,8 @@
             (0 === x
               ? (i = n = 0)
               : 1 === x
-              ? ((i = 0), (n = y - b))
-              : ((i = x - 2), (n = f(p(s(e), 0), y - b))),
+                ? ((i = 0), (n = y - b))
+                : ((i = x - 2), (n = f(p(s(e), 0), y - b))),
             y + i - n > 9007199254740991)
           )
             throw d("Maximum allowed length exceeded");
@@ -67368,7 +67458,7 @@
           for (u = 0; u < i; u++) v[u + b] = arguments[u + 2];
           return (v.length = y - n + i), r;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67416,8 +67506,8 @@
               c + g >= f
                 ? ((h = 0), (c = f))
                 : c + g >= 1
-                ? ((h = (t * u - 1) * o(2, e)), (c += g))
-                : ((h = t * o(2, g - 1) * o(2, e)), (c = 0)));
+                  ? ((h = (t * u - 1) * o(2, e)), (c += g))
+                  : ((h = t * o(2, g - 1) * o(2, e)), (c = 0)));
           e >= 8;
 
         )
@@ -67453,7 +67543,7 @@
       r = i(12);
     n(
       { target: "ArrayBuffer", stat: !0, forced: !r.NATIVE_ARRAY_BUFFER_VIEWS },
-      { isView: r.isView }
+      { isView: r.isView },
     );
   },
   function (t, e, i) {
@@ -67498,7 +67588,7 @@
             m(p, v++, g(s, n++));
           return o;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67523,7 +67613,7 @@
         getYear: function () {
           return s(this) - 1900;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67538,7 +67628,7 @@
         now: function () {
           return a(new s());
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67557,13 +67647,13 @@
           var e = o(t);
           return l(this, 0 <= e && e <= 99 ? e + 1900 : e);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
     i(0)(
       { target: "Date", proto: !0 },
-      { toGMTString: Date.prototype.toUTCString }
+      { toGMTString: Date.prototype.toUTCString },
     );
   },
   function (t, e, i) {
@@ -67571,7 +67661,7 @@
       r = i(282);
     n(
       { target: "Date", proto: !0, forced: Date.prototype.toISOString !== r },
-      { toISOString: r }
+      { toISOString: r },
     );
   },
   function (t, e, i) {
@@ -67653,7 +67743,7 @@
             i = s(e, "number");
           return "number" != typeof i || isFinite(i) ? e.toISOString() : null;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67715,7 +67805,7 @@
                     (i = a(e, 0)) < 256 ? "%" + d(i, 2) : "%u" + h(d(i, 4)));
           return r;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67723,7 +67813,7 @@
       r = i(181);
     n(
       { target: "Function", proto: !0, forced: Function.bind !== r },
-      { bind: r }
+      { bind: r },
     );
   },
   function (t, e, i) {
@@ -67788,7 +67878,7 @@
           return t(this, arguments.length ? arguments[0] : void 0);
         };
       },
-      i(182)
+      i(182),
     );
   },
   function (t, e, i) {
@@ -67810,10 +67900,10 @@
           return (t = +t) < 1
             ? NaN
             : t > 94906265.62425156
-            ? s(t) + l
-            : r(t - 1 + a(t - 1) * a(t + 1));
+              ? s(t) + l
+              : r(t - 1 + a(t - 1) * a(t + 1));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67831,7 +67921,7 @@
               : o(e + s(e * e + 1))
             : e;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67844,7 +67934,7 @@
         atanh: function (t) {
           return 0 == (t = +t) ? t : o((1 + t) / (1 - t)) / 2;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67858,7 +67948,7 @@
         cbrt: function (t) {
           return r((t = +t)) * s(o(t), 1 / 3);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67872,7 +67962,7 @@
         clz32: function (t) {
           return (t >>>= 0) ? 31 - r(o(t + 0.5) * s) : 32;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67888,7 +67978,7 @@
           var e = r(s(t) - 1) + 1;
           return (e + 1 / (e * a * a)) * (a / 2);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67917,8 +68007,8 @@
         return o < c
           ? h * (o / c / a + 1 / s - 1 / s) * c * a
           : (i = (e = (1 + a / s) * o) - (e - o)) > l || i != i
-          ? h * (1 / 0)
-          : h * i;
+            ? h * (1 / 0)
+            : h * i;
       };
   },
   function (t, e, i) {
@@ -67941,7 +68031,7 @@
               : (r += i > 0 ? (n = i / c) * n : i);
           return c === 1 / 0 ? 1 / 0 : c * s(r);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67969,7 +68059,7 @@
                 0))
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -67988,7 +68078,7 @@
         log2: function (t) {
           return r(t) / o;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68015,7 +68105,7 @@
             ? (o(t) - o(-t)) / 2
             : (a(t - 1) - a(-t - 1)) * (l / 2);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68030,7 +68120,7 @@
             i = r(-t);
           return e == 1 / 0 ? 1 : i == 1 / 0 ? -1 : (e - i) / (o(t) + o(-t));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68046,7 +68136,7 @@
         trunc: function (t) {
           return (t > 0 ? o : r)(t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68125,7 +68215,7 @@
           M = n
             ? f(b)
             : "MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,EPSILON,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,isFinite,isInteger,isNaN,isSafeInteger,parseFloat,parseInt,fromString,range".split(
-                ","
+                ",",
               ),
           O = 0;
         M.length > O;
@@ -68159,7 +68249,7 @@
         isNaN: function (t) {
           return t != t;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68172,19 +68262,19 @@
         isSafeInteger: function (t) {
           return r(t) && o(t) <= 9007199254740991;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
     i(0)(
       { target: "Number", stat: !0 },
-      { MAX_SAFE_INTEGER: 9007199254740991 }
+      { MAX_SAFE_INTEGER: 9007199254740991 },
     );
   },
   function (t, e, i) {
     i(0)(
       { target: "Number", stat: !0 },
-      { MIN_SAFE_INTEGER: -9007199254740991 }
+      { MIN_SAFE_INTEGER: -9007199254740991 },
     );
   },
   function (t, e, i) {
@@ -68192,7 +68282,7 @@
       r = i(185);
     n(
       { target: "Number", stat: !0, forced: Number.parseFloat != r },
-      { parseFloat: r }
+      { parseFloat: r },
     );
   },
   function (t, e, i) {
@@ -68200,7 +68290,7 @@
       r = i(186);
     n(
       { target: "Number", stat: !0, forced: Number.parseInt != r },
-      { parseInt: r }
+      { parseInt: r },
     );
   },
   function (t, e, i) {
@@ -68276,7 +68366,7 @@
             n + (r += "e" + l + h)
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68298,8 +68388,8 @@
         return 0 === e
           ? i
           : e % 2 == 1
-          ? m(t, e - 1, i * t)
-          : m(t * t, e / 2, i);
+            ? m(t, e - 1, i * t)
+            : m(t * t, e / 2, i);
       },
       v = function (t, e, i) {
         for (var n = -1, r = i; ++n < 6; )
@@ -68375,7 +68465,7 @@
                   : f(g, 0, r - l) + "." + f(g, r - l))
               : d + g);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68401,7 +68491,7 @@
         toPrecision: function (t) {
           return void 0 === t ? a(s(this)) : a(s(this), t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68409,7 +68499,7 @@
       r = i(187);
     n(
       { target: "Object", stat: !0, arity: 2, forced: Object.assign !== r },
-      { assign: r }
+      { assign: r },
     );
   },
   function (t, e, i) {
@@ -68430,7 +68520,7 @@
           __defineGetter__: function (t, e) {
             l.f(a(this), t, { get: s(e), enumerable: !0, configurable: !0 });
           },
-        }
+        },
       );
   },
   function (t, e, i) {
@@ -68444,7 +68534,7 @@
         forced: Object.defineProperties !== o,
         sham: !r,
       },
-      { defineProperties: o }
+      { defineProperties: o },
     );
   },
   function (t, e, i) {
@@ -68458,7 +68548,7 @@
         forced: Object.defineProperty !== o,
         sham: !r,
       },
-      { defineProperty: o }
+      { defineProperty: o },
     );
   },
   function (t, e, i) {
@@ -68476,7 +68566,7 @@
           __defineSetter__: function (t, e) {
             l.f(a(this), t, { set: s(e), enumerable: !0, configurable: !0 });
           },
-        }
+        },
       );
   },
   function (t, e, i) {
@@ -68488,7 +68578,7 @@
         entries: function (t) {
           return r(t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68511,7 +68601,7 @@
         freeze: function (t) {
           return l && s(t) ? l(a(t)) : t;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68529,12 +68619,12 @@
               function (t, i) {
                 o(e, t, i);
               },
-              { AS_ENTRIES: !0 }
+              { AS_ENTRIES: !0 },
             ),
             e
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68552,7 +68642,7 @@
         getOwnPropertyDescriptor: function (t, e) {
           return s(o(t), e);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68574,7 +68664,7 @@
             void 0 !== (i = r(n, (e = c[u++]))) && l(h, e, i);
           return h;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68589,7 +68679,7 @@
           return !Object.getOwnPropertyNames(1);
         }),
       },
-      { getOwnPropertyNames: o }
+      { getOwnPropertyNames: o },
     );
   },
   function (t, e, i) {
@@ -68611,7 +68701,7 @@
         getPrototypeOf: function (t) {
           return s(o(t));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68625,7 +68715,7 @@
       r = i(107);
     n(
       { target: "Object", stat: !0, forced: Object.isExtensible !== r },
-      { isExtensible: r }
+      { isExtensible: r },
     );
   },
   function (t, e, i) {
@@ -68648,7 +68738,7 @@
         isFrozen: function (t) {
           return !o(t) || !(!a || "ArrayBuffer" != s(t)) || (!!l && l(t));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68671,7 +68761,7 @@
         isSealed: function (t) {
           return !o(t) || !(!a || "ArrayBuffer" != s(t)) || (!!l && l(t));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68690,7 +68780,7 @@
         keys: function (t) {
           return o(r(t));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68714,7 +68804,7 @@
               if ((e = c(i, n))) return e.get;
             } while ((i = l(i)));
           },
-        }
+        },
       );
   },
   function (t, e, i) {
@@ -68738,7 +68828,7 @@
               if ((e = c(i, n))) return e.set;
             } while ((i = l(i)));
           },
-        }
+        },
       );
   },
   function (t, e, i) {
@@ -68761,7 +68851,7 @@
         preventExtensions: function (t) {
           return l && r(t) ? l(o(t)) : t;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68784,7 +68874,7 @@
         seal: function (t) {
           return l && r(t) ? l(o(t)) : t;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68815,7 +68905,7 @@
         values: function (t) {
           return r(t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -68896,8 +68986,8 @@
               i === t.promise
                 ? c(j("Promise-chain cycle"))
                 : (n = U(i))
-                ? h(n, i, l, c)
-                : l(i))
+                  ? h(n, i, l, c)
+                  : l(i))
             : c(o);
         } catch (t) {
           u && !r && u.exit(), c(t);
@@ -69040,7 +69130,7 @@
                 h(o, i, t, e);
               }).then(t, e);
             },
-            { unsafe: !0 }
+            { unsafe: !0 },
           );
       try {
         delete _.constructor;
@@ -69122,7 +69212,7 @@
             });
           return h.error && c(h.value), i.promise;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69142,7 +69232,7 @@
           catch: function (t) {
             return this.then(void 0, t);
           },
-        }
+        },
       ),
       !r && l(s))
     ) {
@@ -69173,7 +69263,7 @@
             });
           return c.error && n(c.value), i.promise;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69188,7 +69278,7 @@
           var e = o.f(this);
           return r(e.reject, void 0, t), e.promise;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69207,7 +69297,7 @@
         resolve: function (t) {
           return l(h && this === c ? s : this, t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69247,14 +69337,14 @@
                         ((l = !0),
                         (s[o] = { status: "rejected", reason: t }),
                         --c || n(s));
-                    }
+                    },
                   );
               }),
                 --c || n(s);
             });
           return h.error && c(h.value), i.promise;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69295,14 +69385,14 @@
                         ((c = !0),
                         (s[o] = t),
                         --l || u(new i(s, "No one promise resolved")));
-                    }
+                    },
                   );
               }),
                 --l || u(new i(s, "No one promise resolved"));
             });
           return d.error && u(d.value), n.promise;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69347,10 +69437,10 @@
                       throw i;
                     });
                   }
-                : t
+                : t,
             );
           },
-        }
+        },
       ),
       !r && l(o))
     ) {
@@ -69375,7 +69465,7 @@
         apply: function (t, e, i) {
           return r(o(t), e, s(i));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69427,7 +69517,7 @@
             v = o(t, u, e);
           return c(v) ? v : u;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69456,7 +69546,7 @@
             return !1;
           }
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69470,7 +69560,7 @@
           var i = o(r(t), e);
           return !(i && !i.configurable) && delete t[e];
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69491,16 +69581,16 @@
           return s(e) === u
             ? e[i]
             : (n = l.f(e, i))
-            ? a(n)
-              ? n.value
-              : void 0 === n.get
-              ? void 0
-              : r(n.get, u)
-            : o((h = c(e)))
-            ? t(h, i, u)
-            : void 0;
+              ? a(n)
+                ? n.value
+                : void 0 === n.get
+                  ? void 0
+                  : r(n.get, u)
+              : o((h = c(e)))
+                ? t(h, i, u)
+                : void 0;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69514,7 +69604,7 @@
         getOwnPropertyDescriptor: function (t, e) {
           return s.f(o(t), e);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69527,7 +69617,7 @@
         getPrototypeOf: function (t) {
           return o(r(t));
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69537,7 +69627,7 @@
         has: function (t, e) {
           return e in t;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69550,7 +69640,7 @@
         isExtensible: function (t) {
           return r(t), o(t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69572,7 +69662,7 @@
             return !1;
           }
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69619,7 +69709,7 @@
           }
           return !0;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69639,7 +69729,7 @@
               return !1;
             }
           },
-        }
+        },
       );
   },
   function (t, e, i) {
@@ -69786,7 +69876,7 @@
                           : (r += e + O(t, ++n));
                       return r;
                     })(t),
-                    i
+                    i,
                   ))),
                 r && (c.sticky = !0),
                 v.length && (c.groups = v)),
@@ -69895,11 +69985,11 @@
           var i = a(e, this, t);
           if (null !== i && !h(i))
             throw new d(
-              "RegExp exec method returned something other than an Object or null"
+              "RegExp exec method returned something other than an Object or null",
             );
           return !!i;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69923,7 +70013,7 @@
           var t = o(this);
           return "/" + s(t.source) + "/" + s(l(t));
         },
-        { unsafe: !0 }
+        { unsafe: !0 },
       );
   },
   function (t, e, i) {
@@ -69938,7 +70028,7 @@
           return t(this, arguments.length ? arguments[0] : void 0);
         };
       },
-      i(182)
+      i(182),
     );
   },
   function (t, e, i) {
@@ -69966,7 +70056,7 @@
             r = n >= 0 ? n : i + n;
           return r < 0 || r >= i ? void 0 : c(e, r);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -69979,7 +70069,7 @@
         codePointAt: function (t) {
           return r(this, t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70019,7 +70109,7 @@
             o = l(t);
           return p ? p(e, o, r) : f(e, r - o.length, r) === o;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70045,7 +70135,7 @@
           }
           return h(i, "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70064,10 +70154,10 @@
           return !!~c(
             a(s(this)),
             a(o(t)),
-            arguments.length > 1 ? arguments[1] : void 0
+            arguments.length > 1 ? arguments[1] : void 0,
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70163,11 +70253,11 @@
           return null === n
             ? { value: void 0, done: (t.done = !0) }
             : t.global
-            ? ("" === h(n[0]) &&
-                (e.lastIndex = x(i, c(e.lastIndex), t.unicode)),
-              { value: n, done: !1 })
-            : ((t.done = !0), { value: n, done: !1 });
-        }
+              ? ("" === h(n[0]) &&
+                  (e.lastIndex = x(i, c(e.lastIndex), t.unicode)),
+                { value: n, done: !1 })
+              : ((t.done = !0), { value: n, done: !1 });
+        },
       ),
       I = function (t) {
         var e,
@@ -70205,7 +70295,7 @@
           } else if (P) return L(s, t);
           return (i = h(s)), (r = new RegExp(t, "g")), C ? o(I, r, i) : r[T](i);
         },
-      }
+      },
     ),
       C || T in A || m(A, T, I);
   },
@@ -70219,7 +70309,7 @@
         padEnd: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70232,7 +70322,7 @@
         padStart: function (t) {
           return r(this, t, arguments.length > 1 ? arguments[1] : void 0);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70257,7 +70347,7 @@
             u < n && c(r, a(arguments[u]));
           }
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70352,7 +70442,7 @@
         );
       }) ||
         !k ||
-        E
+        E,
     );
   },
   function (t, e, i) {
@@ -70418,7 +70508,7 @@
               (M = S(s, f, M + k));
           return O < s.length && (L += x(s, O)), L;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70528,10 +70618,10 @@
                   );
                 }
               : "0".split(void 0, 0).length
-              ? function (t, i) {
-                  return void 0 === t && 0 === i ? [] : r(e, this, t, i);
-                }
-              : e),
+                ? function (t, i) {
+                    return void 0 === t && 0 === i ? [] : r(e, this, t, i);
+                  }
+                : e),
           [
             function (e, i) {
               var n = c(this),
@@ -70584,7 +70674,7 @@
         var i = "ab".split(t);
         return 2 !== i.length || "a" !== i[0] || "b" !== i[1];
       }),
-      x
+      x,
     );
   },
   function (t, e, i) {
@@ -70622,7 +70712,7 @@
             n = l(t);
           return p ? p(e, n, i) : f(e, i, i + n.length) === n;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70658,7 +70748,7 @@
               : l(r, d, n)
           );
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70671,7 +70761,7 @@
         trim: function () {
           return r(this);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70685,7 +70775,7 @@
         name: "trimEnd",
         forced: "".trimEnd !== r,
       },
-      { trimEnd: r }
+      { trimEnd: r },
     );
   },
   function (t, e, i) {
@@ -70698,7 +70788,7 @@
         name: "trimEnd",
         forced: "".trimRight !== r,
       },
-      { trimRight: r }
+      { trimRight: r },
     );
   },
   function (t, e, i) {
@@ -70712,7 +70802,7 @@
         name: "trimStart",
         forced: "".trimStart !== r,
       },
-      { trimStart: r }
+      { trimStart: r },
     );
   },
   function (t, e, i) {
@@ -70725,7 +70815,7 @@
         name: "trimStart",
         forced: "".trimLeft !== r,
       },
-      { trimLeft: r }
+      { trimLeft: r },
     );
   },
   function (t, e, i) {
@@ -70738,7 +70828,7 @@
         anchor: function (t) {
           return r(this, "a", "name", t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70751,7 +70841,7 @@
         big: function () {
           return r(this, "big", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70764,7 +70854,7 @@
         blink: function () {
           return r(this, "blink", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70777,7 +70867,7 @@
         bold: function () {
           return r(this, "b", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70790,7 +70880,7 @@
         fixed: function () {
           return r(this, "tt", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70803,7 +70893,7 @@
         fontcolor: function (t) {
           return r(this, "font", "color", t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70816,7 +70906,7 @@
         fontsize: function (t) {
           return r(this, "font", "size", t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70829,7 +70919,7 @@
         italics: function () {
           return r(this, "i", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70842,7 +70932,7 @@
         link: function (t) {
           return r(this, "a", "href", t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70855,7 +70945,7 @@
         small: function () {
           return r(this, "small", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70868,7 +70958,7 @@
         strike: function () {
           return r(this, "strike", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70881,7 +70971,7 @@
         sub: function () {
           return r(this, "sub", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70894,7 +70984,7 @@
         sup: function () {
           return r(this, "sup", "", "");
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -70957,7 +71047,7 @@
           return t(this, e, i, n);
         };
       },
-      !0
+      !0,
     );
   },
   function (t, e, i) {
@@ -71020,7 +71110,7 @@
         s(this),
         t,
         e > 1 ? arguments[1] : void 0,
-        e > 2 ? arguments[2] : void 0
+        e > 2 ? arguments[2] : void 0,
       );
     });
   },
@@ -71126,14 +71216,14 @@
       function () {
         return d(p(this));
       },
-      m
+      m,
     ),
       f(
         "keys",
         function () {
           return u(p(this));
         },
-        m
+        m,
       ),
       f("values", y, m || !v, { name: "values" }),
       f(l, y, m || !v, { name: "values" });
@@ -71173,7 +71263,7 @@
         arguments.length > 1 ? arguments[1] : void 0,
         function (t, e) {
           return new (o(t))(e);
-        }
+        },
       );
     });
   },
@@ -71189,7 +71279,7 @@
           i[t] = arguments[t++];
         return i;
       },
-      r
+      r,
     );
   },
   function (t, e, i) {
@@ -71263,7 +71353,7 @@
         if (o + e > n) throw h("Wrong length");
         for (; c < o; ) this[e + c] = i[c++];
       },
-      !m || v
+      !m || v,
     );
   },
   function (t, e, i) {
@@ -71290,7 +71380,7 @@
       },
       o(function () {
         new Int8Array(1).slice();
-      })
+      }),
     );
   },
   function (t, e, i) {
@@ -71364,20 +71454,20 @@
                     return void 0 !== t
                       ? +t(e, i) || 0
                       : i != i
-                      ? -1
-                      : e != e
-                      ? 1
-                      : 0 === e && 0 === i
-                      ? 1 / e > 0 && 1 / i < 0
-                        ? 1
-                        : -1
-                      : e > i;
+                        ? -1
+                        : e != e
+                          ? 1
+                          : 0 === e && 0 === i
+                            ? 1 / e > 0 && 1 / i < 0
+                              ? 1
+                              : -1
+                            : e > i;
                   };
-                })(t)
+                })(t),
               )
         );
       },
-      !y || v
+      !y || v,
     );
   },
   function (t, e, i) {
@@ -71394,7 +71484,7 @@
       return new (s(i))(
         i.buffer,
         i.byteOffset + l * i.BYTES_PER_ELEMENT,
-        r((void 0 === e ? n : o(e, n)) - l)
+        r((void 0 === e ? n : o(e, n)) - l),
       );
     });
   },
@@ -71424,7 +71514,7 @@
       }) ||
         !s(function () {
           l.prototype.toLocaleString.call([1, 2]);
-        })
+        }),
     );
   },
   function (t, e, i) {
@@ -71476,7 +71566,7 @@
           }
           return r;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -71561,7 +71651,7 @@
           return t(this, arguments.length ? arguments[0] : void 0);
         };
       },
-      i(203)
+      i(203),
     );
   },
   function (t, e, i) {
@@ -71611,7 +71701,7 @@
           )
             throw new (r("DOMException"))(
               "The string is not correctly encoded",
-              "InvalidCharacterError"
+              "InvalidCharacterError",
             );
           for (; (e = m(n, s++)); )
             l(h, e) &&
@@ -71619,7 +71709,7 @@
               b++ % 4 && (o += g(255 & (i >> ((-2 * b) & 6)))));
           return o;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -71657,13 +71747,13 @@
             if ((i = d(n, (s += 3 / 4))) > 255)
               throw new (r("DOMException"))(
                 "The string contains characters outside of the Latin1 range",
-                "InvalidCharacterError"
+                "InvalidCharacterError",
               );
             o += u(m, 63 & ((e = (e << 8) | i) >> (8 - (s % 1) * 8)));
           }
           return o;
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -71742,7 +71832,7 @@
           try {
             new (o("MessageChannel") ||
               r("worker_threads").MessageChannel)().port1.postMessage(
-              new WeakMap()
+              new WeakMap(),
             );
           } catch (t) {
             if ("DATA_CLONE_ERR" == t.name && 25 == t.code)
@@ -71813,7 +71903,7 @@
         "code",
         D(function () {
           return O(f(this).name);
-        })
+        }),
       ),
     v))
       if (d(v, z)) {
@@ -71888,7 +71978,7 @@
       o = i(112).clear;
     n(
       { global: !0, bind: !0, enumerable: !0, forced: r.clearImmediate !== o },
-      { clearImmediate: o }
+      { clearImmediate: o },
     );
   },
   function (t, e, i) {
@@ -71897,7 +71987,7 @@
       o = i(112).set;
     n(
       { global: !0, bind: !0, enumerable: !0, forced: r.setImmediate !== o },
-      { setImmediate: o }
+      { setImmediate: o },
     );
   },
   function (t, e, i) {
@@ -71916,7 +72006,7 @@
           var e = l && c.domain;
           o(e ? e.bind(t) : t);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -72011,7 +72101,7 @@
             " of " +
             t +
             " cannot be properly polyfilled in this engine",
-          "DataCloneError"
+          "DataCloneError",
         );
       },
       at = function (t, e) {
@@ -72104,7 +72194,7 @@
               (r = new i(
                 at(t.buffer, e),
                 t.byteOffset,
-                "DataView" === _ ? t.byteLength : t.length
+                "DataView" === _ ? t.byteLength : t.length,
               ));
             break;
           case "DOMQuad":
@@ -72113,7 +72203,7 @@
                 at(t.p1, e),
                 at(t.p2, e),
                 at(t.p3, e),
-                at(t.p4, e)
+                at(t.p4, e),
               );
             } catch (e) {
               rt ? (r = rt(t)) : st(_);
@@ -72321,7 +72411,7 @@
             if (void 0 === l)
               throw new F(
                 "This object cannot be transferred: " + r,
-                "DataCloneError"
+                "DataCloneError",
               );
             Y(e, n, l);
           }
@@ -72338,7 +72428,7 @@
             n = i ? i.transfer : void 0;
           return void 0 !== n && ((e = new z()), ct(n, e)), at(t, e);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -72350,7 +72440,7 @@
       o = i(208).setInterval;
     n(
       { global: !0, bind: !0, forced: r.setInterval !== o },
-      { setInterval: o }
+      { setInterval: o },
     );
   },
   function (t, e, i) {
@@ -72595,12 +72685,14 @@
                   "file" == c.scheme
                     ? (h = kt)
                     : c.isSpecial() && i && i.scheme == c.scheme
-                    ? (h = gt)
-                    : c.isSpecial()
-                    ? (h = bt)
-                    : "/" == r[u + 1]
-                    ? ((h = mt), u++)
-                    : ((c.cannotBeABaseURL = !0), B(c.path, ""), (h = Lt));
+                      ? (h = gt)
+                      : c.isSpecial()
+                        ? (h = bt)
+                        : "/" == r[u + 1]
+                          ? ((h = mt), u++)
+                          : ((c.cannotBeABaseURL = !0),
+                            B(c.path, ""),
+                            (h = Lt));
               }
               break;
             case ft:
@@ -72851,12 +72943,14 @@
                     ? (c.shortenPath(),
                       "/" == o || ("\\" == o && c.isSpecial()) || B(c.path, ""))
                     : ut(d)
-                    ? "/" == o || ("\\" == o && c.isSpecial()) || B(c.path, "")
-                    : ("file" == c.scheme &&
-                        !c.path.length &&
-                        ct(d) &&
-                        (c.host && (c.host = ""), (d = I(d, 0) + ":")),
-                      B(c.path, d)),
+                      ? "/" == o ||
+                        ("\\" == o && c.isSpecial()) ||
+                        B(c.path, "")
+                      : ("file" == c.scheme &&
+                          !c.path.length &&
+                          ct(d) &&
+                          (c.host && (c.host = ""), (d = I(d, 0) + ":")),
+                        B(c.path, d)),
                   (d = ""),
                   "file" == c.scheme && (o == n || "?" == o || "#" == o))
                 )
@@ -72870,8 +72964,8 @@
               "?" == o
                 ? ((c.query = ""), (h = Pt))
                 : "#" == o
-                ? ((c.fragment = ""), (h = Dt))
-                : o != n && (c.path[0] += at(o, nt));
+                  ? ((c.fragment = ""), (h = Dt))
+                  : o != n && (c.path[0] += at(o, nt));
               break;
             case Pt:
               e || "#" != o
@@ -73203,7 +73297,7 @@
         function () {
           return k(this).serialize();
         },
-        { enumerable: !0 }
+        { enumerable: !0 },
       ),
       h(
         Nt,
@@ -73211,7 +73305,7 @@
         function () {
           return k(this).serialize();
         },
-        { enumerable: !0 }
+        { enumerable: !0 },
       ),
       M)
     ) {
@@ -73312,7 +73406,7 @@
         toJSON: function () {
           return r(URL.prototype.toString, this);
         },
-      }
+      },
     );
   },
   function (t, e, i) {
@@ -73434,7 +73528,7 @@
                         },
                         function (t) {
                           n("throw", t, s, a);
-                        }
+                        },
                       )
                     : e.resolve(u).then(
                         function (t) {
@@ -73442,7 +73536,7 @@
                         },
                         function (t) {
                           return n("throw", t, s, a);
-                        }
+                        },
                       );
                 }
                 a(l.arg);
@@ -73466,7 +73560,7 @@
               return h;
             (e.method = "throw"),
               (e.arg = new TypeError(
-                "The iterator does not provide a 'throw' method"
+                "The iterator does not provide a 'throw' method",
               ));
           }
           return h;
@@ -73674,10 +73768,10 @@
               "break" === t.type || "continue" === t.type
                 ? (this.next = t.arg)
                 : "return" === t.type
-                ? ((this.rval = this.arg = t.arg),
-                  (this.method = "return"),
-                  (this.next = "end"))
-                : "normal" === t.type && e && (this.next = e),
+                  ? ((this.rval = this.arg = t.arg),
+                    (this.method = "return"),
+                    (this.next = "end"))
+                  : "normal" === t.type && e && (this.next = e),
               h
             );
           },
@@ -73889,7 +73983,7 @@
             /[!'\(\)~]|%20|%00/g,
             function (t) {
               return e[t];
-            }
+            },
           );
         }
         function d(t) {
@@ -73922,7 +74016,7 @@
                 var n = t[i];
                 if (!m(n) || 2 !== n.length)
                   throw new TypeError(
-                    "Failed to construct 'URLSearchParams': Sequence initializer must only contain pair elements"
+                    "Failed to construct 'URLSearchParams': Sequence initializer must only contain pair elements",
                   );
                 g(e, n[0], n[1]);
               }
@@ -73944,8 +74038,8 @@
             "string" == typeof i
               ? i
               : null != i && "function" == typeof i.toString
-              ? i.toString()
-              : JSON.stringify(i);
+                ? i.toString()
+                : JSON.stringify(i);
           v(t, e) ? t[e].push(n) : (t[e] = [n]);
         }
         function m(t) {
@@ -73955,7 +74049,7 @@
           return Object.prototype.hasOwnProperty.call(t, e);
         }
       })(void 0 !== t ? t : "undefined" != typeof window ? window : this);
-    }.call(this, i(153)));
+    }).call(this, i(153));
   },
   function (t, e) {
     !(function () {
@@ -73979,7 +74073,7 @@
             document.head.appendChild(e);
         }
       })(
-        'date-input-polyfill {\n  background: #fff;\n  color: #000;\n  text-shadow: none;\n  border: 0;\n  padding: 0;\n  height: auto;\n  width: auto;\n  line-height: normal;\n  border-radius: 0;\n  font-family: sans-serif;\n  font-size: 14px;\n  position: absolute !important;\n  text-align: center;\n  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);\n  cursor: default;\n  z-index: 1; }\n  date-input-polyfill[data-open="false"] {\n    display: none; }\n  date-input-polyfill[data-open="true"] {\n    display: block; }\n  date-input-polyfill select, date-input-polyfill table, date-input-polyfill th, date-input-polyfill td {\n    background: #fff;\n    color: #000;\n    text-shadow: none;\n    border: 0;\n    padding: 0;\n    height: auto;\n    width: auto;\n    line-height: normal;\n    border-radius: 0;\n    font-family: sans-serif;\n    font-size: 14px;\n    box-shadow: none; }\n  date-input-polyfill select, date-input-polyfill button {\n    border: 0;\n    border-bottom: 1px solid #E0E0E0;\n    height: 24px;\n    vertical-align: top; }\n  date-input-polyfill select {\n    width: 50%; }\n    date-input-polyfill select:first-of-type {\n      border-right: 1px solid #E0E0E0;\n      width: 30%; }\n  date-input-polyfill button {\n    padding: 0;\n    width: 20%;\n    background: #E0E0E0; }\n  date-input-polyfill table {\n    border-collapse: collapse; }\n  date-input-polyfill th, date-input-polyfill td {\n    width: 32px;\n    padding: 4px;\n    text-align: center; }\n  date-input-polyfill td[data-day] {\n    cursor: pointer; }\n    date-input-polyfill td[data-day]:hover {\n      background: #E0E0E0; }\n  date-input-polyfill [data-selected] {\n    font-weight: bold;\n    background: #D8EAF6; }\n\ninput[data-has-picker]::-ms-clear {\n  display: none; }\n'
+        'date-input-polyfill {\n  background: #fff;\n  color: #000;\n  text-shadow: none;\n  border: 0;\n  padding: 0;\n  height: auto;\n  width: auto;\n  line-height: normal;\n  border-radius: 0;\n  font-family: sans-serif;\n  font-size: 14px;\n  position: absolute !important;\n  text-align: center;\n  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);\n  cursor: default;\n  z-index: 1; }\n  date-input-polyfill[data-open="false"] {\n    display: none; }\n  date-input-polyfill[data-open="true"] {\n    display: block; }\n  date-input-polyfill select, date-input-polyfill table, date-input-polyfill th, date-input-polyfill td {\n    background: #fff;\n    color: #000;\n    text-shadow: none;\n    border: 0;\n    padding: 0;\n    height: auto;\n    width: auto;\n    line-height: normal;\n    border-radius: 0;\n    font-family: sans-serif;\n    font-size: 14px;\n    box-shadow: none; }\n  date-input-polyfill select, date-input-polyfill button {\n    border: 0;\n    border-bottom: 1px solid #E0E0E0;\n    height: 24px;\n    vertical-align: top; }\n  date-input-polyfill select {\n    width: 50%; }\n    date-input-polyfill select:first-of-type {\n      border-right: 1px solid #E0E0E0;\n      width: 30%; }\n  date-input-polyfill button {\n    padding: 0;\n    width: 20%;\n    background: #E0E0E0; }\n  date-input-polyfill table {\n    border-collapse: collapse; }\n  date-input-polyfill th, date-input-polyfill td {\n    width: 32px;\n    padding: 4px;\n    text-align: center; }\n  date-input-polyfill td[data-day] {\n    cursor: pointer; }\n    date-input-polyfill td[data-day]:hover {\n      background: #E0E0E0; }\n  date-input-polyfill [data-selected] {\n    font-weight: bold;\n    background: #D8EAF6; }\n\ninput[data-has-picker]::-ms-clear {\n  display: none; }\n',
       );
       var t = function (t, e) {
           if (!(t instanceof e))
@@ -74009,7 +74103,7 @@
               i.createRangeSelect(
                 this.year,
                 this.date.getFullYear() - 80,
-                this.date.getFullYear() + 20
+                this.date.getFullYear() + 20,
               ),
               (this.year.className = "yearSelect"),
               this.year.addEventListener("change", function () {
@@ -74064,7 +74158,7 @@
                   value: function () {
                     this.container.setAttribute(
                       "data-open",
-                      (this.isOpen = !1)
+                      (this.isOpen = !1),
                     );
                   },
                 },
@@ -74073,7 +74167,7 @@
                   value: function () {
                     this.container.setAttribute(
                       "data-open",
-                      (this.isOpen = !0)
+                      (this.isOpen = !0),
                     );
                   },
                 },
@@ -74149,7 +74243,7 @@
                       t.push(
                         '<th scope="col">' +
                           this.input.localeText.days[e] +
-                          "</th>"
+                          "</th>",
                       );
                     (this.daysHead.innerHTML = t.join("")),
                       i.createRangeSelect(
@@ -74157,7 +74251,7 @@
                         0,
                         11,
                         this.input.localeText.months,
-                        this.date.getMonth()
+                        this.date.getMonth(),
                       ),
                       (this.today.textContent = this.input.localeText.today);
                   },
@@ -74173,7 +74267,7 @@
                         r = new Date(
                           this.date.getFullYear(),
                           e + 1,
-                          0
+                          0,
                         ).getDate(),
                         o =
                           i.absoluteDate(this.input.element.valueAsDate) || !1,
@@ -74188,7 +74282,7 @@
                           a.push(
                             "\n          " +
                               (0 === l ? "" : "</tr>") +
-                              "\n          <tr>\n        "
+                              "\n          <tr>\n        ",
                           ),
                         l + 1 <= n)
                       )
@@ -74201,7 +74295,7 @@
                             (h ? "data-selected" : "") +
                             ">\n          " +
                             c +
-                            "\n        </td>"
+                            "\n        </td>",
                         );
                       }
                     this.days.innerHTML = a.join("");
@@ -74217,12 +74311,12 @@
                       (t = document.createEvent("KeyboardEvent")).initEvent(
                         "input",
                         !0,
-                        !1
+                        !1,
                       ),
                         (e = document.createEvent("KeyboardEvent")).initEvent(
                           "change",
                           !0,
-                          !1
+                          !1,
                         );
                     }
                     this.input.element.dispatchEvent(t),
@@ -74254,7 +74348,7 @@
                     );
                   },
                 },
-              ]
+              ],
             ),
             i
           );
@@ -74672,7 +74766,7 @@
                       n.localeText.format
                         .replace("Y", e[0])
                         .replace("M", e[1])
-                        .replace("D", e[2])
+                        .replace("D", e[2]),
                     );
                   },
                 },
@@ -74768,7 +74862,7 @@
                       t.setAttribute("value", e),
                       document.currentScript &&
                         !document.currentScript.hasAttribute(
-                          "data-nodep-date-input-polyfill-debug"
+                          "data-nodep-date-input-polyfill-debug",
                         ) &&
                         t.value !== e
                     );
@@ -74778,14 +74872,14 @@
                   key: "addPickerToDateInputs",
                   value: function () {
                     var t = document.querySelectorAll(
-                        'input[type="date"]:not([data-has-picker]):not([readonly])'
+                        'input[type="date"]:not([data-has-picker]):not([readonly])',
                       ),
                       e = t.length;
                     if (!e) return !1;
                     for (var i = 0; i < e; ++i) new r(t[i]);
                   },
                 },
-              ]
+              ],
             ),
             r
           );
@@ -74875,7 +74969,7 @@
         /[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(t) || "" === t)
       )
         throw new TypeError(
-          'Invalid character in header field name: "' + t + '"'
+          'Invalid character in header field name: "' + t + '"',
         );
       return t.toLowerCase();
     }
@@ -74904,13 +74998,13 @@
               this.append(e, t);
             }, this)
           : Array.isArray(t)
-          ? t.forEach(function (t) {
-              this.append(t[0], t[1]);
-            }, this)
-          : t &&
-            Object.getOwnPropertyNames(t).forEach(function (e) {
-              this.append(e, t[e]);
-            }, this);
+            ? t.forEach(function (t) {
+                this.append(t[0], t[1]);
+              }, this)
+            : t &&
+              Object.getOwnPropertyNames(t).forEach(function (e) {
+                this.append(e, t[e]);
+              }, this);
     }
     function g(t) {
       if (t.bodyUsed) return Promise.reject(new TypeError("Already read"));
@@ -74947,29 +75041,30 @@
               ? "string" == typeof t
                 ? (this._bodyText = t)
                 : s && Blob.prototype.isPrototypeOf(t)
-                ? (this._bodyBlob = t)
-                : a && FormData.prototype.isPrototypeOf(t)
-                ? (this._bodyFormData = t)
-                : r && URLSearchParams.prototype.isPrototypeOf(t)
-                ? (this._bodyText = t.toString())
-                : l && s && (e = t) && DataView.prototype.isPrototypeOf(e)
-                ? ((this._bodyArrayBuffer = y(t.buffer)),
-                  (this._bodyInit = new Blob([this._bodyArrayBuffer])))
-                : l && (ArrayBuffer.prototype.isPrototypeOf(t) || h(t))
-                ? (this._bodyArrayBuffer = y(t))
-                : (this._bodyText = t = Object.prototype.toString.call(t))
+                  ? (this._bodyBlob = t)
+                  : a && FormData.prototype.isPrototypeOf(t)
+                    ? (this._bodyFormData = t)
+                    : r && URLSearchParams.prototype.isPrototypeOf(t)
+                      ? (this._bodyText = t.toString())
+                      : l && s && (e = t) && DataView.prototype.isPrototypeOf(e)
+                        ? ((this._bodyArrayBuffer = y(t.buffer)),
+                          (this._bodyInit = new Blob([this._bodyArrayBuffer])))
+                        : l && (ArrayBuffer.prototype.isPrototypeOf(t) || h(t))
+                          ? (this._bodyArrayBuffer = y(t))
+                          : (this._bodyText = t =
+                              Object.prototype.toString.call(t))
               : (this._bodyText = ""),
             this.headers.get("content-type") ||
               ("string" == typeof t
                 ? this.headers.set("content-type", "text/plain;charset=UTF-8")
                 : this._bodyBlob && this._bodyBlob.type
-                ? this.headers.set("content-type", this._bodyBlob.type)
-                : r &&
-                  URLSearchParams.prototype.isPrototypeOf(t) &&
-                  this.headers.set(
-                    "content-type",
-                    "application/x-www-form-urlencoded;charset=UTF-8"
-                  ));
+                  ? this.headers.set("content-type", this._bodyBlob.type)
+                  : r &&
+                    URLSearchParams.prototype.isPrototypeOf(t) &&
+                    this.headers.set(
+                      "content-type",
+                      "application/x-www-form-urlencoded;charset=UTF-8",
+                    ));
         }),
         s &&
           ((this.blob = function () {
@@ -74992,8 +75087,8 @@
                       this._bodyArrayBuffer.buffer.slice(
                         this._bodyArrayBuffer.byteOffset,
                         this._bodyArrayBuffer.byteOffset +
-                          this._bodyArrayBuffer.byteLength
-                      )
+                          this._bodyArrayBuffer.byteLength,
+                      ),
                     )
                   : Promise.resolve(this._bodyArrayBuffer))
               );
@@ -75024,7 +75119,7 @@
                 )
                   i[n] = String.fromCharCode(e[n]);
                 return i.join("");
-              })(this._bodyArrayBuffer)
+              })(this._bodyArrayBuffer),
             );
           if (this._bodyFormData)
             throw new Error("could not read FormData body as text");
@@ -75093,7 +75188,7 @@
     function w(t, e) {
       if (!(this instanceof w))
         throw new TypeError(
-          'Please use the "new" operator, this DOM object constructor cannot be called as a function.'
+          'Please use the "new" operator, this DOM object constructor cannot be called as a function.',
         );
       var i,
         n,
@@ -75158,7 +75253,7 @@
     function C(t, e) {
       if (!(this instanceof C))
         throw new TypeError(
-          'Please use the "new" operator, this DOM object constructor cannot be called as a function.'
+          'Please use the "new" operator, this DOM object constructor cannot be called as a function.',
         );
       e || (e = {}),
         (this.type = "default"),
@@ -75267,7 +75362,7 @@
                 return t;
               }
             })(o.url),
-            !0
+            !0,
           ),
           "include" === o.credentials
             ? (a.withCredentials = !0)
@@ -75388,7 +75483,7 @@
                   }));
             }
           },
-          !1
+          !1,
         ));
     });
   },
@@ -75440,7 +75535,7 @@
                   r,
                   function (e) {
                     return t[e];
-                  }.bind(null, r)
+                  }.bind(null, r),
                 );
             return n;
           }),
@@ -75617,7 +75712,7 @@
               });
               var b = Object.getOwnPropertyDescriptor(
                   HTMLElement.prototype,
-                  "style"
+                  "style",
                 ),
                 w = b.get;
               (b.get = function () {
@@ -76116,17 +76211,17 @@
                         l(t, e, i[e]);
                       })
                     : Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(
-                        t,
-                        Object.getOwnPropertyDescriptors(i)
-                      )
-                    : s(Object(i)).forEach(function (e) {
-                        Object.defineProperty(
+                      ? Object.defineProperties(
                           t,
-                          e,
-                          Object.getOwnPropertyDescriptor(i, e)
-                        );
-                      });
+                          Object.getOwnPropertyDescriptors(i),
+                        )
+                      : s(Object(i)).forEach(function (e) {
+                          Object.defineProperty(
+                            t,
+                            e,
+                            Object.getOwnPropertyDescriptor(i, e),
+                          );
+                        });
                 }
                 return t;
               })({}, window);
@@ -76134,7 +76229,7 @@
                 return (0, e.callback)(t);
               });
             }),
-            void 0 === n ? o(e, i, !1) : o(e, n, !1 !== i))
+            void 0 === n ? o(e, i, !1) : o(e, n, !1 !== i)),
           );
       }
       var e, i, n;
@@ -76278,7 +76373,7 @@
         })(t) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -76355,7 +76450,7 @@
               value: function () {
                 (this.focusableElems = [].concat(
                   p(this.scope.querySelectorAll('[tabindex="1"]')),
-                  p(this.scope.querySelectorAll(y))
+                  p(this.scope.querySelectorAll(y)),
                 )),
                   (this.firstFocusableEl = this.focusableElems[0]),
                   (this.lastFocusableEl =
@@ -76378,11 +76473,11 @@
                 this.scope.addEventListener(
                   "keydown",
                   this.onFocusTrapKeyDown,
-                  !0
+                  !0,
                 ),
                   document.addEventListener(
                     "focusin",
-                    this.moveFocusBackToTrap
+                    this.moveFocusBackToTrap,
                   );
               },
             },
@@ -76392,11 +76487,11 @@
                 this.scope.removeEventListener(
                   "keydown",
                   this.onFocusTrapKeyDown,
-                  !0
+                  !0,
                 ),
                   document.removeEventListener(
                     "focusin",
-                    this.moveFocusBackToTrap
+                    this.moveFocusBackToTrap,
                   );
               },
             },
@@ -76467,7 +76562,7 @@
         })(t) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -76582,12 +76677,12 @@
                           window
                             .getComputedStyle(document.body)
                             .getPropertyValue("padding-right"),
-                          10
+                          10,
                         );
                         (R = document.body.style.paddingRight),
                           (document.body.style.paddingRight = "".concat(
                             n + i,
-                            "px"
+                            "px",
                           ));
                       }
                     }
@@ -76621,13 +76716,13 @@
                   (document.addEventListener(
                     "touchmove",
                     U,
-                    D ? { passive: !1 } : void 0
+                    D ? { passive: !1 } : void 0,
                   ),
                   (B = !0)));
           }
         } else
           console.error(
-            "disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices."
+            "disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.",
           );
       },
       V = function () {
@@ -76640,7 +76735,7 @@
             (document.removeEventListener(
               "touchmove",
               U,
-              D ? { passive: !1 } : void 0
+              D ? { passive: !1 } : void 0,
             ),
             (B = !1)),
           (F = -1)),
@@ -76660,12 +76755,12 @@
                 (document.removeEventListener(
                   "touchmove",
                   U,
-                  D ? { passive: !1 } : void 0
+                  D ? { passive: !1 } : void 0,
                 ),
                 (B = !1))),
             G ? Y() : W())
           : console.error(
-              "enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices."
+              "enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.",
             );
       };
     function K(t, e) {
@@ -76732,12 +76827,12 @@
             }),
             (this.modalButtonComponent = e),
             (this.modalButton = this.modalButtonComponent.querySelector(
-              ".buttonModal .cmp-button"
+              ".buttonModal .cmp-button",
             )),
             (this.modalWrapper =
               this.modalButtonComponent.querySelector(".modal__wrapper")),
             (this.modalContent = this.modalButtonComponent.querySelector(
-              ".modal__wrapper-content"
+              ".modal__wrapper-content",
             )),
             (this.modalTitle = this.modalWrapper.querySelector(".cmp-title")),
             (this.closeButton =
@@ -76818,7 +76913,7 @@
                   this.modalContent,
                   function () {
                     t.closeModal();
-                  }
+                  },
                 );
               },
             },
@@ -76833,7 +76928,7 @@
               value: function () {
                 document.removeEventListener(
                   "keydown",
-                  this.closeModalOnEscape
+                  this.closeModalOnEscape,
                 );
               },
             },
@@ -76905,7 +77000,7 @@
         })(t) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -76957,15 +77052,15 @@
             null == i.state.isNavigationHidden && t <= i.headerHeight
               ? i.setNavigationPanelTopPosition()
               : t <= 0 && null != i.state.isNavigationHidden
-              ? i.onScrollTop()
-              : Math.abs(t - i.lastScroll) > 20 &&
-                (t > i.lastScroll && !i.state.isNavigationHidden
-                  ? i.onScrollDown()
-                  : t < i.lastScroll &&
-                    i.state.isNavigationHidden &&
-                    i.onScrollUp(),
-                (i.lastScroll = t));
-          })
+                ? i.onScrollTop()
+                : Math.abs(t - i.lastScroll) > 20 &&
+                  (t > i.lastScroll && !i.state.isNavigationHidden
+                    ? i.onScrollDown()
+                    : t < i.lastScroll &&
+                      i.state.isNavigationHidden &&
+                      i.onScrollUp(),
+                  (i.lastScroll = t));
+          }),
         ),
         jt(this, "onScrollTop", function () {
           (i.state.isNavigationHidden = null),
@@ -77012,11 +77107,11 @@
                 : i.isMobile ||
                   (document.addEventListener(
                     "keydown",
-                    i.onDesktopNavigationPanelKeydown
+                    i.onDesktopNavigationPanelKeydown,
                   ),
                   document.addEventListener(
                     "click",
-                    i.onDesktopNavigationclickOutside
+                    i.onDesktopNavigationclickOutside,
                   ),
                   X(i.navigationtabs)),
               e.classList.add(Pt),
@@ -77053,7 +77148,7 @@
                   ? (i.state.linksgroupSubmenuHeight = [a.offsetHeight])
                   : (i.state.linksgroupSubmenuHeight[1] = a.offsetHeight),
                 i.setLinksgroupMinHeight(
-                  Math.max.apply(Math, _t(i.state.linksgroupSubmenuHeight))
+                  Math.max.apply(Math, _t(i.state.linksgroupSubmenuHeight)),
                 ),
                 i.setCurrentSecondaryNavigationLevel(o + 1),
                 i.state.secondaryNavigationActiveItems.push(n);
@@ -77082,7 +77177,7 @@
             i.searchFormCloseButton && i.searchFormCloseButton.click(),
             document.addEventListener(
               "keydown",
-              i.onGroupNavigationPanelKeydown
+              i.onGroupNavigationPanelKeydown,
             ),
             document.addEventListener("click", i.onGroupNavigationclickOutside),
             X(i.groupNavigationContainer)),
@@ -77091,7 +77186,7 @@
             i.header.classList.add(It),
             i.groupNavigationTrigger.setAttribute(
               "aria-expanded",
-              i.state.isGroupNavigationActive
+              i.state.isGroupNavigationActive,
             ),
             i.groupNavigationContainer.classList.add(Pt);
         }),
@@ -77099,18 +77194,18 @@
           (i.state.isGroupNavigationActive = !1),
             i.groupNavigationTrigger.setAttribute(
               "aria-expanded",
-              i.state.isGroupNavigationActive
+              i.state.isGroupNavigationActive,
             ),
             i.header.classList.remove(kt),
             i.groupNavigationContainer.classList.remove(Pt),
             i.isMobile ||
               (document.removeEventListener(
                 "keydown",
-                i.onGroupNavigationPanelKeydown
+                i.onGroupNavigationPanelKeydown,
               ),
               document.removeEventListener(
                 "click",
-                i.onGroupNavigationclickOutside
+                i.onGroupNavigationclickOutside,
               ),
               q(i.groupNavigationContainer)),
             i.header.classList.contains(Pt) ||
@@ -77149,7 +77244,7 @@
           (this.mobileNavigationTrigger = this.header.querySelector(tt)),
           (this.mobileNavigationPanel = this.header.querySelector(et)),
           (this.mobileNavigationPanelLinks = this.header.querySelectorAll(
-            "".concat(et, " a, ").concat(et, " button")
+            "".concat(et, " a, ").concat(et, " button"),
           )),
           (this.primaryLevelNavigationItems = this.header.querySelectorAll(it)),
           (this.primaryLevelNavigationItemsLinks =
@@ -77205,13 +77300,13 @@
                   void 0 === t ||
                   t.addEventListener(
                     "click",
-                    this.toggleLanguageNavigation.bind(this)
+                    this.toggleLanguageNavigation.bind(this),
                   ),
                 null === (e = this.groupNavigationTrigger) ||
                   void 0 === e ||
                   e.addEventListener(
                     "click",
-                    this.onGroupNavigationTriggerClick
+                    this.onGroupNavigationTriggerClick,
                   ),
                 null === (i = this.primaryLevelNavigationItemsLinks) ||
                   void 0 === i ||
@@ -77223,7 +77318,7 @@
                   n.forEach(function (t) {
                     t.addEventListener(
                       "click",
-                      s.onSecondaryNavigationItemClick
+                      s.onSecondaryNavigationItemClick,
                     );
                   }),
                 null === (r = this.searchFormTriggerButton) ||
@@ -77234,7 +77329,7 @@
                   o.addEventListener("click", this.closeSearchForm.bind(this)),
                 this.header.addEventListener(
                   "transitionend",
-                  this.onHeaderTransitionEnd
+                  this.onHeaderTransitionEnd,
                 ),
                 c.subscribe(this.onWindowResize),
                 window.addEventListener("scroll", this.onScroll);
@@ -77271,13 +77366,13 @@
                 void 0 === t ||
                 t.addEventListener(
                   "click",
-                  this.onMobileNavigationTriggerClick
+                  this.onMobileNavigationTriggerClick,
                 ),
                 null === (e = this.mobileIntroBackButton) ||
                   void 0 === e ||
                   e.addEventListener(
                     "click",
-                    this.onMobileIntroBackButtonclick
+                    this.onMobileIntroBackButtonclick,
                   );
             },
           },
@@ -77289,13 +77384,13 @@
                 void 0 === t ||
                 t.removeEventListener(
                   "click",
-                  this.onMobileNavigationTriggerClick
+                  this.onMobileNavigationTriggerClick,
                 ),
                 null === (e = this.mobileIntroBackButton) ||
                   void 0 === e ||
                   e.removeEventListener(
                     "click",
-                    this.onMobileIntroBackButtonclick
+                    this.onMobileIntroBackButtonclick,
                   );
             },
           },
@@ -77356,7 +77451,7 @@
                 this.header.classList.toggle(It),
                 this.mobileNavigationTrigger.setAttribute(
                   "aria-expanded",
-                  this.state.isNavigationPanelVisible
+                  this.state.isNavigationPanelVisible,
                 ),
                 null === (t = this.mobileNavigationPanel) ||
                   void 0 === t ||
@@ -77366,20 +77461,20 @@
                     X(this.mobileNavigationPanel),
                     document.addEventListener(
                       "keydown",
-                      this.onMobileNavigationPanelKeydown
+                      this.onMobileNavigationPanelKeydown,
                     ),
                     document.addEventListener(
                       "click",
-                      this.onMobileNavigationclickOutside
+                      this.onMobileNavigationclickOutside,
                     ),
                     this.enableMobileNavigationPanelFocusableElements())
                   : (document.removeEventListener(
                       "keydown",
-                      this.onMobileNavigationPanelKeydown
+                      this.onMobileNavigationPanelKeydown,
                     ),
                     document.removeEventListener(
                       "click",
-                      this.onMobileNavigationclickOutside
+                      this.onMobileNavigationclickOutside,
                     ),
                     this.disableMobileNavigationPanelFocusableElements(),
                     this.resetNavigationState(),
@@ -77391,11 +77486,11 @@
             value: function () {
               document.removeEventListener(
                 "keydown",
-                this.onDesktopNavigationPanelKeydown
+                this.onDesktopNavigationPanelKeydown,
               ),
                 document.removeEventListener(
                   "click",
-                  this.onDesktopNavigationclickOutside
+                  this.onDesktopNavigationclickOutside,
                 ),
                 q(this.navigationtabs),
                 this.header.classList.remove(It);
@@ -77584,7 +77679,7 @@
                 n.initBigPlayButton(),
                 n.initWatermarks();
             },
-            !1
+            !1,
           ),
           null !== (e = window) &&
             void 0 !== e &&
@@ -77718,7 +77813,7 @@
             key: "getNativeVideos",
             value: function () {
               var t = document.querySelectorAll(
-                  ".cmp-videoplayer__video-container.native"
+                  ".cmp-videoplayer__video-container.native",
                 ),
                 e = [];
               return (
@@ -77745,7 +77840,7 @@
                     function () {
                       this.currentTime = i;
                     },
-                    !1
+                    !1,
                   );
               });
             },
@@ -77760,8 +77855,8 @@
                 n.classList.contains(e)
                   ? (n.classList.remove(e), n.classList.add(t))
                   : r
-                  ? (n.classList.remove(t), n.classList.add(e))
-                  : n.classList.add(e);
+                    ? (n.classList.remove(t), n.classList.add(e))
+                    : n.classList.add(e);
               }
               function n(t, e) {
                 t.paused ? t.play() : t.played && t.pause();
@@ -77835,7 +77930,7 @@
             window.addEventListener("load", this.loadActiveTab.bind(this)),
             window.addEventListener(
               "resize",
-              this.checkTablistWidth.bind(this)
+              this.checkTablistWidth.bind(this),
             ),
             this.elements.tabItems &&
               this.elements.tabItems.forEach(function (t) {
@@ -77931,7 +78026,7 @@
                       (n.scrollWidth > i
                         ? e.classList.add(t.CONFIG.HAS_HORIZONTAL_SCROLL_CLASS)
                         : e.classList.remove(
-                            t.CONFIG.HAS_HORIZONTAL_SCROLL_CLASS
+                            t.CONFIG.HAS_HORIZONTAL_SCROLL_CLASS,
                           ));
                   });
                 }
@@ -77953,7 +78048,7 @@
                     return JSON.parse(t);
                   } catch (t) {
                     console.error(
-                      "Couldn't decode tabs routing object from local storage."
+                      "Couldn't decode tabs routing object from local storage.",
                     );
                   }
                 return {};
@@ -77965,7 +78060,7 @@
                 var t = window.location.pathname;
                 return (t = (t = t.replace("/editor.html", "")).substring(
                   0,
-                  t.indexOf(".")
+                  t.indexOf("."),
                 ));
               },
             },
@@ -77978,7 +78073,7 @@
                   (e[i] = t),
                   localStorage.setItem(
                     this.CONFIG.STORAGE_ITEM_NAME,
-                    JSON.stringify(e)
+                    JSON.stringify(e),
                   );
               },
             },
@@ -78003,7 +78098,7 @@
     function Wt(t, e) {
       if ("function" != typeof e && null !== e)
         throw new TypeError(
-          "Class extends value " + String(e) + " is not a constructor or null"
+          "Class extends value " + String(e) + " is not a constructor or null",
         );
       function i() {
         this.constructor = t;
@@ -78089,8 +78184,8 @@
                       2 & o[0]
                         ? n.return
                         : o[0]
-                        ? n.throw || ((r = n.return) && r.call(n), 0)
-                        : n.next) &&
+                          ? n.throw || ((r = n.return) && r.call(n), 0)
+                          : n.next) &&
                     !(r = r.call(n, o[1])).done)
                 )
                   return r;
@@ -78159,7 +78254,7 @@
           },
         };
       throw new TypeError(
-        e ? "Object is not iterable." : "Symbol.iterator is not defined."
+        e ? "Object is not iterable." : "Symbol.iterator is not defined.",
       );
     }
     function Kt(t, e) {
@@ -78381,7 +78476,7 @@
               }
               (this._finalizers =
                 null !== (i = this._finalizers) && void 0 !== i ? i : []).push(
-                e
+                e,
               );
             }
         }),
@@ -78473,7 +78568,7 @@
                   (function (t) {
                     return pe("N", t, void 0);
                   })(t),
-                  this
+                  this,
                 )
               : this._next(t);
           }),
@@ -78565,15 +78660,15 @@
                 complete: null != n ? n : void 0,
               })
             : s && le.useDeprecatedNextContext
-            ? (((o = Object.create(e)).unsubscribe = function () {
-                return s.unsubscribe();
-              }),
-              (r = {
-                next: e.next && ve(e.next, o),
-                error: e.error && ve(e.error, o),
-                complete: e.complete && ve(e.complete, o),
-              }))
-            : (r = e);
+              ? (((o = Object.create(e)).unsubscribe = function () {
+                  return s.unsubscribe();
+                }),
+                (r = {
+                  next: e.next && ve(e.next, o),
+                  error: e.error && ve(e.error, o),
+                  complete: e.complete && ve(e.complete, o),
+                }))
+              : (r = e);
           return (s.destination = new ye(r)), s;
         }
         return Wt(e, t), e;
@@ -78610,12 +78705,12 @@
       return 0 === t.length
         ? Te
         : 1 === t.length
-        ? t[0]
-        : function (e) {
-            return t.reduce(function (t, e) {
-              return e(t);
-            }, e);
-          };
+          ? t[0]
+          : function (e) {
+              return t.reduce(function (t, e) {
+                return e(t);
+              }, e);
+            };
     }
     var Ee = (function () {
       function t(t) {
@@ -78653,7 +78748,7 @@
                 e = t.operator,
                 i = t.source;
               o.add(
-                e ? e.call(o, i) : i ? r._subscribe(o) : r._trySubscribe(o)
+                e ? e.call(o, i) : i ? r._subscribe(o) : r._trySubscribe(o),
               );
             }),
             o
@@ -78710,7 +78805,7 @@
               },
               function () {
                 return t(n);
-              }
+              },
             );
           });
         }),
@@ -78744,7 +78839,7 @@
               var e = o[Ce]();
               if (ee(e.subscribe)) return e.subscribe(t);
               throw new TypeError(
-                "Provided object does not correctly implement Symbol.observable"
+                "Provided object does not correctly implement Symbol.observable",
               );
             })
           );
@@ -78766,7 +78861,7 @@
                 },
                 function (e) {
                   return t.error(e);
-                }
+                },
               ).then(null, he);
             })
           );
@@ -78845,7 +78940,7 @@
                   }
                 });
               });
-            })(t)
+            })(t),
           );
       }
       var e, i, n, r, o;
@@ -78855,7 +78950,7 @@
             (null !== t && "object" == typeof t
               ? "an invalid object"
               : "'" + t + "'") +
-            " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable."
+            " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.",
         );
       })(t);
     }
@@ -78987,7 +79082,7 @@
         i.subscribe(
           De(n, function (i) {
             n.next(t.call(e, i, r++));
-          })
+          }),
         );
       });
     }
@@ -79057,15 +79152,15 @@
                             } catch (t) {
                               e.error(t);
                             }
-                        }
-                      )
+                        },
+                      ),
                     );
                   };
                 return (
                   t.subscribe(
                     De(e, p, function () {
                       (u = !0), d();
-                    })
+                    }),
                   ),
                   function () {
                     null == a || a();
@@ -79098,15 +79193,15 @@
                 };
               })
             : (function (t) {
-                return ee(t.addListener) && ee(t.removeListener);
-              })(t)
-            ? Be.map(He(t, e))
-            : (function (t) {
-                return ee(t.on) && ee(t.off);
-              })(t)
-            ? Ge.map(He(t, e))
-            : [],
-          2
+                  return ee(t.addListener) && ee(t.removeListener);
+                })(t)
+              ? Be.map(He(t, e))
+              : (function (t) {
+                    return ee(t.on) && ee(t.off);
+                  })(t)
+                ? Ge.map(He(t, e))
+                : [],
+          2,
         ),
         o = r[0],
         s = r[1];
@@ -79252,7 +79347,7 @@
                     timeout: 0,
                     responseType: "json",
                   },
-                  e
+                  e,
                 ),
                 s = o.queryParams,
                 a = o.body,
@@ -79289,7 +79384,7 @@
                           null === document || void 0 === document
                             ? void 0
                             : document.cookie.match(
-                                new RegExp("(^|;\\s*)(" + g + ")=([^;]*)")
+                                new RegExp("(^|;\\s*)(" + g + ")=([^;]*)"),
                               )) || void 0 === i
                         ? void 0
                         : i.pop()) && void 0 !== n
@@ -79425,7 +79520,11 @@
                       return void t.error(e);
                     }
                     t.next(o), t.complete();
-                  } else null === (n = null == w ? void 0 : w.error) || void 0 === n || n.call(w, e), O(r);
+                  } else
+                    null === (n = null == w ? void 0 : w.error) ||
+                      void 0 === n ||
+                      n.call(w, e),
+                      O(r);
                 });
               var L = x.user,
                 P = x.method,
@@ -79615,7 +79714,7 @@
             De(n, function (i) {
               var s = e(i);
               (!o && t(r, s)) || ((o = !1), (r = s), n.next(i));
-            })
+            }),
           );
         })
       );
@@ -79672,7 +79771,7 @@
         })(t, e) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -79782,7 +79881,7 @@
                   : this.params.push("facet=true"),
                 t.query &&
                   this.params.push(
-                    "facet.query=" + encodeURIComponent(t.query)
+                    "facet.query=" + encodeURIComponent(t.query),
                   ),
                 t.field &&
                   ((t.field = Array.from(t.field)),
@@ -79791,7 +79890,7 @@
                   })),
                 t.prefix &&
                   this.params.push(
-                    "facet.prefix=" + encodeURIComponent(t.prefix)
+                    "facet.prefix=" + encodeURIComponent(t.prefix),
                   ),
                 t.sort &&
                   this.params.push("facet.sort=" + encodeURIComponent(t.sort)),
@@ -79856,35 +79955,35 @@
               header: document.querySelector("header"),
               searchboxConfig: this.searchBoxComponent.firstChild,
               searchboxForm: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_FORM
+                this.CONFIG.SEARCH_FORM,
               ),
               searchboxFormTextInput: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_FORM_INPUT
+                this.CONFIG.SEARCH_FORM_INPUT,
               ),
               searchboxResultsShortcuts: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_RESULTS_SHORTCUTS
+                this.CONFIG.SEARCH_RESULTS_SHORTCUTS,
               ),
               searchboxResultsList: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_RESULTS_LIST
+                this.CONFIG.SEARCH_RESULTS_LIST,
               ),
               searchboxResultsFooter: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_RESULTS_FOOTER
+                this.CONFIG.SEARCH_RESULTS_FOOTER,
               ),
               searchboxResultsCount: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_RESULTS_COUNT
+                this.CONFIG.SEARCH_RESULTS_COUNT,
               ),
               searchboxResultsPageLink: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_RESULTS_PAGE_LINK
+                this.CONFIG.SEARCH_RESULTS_PAGE_LINK,
               ),
               searchboxNoResults: this.searchBoxComponent.querySelector(
-                this.CONFIG.SEARCH_NORESULTS
+                this.CONFIG.SEARCH_NORESULTS,
               ),
             }),
             (this.searchBoxSolrConfig = JSON.parse(
               null === (i = this.elements.searchboxConfig.dataset) ||
                 void 0 === i
                 ? void 0
-                : i.config
+                : i.config,
             )),
             (this.originSearchResultsPath =
               null === (n = this.elements.searchboxResultsPageLink) ||
@@ -79906,10 +80005,10 @@
               value: function () {
                 this.elements.searchboxForm.addEventListener(
                   "submit",
-                  this.handleSearchboxFormSubmission.bind(this)
+                  this.handleSearchboxFormSubmission.bind(this),
                 ),
                   this.handleSearchboxInputTyping(
-                    this.elements.searchboxFormTextInput
+                    this.elements.searchboxFormTextInput,
                   );
               },
             },
@@ -79919,7 +80018,7 @@
                 return (
                   t.preventDefault(),
                   this.updateSearchQuery(
-                    this.elements.searchboxFormTextInput.value
+                    this.elements.searchboxFormTextInput.value,
                   ),
                   this.updateSearchResultsPath(),
                   (window.location.href = this.searchResultsPath),
@@ -79997,8 +80096,8 @@
                         void 0,
                         function () {
                           n = i = null;
-                        }
-                      )
+                        },
+                      ),
                     );
                   })),
                   ((a = function (t) {
@@ -80047,8 +80146,8 @@
                                 null === (e = h.finalize) ||
                                   void 0 === e ||
                                   e.call(h);
-                            }
-                          )
+                            },
+                          ),
                         );
                       })
                     : Te),
@@ -80060,7 +80159,7 @@
                     t.subscribe(
                       De(e, function (t) {
                         return o.call(s, t, i++) && e.next(t);
-                      })
+                      }),
                     );
                   })),
                   gi(),
@@ -80089,22 +80188,22 @@
                               },
                               function () {
                                 (i = null), a();
-                              }
-                            ))
+                              },
+                            )),
                           );
                         },
                         function () {
                           (s = !0), a();
-                        }
-                      )
+                        },
+                      ),
                     );
-                  }))
+                  })),
                 )
                   .pipe(
                     ((e = "key"),
                     gi(function (t, n) {
                       return i ? i(t[e], n[e]) : t[e] === n[e];
-                    }))
+                    })),
                   )
                   .subscribe(
                     function (t) {
@@ -80112,7 +80211,7 @@
                     },
                     function (t) {
                       return console.log("Subscription error: ".concat(t));
-                    }
+                    },
                   );
               },
             },
@@ -80130,9 +80229,9 @@
                           null === (e = this.searchBoxSolrConfig) ||
                             void 0 === e
                             ? void 0
-                            : e.searchUrl
+                            : e.searchUrl,
                         )
-                        .concat(this.query)
+                        .concat(this.query),
                     )
                     .pipe(
                       _e(function (t) {
@@ -80154,18 +80253,18 @@
                                     (o = null),
                                     r.subscribe(n))
                                   : (s = !0);
-                            })
+                            }),
                           )),
                             s && (o.unsubscribe(), (o = null), r.subscribe(n));
                         });
                       })(function (t, e) {
                         return (
                           console.log(
-                            "Error: ".concat(t, ". Caught ").concat(e)
+                            "Error: ".concat(t, ". Caught ").concat(e),
                           ),
                           We()
                         );
-                      })
+                      }),
                     )
                 );
               },
@@ -80187,8 +80286,8 @@
                     "".concat(
                       null === (e = this.searchBoxSolrConfig) || void 0 === e
                         ? void 0
-                        : e.qfParameter
-                    )
+                        : e.qfParameter,
+                    ),
                   )
                   .set("fl=*,score")
                   .build();
@@ -80228,8 +80327,8 @@
                                   void 0 === r
                                   ? void 0
                                   : r.tags[o],
-                                s
-                              )
+                                s,
+                              ),
                             );
                           return '<li class="cmp-searchbox__results__shortcuts-list__item"><a href="'
                             .concat(l, '">')
@@ -80269,7 +80368,7 @@
               value: function () {
                 this.elements.searchboxResultsPageLink.setAttribute(
                   "href",
-                  this.searchResultsPath
+                  this.searchResultsPath,
                 );
               },
             },
@@ -80294,22 +80393,22 @@
               value: function (t) {
                 (null == t ? void 0 : t.length) > 0
                   ? (this.elements.searchboxResultsShortcuts.classList.remove(
-                      this.CONFIG.HIDDEN_CLASS
+                      this.CONFIG.HIDDEN_CLASS,
                     ),
                     this.elements.searchboxNoResults.classList.remove(
-                      this.CONFIG.VISIBLE_CLASS
+                      this.CONFIG.VISIBLE_CLASS,
                     ),
                     this.elements.searchboxResultsFooter.classList.add(
-                      this.CONFIG.VISIBLE_CLASS
+                      this.CONFIG.VISIBLE_CLASS,
                     ))
                   : (this.elements.searchboxResultsShortcuts.classList.add(
-                      this.CONFIG.HIDDEN_CLASS
+                      this.CONFIG.HIDDEN_CLASS,
                     ),
                     this.elements.searchboxNoResults.classList.add(
-                      this.CONFIG.VISIBLE_CLASS
+                      this.CONFIG.VISIBLE_CLASS,
                     ),
                     this.elements.searchboxResultsFooter.classList.remove(
-                      this.CONFIG.VISIBLE_CLASS
+                      this.CONFIG.VISIBLE_CLASS,
                     ));
               },
             },
@@ -80319,13 +80418,13 @@
                 (this.elements.searchboxResultsList.innerHTML =
                   this.originSearchResultsSuggestions),
                   this.elements.searchboxResultsShortcuts.classList.remove(
-                    this.CONFIG.HIDDEN_CLASS
+                    this.CONFIG.HIDDEN_CLASS,
                   ),
                   this.elements.searchboxNoResults.classList.remove(
-                    this.CONFIG.VISIBLE_CLASS
+                    this.CONFIG.VISIBLE_CLASS,
                   ),
                   this.elements.searchboxResultsFooter.classList.remove(
-                    this.CONFIG.VISIBLE_CLASS
+                    this.CONFIG.VISIBLE_CLASS,
                   );
               },
             },
@@ -80436,7 +80535,7 @@
                   (h = o),
                   (l /= i / 2) < 1
                     ? (h / 2) * l * l + c
-                    : (-h / 2) * (--l * (l - 2) - 1) + c)
+                    : (-h / 2) * (--l * (l - 2) - 1) + c),
                 )),
                   u < i ? requestAnimationFrame(t) : (n.scrollTop = e);
               })()));
@@ -80484,7 +80583,7 @@
         })(t) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -80524,7 +80623,7 @@
             body: document.body,
             searchresultsConfigWrapper: this.searchResultsComponent.children[0],
             searchresultsWrapper: this.searchResultsComponent.querySelector(
-              ".".concat(ki)
+              ".".concat(ki),
             ),
             facetsWrapper: this.searchResultsComponent.querySelector(Ei),
             facetsMobileOpenButton:
@@ -80582,7 +80681,7 @@
                     null === (e = t.dataset) ||
                     void 0 === e
                     ? void 0
-                    : e.config
+                    : e.config,
                 )),
                 (this.resultsPerPage = 20),
                 (this.className = ki),
@@ -80612,7 +80711,7 @@
                         t.currentTarget.classList.contains(Di)
                           ? this.elements.datepickerWrapper.classList.remove(hn)
                           : this.elements.datepickerWrapper.classList.add(hn);
-                      }.bind(i)
+                      }.bind(i),
                     );
                   }),
                 this.elements.facetsMobileOpenButton.addEventListener(
@@ -80620,43 +80719,43 @@
                   function () {
                     this.elements.searchresultsWrapper.classList.add(cn),
                       X(this.elements.facetsWrapper);
-                  }.bind(this)
+                  }.bind(this),
                 ),
                 this.elements.facetsMobileCloseButton.addEventListener(
                   "click",
                   function () {
                     this.closeMobileFacets();
-                  }.bind(this)
+                  }.bind(this),
                 ),
                 this.elements.desktopSortOptions.addEventListener(
                   "change",
-                  this.handleSearchFormSubmission.bind(this)
+                  this.handleSearchFormSubmission.bind(this),
                 ),
                 this.elements.searchForm.addEventListener(
                   "submit",
-                  this.handleSearchFormSubmission.bind(this)
+                  this.handleSearchFormSubmission.bind(this),
                 ),
                 this.elements.paginationList.addEventListener(
                   "click",
-                  this.handlePaginationAction.bind(this)
+                  this.handlePaginationAction.bind(this),
                 ),
                 this.elements.facetsFilterButton.addEventListener(
                   "click",
-                  this.handleFilterButtonclick.bind(this)
+                  this.handleFilterButtonclick.bind(this),
                 ),
                 this.elements.facetsClearButton.addEventListener(
                   "click",
                   function (t) {
                     i.elements.currentReportsFilterCheckbox.checked &&
                       (i.resetHidingAllFiltersDespiteCurrentReports(
-                        i.elements.filtersToManageHiding
+                        i.elements.filtersToManageHiding,
                       ),
                       i.elements.currentReportsInputWrapper.classList.add(hn),
                       i.enableAllFiltersDespiteCurrentReports()),
                       i.hideCustomTimeRangeInput(),
                       i.resetAllFilters(),
                       i.handleSearchFormSubmission(t);
-                  }
+                  },
                 ),
                 c.subscribe(this.onWindowResize.bind(this)),
                 window.addEventListener("popstate", this.onPopState.bind(this));
@@ -80784,10 +80883,10 @@
                                   null === (r = this.searchSolrConfig) ||
                                     void 0 === r
                                     ? void 0
-                                    : r.searchUrlSecond
+                                    : r.searchUrlSecond,
                                 )
                                 .concat(this.query),
-                              { redirect: "follow" }
+                              { redirect: "follow" },
                             )
                           );
                         case 4:
@@ -80802,10 +80901,10 @@
                                   null === (o = this.searchSolrConfig) ||
                                     void 0 === o
                                     ? void 0
-                                    : o.searchUrl
+                                    : o.searchUrl,
                                 )
                                 .concat(this.query),
-                              { redirect: "follow" }
+                              { redirect: "follow" },
                             )
                           );
                         case 9:
@@ -80816,7 +80915,7 @@
                             break;
                           }
                           throw new Error(
-                            "HTTP error - status: ".concat(e.status)
+                            "HTTP error - status: ".concat(e.status),
                           );
                         case 12:
                           return (t.next = 14), e.json();
@@ -80831,7 +80930,7 @@
                   },
                   t,
                   this,
-                  [[0, 18]]
+                  [[0, 18]],
                 );
               })),
               (o = function () {
@@ -80877,15 +80976,15 @@
                               void 0 === e
                               ? void 0
                               : e.value,
-                            "/"
+                            "/",
                           )
                           .concat(
                             null === (i = this.elements.currentReportsYear) ||
                               void 0 === i
                               ? void 0
                               : i.value,
-                            '"'
-                          )
+                            '"',
+                          ),
                       )
                       .start(r.startPage)
                       .sort(this.getSelectedSortOption())
@@ -80908,8 +81007,8 @@
                       "".concat(
                         null === (n = this.searchSolrConfig) || void 0 === n
                           ? void 0
-                          : n.qfParameter
-                      )
+                          : n.qfParameter,
+                      ),
                     )
                     .set("fl=*,score")),
                 (this.query = o.build());
@@ -81004,21 +81103,21 @@
                                 : t.document_type.toLowerCase())
                               ? "cmp-searchresults__results-list__item--document"
                               : "",
-                            '">\n          <div class="'
+                            '">\n          <div class="',
                           )
                           .concat(
                             e.className,
-                            '__results-list__text-content">\n            <p class="'
+                            '__results-list__text-content">\n            <p class="',
                           )
                           .concat(
                             e.className,
-                            '__results-list__info">\n                <span class="'
+                            '__results-list__info">\n                <span class="',
                           )
                           .concat(e.className, "__results-list__info__area ")
                           .concat(t.document_tags ? "" : "hidden", " ")
                           .concat(
                             t.publication_date ? "" : "hidden-after",
-                            '">\n                  '
+                            '">\n                  ',
                           )
                           .concat(
                             (null ===
@@ -81026,39 +81125,39 @@
                             void 0 === i
                               ? void 0
                               : i.join(" • ")) || "",
-                            '\n                </span>\n            </p>\n            <h3 class="'
+                            '\n                </span>\n            </p>\n            <h3 class="',
                           )
                           .concat(
                             e.className,
-                            '__results-list__title">\n                <a href="'
+                            '__results-list__title">\n                <a href="',
                           )
                           .concat(t.url, '">')
                           .concat(
                             t.title,
-                            '</a>\n            </h3>\n           <p class="'
+                            '</a>\n            </h3>\n           <p class="',
                           )
                           .concat(
                             e.className,
-                            '__results-list__info">\n                <span class="'
+                            '__results-list__info">\n                <span class="',
                           )
                           .concat(
                             e.className,
-                            '__results-list__info__pub-date">\n                    '
+                            '__results-list__info__pub-date">\n                    ',
                           )
                           .concat(
                             e.getDateLocale(t.publication_date),
-                            '\n                </span>\n           </p>\n            <p class="'
+                            '\n                </span>\n           </p>\n            <p class="',
                           )
                           .concat(
                             e.className,
-                            '__results-list__description">\n                '
+                            '__results-list__description">\n                ',
                           )
                           .concat(
                             t.description ||
                               (t.content
                                 ? t.content[0].substring(0, 300) + "..."
                                 : ""),
-                            '\n            </p>\n          </div>\n          <div class="'
+                            '\n            </p>\n          </div>\n          <div class="',
                           )
                           .concat(e.className, "__results-list__image ")
                           .concat(
@@ -81069,12 +81168,12 @@
                                   : t.document_type.toLowerCase())
                               ? ""
                               : "hidden",
-                            '">\n              <img src="'
+                            '">\n              <img src="',
                           )
                           .concat(t.image_small, '"\n                alt="')
                           .concat(
                             t.title,
-                            '"\n                onError="this.onerror=null;this.src=\'//:0\';"\n              />\n          </div>\n        </article>\n        '
+                            '"\n                onError="this.onerror=null;this.src=\'//:0\';"\n              />\n          </div>\n        </article>\n        ',
                           );
                       }, this)
                       .join("");
@@ -81094,7 +81193,7 @@
                     .concat(this.className, "__pagination__page-item ")
                     .concat(
                       0 === this.getStartPage() ? an : "",
-                      '">\n          <a class="'
+                      '">\n          <a class="',
                     )
                     .concat(this.className, "__pagination__page-link ")
                     .concat(on, '" href="#"><span>')
@@ -81105,7 +81204,7 @@
                       this.getStartPage() === (s - 1) * this.resultsPerPage
                         ? an
                         : "",
-                      '">\n          <a class="'
+                      '">\n          <a class="',
                     )
                     .concat(this.className, "__pagination__page-link ")
                     .concat(rn, '" href="#"><span>')
@@ -81119,7 +81218,7 @@
                         i = '\n            <li class="'
                           .concat(
                             e.className,
-                            '__pagination__page-item">\n              <span class="'
+                            '__pagination__page-item">\n              <span class="',
                           )
                           .concat(e.className, "__pagination__page-link ")
                           .concat(ln, '">...</span>\n            </li>');
@@ -81128,12 +81227,12 @@
                         i = '\n            <li class="'
                           .concat(
                             e.className,
-                            '__pagination__page-item">\n              <a class="'
+                            '__pagination__page-item">\n              <a class="',
                           )
                           .concat(e.className, "__pagination__page-link ")
                           .concat(
                             e.getStartPage() === n ? sn : "",
-                            '"\n                data-start-page="'
+                            '"\n                data-start-page="',
                           )
                           .concat(n, '"\n                href="#">')
                           .concat(t, "</a>\n            </li>");
@@ -81187,7 +81286,7 @@
                 if (i) {
                   var n,
                     r = t.querySelector(
-                      ".cmp-searchresults__facets__group-option__count"
+                      ".cmp-searchresults__facets__group-option__count",
                     ),
                     o = i.value;
                   r.textContent = null !== (n = e[o]) && void 0 !== n ? n : "";
@@ -81355,7 +81454,7 @@
                     : t.querySelectorAll(Fi);
               this.elements.currentReportsFilterCheckbox.checked
                 ? (this.elements.currentReportsInputWrapper.classList.remove(
-                    hn
+                    hn,
                   ),
                   this.hideCustomTimeRangeInput(),
                   this.resetAllFiltersDespiteCurrentReports(),
@@ -81492,7 +81591,7 @@
           (this.elements = {
             body: document.body,
             navigationDropdowns: document.querySelectorAll(
-              this.CONFIG.NAVIGATION_DROPDOWN
+              this.CONFIG.NAVIGATION_DROPDOWN,
             ),
           }),
           this.prepareNavigationDropdowns();
@@ -81523,12 +81622,12 @@
                       var s = document.createElement("div");
                       s.setAttribute(
                         "class",
-                        t.CONFIG.NAVIGATION_DROPDOWN_TRIGGER_CLASS
+                        t.CONFIG.NAVIGATION_DROPDOWN_TRIGGER_CLASS,
                       ),
                         (s.innerHTML =
                           '<button class="cmp-button"><span class="cmp-button__text">'.concat(
                             o.trim(),
-                            "</span></button>"
+                            "</span></button>",
                           )),
                         null == i || i.insertBefore(s, n),
                         s.addEventListener("click", function (e) {
@@ -81543,7 +81642,7 @@
             key: "toggleDropdownNavigationPanelVisibility",
             value: function (t) {
               var e = t.currentTarget.parentNode.querySelector(
-                this.CONFIG.NAVIGATION
+                this.CONFIG.NAVIGATION,
               );
               t.currentTarget.classList.toggle(this.CONFIG.ACTIVE_CLASS),
                 null == e || e.classList.toggle(this.CONFIG.ACTIVE_CLASS);
@@ -81580,19 +81679,19 @@
           }),
           (this.elements = {
             calendarFilters: this.calendarComponent.querySelector(
-              this.CONFIG.CALENDAR_SELECT
+              this.CONFIG.CALENDAR_SELECT,
             ),
             calendarButton: this.calendarComponent.querySelector(
-              this.CONFIG.CALENDAR_BUTTON
+              this.CONFIG.CALENDAR_BUTTON,
             ),
             calendarEntries: this.calendarComponent.querySelectorAll(
-              this.CONFIG.CALENDAR_ENTRIES
+              this.CONFIG.CALENDAR_ENTRIES,
             ),
             tableFutureEvents: this.calendarComponent.querySelector(
-              this.CONFIG.TABLE_FUTURE
+              this.CONFIG.TABLE_FUTURE,
             ),
             tablePastEvents: this.calendarComponent.querySelector(
-              this.CONFIG.TABLE_PAST
+              this.CONFIG.TABLE_PAST,
             ),
           }),
           this.calendarComponent && this.init();
@@ -81612,7 +81711,7 @@
                 o = this;
               if (
                 ((this.configObj = JSON.parse(
-                  this.calendarComponent.dataset.cmpData
+                  this.calendarComponent.dataset.cmpData,
                 )),
                 (this.yearsFilter =
                   (null === (t = this.configObj) || void 0 === t
@@ -81635,19 +81734,19 @@
                 this.configObj.calendarFutureEvents.length)
               ) {
                 var s = this.calendarComponent.querySelector(
-                  ".future-events .cmp-calendar__table tbody"
+                  ".future-events .cmp-calendar__table tbody",
                 );
                 this.initEvents(this.configObj.calendarFutureEvents, s);
               }
               if (this.configObj.calendarPastEvents.length) {
                 var a = this.calendarComponent.querySelector(
-                  ".past-events .cmp-calendar__table tbody"
+                  ".past-events .cmp-calendar__table tbody",
                 );
                 this.initEvents(this.configObj.calendarPastEvents, a);
               }
               (this.elements.calendarEntries =
                 this.calendarComponent.querySelectorAll(
-                  this.CONFIG.CALENDAR_ENTRIES
+                  this.CONFIG.CALENDAR_ENTRIES,
                 )),
                 this.toggleTablesVisibility(),
                 null === (n = this.elements.calendarButton) ||
@@ -81713,14 +81812,14 @@
               (this.elements.tableFutureEvents.style.display =
                 this.elements.tableFutureEvents &&
                 !this.elements.tableFutureEvents.querySelector(
-                  "tbody tr:not(.filtered)"
+                  "tbody tr:not(.filtered)",
                 )
                   ? "none"
                   : "block"),
                 (this.elements.tablePastEvents.style.display =
                   this.elements.tablePastEvents &&
                   !this.elements.tablePastEvents.querySelector(
-                    "tbody tr:not(.filtered)"
+                    "tbody tr:not(.filtered)",
                   )
                     ? "none"
                     : "block");
@@ -81781,7 +81880,7 @@
         })(t, e) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -81837,10 +81936,10 @@
           }),
           (this.elements = {
             standardDataContainer: document.querySelectorAll(
-              this.CONFIG.CALENDARCARD_STANDARD_DATA_CONTAINER
+              this.CONFIG.CALENDARCARD_STANDARD_DATA_CONTAINER,
             ),
             customDataContainer: document.querySelectorAll(
-              this.CONFIG.CALENDARCARD_CUSTOM_DATA_CONTAINER
+              this.CONFIG.CALENDARCARD_CUSTOM_DATA_CONTAINER,
             ),
           }),
           (this.elements.standardDataContainer ||
@@ -81881,7 +81980,7 @@
                         .map(function (t) {
                           return '<span class="cmp-calendarcard__date-part">'.concat(
                             t,
-                            "</span>"
+                            "</span>",
                           );
                         })
                         .join(" ");
@@ -81941,7 +82040,7 @@
               var e = this,
                 i = [],
                 n = t.currentTarget.querySelectorAll(
-                  this.CONFIG.FORM_CHECKBOX_GROUP_REQUIRED
+                  this.CONFIG.FORM_CHECKBOX_GROUP_REQUIRED,
                 );
               null == n ||
                 n.forEach(function (t) {
@@ -81949,7 +82048,7 @@
                 });
               var r,
                 o = t.currentTarget.querySelectorAll(
-                  this.CONFIG.FORM_RADIO_GROUP_REQUIRED
+                  this.CONFIG.FORM_RADIO_GROUP_REQUIRED,
                 );
               null == o ||
                 o.forEach(function (t) {
@@ -82046,14 +82145,14 @@
           }),
           (this.elements = {
             controlledContentConfig: this.accessControlledContent.querySelector(
-              this.CONFIG.controlledContentConfig
+              this.CONFIG.controlledContentConfig,
             ),
             controlledContentWrapper:
               this.accessControlledContent.querySelector(
-                this.CONFIG.controlledContentWrapper
+                this.CONFIG.controlledContentWrapper,
               ),
             acceptButton: this.accessControlledContent.querySelector(
-              this.CONFIG.acceptButton
+              this.CONFIG.acceptButton,
             ),
           }),
           this.initialize(),
@@ -82093,7 +82192,7 @@
                     t.preventDefault(),
                       this.setRegulationSessionCookie(),
                       this.makeXfContentRequest();
-                  }.bind(this)
+                  }.bind(this),
                 ),
                 window.addEventListener("load", this.onWindowLoad.bind(this));
             },
@@ -82121,7 +82220,7 @@
                               ""
                                 .concat(window.location.origin)
                                 .concat(this.xfContentPath)
-                                .concat(this.xfSelectorSuffix)
+                                .concat(this.xfSelectorSuffix),
                             )
                           );
                         case 3:
@@ -82130,7 +82229,7 @@
                             break;
                           }
                           throw new Error(
-                            "HTTP error - status: ".concat(e.status)
+                            "HTTP error - status: ".concat(e.status),
                           );
                         case 6:
                           return (t.next = 8), e.text();
@@ -82145,7 +82244,7 @@
                   },
                   t,
                   this,
-                  [[0, 12]]
+                  [[0, 12]],
                 );
               })),
               (o = function () {
@@ -82180,7 +82279,7 @@
             value: function (t) {
               (this.elements.controlledContentWrapper.innerHTML = t),
                 this.elements.controlledContentWrapper.classList.add(
-                  this.CONFIG.regulationVisibleClass
+                  this.CONFIG.regulationVisibleClass,
                 );
             },
           },
@@ -82190,7 +82289,7 @@
               this.isRegulationSessionCookieSet()
                 ? this.makeXfContentRequest()
                 : this.elements.controlledContentWrapper.classList.add(
-                    this.CONFIG.regulationVisibleClass
+                    this.CONFIG.regulationVisibleClass,
                   );
             },
           },
@@ -82261,27 +82360,27 @@
           }),
           (this.elements = {
             documentListTable: this.documentListComponent.querySelector(
-              this.CONFIG.DOCUMENT_LIST_TABLE
+              this.CONFIG.DOCUMENT_LIST_TABLE,
             ),
             documentListSortingHeader: this.documentListComponent.querySelector(
-              this.CONFIG.DOCUMENT_LIST_SORTING_HEADER
+              this.CONFIG.DOCUMENT_LIST_SORTING_HEADER,
             ),
             documentListSortingHeaderTable:
               this.documentListComponent.querySelector(
-                this.CONFIG.DOCUMENT_LIST_SORTING_HEADER_TABLE
+                this.CONFIG.DOCUMENT_LIST_SORTING_HEADER_TABLE,
               ),
             documentListSortingHeaderDate:
               this.documentListComponent.querySelector(
-                this.CONFIG.DOCUMENT_LIST_SORTING_HEADER_DATE
+                this.CONFIG.DOCUMENT_LIST_SORTING_HEADER_DATE,
               ),
             documentListTableBody: this.documentListComponent.querySelector(
-              this.CONFIG.DOCUMENT_LIST_TABLE_BODY
+              this.CONFIG.DOCUMENT_LIST_TABLE_BODY,
             ),
             documentListPagination: this.documentListComponent.querySelector(
-              this.CONFIG.DOCUMENT_LIST_PAGINATION
+              this.CONFIG.DOCUMENT_LIST_PAGINATION,
             ),
             paginationList: this.documentListComponent.querySelector(
-              this.CONFIG.PAGINATION_LIST
+              this.CONFIG.PAGINATION_LIST,
             ),
           }),
           this.initialize(),
@@ -82303,7 +82402,7 @@
                     null === (e = t.dataset) ||
                     void 0 === e
                     ? void 0
-                    : e.config
+                    : e.config,
                 )),
                 (this.resultsPerPage = 20),
                 (this.className = this.CONFIG.DOCUMENT_LIST_WRAPPER_CLASS),
@@ -82338,7 +82437,7 @@
                   void 0 === t ||
                   t.addEventListener(
                     "click",
-                    this.handlePaginationAction.bind(this)
+                    this.handlePaginationAction.bind(this),
                   ),
                 c.subscribe(this.onWindowResize.bind(this)),
                 window.addEventListener("load", this.onWindowLoad.bind(this)),
@@ -82467,9 +82566,9 @@
                                 .concat(
                                   null === (e = this.solrConfig) || void 0 === e
                                     ? void 0
-                                    : e.searchUrl
+                                    : e.searchUrl,
                                 )
-                                .concat(this.query)
+                                .concat(this.query),
                             )
                           );
                         case 3:
@@ -82478,7 +82577,7 @@
                             break;
                           }
                           throw new Error(
-                            "HTTP error - status: ".concat(i.status)
+                            "HTTP error - status: ".concat(i.status),
                           );
                         case 6:
                           return (t.next = 8), i.json();
@@ -82493,7 +82592,7 @@
                   },
                   t,
                   this,
-                  [[0, 12]]
+                  [[0, 12]],
                 );
               })),
               (o = function () {
@@ -82568,7 +82667,7 @@
                         null === (i = e.parentElement) ||
                         void 0 === i
                         ? void 0
-                        : i.parentElement
+                        : i.parentElement,
                     );
             },
           },
@@ -82587,26 +82686,26 @@
                             return '<tr class="'
                               .concat(
                                 i.className,
-                                '__table-row">\n          <td>\n              <p class="'
+                                '__table-row">\n          <td>\n              <p class="',
                               )
                               .concat(i.className, '__table-row__file-name">')
                               .concat(
                                 t.title,
-                                '</p>\n          </td>\n          <td>\n              <p><time datetime="'
+                                '</p>\n          </td>\n          <td>\n              <p><time datetime="',
                               )
                               .concat(t.publication_date, '">')
                               .concat(
                                 i.getDateLocale(t.publication_date),
-                                '</time></p>\n          </td>\n          <td>\n              <a href="'
+                                '</time></p>\n          </td>\n          <td>\n              <a href="',
                               )
                               .concat(
                                 t.url,
-                                '"\n                target="_blank"\n                rel="noopener"\n                class="'
+                                '"\n                target="_blank"\n                rel="noopener"\n                class="',
                               )
                               .concat(i.className, '__table-row__download">')
                               .concat(
                                 i.solrConfig.downloadButtonLabel,
-                                "</a>\n          </td>\n        </tr>"
+                                "</a>\n          </td>\n        </tr>",
                               );
                           }, this)
                           .join("")) && void 0 !== e
@@ -82630,12 +82729,12 @@
                       0 === this.getStartPage()
                         ? this.CONFIG.PAGINATION_HIDDEN_CLASS
                         : "",
-                      '">\n          <a class="'
+                      '">\n          <a class="',
                     )
                     .concat(this.className, "__pagination__page-link ")
                     .concat(
                       this.CONFIG.PAGINATION_PREV_CLASS,
-                      '" href="#"><span>'
+                      '" href="#"><span>',
                     )
                     .concat(r, "</span></a>\n        </li>"),
                   l = '\n        <li class="'
@@ -82644,12 +82743,12 @@
                       this.getStartPage() === (s - 1) * this.resultsPerPage
                         ? this.CONFIG.PAGINATION_HIDDEN_CLASS
                         : "",
-                      '">\n          <a class="'
+                      '">\n          <a class="',
                     )
                     .concat(this.className, "__pagination__page-link ")
                     .concat(
                       this.CONFIG.PAGINATION_NEXT_CLASS,
-                      '" href="#"><span>'
+                      '" href="#"><span>',
                     )
                     .concat(o, "</span></a>\n        </li>"),
                   c = this.getStartPage() / this.resultsPerPage + 1;
@@ -82661,26 +82760,26 @@
                         i = '\n            <li class="'
                           .concat(
                             e.className,
-                            '__pagination__page-item">\n              <span class="'
+                            '__pagination__page-item">\n              <span class="',
                           )
                           .concat(e.className, "__pagination__page-link ")
                           .concat(
                             e.CONFIG.PAGINATION_LINK_DOTS_CLASS,
-                            '">...</span>\n            </li>'
+                            '">...</span>\n            </li>',
                           );
                       else {
                         var n = e.resultsPerPage * (t - 1);
                         i = '\n            <li class="'
                           .concat(
                             e.className,
-                            '__pagination__page-item">\n              <a class="'
+                            '__pagination__page-item">\n              <a class="',
                           )
                           .concat(e.className, "__pagination__page-link ")
                           .concat(
                             e.getStartPage() === n
                               ? e.CONFIG.PAGINATION_ACTIVE_CLASS
                               : "",
-                            '"\n                data-start-page="'
+                            '"\n                data-start-page="',
                           )
                           .concat(n, '"\n                href="#">')
                           .concat(t, "</a>\n            </li>");
@@ -82700,38 +82799,38 @@
                 if (
                   t.target.className ===
                   this.elements.documentListSortingHeaderDate.getAttribute(
-                    "class"
+                    "class",
                   )
                 ) {
                   this.elements.documentListSortingHeaderTable.setAttribute(
                     "data-sort-by",
-                    "publicationDate"
+                    "publicationDate",
                   );
                   var e =
                     this.elements.documentListSortingHeaderDate.getAttribute(
-                      this.ariaSort
+                      this.ariaSort,
                     );
                   this.elements.documentListSortingHeaderDate.setAttribute(
                     this.ariaSort,
-                    "ascending" === e ? "descending" : "ascending"
+                    "ascending" === e ? "descending" : "ascending",
                   ),
                     this.elements.documentListSortingHeader.removeAttribute(
-                      this.ariaSort
+                      this.ariaSort,
                     );
                 } else {
                   this.elements.documentListSortingHeaderTable.setAttribute(
                     "data-sort-by",
-                    this.title
+                    this.title,
                   );
                   var i = this.elements.documentListSortingHeader.getAttribute(
-                    this.ariaSort
+                    this.ariaSort,
                   );
                   this.elements.documentListSortingHeader.setAttribute(
                     this.ariaSort,
-                    "ascending" === i ? "descending" : "ascending"
+                    "ascending" === i ? "descending" : "ascending",
                   ),
                     this.elements.documentListSortingHeaderDate.removeAttribute(
-                      this.ariaSort
+                      this.ariaSort,
                     );
                 }
             },
@@ -82765,18 +82864,18 @@
             value: function () {
               var t =
                   this.elements.documentListSortingHeaderTable.getAttribute(
-                    "data-sort-by"
+                    "data-sort-by",
                   ) || this.title,
                 e =
                   t === this.title
                     ? this.sortOptions[
                         this.elements.documentListSortingHeader.getAttribute(
-                          this.ariaSort
+                          this.ariaSort,
                         )
                       ]
                     : this.sortOptions[
                         this.elements.documentListSortingHeaderDate.getAttribute(
-                          this.ariaSort
+                          this.ariaSort,
                         )
                       ];
               return (
@@ -82863,7 +82962,7 @@
                 .concat(i.generateCounterString(t), "</span>")),
               i.commentsWrapperElement.appendChild(e),
               (i.commentsCounterElement = i.component.querySelector(
-                ".".concat(i.CONFIG.COMMENTS_COUNTER_CLASS)
+                ".".concat(i.CONFIG.COMMENTS_COUNTER_CLASS),
               ));
           }),
           Xn(this, "renderForm", function () {
@@ -82872,49 +82971,49 @@
               (t.outerHTML = '<form method="POST" class="'
                 .concat(
                   i.CONFIG.COMMENTS_FORM_CLASS,
-                  '" enctype="multipart/form-data">\n        <div class="cmp-form-text">\n          <label for="cmp-comments__form-comment">'
+                  '" enctype="multipart/form-data">\n        <div class="cmp-form-text">\n          <label for="cmp-comments__form-comment">',
                 )
                 .concat(
                   i.configObject.formText,
-                  '</label>\n          <textarea class="cmp-comments__form-comment" id="cmp-comments__form-comment" name="form-comment"\n            maxlength="'
+                  '</label>\n          <textarea class="cmp-comments__form-comment" id="cmp-comments__form-comment" name="form-comment"\n            maxlength="',
                 )
                 .concat(
                   i.configObject.formMaxTextLength,
-                  '"\n            placeholder="'
+                  '"\n            placeholder="',
                 )
                 .concat(
                   i.configObject.formText,
-                  '" required></textarea>\n        </div>\n        <div class="button button-full">\n          <button type="submit" class="cmp-form-button cmp-comments__form-submit">'
+                  '" required></textarea>\n        </div>\n        <div class="button button-full">\n          <button type="submit" class="cmp-form-button cmp-comments__form-submit">',
                 )
                 .concat(
                   i.configObject.buttonLabel,
-                  '</button>\n        </div>\n        <p class="'
+                  '</button>\n        </div>\n        <p class="',
                 )
                 .concat(i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_CLASS, '">')
                 .concat(i.configObject.sendMessage, "</p>\n      </form>")),
               (i.commentsFormElement = i.component.querySelector(
-                ".".concat(i.CONFIG.COMMENTS_FORM_CLASS)
+                ".".concat(i.CONFIG.COMMENTS_FORM_CLASS),
               )),
               (i.commentsFormTextareaElement = i.component.querySelector(
-                i.CONFIG.COMMENTS_FORM_TEXTAREA_SELECTOR
+                i.CONFIG.COMMENTS_FORM_TEXTAREA_SELECTOR,
               )),
               (i.commentsFormSubmitMessage = i.component.querySelector(
-                ".".concat(i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_CLASS)
+                ".".concat(i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_CLASS),
               )),
               (i.commentsFormSubmitButtonElement = i.component.querySelector(
-                i.CONFIG.COMMENTS_FORM_SUBMIT_BUTTON_SELECTOR
+                i.CONFIG.COMMENTS_FORM_SUBMIT_BUTTON_SELECTOR,
               )),
               i.commentsFormTextareaElement.addEventListener(
                 "focus",
-                i.onCommentsTextareaFocus
+                i.onCommentsTextareaFocus,
               ),
               i.commentsFormSubmitButtonElement.addEventListener(
                 "click",
-                i.beforeCommentsFormSubmit
+                i.beforeCommentsFormSubmit,
               ),
               i.commentsFormElement.addEventListener(
                 "submit",
-                i.onCommentsFormSubmit
+                i.onCommentsFormSubmit,
               );
           }),
           Xn(this, "renderComments", function (t) {
@@ -82924,7 +83023,7 @@
                 e.classList.add(i.CONFIG.COMMENTS_LIST_CLASS),
                   i.commentsWrapperElement.appendChild(e),
                   (i.commentsListElement = i.component.querySelector(
-                    ".".concat(i.CONFIG.COMMENTS_LIST_CLASS)
+                    ".".concat(i.CONFIG.COMMENTS_LIST_CLASS),
                   ));
               }
               (i.commentsListElement.innerHTML = ""),
@@ -82932,17 +83031,17 @@
                   var e = ""
                       .concat(
                         i.CONFIG.GET_COMMENT_AUTHOR_IMAGE_SERVICE_PATH,
-                        "."
+                        ".",
                       )
                       .concat(t.userId, ".jpg"),
                     n = '\n          <p class="cmp-comments__comment-author">'
                       .concat(
                         t.userFormattedName,
-                        '</p>\n          <p class="cmp-comments__comment-text">'
+                        '</p>\n          <p class="cmp-comments__comment-text">',
                       )
                       .concat(
                         t.content,
-                        '</p>\n          <p class="cmp-comments__comment-date">'
+                        '</p>\n          <p class="cmp-comments__comment-date">',
                       )
                       .concat(t.date, '</p>\n          <a href="')
                       .concat(i.reportLinkHref, "%0D%0AAutor komentarza: ")
@@ -82950,11 +83049,11 @@
                       .concat(t.date, "%0D%0AKomentarz: ")
                       .concat(
                         t.content,
-                        '"\n            class="cmp-comments__comment-report-link">'
+                        '"\n            class="cmp-comments__comment-report-link">',
                       )
                       .concat(
                         i.configObject.reportLinkLabel,
-                        "</a>\n        </li>"
+                        "</a>\n        </li>",
                       ),
                     r = '<img class="'
                       .concat(i.CONFIG.COMMENT_AUTHOR_IMAGE_SELECTOR, '" src="')
@@ -82974,7 +83073,7 @@
           }),
           Xn(this, "onCommentsTextareaFocus", function (t) {
             i.commentsFormSubmitMessage.classList.remove(
-              i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_VISIBLE_CLASS
+              i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_VISIBLE_CLASS,
             );
           }),
           Xn(this, "beforeCommentsFormSubmit", function (t) {
@@ -82991,7 +83090,7 @@
                   i.fetchComments().then(function (t) {
                     t &&
                       (i.commentsFormSubmitMessage.classList.add(
-                        i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_VISIBLE_CLASS
+                        i.CONFIG.COMMENTS_FORM_SUBMIT_MESSAGE_VISIBLE_CLASS,
                       ),
                       (i.commentsCounterElement.innerHTML =
                         i.generateCounterString(t.length)),
@@ -83033,15 +83132,15 @@
             value: function () {
               var t = this;
               (this.commentsWrapperElement = this.component.querySelector(
-                this.CONFIG.COMMENTS_WRAPPER_SELECTOR
+                this.CONFIG.COMMENTS_WRAPPER_SELECTOR,
               )),
                 (this.configObject = JSON.parse(
-                  this.commentsWrapperElement.dataset.cmpData
+                  this.commentsWrapperElement.dataset.cmpData,
                 )),
                 (this.reportLinkHref = "mailto:"
                   .concat(
                     this.configObject.reportEmailAddress,
-                    "?subject=Zgłoszenie%20dotyczące%20komentarza&body=Artykuł: "
+                    "?subject=Zgłoszenie%20dotyczące%20komentarza&body=Artykuł: ",
                   )
                   .concat(window.location.href)),
                 this.fetchComments().then(function (e) {
@@ -83070,9 +83169,9 @@
                               ""
                                 .concat(
                                   this.CONFIG.GET_COMMENTS_SERVICE_PATH,
-                                  "?path="
+                                  "?path=",
                                 )
-                                .concat(this.configObject.path)
+                                .concat(this.configObject.path),
                             )
                           );
                         case 3:
@@ -83081,7 +83180,7 @@
                             break;
                           }
                           throw new Error(
-                            "HTTP error - status: ".concat(e.status)
+                            "HTTP error - status: ".concat(e.status),
                           );
                         case 6:
                           return (t.next = 8), e.json();
@@ -83096,7 +83195,7 @@
                   },
                   t,
                   this,
-                  [[0, 12]]
+                  [[0, 12]],
                 );
               })),
               (o = function () {
@@ -83188,10 +83287,10 @@
               value: function () {
                 var t = this;
                 (this.greetingsWrapperElement = this.component.querySelector(
-                  this.CONFIG.GREETINGS_WRAPPER_SELECTOR
+                  this.CONFIG.GREETINGS_WRAPPER_SELECTOR,
                 )),
                   (this.configObject = JSON.parse(
-                    this.greetingsWrapperElement.dataset.cmpData
+                    this.greetingsWrapperElement.dataset.cmpData,
                   )),
                   this.fetchUserInfo().then(function (e) {
                     e && t.renderGreetings(e);
@@ -83228,7 +83327,7 @@
                     },
                     t,
                     this,
-                    [[0, 10]]
+                    [[0, 10]],
                   );
                 })),
                 (o = function () {
@@ -83291,7 +83390,7 @@
         })(t) ||
         (function () {
           throw new TypeError(
-            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         })()
       );
@@ -83321,14 +83420,14 @@
               ur(t, e, i[e]);
             })
           : Object.getOwnPropertyDescriptors
-          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-          : cr(Object(i)).forEach(function (e) {
-              Object.defineProperty(
-                t,
-                e,
-                Object.getOwnPropertyDescriptor(i, e)
-              );
-            });
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+            : cr(Object(i)).forEach(function (e) {
+                Object.defineProperty(
+                  t,
+                  e,
+                  Object.getOwnPropertyDescriptor(i, e),
+                );
+              });
       }
       return t;
     }
@@ -83369,13 +83468,13 @@
               "url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='48' fill='"
                 .concat(
                   GLOBAL_MAIN_COLOR.split("#").pop(),
-                  "'%3E%3Cg id='tune-icon' fill='%23"
+                  "'%3E%3Cg id='tune-icon' fill='%23",
                 )
                 .concat(
                   GLOBAL_MAIN_COLOR.split("#").pop(),
-                  "' fill-rule='nonzero'%3E%3Cpath d='M21.35 42V30.75h3v4.15H42v3H24.35V42ZM6 37.9v-3h12.35v3Zm9.35-8.3v-4.1H6v-3h9.35v-4.2h3v11.3Zm6-4.1v-3H42v3Zm8.3-8.25V6h3v4.1H42v3h-9.35v4.15ZM6 13.1v-3h20.65v3Z'/%3E%3C/g%3E%3C/svg%3E)"
+                  "' fill-rule='nonzero'%3E%3Cpath d='M21.35 42V30.75h3v4.15H42v3H24.35V42ZM6 37.9v-3h12.35v3Zm9.35-8.3v-4.1H6v-3h9.35v-4.2h3v11.3Zm6-4.1v-3H42v3Zm8.3-8.25V6h3v4.1H42v3h-9.35v4.15ZM6 13.1v-3h20.65v3Z'/%3E%3C/g%3E%3C/svg%3E)",
                 ),
-            
+
             COLORS_ARRAY_LINECHART: [
               globalThis.GLOBAL_MAIN_COLOR,
               "#7cb5ec",
@@ -83483,7 +83582,7 @@
               if (this.component.lastElementChild) {
                 var t,
                   e = this.component.querySelector(
-                    this.CONFIG.CHARTS_CONTAINER_SELECTOR
+                    this.CONFIG.CHARTS_CONTAINER_SELECTOR,
                   ),
                   i = JSON.parse(e.dataset.chartData);
                 this.CONFIG.DOWNLOAD_TEXT =
@@ -83587,19 +83686,19 @@
                               ? '<tspan style="color: rgba(0,0,0,0.7); font-size: 16px; font-weight: normal; letter-spacing: 0.16px; line-height: 24px;">'
                                   .concat(
                                     this.key,
-                                    ': </tspan><tspan class="piechart-label" dy="3" style=" font-size: 24px; font-weight: 500; letter-spacing: 0.24px; line-height: 36px;">'
+                                    ': </tspan><tspan class="piechart-label" dy="3" style=" font-size: 24px; font-weight: 500; letter-spacing: 0.24px; line-height: 36px;">',
                                   )
                                   .concat(
                                     d.formatDataUnit(
                                       d.checkY(this.y),
-                                      t.dataUnit
+                                      t.dataUnit,
                                     ),
-                                    "</tspan>"
+                                    "</tspan>",
                                   )
                               : '<tspan style="color: rgba(0,0,0,0.7); font-size: 16px; font-weight: normal; letter-spacing: 0.16px; line-height: 24px;">'
                                   .concat(
                                     this.key,
-                                    ': </tspan><tspan class="piechart-label" style=" font-size: 24px; font-weight: 500; letter-spacing: 0.24px; line-height: 36px;">'
+                                    ': </tspan><tspan class="piechart-label" style=" font-size: 24px; font-weight: 500; letter-spacing: 0.24px; line-height: 36px;">',
                                   )
                                   .concat(d.checkY(this.y), "</tspan>");
                         },
@@ -83639,7 +83738,7 @@
                     labelFormatter: function () {
                       return '<span style=" cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px; line-height: 24px;">'.concat(
                         this.name,
-                        "</span>"
+                        "</span>",
                       );
                     },
                     navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -83674,25 +83773,25 @@
                                     ? '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; font-weight: normal; letter-spacing: 0.16px;line-height: 24px;">'
                                         .concat(
                                           this.name,
-                                          ': </span><span class="piechart-label" style=" font-size: 24px; font-weight: 500; letter-spacing: 0.24px; line-height: 36px;">'
+                                          ': </span><span class="piechart-label" style=" font-size: 24px; font-weight: 500; letter-spacing: 0.24px; line-height: 36px;">',
                                         )
                                         .concat(
                                           d.formatDataUnit(
                                             d.checkY(this.y),
-                                            t.dataUnit
+                                            t.dataUnit,
                                           ),
-                                          "</span>"
+                                          "</span>",
                                         )
                                     : '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; font-weight: normal; letter-spacing: 0.16px;line-height: 24px;">'.concat(
                                         this.name,
-                                        "</span>"
+                                        "</span>",
                                       );
                                 },
                                 navigation: s.CONFIG.LEGEND_NAVIGATION,
                               },
                             },
                           };
-                        })
+                        }),
                       ),
                       [
                         {
@@ -83712,7 +83811,7 @@
                               labelFormatter: function () {
                                 return '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px;line-height: 24px;">'.concat(
                                   this.name,
-                                  "</span>"
+                                  "</span>",
                                 );
                               },
                               navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -83770,8 +83869,8 @@
                               },
                             },
                           };
-                        })
-                      )
+                        }),
+                      ),
                     ),
                   },
                   credits: { enabled: !1 },
@@ -83828,12 +83927,12 @@
                 Jn.a.setOptions({ colors: [this.CONFIG.MAIN_COLOR] }),
                 sr()(
                   void ((o = Jn.a).Renderer.prototype.getContrast = function (
-                    t
+                    t,
                   ) {
                     return (t = o.Color(t).rgba)[0] + t[1] + t[2] > 500
                       ? globalThis.GLOBAL_MAIN_COLOR
                       : "#FFFFFF";
-                  })
+                  }),
                 ),
                 Jn.a.chart(s, {
                   chart: hr({}, u),
@@ -83961,8 +84060,8 @@
                 n && d.spacingTop
                   ? (d.marginTop = 70)
                   : n && !d.spacingTop
-                  ? (d.marginTop = 60)
-                  : !n && d.spacingTop && (d.marginTop = 80);
+                    ? (d.marginTop = 60)
+                    : !n && d.spacingTop && (d.marginTop = 80);
               var p = this;
               Jn.a.setOptions({ colors: [this.CONFIG.MAIN_COLOR] }),
                 Jn.a.chart(s, {
@@ -84169,7 +84268,7 @@
                   labelFormatter: function () {
                     return '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px; line-height: 24px;">'.concat(
                       this.name,
-                      "</span>"
+                      "</span>",
                     );
                   },
                   navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -84192,7 +84291,7 @@
                           labelFormatter: function () {
                             return '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px;line-height: 24px;">'.concat(
                               this.name,
-                              "</span>"
+                              "</span>",
                             );
                           },
                           navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -84384,7 +84483,7 @@
                     type: "column",
                     backgroundColor: "#FFFFFF",
                     plotBackgroundColor: "#FFFFFF",
-                  }
+                  },
                 ),
                 lang: p,
                 title: { text: "" },
@@ -84403,7 +84502,7 @@
                   labelFormatter: function () {
                     return '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px; line-height: 24px;">'.concat(
                       this.name,
-                      "</span>"
+                      "</span>",
                     );
                   },
                   navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -84426,7 +84525,7 @@
                           labelFormatter: function () {
                             return '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px;line-height: 24px;">'.concat(
                               this.name,
-                              "</span>"
+                              "</span>",
                             );
                           },
                           navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -84561,8 +84660,8 @@
               n && s.spacingTop
                 ? (s.marginTop = 70)
                 : n && !s.spacingTop
-                ? (s.marginTop = 60)
-                : !n && s.spacingTop && (s.marginTop = 80);
+                  ? (s.marginTop = 60)
+                  : !n && s.spacingTop && (s.marginTop = 80);
               var d,
                 p = (function (t, e) {
                   for (var i = [], n = 0; n < t.length; n++) {
@@ -84585,7 +84684,7 @@
                     }
                     var r;
                   }),
-                  d)
+                  d),
                 ),
                 f = t.chartDataType,
                 g = function (t, e, i, n) {
@@ -84679,7 +84778,7 @@
                   {
                     type: "spline",
                     cursor: t.hideTooltips ? void 0 : "pointer",
-                  }
+                  },
                 ),
                 title: { text: "" },
                 xAxis: hr(
@@ -84693,7 +84792,7 @@
                       lineColor: "#9e9e9e",
                       type: "datetime",
                     },
-                    b
+                    b,
                   ),
                   {},
                   {
@@ -84703,7 +84802,7 @@
                             10,
                             this.dataMin,
                             this.dataMax,
-                            b.enabled ? b.numberOfTicks : void 0
+                            b.enabled ? b.numberOfTicks : void 0,
                           )
                         : void 0;
                     },
@@ -84714,11 +84813,11 @@
                         return "date" === f
                           ? Jn.a.dateFormat("%d.%m.%Y", this.value)
                           : "text" === f
-                          ? p[this.value]
-                          : this.value;
+                            ? p[this.value]
+                            : this.value;
                       },
                     },
-                  }
+                  },
                 ),
                 yAxis: {
                   lineWidth: 1,
@@ -84763,19 +84862,19 @@
                       if (this.point.index === n && "string" == typeof i[n])
                         return '<div class="cmp-charts__tooltip">'.concat(
                           i[n],
-                          "</div>"
+                          "</div>",
                         );
                     for (
                       var r =
                           '<div class="cmp-charts__tooltip"><div class="cmp-charts__tooltip_date"> '
                             .concat(
                               Jn.a.dateFormat("%d.%m.%Y", this.x),
-                              '</div><div class="cmp-charts__tooltip_details"> '
+                              '</div><div class="cmp-charts__tooltip_details"> ',
                             )
                             .concat(this.series.name, ": ")
                             .concat(
                               c.formatDataUnit(c.checkY(this.y), a),
-                              "</div>"
+                              "</div>",
                             ),
                         o = 0;
                       o < t.length;
@@ -84788,9 +84887,9 @@
                           .concat(
                             c.formatDataUnit(
                               e(t[o].data, this.x)[1].toLocaleString(),
-                              a
+                              a,
                             ),
-                            "</div>"
+                            "</div>",
                           ));
                     return "date" === f
                       ? r + "</div>"
@@ -84798,7 +84897,7 @@
                           .concat(this.series.name, ": ")
                           .concat(
                             c.formatDataUnit(c.checkY(this.y), a),
-                            "</div></div>"
+                            "</div></div>",
                           );
                   },
                 },
@@ -84839,14 +84938,14 @@
                                     7,
                                     this.dataMin,
                                     this.dataMax,
-                                    x.enabled ? x.numberOfTicks : void 0
+                                    x.enabled ? x.numberOfTicks : void 0,
                                   )
                                 : x.enabled
-                                ? void 0
-                                : m(this.dataMin, this.dataMax);
+                                  ? void 0
+                                  : m(this.dataMin, this.dataMax);
                             },
                           },
-                          x
+                          x,
                         ),
                       },
                     },
@@ -84860,11 +84959,11 @@
                                   5,
                                   this.dataMin,
                                   this.dataMax,
-                                  x.enabled ? x.numberOfTicks : void 0
+                                  x.enabled ? x.numberOfTicks : void 0,
                                 )
                               : x.enabled
-                              ? void 0
-                              : m(this.dataMin, this.dataMax);
+                                ? void 0
+                                : m(this.dataMin, this.dataMax);
                           },
                         },
                       },
@@ -84889,7 +84988,7 @@
                           labelFormatter: function () {
                             return '<span style="cursor: pointer; color: rgba(0,0,0,0.7); font-size: 16px; fontWeight: normal; letter-spacing: 0.16px;line-height: 24px;">'.concat(
                               this.name,
-                              "</span>"
+                              "</span>",
                             );
                           },
                           navigation: this.CONFIG.LEGEND_NAVIGATION,
@@ -84901,11 +85000,11 @@
                                   5,
                                   this.dataMin,
                                   this.dataMax,
-                                  x.enabled ? x.numberOfTicks : void 0
+                                  x.enabled ? x.numberOfTicks : void 0,
                                 )
                               : x.enabled
-                              ? void 0
-                              : m(this.dataMin, this.dataMax);
+                                ? void 0
+                                : m(this.dataMin, this.dataMax);
                           },
                         },
                       },
@@ -84921,11 +85020,11 @@
                                   2,
                                   this.dataMin,
                                   this.dataMax,
-                                  x.enabled ? x.numberOfTicks : void 0
+                                  x.enabled ? x.numberOfTicks : void 0,
                                 )
                               : x.enabled
-                              ? void 0
-                              : m(this.dataMin, this.dataMax);
+                                ? void 0
+                                : m(this.dataMin, this.dataMax);
                           },
                         },
                       },
@@ -85013,7 +85112,7 @@
                 this.component.querySelector(this.CONFIG.CHARTS_TITLE_SELECTOR)
               ) {
                 var i = this.component.querySelector(
-                  this.CONFIG.CHARTS_TITLE_TAG_SELECTOR
+                  this.CONFIG.CHARTS_TITLE_TAG_SELECTOR,
                 );
                 if (i) {
                   var n = this.CONFIG.CHART_TITLE_MARGIN_MAP[i.tagName];
@@ -85063,13 +85162,13 @@
               };
               var t = this,
                 e = this.component.querySelector(
-                  this.CONFIG.CHARTS_CONTAINER_SELECTOR
+                  this.CONFIG.CHARTS_CONTAINER_SELECTOR,
                 ),
                 i = JSON.parse(e.dataset.chartData).addAnimation,
                 n = sr()(
                   this.component.querySelector(
-                    this.CONFIG.CHARTS_CONTAINER_SELECTOR
-                  )
+                    this.CONFIG.CHARTS_CONTAINER_SELECTOR,
+                  ),
                 ),
                 r = n.visible(!0);
               i &&
@@ -85115,7 +85214,7 @@
                 t.startsWith("mailto") &&
                 this.component.setAttribute(
                   "href",
-                  "".concat(t, "&body=").concat(window.location.href)
+                  "".concat(t, "&body=").concat(window.location.href),
                 );
             },
           },
@@ -85169,11 +85268,11 @@
                 i.currentDeviceSize !== T && i.openOverlay(),
                 E.desktop.addEventListener(
                   "change",
-                  i.onDesktopMediaQueryChange
+                  i.onDesktopMediaQueryChange,
                 ),
                 window.removeEventListener(
                   "CookiebotOnDialogDisplay",
-                  i.onCookiebotOpen
+                  i.onCookiebotOpen,
                 );
               var t = document.querySelectorAll(xr);
               null == t ||
@@ -85187,15 +85286,15 @@
               i.isOverlayOpened && i.closeOverlay(),
                 E.desktop.removeEventListener(
                   "change",
-                  i.onDesktopMediaQueryChange
+                  i.onDesktopMediaQueryChange,
                 ),
                 window.removeEventListener(
                   "CookiebotOnAccept",
-                  i.onCookiebotClose
+                  i.onCookiebotClose,
                 ),
                 window.removeEventListener(
                   "CookiebotOnDecline",
-                  i.onCookiebotClose
+                  i.onCookiebotClose,
                 );
             }),
             (this.currentDeviceSize = M()),
@@ -85220,15 +85319,15 @@
                   ? this.onCookiebotOpen()
                   : window.addEventListener(
                       "CookiebotOnDialogDisplay",
-                      this.onCookiebotOpen
+                      this.onCookiebotOpen,
                     ),
                   window.addEventListener(
                     "CookiebotOnAccept",
-                    this.onCookiebotClose
+                    this.onCookiebotClose,
                   ),
                   window.addEventListener(
                     "CookiebotOnDecline",
-                    this.onCookiebotClose
+                    this.onCookiebotClose,
                   );
                 var e = document.querySelectorAll(Sr);
                 null == e ||
@@ -85347,7 +85446,7 @@
           (this.elements = {
             acceptButtons: this.getAcceptButtons(),
             closeButton: this.experienceFragmentModalComponent.querySelector(
-              this.CONFIG.CLOSE_BUTTON
+              this.CONFIG.CLOSE_BUTTON,
             ),
           }),
           this.experienceFragmentModalComponent && this.modalService();
@@ -85360,7 +85459,7 @@
             key: "getAcceptButtons",
             value: function () {
               return this.experienceFragmentModalComponent.querySelectorAll(
-                this.CONFIG.ACCEPT_BUTTON
+                this.CONFIG.ACCEPT_BUTTON,
               );
             },
           },
@@ -85397,7 +85496,7 @@
                       "CookiebotOnDialogInit",
                       function () {
                         c();
-                      }
+                      },
                     ))
                   : l(),
                   null != this.elements.acceptButtons &&
@@ -85417,20 +85516,20 @@
                       "click",
                       function () {
                         c();
-                      }
+                      },
                     ),
                   null != this.elements.closeButton &&
                     this.elements.closeButton.addEventListener(
                       "touchstart",
                       function () {
                         c();
-                      }
+                      },
                     ),
                   t.experienceFragmentModalComponent.addEventListener(
                     "touchstart",
                     function (t) {
                       !t.target.closest(".modal__wrapper-content") && c();
-                    }
+                    },
                   );
               }
               function s(t) {
@@ -85563,7 +85662,7 @@
             value: function () {
               (this.temperatureInFalconsNestWrapperElement =
                 this.temperatureInFalconsNest.querySelector(
-                  this.CONFIG.TEMPERATURE_IN_FALCONS_NEST_WRAPPER_SELECTOR
+                  this.CONFIG.TEMPERATURE_IN_FALCONS_NEST_WRAPPER_SELECTOR,
                 )),
                 (this.temperatureDataSource =
                   this.temperatureInFalconsNestWrapperElement.dataset.temperature),
@@ -85600,7 +85699,7 @@
                               (t.next = 9),
                               new window.DOMParser().parseFromString(
                                 s,
-                                "text/xml"
+                                "text/xml",
                               )
                             );
                           case 9:
@@ -85656,7 +85755,7 @@
                           case 35:
                             return t.abrupt(
                               "return",
-                              n.textContent + r.textContent
+                              n.textContent + r.textContent,
                             );
                           case 38:
                             (t.prev = 38),
@@ -85669,9 +85768,9 @@
                     },
                     t,
                     this,
-                    [[0, 38]]
+                    [[0, 38]],
                   );
-                })
+                }),
               )),
               function () {
                 return o.apply(this, arguments);
@@ -85694,7 +85793,7 @@
                               (this.temperatureInFalconsNestWrapperElement.innerHTML =
                                 this.temperatureInFalconsNestWrapperElement.innerHTML.replace(
                                   "${temperature}",
-                                  e
+                                  e,
                                 )),
                               (this.temperatureInFalconsNestWrapperElement.style.display =
                                 "block");
@@ -85704,9 +85803,9 @@
                         }
                     },
                     t,
-                    this
+                    this,
                   );
-                })
+                }),
               )),
               function () {
                 return r.apply(this, arguments);
@@ -85850,14 +85949,14 @@
           (r = i.WebKitCSSMatrix
             ? o.m41
             : 16 === n.length
-            ? parseFloat(n[12])
-            : parseFloat(n[4])),
+              ? parseFloat(n[12])
+              : parseFloat(n[4])),
         "y" === e &&
           (r = i.WebKitCSSMatrix
             ? o.m42
             : 16 === n.length
-            ? parseFloat(n[13])
-            : parseFloat(n[5])),
+              ? parseFloat(n[13])
+              : parseFloat(n[5])),
         r || 0
       );
     }
@@ -85891,9 +85990,9 @@
                   ? (t[r] = n[r])
                   : Ur(t[r], n[r])
                 : !zr(t[r]) && zr(n[r])
-                ? ((t[r] = {}),
-                  n[r].__swiper__ ? (t[r] = n[r]) : Ur(t[r], n[r]))
-                : (t[r] = n[r]));
+                  ? ((t[r] = {}),
+                    n[r].__swiper__ ? (t[r] = n[r]) : Ur(t[r], n[r]))
+                  : (t[r] = n[r]));
           }
         }
       }
@@ -85968,14 +86067,16 @@
             parseFloat(
               n
                 .getComputedStyle(t, null)
-                .getPropertyValue("width" === e ? "margin-right" : "margin-top")
+                .getPropertyValue(
+                  "width" === e ? "margin-right" : "margin-top",
+                ),
             ) +
             parseFloat(
               n
                 .getComputedStyle(t, null)
                 .getPropertyValue(
-                  "width" === e ? "margin-left" : "margin-bottom"
-                )
+                  "width" === e ? "margin-left" : "margin-bottom",
+                ),
             )
         : t.offsetWidth;
     }
@@ -86077,7 +86178,7 @@
               isSafari: e || i(),
               needPerspectiveFix: e,
               isWebView: /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(
-                t.navigator.userAgent
+                t.navigator.userAgent,
               ),
             };
           })()),
@@ -86087,7 +86188,7 @@
     const ro = (t, e) => {
         if (!t || t.destroyed || !t.params) return;
         const i = e.closest(
-          t.isElement ? "swiper-slide" : "." + t.params.slideClass
+          t.isElement ? "swiper-slide" : "." + t.params.slideClass,
         );
         if (i) {
           let e = i.querySelector("." + t.params.lazyPreloaderClass);
@@ -86095,12 +86196,12 @@
             t.isElement &&
             (i.shadowRoot
               ? (e = i.shadowRoot.querySelector(
-                  "." + t.params.lazyPreloaderClass
+                  "." + t.params.lazyPreloaderClass,
                 ))
               : requestAnimationFrame(() => {
                   i.shadowRoot &&
                     ((e = i.shadowRoot.querySelector(
-                      "." + t.params.lazyPreloaderClass
+                      "." + t.params.lazyPreloaderClass,
                     )),
                     e && e.remove());
                 })),
@@ -86477,7 +86578,7 @@
       if (
         (n >= 0 && i.evCache.splice(n, 1),
         ["pointercancel", "pointerout", "pointerleave", "contextmenu"].includes(
-          t.type
+          t.type,
         ))
       ) {
         if (
@@ -86584,8 +86685,8 @@
             (v > 1 - r.longSwipesRatio
               ? e.slideTo(p + y)
               : null !== m && v < 0 && Math.abs(v) > r.longSwipesRatio
-              ? e.slideTo(m)
-              : e.slideTo(p));
+                ? e.slideTo(m)
+                : e.slideTo(p));
       } else {
         if (!r.shortSwipes) return void e.slideTo(e.activeIndex);
         e.navigation &&
@@ -86689,7 +86790,7 @@
                 ? "resize orientationchange observerUpdate"
                 : "resize observerUpdate",
               uo,
-              !0
+              !0,
             )
           : t[c]("observerUpdate", uo, !0),
         r[l]("load", t.onLoad, { capture: !0 });
@@ -86863,18 +86964,18 @@
             return !i.eventsListeners || i.destroyed
               ? i
               : i.eventsListeners
-              ? (t.split(" ").forEach((t) => {
-                  void 0 === e
-                    ? (i.eventsListeners[t] = [])
-                    : i.eventsListeners[t] &&
-                      i.eventsListeners[t].forEach((n, r) => {
-                        (n === e ||
-                          (n.__emitterProxy && n.__emitterProxy === e)) &&
-                          i.eventsListeners[t].splice(r, 1);
-                      });
-                }),
-                i)
-              : i;
+                ? (t.split(" ").forEach((t) => {
+                    void 0 === e
+                      ? (i.eventsListeners[t] = [])
+                      : i.eventsListeners[t] &&
+                        i.eventsListeners[t].forEach((n, r) => {
+                          (n === e ||
+                            (n.__emitterProxy && n.__emitterProxy === e)) &&
+                            i.eventsListeners[t].splice(r, 1);
+                        });
+                  }),
+                  i)
+                : i;
           },
           emit() {
             const t = this;
@@ -87000,7 +87101,7 @@
               "auto" === n.slidesPerView &&
               n.breakpoints &&
               Object.keys(n.breakpoints).filter(
-                (t) => void 0 !== n.breakpoints[t].slidesPerView
+                (t) => void 0 !== n.breakpoints[t].slidesPerView,
               ).length > 0;
             for (let r = 0; r < d; r += 1) {
               let o;
@@ -87090,7 +87191,7 @@
               if (n.slidesPerGroup > 1) {
                 const i = Math.ceil(
                     (t.virtual.slidesBefore + t.virtual.slidesAfter) /
-                      n.slidesPerGroup
+                      n.slidesPerGroup,
                   ),
                   r = e * n.slidesPerGroup;
                 for (let t = 0; t < i; t += 1) p.push(p[p.length - 1] + r);
@@ -87107,7 +87208,7 @@
             if ((0 === p.length && (p = [0]), 0 !== x)) {
               const i = t.isHorizontal() && a ? "marginLeft" : e("marginRight");
               u.filter(
-                (t, e) => !(n.cssMode && !n.loop) || e !== u.length - 1
+                (t, e) => !(n.cssMode && !n.loop) || e !== u.length - 1,
               ).forEach((t) => {
                 t.style[i] = x + "px";
               });
@@ -87152,7 +87253,7 @@
                 Wr(
                   r,
                   "--swiper-centered-offset-after",
-                  t.size / 2 - g[g.length - 1] / 2 + "px"
+                  t.size / 2 - g[g.length - 1] / 2 + "px",
                 );
               const e = -t.snapGrid[0],
                 i = -t.slidesGrid[0];
@@ -87314,7 +87415,7 @@
                 t.classList.remove(
                   i.slideActiveClass,
                   i.slideNextClass,
-                  i.slidePrevClass
+                  i.slidePrevClass,
                 );
               }),
               o)
@@ -87411,11 +87512,11 @@
               e.virtual && r.virtual.enabled && r.loop
                 ? h(c)
                 : e.slides[c]
-                ? parseInt(
-                    e.slides[c].getAttribute("data-swiper-slide-index") || c,
-                    10
-                  )
-                : c),
+                  ? parseInt(
+                      e.slides[c].getAttribute("data-swiper-slide-index") || c,
+                      10,
+                    )
+                  : c),
               Object.assign(e, {
                 previousSnapIndex: a,
                 snapIndex: l,
@@ -87459,7 +87560,7 @@
               i.virtual && i.params.virtual.enabled
                 ? (i.clickedIndex = parseInt(
                     r.getAttribute("data-swiper-slide-index"),
-                    10
+                    10,
                   ))
                 : (i.clickedIndex = o),
               n.slideToClickedSlide &&
@@ -87564,7 +87665,7 @@
                           t.target === this &&
                           (o.wrapperEl.removeEventListener(
                             "transitionend",
-                            o.onTranslateToWrapperTransitionEnd
+                            o.onTranslateToWrapperTransitionEnd,
                           ),
                           (o.onTranslateToWrapperTransitionEnd = null),
                           delete o.onTranslateToWrapperTransitionEnd,
@@ -87572,7 +87673,7 @@
                       }),
                     o.wrapperEl.addEventListener(
                       "transitionend",
-                      o.onTranslateToWrapperTransitionEnd
+                      o.onTranslateToWrapperTransitionEnd,
                     ))),
               !0
             );
@@ -87730,7 +87831,7 @@
                         t.target === this &&
                         (o.wrapperEl.removeEventListener(
                           "transitionend",
-                          o.onSlideToWrapperTransitionEnd
+                          o.onSlideToWrapperTransitionEnd,
                         ),
                         (o.onSlideToWrapperTransitionEnd = null),
                         delete o.onSlideToWrapperTransitionEnd,
@@ -87738,7 +87839,7 @@
                     }),
                   o.wrapperEl.addEventListener(
                     "transitionend",
-                    o.onSlideToWrapperTransitionEnd
+                    o.onSlideToWrapperTransitionEnd,
                   )),
               !0
             );
@@ -87893,28 +87994,28 @@
               if (t.animating) return;
               (r = parseInt(
                 t.clickedSlide.getAttribute("data-swiper-slide-index"),
-                10
+                10,
               )),
                 e.centeredSlides
                   ? o < t.loopedSlides - n / 2 ||
                     o > t.slides.length - t.loopedSlides + n / 2
                     ? (t.loopFix(),
                       (o = t.getSlideIndex(
-                        Xr(i, `${s}[data-swiper-slide-index="${r}"]`)[0]
+                        Xr(i, `${s}[data-swiper-slide-index="${r}"]`)[0],
                       )),
                       Br(() => {
                         t.slideTo(o);
                       }))
                     : t.slideTo(o)
                   : o > t.slides.length - n
-                  ? (t.loopFix(),
-                    (o = t.getSlideIndex(
-                      Xr(i, `${s}[data-swiper-slide-index="${r}"]`)[0]
-                    )),
-                    Br(() => {
-                      t.slideTo(o);
-                    }))
-                  : t.slideTo(o);
+                    ? (t.loopFix(),
+                      (o = t.getSlideIndex(
+                        Xr(i, `${s}[data-swiper-slide-index="${r}"]`)[0],
+                      )),
+                      Br(() => {
+                        t.slideTo(o);
+                      }))
+                    : t.slideTo(o);
             } else t.slideTo(o);
           },
         },
@@ -87964,7 +88065,7 @@
                           l.virtual.slides.length + l.snapIndex,
                           0,
                           !1,
-                          !0
+                          !0,
                         )
                       : l.snapIndex === l.snapGrid.length - 1 &&
                         l.slideTo(l.virtual.slidesBefore, 0, !1, !0)
@@ -87987,8 +88088,8 @@
             void 0 === o
               ? (o = l.getSlideIndex(
                   l.slides.filter((t) =>
-                    t.classList.contains(p.slideActiveClass)
-                  )[0]
+                    t.classList.contains(p.slideActiveClass),
+                  )[0],
                 ))
               : (y = o);
             const b = "next" === n || !n,
@@ -88175,7 +88276,7 @@
             l && !c
               ? (r.classList.remove(
                   n.containerModifierClass + "grid",
-                  n.containerModifierClass + "grid-column"
+                  n.containerModifierClass + "grid-column",
                 ),
                 t.emitContainerClasses())
               : !l &&
@@ -88209,8 +88310,8 @@
                 (d
                   ? (t.loopDestroy(), t.loopCreate(e), t.updateSlides())
                   : !p && g
-                  ? (t.loopCreate(e), t.updateSlides())
-                  : p && !g && t.loopDestroy()),
+                    ? (t.loopCreate(e), t.updateSlides())
+                    : p && !g && t.loopDestroy()),
               t.emit("breakpoint", a);
           },
           getBreakpoint: function (t, e, i) {
@@ -88287,7 +88388,7 @@
                   { centered: e.cssMode && e.centeredSlides },
                   { "watch-progress": e.watchSlidesProgress },
                 ],
-                e.containerModifierClass
+                e.containerModifierClass,
               );
             t.push(...o), n.classList.add(...t), this.emitContainerClasses();
           },
@@ -88424,8 +88525,8 @@
       getSlideIndexByData(t) {
         return this.getSlideIndex(
           this.slides.filter(
-            (e) => 1 * e.getAttribute("data-swiper-slide-index") === t
-          )[0]
+            (e) => 1 * e.getAttribute("data-swiper-slide-index") === t,
+          )[0],
         );
       }
       recalcSlides() {
@@ -88462,7 +88563,7 @@
           .filter(
             (e) =>
               0 === e.indexOf("swiper") ||
-              0 === e.indexOf(t.params.containerModifierClass)
+              0 === e.indexOf(t.params.containerModifierClass),
           );
         t.emit("_containerClasses", e.join(" "));
       }
@@ -88475,7 +88576,7 @@
               .filter(
                 (t) =>
                   0 === t.indexOf("swiper-slide") ||
-                  0 === t.indexOf(e.params.slideClass)
+                  0 === t.indexOf(e.params.slideClass),
               )
               .join(" ");
       }
@@ -88654,14 +88755,14 @@
                 0,
                 e.params.runCallbacksOnInit,
                 !1,
-                !0
+                !0,
               )
             : e.slideTo(
                 e.params.initialSlide,
                 0,
                 e.params.runCallbacksOnInit,
                 !1,
-                !0
+                !0,
               ),
           e.params.loop && e.loopCreate(),
           e.attachEvents();
@@ -88706,7 +88807,7 @@
                     n.slideVisibleClass,
                     n.slideActiveClass,
                     n.slideNextClass,
-                    n.slidePrevClass
+                    n.slidePrevClass,
                   ),
                     t.removeAttribute("style"),
                     t.removeAttribute("data-swiper-slide-index");
@@ -88832,7 +88933,7 @@
             e,
             e.originalParams.navigation,
             e.params.navigation,
-            { nextEl: "swiper-button-next", prevEl: "swiper-button-prev" }
+            { nextEl: "swiper-button-next", prevEl: "swiper-button-prev" },
           )),
           !t.nextEl && !t.prevEl)
         )
@@ -88875,7 +88976,7 @@
               : [...t, ...i]
                   .filter((t) => !!t)
                   .forEach((t) =>
-                    t.classList.add(e.params.navigation.lockClass)
+                    t.classList.add(e.params.navigation.lockClass),
                   );
         }),
         n("click", (t, i) => {
@@ -88903,20 +89004,20 @@
               [...n, ...s]
                 .filter((t) => !!t)
                 .forEach((t) =>
-                  t.classList.toggle(e.params.navigation.hiddenClass)
+                  t.classList.toggle(e.params.navigation.hiddenClass),
                 );
           }
         });
       const p = () => {
         e.el.classList.add(
-          ...e.params.navigation.navigationDisabledClass.split(" ")
+          ...e.params.navigation.navigationDisabledClass.split(" "),
         ),
           d();
       };
       Object.assign(e.navigation, {
         enable: () => {
           e.el.classList.remove(
-            ...e.params.navigation.navigationDisabledClass.split(" ")
+            ...e.params.navigation.navigationDisabledClass.split(" "),
           ),
             u(),
             l();
@@ -89079,7 +89180,7 @@
                 n,
                 t.slideLabelMessage
                   .replace(/\{\{index\}\}/, o + 1)
-                  .replace(/\{\{slidesLength\}\}/, i)
+                  .replace(/\{\{slidesLength\}\}/, i),
               );
             });
         },
@@ -89099,7 +89200,7 @@
                 "x"
                   .repeat(a)
                   .replace(/x/g, () =>
-                    Math.round(16 * Math.random()).toString(16)
+                    Math.round(16 * Math.random()).toString(16),
                   ));
           var a;
           const l =
@@ -89146,7 +89247,7 @@
           "slidesLengthChange snapGridLengthChange slidesGridLengthChange",
           () => {
             e.params.a11y.enabled && w();
-          }
+          },
         ),
         n("fromEdge toEdge afterInit lock unlock", () => {
           e.params.a11y.enabled &&
@@ -89171,8 +89272,8 @@
                         i,
                         t.paginationBulletMessage.replace(
                           /\{\{index\}\}/,
-                          Kr(i) + 1
-                        )
+                          Kr(i) + 1,
+                        ),
                       ))),
                     i.matches(Ao(e.params.pagination.bulletActiveClass))
                       ? i.setAttribute("aria-current", "true")
@@ -89259,7 +89360,7 @@
         }
         return (
           e.thumbs.swiper.el.classList.add(
-            e.params.thumbs.thumbsContainerClass
+            e.params.thumbs.thumbsContainerClass,
           ),
           e.thumbs.swiper.on("tap", s),
           !0
@@ -89286,7 +89387,7 @@
           for (let t = 0; t < r; t += 1)
             Xr(
               i.slidesEl,
-              `[data-swiper-slide-index="${e.realIndex + t}"]`
+              `[data-swiper-slide-index="${e.realIndex + t}"]`,
             ).forEach((t) => {
               t.classList.add(o);
             });
@@ -89302,7 +89403,7 @@
           if (i.params.loop) {
             const t = i.slides.filter(
               (t) =>
-                t.getAttribute("data-swiper-slide-index") === "" + e.realIndex
+                t.getAttribute("data-swiper-slide-index") === "" + e.realIndex,
             )[0];
             (o = i.slides.indexOf(t)),
               (l = e.activeIndex > e.previousIndex ? "next" : "prev");
@@ -89442,7 +89543,7 @@
                   s.requestAnimationFrame
                     ? s.requestAnimationFrame(i)
                     : s.setTimeout(i, 0);
-                }
+                },
               );
               n.observe(t, {
                 attributes: void 0 === i.attributes || i.attributes,
@@ -89493,10 +89594,10 @@
               SWIPER_NAV_THUMBS_NEXT: "swiper-button-next--thumbs",
               SWIPER_NAV_THUMBS_PREV: "swiper-button-prev--thumbs",
               MAIN_GALLERY_ID: "cmp-gallery__main--ID-".concat(
-                Math.random().toString(16).slice(2)
+                Math.random().toString(16).slice(2),
               ),
               THUMBS_GALLERY_ID: "cmp-gallery__thumbs--ID-".concat(
-                Math.random().toString(16).slice(2)
+                Math.random().toString(16).slice(2),
               ),
               CLOSE_BUTTON: "close-button",
               UTILS_BUTTON_WRAPPER: "swiper-utils__buttons-wrapper",
@@ -89518,7 +89619,7 @@
             }),
             (this.DOMElements = {
               galleryContainer: this.component.querySelector(
-                this.selectors.GALLERY_CONTAINER_SELECTOR
+                this.selectors.GALLERY_CONTAINER_SELECTOR,
               ),
               galleryTitle: null,
               mainGallery: null,
@@ -89583,10 +89684,10 @@
               return JSON.parse(
                 null ===
                   (t = this.component.querySelector(
-                    this.selectors.GALLERY_CONTAINER_SELECTOR
+                    this.selectors.GALLERY_CONTAINER_SELECTOR,
                   )) || void 0 === t
                   ? void 0
-                  : t.dataset.galleryData
+                  : t.dataset.galleryData,
               );
             },
           },
@@ -89595,11 +89696,11 @@
             value: function () {
               this.createGalleryContainerHelper(
                 this.selectors.MAIN_GALLERY_CONTAINER,
-                !1
+                !1,
               ),
                 this.createGalleryContainerHelper(
                   this.selectors.THUMBS_GALLERY_CONTAINER,
-                  !0
+                  !0,
                 );
             },
           },
@@ -89609,11 +89710,11 @@
               var i = this.createElementWithClass(
                   "div",
                   this.selectors.SWIPER,
-                  t
+                  t,
                 ),
                 n = this.createElementWithClass(
                   "div",
-                  this.selectors.SWIPER_WRAPPER
+                  this.selectors.SWIPER_WRAPPER,
                 );
               e
                 ? (i.setAttribute("thumbsSlider", ""),
@@ -89653,7 +89754,7 @@
             value: function (t, e) {
               var i = this.createElementWithClass(
                   "div",
-                  this.selectors.SWIPER_SLIDE
+                  this.selectors.SWIPER_SLIDE,
                 ),
                 n = "video" === t.type;
               if (
@@ -89667,7 +89768,7 @@
                 var r = document.createElement("div"),
                   o = this.createElementWithClass(
                     "div",
-                    this.selectors.UTILS_BUTTON_WRAPPER
+                    this.selectors.UTILS_BUTTON_WRAPPER,
                   );
                 r.classList.add(this.selectors.SWIPER_UTILS),
                   this.includeDownloadBtn &&
@@ -89698,8 +89799,8 @@
                   return t.smallUrl
                     ? t.smallUrl
                     : t.mediumUrl
-                    ? t.mediumUrl
-                    : i;
+                      ? t.mediumUrl
+                      : i;
                 case C:
                   return t.mediumUrl ? t.mediumUrl : i;
                 case T:
@@ -89727,19 +89828,19 @@
               if (!(!this.DATA.assetsList.length > 0)) {
                 var t = this.createElementWithClass(
                     "button",
-                    this.selectors.SWIPER_NAV_NEXT
+                    this.selectors.SWIPER_NAV_NEXT,
                   ),
                   e = this.createElementWithClass(
                     "button",
-                    this.selectors.SWIPER_NAV_PREV
+                    this.selectors.SWIPER_NAV_PREV,
                   ),
                   i = this.createElementWithClass(
                     "button",
-                    this.selectors.SWIPER_NAV_THUMBS_NEXT
+                    this.selectors.SWIPER_NAV_THUMBS_NEXT,
                   ),
                   n = this.createElementWithClass(
                     "button",
-                    this.selectors.SWIPER_NAV_THUMBS_PREV
+                    this.selectors.SWIPER_NAV_THUMBS_PREV,
                   );
                 this.DOMElements.mainGallery.prepend(t),
                   this.DOMElements.mainGallery.prepend(e),
@@ -89752,10 +89853,10 @@
             key: "appendGalleryIDs",
             value: function () {
               this.DOMElements.mainGallery.classList.add(
-                this.selectors.MAIN_GALLERY_ID
+                this.selectors.MAIN_GALLERY_ID,
               ),
                 this.DOMElements.thumbsGallery.classList.add(
-                  this.selectors.THUMBS_GALLERY_ID
+                  this.selectors.THUMBS_GALLERY_ID,
                 );
             },
           },
@@ -89771,11 +89872,11 @@
             value: function (t, e) {
               var i = this.createElementWithClass(
                   "div",
-                  this.selectors.DESCRIPTION_CONTAINER
+                  this.selectors.DESCRIPTION_CONTAINER,
                 ),
                 n = this.createElementWithClass(
                   "p",
-                  this.selectors.ASSET_DESCRIPTION
+                  this.selectors.ASSET_DESCRIPTION,
                 );
               n.value = t.visibleDesc ? t.visibleDesc : t.desc;
               var r = document.createTextNode(n.value);
@@ -89788,30 +89889,30 @@
               var t = this,
                 e = this.createElementWithClass(
                   "div",
-                  this.selectors.POPUP_BACKGROUND
+                  this.selectors.POPUP_BACKGROUND,
                 ),
                 i = this.createElementWithClass(
                   "div",
-                  this.selectors.POPUP_WRAPPER
+                  this.selectors.POPUP_WRAPPER,
                 ),
                 n = this.createElementWithClass(
                   "div",
-                  this.selectors.POPUP_CLOSE_BUTTON
+                  this.selectors.POPUP_CLOSE_BUTTON,
                 ),
                 r = this.createElementWithClass(
                   "div",
-                  this.selectors.GALLERY_CLASS
+                  this.selectors.GALLERY_CLASS,
                 ),
                 o = this.createElementWithClass(
                   "div",
-                  this.selectors.GALLERY_CONTAINER_CLASS
+                  this.selectors.GALLERY_CONTAINER_CLASS,
                 ),
                 s = function () {
                   t.DOMElements.galleryContainer.appendChild(
-                    t.DOMElements.mainGallery
+                    t.DOMElements.mainGallery,
                   ),
                     t.DOMElements.galleryContainer.appendChild(
-                      t.DOMElements.thumbsGallery
+                      t.DOMElements.thumbsGallery,
                     ),
                     e.remove(),
                     document.body.classList.remove(t.selectors.LOCK_SCROLL);
@@ -89828,14 +89929,14 @@
                   39 === e.keyCode &&
                     (null ===
                       (n = i.querySelector(
-                        ".".concat(t.selectors.SWIPER_NAV_NEXT)
+                        ".".concat(t.selectors.SWIPER_NAV_NEXT),
                       )) ||
                       void 0 === n ||
                       n.click()),
                     37 === e.keyCode &&
                       (null ===
                         (r = i.querySelector(
-                          ".".concat(t.selectors.SWIPER_NAV_PREV)
+                          ".".concat(t.selectors.SWIPER_NAV_PREV),
                         )) ||
                         void 0 === r ||
                         r.click());
@@ -89853,7 +89954,7 @@
               if (!e) {
                 var n = this.createElementWithClass(
                   "button",
-                  this.selectors.FULLSCREEN_ASSETS
+                  this.selectors.FULLSCREEN_ASSETS,
                 );
                 (n.ariaLabel = this.labels.fullScreenAriaLabel),
                   n.addEventListener("click", function () {
@@ -89878,7 +89979,7 @@
               var n = this,
                 r = this.createElementWithClass(
                   "button",
-                  this.selectors.DOWNLOAD_ASSETS
+                  this.selectors.DOWNLOAD_ASSETS,
                 );
               r.ariaLabel = this.labels.downloadAriaLabel;
               var o = function () {
@@ -89908,7 +90009,7 @@
             value: function (t, e) {
               var i = this.createElementWithClass(
                   "div",
-                  this.selectors.DOWNLOAD_CONTAINER
+                  this.selectors.DOWNLOAD_CONTAINER,
                 ),
                 n = document.createElement("a");
               n.setAttribute("href", t.url),
@@ -89923,35 +90024,35 @@
             value: function (t, e) {
               var i = this.createElementWithClass(
                 "div",
-                this.selectors.DOWNLOAD_CONTAINER
+                this.selectors.DOWNLOAD_CONTAINER,
               );
               i.appendChild(
                 this.downloadAssetOptionsGenerator(
                   t.name,
                   t.smallUrl,
-                  this.labels.smallImg
-                )
+                  this.labels.smallImg,
+                ),
               ),
                 i.appendChild(
                   this.downloadAssetOptionsGenerator(
                     t.name,
                     t.mediumUrl,
-                    this.labels.mediumImg
-                  )
+                    this.labels.mediumImg,
+                  ),
                 ),
                 i.appendChild(
                   this.downloadAssetOptionsGenerator(
                     t.name,
                     t.bigUrl,
-                    this.labels.bigImg
-                  )
+                    this.labels.bigImg,
+                  ),
                 ),
                 i.appendChild(
                   this.downloadAssetOptionsGenerator(
                     t.name,
                     t.url,
-                    this.labels.originalImg
-                  )
+                    this.labels.originalImg,
+                  ),
                 ),
                 e.appendChild(i);
             },
@@ -90033,7 +90134,7 @@
           window.top.document.querySelector(this.elements.AuthoringIframe) &&
             window.top.document.addEventListener(
               "refreshFrontendComponents",
-              this.authorRefreshComponents.bind(this)
+              this.authorRefreshComponents.bind(this),
             );
       }
       return (
@@ -90056,9 +90157,9 @@
                     t.initSafely(function () {
                       return n(i);
                     }, e);
-                  }.bind(this)
+                  }.bind(this),
                 );
-              }.bind(this)
+              }.bind(this),
             );
         }),
         (t.prototype.authorRefreshComponents = function (e) {
@@ -90067,7 +90168,7 @@
                 function () {
                   this.initializeComponents();
                 }.bind(this),
-                500
+                500,
               );
             }.bind(this),
             n = function (e) {
@@ -90085,11 +90186,11 @@
                               return n(i);
                             }, e),
                             clearInterval(r));
-                        }.bind(this)
+                        }.bind(this),
                       ),
                       ++i > 25 && clearInterval(r);
                   }.bind(this),
-                  200
+                  200,
                 );
             }.bind(this),
             r = e.component;

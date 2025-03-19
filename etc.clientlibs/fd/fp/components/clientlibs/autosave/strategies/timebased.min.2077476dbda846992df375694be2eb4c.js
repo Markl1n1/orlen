@@ -56,13 +56,13 @@
           for (var f in b)
             (a = JSON.parse(b[f])),
               (d[a.key] = window.guideBridge._guide._compileExpression(
-                a.value
+                a.value,
               )());
         else
           "string" === typeof b &&
             ((a = JSON.parse(b)),
             (d[a.key] = window.guideBridge._guide._compileExpression(
-              a.value
+              a.value,
             )()));
       return { metadata: d, enableAnonymous: c, fpWhen: e };
     };

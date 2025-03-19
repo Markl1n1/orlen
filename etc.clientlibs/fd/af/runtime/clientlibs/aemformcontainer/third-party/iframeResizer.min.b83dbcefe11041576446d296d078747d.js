@@ -55,7 +55,7 @@
           I(g);
         },
         l,
-        "init"
+        "init",
       );
     }
     function e() {
@@ -110,7 +110,7 @@
             l.iframe.id +
             ". Message was: " +
             a.data +
-            ". This error can be disabled by setting the checkOrigin: false option or by providing of array of trusted domains."
+            ". This error can be disabled by setting the checkOrigin: false option or by providing of array of trusted domains.",
         );
       return !0;
     }
@@ -125,7 +125,7 @@
           l.iframe.id +
           ", message: " +
           a +
-          "}"
+          "}",
       );
       a = { iframe: l.iframe, message: JSON.parse(a) };
       u(g, "messageCallback", a);
@@ -139,11 +139,11 @@
         d = JSON.stringify({
           clientHeight: Math.max(
             document.documentElement.clientHeight,
-            f.innerHeight || 0
+            f.innerHeight || 0,
           ),
           clientWidth: Math.max(
             document.documentElement.clientWidth,
-            f.innerWidth || 0
+            f.innerWidth || 0,
           ),
           offsetTop: parseInt(e.top - d.top, 10),
           offsetLeft: parseInt(e.left - d.left, 10),
@@ -193,14 +193,14 @@
         c = { x: Number(l.width) + b.x, y: Number(l.height) + b.y };
       k(
         g,
-        "Reposition requested from iFrame (offset x:" + b.x + " y:" + b.y + ")"
+        "Reposition requested from iFrame (offset x:" + b.x + " y:" + b.y + ")",
       );
       f.top !== f.self
         ? f.parentIFrame
           ? f.parentIFrame["scrollTo" + (a ? "Offset" : "")](c.x, c.y)
           : x(
               g,
-              "Unable to scroll to requested position, window.parentIFrame not found"
+              "Unable to scroll to requested position, window.parentIFrame not found",
             )
         : ((m = c), w(), k(g, "--"));
     }
@@ -214,21 +214,21 @@
         ? ((b = t(b)),
           k(
             g,
-            "Moving to in page link (#" + a + ") at x: " + b.x + " y: " + b.y
+            "Moving to in page link (#" + a + ") at x: " + b.x + " y: " + b.y,
           ),
           (m = { x: b.x, y: b.y }),
           w(),
           k(g, "--"))
         : f.top !== f.self
-        ? f.parentIFrame
-          ? f.parentIFrame.moveToAnchor(a)
-          : k(
-              g,
-              "In page link #" +
-                a +
-                " not found and window.parentIFrame not found"
-            )
-        : k(g, "In page link #" + a + " not found");
+          ? f.parentIFrame
+            ? f.parentIFrame.moveToAnchor(a)
+            : k(
+                g,
+                "In page link #" +
+                  a +
+                  " not found and window.parentIFrame not found",
+              )
+          : k(g, "In page link #" + a + " not found");
     }
     function D(a) {
       var c = !0;
@@ -332,7 +332,7 @@
   function O(a) {
     k(
       a.id,
-      "Size reset requested by " + ("init" === a.type ? "host page" : "iFrame")
+      "Size reset requested by " + ("init" === a.type ? "host page" : "iFrame"),
     );
     K(a.id);
     G(
@@ -341,7 +341,7 @@
         p("reset", "reset", a.iframe, a.id);
       },
       a,
-      "reset"
+      "reset",
     );
   }
   function H(a) {
@@ -374,7 +374,7 @@
             "] (" +
             d +
             ") targetOrigin: " +
-            f
+            f,
         );
         e.contentWindow.postMessage(B + d, f);
       } else
@@ -382,7 +382,7 @@
           "info",
           c,
           "[" + a + "] IFrame(" + c + ") not found",
-          b[c] ? b[c].log : A
+          b[c] ? b[c].log : A,
         ),
           b[c] && delete b[c];
   }
@@ -496,7 +496,7 @@
           "IFrame scrolling " +
             (b[h].scrolling ? "enabled" : "disabled") +
             " for " +
-            h
+            h,
         ),
         (a.style.overflow = !1 === b[h].scrolling ? "hidden" : "auto"),
         (a.scrolling = !1 === b[h].scrolling ? "no" : "yes"),
@@ -581,7 +581,7 @@
           throw new TypeError("Object is not a valid DOM element");
         if ("IFRAME" !== c.tagName.toUpperCase())
           throw new TypeError(
-            "Expected \x3cIFRAME\x3e tag, found \x3c" + c.tagName + "\x3e"
+            "Expected \x3cIFRAME\x3e tag, found \x3c" + c.tagName + "\x3e",
           );
         E(c, a);
         b.push(c);
@@ -597,7 +597,7 @@
           case "string":
             Array.prototype.forEach.call(
               document.querySelectorAll(c || "iframe"),
-              a.bind(void 0, d)
+              a.bind(void 0, d),
             );
             break;
           case "object":
@@ -667,6 +667,6 @@
   "function" == typeof define && define.amd
     ? define([], y)
     : "object" == typeof module && "object" == typeof module.exports
-    ? (module.exports = y())
-    : (f.iFrameResize = f.iFrameResize || y());
+      ? (module.exports = y())
+      : (f.iFrameResize = f.iFrameResize || y());
 })(window || {});

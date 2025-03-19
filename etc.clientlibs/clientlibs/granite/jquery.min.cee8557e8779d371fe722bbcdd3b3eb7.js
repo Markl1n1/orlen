@@ -94,14 +94,14 @@
             "true" === d
               ? !0
               : "false" === d
-              ? !1
-              : "null" === d
-              ? null
-              : +d + "" === d
-              ? +d
-              : hc.test(d)
-              ? c.parseJSON(d)
-              : d;
+                ? !1
+                : "null" === d
+                  ? null
+                  : +d + "" === d
+                    ? +d
+                    : hc.test(d)
+                      ? c.parseJSON(d)
+                      : d;
         } catch (e) {}
         c.data(a, b, d);
       } else d = void 0;
@@ -149,8 +149,8 @@
           c.isArray(b)
             ? (b = b.concat(c.map(b, c.camelCase)))
             : b in e
-            ? (b = [b])
-            : ((b = c.camelCase(b)), (b = b in e ? [b] : b.split(" ")));
+              ? (b = [b])
+              : ((b = c.camelCase(b)), (b = b in e ? [b] : b.split(" ")));
           for (f = b.length; f--; ) delete e[b[f]];
           if (d ? !La(e) : !c.isEmptyObject(e)) return;
         }
@@ -158,8 +158,8 @@
         g
           ? c.cleanData([a], !0)
           : q.deleteExpando || h != h.window
-          ? delete h[l]
-          : (h[l] = void 0);
+            ? delete h[l]
+            : (h[l] = void 0);
       }
     }
   }
@@ -193,7 +193,7 @@
   function nb(a) {
     var b =
       "abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video".split(
-        " "
+        " ",
       );
     a = a.createDocumentFragment();
     if (a.createElement) for (; b.length; ) a.createElement(b.pop());
@@ -207,8 +207,8 @@
         "undefined" !== typeof a.getElementsByTagName
           ? a.getElementsByTagName(b || "*")
           : "undefined" !== typeof a.querySelectorAll
-          ? a.querySelectorAll(b || "*")
-          : void 0;
+            ? a.querySelectorAll(b || "*")
+            : void 0;
     if (!g)
       for (g = [], d = a.childNodes || a; null != (e = d[f]); f++)
         !b || c.nodeName(e, b) ? g.push(e) : c.merge(g, y(e, b));
@@ -376,8 +376,8 @@
                   : c.globalEval(
                       (t.text || t.textContent || t.innerHTML || "").replace(
                         mc,
-                        ""
-                      )
+                        "",
+                      ),
                     ));
         r = t = null;
       }
@@ -560,7 +560,7 @@
             k.opts,
             b,
             d,
-            k.opts.specialEasing[b] || k.opts.easing
+            k.opts.specialEasing[b] || k.opts.easing,
           );
           k.tweens.push(b);
           return b;
@@ -654,7 +654,7 @@
               a + "[" + ("object" === typeof c && null != c ? b : "") + "]",
               c,
               d,
-              e
+              e,
             );
       });
     else if (d || "object" !== c.type(b)) e(a, b);
@@ -674,8 +674,8 @@
     return c.isWindow(a)
       ? a
       : 9 === a.nodeType
-      ? a.defaultView || a.parentWindow
-      : !1;
+        ? a.defaultView || a.parentWindow
+        : !1;
   }
   var R = [],
     n = p.document,
@@ -724,7 +724,7 @@
       return this.pushStack(
         c.map(this, function (b, c) {
           return a.call(b, c, b);
-        })
+        }),
       );
     },
     slice: function () {
@@ -823,8 +823,8 @@
       return null == a
         ? a + ""
         : "object" === typeof a || "function" === typeof a
-        ? Da[rc.call(a)] || "object"
-        : typeof a;
+          ? Da[rc.call(a)] || "object"
+          : typeof a;
     },
     globalEval: function (a) {
       a &&
@@ -916,11 +916,11 @@
   "function" === typeof Symbol && (c.fn[Symbol.iterator] = R[Symbol.iterator]);
   c.each(
     "Boolean Number String Function Array Date RegExp Object Error Symbol".split(
-      " "
+      " ",
     ),
     function (a, b) {
       Da["[object " + b + "]"] = b.toLowerCase();
-    }
+    },
   );
   var sa = (function (a) {
     function b(a, b, c, d) {
@@ -1126,7 +1126,9 @@
                 -1 < (n = g ? E(e, l) : k[u]) &&
                 (e[n] = !(h[n] = l));
           }
-        } else (r = y(r === h ? r.splice(U, r.length) : r)), g ? g(null, h, r, v) : C.apply(h, r);
+        } else
+          (r = y(r === h ? r.splice(U, r.length) : r)),
+            g ? g(null, h, r, v) : C.apply(h, r);
       });
     }
     function P(a) {
@@ -1142,14 +1144,14 @@
               return a === b;
             },
             f,
-            !0
+            !0,
           ),
           u = q(
             function (a) {
               return -1 < E(b, a);
             },
             f,
-            !0
+            !0,
           ),
           l = [
             function (a, c, d) {
@@ -1174,12 +1176,12 @@
                 p(
                   a
                     .slice(0, g - 1)
-                    .concat({ value: " " === a[g - 2].type ? "*" : "" })
+                    .concat({ value: " " === a[g - 2].type ? "*" : "" }),
                 ).replace(T, "$1"),
               f,
               g < c && P(a.slice(g, c)),
               c < d && P((a = a.slice(c))),
-              c < d && p(a)
+              c < d && p(a),
             );
           }
           l.push(f);
@@ -1297,8 +1299,8 @@
         return a !== a || c
           ? b
           : 0 > a
-          ? String.fromCharCode(a + 65536)
-          : String.fromCharCode((a >> 10) | 55296, (a & 1023) | 56320);
+            ? String.fromCharCode(a + 65536)
+            : String.fromCharCode((a >> 10) | 55296, (a & 1023) | 56320);
       },
       pa = function () {
         xa();
@@ -1407,7 +1409,7 @@
             O.push("[*^$]\x3d[\\x20\\t\\r\\n\\f]*(?:''|\"\")");
           a.querySelectorAll("[selected]").length ||
             O.push(
-              "\\[[\\x20\\t\\r\\n\\f]*(?:value|checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped)"
+              "\\[[\\x20\\t\\r\\n\\f]*(?:value|checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped)",
             );
           a.querySelectorAll("[id~\x3d" + z + "-]").length || O.push("~\x3d");
           a.querySelectorAll(":checked").length || O.push(":checked");
@@ -1430,14 +1432,14 @@
           Z.webkitMatchesSelector ||
           Z.mozMatchesSelector ||
           Z.oMatchesSelector ||
-          Z.msMatchesSelector)
+          Z.msMatchesSelector),
       )) &&
         f(function (a) {
           F.disconnectedMatch = Ea.call(a, "div");
           Ea.call(a, "[s!\x3d'']:x");
           ya.push(
             "!\x3d",
-            ":((?:\\\\.|[\\w-]|[^\\x00-\\xa0])+)(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|\\[[\\x20\\t\\r\\n\\f]*((?:\\\\.|[\\w-]|[^\\x00-\\xa0])+)(?:[\\x20\\t\\r\\n\\f]*([*^$|!~]?\x3d)[\\x20\\t\\r\\n\\f]*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|((?:\\\\.|[\\w-]|[^\\x00-\\xa0])+))|)[\\x20\\t\\r\\n\\f]*\\])*)|.*)\\)|)"
+            ":((?:\\\\.|[\\w-]|[^\\x00-\\xa0])+)(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|\\[[\\x20\\t\\r\\n\\f]*((?:\\\\.|[\\w-]|[^\\x00-\\xa0])+)(?:[\\x20\\t\\r\\n\\f]*([*^$|!~]?\x3d)[\\x20\\t\\r\\n\\f]*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|((?:\\\\.|[\\w-]|[^\\x00-\\xa0])+))|)[\\x20\\t\\r\\n\\f]*\\])*)|.*)\\)|)",
           );
         });
       O = O.length && new RegExp(O.join("|"));
@@ -1477,13 +1479,13 @@
               ? a === w || (a.ownerDocument === A && Aa(A, a))
                 ? -1
                 : b === w || (b.ownerDocument === A && Aa(A, b))
-                ? 1
-                : K
-                ? E(K, a) - E(K, b)
-                : 0
+                  ? 1
+                  : K
+                    ? E(K, a) - E(K, b)
+                    : 0
               : c & 4
-              ? -1
-              : 1;
+                ? -1
+                : 1;
           }
         : function (a, b) {
             if (a === b) return (Q = !0), 0;
@@ -1496,14 +1498,14 @@
               return a === w
                 ? -1
                 : b === w
-                ? 1
-                : d
-                ? -1
-                : e
-                ? 1
-                : K
-                ? E(K, a) - E(K, b)
-                : 0;
+                  ? 1
+                  : d
+                    ? -1
+                    : e
+                      ? 1
+                      : K
+                        ? E(K, a) - E(K, b)
+                        : 0;
             if (d === e) return h(a, b);
             for (; (a = a.parentNode); ) f.unshift(a);
             for (a = b; (a = a.parentNode); ) g.unshift(a);
@@ -1549,10 +1551,10 @@
       return void 0 !== c
         ? c
         : F.attributes || !Y
-        ? a.getAttribute(b)
-        : (c = a.getAttributeNode(b)) && c.specified
-        ? c.value
-        : null;
+          ? a.getAttribute(b)
+          : (c = a.getAttributeNode(b)) && c.specified
+            ? c.value
+            : null;
     };
     b.error = function (a) {
       throw Error("Syntax error, unrecognized expression: " + a);
@@ -1643,14 +1645,14 @@
           return (
             b ||
             ((b = new RegExp(
-              "(^|[\\x20\\t\\r\\n\\f])" + a + "([\\x20\\t\\r\\n\\f]|$)"
+              "(^|[\\x20\\t\\r\\n\\f])" + a + "([\\x20\\t\\r\\n\\f]|$)",
             )),
             G(a, function (a) {
               return b.test(
                 ("string" === typeof a.className && a.className) ||
                   ("undefined" !== typeof a.getAttribute &&
                     a.getAttribute("class")) ||
-                  ""
+                  "",
               );
             }))
           );
@@ -1664,18 +1666,18 @@
             return "\x3d" === c
               ? e === d
               : "!\x3d" === c
-              ? e !== d
-              : "^\x3d" === c
-              ? d && 0 === e.indexOf(d)
-              : "*\x3d" === c
-              ? d && -1 < e.indexOf(d)
-              : "$\x3d" === c
-              ? d && e.slice(-d.length) === d
-              : "~\x3d" === c
-              ? -1 < (" " + e.replace(ea, " ") + " ").indexOf(d)
-              : "|\x3d" === c
-              ? e === d || e.slice(0, d.length + 1) === d + "-"
-              : !1;
+                ? e !== d
+                : "^\x3d" === c
+                  ? d && 0 === e.indexOf(d)
+                  : "*\x3d" === c
+                    ? d && -1 < e.indexOf(d)
+                    : "$\x3d" === c
+                      ? d && e.slice(-d.length) === d
+                      : "~\x3d" === c
+                        ? -1 < (" " + e.replace(ea, " ") + " ").indexOf(d)
+                        : "|\x3d" === c
+                          ? e === d || e.slice(0, d.length + 1) === d + "-"
+                          : !1;
           };
         },
         CHILD: function (a, b, c, d, e) {
@@ -1970,7 +1972,7 @@
             if (
               (d = g(
                 f.matches[0].replace(ma, na),
-                (da.test(k[0].type) && r(b.parentNode)) || b
+                (da.test(k[0].type) && r(b.parentNode)) || b,
               ))
             ) {
               k.splice(e, 1);
@@ -2016,9 +2018,9 @@
             return !0 === a[b]
               ? b.toLowerCase()
               : (d = a.getAttributeNode(b)) && d.specified
-              ? d.value
-              : null;
-        }
+                ? d.value
+                : null;
+        },
       );
     return b;
   })(p);
@@ -2056,7 +2058,7 @@
           a,
           c.grep(b, function (a) {
             return 1 === a.nodeType;
-          })
+          }),
         );
   };
   c.fn.extend({
@@ -2069,7 +2071,7 @@
         return this.pushStack(
           c(a).filter(function () {
             for (b = 0; b < f; b++) if (c.contains(e[b], this)) return !0;
-          })
+          }),
         );
       for (b = 0; b < f; b++) c.find(a, e[b], d);
       d = this.pushStack(1 < f ? c.unique(d) : d);
@@ -2086,7 +2088,7 @@
       return !!ua(
         this,
         "string" === typeof a && Qb.test(a) ? c(a) : a || [],
-        !1
+        !1,
       ).length;
     },
   });
@@ -2108,7 +2110,7 @@
           ((b = b instanceof c ? b[0] : b),
           c.merge(
             this,
-            c.parseHTML(e[1], b && b.nodeType ? b.ownerDocument || b : n, !0)
+            c.parseHTML(e[1], b && b.nodeType ? b.ownerDocument || b : n, !0),
           ),
           Rb.test(e[1]) && c.isPlainObject(b))
         )
@@ -2174,8 +2176,8 @@
           ? c.inArray(this[0], c(a))
           : c.inArray(a.jquery ? a[0] : a, this)
         : this[0] && this[0].parentNode
-        ? this.first().prevAll().length
-        : -1;
+          ? this.first().prevAll().length
+          : -1;
     },
     add: function (a, b) {
       return this.pushStack(c.uniqueSort(c.merge(this.get(), c(a, b))));
@@ -2234,7 +2236,7 @@
           (yc[a] || (f = c.uniqueSort(f)), xc.test(a) && (f = f.reverse()));
         return this.pushStack(f);
       };
-    }
+    },
   );
   var J = /\S+/g;
   c.Callbacks = function (a) {
@@ -2351,7 +2353,7 @@
                     else
                       d[g[0] + "With"](
                         this === e ? d.promise() : this,
-                        h ? [a] : arguments
+                        h ? [a] : arguments,
                       );
                   });
                 });
@@ -2375,7 +2377,7 @@
               d = h;
             },
             b[a ^ 1][2].disable,
-            b[2][2].lock
+            b[2][2].lock,
           );
         f[c[0]] = function () {
           f[c[0] + "With"](this === f ? e : this, arguments);
@@ -2558,12 +2560,12 @@
             c.data(this, a);
           })
         : 1 < arguments.length
-        ? this.each(function () {
-            c.data(this, a, b);
-          })
-        : e
-        ? jb(e, a, c.data(e, a))
-        : void 0;
+          ? this.each(function () {
+              c.data(this, a, b);
+            })
+          : e
+            ? jb(e, a, c.data(e, a))
+            : void 0;
     },
     removeData: function (a) {
       return this.each(function () {
@@ -2617,12 +2619,12 @@
       return arguments.length < d
         ? c.queue(this[0], a)
         : void 0 === b
-        ? this
-        : this.each(function () {
-            var d = c.queue(this, a, b);
-            c._queueHooks(this, a);
-            "fx" === a && "inprogress" !== d[0] && c.dequeue(this, a);
-          });
+          ? this
+          : this.each(function () {
+              var d = c.queue(this, a, b);
+              c._queueHooks(this, a);
+              "fx" === a && "inprogress" !== d[0] && c.dequeue(this, a);
+            });
     },
     dequeue: function (a) {
       return this.each(function () {
@@ -2818,7 +2820,7 @@
                 needsContext: f && c.expr.match.needsContext.test(f),
                 namespace: q.join("."),
               },
-              r
+              r,
             )),
             (m = g[n]) ||
               ((m = g[n] = []),
@@ -3020,7 +3022,7 @@
     },
     props:
       "altKey bubbles cancelable ctrlKey currentTarget detail eventPhase metaKey relatedTarget shiftKey target timeStamp view which".split(
-        " "
+        " ",
       ),
     fixHooks: {},
     keyHooks: {
@@ -3034,7 +3036,7 @@
     mouseHooks: {
       props:
         "button buttons clientX clientY fromElement offsetX offsetY pageX pageY screenX screenY toElement".split(
-          " "
+          " ",
         ),
       filter: function (a, b) {
         var c = b.button,
@@ -3175,7 +3177,7 @@
           return g;
         },
       };
-    }
+    },
   );
   q.submit ||
     (c.event.special.submit = {
@@ -3283,7 +3285,7 @@
         c(a.delegateTarget).off(
           e.namespace ? e.origType + "." + e.namespace : e.origType,
           e.selector,
-          e.handler
+          e.handler,
         );
         return this;
       }
@@ -3421,12 +3423,12 @@
           return void 0 === a
             ? c.text(this)
             : this.empty().append(
-                ((this[0] && this[0].ownerDocument) || n).createTextNode(a)
+                ((this[0] && this[0].ownerDocument) || n).createTextNode(a),
               );
         },
         null,
         a,
-        arguments.length
+        arguments.length,
       );
     },
     append: function () {
@@ -3503,7 +3505,7 @@
         },
         null,
         a,
-        arguments.length
+        arguments.length,
       );
     },
     replaceWith: function () {
@@ -3516,7 +3518,7 @@
           0 > c.inArray(this, a) &&
             (c.cleanData(y(this)), d && d.replaceChild(b, this));
         },
-        a
+        a,
       );
     },
   });
@@ -3536,7 +3538,7 @@
             Wa.apply(f, a.get());
         return this.pushStack(f);
       };
-    }
+    },
   );
   var wa,
     Ab = { HTML: "block", BODY: "block" },
@@ -3786,9 +3788,9 @@
                 b,
                 f,
                 q.boxSizing && "border-box" === c.css(a, "boxSizing", !1, d),
-                d
+                d,
               )
-            : 0
+            : 0,
         );
       },
     };
@@ -3797,12 +3799,12 @@
     (c.cssHooks.opacity = {
       get: function (a, b) {
         return Fc.test(
-          (b && a.currentStyle ? a.currentStyle.filter : a.style.filter) || ""
+          (b && a.currentStyle ? a.currentStyle.filter : a.style.filter) || "",
         )
           ? 0.01 * parseFloat(RegExp.$1) + ""
           : b
-          ? "1"
-          : "";
+            ? "1"
+            : "";
       },
       set: function (a, b) {
         var d = a.style;
@@ -3864,7 +3866,7 @@
         },
         a,
         b,
-        1 < arguments.length
+        1 < arguments.length,
       );
     },
     show: function () {
@@ -3908,7 +3910,7 @@
             this.options.duration * a,
             0,
             1,
-            this.options.duration
+            this.options.duration,
           ))
         : (b = a);
       this.now = (this.end - this.start) * b + this.start;
@@ -3925,8 +3927,8 @@
           (null != a.elem[a.prop] && null == a.elem.style[a.prop])
           ? a.elem[a.prop]
           : (a = c.css(a.elem, a.prop, "")) && "auto" !== a
-          ? a
-          : 0;
+            ? a
+            : 0;
       },
       set: function (a) {
         if (c.fx.step[a.prop]) c.fx.step[a.prop](a);
@@ -4069,10 +4071,10 @@
     e.duration = c.fx.off
       ? 0
       : "number" === typeof e.duration
-      ? e.duration
-      : e.duration in c.fx.speeds
-      ? c.fx.speeds[e.duration]
-      : c.fx.speeds._default;
+        ? e.duration
+        : e.duration in c.fx.speeds
+          ? c.fx.speeds[e.duration]
+          : c.fx.speeds._default;
     if (null == e.queue || !0 === e.queue) e.queue = "fx";
     e.old = e.complete;
     e.complete = function () {
@@ -4162,7 +4164,7 @@
       c.fn[a] = function (a, c, f) {
         return this.animate(b, a, c, f);
       };
-    }
+    },
   );
   c.timers = [];
   c.fx.tick = function () {
@@ -4241,11 +4243,11 @@
             null == d
               ? (d = "")
               : "number" === typeof d
-              ? (d += "")
-              : c.isArray(d) &&
-                (d = c.map(d, function (a) {
-                  return null == a ? "" : a + "";
-                })),
+                ? (d += "")
+                : c.isArray(d) &&
+                  (d = c.map(d, function (a) {
+                    return null == a ? "" : a + "";
+                  })),
             (b =
               c.valHooks[this.type] || c.valHooks[this.nodeName.toLowerCase()]),
             (b && "set" in b && void 0 !== b.set(this, d, "value")) ||
@@ -4396,8 +4398,8 @@
       !1 === b
         ? c.removeAttr(a, d)
         : (Ha && oa) || !cb.test(d)
-        ? a.setAttribute((!oa && c.propFix[d]) || d, d)
-        : (a[c.camelCase("default-" + d)] = a[d] = !0);
+          ? a.setAttribute((!oa && c.propFix[d]) || d, d)
+          : (a[c.camelCase("default-" + d)] = a[d] = !0);
       return d;
     },
   };
@@ -4501,8 +4503,8 @@
             ? e
             : (a[b] = d)
           : g && "get" in g && null !== (e = g.get(a, b))
-          ? e
-          : a[b];
+            ? e
+            : a[b];
       }
     },
     propHooks: {
@@ -4512,8 +4514,8 @@
           return b
             ? parseInt(b, 10)
             : Nc.test(a.nodeName) || (Oc.test(a.nodeName) && a.href)
-            ? 0
-            : -1;
+              ? 0
+              : -1;
         },
       },
     },
@@ -4541,11 +4543,11 @@
     });
   c.each(
     "tabIndex readOnly maxLength cellSpacing cellPadding rowSpan colSpan useMap frameBorder contentEditable".split(
-      " "
+      " ",
     ),
     function () {
       c.propFix[this.toLowerCase()] = this;
-    }
+    },
   );
   q.enctype || (c.propFix.enctype = "encoding");
   var db = /[\t\r\n\f]/g;
@@ -4605,18 +4607,24 @@
           ? this.addClass(a)
           : this.removeClass(a)
         : c.isFunction(a)
-        ? this.each(function (d) {
-            c(this).toggleClass(a.call(this, d, ja(this), b), b);
-          })
-        : this.each(function () {
-            var b, f;
-            if ("string" === d) {
-              var g = 0;
-              var h = c(this);
-              for (f = a.match(J) || []; (b = f[g++]); )
-                h.hasClass(b) ? h.removeClass(b) : h.addClass(b);
-            } else if (void 0 === a || "boolean" === d) (b = ja(this)) && c._data(this, "__className__", b), c.attr(this, "class", b || !1 === a ? "" : c._data(this, "__className__") || "");
-          });
+          ? this.each(function (d) {
+              c(this).toggleClass(a.call(this, d, ja(this), b), b);
+            })
+          : this.each(function () {
+              var b, f;
+              if ("string" === d) {
+                var g = 0;
+                var h = c(this);
+                for (f = a.match(J) || []; (b = f[g++]); )
+                  h.hasClass(b) ? h.removeClass(b) : h.addClass(b);
+              } else if (void 0 === a || "boolean" === d)
+                (b = ja(this)) && c._data(this, "__className__", b),
+                  c.attr(
+                    this,
+                    "class",
+                    b || !1 === a ? "" : c._data(this, "__className__") || "",
+                  );
+            });
     },
     hasClass: function (a) {
       var b,
@@ -4632,13 +4640,13 @@
   });
   c.each(
     "blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error contextmenu".split(
-      " "
+      " ",
     ),
     function (a, b) {
       c.fn[b] = function (a, c) {
         return 0 < arguments.length ? this.on(b, null, a, c) : this.trigger(b);
       };
-    }
+    },
   );
   c.fn.extend({
     hover: function (a, b) {
@@ -4663,7 +4671,7 @@
           b = e || c;
           d += !l - !e;
           return "";
-        })
+        }),
       )
       ? Function("return " + e)()
       : c.error("Invalid JSON: " + a);
@@ -4704,7 +4712,7 @@
       url: gb,
       type: "GET",
       isLocal: /^(?:about|app|app-storage|.+-extension|file|res|widget):$/.test(
-        ta[1]
+        ta[1],
       ),
       global: !0,
       processData: !0,
@@ -4956,7 +4964,7 @@
         m.dataTypes[0] && m.accepts[m.dataTypes[0]]
           ? m.accepts[m.dataTypes[0]] +
               ("*" !== m.dataTypes[0] ? ", " + bc + "; q\x3d0.01" : "")
-          : m.accepts["*"]
+          : m.accepts["*"],
       );
       for (e in m.headers) x.setRequestHeader(e, m.headers[e]);
       if (m.beforeSend && (!1 === m.beforeSend.call(n, x, m) || 2 === P))
@@ -4994,8 +5002,8 @@
       return c.ajax(
         c.extend(
           { url: a, type: b, dataType: g, data: e, success: f },
-          c.isPlainObject(a) && a
-        )
+          c.isPlainObject(a) && a,
+        ),
       );
     };
   });
@@ -5104,10 +5112,10 @@
           return null == a
             ? null
             : c.isArray(a)
-            ? c.map(a, function (a) {
-                return { name: b.name, value: a.replace(cc, "\r\n") };
-              })
-            : { name: b.name, value: a.replace(cc, "\r\n") };
+              ? c.map(a, function (a) {
+                  return { name: b.name, value: a.replace(cc, "\r\n") };
+                })
+              : { name: b.name, value: a.replace(cc, "\r\n") };
         })
         .get();
     },
@@ -5118,10 +5126,10 @@
           return this.isLocal
             ? Mb()
             : 8 < n.documentMode
-            ? Va()
-            : (/^(get|post|head|put|delete|options)$/i.test(this.type) &&
-                Va()) ||
-              Mb();
+              ? Va()
+              : (/^(get|post|head|put|delete|options)$/i.test(this.type) &&
+                  Va()) ||
+                Mb();
         }
       : Va;
   var Yc = 0,
@@ -5250,7 +5258,7 @@
           : "string" === typeof a.data &&
             0 ===
               (a.contentType || "").indexOf(
-                "application/x-www-form-urlencoded"
+                "application/x-www-form-urlencoded",
               ) &&
             hb.test(a.data) &&
             "data");
@@ -5318,7 +5326,7 @@
               g.each(function () {
                 d.apply(this, f || [a.responseText, b, a]);
               });
-            }
+            },
         );
     return this;
   };
@@ -5328,7 +5336,7 @@
       c.fn[b] = function (a) {
         return this.on(b, a);
       };
-    }
+    },
   );
   c.expr.filters.animated = function (a) {
     return c.grep(c.timers, function (b) {
@@ -5424,10 +5432,10 @@
           a,
           e,
           arguments.length,
-          null
+          null,
         );
       };
-    }
+    },
   );
   c.each(["top", "left"], function (a, b) {
     c.cssHooks[b] = Ra(q.pixelPosition, function (a, e) {
@@ -5447,25 +5455,25 @@
               return c.isWindow(b)
                 ? b.document.documentElement["client" + a]
                 : 9 === b.nodeType
-                ? ((d = b.documentElement),
-                  Math.max(
-                    b.body["scroll" + a],
-                    d["scroll" + a],
-                    b.body["offset" + a],
-                    d["offset" + a],
-                    d["client" + a]
-                  ))
-                : void 0 === e
-                ? c.css(b, d, l)
-                : c.style(b, d, e, l);
+                  ? ((d = b.documentElement),
+                    Math.max(
+                      b.body["scroll" + a],
+                      d["scroll" + a],
+                      b.body["offset" + a],
+                      d["offset" + a],
+                      d["client" + a],
+                    ))
+                  : void 0 === e
+                    ? c.css(b, d, l)
+                    : c.style(b, d, e, l);
             },
             b,
             f ? e : void 0,
             f,
-            null
+            null,
           );
         };
-      }
+      },
     );
   });
   c.fn.extend({

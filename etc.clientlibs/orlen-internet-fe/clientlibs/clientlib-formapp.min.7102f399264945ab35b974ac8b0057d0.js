@@ -81,7 +81,7 @@
       const fixMobileCaptchaHeight = () => {
         if (iframeForm.readyState === "complete") {
           const captchaContainer = iframeForm.querySelector(
-            "body > div > div > iframe"
+            "body > div > div > iframe",
           )?.parentElement;
           if (captchaContainer) {
             captchaContainer.style.top = "auto";
@@ -102,7 +102,7 @@
       ) {
         const targetOrigin = window.location.origin.replace(
           "http://",
-          "https://"
+          "https://",
         );
 
         iFrameResize(
@@ -114,7 +114,7 @@
               aemFormConfig.iFrameResizeHeightCalculationMethod ||
               "taggedElement",
           },
-          "#aemFormFrame"
+          "#aemFormFrame",
         );
       }
       if (aemFormConfig.height != "auto") {

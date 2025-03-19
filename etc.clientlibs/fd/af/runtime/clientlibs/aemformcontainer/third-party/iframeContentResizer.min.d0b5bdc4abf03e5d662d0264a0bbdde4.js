@@ -211,7 +211,7 @@
         m(f, b, "scrollToOffset");
       } else
         c(
-          "In page link (#" + a + ") not found in iFrame, so sending to parent"
+          "In page link (#" + a + ") not found in iFrame, so sending to parent",
         ),
           m(0, 0, "inPageLink", "#" + a);
     }
@@ -227,7 +227,7 @@
             a(this.getAttribute("href"));
           }
           "#" !== b.getAttribute("href") && D(b, "click", c);
-        }
+        },
       );
     }
     z.enable
@@ -237,7 +237,7 @@
           D(e, "hashchange", b),
           setTimeout(b, U))
         : v(
-            "In page linking not fully supported in this browser! (See README.md for IE8 workaround)"
+            "In page linking not fully supported in this browser! (See README.md for IE8 workaround)",
           )
       : c("In page linking not enabled");
     return { findTarget: a };
@@ -301,7 +301,7 @@
           "size",
           "parentIFrame.size(" + ("" + (a ? a : "") + (b ? "," + b : "")) + ")",
           a,
-          b
+          b,
         );
       },
     };
@@ -343,13 +343,13 @@
         "imageLoadFailed",
         "Image load failed: " + a.target.src,
         void 0,
-        void 0
+        void 0,
       );
     }
     function T(b) {
       q(
         "mutationObserver",
-        "mutationObserver: " + b[0].target + " " + b[0].type
+        "mutationObserver: " + b[0].target + " " + b[0].type,
       );
       b.forEach(a);
     }
@@ -535,7 +535,7 @@
           : c(
               'Ignored message of type "' +
                 a.data.split("]")[1].split(":")[0] +
-                '". Received before initialization.'
+                '". Received before initialization.',
             );
   }
   var n = !0,
@@ -612,7 +612,7 @@
       lowestElement: function () {
         return Math.max(
           r.bodyOffset(),
-          Y("bottom", document.querySelectorAll("body *"))
+          Y("bottom", document.querySelectorAll("body *")),
         );
       },
       taggedElement: function () {

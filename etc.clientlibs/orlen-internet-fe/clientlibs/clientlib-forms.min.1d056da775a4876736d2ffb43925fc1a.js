@@ -31,7 +31,7 @@
             r,
             function (t) {
               return e[t];
-            }.bind(null, r)
+            }.bind(null, r),
           );
       return o;
     }),
@@ -92,7 +92,7 @@
             return n;
           })(e, t);
         throw new TypeError(
-          "Invalid attempt to destructure non-iterable instance"
+          "Invalid attempt to destructure non-iterable instance",
         );
       };
     (t.default = function (e, t) {
@@ -160,7 +160,7 @@
                 e.dispatchEvent(
                   new CustomEvent("custom-select:focus-outside-panel", {
                     bubbles: !0,
-                  })
+                  }),
                 ))
             : (l = void 0);
       }
@@ -174,7 +174,7 @@
               e.setAttribute("id", "customSelect-" + o + "-selectedOption"),
               a.setAttribute(
                 "aria-activedescendant",
-                "customSelect-" + o + "-selectedOption"
+                "customSelect-" + o + "-selectedOption",
               ),
               (c = e),
               (a.children[0].textContent = c.customSelectOriginalOption.text))
@@ -209,17 +209,17 @@
             ? g(!1)
             : g()
           : e.target.classList &&
-            e.target.classList.contains(t.optionClass) &&
-            u.contains(e.target)
-          ? (v(e.target),
-            (c.customSelectOriginalOption.selected = !0),
-            g(!1),
-            i.dispatchEvent(new CustomEvent("change")))
-          : e.target === i
-          ? a !== document.activeElement &&
-            i !== document.activeElement &&
-            a.focus()
-          : n && !s.contains(e.target) && g(!1);
+              e.target.classList.contains(t.optionClass) &&
+              u.contains(e.target)
+            ? (v(e.target),
+              (c.customSelectOriginalOption.selected = !0),
+              g(!1),
+              i.dispatchEvent(new CustomEvent("change")))
+            : e.target === i
+              ? a !== document.activeElement &&
+                i !== document.activeElement &&
+                a.focus()
+              : n && !s.contains(e.target) && g(!1);
       }
       function C(e) {
         e.target.classList &&
@@ -350,7 +350,7 @@
       }
       (s = document.createElement("div")).classList.add(
         t.containerClass,
-        "customSelect"
+        "customSelect",
       ),
         ((a = document.createElement("span")).className = t.openerClass),
         a.setAttribute("role", "combobox"),
@@ -526,7 +526,7 @@
             e,
             t.bubbles,
             t.cancelable,
-            t.detail
+            t.detail,
           ),
           (o = n.preventDefault),
           (n.preventDefault = function () {
@@ -592,7 +592,7 @@
           document.addEventListener("DOMContentLoaded", function () {
             document
               .querySelectorAll(
-                ".guideHeader, .tab-navigators, .wizard-nav-next, .guide-nav-next, .guide-nav-prev, .moveNext"
+                ".guideHeader, .tab-navigators, .wizard-nav-next, .guide-nav-next, .guide-nav-prev, .moveNext",
               )
               .forEach(function (e) {
                 e.addEventListener("click", function () {
@@ -617,9 +617,9 @@
                     return o(n);
                   }, t),
                     n.classList.add("initialized");
-                }.bind(this)
+                }.bind(this),
               );
-            }.bind(this)
+            }.bind(this),
           ),
             this.initializeCustomSelect();
         }),

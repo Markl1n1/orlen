@@ -3,7 +3,9 @@ html {
 }
 body,
 body * {
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
 }
 body {
   margin: 0;
@@ -579,7 +581,8 @@ textarea {
 @font-face {
   font-family: Material Design Icons;
   src: url(clientlib-forms/resources/fonts/materialdesignicons/materialdesignicons-webfont.eot);
-  src: url(clientlib-forms/resources/fonts/materialdesignicons/materialdesignicons-webfont.eot?#iefix)
+  src:
+    url(clientlib-forms/resources/fonts/materialdesignicons/materialdesignicons-webfont.eot?#iefix)
       format("embedded-opentype"),
     url(clientlib-forms/resources/fonts/materialdesignicons/materialdesignicons-webfont.woff2)
       format("woff2"),
@@ -711,7 +714,8 @@ textarea {
 @font-face {
   font-family: tiktok-font;
   src: url(clientlib-forms/resources/fonts/tiktokicons/tiktok-font.eot);
-  src: url(clientlib-forms/resources/fonts/tiktokicons/tiktok-font.eot?#iefix)
+  src:
+    url(clientlib-forms/resources/fonts/tiktokicons/tiktok-font.eot?#iefix)
       format("embedded-opentype"),
     url(clientlib-forms/resources/fonts/tiktokicons/tiktok-font.woff)
       format("woff"),
@@ -728,7 +732,8 @@ textarea {
 @font-face {
   font-family: threads-font;
   src: url(clientlib-forms/resources/fonts/threadsicons/threads-font.eot);
-  src: url(clientlib-forms/resources/fonts/threadsicons/threads-font.eot?#iefix)
+  src:
+    url(clientlib-forms/resources/fonts/threadsicons/threads-font.eot?#iefix)
       format("embedded-opentype"),
     url(clientlib-forms/resources/fonts/threadsicons/threads-font.woff)
       format("woff"),
@@ -753,7 +758,8 @@ textarea {
 @font-face {
   font-family: x-font;
   src: url(clientlib-forms/resources/fonts/xicons/x-font.eot);
-  src: url(clientlib-forms/resources/fonts/xicons/x-font.eot?#iefix)
+  src:
+    url(clientlib-forms/resources/fonts/xicons/x-font.eot?#iefix)
       format("embedded-opentype"),
     url(clientlib-forms/resources/fonts/xicons/x-font.woff) format("woff"),
     url(clientlib-forms/resources/fonts/xicons/x-font.ttf) format("truetype"),
@@ -771,7 +777,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/51c16e04-0ebc-4379-bb95-63a89c938aa6.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/51c16e04-0ebc-4379-bb95-63a89c938aa6.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/cd15575c-e654-4969-ac25-f7b1ed1a6e7a.woff)
       format("woff");
@@ -779,7 +786,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/38d9d820-6910-4ef9-9165-ee53a42e9a47.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/38d9d820-6910-4ef9-9165-ee53a42e9a47.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/4690b402-795b-4731-88fc-3c99f5d801a7.woff)
       format("woff");
@@ -788,7 +796,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/6084ebdf-4040-41f9-b612-c8d0d5f97ec7.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/6084ebdf-4040-41f9-b612-c8d0d5f97ec7.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/55bc0e6b-fc23-48e1-b3b9-558875134c5a.woff)
       format("woff");
@@ -796,7 +805,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/c9cc07de-6cce-4d07-8f67-3c41466079af.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/c9cc07de-6cce-4d07-8f67-3c41466079af.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/c6cf730f-53dd-45d3-937e-5c0f92306759.woff)
       format("woff");
@@ -805,7 +815,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/080126ae-e200-4700-b590-ebfaa9c0b128.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/080126ae-e200-4700-b590-ebfaa9c0b128.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/5925b8b4-739f-44a9-8e90-f06b8097a91e.woff)
       format("woff");
@@ -813,7 +824,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/e72614f2-3c15-420d-816a-45cd8cb8d465.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/e72614f2-3c15-420d-816a-45cd8cb8d465.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/806d3aab-8ef7-44d3-8843-7914000a4a6e.woff)
       format("woff");
@@ -822,7 +834,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/67fbab47-bdd1-459b-8706-7d42debe8cb9.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/67fbab47-bdd1-459b-8706-7d42debe8cb9.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/6da206ab-4f15-41c4-b18d-5d669585c833.woff)
       format("woff");
@@ -830,7 +843,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/1ef000e6-38bb-471c-8b3a-aab41bf5c807.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/1ef000e6-38bb-471c-8b3a-aab41bf5c807.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/3cd8c505-795d-4763-aea9-a7e8b9198168.woff)
       format("woff");
@@ -839,7 +853,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/dc21dba2-7c87-4f7f-8750-b16c3fa919fb.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/dc21dba2-7c87-4f7f-8750-b16c3fa919fb.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/18a42fd4-6ca7-4d95-b61b-4f1aa67f608c.woff)
       format("woff");
@@ -847,7 +862,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/3182188a-1141-464c-b1b1-c9eccb3134ad.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/3182188a-1141-464c-b1b1-c9eccb3134ad.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/a30f5eb4-cc71-4e8a-8628-edc817c42bf1.woff)
       format("woff");
@@ -856,7 +872,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/1df9aeba-11c6-4ec4-b6eb-1667994d0b6b.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/1df9aeba-11c6-4ec4-b6eb-1667994d0b6b.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/ff543787-fb6c-4f37-8543-1a896cfd5f1f.woff)
       format("woff");
@@ -864,7 +881,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/a5f521f0-8b27-4332-b391-1d4dd5122fb0.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/a5f521f0-8b27-4332-b391-1d4dd5122fb0.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/23180296-5860-408f-9e30-2d3879b3796a.woff)
       format("woff");
@@ -873,7 +891,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/a05d446f-c467-432a-92fd-228bb7ad73c9.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/a05d446f-c467-432a-92fd-228bb7ad73c9.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/41eed443-8ad2-46f3-ac13-a026037a18c2.woff)
       format("woff");
@@ -881,7 +900,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/3a9ea036-7577-47db-8cd5-a2fa6e30b843.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/3a9ea036-7577-47db-8cd5-a2fa6e30b843.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/6b5dbc7d-3d45-4055-9853-faebba38331e.woff)
       format("woff");
@@ -890,7 +910,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/ef430219-92ff-41b1-99fa-5574527341a9.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/ef430219-92ff-41b1-99fa-5574527341a9.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/36c3a0f6-237f-4c5d-9d3c-8c39b718f8e1.woff)
       format("woff");
@@ -898,7 +919,8 @@ textarea {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(clientlib-forms/resources/fonts/proxima-nova/f11c8722-df0d-48b9-9010-54cc27e76564.woff2)
+  src:
+    url(clientlib-forms/resources/fonts/proxima-nova/f11c8722-df0d-48b9-9010-54cc27e76564.woff2)
       format("woff2"),
     url(clientlib-forms/resources/fonts/proxima-nova/d9c86326-55dd-4de9-b968-9d64a7e80d3c.woff)
       format("woff");
@@ -946,7 +968,9 @@ textarea {
   }
 }
 .typography--title-m-light {
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 2rem;
   font-weight: 300;
   line-height: 2.5rem;
@@ -1147,7 +1171,9 @@ label {
   letter-spacing: 0.56px;
 }
 body {
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   color: #000;
 }
 .typography--green-batch {
@@ -1389,7 +1415,9 @@ main .container.container--content-wide:last-of-type:after {
   align-items: flex-start;
   color: #d81e04;
   display: flex;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.14px;
@@ -1435,19 +1463,24 @@ main .container.container--content-wide:last-of-type:after {
 .guideFieldError:empty:before {
   content: "";
 }
-.guideCheckBox:has(.guideRadioButtonGroupItems
-    > .guideRadioButtonItem
-    > .guideFieldWidget
-    > input[aria-required="true"])
+.guideCheckBox:has(
+    .guideRadioButtonGroupItems
+      > .guideRadioButtonItem
+      > .guideFieldWidget
+      > input[aria-required="true"]
+  )
   .guideFieldLabel
   :after,
-.guideCheckBoxGroup:has(.guideCheckBoxGroupItems
-    > .guideCheckBoxItem
-    > .guideFieldWidget
-    > input[aria-required="true"], .guideCheckBoxGroupItems
-    > .guide-tnc-checkbox
-    > .guideFieldWidget
-    > input[aria-required="true"])
+.guideCheckBoxGroup:has(
+    .guideCheckBoxGroupItems
+      > .guideCheckBoxItem
+      > .guideFieldWidget
+      > input[aria-required="true"],
+    .guideCheckBoxGroupItems
+      > .guide-tnc-checkbox
+      > .guideFieldWidget
+      > input[aria-required="true"]
+  )
   .guideFieldLabel
   :after,
 .guideDatePicker:has(.guideFieldWidget > div > input[aria-required="true"])
@@ -1462,17 +1495,21 @@ main .container.container--content-wide:last-of-type:after {
 .guideformtextbox:has(.guideFieldWidget > textarea[aria-required="true"])
   .guideFieldLabel
   :after,
-.guideTermsAndConditions:has(.afTermsAndConditions
-    > .guide-tnc-checkbox
-    > .guide-tnc-checkboxwidget
-    > input[aria-required="true"])
+.guideTermsAndConditions:has(
+    .afTermsAndConditions
+      > .guide-tnc-checkbox
+      > .guide-tnc-checkboxwidget
+      > input[aria-required="true"]
+  )
   .guideFieldLabel
   :after {
   content: "*";
   -ms-font-feature-settings: "tnum";
   font-feature-settings: "tnum";
   color: #d81e04;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 18px;
   font-variant-numeric: tabular-nums;
   font-weight: 300;
@@ -1546,7 +1583,9 @@ main .container.container--content-wide:last-of-type:after {
 }
 .custom-select-option {
   font-size: 1.125rem;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-weight: 300;
   letter-spacing: 0.18px;
   line-height: 1.75rem;
@@ -1581,7 +1620,9 @@ main .container.container--content-wide:last-of-type:after {
 .guideFieldWidget.dropDownList ol li {
   background-color: #fff;
   font-size: 1.125rem;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-weight: 300;
   letter-spacing: 0.18px;
   line-height: 1.75rem;
@@ -1603,10 +1644,14 @@ main .container.container--content-wide:last-of-type:after {
   ol {
   border: 0;
 }
-div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id]:last-of-type:has(.is-open) {
+div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id]:last-of-type:has(
+    .is-open
+  ) {
   margin-bottom: 250px;
 }
-div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id]:nth-last-child(2):has(.is-open) {
+div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id]:nth-last-child(
+    2
+  ):has(.is-open) {
   margin-bottom: 170px;
 }
 @media (max-width: 767px) {
@@ -1769,7 +1814,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   display: inline-block;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 18px;
   font-variant-numeric: tabular-nums;
   font-weight: 300;
@@ -1810,7 +1857,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   display: inline-block;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 18px;
   font-variant-numeric: tabular-nums;
   font-weight: 300;
@@ -1839,7 +1888,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
 .guideformtextbox .guideFieldDescription.long {
   display: block;
   background-color: transparent;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.14px;
@@ -1882,7 +1933,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
 .guideformtextbox .guideFieldDescription.short[style=""] {
   display: block;
   background-color: transparent;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.14px;
@@ -1892,15 +1945,25 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   color: #666;
 }
 .aem-AuthorLayer-Annotate
-  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart).orlenFormEmail,
+  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ).orlenFormEmail,
 .aem-AuthorLayer-Developer
-  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart).orlenFormEmail,
+  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ).orlenFormEmail,
 .aem-AuthorLayer-Edit
-  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart).orlenFormEmail,
+  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ).orlenFormEmail,
 .aem-AuthorLayer-Layouting
-  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart).orlenFormEmail,
+  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ).orlenFormEmail,
 .aem-AuthorLayer-Timewarp
-  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart).orlenFormEmail {
+  .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ).orlenFormEmail {
   padding-bottom: 10px;
   padding-top: 12px !important;
   margin-bottom: 4px;
@@ -1925,7 +1988,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   transition: none;
   transition: all 0.3s;
   z-index: 1;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 1rem;
   font-variant-numeric: tabular-nums;
   font-weight: 600;
@@ -2177,7 +2242,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   width: 100% !important;
   display: block !important;
   font-size: 1.75rem !important;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   line-height: 2.25rem;
   font-weight: 800;
 }
@@ -2192,7 +2259,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   color: #000 !important;
   background: none;
   position: relative;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 1.75rem;
   line-height: 2.25rem;
   font-weight: 700;
@@ -2217,7 +2286,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
 }
 .accordion-navigators .active .guideHeader a {
   position: relative;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 1.75rem;
   line-height: 2.25rem;
   font-weight: 700;
@@ -2269,7 +2340,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
 .guideVerticalTabbedPanelLayout .tab-navigators li .tab-navigators li a {
   background: none !important;
   color: #000 !important;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 400;
@@ -2549,7 +2622,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
   transition: none;
   transition: all 0.3s;
   z-index: 1;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-size: 1rem;
   font-variant-numeric: tabular-nums;
   font-weight: 600;
@@ -2584,7 +2659,9 @@ div[id*="guideContainer-rootPanel-panel-guidedropdownlist"][data-guide-parent-id
 }
 .guideformfileupload .guide-fu-fileItemList .guide-fu-fileItem {
   font-size: 1.125rem;
-  font-family: Proxima Nova, sans-serif;
+  font-family:
+    Proxima Nova,
+    sans-serif;
   font-weight: 300;
   letter-spacing: 0.18px;
   line-height: 1.75rem;

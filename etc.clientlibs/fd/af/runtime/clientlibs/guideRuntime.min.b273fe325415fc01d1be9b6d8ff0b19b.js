@@ -100,11 +100,11 @@
               ? ((b[k] = this._createDestination(b, k, e, [])),
                 this.copyArray(a[k], b[k], c))
               : "object" == typeof a[k] && null != a[k]
-              ? ((b[k] = this._createDestination(b, k, e, {})),
-                this.copyObject(a[k], b[k], c))
-              : d.isUndefined(f[k])
-              ? (b[k] = a[k])
-              : (b[k] = f[k](a[k], c, a)));
+                ? ((b[k] = this._createDestination(b, k, e, {})),
+                  this.copyObject(a[k], b[k], c))
+                : d.isUndefined(f[k])
+                  ? (b[k] = a[k])
+                  : (b[k] = f[k](a[k], c, a)));
     },
     _createDestination: function (a, b, c, f) {
       return c ? (d.isObject(a) && !a.hasOwnProperty(b) ? f : a[b] || f) : f;
@@ -117,7 +117,7 @@
         function (c) {
           if (e || a(c)) this[c] = b;
         },
-        this
+        this,
       );
     },
     getOrElse: function (a) {
@@ -133,7 +133,7 @@
           function (a) {
             b = d.isObject(b) ? b[a] : void 0;
           },
-          this
+          this,
         );
         if (d.isUndefined(b)) return d.clone(c);
       }
@@ -180,7 +180,7 @@
             this.prototype.resolveProperties.push(b));
           Object.defineProperty(this.prototype, b, a);
         },
-        this
+        this,
       );
     },
     extend: function (a) {
@@ -196,7 +196,7 @@
           a.normalProperties && d.extend(this.prototype, a.normalProperties);
           a.propertyDescriptors && this.defineProps(a.propertyDescriptors);
         },
-        this
+        this,
       );
     },
   });
@@ -261,7 +261,7 @@
               );
             g = this.findOrCreateElement(a, g, b === e.length - 1);
           },
-          this
+          this,
         );
         return g;
       }
@@ -282,7 +282,7 @@
           a,
           null,
           XPathResult.ORDERED_NODE_ITERATOR_TYPE,
-          null
+          null,
         ).iterateNext();
         if (null == e) {
           var g = this._getElementNameAndIndexFromXPathPart(f);
@@ -300,7 +300,7 @@
           .getLogger()
           .error(
             "Following exception occurred while executing findOrCreateElement " +
-              h
+              h,
           );
       }
     },
@@ -317,7 +317,7 @@
               f,
               formBridge.nsResolver,
               XPathResult.ORDERED_NODE_ITERATOR_TYPE,
-              null
+              null,
             )),
             (f = b.iterateNext()));
       return f;
@@ -401,8 +401,8 @@
                   this.getOrElse(
                     this.jsonModel,
                     "categoryAcronyms." + g[1],
-                    g[1]
-                  )
+                    g[1],
+                  ),
                 )),
                 l.category.push(b),
                 l.level.push(parseInt(g[2])))
@@ -410,10 +410,10 @@
                   this.resolveMessage(c.locale.LogMessages["ALC-FRM-901-020"], [
                     b,
                     e,
-                  ])
+                  ]),
                 );
           },
-          this
+          this,
         );
         return l;
       },
@@ -471,7 +471,7 @@
               l.stack &&
                 e.call(
                   console,
-                  l.stack.replace("ReferenceError: n is not defined", "")
+                  l.stack.replace("ReferenceError: n is not defined", ""),
                 );
             }
         }
@@ -553,7 +553,7 @@
             function (a) {
               return a.fn == c && a.context == e;
             },
-            this
+            this,
           )
         )
           return !1;
@@ -663,7 +663,7 @@
           function (a) {
             return "assist" == a._class;
           },
-          this
+          this,
         ) || {}
       ).role;
       return "TH" == a || "TF" == a ? !0 : !1;
@@ -869,9 +869,9 @@
         a &&
         !d.contains(
           "MozPrintableKey Divide Multiply Subtract Add Enter Decimal Spacebar Del".split(
-            " "
+            " ",
           ),
-          a
+          a,
         ) &&
         1 != a.length
       );
@@ -985,7 +985,7 @@
       var a = c.ut.PictureUtils.parseIntExact(
         this.jsonModel._str,
         this._pos,
-        f
+        f,
       );
       this._pos += f;
       return a;
@@ -1319,7 +1319,7 @@
           b = c.ut.Scanner.lookupNext(
             this.jsonModel._sPicture,
             a,
-            this._acceptPatternChar
+            this._acceptPatternChar,
           );
         null != b;
 
@@ -1329,7 +1329,7 @@
           (b = c.ut.Scanner.lookupNext(
             this.jsonModel._sPicture,
             a,
-            this._acceptPatternChar
+            this._acceptPatternChar,
           ));
     },
     _compactPattern: function () {
@@ -1337,12 +1337,12 @@
         this._match2Char("D", "B", b)
           ? (a.push("D"), b++)
           : this._match2Char("d", "b", b)
-          ? (a.push("d"), b++)
-          : this._match2Char("C", "R", b)
-          ? (a.push("C"), b++)
-          : this._match2Char("c", "r", b)
-          ? (a.push("c"), b++)
-          : a.push(this.jsonModel._sPicture.charAt(b));
+            ? (a.push("d"), b++)
+            : this._match2Char("C", "R", b)
+              ? (a.push("C"), b++)
+              : this._match2Char("c", "r", b)
+                ? (a.push("c"), b++)
+                : a.push(this.jsonModel._sPicture.charAt(b));
       this.jsonModel._sPicture = a.join("");
     },
     _acceptPatternChar: function (a) {
@@ -1551,7 +1551,7 @@
     if (
       (b =
         /^(\d{4})(?:-?(\d{1,2})(?:-?(\d{1,2}))?)?(?:T((\d{2}):(\d{2}):(\d{2}))Z)?$/.exec(
-          a
+          a,
         )) &&
       4 <= b.length
     ) {
@@ -1609,14 +1609,14 @@
             _dataString: f,
             _locale: this.jsonModel.locale,
           },
-        })
+        }),
       );
     },
     formatDate: function (f, a) {
       f = c.ut.DateInfo.Parse(
         f,
         this.jsonModel.locale,
-        "undefined" !== typeof a
+        "undefined" !== typeof a,
       );
       return null == f
         ? null
@@ -1627,14 +1627,14 @@
                 _dateInfo: f,
                 _locale: this.jsonModel.locale,
               },
-            })
+            }),
           );
     },
     parseTime: function (f, a) {
       return this._acceptVisitor(
         new c.ut.TimeParsingVisitor({
           jsonModel: { _sPicture: a, _dataString: f },
-        })
+        }),
       );
     },
     formatTime: function (f, a) {
@@ -1644,21 +1644,21 @@
         : this._acceptVisitor(
             new c.ut.TimeFormattingVisitor({
               jsonModel: { _sPicture: a, _timeInfo: f },
-            })
+            }),
           );
     },
     parseText: function (f, a) {
       return this._acceptVisitor(
         new c.ut.TextParsingVisitor({
           jsonModel: { _sPicture: a, _dataString: f },
-        })
+        }),
       );
     },
     formatText: function (f, a, b) {
       return this._acceptVisitor(
         new c.ut.TextFormattingVisitor({
           jsonModel: { _sPicture: a, _text: f, relaxed: b },
-        })
+        }),
       );
     },
     parseNumeric: function (f, a) {
@@ -1685,7 +1685,7 @@
         new c.ut.NumFormattingVisitor({
           jsonModel: { _sPicture: b, _locale: this.jsonModel.locale },
           text: f,
-        })
+        }),
       );
     },
     _acceptVisitor: function (c) {
@@ -1814,7 +1814,7 @@
     },
     consumeStringLiteral: function (a) {
       this._buffer.push(
-        this.jsonModel._sPicture.substr(a.startPos + 1, a.len - 2)
+        this.jsonModel._sPicture.substr(a.startPos + 1, a.len - 2),
       );
     },
     consumeCharLiteral: function (a) {
@@ -1878,28 +1878,28 @@
           switch (b) {
             case 1:
               this._buffer.push(
-                f.convertNumberToLocale(this.jsonModel._locale, a + 1)
+                f.convertNumberToLocale(this.jsonModel._locale, a + 1),
               );
               break;
             case 2:
               this._buffer.push(
                 f.convertNumberToLocale(
                   this.jsonModel._locale,
-                  f.padding(a + 1, 2)
-                )
+                  f.padding(a + 1, 2),
+                ),
               );
               break;
             case 3:
               b = f.getLocaleObject(
                 this.jsonModel._locale,
-                "calendarSymbols.abbrmonthNames"
+                "calendarSymbols.abbrmonthNames",
               );
               this._buffer.push(b[a]);
               break;
             case 4:
               (b = f.getLocaleObject(
                 this.jsonModel._locale,
-                "calendarSymbols.monthNames"
+                "calendarSymbols.monthNames",
               )),
                 this._buffer.push(b[a]);
           }
@@ -1913,14 +1913,14 @@
             case 3:
               b = f.getLocaleObject(
                 this.jsonModel._locale,
-                "calendarSymbols.abbrdayNames"
+                "calendarSymbols.abbrdayNames",
               );
               this._buffer.push(b[a]);
               break;
             case 4:
               b = f.getLocaleObject(
                 this.jsonModel._locale,
-                "calendarSymbols.dayNames"
+                "calendarSymbols.dayNames",
               );
               this._buffer.push(b[a]);
               break;
@@ -2069,8 +2069,8 @@
           this._buffer.push(
             c.ut.PictureUtils.padding(
               this.jsonModel._timeInfo.mThousandthOfSecond,
-              3
-            )
+              3,
+            ),
           );
           break;
         default:
@@ -2101,11 +2101,11 @@
         this._leadingPadding = this._numberInfo.padding;
         this._mNumberSymbols = c.ut.PictureUtils.getLocaleObject(
           this.jsonModel._locale,
-          "numberSymbols"
+          "numberSymbols",
         );
         this._mCurrencySymbols = c.ut.PictureUtils.getLocaleObject(
           this.jsonModel._locale,
-          "currencySymbols"
+          "currencySymbols",
         );
       },
       _checkAndAddDecimalPoint: function (a) {
@@ -2132,37 +2132,37 @@
                     this._ensureCharIsDigit(d),
                     this._checkAndAddDecimalPoint(),
                     this._buffer.push(
-                      f.convertNumberToLocale(this.jsonModel._locale, d)
+                      f.convertNumberToLocale(this.jsonModel._locale, d),
                     ),
                     (this._mbDigitAddedToOutput = !0))
                   : "9" == b || "Z" == b
-                  ? (this._checkAndAddDecimalPoint(),
-                    this._buffer.push(
-                      this._matchChr(this._mNumberSymbols.zero)
-                    ))
-                  : "8" == b &&
-                    ((d = this._msText.charAt(this._textPos++)),
-                    "" != d &&
-                      this._ensureCharIsDigit(d) &&
-                      (this._checkAndAddDecimalPoint(),
+                    ? (this._checkAndAddDecimalPoint(),
                       this._buffer.push(
-                        f.convertNumberToLocale(this.jsonModel._locale, d)
-                      ),
-                      (this._mbDigitAddedToOutput = !0)));
+                        this._matchChr(this._mNumberSymbols.zero),
+                      ))
+                    : "8" == b &&
+                      ((d = this._msText.charAt(this._textPos++)),
+                      "" != d &&
+                        this._ensureCharIsDigit(d) &&
+                        (this._checkAndAddDecimalPoint(),
+                        this._buffer.push(
+                          f.convertNumberToLocale(this.jsonModel._locale, d),
+                        ),
+                        (this._mbDigitAddedToOutput = !0)));
               else if (this._leadingPadding > this._nScannedPatternDigit++) {
                 var d = null;
                 this._mbDigitAddedToOutput
                   ? (d = this._mNumberSymbols.zero)
                   : "9" == b || "8" == b
-                  ? ((d = this._mNumberSymbols.zero),
-                    (this._mbDigitAddedToOutput = !0))
-                  : "Z" == b && (d = " ");
+                    ? ((d = this._mNumberSymbols.zero),
+                      (this._mbDigitAddedToOutput = !0))
+                    : "Z" == b && (d = " ");
                 d && this._buffer.push(this._matchChr(d));
               } else
                 (d = this._msText.charAt(this._textPos++)),
                   this._ensureCharIsDigit(d),
                   this._buffer.push(
-                    f.convertNumberToLocale(this.jsonModel._locale, d)
+                    f.convertNumberToLocale(this.jsonModel._locale, d),
                   ),
                   (this._mbDigitAddedToOutput = !0);
             break;
@@ -2174,7 +2174,7 @@
             this._buffer.push(
               this._mbNegative
                 ? c.ut.NumPictureDesc.gsCR
-                : c.ut.NumPictureDesc.gsDSP
+                : c.ut.NumPictureDesc.gsDSP,
             );
             break;
           case "c":
@@ -2184,7 +2184,7 @@
             this._buffer.push(
               this._mbNegative
                 ? c.ut.NumPictureDesc.gsDB
-                : c.ut.NumPictureDesc.gsDSP
+                : c.ut.NumPictureDesc.gsDSP,
             );
             break;
           case "d":
@@ -2291,7 +2291,7 @@
           this._assert(
             0 <= this._timeInfo.mHourOfMeriDiem &&
               11 >= this._timeInfo.mHourOfMeriDiem,
-            "Invalid Hour Of MeriDiem value."
+            "Invalid Hour Of MeriDiem value.",
           );
           break;
         case "k":
@@ -2314,7 +2314,7 @@
           this._assert(
             0 <= this._timeInfo.mHourOfMeriDiem &&
               11 >= this._timeInfo.mHourOfMeriDiem,
-            "Invalid hour of meriDiem value."
+            "Invalid hour of meriDiem value.",
           );
           break;
         case "H":
@@ -2336,7 +2336,7 @@
           this._timeInfo.mHourOfDay = b;
           this._assert(
             0 <= this._timeInfo.mHourOfDay && 23 >= this._timeInfo.mHourOfDay,
-            "Invalid hour of day value."
+            "Invalid hour of day value.",
           );
           break;
         case "K":
@@ -2358,7 +2358,7 @@
           this._timeInfo.mHourOfDay = b - 1;
           this._assert(
             0 <= this._timeInfo.mHourOfDay && 23 >= this._timeInfo.mHourOfDay,
-            "Invalid hour of day value."
+            "Invalid hour of day value.",
           );
           break;
         case "M":
@@ -2377,7 +2377,7 @@
           this._assert(
             0 <= this._timeInfo.mMinuteOfHour &&
               59 >= this._timeInfo.mMinuteOfHour,
-            "Invalid minute of hour."
+            "Invalid minute of hour.",
           );
           break;
         case "S":
@@ -2397,7 +2397,7 @@
           this._assert(
             0 <= this._timeInfo.mSecondOfMinute &&
               59 >= this._timeInfo.mSecondOfMinute,
-            "Invalid second of minute."
+            "Invalid second of minute.",
           );
           break;
         case "F":
@@ -2405,12 +2405,12 @@
           this._timeInfo.mThousandthOfSecond = this.parseIntExact(
             this.jsonModel._dataString,
             e,
-            3
+            3,
           );
           this._assert(
             0 <= this._timeInfo.mThousandthOfSecond &&
               999 >= this._timeInfo.mThousandthOfSecond,
-            "Invalid thousand of second."
+            "Invalid thousand of second.",
           );
           break;
         default:
@@ -2504,11 +2504,11 @@
       this._mbExponSeen = this._hasPercent = !1;
       this._mNumberSymbols = c.ut.PictureUtils.getLocaleObject(
         this.options._locale,
-        "numberSymbols"
+        "numberSymbols",
       );
       this._mCurrencySymbols = c.ut.PictureUtils.getLocaleObject(
         this.options._locale,
-        "currencySymbols"
+        "currencySymbols",
       );
     },
     _lookupNext: c.ut.Scanner.lookupNext,
@@ -2519,7 +2519,7 @@
             var a = this._lookupNext(
               this.jsonModel._sPicture,
               c,
-              this.acceptPatternChar
+              this.acceptPatternChar,
             );
             null != a;
 
@@ -2529,7 +2529,7 @@
               (a = this._lookupNext(
                 this.jsonModel._sPicture,
                 c,
-                this.acceptPatternChar
+                this.acceptPatternChar,
               ));
         } catch (b) {
           if (this._mBacktrack) {
@@ -2609,12 +2609,12 @@
                 d = this.jsonModel._dataString.length;
               this._strPos < d &&
               c.ut.PictureUtils.isDigit(
-                this.jsonModel._dataString.charAt(this._strPos)
+                this.jsonModel._dataString.charAt(this._strPos),
               );
 
             )
               this._buffer.push(
-                this.jsonModel._dataString.charAt(this._strPos++)
+                this.jsonModel._dataString.charAt(this._strPos++),
               );
           break;
         case "C":
@@ -2684,8 +2684,8 @@
         0 == e
           ? a.push("0")
           : -1 == e
-          ? a.push("0.0")
-          : -3 == e && (e = c.length - 2);
+            ? a.push("0.0")
+            : -3 == e && (e = c.length - 2);
         for (var d = 0; d < c.length; d++)
           d == e && a.push("."), d != b && a.push(c.charAt(d));
         c = a.join("");
@@ -2698,7 +2698,7 @@
       return c.ut.PictureUtils.matchString(
         this.jsonModel._dataString,
         this._strPos,
-        d
+        d,
       )
         ? ((this._strPos += d.length), !0)
         : !1;
@@ -2728,7 +2728,7 @@
               g = c.ut.PictureUtils.parseIntAggressive(
                 this.jsonModel._dataString,
                 a,
-                2
+                2,
               );
               this._dayOfMonth = g.value;
               g = g.len;
@@ -2737,12 +2737,12 @@
               this._dayOfMonth = c.ut.PictureUtils.parseIntExact(
                 this.jsonModel._dataString,
                 a,
-                2
+                2,
               );
           }
           this._assert(
             31 >= this._dayOfMonth && 0 < this._dayOfMonth,
-            "Invalid date string1"
+            "Invalid date string1",
           );
           break;
         case "J":
@@ -2754,7 +2754,7 @@
               g = c.ut.PictureUtils.parseIntAggressive(
                 this.jsonModel._dataString,
                 a,
-                2
+                2,
               );
               this._monthOfYear = g.value;
               g = g.len;
@@ -2763,7 +2763,7 @@
               this._monthOfYear = c.ut.PictureUtils.parseIntExact(
                 this.jsonModel._dataString,
                 a,
-                2
+                2,
               );
               break;
             case 3:
@@ -2775,7 +2775,7 @@
           if (b) {
             e = c.ut.PictureUtils.getHashOfLocaleObject(
               this.jsonModel._locale,
-              b
+              b,
             );
             var f = this.jsonModel._dataString.toLowerCase(),
               h = 0,
@@ -2795,13 +2795,13 @@
                   c.ut.PictureUtils.getLocaleObject(this.jsonModel._locale, b),
                   function (a) {
                     return a.toLowerCase();
-                  }
+                  },
                 )
                 .indexOf(l) + 1;
           }
           this._assert(
             12 >= this._monthOfYear && 0 < this._monthOfYear,
-            "Invalid date string2"
+            "Invalid date string2",
           );
           break;
         case "E":
@@ -2823,7 +2823,7 @@
             for (
               e = c.ut.PictureUtils.getHashOfLocaleObject(
                 this.jsonModel._locale,
-                b
+                b,
               ),
                 g = 0,
                 f = this.jsonModel._dataString.toLowerCase(),
@@ -2847,7 +2847,7 @@
               this._yearOfEra = c.ut.PictureUtils.parseIntExact(
                 this.jsonModel._dataString,
                 a,
-                2
+                2,
               );
               this._yearOfEra += 2e3;
               2029 <= this._yearOfEra && (this._yearOfEra -= 100);
@@ -2856,12 +2856,12 @@
               this._yearOfEra = c.ut.PictureUtils.parseIntExact(
                 this.jsonModel._dataString,
                 a,
-                4
+                4,
               );
           }
           this._assert(
             9999 >= this._yearOfEra && 0 <= this._yearOfEra,
-            "Invalid date string3"
+            "Invalid date string3",
           );
           break;
         case "w":
@@ -2877,7 +2877,7 @@
         this._dateInfo.validate(
           this._yearOfEra,
           this._monthOfYear,
-          this._dayOfMonth
+          this._dayOfMonth,
         );
       this._strPos += g;
     },
@@ -2981,19 +2981,19 @@
       return b.minWidth && -1 < b.minWidth
         ? "auto"
         : b.maxWidth && -1 < b.maxWidth
-        ? "auto"
-        : b.width || "auto";
+          ? "auto"
+          : b.width || "auto";
     },
     _elHeight: function (a, b) {
       return "text/html" === b.contentType || b.isDraw
         ? "auto"
         : c(a).is("textarea")
-        ? b.minHeight && -1 < b.minHeight
-          ? "auto"
-          : b.maxHeight && -1 < b.maxHeight
-          ? "auto"
-          : b.height || "auto"
-        : b.height || "auto";
+          ? b.minHeight && -1 < b.minHeight
+            ? "auto"
+            : b.maxHeight && -1 < b.maxHeight
+              ? "auto"
+              : b.height || "auto"
+          : b.height || "auto";
     },
     _elMinWidth: function (a, b) {
       return b.minWidth && -1 < b.minWidth ? b.minWidth : "0";
@@ -3061,7 +3061,7 @@
             f +
             "' id \x3d 'msgBox_" +
             e +
-            "' class\x3dmsgbox_input /\x3e"
+            "' class\x3dmsgbox_input /\x3e",
         );
         d("#msgBox_" + e).click(function () {
           b._hide();
@@ -3074,7 +3074,7 @@
       this._hide();
       this._overlay("show");
       d("BODY").append(
-        '\x3cdiv id\x3d"msgBox_container"\x3e\x3ch1 id\x3d"msgBox_title"\x3e\x3c/h1\x3e\x3cdiv id\x3d"msgBox_content"\x3e\x3cdiv id\x3d"msgBox_message"\x3e\x3c/div\x3e\x3c/div\x3e\x3c/div\x3e'
+        '\x3cdiv id\x3d"msgBox_container"\x3e\x3ch1 id\x3d"msgBox_title"\x3e\x3c/h1\x3e\x3cdiv id\x3d"msgBox_content"\x3e\x3cdiv id\x3d"msgBox_message"\x3e\x3c/div\x3e\x3c/div\x3e\x3c/div\x3e',
       );
       this.dialogClass &&
         d("#msgBox_container").addClass(d.alertBox.dialogClass);
@@ -3087,7 +3087,7 @@
       d("#msgBox_title").text(f);
       d("#msgBox_content").addClass("msgBoxType" + c);
       a = xfalib.ut.XfaUtil.prototype.encodeScriptableTags(
-        a.replace(/\n/g, "\x3cbr /\x3e")
+        a.replace(/\n/g, "\x3cbr /\x3e"),
       );
       d("#msgBox_message").html(a);
       d("#msgBox_container").css({
@@ -3225,12 +3225,14 @@
       0 <= a.indexOf("in")
         ? (b = this._mm2px(parseFloat(a) * this._in2mmFactor))
         : 0 <= a.indexOf("mm")
-        ? (b = this._mm2px(a))
-        : 0 <= a.indexOf("cm")
-        ? (b = this._mm2px(10 * parseFloat(a)))
-        : 0 <= a.indexOf("pt")
-        ? (b = parseFloat(a) * (this._deviceResolution / this._pdfResolution))
-        : 0 <= a.indexOf("px") && (b = parseFloat(a));
+          ? (b = this._mm2px(a))
+          : 0 <= a.indexOf("cm")
+            ? (b = this._mm2px(10 * parseFloat(a)))
+            : 0 <= a.indexOf("pt")
+              ? (b =
+                  parseFloat(a) *
+                  (this._deviceResolution / this._pdfResolution))
+              : 0 <= a.indexOf("px") && (b = parseFloat(a));
       return b;
     },
     _mm2px: function (a) {
@@ -3278,7 +3280,7 @@
             this.geographicalOrder.push({ view: a, visited: !1 });
           b.isContainer && c && this._createGeographicalOrder(a);
         },
-        this
+        this,
       );
     },
     _sortViewGeographically: function (a) {
@@ -3309,35 +3311,35 @@
           c.isSubform
             ? l && l.getTraversalObject()
               ? ((c = l.getNextTraversalSom(
-                  f.template.Constants.firstTraversal
+                  f.template.Constants.firstTraversal,
                 )),
                 (c = this._findViewInGeographicalOrderArray(c)),
                 (d = -1 != c ? c : d + 1))
               : d++
             : c.isField || c.isDraw
-            ? (c.isField &&
-                (e.updateTabIndex(a), (this._lastFieldTabbed = e), a++),
-              l && l.getTraversalObject()
-                ? ((c = l.getNextTraversalSom(
-                    f.template.Constants.nextTraversal
-                  )),
-                  (c = this._findViewInGeographicalOrderArray(c)),
-                  (d = -1 != c ? c : d + 1))
-                : (d = this._findNextViewToBeTraversed(d)))
-            : c.isExclGroup
-            ? l && l.getTraversalObject()
-              ? ((c = l.getNextTraversalSom(
-                  f.template.Constants.nextTraversal
-                )),
-                (c = this._findViewInGeographicalOrderArray(c)),
-                (d = -1 != c ? c : d + 1),
-                (c = l.getNextTraversalSom(
-                  f.template.Constants.firstTraversal
-                )),
-                (a = this._updateTabIndexOfExclGroupChildren(e, a, c)))
-              : ((a = this._updateTabIndexOfExclGroupChildren(e, a)),
-                (d = this._findTraversalInExclGroupChildren(e, d)))
-            : d++;
+              ? (c.isField &&
+                  (e.updateTabIndex(a), (this._lastFieldTabbed = e), a++),
+                l && l.getTraversalObject()
+                  ? ((c = l.getNextTraversalSom(
+                      f.template.Constants.nextTraversal,
+                    )),
+                    (c = this._findViewInGeographicalOrderArray(c)),
+                    (d = -1 != c ? c : d + 1))
+                  : (d = this._findNextViewToBeTraversed(d)))
+              : c.isExclGroup
+                ? l && l.getTraversalObject()
+                  ? ((c = l.getNextTraversalSom(
+                      f.template.Constants.nextTraversal,
+                    )),
+                    (c = this._findViewInGeographicalOrderArray(c)),
+                    (d = -1 != c ? c : d + 1),
+                    (c = l.getNextTraversalSom(
+                      f.template.Constants.firstTraversal,
+                    )),
+                    (a = this._updateTabIndexOfExclGroupChildren(e, a, c)))
+                  : ((a = this._updateTabIndexOfExclGroupChildren(e, a)),
+                    (d = this._findTraversalInExclGroupChildren(e, d)))
+                : d++;
         }
         if (h >= b) {
           this._renderNextPageFuture();
@@ -3395,7 +3397,7 @@
               ? (b++, a.updateTabIndex(b - 1), (this._lastFieldTabbed = a))
               : a.updateTabIndex(b));
         },
-        this
+        this,
       );
       e || (this._lastFieldTabbed = a.childViews[0]);
       return ++b;
@@ -3414,7 +3416,7 @@
         if ((k = c.model) && (h = k.getTraversalObject())) return 0 < h.length;
       }))
         ? ((e = e.model.getNextTraversalSom(
-            f.template.Constants.nextTraversal
+            f.template.Constants.nextTraversal,
           )),
           (e = this._findViewInGeographicalOrderArray(e)),
           (b = -1 != e ? e : b + 1))
@@ -3491,13 +3493,13 @@
       "warning" != e
         ? (1 > c("#error-msg").length &&
             c(
-              "\x3cdiv id\x3d'error-msg' role\x3d'alert'\x3e\x3c/div\x3e"
+              "\x3cdiv id\x3d'error-msg' role\x3d'alert'\x3e\x3c/div\x3e",
             ).appendTo("body"),
           a.option("errorMessage", b),
           a.element.addClass("dataInvalid"))
         : (1 > c("#warning-msg").length &&
             c(
-              "\x3cdiv id\x3d'warning-msg' role\x3d'alert'\x3e\x3c/div\x3e"
+              "\x3cdiv id\x3d'warning-msg' role\x3d'alert'\x3e\x3c/div\x3e",
             ).appendTo("body"),
           a.option("warningMessage", b));
     },
@@ -3520,7 +3522,7 @@
         days: "SMTWTFS".split(""),
         months:
           "January February March April May June July August September October November December".split(
-            " "
+            " ",
           ),
         zero: "0",
         clearText: "Clear",
@@ -3580,25 +3582,25 @@
         $month: c(".dp-monthview", this.$dp).height(this.options.viewHeight),
         $year: c(".dp-yearview", this.$dp).height(this.options.viewHeight),
         $yearset: c(".dp-yearsetview", this.$dp).height(
-          this.options.viewHeight
+          this.options.viewHeight,
         ),
       });
       this.actualWidth = Math.floor(this.$dp.width());
       this.$clear = c(".dp-clear a", this.$dp).on(
         "click",
-        c.proxy(this._clearDate, this)
+        c.proxy(this._clearDate, this),
       );
       this.$prevNavWidthBtn = c(".dp-leftnav", this.$dp).on(
         "click",
         function (a) {
           e._adjustDate(-1, e.view, !1);
-        }
+        },
       );
       this.$nextNavWidthBtn = c(".dp-rightnav", this.$dp).on(
         "click",
         function (a) {
           e._adjustDate(1, e.view, !1);
-        }
+        },
       );
       a = this.$prevNavWidthBtn.outerWidth(!0);
       l = this.$nextNavWidthBtn.outerWidth(!0);
@@ -3617,14 +3619,14 @@
           ],
           function (a, b) {
             a.attr("tabIndex", b + 1);
-          }
+          },
         );
       c(this.$dp).on("click", function (a) {
         e.touchSupported || e._curInstance.$field.focus();
       });
       c(window).on(
         "touchstart.datetimepicker mousedown.datetimepicker",
-        e._checkWindowClicked
+        e._checkWindowClicked,
       );
       this._curInstance = null;
     },
@@ -3691,8 +3693,8 @@
         (c(a.target).closest(".datePickerTarget").length
           ? (b._clickedWindow = !1)
           : b.touchSupported
-          ? (b._hide(), b._curInstance.$field[0].blur(), b._deactivateField())
-          : (b._clickedWindow = !0));
+            ? (b._hide(), b._curInstance.$field[0].blur(), b._deactivateField())
+            : (b._clickedWindow = !0));
     },
     _hotKeys: function (a) {
       var b = !1;
@@ -3738,8 +3740,8 @@
                     ? (this._hide(), (b = !1))
                     : (this.$prevNavWidthBtn.focus(), (b = !0))
                   : "4" === b
-                  ? (this._hide(), this._curInstance.$field.focus(), (b = !0))
-                  : (b = !1));
+                    ? (this._hide(), this._curInstance.$field.focus(), (b = !0))
+                    : (b = !1));
             break;
           case 32:
           case 13:
@@ -3881,7 +3883,7 @@
                 "-" +
                 a._pad2(a.currentMonth + 1) +
                 "-" +
-                a._pad2(h)
+                a._pad2(h),
             ),
           };
         },
@@ -3892,13 +3894,13 @@
         b = this.minValidDate
           ? new Date(
               this.minValidDate.getFullYear(),
-              this.minValidDate.getMonth()
+              this.minValidDate.getMonth(),
             )
           : null,
         e = this.maxValidDate
           ? new Date(
               this.maxValidDate.getFullYear(),
-              this.maxValidDate.getMonth()
+              this.maxValidDate.getMonth(),
             )
           : null,
         c = new Date(this.currentYear, 0),
@@ -3934,14 +3936,14 @@
       this.tabulateView({
         caption:
           this._convertNumberToLocale(
-            this.currentYear - this.options.yearsPerView / 2
+            this.currentYear - this.options.yearsPerView / 2,
           ) +
           "-" +
           this._convertNumberToLocale(
             this.currentYear -
               this.options.yearsPerView / 2 +
               this.options.yearsPerView -
-              1
+              1,
           ),
         numRows: 4,
         numColumns: 4,
@@ -4126,7 +4128,7 @@
           { selectedDate: "" },
         ]);
       c(".dp-selected", this["$" + this.view.toLowerCase()]).removeClass(
-        "dp-selected"
+        "dp-selected",
       );
     },
     getEvent: function () {
@@ -4160,7 +4162,7 @@
               { selectedDate: e },
             ]);
             c(".dp-selected", this["$" + this.view.toLowerCase()]).removeClass(
-              "dp-selected"
+              "dp-selected",
             );
             c(b.target).addClass("dp-selected");
             break;
@@ -4225,15 +4227,15 @@
         (e = "pointerup"),
         (g = "PointerEvent"))
       : window.MSPointerEvent
-      ? ((a = "MSPointerDown"),
-        (b = "MSPointerMove"),
-        (e = "MSPointerUp"),
-        (g = "MSPointerEvent"))
-      : c &&
-        ((a = "touchstart"),
-        (b = "touchmove"),
-        (e = "touchend"),
-        (g = "TouchEvent"));
+        ? ((a = "MSPointerDown"),
+          (b = "MSPointerMove"),
+          (e = "MSPointerUp"),
+          (g = "MSPointerEvent"))
+        : c &&
+          ((a = "touchstart"),
+          (b = "touchmove"),
+          (e = "touchend"),
+          (g = "TouchEvent"));
     return {
       TOUCH_ENABLED: c,
       POINTER_EVENT: g,
@@ -4400,11 +4402,11 @@
                       a._trigger(b, e);
                       a._postProcessEvent.apply(a, [b, e]);
                     };
-                  })(c[b])
+                  })(c[b]),
                 );
           }
         },
-        this
+        this,
       );
     },
     _preProcessEvent: function (c, d) {
@@ -4445,7 +4447,7 @@
         function (c, d) {
           "function" === typeof c && c.apply(this, [this.options[d]]);
         },
-        this
+        this,
       );
     },
     _setOption: function (c, d) {
@@ -4480,7 +4482,7 @@
         .getLogger()
         .debug(
           "xfa",
-          "passing commit value " + this.options.value + "to model "
+          "passing commit value " + this.options.value + "to model ",
         );
     },
     getCommitValue: function () {},
@@ -4546,22 +4548,22 @@
               this.$userControl.css("padding-top", c),
               (this.padding = this.$userControl.css("padding-top")))
             : "top" == f || ("middle" != f && void 0 == f)
-            ? (this.options.paraStyles["padding-top"] &&
-                (c -= this.options.paraStyles["padding-top"]),
-              this.$userControl.css("padding-bottom", c),
-              (this.padding = this.$userControl.css("padding-bottom")))
-            : this.options.multiLine &&
-              "middle" == f &&
-              ((c = c / 2 - this.options.paraStyles["padding-bottom"]),
-              this.options.paraStyles["padding-top"] &&
-                (c += this.options.paraStyles["padding-top"]),
-              this.$userControl.css("padding-top", c))));
+              ? (this.options.paraStyles["padding-top"] &&
+                  (c -= this.options.paraStyles["padding-top"]),
+                this.$userControl.css("padding-bottom", c),
+                (this.padding = this.$userControl.css("padding-bottom")))
+              : this.options.multiLine &&
+                "middle" == f &&
+                ((c = c / 2 - this.options.paraStyles["padding-bottom"]),
+                this.options.paraStyles["padding-top"] &&
+                  (c += this.options.paraStyles["padding-top"]),
+                this.$userControl.css("padding-top", c))));
     },
     _handleVAlignOnExit: function (c) {
       this.options.paraStyles &&
         ((c = xfalib.view.util.TextMetrics.measureExtent(
           this.options.displayValue,
-          { refEl: this.$userControl.get(0), maxHeight: -1 }
+          { refEl: this.$userControl.get(0), maxHeight: -1 },
         ).height),
         this._calculatePaddingForVAlign(this.options.height - c));
     },
@@ -4614,7 +4616,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.abstractWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         access: function (c) {
@@ -4643,19 +4645,19 @@
           this.options.commitProperty
             ? d.browser.mozilla && "value" == this.options.commitProperty
               ? this.$userControl.val(
-                  this._displayEmptyStringForIE(this.options.displayValue)
+                  this._displayEmptyStringForIE(this.options.displayValue),
                 )
               : (this.$userControl.prop(
                   this.options.commitProperty,
-                  this._displayEmptyStringForIE(this.options.displayValue)
+                  this._displayEmptyStringForIE(this.options.displayValue),
                 ),
                 this.$userControl.attr(
                   this.options.commitProperty,
-                  this._displayEmptyStringForIE(this.options.displayValue)
+                  this._displayEmptyStringForIE(this.options.displayValue),
                 ))
             : this.logger().debug(
                 "xfaView",
-                "[DefaultWidget._update], User Control or Commit Property is null"
+                "[DefaultWidget._update], User Control or Commit Property is null",
               );
         },
         placeholder: function (c) {
@@ -4669,7 +4671,7 @@
     render: function () {
       var c = d.xfaWidget.abstractWidget.prototype.render.apply(
         this,
-        arguments
+        arguments,
       );
       this._attachEventHandlers(c);
       return c;
@@ -4681,7 +4683,7 @@
         (c = xfalib.ut.XfaUtil.prototype.splitStringByWidth(
           this.$userControl.val(),
           this.$userControl.width(),
-          this.$userControl.get(0)
+          this.$userControl.get(0),
         ));
       return c;
     },
@@ -4732,7 +4734,7 @@
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return !1 === this._nativeWidget
         ? d.extend({}, c, {
@@ -4782,7 +4784,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
           this,
-          arguments
+          arguments,
         ),
         a =
           !1 === this._nativeWidget
@@ -4805,7 +4807,7 @@
             this.$userControl.width(
               a > this.options.calendarIconWidth
                 ? a - this.options.calendarIconWidth
-                : a
+                : a,
             );
         },
         height: function (a) {
@@ -4821,7 +4823,7 @@
               "",
               xfalib.locale.Strings.datePickerAriaLabel ||
                 "Please Enter date in {0} format only",
-              [b]
+              [b],
             );
           this.$userControl.attr("aria-label", void 0 !== a ? a + " " + f : a);
         },
@@ -4830,14 +4832,14 @@
     postProcessExit: function (c) {
       d.xfaWidget.defaultWidget.prototype.postProcessExit.apply(
         this,
-        arguments
+        arguments,
       );
       this._handleVAlignOnExit();
     },
     preProcessEnter: function (c) {
       d.xfaWidget.defaultWidget.prototype.preProcessEnter.apply(
         this,
-        arguments
+        arguments,
       );
       this._handleVAlignOnEnter();
     },
@@ -4849,7 +4851,7 @@
       !1 === this._nativeWidget
         ? d.xfaWidget.defaultWidget.prototype.showDisplayValue.apply(
             this,
-            arguments
+            arguments,
           )
         : this.showValue();
     },
@@ -4866,7 +4868,7 @@
       }
       return d.xfaWidget.defaultWidget.prototype.getCommitValue.apply(
         this,
-        arguments
+        arguments,
       );
     },
     render: function () {
@@ -4874,7 +4876,7 @@
         a = this.getOrElse(
           this.$data(this.element.get(0), "xfamodel"),
           "textstyle",
-          ""
+          "",
         ),
         b = d.xfaWidget.abstractWidget.prototype.render.apply(this, arguments),
         e = b;
@@ -4950,7 +4952,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         paraStyles: function (d) {
@@ -4967,7 +4969,7 @@
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         "onKeyInput.numericInput": xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT,
@@ -4984,14 +4986,14 @@
     postProcessExit: function (c) {
       d.xfaWidget.defaultWidget.prototype.postProcessExit.apply(
         this,
-        arguments
+        arguments,
       );
       this._handleVAlignOnExit();
     },
     preProcessEnter: function (c) {
       d.xfaWidget.defaultWidget.prototype.preProcessEnter.apply(
         this,
-        arguments
+        arguments,
       );
       this._handleVAlignOnEnter();
     },
@@ -5019,7 +5021,7 @@
     getCommitValue: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getCommitValue.apply(
         this,
-        arguments
+        arguments,
       );
       c = this._toLatinForm(c);
       0 < c.length && this._processValue && !c.match(this._engRegex)
@@ -5047,22 +5049,22 @@
         null === a
           ? (this.$userControl.val(this._previousCompositionVal), (d = !0))
           : d
-          ? ((e = e.substr(0, c)),
-            this.$userControl.val(e),
-            (this._previousCompositionVal = e),
-            (d = !0))
-          : (this._previousCompositionVal = e);
+            ? ((e = e.substr(0, c)),
+              this.$userControl.val(e),
+              (this._previousCompositionVal = e),
+              (d = !0))
+            : (this._previousCompositionVal = e);
       }
       return d;
     },
     _attachEventHandlers: function (c) {
       d.xfaWidget.defaultWidget.prototype._attachEventHandlers.apply(
         this,
-        arguments
+        arguments,
       );
       d.xfaWidget.defaultWidget.prototype._attachCompositionEventHandlers.apply(
         this,
-        arguments
+        arguments,
       );
     },
     _handleKeyInput: function (c, f, a) {
@@ -5072,14 +5074,14 @@
       var b = this.$userControl.prop(this.options.commitProperty) || "",
         e = xfalib.view.util.HtmlUtil.getHTMLSupportedAttr(
           this.$userControl[0],
-          "selectionStart"
+          "selectionStart",
         ),
         g = !(void 0 === e || null === e);
       e = e || 0;
       var k =
           xfalib.view.util.HtmlUtil.getHTMLSupportedAttr(
             this.$userControl[0],
-            "selectionEnd"
+            "selectionEnd",
           ) || 0,
         h = parseInt(this.options.combCells) || 0,
         l = f;
@@ -5163,7 +5165,7 @@
               function (a) {
                 return this._isValidChar(a);
               },
-              this
+              this,
             )
           )
             (d = this._toLatinForm(d)), this._handleKeyInput(c, d, 0);
@@ -5181,10 +5183,10 @@
           return "." == a
             ? this.options.decimal
             : "-" == a
-            ? this.options.minus
-            : String.fromCharCode(parseInt(a) + d);
+              ? this.options.minus
+              : String.fromCharCode(parseInt(a) + d);
         },
-        this
+        this,
       ).join("");
     },
     _convertValueFromLocale: function (c) {
@@ -5196,17 +5198,17 @@
           return a == this.options.decimal
             ? "."
             : a == this.options.minus
-            ? "-"
-            : (a.charCodeAt(0) - d).toString();
+              ? "-"
+              : (a.charCodeAt(0) - d).toString();
         },
-        this
+        this,
       ).join("");
     },
     showValue: function () {
       this._isValueSame() ||
         (this.options.value && this._writtenInLocale
           ? this.$userControl.val(
-              this._convertValueToLocale(this.options.value)
+              this._convertValueToLocale(this.options.value),
             )
           : this.$userControl.val(this.options.value));
       d.xfaWidget.textField.prototype._selectOnFocusInIE.apply(this, arguments);
@@ -5232,7 +5234,7 @@
     getOptionsMap: function () {
       var f = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, f, {
         value: function (a) {
@@ -5259,7 +5261,7 @@
                 .show();
           this.$userControl.toggleClass(
             this.PLACE_HOLDER_STYLE_CLASS,
-            0 == a.length || null == a
+            0 == a.length || null == a,
           );
         },
         items: function (a) {
@@ -5312,7 +5314,7 @@
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         focus: [
@@ -5331,7 +5333,7 @@
         e = this.getOrElse(
           this.$data(this.element.get(0), "xfamodel"),
           "textstyle",
-          ""
+          "",
         ),
         g = d(this.widgetSkeleton).attr("style", e).attr("name", b);
       this.options.editable && g.addClass("combobox");
@@ -5354,7 +5356,7 @@
                 .appendTo(g))
             : d(this.optionSkeleton).val(b).text(a.display).appendTo(k);
         },
-        this
+        this,
       );
       this.element.append(g);
       a = this.element.children().eq(0).attr("name", this.options.name);
@@ -5451,7 +5453,7 @@
       13 != c.keyCode &&
         d.xfaWidget.defaultWidget.prototype._handleKeyDown.apply(
           this,
-          arguments
+          arguments,
         );
     },
     showValue: function () {},
@@ -5464,7 +5466,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         width: function (d) {
@@ -5492,7 +5494,7 @@
           e ||
             d(this.$userControl.children().get(0)).attr(
               "tabIndex",
-              this.options.tabIndex
+              this.options.tabIndex,
             );
         },
         items: function (c) {
@@ -5525,7 +5527,7 @@
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         listboxenter: xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT,
@@ -5542,10 +5544,10 @@
       var c = this.getOrElse(
           this.$data(this.element.get(0), "xfamodel"),
           "textstyle",
-          ""
+          "",
         ),
         f = _.template(
-          '\x3col style\x3d"position:absolute;\x3c%\x3dtextStyle%\x3e" role\x3d"listbox"\x3e\x3c% _.each(items, function(item){ %\x3e\x3c% var saveItem \x3d item.save ? item.save.replace(/"/g,"\x26quot;"):null %\x3e\x3cli role\x3d"option" data-save\x3d"\x3c% print(saveItem) %\x3e" data-selected\x3d"false"\x3e\x3c% print(item.display) %\x3e\x3c/li\x3e\x3c%})%\x3e\x3c/ol\x3e'
+          '\x3col style\x3d"position:absolute;\x3c%\x3dtextStyle%\x3e" role\x3d"listbox"\x3e\x3c% _.each(items, function(item){ %\x3e\x3c% var saveItem \x3d item.save ? item.save.replace(/"/g,"\x26quot;"):null %\x3e\x3cli role\x3d"option" data-save\x3d"\x3c% print(saveItem) %\x3e" data-selected\x3d"false"\x3e\x3c% print(item.display) %\x3e\x3c/li\x3e\x3c%})%\x3e\x3c/ol\x3e',
         );
       c = _.extend({ textStyle: c }, this.options);
       f = f(c);
@@ -5569,7 +5571,7 @@
         .focus(d.proxy(this._handleItemFocus, this));
       _.contains(this.options.value, c.sSaveVal) &&
         this._selectListItem(
-          this.$userControl.find("[data-save\x3d" + c.sSaveVal + "]")
+          this.$userControl.find("[data-save\x3d" + c.sSaveVal + "]"),
         );
     },
     clearItems: function () {
@@ -5706,7 +5708,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         access: function (c) {
@@ -5754,7 +5756,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         access: function (c) {
@@ -5777,16 +5779,16 @@
         displayValue: function (c) {
           this.$userControl.attr(
             this.options.commitProperty,
-            this.options.value
+            this.options.value,
           );
           this._state(this.dIndexOf(this.options.values, this.options.value));
           this.$userControl.attr(
             "checked",
-            this.checkedState ? "checked" : null
+            this.checkedState ? "checked" : null,
           );
           this.$userControl.prop(
             "checked",
-            this.checkedState ? "checked" : null
+            this.checkedState ? "checked" : null,
           );
           this.$userControl.attr("aria-checked", this.checkedState);
           2 == this.options.state
@@ -5807,7 +5809,7 @@
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         xfacheckboxchange: xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT,
@@ -5827,7 +5829,7 @@
           f.inFocus = !1;
         });
       c.change(d.proxy(this._handleChange, this)).click(
-        d.proxy(this._handleClick, this)
+        d.proxy(this._handleClick, this),
       );
     },
     getCommitValue: function () {
@@ -5891,7 +5893,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         maxChars: function (c) {
@@ -5974,13 +5976,13 @@
         } else
           d.xfaWidget.defaultWidget.prototype._handleVAlignOnExit.apply(
             this,
-            arguments
+            arguments,
           );
     },
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         "onKeyInput.textField": xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT,
@@ -6005,19 +6007,19 @@
       this.options.multiLine ||
         (d.xfaWidget.defaultWidget.prototype._handleKeyDown.apply(
           this,
-          arguments
+          arguments,
         ),
         (f = 13 == a ? "" : f));
       var b = this.$userControl.val(),
         e =
           xfalib.view.util.HtmlUtil.getHTMLSupportedAttr(
             this.$userControl[0],
-            "selectionStart"
+            "selectionStart",
           ) || 0,
         g =
           xfalib.view.util.HtmlUtil.getHTMLSupportedAttr(
             this.$userControl[0],
-            "selectionEnd"
+            "selectionEnd",
           ) || 0,
         k = b.substr(0, e) + f + b.substr(g);
       this.options.curValue = b;
@@ -6090,11 +6092,11 @@
     _attachEventHandlers: function (c) {
       d.xfaWidget.defaultWidget.prototype._attachEventHandlers.apply(
         this,
-        arguments
+        arguments,
       );
       d.xfaWidget.defaultWidget.prototype._attachCompositionEventHandlers.apply(
         this,
-        arguments
+        arguments,
       );
     },
     _handlePaste: function (c) {
@@ -6114,7 +6116,7 @@
     postProcessExit: function (c) {
       d.xfaWidget.defaultWidget.prototype.postProcessExit.apply(
         this,
-        arguments
+        arguments,
       );
       (this.options.multiLine && this.options.hScrollDisabled) ||
         this._handleVAlignOnExit();
@@ -6122,7 +6124,7 @@
     preProcessEnter: function (c) {
       d.xfaWidget.defaultWidget.prototype.preProcessEnter.apply(
         this,
-        arguments
+        arguments,
       );
       (this.options.multiLine && this.options.hScrollDisabled) ||
         this._handleVAlignOnEnter();
@@ -6137,7 +6139,7 @@
     getCommitValue: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getCommitValue.apply(
         this,
-        arguments
+        arguments,
       );
       this._maxCharsReached(c) && (c = c.slice(0, this.options.maxChars));
       this.$userControl.val(this.options.value);
@@ -6169,7 +6171,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.textField.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         value: function (c) {
@@ -6185,7 +6187,7 @@
       if (xfalib.ut.XfaUtil.prototype.isIE()) {
         var c = d.xfaWidget.textField.prototype.getEventMap.apply(
           this,
-          arguments
+          arguments,
         );
         return d.extend({}, c, {
           "activate.richTextField": xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT,
@@ -6383,7 +6385,7 @@
     getEventMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         imagechange: xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT,
@@ -6392,7 +6394,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         screenReaderText: function (c) {
@@ -6442,7 +6444,7 @@
         : xfalib.ut.XfaUtil.prototype
             .getLogger()
             .error(
-              "Image Field is supported only for HTML5 supported browsers."
+              "Image Field is supported only for HTML5 supported browsers.",
             );
       this.element &&
         ((this.$widgetInput = this.element
@@ -6465,7 +6467,7 @@
             c.$widgetImg.attr("src", c.reader.result);
             c.$widgetImg.trigger("imagechange");
           },
-          !1
+          !1,
         );
       return d.xfaWidget.defaultWidget.prototype.render.apply(this, arguments);
     },
@@ -6501,7 +6503,7 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         displayValue: function (c) {},
@@ -6543,7 +6545,7 @@
         localeString: function (a) {
           return (
             c.ut.XfaUtil.prototype.encodeScriptableTags(
-              d.xfaWidget.abstractWidget.prototype.localeStrings()[a]
+              d.xfaWidget.abstractWidget.prototype.localeStrings()[a],
             ) || a
           );
         },
@@ -6714,12 +6716,12 @@
             ((this._buttonsEnabled[a] = b)
               ? d("#iEBox_" + a)
                   .empty(
-                    '\x3cdiv style\x3d"background:white;width:100%;height:100%;opacity:0.75;"\x3e\x3c/div\x3e'
+                    '\x3cdiv style\x3d"background:white;width:100%;height:100%;opacity:0.75;"\x3e\x3c/div\x3e',
                   )
                   .removeClass("disable_button")
               : d("#iEBox_" + a)
                   .append(
-                    '\x3cdiv style\x3d"background:white;width:100%;height:100%;opacity:0.75;"\x3e\x3c/div\x3e'
+                    '\x3cdiv style\x3d"background:white;width:100%;height:100%;opacity:0.75;"\x3e\x3c/div\x3e',
                   )
                   .addClass("disable_button"));
         },
@@ -6787,7 +6789,7 @@
                 f.measureText(b).width,
                 e.width,
                 l,
-                k
+                k,
               )),
               (f.font = "italic " + l + "px sans-serif, Georgia"),
               f.clearRect(0, 0, e.width, e.height),
@@ -6813,7 +6815,7 @@
               b,
               e.width,
               l,
-              "sans-serif, Georgia"
+              "sans-serif, Georgia",
             );
             f.font = "italic " + l + "px sans-serif, Georgia";
             f.clearRect(0, 0, e.width, e.height);
@@ -6867,7 +6869,7 @@
                     });
                   }
                 }),
-                { passive: !1 }
+                { passive: !1 },
               ),
               d("body").on(
                 b.POINTER_UP,
@@ -6887,7 +6889,7 @@
                     });
                     d("body").off(b.POINTER_UP, k);
                   }
-                })
+                }),
               ),
               (a = b.getTouchEvent(a)),
               (c = !0),
@@ -6898,11 +6900,11 @@
               d("#iEBox_moveframe").offset(f),
               d("#iEBox_moveframe").css(
                 "width",
-                d("#iEBox_container").css("width")
+                d("#iEBox_container").css("width"),
               ),
               d("#iEBox_moveframe").css(
                 "height",
-                d("#iEBox_container").css("height")
+                d("#iEBox_container").css("height"),
               ));
           });
         },
@@ -7093,7 +7095,7 @@
           _that._active && _that._handleError(a);
           _that._active = !1;
         },
-        { timeout: 1e4 }
+        { timeout: 1e4 },
       );
     },
     cancel: function () {
@@ -7150,7 +7152,7 @@
           for (e = 0; e < c.length; e++)
             b = this._XOR(
               a._crc_table[(this._XOR(b, c.charCodeAt(e)) & 255) >>> 0],
-              b >>> 8
+              b >>> 8,
             );
           return b;
         },
@@ -7214,7 +7216,7 @@
           b.p += c;
           a._readU32Int(b);
           c = a._prepareTextChunk(
-            a._LC_Scribble_MetaDataKey + String.fromCharCode(0) + "true"
+            a._LC_Scribble_MetaDataKey + String.fromCharCode(0) + "true",
           );
           b = b.d.substring(0, b.p) + c + b.d.substring(b.p);
           b = a._btoa(b);
@@ -7265,7 +7267,7 @@
     getOptionsMap: function () {
       var a = d.xfaWidget.defaultWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, a, {
         displayValue: function (a) {
@@ -7277,7 +7279,7 @@
                   : "data:;base64," + this.options.value),
                 this._setValue(a))
               : (this._displayValue(
-                  this._extractData(this._createEmptyImageData())
+                  this._extractData(this._createEmptyImageData()),
                 ),
                 this.$userControl.addClass("emptyScribble"),
                 (this._is_readonly = !1)));
@@ -7287,7 +7289,7 @@
     getEventMap: function () {
       var a = d.xfaWidget.defaultWidget.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, a, {
         scribblefocus: c.ut.XfaUtil.prototype.XFA_ENTER_EVENT,
@@ -7346,12 +7348,12 @@
         ? a.after(
             "\x3cdiv id\x3d'" +
               this._wgtId +
-              "' class\x3d'sc_popUpMenu'\x3e\x3c/div\x3e"
+              "' class\x3d'sc_popUpMenu'\x3e\x3c/div\x3e",
           )
         : a.after(
             "\x3cdiv id\x3d'" +
               this._wgtId +
-              "' style\x3d'display:none;' class\x3d'sc_popUpMenu'\x3e\x3c/div\x3e"
+              "' style\x3d'display:none;' class\x3d'sc_popUpMenu'\x3e\x3c/div\x3e",
           );
       this._setUpCanvas();
       return a;
@@ -7387,7 +7389,7 @@
                 a.target != b.$userControl[0] &&
                 (d("#" + b._wgtId).css({ display: "none" }),
                 d("body").off("mousemove", c));
-            })
+            }),
           );
         }
       });
@@ -7451,7 +7453,7 @@
           null,
           this.localeStrings().clearSignatureConfirm,
           this.localeStrings().clearSignature,
-          d.proxy(this._removeSigConfirmationHandler, this)
+          d.proxy(this._removeSigConfirmationHandler, this),
         ));
     },
     _removeSigConfirmationHandler: function (a) {
@@ -7489,7 +7491,7 @@
         ? a && this._setValue("data:image/png;base64," + a)
         : this.logger().debug(
             "xfaView",
-            "[DefaultWidget._update], User Control or Commit Property is null"
+            "[DefaultWidget._update], User Control or Commit Property is null",
           );
     },
     _doOk: function () {
@@ -7522,7 +7524,7 @@
               this._geoQuerySuccessHandler(a);
               this._doOk();
             }, this),
-            d.proxy(this._geoQueryErrorHandler, this)
+            d.proxy(this._geoQueryErrorHandler, this),
           )),
           this._geoLocQuery.query(),
           this._showMessage(this.localeStrings().fetchGeoLocation))
@@ -7561,11 +7563,11 @@
       this._msgTimeout &&
         (clearTimeout(this._msgTimeout), (this._msgTimeout = 0));
       d("#iEBox_title").replaceWith(
-        '\x3cdiv id\x3d"iEBox_title"\x3e' + a + "\x3c/div\x3e"
+        '\x3cdiv id\x3d"iEBox_title"\x3e' + a + "\x3c/div\x3e",
       );
       this._msgTimeout = window.setTimeout(function () {
         d("#iEBox_title").replaceWith(
-          '\x3cdiv id\x3d"iEBox_title"\x3e' + b._defaultStatus + "\x3c/div\x3e"
+          '\x3cdiv id\x3d"iEBox_title"\x3e' + b._defaultStatus + "\x3c/div\x3e",
         );
       }, 15e3);
     },
@@ -7579,13 +7581,13 @@
       navigator.geolocation
         ? ((this._geoLocQuery = new a().init(
             d.proxy(this._geoQuerySuccessHandler, this),
-            d.proxy(this._geoQueryErrorHandler, this)
+            d.proxy(this._geoQueryErrorHandler, this),
           )),
           this._geoLocQuery.query(),
           this._showMessage(this.localeStrings().fetchGeoLocation))
         : this.logger().debug(
             "xfaView",
-            this._getLogMessage("ALC-FRM-901-011")
+            this._getLogMessage("ALC-FRM-901-011"),
           );
     },
     calculateGeolocation: function () {
@@ -7663,7 +7665,7 @@
         var k = Math.max(
             e.measureText(a).width,
             e.measureText(b).width,
-            e.measureText(c).width
+            e.measureText(c).width,
           ),
           h = 1.5 * e.measureText("m").width;
         (k > d || 3 * h > g) && 1 < f;
@@ -7674,7 +7676,7 @@
           (k = Math.max(
             e.measureText(a).width,
             e.measureText(b).width,
-            e.measureText(c).width
+            e.measureText(c).width,
           )),
           (h = 1.5 * e.measureText("m").width);
       return { width: k, lineHeight: h, fontSize: f };
@@ -7754,7 +7756,7 @@
             b,
             b.width,
             b.height,
-            d.proxy(a._scribbleCallback, a)
+            d.proxy(a._scribbleCallback, a),
           );
           a.myScribbleHandle.setEnabled(!a._is_readonly);
           d("#iEBox_caption").width(b.width);
@@ -7959,7 +7961,7 @@
           (null == _.last(this.$fileDomElements)
             ? this.cloneFileInputAndUpdateIdForIE9()
             : this.updateLabelForAttr(
-                _.last(this.$fileDomElements).attr("id")
+                _.last(this.$fileDomElements).attr("id"),
               ));
       } else
         e = d.map(this.$fileDomElements, function (a, b) {
@@ -7975,7 +7977,7 @@
     },
     fileItemPreview: function () {
       return d("\x3cspan\x3e\x3c/span\x3e").addClass(
-        "guide-fu-filePreview glyphicon glyphicon-ok"
+        "guide-fu-filePreview glyphicon glyphicon-ok",
       );
     },
     buttonText: function (a, b) {
@@ -7986,7 +7988,7 @@
     },
     btnIcon: function () {
       return d("\x3cspan\x3e\x3c/span\x3e").addClass(
-        "guide-fu-icon glyphicon glyphicon-folder-open"
+        "guide-fu-icon glyphicon glyphicon-folder-open",
       );
     },
     btnLabel: function () {
@@ -8004,7 +8006,7 @@
     },
     getNewCommentElement: function (a) {
       return d(
-        "\x3cdiv contenteditable\x3d'true' tabindex\x3d'0'\x3e\x3c/div\x3e"
+        "\x3cdiv contenteditable\x3d'true' tabindex\x3d'0'\x3e\x3c/div\x3e",
       )
         .addClass("guide-fu-comment")
         .text(a || "");
@@ -8071,25 +8073,25 @@
             xfalib.ut.LocalizationUtil.prototype.getLocalizedMessage(
               "",
               xfalib.locale.Strings.FileSizeGreater,
-              [b, a.options.fileSizeLimit]
-            )
+              [b, a.options.fileSizeLimit],
+            ),
           )
         : c === a.invalidFeature.NAME
-        ? alert(
-            xfalib.ut.LocalizationUtil.prototype.getLocalizedMessage(
-              "",
-              xfalib.locale.Strings.FileNameInvalid,
-              [b]
+          ? alert(
+              xfalib.ut.LocalizationUtil.prototype.getLocalizedMessage(
+                "",
+                xfalib.locale.Strings.FileNameInvalid,
+                [b],
+              ),
             )
-          )
-        : c === a.invalidFeature.MIMETYPE &&
-          alert(
-            xfalib.ut.LocalizationUtil.prototype.getLocalizedMessage(
-              "",
-              xfalib.locale.Strings.FileMimeTypeInvalid,
-              [b]
-            )
-          );
+          : c === a.invalidFeature.MIMETYPE &&
+            alert(
+              xfalib.ut.LocalizationUtil.prototype.getLocalizedMessage(
+                "",
+                xfalib.locale.Strings.FileMimeTypeInvalid,
+                [b],
+              ),
+            );
     },
     _getIndexOfText: function (a, b) {
       var c = -1,
@@ -8187,7 +8189,7 @@
             c.open(
               a,
               "",
-              "scrollbars\x3dno,menubar\x3dno,height\x3d600,width\x3d800,resizable\x3dyes,toolbar\x3dno,status\x3dno"
+              "scrollbars\x3dno,menubar\x3dno,height\x3d600,width\x3d800,resizable\x3dyes,toolbar\x3dno,status\x3dno",
             ),
             a
           );
@@ -8207,7 +8209,7 @@
               this.previewFile.apply(this, [null, { fileUrl: c }]))
             : ((b = this._getFileObjIdx(b)),
               (b = this._previewFileUsingObjectUrl(
-                this.$fileDomElements[b[0]][0].files[b[1]]
+                this.$fileDomElements[b[0]][0].files[b[1]],
               )) && a.data("objectUrl", b)));
       }
     },
@@ -8221,7 +8223,7 @@
       c.open(
         a,
         "",
-        "scrollbars\x3dno,menubar\x3dno,height\x3d600,width\x3d800,resizable\x3dyes,toolbar\x3dno,status\x3dno"
+        "scrollbars\x3dno,menubar\x3dno,height\x3d600,width\x3d800,resizable\x3dyes,toolbar\x3dno,status\x3dno",
       );
     },
     resetIfNotMultiSelect: function () {
@@ -8252,7 +8254,7 @@
           : this.getNewCommentElementSummary(d(a.target).text());
       b.replaceWith(a);
       a.focus(d.proxy(this.handleCommentClick, this)).click(
-        d.proxy(this.handleCommentClick, this)
+        d.proxy(this.handleCommentClick, this),
       );
       this.$element.trigger("change.fileupload");
     },
@@ -8297,17 +8299,17 @@
               a.size / 1024 / 1024 > parseFloat(this.options.fileSizeLimit)
                 ? ((p = d = !0), (e = c + "," + e))
                 : this.isValid(c)
-                ? a.type &&
-                  !this.regexMimeTypeList.some(function (b) {
-                    return b.test(a.type);
-                  }) &&
-                  ((q = h = !0), (l = c + "," + l))
-                : ((r = g = !0), (f = c + "," + f));
+                  ? a.type &&
+                    !this.regexMimeTypeList.some(function (b) {
+                      return b.test(a.type);
+                    }) &&
+                    ((q = h = !0), (l = c + "," + l))
+                  : ((r = g = !0), (f = c + "," + f));
               d || g || h
                 ? t.push(b)
                 : (this.showFileList(c), this.values.push(c));
             },
-            this
+            this,
           );
           0 < t.length &&
             (0 < this.$fileDomElements.length &&
@@ -8324,18 +8326,18 @@
         p
           ? this.showInvalidMessage(
               e.substring(0, e.lastIndexOf(",")),
-              this.invalidFeature.SIZE
+              this.invalidFeature.SIZE,
             )
           : r
-          ? this.showInvalidMessage(
-              f.substring(0, f.lastIndexOf(",")),
-              this.invalidFeature.NAME
-            )
-          : q &&
-            this.showInvalidMessage(
-              l.substring(0, l.lastIndexOf(",")),
-              this.invalidFeature.MIMETYPE
-            );
+            ? this.showInvalidMessage(
+                f.substring(0, f.lastIndexOf(",")),
+                this.invalidFeature.NAME,
+              )
+            : q &&
+              this.showInvalidMessage(
+                l.substring(0, l.lastIndexOf(",")),
+                this.invalidFeature.MIMETYPE,
+              );
       }
     },
     cloneFileInputAndUpdateIdForIE9: function () {
@@ -8380,7 +8382,7 @@
       this.$elementFileUploadBtn = this.$parent.find(this.options.buttonClass);
       this.$elementFileUploadBtn.attr(
         "aria-label",
-        this.options.screenReaderText || ""
+        this.options.screenReaderText || "",
       );
       a &&
         ((this.elementId = this.$element.attr("id")),
@@ -8463,7 +8465,7 @@
           access: function (a) {
             this.$userControl.adobeFileAttachment("access", a);
           },
-        })
+        }),
       );
     },
     _initializeOptions: function () {
@@ -8474,7 +8476,7 @@
             "_uuidGenerator" !== a &&
             c.apply(this, [this.options[a]]);
         },
-        this
+        this,
       );
     },
     _getFileList: function () {
@@ -8486,7 +8488,7 @@
     _getFileNamePathMap: function (c) {
       return this.$userControl.adobeFileAttachment(
         "getSetFilePathAndReturnNamePathMap",
-        c
+        c,
       );
     },
     getEventMap: function () {
@@ -8545,11 +8547,11 @@
           a
             ? (this.fileUrl = e)
             : 0 !== g.lastIndexOf(c._getUrl, 0)
-            ? (this.fileUrl = c._getUrl + g + "/" + b)
-            : (this.fileUrl = g + "/" + b);
+              ? (this.fileUrl = c._getUrl + g + "/" + b)
+              : (this.fileUrl = g + "/" + b);
           0 === l.length
             ? (l = d(
-                "\x3cform method\x3d'post' enctype\x3d'multipart/form-data'/\x3e"
+                "\x3cform method\x3d'post' enctype\x3d'multipart/form-data'/\x3e",
               )
                 .addClass("filePreview")
                 .attr({
@@ -8575,11 +8577,11 @@
                       m.append(c[e], a[0].files[e]);
                   }
                 },
-                this
+                this,
               )
             : (h.attr("name", b).appendTo(l), m.append(b, h[0].files[0]));
           d(
-            "\x3cinput type\x3d'hidden' name\x3d'_charset_' value\x3d'UTF-8'/\x3e"
+            "\x3cinput type\x3d'hidden' name\x3d'_charset_' value\x3d'UTF-8'/\x3e",
           ).appendTo(l);
           m.append("_charset_", "UTF-8");
           a || (this.fileMap[this.fileUrl] = this.$element);
@@ -8617,7 +8619,7 @@
               this.options.iframeContainer +
                 " iframe[name\x3d'" +
                 this.options.iframeName +
-                "']"
+                "']",
             )
               .contents()
               .find("#ChangeLog")
@@ -8638,7 +8640,7 @@
     initialize: function () {
       if (null == this.$iframe || 0 === this.$iframe.length)
         (this.$iframe = this.fileIframe(this.options.iframeName).appendTo(
-          this.options.iframeContainer
+          this.options.iframeContainer,
         )),
           (this.fileMap = {});
     },
@@ -8652,7 +8654,7 @@
             h = d.extend(
               {},
               c.prototype.defaults(f, a),
-              "object" === typeof f && f
+              "object" === typeof f && f,
             );
           k
             ? k.$element.get(0) !== this && (k.$element = d(this))
@@ -8722,7 +8724,7 @@
   d(document).on(
     "click.bs.alert.data-api",
     '[data-dismiss\x3d"alert"]',
-    c.prototype.close
+    c.prototype.close,
   );
 })(jQuery);
 +(function (d) {
@@ -8748,7 +8750,7 @@
             ((this.isLoading = !1),
             b.removeClass("disabled").removeAttr("disabled"));
       }, this),
-      0
+      0,
     );
   };
   c.prototype.toggle = function () {
@@ -8788,7 +8790,7 @@
       b.hasClass("btn") || (b = b.closest(".btn"));
       b.button("toggle");
       a.preventDefault();
-    }
+    },
   );
 })(jQuery);
 +(function (d) {
@@ -8815,7 +8817,7 @@
       !this.paused &&
       (this.interval = setInterval(
         d.proxy(this.next, this),
-        this.options.interval
+        this.options.interval,
       ));
     return this;
   };
@@ -8833,8 +8835,8 @@
             b.to(a);
           })
         : c == a
-        ? this.pause().cycle()
-        : this.slide(a > c ? "next" : "prev", d(this.$items[a]));
+          ? this.pause().cycle()
+          : this.slide(a > c ? "next" : "prev", d(this.$items[a]));
   };
   c.prototype.pause = function (a) {
     a || (this.paused = !0);
@@ -8889,7 +8891,7 @@
                 }, 0);
               })
               .emulateTransitionEnd(
-                1e3 * c.css("transition-duration").slice(0, -1)
+                1e3 * c.css("transition-duration").slice(0, -1),
               ))
           : (c.removeClass("active"),
             g.addClass("active"),
@@ -8925,7 +8927,7 @@
         c,
         g = d(
           b.attr("data-target") ||
-            ((c = b.attr("href")) && c.replace(/.*(?=#[^\s]+$)/, ""))
+            ((c = b.attr("href")) && c.replace(/.*(?=#[^\s]+$)/, "")),
         );
       c = d.extend({}, g.data(), b.data());
       var f = b.attr("data-slide-to");
@@ -8933,7 +8935,7 @@
       g.carousel(c);
       (f = b.attr("data-slide-to")) && g.data("bs.carousel").to(f);
       a.preventDefault();
-    }
+    },
   );
   d(window).on("load", function () {
     d('[data-ride\x3d"carousel"]').each(function () {
@@ -9003,7 +9005,7 @@
             b.click()
           );
         b = c.find(
-          "[role\x3dmenu] li:not(.divider):visible a, [role\x3dlistbox] li:not(.divider):visible a"
+          "[role\x3dmenu] li:not(.divider):visible a, [role\x3dlistbox] li:not(.divider):visible a",
         );
         b.length &&
           ((c = b.index(b.filter(":focus"))),
@@ -9036,12 +9038,12 @@
     .on(
       "click.bs.dropdown.data-api",
       "[data-toggle\x3ddropdown]",
-      a.prototype.toggle
+      a.prototype.toggle,
     )
     .on(
       "keydown.bs.dropdown.data-api",
       "[data-toggle\x3ddropdown], [role\x3dmenu], [role\x3dlistbox]",
-      a.prototype.keydown
+      a.prototype.keydown,
     );
 })(jQuery);
 +(function (d) {
@@ -9054,7 +9056,7 @@
         this.options.remote,
         d.proxy(function () {
           this.$element.trigger("loaded.bs.modal");
-        }, this)
+        }, this),
       );
   };
   c.DEFAULTS = { backdrop: !0, keyboard: !0, show: !0 };
@@ -9072,7 +9074,7 @@
       this.$element.on(
         "click.dismiss.bs.modal",
         '[data-dismiss\x3d"modal"]',
-        d.proxy(this.hide, this)
+        d.proxy(this.hide, this),
       ),
       this.backdrop(function () {
         var c = d.support.transition && b.$element.hasClass("fade");
@@ -9120,7 +9122,7 @@
           this.$element[0] === a.target ||
             this.$element.has(a.target).length ||
             this.$element.focus();
-        }, this)
+        }, this),
       );
   };
   c.prototype.escape = function () {
@@ -9129,7 +9131,7 @@
         "keyup.dismiss.bs.modal",
         d.proxy(function (a) {
           27 == a.which && this.hide();
-        }, this)
+        }, this),
       );
     else this.isShown || this.$element.off("keyup.dismiss.bs.modal");
   };
@@ -9150,7 +9152,7 @@
     if (this.isShown && this.options.backdrop) {
       var c = d.support.transition && b;
       this.$backdrop = d(
-        '\x3cdiv class\x3d"modal-backdrop ' + b + '" \x3e\x3c/div\x3e'
+        '\x3cdiv class\x3d"modal-backdrop ' + b + '" \x3e\x3c/div\x3e',
       ).appendTo(document.body);
       this.$element.on(
         "click.dismiss.bs.modal",
@@ -9159,7 +9161,7 @@
             ("static" == this.options.backdrop
               ? this.$element[0].focus.call(this.$element[0])
               : this.hide.call(this));
-        }, this)
+        }, this),
       );
       c && this.$backdrop[0].offsetWidth;
       this.$backdrop.addClass("in");
@@ -9209,7 +9211,7 @@
       f.modal(c, this).one("hide", function () {
         b.is(":visible") && b.focus();
       });
-    }
+    },
   );
   d(document)
     .on("show.bs.modal", ".modal", function () {
@@ -9253,19 +9255,19 @@
         this.$element.on(
           "click." + this.type,
           this.options.selector,
-          d.proxy(this.toggle, this)
+          d.proxy(this.toggle, this),
         );
       else if ("manual" != c) {
         var e = "hover" == c ? "mouseleave" : "focusout";
         this.$element.on(
           ("hover" == c ? "mouseenter" : "focusin") + "." + this.type,
           this.options.selector,
-          d.proxy(this.enter, this)
+          d.proxy(this.enter, this),
         );
         this.$element.on(
           e + "." + this.type,
           this.options.selector,
-          d.proxy(this.leave, this)
+          d.proxy(this.leave, this),
         );
       }
     this.options.selector
@@ -9364,12 +9366,12 @@
           "bottom" == c && f.top + f.height + l - p > q
             ? "top"
             : "top" == c && 0 > f.top - p - l
-            ? "bottom"
-            : "right" == c && f.right + h > r
-            ? "left"
-            : "left" == c && f.left - h < m
-            ? "right"
-            : c;
+              ? "bottom"
+              : "right" == c && f.right + h > r
+                ? "left"
+                : "left" == c && f.left - h < m
+                  ? "right"
+                  : c;
         a.removeClass(k).addClass(c);
       }
       f = this.getCalculatedOffset(c, f, h, l);
@@ -9401,9 +9403,9 @@
             c.css({ top: Math.round(a.top), left: Math.round(a.left) });
           },
         },
-        a
+        a,
       ),
-      0
+      0,
     );
     c.addClass("in");
     h = c[0].offsetWidth;
@@ -9467,17 +9469,17 @@
       "function" == typeof a.getBoundingClientRect
         ? a.getBoundingClientRect()
         : { width: a.offsetWidth, height: a.offsetHeight },
-      this.$element.offset()
+      this.$element.offset(),
     );
   };
   c.prototype.getCalculatedOffset = function (a, b, c, d) {
     return "bottom" == a
       ? { top: b.top + b.height, left: b.left + b.width / 2 - c / 2 }
       : "top" == a
-      ? { top: b.top - d, left: b.left + b.width / 2 - c / 2 }
-      : "left" == a
-      ? { top: b.top + b.height / 2 - d / 2, left: b.left - c }
-      : { top: b.top + b.height / 2 - d / 2, left: b.left + b.width };
+        ? { top: b.top - d, left: b.left + b.width / 2 - c / 2 }
+        : "left" == a
+          ? { top: b.top + b.height / 2 - d / 2, left: b.left - c }
+          : { top: b.top + b.height / 2 - d / 2, left: b.left + b.width };
   };
   c.prototype.getTitle = function () {
     var a = this.$element,
@@ -9662,7 +9664,7 @@
     function (a) {
       a.preventDefault();
       d(this).tab("show");
-    }
+    },
   );
 })(jQuery);
 +(function (d) {
@@ -9672,7 +9674,7 @@
       .on("scroll.bs.affix.data-api", d.proxy(this.checkPosition, this))
       .on(
         "click.bs.affix.data-api",
-        d.proxy(this.checkPositionWithEventLoop, this)
+        d.proxy(this.checkPositionWithEventLoop, this),
       );
     this.$element = d(a);
     this.affixed = this.unpin = this.pinnedOffset = null;
@@ -9705,10 +9707,10 @@
         null != this.unpin && b + this.unpin <= e.top
           ? !1
           : null != h && e.top + this.$element.height() >= a - h
-          ? "bottom"
-          : null != k && b <= k
-          ? "top"
-          : !1;
+            ? "bottom"
+            : null != k && b <= k
+              ? "top"
+              : !1;
       this.affixed !== b &&
         (this.unpin && this.$element.css("top", ""),
         (e = "affix" + (b ? "-" + b : "")),
@@ -9864,7 +9866,7 @@
             .addClass("collapsed"),
         b[c.hasClass("in") ? "addClass" : "removeClass"]("collapsed"));
       c.collapse(f);
-    }
+    },
   );
 })(jQuery);
 +(function (d) {
@@ -9949,7 +9951,7 @@
         this.selector +
         '[href\x3d"' +
         a +
-        '"]'
+        '"]',
     )
       .parents("li")
       .addClass("active");
@@ -10042,7 +10044,7 @@
             ? c.key
               ? b.replace(
                   /(<\w+)(?=[\s>])(?![^>]*_tmplitem)([^>]*)/g,
-                  '$1 _tmplitem\x3d"' + c.key + '" $2'
+                  '$1 _tmplitem\x3d"' + c.key + '" $2',
                 )
               : b
             : a(b, c, b._ctnt);
@@ -10057,7 +10059,7 @@
         h(g);
         c && (g = b(c).concat(g));
         f && (g = g.concat(b(f)));
-      }
+      },
     );
     return g ? g : b(f);
   }
@@ -10113,7 +10115,7 @@
                           ")!\x3d\x3d'undefined' \x26\x26 (" +
                           f +
                           ")!\x3dnull"
-                      : "true"
+                      : "true",
                   )
                   .split("$1a")
                   .join(g)
@@ -10128,20 +10130,20 @@
                             return (e = e ? "," + e + ")" : c ? ")" : "")
                               ? "(" + b + ").call($item" + e
                               : a;
-                          }
+                          },
                         )
-                      : c.$2 || ""
+                      : c.$2 || "",
                   ) +
                 "_.push('"
               );
-            }
+            },
           ) +
-        "');}return _;"
+        "');}return _;",
     );
   }
   function g(b, c) {
     b._wrap = a(b, !0, d.isArray(c) ? c : [v.test(c) ? c : d(c).html()]).join(
-      ""
+      "",
     );
   }
   function k(a) {
@@ -10231,7 +10233,7 @@
           a = c;
         }
         return a;
-      }
+      },
     );
   }
   function q() {
@@ -10285,7 +10287,7 @@
         d.tmpl.complete(c);
         return e;
       };
-    }
+    },
   );
   d.fn.extend({
     tmpl: function (a, b, c) {
@@ -10360,10 +10362,10 @@
             (b = d.data(b, "tmpl") || d.data(b, "tmpl", e(b.innerHTML))),
           "string" === typeof a ? (d.template[a] = b) : b)
         : a
-        ? "string" !== typeof a
-          ? d.template(null, a)
-          : d.template[a] || d.template(null, v.test(a) ? a : d(a))
-        : null;
+          ? "string" !== typeof a
+            ? d.template(null, a)
+            : d.template[a] || d.template(null, v.test(a) ? a : d(a))
+          : null;
     },
     encode: function (a) {
       return ("" + a)
@@ -10413,8 +10415,8 @@
         11 === b.nodeType
           ? d.makeArray(b.childNodes)
           : 1 === b.nodeType
-          ? [b]
-          : [];
+            ? [b]
+            : [];
       c.call(a, b);
       h(e);
       z++;
@@ -10448,7 +10450,7 @@
     },
     start: function (a) {
       var b = d.event.special.swipe.getLocation(
-        a.originalEvent.touches ? a.originalEvent.touches[0] : a
+        a.originalEvent.touches ? a.originalEvent.touches[0] : a,
       );
       return {
         time: new Date().getTime(),
@@ -10458,7 +10460,7 @@
     },
     stop: function (a) {
       a = d.event.special.swipe.getLocation(
-        a.originalEvent.touches ? a.originalEvent.touches[0] : a
+        a.originalEvent.touches ? a.originalEvent.touches[0] : a,
       );
       return { time: new Date().getTime(), coords: [a.x, a.y] };
     },
@@ -10627,7 +10629,7 @@
       this._guideModelInitHandler = {};
       d(window).on(
         "guideModelInitialized",
-        this._guideModelInitialized.bind(this)
+        this._guideModelInitialized.bind(this),
       );
       d(window).on("guideInitialized", this._guideInitialized.bind(this));
       d(window).on("guideInitializationError", this._guideError);
@@ -10718,7 +10720,7 @@
         for (a = 0; a < this._guideModelInitHandler.handler.length; a++)
           try {
             this._guideModelInitHandler.handler[a].call(
-              this._guideModelInitHandler.context[a]
+              this._guideModelInitHandler.context[a],
             );
           } catch (t) {
             this._guide && this._guide.logger().log(t);
@@ -10729,7 +10731,7 @@
         for (a = 0; a < this._guideInitHandler.handler.length; a++)
           try {
             this._guideInitHandler.handler[a].call(
-              this._guideInitHandler.context[a]
+              this._guideInitHandler.context[a],
             );
           } catch (t) {
             this._guide && this._guide.logger().log(t);
@@ -10738,8 +10740,8 @@
         "bridgeInitializeComplete",
         guidelib.event.GuideModelEvent.createEvent(
           "bridgeInitializeComplete",
-          guideBridge
-        )
+          guideBridge,
+        ),
       );
     },
     _setGuideView: function (a) {
@@ -10768,7 +10770,7 @@
       e = c.extend(
         {},
         e,
-        f(this._guide, "runtime.guideContext.customPropertyMap", {})
+        f(this._guide, "runtime.guideContext.customPropertyMap", {}),
       );
       if (c.isUndefined(b))
         if (c.isObject(a))
@@ -10778,12 +10780,12 @@
                 var e = c.extend(
                   {},
                   guideBridge._guide.runtime.guideContext.customPropertyMap,
-                  a
+                  a,
                 );
                 c.extend(e, b);
                 guideBridge._guide.runtime.guideContext.customPropertyMap = e;
               };
-            })(e, a)
+            })(e, a),
           );
         else return e[a];
       else {
@@ -10794,12 +10796,12 @@
               var d = c.extend(
                 {},
                 guideBridge._guide.runtime.guideContext.customPropertyMap,
-                e
+                e,
               );
               d[a] = b;
               guideBridge._guide.runtime.guideContext.customPropertyMap = d;
             };
-          })(a, b, e)
+          })(a, b, e),
         );
         return d;
       }
@@ -10849,7 +10851,7 @@
       guideBridge._updateAFSubmissionInfo();
       guideBridge._guide.internal.liveDataUtils.updateLiveData(null, !0);
       guideBridge._guide.internal.liveDataUtils.insertSubmissionInfo(
-        guideBridge._guide.runtime.guideContext.afSubmissionInfo
+        guideBridge._guide.runtime.guideContext.afSubmissionInfo,
       );
       var a = guideBridge._guide.internal.liveDataUtils.getLiveDataStr(),
         b = "application/xml";
@@ -10964,7 +10966,7 @@
       if (!this._checkGuide(a)) return a;
       guideBridge._guide.toolbar &&
         (b = this._getGuideDomElement(
-          guideBridge._guide.toolbar.somExpression
+          guideBridge._guide.toolbar.somExpression,
         )) &&
         0 < b.length &&
         b.hide();
@@ -11012,7 +11014,7 @@
             function (a) {
               e.push({ name: a.split("/")[1], path: this.fileUrl + "/" + a });
             },
-            this
+            this,
           );
           this.options.success &&
             this.options.success.call(this.options.context, e);
@@ -11040,7 +11042,7 @@
           b,
           c.find(b, function (a) {
             return null !== a && !c.isString(a);
-          })
+          }),
         );
         if (-1 !== p && q) {
           f = b[p][
@@ -11060,7 +11062,7 @@
               fileUrl: f,
               fileAttachmentsList: l,
               options: k,
-            })
+            }),
           );
           if (a)
             b[p].one(
@@ -11070,7 +11072,7 @@
                 fileUrl: f,
                 fileAttachmentsList: l,
                 options: k,
-              })
+              }),
             );
           g = !0;
         }
@@ -11170,13 +11172,13 @@
               .logger()
               .log(
                 "Error in getting Xfa State:" +
-                  JSON.stringify(d.getNextMessage())
+                  JSON.stringify(d.getNextMessage()),
               ),
             alert(
               guidelib.util.GuideUtil.getLocalizedMessage(
                 "AF",
-                guidelib.i18n.LogMessages["AEM-AF-901-001"]
-              )
+                guidelib.i18n.LogMessages["AEM-AF-901-001"],
+              ),
             ));
           e = d.data;
         }
@@ -11184,7 +11186,7 @@
         d = guideBridge._getAdditionalSubmitInfo();
         guideBridge.customContextProperty(
           "fileAttachmentMap",
-          JSON.stringify(this.getFileAttachmentMap())
+          JSON.stringify(this.getFileAttachmentMap()),
         );
         a = {
           guideDom: a,
@@ -11213,7 +11215,7 @@
           (b = c.parent.parent.somExpression);
         this.afSubmissionInfo(
           "lastFocusItem",
-          this._guideView.getSomOnNavigableAncestor(b)
+          this._guideView.getSomOnNavigableAncestor(b),
         );
       }
       a = a ? a : guideBridge._guide;
@@ -11232,8 +11234,8 @@
         this.customContextProperty(
           "lastFocusItem",
           this._guideView.getSomOnNavigableAncestor(
-            this._guideView._previousFocusItemSom
-          )
+            this._guideView._previousFocusItemSom,
+          ),
         );
       a.fileUploadPath && !guideBridge._disablePreview()
         ? this._getGuideAttachments({
@@ -11268,7 +11270,7 @@
             this._guide,
             b,
             "",
-            a
+            a,
           ),
           !b && e)
         ) {
@@ -11279,7 +11281,7 @@
               var a = guideBridge.resolveNode(k);
               a && a.validate();
             },
-            {}
+            {},
           );
           this.setFocus(k);
           guideBridge._guide.off(guidelib.event.GuideModelEvent.LAZY_LOADED);
@@ -11318,11 +11320,11 @@
                 guideState: b.guideState,
                 dataRef: void 0,
                 guideStatePathRef: void 0,
-              })
+              }),
             );
             guidelib.runtime.progressive &&
               (guidelib.runtime.progressive._initializeSectionModelAndPlayJson(
-                window.guideBridge.customContextProperty.sections
+                window.guideBridge.customContextProperty.sections,
               ),
               guidelib.runtime.progressive.renderLastSection());
           },
@@ -11340,12 +11342,12 @@
           c.isUndefined(a.guideState.guideContext) ||
             (c.extend(
               b.customPropertyMap,
-              guidelib.__runtime__.guideContext.customPropertyMap
+              guidelib.__runtime__.guideContext.customPropertyMap,
             ),
             guideBridge.isGuideLoaded() &&
               c.extend(
                 b.customPropertyMap,
-                guideBridge._guide.runtime.guideContext.customPropertyMap
+                guideBridge._guide.runtime.guideContext.customPropertyMap,
               )),
           guideBridge.isGuideLoaded() &&
             c.extend(guideBridge._guide.runtime.guideContext, b),
@@ -11356,7 +11358,7 @@
                   guidelib.event.GuideModelEvent.MODEL_REFRESH,
                   "jsonModel",
                   null,
-                  null
+                  null,
                 ))
             : ((this.storage = {}),
               (this.storage.guideState = a.guideState),
@@ -11377,7 +11379,7 @@
       a.data = jQuery.extend(
         !0,
         {},
-        this._guide ? this._guide.runtime.guideContext : null
+        this._guide ? this._guide.runtime.guideContext : null,
       );
       return a;
     },
@@ -11404,11 +11406,11 @@
       return b
         ? b + a
         : !c ||
-          "/" === c ||
-          0 === a.indexOf(c) ||
-          (0 !== a.length && 0 !== a.indexOf("/"))
-        ? a
-        : c + a;
+            "/" === c ||
+            0 === a.indexOf(c) ||
+            (0 !== a.length && 0 !== a.indexOf("/"))
+          ? a
+          : c + a;
     },
     _getGuidePathUrl: function (a, b) {
       b = b || this.getGuidePath();
@@ -11435,7 +11437,7 @@
       this._guide.internal.GuideDirtyMarkerAndVisitor.visitMap =
         guidelib.model.util.CommonUtils.createMap(
           this._guide.allLazyChildren,
-          0
+          0,
         );
     },
     _getPreviousFocus: function () {
@@ -11468,7 +11470,7 @@
         !c.isUndefined(a) &&
         (a = guidelib.util.GuideUtil.relativeSom(
           this._guide.rootPanel.somExpression,
-          a
+          a,
         ))
       ) {
         a = a.split(".");
@@ -11487,7 +11489,7 @@
                   (b = a))
                 : (b = null));
           },
-          this
+          this,
         );
       }
     },
@@ -11521,7 +11523,7 @@
       d.ajax({
         url: this._getGuidePathUrl(
           ".af.internalsubmit.jsp",
-          b && b.data ? b.data.guideState.guideContext.guidePath : null
+          b && b.data ? b.data.guideState.guideContext.guidePath : null,
         ),
         type: "POST",
         async: a.async || !1,
@@ -11585,7 +11587,7 @@
         a +=
           "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz".substring(
             c,
-            c + 1
+            c + 1,
           );
       }
       return a;
@@ -11626,7 +11628,7 @@
             throw guidelib.util.GuideUtil.getLocalizedMessage(
               "AF",
               guidelib.i18n.LogMessages["AEM-AF-901-024"],
-              [l(a, "\u2022")]
+              [l(a, "\u2022")],
             );
         };
       for (g = 0; g < b.length; g++)
@@ -11637,7 +11639,7 @@
               a.append(
                 "_guideFileAttachment." +
                   guideBridge._getRelativeFilePath(m[p]),
-                f[g]
+                f[g],
               );
       a.append("_guideAttachments", b.toString());
       if (k) {
@@ -11653,7 +11655,7 @@
               a.append(
                 e.formElementName + "/" + e.name,
                 e.dataURLtoBlob(),
-                e.name
+                e.name,
               );
             }
           q(h);
@@ -11669,7 +11671,7 @@
               (window.Promise
                 ? ((k = guidelib.util.GuideUtil._checkIfFileIsAccessible(
                     m[p],
-                    f[g][0].files[p]
+                    f[g][0].files[p],
                   )),
                   e.push(k))
                 : a.append(m[p], f[g][0].files[p]));
@@ -11798,7 +11800,7 @@
           this.submitData["_guideFileAttachment." + a] =
             this.submitData.fileUrl + "/" + a;
         },
-        this
+        this,
       );
       delete this.submitData.fileUrl;
       self.doAjaxSubmit(this.actionUrl, this.submitData, this.options);
@@ -11811,16 +11813,16 @@
             alert(
               guidelib.util.GuideUtil.getLocalizedMessage(
                 "AF",
-                guidelib.i18n.LogMessages["AEM-AF-901-003"]
-              )
+                guidelib.i18n.LogMessages["AEM-AF-901-003"],
+              ),
             );
             break;
           default:
             alert(
               guidelib.util.GuideUtil.getLocalizedMessage(
                 "AF",
-                guidelib.i18n.LogMessages["AEM-AF-901-004"]
-              )
+                guidelib.i18n.LogMessages["AEM-AF-901-004"],
+              ),
             );
         }
       guideBridge._showGuideLoading(!1);
@@ -11844,10 +11846,10 @@
                       )
                         (f[d++] = g), (b["_guideFileAttachment." + g] = a);
                     },
-                    this
+                    this,
                   );
             },
-            this
+            this,
           ),
           (b._guideAttachments = f))
         : 0 < e.length &&
@@ -11858,7 +11860,7 @@
               f[d++] = g;
               b["_guideFileAttachment." + g] = a;
             },
-            this
+            this,
           ),
           (b._guideAttachments = f));
     },
@@ -11874,10 +11876,10 @@
                 ? b.push(a)
                 : b.push(this.fileUrl + "/" + a);
             },
-            this
+            this,
           );
         },
-        this
+        this,
       );
       a = {
         fileUrlList: b,
@@ -11891,12 +11893,12 @@
             this.options.context,
             a.fileAttachmentsList,
             a.submitData,
-            b
+            b,
           ),
           window.guideBridge.doAjaxSubmit(
             a.actionUrl,
             a.submitData,
-            this.options
+            this.options,
           ))
         : this.options.success &&
           (guideBridge._createGuideStateAndLiveXml(this.options),
@@ -11924,7 +11926,7 @@
       var a =
         (this.userConfig.submitConfig || {}).form ||
         d(
-          "\x3cform method\x3d'post' enctype\x3d'multipart/form-data'\x3e\x3c/form\x3e"
+          "\x3cform method\x3d'post' enctype\x3d'multipart/form-data'\x3e\x3c/form\x3e",
         ).appendTo(d("body"));
       return d(a);
     },
@@ -11946,7 +11948,7 @@
                 b[a.somExpression] = !0;
                 a.value && (d[a.getAttribute("name")] = a.value);
               },
-              this
+              this,
             );
           }
       });
@@ -12004,7 +12006,7 @@
               });
         } else
           console.error(
-            "Form Submission failed as the form doesn't exist on the page"
+            "Form Submission failed as the form doesn't exist on the page",
           );
       } catch (y) {
         e._showGuideLoading(!1), console && console.error && console.error(y);
@@ -12044,7 +12046,7 @@
             : "";
         l = window.guideBridge._getGuidePathUrl(
           ".af." + (a.submissionSelector || "submit") + ".jsp",
-          m
+          m,
         );
         g.guideContainerPath = m;
         g.aemFormComponentPath = p;
@@ -12063,8 +12065,8 @@
         p = b.hasOwnProperty("guideValue")
           ? b.guideValue
           : c.isUndefined(a.guideValueMap)
-          ? window.guideBridge._prepareGuideValueMap()
-          : a.guideValueMap;
+            ? window.guideBridge._prepareGuideValueMap()
+            : a.guideValueMap;
         b.hasOwnProperty("data") && (r = b.data);
         b.hasOwnProperty("fileAttachmentsList");
         for (var v in p) p.hasOwnProperty(v) && (g[v] = p[v]);
@@ -12074,7 +12076,7 @@
           k.isGuideLoaded() && (k._guide.internal.afdata = r));
         c.isUndefined(a.fileAttachmentMap)
           ? (g.fileAttachmentMap = JSON.stringify(
-              guideBridge._getFileAttachmentMapForSubmit()
+              guideBridge._getFileAttachmentMapForSubmit(),
             ))
           : (g.fileAttachmentMap = a.fileAttachmentMap);
         b = {};
@@ -12267,9 +12269,9 @@
                 d.proxy(
                   guideBridge._handleSubmitError(
                     { status: e },
-                    400 === e ? (a.errorMessage ? a.errorMessage : "") : ""
+                    400 === e ? (a.errorMessage ? a.errorMessage : "") : "",
                   ),
-                  guideBridge
+                  guideBridge,
                 ))
             : window.guideBridge.handleServerValidationError(a);
     },
@@ -12282,8 +12284,8 @@
                   ? e + "/" + a.bindRef.split("/").slice(-1)[0] + "/" + a.index
                   : a.bindRef + "/" + a.index)
               : e
-              ? (d = e + "/" + a.bindRef.split("/").slice(-1)[0])
-              : a.bindRef),
+                ? (d = e + "/" + a.bindRef.split("/").slice(-1)[0])
+                : a.bindRef),
             (c[e] = a.somExpression));
           a._children &&
             a._children.forEach(function (a) {
@@ -12310,7 +12312,7 @@
           ? d(this.SELECTOR_FORM_CONTAINER).replaceWith(
               "\x3cdiv class\x3d'tyMessage'\x3e" +
                 a.thankYouContent +
-                "\x3c/div\x3e"
+                "\x3c/div\x3e",
             )
           : a.thankYouOption === this.THANK_YOU_OPTION.PAGE &&
             (window.location.href = a.thankYouContent));
@@ -12331,7 +12333,7 @@
       if (a && a.path) {
         var b = a.path.replace(
           "/content/dam/formsanddocuments/",
-          "/content/forms/af/"
+          "/content/forms/af/",
         );
         d.ajax({
           url: b + "/jcr:content/guideContainer.html",
@@ -12354,7 +12356,7 @@
             e.addMessage(
               2,
               "Error in getting HTML of Adaptive Form: " + a.path,
-              ""
+              "",
             );
             a.error && c.isFunction(a.error) && a.error.call(a.context, e);
           },
@@ -12362,7 +12364,7 @@
       } else
         "undefined" !== typeof console &&
           console.log(
-            "Path of Adaptive Form not specified to loadAdaptiveForm API"
+            "Path of Adaptive Form not specified to loadAdaptiveForm API",
           );
     },
     unloadAdaptiveForm: function (a) {
@@ -12441,7 +12443,7 @@
     _playGuideJson: function (a) {
       this._guide.setGuideState(
         guidelib.model.GuideSchema.prototype.GuideStateConstants
-          .GUIDE_STATE_MERGE_PROGRESS
+          .GUIDE_STATE_MERGE_PROGRESS,
       );
       if (
         this._isXfaGuide() &&
@@ -12473,22 +12475,22 @@
             e,
             c.isString(this._guide.xdpRef),
             c.isString(this._guide.xsdRef),
-            this._guide.getAttribute("xsdRootElement")
+            this._guide.getAttribute("xsdRootElement"),
           ),
           this._guide.internal.liveModel.prefillCrossFragFields(this._guide),
           this._guide.internal.liveDataUtils.dropXfaXml())
         : d
-        ? this._guide.internal.liveDataUtils.initLiveData(
-            d,
-            this._guide.runtime.guideContext
-          )
-        : this._guide.internal.liveDataUtils.initLiveData(
-            null,
-            null,
-            c.isString(this._guide.xdpRef),
-            c.isString(this._guide.xsdRef),
-            this._guide.getAttribute("xsdRootElement")
-          );
+          ? this._guide.internal.liveDataUtils.initLiveData(
+              d,
+              this._guide.runtime.guideContext,
+            )
+          : this._guide.internal.liveDataUtils.initLiveData(
+              null,
+              null,
+              c.isString(this._guide.xdpRef),
+              c.isString(this._guide.xsdRef),
+              this._guide.getAttribute("xsdRootElement"),
+            );
       a.guideState.guideDom &&
         this._guide.playJson(a.guideState.guideDom, a.attachments);
       a.guideState.unboundDataMap &&
@@ -12510,7 +12512,7 @@
         });
       this._guide.setGuideState(
         guidelib.model.GuideSchema.prototype.GuideStateConstants
-          .GUIDE_STATE_MERGE_COMPLETE
+          .GUIDE_STATE_MERGE_COMPLETE,
       );
       this._guide.prepare();
       a.success && a.success.call(this);
@@ -12518,7 +12520,7 @@
     _postExternalMessage: function (a) {
       this.userConfig.postExternalMessageConfig &&
         c.isFunction(
-          this.userConfig.postExternalMessageConfig.postExternalHandler
+          this.userConfig.postExternalMessageConfig.postExternalHandler,
         ) &&
         (0, this.userConfig.postExternalMessageConfig.postExternalHandler)(a);
     },
@@ -12601,7 +12603,7 @@
                   data: e[h][0].files[l],
                   contentType: e[h][0].files[l].type,
                   bindRef: f[h],
-                })
+                }),
               )
             : k[l] &&
               b.push(
@@ -12610,7 +12612,7 @@
                   data: e[h],
                   contentType: a[h],
                   bindRef: f[h],
-                })
+                }),
               );
       return b;
     },
@@ -12657,11 +12659,11 @@
                       (m[h] = null),
                       (k[h++] = d(b))));
               },
-              this
+              this,
             );
           }
         },
-        this
+        this,
       );
       a = this._guide.internal.liveDataUtils._getLazyAttachmentMap();
       var q = [],
@@ -12716,21 +12718,21 @@
       $guideWrapperNode = d(".guideContainerWrapperNode");
       $guideWrapperNode.off(
         "swipeleft",
-        window.guideBridge._performItemDeepNavigationNext
+        window.guideBridge._performItemDeepNavigationNext,
       );
       $guideWrapperNode.off(
         "swiperight",
-        window.guideBridge._performItemDeepNavigationPrevious
+        window.guideBridge._performItemDeepNavigationPrevious,
       );
       if (a)
         $guideWrapperNode.on(
           "swipeleft",
-          window.guideBridge._performItemDeepNavigationNext
+          window.guideBridge._performItemDeepNavigationNext,
         );
       if (b)
         $guideWrapperNode.on(
           "swiperight",
-          window.guideBridge._performItemDeepNavigationPrevious
+          window.guideBridge._performItemDeepNavigationPrevious,
         );
     },
     _performItemDeepNavigationNext: function () {
@@ -12761,7 +12763,7 @@
       b.addMessage(
         2,
         "registrationError: PanelProvider already registered",
-        ""
+        "",
       );
       return b;
     },
@@ -12773,7 +12775,7 @@
     function (a, b) {
       a = b.jsonModel.target.jsonModel;
       d(".guideContainer,.aemformcontainer").append(
-        '\x3cdiv id\x3d"recaptchaInvisible"\x3e\x3c/div\x3e'
+        '\x3cdiv id\x3d"recaptchaInvisible"\x3e\x3c/div\x3e',
       );
       b = d("#recaptchaInvisible");
       var c = d("[data-captchaservice]");
@@ -12785,10 +12787,10 @@
       });
       b.on(
         "recaptchaExecution",
-        guidelib.util.RecaptchaUtil.recaptchaExecution
+        guidelib.util.RecaptchaUtil.recaptchaExecution,
       );
       guidelib.util.RecaptchaUtil.renderRecaptcha(b, a);
-    }
+    },
   );
   try {
     var r = document.createEvent("CustomEvent");
@@ -12856,7 +12858,7 @@
           this.lazyAttachmentMap[b].fileList = a.split("\n");
           this.lazyAttachmentMap[b].value = a;
         },
-        this
+        this,
       );
     },
     _updateLazyAttachmentMapFromModel: function (a) {
@@ -12946,7 +12948,7 @@
           if (this._cmpXpathParts(a, f[0])) d.push(a), f.shift();
           else return (e = !0);
         },
-        this
+        this,
       );
       return { prefixParts: d, suffixParts: f, isCrossHierarchy: e };
     },
@@ -13014,26 +13016,26 @@
             ? ((this._liveDataDoc = e),
               (this._boundDataRoot = this._getElement(
                 this._liveDataDoc.afData,
-                this.constants.BOUND_DATA_XPATH
+                this.constants.BOUND_DATA_XPATH,
               )),
               (this._unboundDataRoot = this._getElement(
                 this._liveDataDoc.afData,
-                this.constants.UNBOUND_DATA_XPATH
+                this.constants.UNBOUND_DATA_XPATH,
               )))
             : ((this._boundDataRoot = e),
               (this._unboundDataRoot = JSON.parse(
-                this.constants.UNBOUND_JSON_SKELETON
+                this.constants.UNBOUND_JSON_SKELETON,
               )[this.constants.UNBOUND_TAG]),
               (this._liveDataDoc = e));
         } else
           (this._liveDataDoc = JSON.parse(this.constants.SKELETON_JSON)),
             (this._boundDataRoot = this._getElement(
               this._liveDataDoc.afData,
-              this.constants.BOUND_DATA_XPATH
+              this.constants.BOUND_DATA_XPATH,
             )),
             (this._unboundDataRoot = this._getElement(
               this._liveDataDoc.afData,
-              this.constants.UNBOUND_DATA_XPATH
+              this.constants.UNBOUND_DATA_XPATH,
             ));
         null == this._boundDataRoot &&
           this._isNonNaked(e) &&
@@ -13073,7 +13075,7 @@
           function (a) {
             return null !== this._getNameAndIndex(a);
           },
-          this
+          this,
         );
       },
       _splitForIndex: function (a) {
@@ -13176,7 +13178,7 @@
           ? (a += "/" + b)
           : this.logger().debug(
               "AF",
-              "Tried to add index to already indexed JSON path :" + a
+              "Tried to add index to already indexed JSON path :" + a,
             );
         return a;
       },
@@ -13219,10 +13221,10 @@
                 }),
                 (e[b] = f.join(",")))
               : "object" === typeof a && null != a
-              ? ((g = e[b]),
-                null == g && ((g = {}), (e[b] = g)),
-                d.insertSubmissionInfo(a, g))
-              : (e[b] = a);
+                ? ((g = e[b]),
+                  null == g && ((g = {}), (e[b] = g)),
+                  d.insertSubmissionInfo(a, g))
+                : (e[b] = a);
           });
         }
       },
@@ -13245,11 +13247,11 @@
         this._liveDataDoc = d.parseXML(this.constants.SKELETON_XML);
         this._boundDataRoot = this._getElement(
           this._liveDataDoc.documentElement,
-          this.constants.BOUND_DATA_XPATH
+          this.constants.BOUND_DATA_XPATH,
         );
         this._unboundDataRoot = this._getElement(
           this._liveDataDoc.documentElement,
-          this.constants.UNBOUND_DATA_XPATH
+          this.constants.UNBOUND_DATA_XPATH,
         );
         if (c.isString(a) && 0 < a.length) {
           var h = d.parseXML(a);
@@ -13257,33 +13259,33 @@
             if (!m) {
               var l = this._getElement(
                 h.documentElement,
-                this.constants.BOUND_DATA_XPATH
+                this.constants.BOUND_DATA_XPATH,
               );
               null == l &&
                 (l = this._getElement(
                   h.documentElement,
                   this.constants.BOUND_TAG +
                     "/" +
-                    f._guide.jsonModel.xsdRootElement
+                    f._guide.jsonModel.xsdRootElement,
                 ));
               l &&
                 ((l = this._liveDataDoc.importNode(l, !0)),
                 this._boundDataRoot.parentNode.replaceChild(
                   l,
-                  this._boundDataRoot
+                  this._boundDataRoot,
                 ),
                 (this._boundDataRoot = l));
             }
             if (
               (h = this._getElement(
                 h.documentElement,
-                this.constants.UNBOUND_DATA_XPATH
+                this.constants.UNBOUND_DATA_XPATH,
               ))
             )
               (l = this._liveDataDoc.importNode(h, !0)),
                 this._unboundDataRoot.parentNode.replaceChild(
                   l,
-                  this._unboundDataRoot
+                  this._unboundDataRoot,
                 ),
                 (this._unboundDataRoot = l);
           } else
@@ -13292,7 +13294,7 @@
                 (this._boundDataRoot = null))
               : (p && (this._boundDataRoot = h.documentElement),
                 (this._unboundDataRoot = d.parseXML(
-                  this.constants.UNBOUND_SKELETON
+                  this.constants.UNBOUND_SKELETON,
                 ).documentElement)),
               (this._liveDataDoc = h);
         }
@@ -13300,10 +13302,10 @@
           (c.isString(b) &&
             0 < b.length &&
             (this._xfaDataRoot = e.ut.XMLUtils.getXFARootFormElementFromXML(
-              d.parseXML(b)
+              d.parseXML(b),
             )),
           this._boundDataRoot.parentNode.parentNode.removeChild(
-            this._boundDataRoot.parentNode
+            this._boundDataRoot.parentNode,
           ),
           (this._boundDataRoot = null));
       },
@@ -13347,7 +13349,7 @@
           ? (a += "[" + (b + 1) + "]")
           : this.logger().debug(
               "AF",
-              "Tried to add index to already indexed xpath :" + a
+              "Tried to add index to already indexed xpath :" + a,
             );
         return a;
       },
@@ -13359,7 +13361,7 @@
               function (a) {
                 return a instanceof Element && a.nodeName === b;
               },
-              this
+              this,
             )
           : null;
       },
@@ -13412,7 +13414,7 @@
           function (a) {
             return null !== this._getNameAndIndex(a);
           },
-          this
+          this,
         );
       },
       isIndexedPath: function (a) {
@@ -13475,7 +13477,7 @@
           a,
           f,
           XPathResult.FIRST_ORDERED_NODE_TYPE,
-          null
+          null,
         );
         if (
           a.resultType === XPathResult.FIRST_ORDERED_NODE_TYPE &&
@@ -13534,7 +13536,7 @@
               void 0 === b
                 ? d.findOrCreateElement(
                     "afSubmissionInfo",
-                    this._liveDataDoc.documentElement
+                    this._liveDataDoc.documentElement,
                   )
                 : b,
             g = this;
@@ -13557,7 +13559,12 @@
                 h.textContent = e.join(",");
                 f.appendChild(h);
               }
-            } else "object" === typeof a && null != a ? ((h = d.findOrCreateElement(b, f)), g.insertSubmissionInfo(a, h)) : ((h = d.findOrCreateElement(b, f)), (h.textContent = a)), f.appendChild(h);
+            } else
+              "object" === typeof a && null != a
+                ? ((h = d.findOrCreateElement(b, f)),
+                  g.insertSubmissionInfo(a, h))
+                : ((h = d.findOrCreateElement(b, f)), (h.textContent = a)),
+                f.appendChild(h);
           });
         }
       },
@@ -13599,8 +13606,8 @@
             (a = this._dataNodes[a]) && (b = a.getFieldModels());
             return b;
           },
-          this
-        )
+          this,
+        ),
       );
     },
     getAllAbstractFieldModels: function (a) {
@@ -13610,8 +13617,8 @@
           function (a) {
             return this._dataNodes[a].getAbstractFieldModels();
           },
-          this
-        )
+          this,
+        ),
       );
     },
     resetData: function () {
@@ -13627,7 +13634,7 @@
         function (a) {
           this.add(a);
         },
-        this
+        this,
       );
     },
     createCrossFragFields: function (b, d) {
@@ -13650,7 +13657,7 @@
           this._crossFragmentFields[b.name][e] = f;
           this.add(e, f);
         },
-        this
+        this,
       );
     },
     prefillCrossFragFields: function (a) {
@@ -13665,10 +13672,10 @@
                 c = b._getDataContext(a, "", "");
                 a.value = b.getDataValue(c.indexedXpath, c.xmlSec);
               },
-              this
+              this,
             );
           },
-          this
+          this,
         );
     },
   }));
@@ -13701,7 +13708,7 @@
                 contentType: d.contentType,
               }),
             ],
-            { type: "application/json" }
+            { type: "application/json" },
           );
           a.append("fileAttachments", f);
         }
@@ -13943,7 +13950,7 @@
         case c.event.GuideModelEvent.VALUE_CHANGED:
           d.contains(
             ["guideButton", "guideTextDraw", "guideAdobeSignBlock"],
-            a.target.className
+            a.target.className,
           ) || this.updateLinkedFieldsValue(a);
           break;
         default:
@@ -13960,7 +13967,7 @@
             function (c) {
               c !== a.target && (c.value = b);
             },
-            this
+            this,
           );
         } catch (e) {
           a.target.logger().error("AF", "Unable to set Linked Field value" + e);
@@ -13990,7 +13997,7 @@
         this._model.on(
           c.event.GuideModelEvent.MODEL_CHANGED,
           this.handleModelChanged,
-          this
+          this,
         );
       this._syncPending = !0;
       this._visibleHelpElement = "none";
@@ -14000,7 +14007,7 @@
       this._model.off(
         c.event.GuideModelEvent.MODEL_CHANGED,
         this.handleModelChanged,
-        this
+        this,
       );
       this.parentView =
         this._$itemNav =
@@ -14057,8 +14064,8 @@
           this,
           "visible",
           this._model.visible,
-          this._model.visible
-        )
+          this._model.visible,
+        ),
       );
     },
     _updateIds: function (a, b, e) {
@@ -14079,12 +14086,12 @@
         void 0 !== f.attr(c.util.GuideUtil.DATA_GUIDE_ITEM_CONTAINER) &&
           f.attr(
             c.util.GuideUtil.DATA_GUIDE_ITEM_CONTAINER,
-            e + c.util.GuideUtil.GUIDE_ITEM_CONTAINER_SUFFIX
+            e + c.util.GuideUtil.GUIDE_ITEM_CONTAINER_SUFFIX,
           );
         void 0 !== f.attr(c.util.GuideUtil.DATA_GUIDE_ITEM) &&
           f.attr(
             c.util.GuideUtil.DATA_GUIDE_ITEM,
-            e + c.util.GuideUtil.GUIDE_ITEM_SUFFIX
+            e + c.util.GuideUtil.GUIDE_ITEM_SUFFIX,
           );
         f.attr("id", e);
         a.find(k).addBack(k).attr(this.guideUtil.GUIDE_VIEW_BIND_ATTR, e);
@@ -14101,7 +14108,7 @@
                 a.attr(c, f);
               });
           },
-          this
+          this,
         );
       }
     },
@@ -14230,7 +14237,7 @@
             "AF",
             "widget name is not specified for field " +
               this._model.somExpression +
-              ", falling back to other widget"
+              ", falling back to other widget",
           );
         return a || this.options.widgetName || this._defaultWidgetName;
       },
@@ -14239,17 +14246,17 @@
           (this._model.off(
             c.event.GuideModelEvent.VALUE_CHANGED,
             this.handleValueChanged,
-            this
+            this,
           ),
           this._model.off(
             c.event.GuideModelEvent.ERROR_CHANGED,
             this.handleErrorChanged,
-            this
+            this,
           ),
           this._model.off(
             c.event.GuideModelEvent.ERROR_RESET,
             this.handleErrorReset,
-            this
+            this,
           ));
         this.jqwidget = null;
         a._super._unloadView.apply(this, arguments);
@@ -14270,17 +14277,17 @@
           (this._model.on(
             c.event.GuideModelEvent.VALUE_CHANGED,
             this.handleValueChanged,
-            this
+            this,
           ),
           this._model.on(
             c.event.GuideModelEvent.ERROR_CHANGED,
             this.handleErrorChanged,
-            this
+            this,
           ),
           this._model.on(
             c.event.GuideModelEvent.ERROR_RESET,
             this.handleErrorReset,
-            this
+            this,
           ));
       },
       _syncGuideNodeToHtml: function (b) {
@@ -14295,11 +14302,11 @@
                   this,
                   b,
                   a,
-                  a
-                )
+                  a,
+                ),
               );
             },
-            this
+            this,
           ),
           this.$element.attr("data-disabled", !this._model.enabled + ""));
         if (this.$widget) {
@@ -14327,7 +14334,7 @@
                 ._guide()
                 .runtime.errorManager.unMarkError(
                   this.$element,
-                  this._model.somExpression
+                  this._model.somExpression,
                 ));
         this.jqwidget && this.setWidgetOptions({ mandatory: a });
       },
@@ -14356,7 +14363,7 @@
               ._guide()
               .runtime.errorManager.unMarkError(
                 this.$element,
-                this._model.somExpression
+                this._model.somExpression,
               ),
             this.$element
               .addClass("validation-success")
@@ -14368,7 +14375,7 @@
                 b,
                 this.$element,
                 this._model.somExpression,
-                guideBridge.getValidationContext()
+                guideBridge.getValidationContext(),
               ),
             this.$element
               .addClass("validation-failure")
@@ -14380,7 +14387,7 @@
           ._guide()
           .runtime.errorManager.unMarkError(
             this.$element,
-            this._model.somExpression
+            this._model.somExpression,
           );
         this.$element
           .removeClass("validation-failure")
@@ -14471,7 +14478,7 @@
             .find("input,textarea,select,button")
             .attr(
               "aria-labelledby",
-              this._model.id + "_guideFieldShortDescription"
+              this._model.id + "_guideFieldShortDescription",
             ));
       },
       _getWidgetInitialOptions: function (a) {
@@ -14479,7 +14486,7 @@
         if (0 < a.length) {
           this.logger().info(
             "AF",
-            "Getting widget options for " + this._model.somExpression
+            "Getting widget options for " + this._model.somExpression,
           );
           var b = a.data("af-widgetoptions") || {};
           _.each(
@@ -14490,11 +14497,11 @@
                 1 < c.length &&
                 (this.logger().info(
                   "AF",
-                  "adding option " + c[1] + " with value  "
+                  "adding option " + c[1] + " with value  ",
                 ),
                 (b[c[1]] = a.value));
             },
-            this
+            this,
           );
           return b;
         }
@@ -14508,7 +14515,7 @@
         } catch (l) {
           this.logger().error(
             "AF",
-            "widget " + a + " doesn't exists. Falling back to default widget"
+            "widget " + a + " doesn't exists. Falling back to default widget",
           ),
             (e = !0),
             (b = d[this._defaultWidgetName](c).data("xfaWidget-" + a));
@@ -14567,7 +14574,7 @@
       if (0 < this.$widget.length)
         this.$widget.on(
           "tokenChange.captcha",
-          d.proxy(this.handleTokenChange, this)
+          d.proxy(this.handleTokenChange, this),
         );
     },
     _syncGuideNodeToHtml: function (a) {
@@ -14591,7 +14598,7 @@
               b,
               this.$element,
               this._model.somExpression,
-              guideBridge.getValidationContext()
+              guideBridge.getValidationContext(),
             ),
           this.$element.addClass("validation-failure"))
         : this.$element.removeClass("validation-failure");
@@ -14617,18 +14624,18 @@
             a.off(
               c.event.GuideModelEvent.VALUE_CHANGED,
               b.handleValueChanged,
-              b
+              b,
             );
             if (a.mandatory || a.validateExp)
               a.off(
                 c.event.GuideModelEvent.ERROR_CHANGED,
                 b.handleErrorChanged,
-                b
+                b,
               ),
                 a.off(
                   c.event.GuideModelEvent.ERROR_RESET,
                   b.handleErrorReset,
-                  b
+                  b,
                 );
           });
         a._super._unloadView.call(b);
@@ -14641,18 +14648,18 @@
             b.on(
               c.event.GuideModelEvent.VALUE_CHANGED,
               a.handleValueChanged,
-              a
+              a,
             );
             if (b.mandatory || b.validateExp)
               b.on(
                 c.event.GuideModelEvent.ERROR_CHANGED,
                 a.handleErrorChanged,
-                a
+                a,
               ),
                 b.on(
                   c.event.GuideModelEvent.ERROR_RESET,
                   a.handleErrorReset,
-                  a
+                  a,
                 );
           });
       },
@@ -14741,7 +14748,7 @@
             (this.$widget.removeAttr("aria-label"),
             this.$widget.attr(
               "aria-labelledby",
-              this._model.id + "_guideFieldShortDescription"
+              this._model.id + "_guideFieldShortDescription",
             )));
     },
     setActive: function (a, b, e) {
@@ -14884,7 +14891,7 @@
         this._model,
         "click",
         "",
-        ""
+        "",
       );
       this._model.executeExpression("clickExp");
       f._super.handleClick.call(this);
@@ -14911,7 +14918,7 @@
             function (a) {
               a._unloadView();
             },
-            this
+            this,
           );
           this._fileListViews = [];
           f = 0;
@@ -14927,7 +14934,7 @@
               .addClass("row")
               .append('\x3cdiv class\x3d"col-md-12"\x3e\x3c/div\x3e');
             d("#fileAttachment .modal-list", window.document).append(
-              b.appendTo(a)
+              b.appendTo(a),
             );
             a = c.view.GuideViewRegistry.prototype.createView(b, this);
             this._fileListViews.push(a);
@@ -14968,8 +14975,8 @@
         null === a || _.isUndefined(a)
           ? (b = [null])
           : _.isString(a)
-          ? (b = a.split("\n"))
-          : _.isNumber(a) && (b = [a.toString()]);
+            ? (b = a.split("\n"))
+            : _.isNumber(a) && (b = [a.toString()]);
         return b;
       },
       createWidgetOptions: function () {
@@ -15029,11 +15036,11 @@
         this.jqwidget.option("items", a);
         this.jqwidget.option(
           "value",
-          this._valueToArray(this._model.jsonModel._value)
+          this._valueToArray(this._model.jsonModel._value),
         );
         this.jqwidget.option(
           "displayValue",
-          this._valueToArray(this._model.formattedValue)
+          this._valueToArray(this._model.formattedValue),
         );
       },
       _defineModelEvents: function () {
@@ -15042,7 +15049,7 @@
           this._model.on(
             c.event.GuideModelEvent.ITEMS_CHANGED,
             this.handleItemsChanged,
-            this
+            this,
           );
       },
       tempXfaFixes: function () {
@@ -15108,12 +15115,12 @@
         totalLengthMessage: this.guideUtil.getLocalizedMessage(
           "",
           c.i18n.strings.totalLengthMessage,
-          [this._model.length]
+          [this._model.length],
         ),
         minimumLengthMessage: this.guideUtil.getLocalizedMessage(
           "",
           c.i18n.strings.minimumLengthMessage,
-          [this._model.minLength]
+          [this._model.minLength],
         ),
         allowRichText: this._model.allowRichText,
         placeholder: this._model.placeholderText,
@@ -15148,7 +15155,7 @@
               a._model.enabled &&
                 a.jqwidget[a.getJQWidgetIdentifier(b)].click();
             };
-          })(b)
+          })(b),
         );
       });
     },
@@ -15156,7 +15163,7 @@
       this._model._isStateOverridden("options") &&
         (this._replaceGroupItemsWithNewOptions(
           this._model._getOptionsArray(),
-          this._model.getAttribute("alignment")
+          this._model.getAttribute("alignment"),
         ),
         (this.jqwidget = null));
       f._super._syncGuideNodeToHtml.apply(this, arguments);
@@ -15175,8 +15182,8 @@
       return null === a
         ? 1
         : -1 !== (a + "").split(",").indexOf(b[0] + "")
-        ? 0
-        : 1;
+          ? 0
+          : 1;
     },
     getOnOffValueFromModelValue: function (a, b) {
       return b[this.getStateFromValue(a, b)];
@@ -15187,12 +15194,12 @@
         function (b) {
           var c = this.getOnOffValueFromModelValue(
             a.prevText,
-            b.option("values")
+            b.option("values"),
           );
           b.option("value", c);
           b.option("displayValue", c);
         },
-        this
+        this,
       );
       this.$widget
         .find("[checked!\x3dchecked]")
@@ -15211,7 +15218,7 @@
           c = b.option("values");
           0 === b.option("state") && (a = a + c[0] + ",");
         },
-        this
+        this,
       );
       a = a.substring(0, a.length - 1);
       this.commitValue(a);
@@ -15237,7 +15244,7 @@
     handleItemsChanged: function (a) {
       this._replaceGroupItemsWithNewOptions(
         this._model._getOptionsArray(),
-        this._model.jsonModel.alignment
+        this._model.jsonModel.alignment,
       );
       this.createWidget(this.getWidgetName(), this.createWidgetOptions());
     },
@@ -15303,7 +15310,7 @@
         this._model.on(
           c.event.GuideModelEvent.ITEMS_CHANGED,
           this.handleItemsChanged,
-          this
+          this,
         );
     },
     setWidgetOptions: function (a) {
@@ -15313,7 +15320,7 @@
         function (c, d) {
           this._initOrUpdateWidget(d, this._getOptions(a, b++));
         },
-        this
+        this,
       );
     },
     _getOptions: function (a, b) {
@@ -15354,7 +15361,7 @@
             c._getOptions(b, e),
             a,
             d(f),
-            c._getWidgetInitialOptions(d(f))
+            c._getWidgetInitialOptions(d(f)),
           );
         }),
         this.tempXfaFixes());
@@ -15375,7 +15382,7 @@
         function (c, d) {
           "isValid" == a && c.option(a, b);
         },
-        this
+        this,
       );
     },
     handleAccessibility: function () {
@@ -15432,7 +15439,7 @@
         function (a) {
           return 0 === a.option("state") && a !== this._prevOnWidget;
         },
-        this
+        this,
       );
       this.commitValue(a.option("value"));
       this._prevOnWidget = a;
@@ -15470,8 +15477,8 @@
         Array.isArray(b) && 0 < b.length
           ? b[0]
           : !_.isUndefined(b) && 0 < b.length
-          ? b
-          : " ";
+            ? b
+            : " ";
       b = Array.isArray(b) && 1 < b.length ? b[1] : "    ";
       return d.extend({}, a, {
         checkedLabel: c.substring(c.indexOf("\x3d") + 1),
@@ -15601,7 +15608,7 @@
             .find("img")
             .attr(
               "aria-labelledby",
-              this._model.id + "_guideFieldShortDescription"
+              this._model.id + "_guideFieldShortDescription",
             ))
         : "none" === this._model._getAssistPriority() &&
           this.$element.find("img").attr("aria-label", " ");
@@ -15673,7 +15680,7 @@
         e = a.find(
           b.jsonModel.isInteractiveCommunicationChartResource
             ? ".highcharts-container"
-            : ".dv-chart-container"
+            : ".dv-chart-container",
         );
       if (
         ((0 < a.parent().width() && 0 < a.width()) || 0 == e.length) &&
@@ -15685,14 +15692,14 @@
           ) {
             var d = new fd.chart.ChartInstanceGenerator().generate(
               b.jsonModel,
-              b.jsonModel.data
+              b.jsonModel.data,
             );
             Highcharts.chart(a.attr("id"), d);
           } else (d = c.chartUtils.constructChart(b, a)) && d.render();
         } catch (k) {
           this.logger().error(
             "AF Chart view",
-            "Error while rendering chart " + k
+            "Error while rendering chart " + k,
           );
         }
     },
@@ -15726,7 +15733,7 @@
         this._model.on(
           c.event.GuideModelEvent.VALUE_CHANGED,
           this.handleValueChanged,
-          this
+          this,
         );
       this.oldValue = null;
     },
@@ -15769,8 +15776,8 @@
             this,
             "visible",
             this._model.visible,
-            this._model.visible
-          )
+            this._model.visible,
+          ),
         );
     },
     setActive: function (a, b, e) {
@@ -15801,12 +15808,12 @@
           function (a) {
             a._unloadView();
           },
-          this
+          this,
         );
         this.childViews = [];
         this._currentActiveItemView = null;
         this._guideView._domTemplateCacheStore.removeDomElement(
-          "#" + this._model.templateId
+          "#" + this._model.templateId,
         );
         this._guideView._reInitializeGuideContainerDom();
       }
@@ -15819,7 +15826,7 @@
           return a;
         },
         [],
-        this
+        this,
       );
       this._syncGuideNodeToHtml(!1);
     },
@@ -15842,7 +15849,7 @@
           function (a) {
             a._syncGuideNodeToHtml(!0);
           },
-          this
+          this,
         );
       a._super._syncGuideNodeToHtml.call(this, b);
     },
@@ -15852,7 +15859,7 @@
         function (b) {
           return b._model == a;
         },
-        this
+        this,
       );
     },
   }));
@@ -15864,7 +15871,7 @@
           function (a) {
             return a.isItem;
           },
-          this
+          this,
         );
       },
     },
@@ -15880,7 +15887,7 @@
         this._model.on(
           f.event.GuideModelEvent.NAVIGATE_SECTION,
           this.handleNavigateSection,
-          this
+          this,
         ));
     },
     handleNavigateSection: function (a) {
@@ -15896,17 +15903,19 @@
                 ? b.markFieldVisible(
                     window.guideBridge
                       ._getGuideDomElement(a.somExpression)
-                      .parent()
+                      .parent(),
                   )
                 : b.markFieldHidden(
                     window.guideBridge
                       ._getGuideDomElement(a.somExpression)
-                      .parent()
+                      .parent(),
                   );
             })
           : c.each(a, function (a, c) {
               b.markFieldHidden(
-                window.guideBridge._getGuideDomElement(a.somExpression).parent()
+                window.guideBridge
+                  ._getGuideDomElement(a.somExpression)
+                  .parent(),
               );
             });
       });
@@ -15917,7 +15926,8 @@
     _updateSectionTitle: function () {
       this.$element
         .find(
-          f.runtime.progressive.PROGRESSIVE_CONSTANTS.PDC_SECTION_TITLE_SELECTOR
+          f.runtime.progressive.PROGRESSIVE_CONSTANTS
+            .PDC_SECTION_TITLE_SELECTOR,
         )
         .html(
           this._model.sectionTitle +
@@ -15925,7 +15935,7 @@
             (this._model.currentActivePart + 1) +
             "/" +
             this._model._parts.length +
-            ")"
+            ")",
         );
     },
     postInitialize: function () {
@@ -15964,17 +15974,17 @@
         a &&
         a.calculatePartsOfSectionConfig &&
         c.isFunction(
-          a.calculatePartsOfSectionConfig.calculatePartsOfSectionHandler
+          a.calculatePartsOfSectionConfig.calculatePartsOfSectionHandler,
         )
       )
         (a = (0,
         a.calculatePartsOfSectionConfig.calculatePartsOfSectionHandler)(
-          this._model
+          this._model,
         )),
           this._updatePartsFromArray(a);
       else {
         var h = this.$element.find(
-            b.PROGRESSIVE_CONSTANTS.PDC_SECTION_FIELD_CONTAINER_SELECTOR
+            b.PROGRESSIVE_CONSTANTS.PDC_SECTION_FIELD_CONTAINER_SELECTOR,
           ),
           l = k.innerHeight();
         k.find(b.PROGRESSIVE_CONSTANTS.PDC_TITLE_SELECTOR).outerHeight();
@@ -15983,11 +15993,11 @@
           .find(b.PROGRESSIVE_CONSTANTS.PDC_SECTION_TITLE_SELECTOR)
           .outerHeight();
         a = k.find(
-          b.PROGRESSIVE_CONSTANTS.PDC_SECTION_REPEATABLE_CONTROLS_SELECTOR
+          b.PROGRESSIVE_CONSTANTS.PDC_SECTION_REPEATABLE_CONTROLS_SELECTOR,
         );
         a.outerHeight() && a.outerHeight();
         d(
-          b.PROGRESSIVE_CONSTANTS.PDC_SECTION_TITLE_CONTAINER_SELECTOR
+          b.PROGRESSIVE_CONSTANTS.PDC_SECTION_TITLE_CONTAINER_SELECTOR,
         ).outerHeight();
         a = this.$element.find(".progressiveSectionField");
         h.find(".progressiveSectionField.pdcCurrentPanelField");
@@ -16014,10 +16024,10 @@
                   (q = q.children("div").first().attr("id")),
                   this._updateParts(p, q))
                 : b
-                ? ((h = t), p++, l--)
-                : ((q = q.children("div").first().attr("id")),
-                  this._updateParts(p, q),
-                  (k = b = !0));
+                  ? ((h = t), p++, l--)
+                  : ((q = q.children("div").first().attr("id")),
+                    this._updateParts(p, q),
+                    (k = b = !0));
         else
           d.each(a, function (a) {
             m._updateParts(p, d(this).children("div").first().attr("id"));
@@ -16056,7 +16066,7 @@
         function (b) {
           return b._model._escapeQualifiedName() == a;
         },
-        this
+        this,
       );
     },
   }));
@@ -16096,15 +16106,15 @@
             (this._model.instance.off(
               f.event.GuideModelEvent.MODEL_CHANGED,
               this.handleModelChanged,
-              this
+              this,
             ),
             this._model.instance.on(
               f.event.GuideModelEvent.MODEL_CHANGED,
               this.handleModelChanged,
-              this
+              this,
             )),
           (this._summarySelector = this.guideUtil.summarySelector(
-            this._model.instance.id
+            this._model.instance.id,
           )));
       },
       postInitialize: function () {
@@ -16116,7 +16126,7 @@
         this._updateIds(
           this.$element,
           this._model.repeatablePanelId,
-          this._model.instance.id
+          this._model.instance.id,
         );
         this.childViews = [];
         c.each(
@@ -16127,7 +16137,7 @@
             this.$element.find("#" + b).length &&
               this._updateIds(this.$element, b, a);
           },
-          this
+          this,
         );
       },
       handleNavigateSection: function (b) {
@@ -16139,23 +16149,23 @@
           a &&
           a.calculatePartsOfSectionConfig &&
           c.isFunction(
-            a.calculatePartsOfSectionConfig.calculatePartsOfSectionHandler
+            a.calculatePartsOfSectionConfig.calculatePartsOfSectionHandler,
           )
         )
           (a = (0,
           a.calculatePartsOfSectionConfig.calculatePartsOfSectionHandler)(
-            this._model
+            this._model,
           )),
             this._updatePartsFromArray(a);
         else {
           var e = f.runtime.progressive;
           a = d(e.PROGRESSIVE_CONSTANTS.PDC_SELECTOR);
           var g = a.find(
-            e.PROGRESSIVE_CONSTANTS.PDC_SECTION_REPEATABLE_CONTROLS_SELECTOR
+            e.PROGRESSIVE_CONSTANTS.PDC_SECTION_REPEATABLE_CONTROLS_SELECTOR,
           );
           g.find(".hidden").removeClass("hidden");
           var k = this.$element.find(
-              e.PROGRESSIVE_CONSTANTS.PDC_SECTION_FIELD_CONTAINER_SELECTOR
+              e.PROGRESSIVE_CONSTANTS.PDC_SECTION_FIELD_CONTAINER_SELECTOR,
             ),
             h = a.outerHeight(),
             l = a
@@ -16165,7 +16175,7 @@
           var m =
             this.$element
               .find(
-                e.PROGRESSIVE_CONSTANTS.PDC_SECTION_TITLE_CONTAINER_SELECTOR
+                e.PROGRESSIVE_CONSTANTS.PDC_SECTION_TITLE_CONTAINER_SELECTOR,
               )
               .outerHeight(!0) || 0;
           a = this.$element.find(".progressiveSectionField");
@@ -16173,7 +16183,7 @@
           g.outerHeight(!0) ? g.outerHeight(!0) + e.heightBuffer : 0;
           k.css(
             "max-height",
-            h - l - m - 1.5 * f.runtime.progressive.heightBuffer + "px"
+            h - l - m - 1.5 * f.runtime.progressive.heightBuffer + "px",
           );
           k.css("overflow", "auto");
           for (g = 0; g < a.length; g++)
@@ -16186,7 +16196,7 @@
           var a = this._model.instance;
           null == a &&
             (a = window.guideBridge._resolveId(
-              "im_" + this._model.repeatablePanelId
+              "im_" + this._model.repeatablePanelId,
             ).instances[0]);
           if (a.summary) this.$summary.text(a.summary);
           else {
@@ -16225,7 +16235,7 @@
         this._model.on(
           c.event.GuideModelEvent.VALUE_CHANGED,
           this.handleValueChanged,
-          this
+          this,
         );
     },
     postInitialize: function () {
@@ -16272,17 +16282,17 @@
       this._model.on(
         f.event.GuideModelEvent.CHILD_CHANGED,
         this.handleChildChanged,
-        this
+        this,
       );
       this._model.on(
         f.event.GuideModelEvent.MULTIPLE_CHILD_ADDED,
         this.multipleChildAdded,
-        this
+        this,
       );
       this._summarySelector = this.guideUtil.summarySelector(this._model.id);
       this._titleSelector = this.guideUtil.propSelector(
         "title",
-        this._model.id
+        this._model.id,
       );
     },
     addRemoveTemplateMarker: function () {
@@ -16304,7 +16314,7 @@
               (d(b, this.$element).remove(), d(k, this.$element).remove());
           }
         },
-        this
+        this,
       );
     },
     postInitialize: function () {
@@ -16318,8 +16328,8 @@
               this,
               "visible",
               this._model.visible,
-              this._model.visible
-            )
+              this._model.visible,
+            ),
           )
         : this._postInitializeChildren();
       this.addRemoveTemplateMarker();
@@ -16331,7 +16341,7 @@
       this.parentView.$itemsNavContainer &&
         0 ===
           this.parentView.$itemsNavContainer.filter(
-            ":not(.tab-navigators-mobile)"
+            ":not(.tab-navigators-mobile)",
           ).length &&
         this.setActive("firstItem", !1, !0);
     },
@@ -16347,7 +16357,7 @@
           function (a) {
             a.isItem ? (h[a.id] = a) : (l[a.id] = a);
           },
-          this
+          this,
         );
         c.each(
           this._model.items,
@@ -16360,10 +16370,10 @@
               m[g] ||
               0 === e ||
               ((p = this.$itemsContainer.find(
-                this.guideUtil.itemSelector(g, d)
+                this.guideUtil.itemSelector(g, d),
               )),
               (v = this.$itemsNavContainer.find(
-                this.guideUtil.itemNavSelector(g)
+                this.guideUtil.itemNavSelector(g),
               )));
             if (
               !p.length &&
@@ -16376,7 +16386,7 @@
                 "Html template could not be found. cTemplateId:" +
                   g +
                   ", som:" +
-                  d.somExpression
+                  d.somExpression,
               );
               return;
             }
@@ -16400,13 +16410,13 @@
                       ? (d = this._createChild(g, p, v))
                       : this.logger().debug(
                           "AF",
-                          "Skip creating view. could not find el for id:" + l
+                          "Skip creating view. could not find el for id:" + l,
                         )),
                 this._model.repeatable &&
                   f.util.GuideUtil._initializeShortDescription(g));
             d && (m[l] = d);
           },
-          this
+          this,
         );
         this.$itemsContainer
           .find('[data-guide-parent-id\x3d"' + b._model.id + '"]')
@@ -16417,7 +16427,7 @@
               (c = a.attr(b.guideUtil.DATA_GUIDE_ITEM));
             var e = c.substring(
               0,
-              c.length - b.guideUtil.GUIDE_ITEM_SUFFIX.length
+              c.length - b.guideUtil.GUIDE_ITEM_SUFFIX.length,
             );
             m.hasOwnProperty(e) ||
               window.guideBridge._resolveId(e) ||
@@ -16429,7 +16439,7 @@
                   "removing element as no corresponding form dom node found. id:" +
                     c +
                     ", parent id:" +
-                    b.id
+                    b.id,
                 ),
               a.remove(),
               b._find(b.guideUtil.itemNavSelector(e)).remove());
@@ -16448,11 +16458,11 @@
                   : this._createNonRepeatChildView(b)) &&
                 (a && b._syncGuideNodeToHtml(a), this.childViews.push(b));
           },
-          this
+          this,
         );
         f.view.GuideBaseView.prototype._syncGuideNodeToHtml.apply(
           this,
-          arguments
+          arguments,
         );
       }
     },
@@ -16591,7 +16601,7 @@
                 ",currentActiveItem:" +
                 b +
                 ":" +
-                this._model.somExpression
+                this._model.somExpression,
             ),
             !1
           );
@@ -16608,7 +16618,7 @@
           this._model.getAttribute("validateOnStepCompletion") &&
             (b = window.guideBridge.validate(
               [],
-              this._model.panel.navigationContext.currentItem.somExpression
+              this._model.panel.navigationContext.currentItem.somExpression,
             ));
           b = b && this._model.executeExpression("completionExp");
           if (!b) return !1;
@@ -16639,7 +16649,7 @@
                 (b._model._itemsLoaded = void 0))
               : b._clearInactiveLazyViews(a));
         },
-        this
+        this,
       );
     },
     _isSelfOrAncestor: function (a) {
@@ -16677,17 +16687,17 @@
         function (b) {
           return b._model._escapeQualifiedName() == a;
         },
-        this
+        this,
       );
     },
     _toggleAddRemoveButtons: function () {
       var a = this._model,
         c = a.instanceManager;
       d(
-        '[data-guide-id\x3d"' + a.id + '"][data-guide-addremove\x3d"remove"]'
+        '[data-guide-id\x3d"' + a.id + '"][data-guide-addremove\x3d"remove"]',
       ).toggleClass("hidden", c.instanceCount == c.minOccur);
       d(
-        '[data-guide-id\x3d"' + a.id + '"][data-guide-addremove\x3d"add"]'
+        '[data-guide-id\x3d"' + a.id + '"][data-guide-addremove\x3d"add"]',
       ).toggleClass("hidden", c.instanceCount == c.maxOccur);
     },
   }));
@@ -16705,11 +16715,11 @@
           0 === this._$itemsContainer.length
         )
           (this._$itemsContainer = this._find(
-            this.guideUtil.itemContainerSelector(this._model.id)
+            this.guideUtil.itemContainerSelector(this._model.id),
           )),
             0 === this._$itemsContainer.length &&
               (this._$itemsContainer = this._find(
-                this.guideUtil.alternateItemContainerSelector(this._model.id)
+                this.guideUtil.alternateItemContainerSelector(this._model.id),
               ));
         return this._$itemsContainer;
       },
@@ -16722,7 +16732,7 @@
           0 === this._$itemsNavContainer.length
         )
           this._$itemsNavContainer = this._find(
-            this.guideUtil.itemNavContainerSelector(this._model.id)
+            this.guideUtil.itemNavContainerSelector(this._model.id),
           );
         return this._$itemsNavContainer;
       },
@@ -16768,7 +16778,7 @@
                   a.$itemNav.removeClass("active"),
                   a.$itemNav.attr("aria-selected", !1));
             },
-            this
+            this,
           );
           this._currentActiveItemView instanceof f.view.GuidePanelView &&
             this._currentActiveItemView._childInitializeWaiting &&
@@ -16863,7 +16873,7 @@
           a._model.on(
             f.event.GuideModelEvent.MODEL_CHANGED,
             this.handleParentVisibleChanged,
-            this
+            this,
           ),
             (a = a.parentView);
       },
@@ -17006,7 +17016,7 @@
               c.is("tr") && c.attr("data-guide-template-marker", b);
             }
           },
-          this
+          this,
         );
       },
       tableSortComparator: {
@@ -17089,7 +17099,7 @@
                 f.event.GuideModelEvent.MODEL_CHANGED,
                 "tableModelSorted",
                 b,
-                b
+                b,
               );
               m(e.tableContext, b);
             }, 1));
@@ -17163,7 +17173,7 @@
                   selectorsHeaders: "thead th",
                   headerCss: { asc: "asc", desc: "desc", random: "random" },
                 },
-                c
+                c,
               );
               var k,
                 h = g.model;
@@ -17185,11 +17195,11 @@
                       ((a =
                         (a = f.util.GuideUtil._fetchJSONNodeValue(
                           h._guide().runtime.guideContext.guidePrefillJson,
-                          "afSubmissionInfo"
+                          "afSubmissionInfo",
                         )) ||
                         f.util.GuideUtil.fetchXMLNodeValue(
                           h._guide().runtime.guideContext.guidePrefillXml,
-                          "afSubmissionInfo"
+                          "afSubmissionInfo",
                         )) ||
                         d(this).trigger("click")),
                     !1
@@ -17263,7 +17273,7 @@
                 .error("unexpected event property " + a._property);
           }
         },
-        this
+        this,
       );
     },
     _reInitializeGuideContainerDom: function () {
@@ -17284,12 +17294,12 @@
               "somExpression is currently not supported for deepNavigation:" +
                 b +
                 ":" +
-                e
+                e,
             ),
             !1
           );
         a = this.getSomOnNavigableAncestor(
-          this._lastFocussedPanelForNonActionFields
+          this._lastFocussedPanelForNonActionFields,
         );
         a = this.getView(a);
         for (
@@ -17298,7 +17308,7 @@
 
         )
           (a = this.getSomOnNavigableAncestor(
-            a.parentView._model.somExpression
+            a.parentView._model.somExpression,
           )),
             (a = this.getView(a));
         if (a && a.parentView != this && a.getSiblingItemView(d)) {
@@ -17306,7 +17316,7 @@
             return (
               this.logger().log(
                 "AF",
-                "could not setActive for the deepNav:" + a._model.somExpression
+                "could not setActive for the deepNav:" + a._model.somExpression,
               ),
               !1
             );
@@ -17318,7 +17328,7 @@
         }
         this.logger().warn(
           "AF",
-          "could not locate view for given somExpression:" + b + ":" + e
+          "could not locate view for given somExpression:" + b + ":" + e,
         );
         return !1;
       }
@@ -17328,7 +17338,7 @@
         if (
           (a = this.guideUtil.relativeSom(
             this.guideModel.rootPanel.somExpression,
-            b
+            b,
           ))
         )
           if (
@@ -17345,14 +17355,14 @@
                   return (
                     this.logger().log(
                       "AF",
-                      "could not find token:" + a + ", som:" + b
+                      "could not find token:" + a + ", som:" + b,
                     ),
                     !0
                   );
                 null != l.currentActiveItemView &&
                   (l = l.currentActiveItemView);
               },
-              this
+              this,
             ))
           )
             return !1;
@@ -17389,7 +17399,7 @@
                 return a;
               },
               d,
-              this
+              this,
             )),
           (d = b.data("guideView")),
           d instanceof c.view.GuidePanelView &&
@@ -17435,7 +17445,7 @@
             ? this.logger().error("AF", b._model.somExpression)
             : a.prototype.__printSyncPending.call(b);
         },
-        this
+        this,
       );
     },
     _clearInactiveLazyViews: function (a) {
@@ -17477,7 +17487,7 @@
               this._model.resolveNode(a),
               "focus",
               this._previousFocusItemSom,
-              a
+              a,
             ),
             this._previousFocusItemSom &&
               !this._model._guide().runtime.progressive &&
@@ -17489,7 +17499,7 @@
                   this._model.resolveNode(a),
                   "navigate",
                   b,
-                  a
+                  a,
                 )));
         }
       },
@@ -17547,12 +17557,12 @@
                 ? this.guideUtil.getLocalizedMessage(
                     "",
                     c.i18n.strings.exclusiveMaxValErrorMessage,
-                    [d]
+                    [d],
                   )
                 : this.guideUtil.getLocalizedMessage(
                     "",
                     c.i18n.strings.maxValErrorMessage,
-                    [d]
+                    [d],
                   )),
               (this._failedTest = this.guideUtil.MAXIMUM_VALUE_TEST))),
           a.validFlag &&
@@ -17564,12 +17574,12 @@
                 ? this.guideUtil.getLocalizedMessage(
                     "",
                     c.i18n.strings.exclusiveMinValErrorMessage,
-                    [a]
+                    [a],
                   )
                 : this.guideUtil.getLocalizedMessage(
                     "",
                     c.i18n.strings.minValErrorMessage,
-                    [a]
+                    [a],
                   )),
               (this._failedTest = this.guideUtil.MINIMUM_VALUE_TEST))));
       },
@@ -17634,8 +17644,8 @@
             this,
             "items",
             d,
-            a
-          )
+            a,
+          ),
         );
       },
       _resetModelValueForOptionChange: function () {
@@ -17651,7 +17661,7 @@
             function (c) {
               -1 !== $.inArray(c, a, 0) && (b += c + ",");
             },
-            this
+            this,
           );
           0 < b.length && (b = b.substring(0, b.length - 1));
           this.jsonModel._value = b;
@@ -17666,13 +17676,13 @@
     getOptionsMap: function () {
       var c = d.xfaWidget.XfaCheckBox.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return d.extend({}, c, {
         displayValue: function (d) {
           c.displayValue.apply(this, arguments);
           var a = this.$userControl.parents(
-            ".guideRadioButtonItem, .guideCheckBoxItem"
+            ".guideRadioButtonItem, .guideCheckBoxItem",
           );
           a && a.toggleClass("imageCheckButtonChecked", this.checkedState);
           "disabled" === this.$userControl.attr("disabled") &&
@@ -17748,7 +17758,7 @@
       this.inside = !1;
       this.reviewdoc = this.status = "unreviewed";
       this.$elementCheckBox = this.$element.find(
-        this.options.checkBoxClass || a.checkBoxClass
+        this.options.checkBoxClass || a.checkBoxClass,
       );
       this.$elementTextArea = c(this.textArea());
       this.$elementLink = c(this.link());
@@ -17909,13 +17919,13 @@
       "readOnly" !== this.accessOption &&
         (this.$elementCheckBox.find("input").removeAttr("disabled"),
         this.$elementCheckBox.removeClass(
-          this.options.checkBoxDisableClass.substring(1)
+          this.options.checkBoxDisableClass.substring(1),
         ));
     },
     disableCheckBox: function () {
       this.$elementCheckBox.find("input").attr("disabled", "disabled");
       this.$elementCheckBox.addClass(
-        this.options.checkBoxDisableClass.substring(1)
+        this.options.checkBoxDisableClass.substring(1),
       );
     },
     handleReviewStatusChange: function (b) {
@@ -17935,10 +17945,10 @@
                   "\x3d" +
                   a.linkText +
                   "\x3d" +
-                  (d.isUndefined(a.clicked) ? "0" : "1")
+                  (d.isUndefined(a.clicked) ? "0" : "1"),
               );
             },
-            this
+            this,
           ),
           0 < e.length && (this.reviewDoc = e.join("\n")),
           "reviewed" == this.status && this.enableCheckBox(),
@@ -17964,11 +17974,11 @@
       c(a.target).is(":checked")
         ? ((this.status = "agree"),
           this.$elementCheckBox.addClass(
-            this.options.checkBoxReviewedClass.substring(1)
+            this.options.checkBoxReviewedClass.substring(1),
           ))
         : ((this.status = "unreviewed"),
           this.$elementCheckBox.removeClass(
-            this.options.checkBoxReviewedClass.substring(1)
+            this.options.checkBoxReviewedClass.substring(1),
           ));
       this.$element.trigger("checkboxStateChange.tnc");
     },
@@ -18023,7 +18033,7 @@
           access: function (a) {
             this.$userControl.afTnc("access", a);
           },
-        })
+        }),
       );
     },
     _getReviewStatus: function () {
@@ -18071,7 +18081,7 @@
       window.guideBridge &&
         window.guideBridge.trigger(
           a,
-          c.event.GuideModelEvent.createEvent(a, d, f, k, h)
+          c.event.GuideModelEvent.createEvent(a, d, f, k, h),
         );
     },
     _getEffectiveBindRef: function () {
@@ -18124,7 +18134,7 @@
                 function (a, b) {
                   if (d.isObject(a)) return a[b];
                 },
-                this.bindNode
+                this.bindNode,
               );
               b = this.getGuideProp(c, b);
               var l = this._guide()._guideSchema.getConvertor(c);
@@ -18144,13 +18154,13 @@
                 this.logger().error(
                   "AF",
                   "setting {0}(guide {1}) for {2} is not supported in xfa",
-                  [e, c, this.bindNode.somExpression]
+                  [e, c, this.bindNode.somExpression],
                 ),
                   r.stack && this.logger().error("AF", r.stack);
               }
             }
           },
-          this
+          this,
         );
     },
     prepare: function () {},
@@ -18173,7 +18183,7 @@
       c.model.util.CommonUtils.returnMinimalJSON(
         ["name", "templateId", "_value", "guideNodeClass"],
         a,
-        this
+        this,
       );
       return a;
     },
@@ -18200,8 +18210,8 @@
           this,
           "destroy",
           null,
-          this
-        )
+          this,
+        ),
       );
       this._guide()._modelTemplateCacheStore.removeModel(this.id);
       this.off();
@@ -18241,7 +18251,7 @@
     _escapeQualifiedName: function () {
       return (this.getAttribute("name") + "[" + this._index + "]").replace(
         /\./,
-        "\\."
+        "\\.",
       );
     },
     getGuideProp: function (a, d) {
@@ -18264,7 +18274,7 @@
     getAttribute: function (a) {
       var b = c.model.GuideSchema.prototype.getAttributeProps(
           this.className,
-          a
+          a,
         ),
         d = b.priority || (void 0 !== b.xfaProp ? "XFA" : "Guide"),
         k = this["get" + d + "Prop"].apply(this, [a, b]);
@@ -18367,7 +18377,7 @@
       void 0 !== FD.AFaddon.Signing &&
         null !== FD.AFaddon.Signing &&
         ((b = FD.AFaddon.Signing.isDocumentSigned(
-          this.jsonModel.signingService
+          this.jsonModel.signingService,
         )) ||
           a.push({
             som: this.somExpression,
@@ -18449,17 +18459,17 @@
       this.visibleExp &&
         (this._compiledExpressions.visibleExp = this._compileExpression(
           this.visibleExp,
-          "visible"
+          "visible",
         ));
       this.enabledExp &&
         (this._compiledExpressions.enabledExp = this._compileExpression(
           this.enabledExp,
-          "enabled"
+          "enabled",
         ));
       this.initScript &&
         (this._compiledScripts.initScript = this._compileExpression(
           this.initScript,
-          null
+          null,
         ));
     },
     _compileExpression: function (a, c) {
@@ -18473,14 +18483,14 @@
                   a
                     .replace(/\\/g, "\\\\")
                     .replace(/"/g, '\\"')
-                    .replace(/(?:\r\n|\r|\n)/g, " ")
+                    .replace(/(?:\r\n|\r|\n)/g, " "),
                 )
             : 'with(this) {\n\t with(guidelib.__runtime__) {\n\t with(this._guide().runtime) {\n\t var result \x3d eval("${expression}");\n\t\t return result; \n\t }\n}}'.replace(
                 /\${expression}/g,
                 a
                   .replace(/\\/g, "\\\\")
                   .replace(/"/g, '\\"')
-                  .replace(/(?:\r\n|\r|\n)/g, " ")
+                  .replace(/(?:\r\n|\r|\n)/g, " "),
               );
           return new Function(b);
         } catch (k) {
@@ -18493,7 +18503,7 @@
         this._xfa() &&
         0 ===
           this.getOrElse(this, "jsonModel.bindRef", "").indexOf(
-            "xfa[0].form[0]."
+            "xfa[0].form[0].",
           )
       );
     },
@@ -18532,7 +18542,7 @@
           b._currentContext
             ? this.logger().log(
                 "AF",
-                "executeExpression called withing from another executeExpression. Should NEVER happen "
+                "executeExpression called withing from another executeExpression. Should NEVER happen ",
               )
             : b.runPendingExpressions(),
           !0
@@ -18553,7 +18563,7 @@
           k.contextNode &&
           k.contextNode._setExpressionContext(
             k.contextNode,
-            k.contextNode.index
+            k.contextNode.index,
           );
         b.runtime.$event = null;
         b.runPendingExpressions();
@@ -18571,21 +18581,21 @@
           function (a, c) {
             var e;
             var g = this._guide().internal.liveModel.getAllFieldModels(
-              d.keys(a)
+              d.keys(a),
             );
             d.isEmpty(g) || (e = d.max(g, b));
             f.util.GuideUtil._createGetterSetter(
               f.__runtime__,
               c,
-              e || a[d.keys(a)[0]]
+              e || a[d.keys(a)[0]],
             );
             f.util.GuideUtil._createGetterSetter(
               this._guide().runtime,
               c,
-              e || a[d.keys(a)[0]]
+              e || a[d.keys(a)[0]],
             );
           },
-          this
+          this,
         );
       this._guide().runtime._isOverriden = {};
       for (f.__runtime__._isOverriden = {}; a; )
@@ -18607,7 +18617,7 @@
               ":" +
               a +
               ":" +
-              k.stack
+              k.stack,
           );
         }
       } else if (this._compiledScripts[a]) {
@@ -18622,7 +18632,7 @@
               ":" +
               a +
               ":" +
-              k.stack
+              k.stack,
           );
         }
       }
@@ -18634,7 +18644,7 @@
             f.event.GuideModelEvent.MODEL_CHANGED,
             "visible",
             a.prevText,
-            "visible" == a.newText
+            "visible" == a.newText,
           )
         : "access" == a._property &&
           this.trigger(
@@ -18644,8 +18654,8 @@
               this,
               "enabled",
               "open" == a.prevText,
-              "open" == a.newText
-            )
+              "open" == a.newText,
+            ),
           );
     },
     _getScreenReaderText: function (a) {
@@ -18658,10 +18668,10 @@
             this._getCaption(a) ||
             this._getName(a))
         : "shortDescription" == c
-        ? (b = this._getToolTip(a) || this._getCaption(a) || this._getName(a))
-        : "label" == c
-        ? (b = this._getCaption(a) || this._getName(a))
-        : "name" == c && (b = this._getName(a));
+          ? (b = this._getToolTip(a) || this._getCaption(a) || this._getName(a))
+          : "label" == c
+            ? (b = this._getCaption(a) || this._getName(a))
+            : "name" == c && (b = this._getName(a));
       return b;
     },
     _getAssistPriority: function () {
@@ -18704,8 +18714,8 @@
       return this.bindNode
         ? this
         : this.parent
-        ? this.parent._bindParent()
-        : null;
+          ? this.parent._bindParent()
+          : null;
     },
     _getEnabled: function () {
       return this.bindNode
@@ -18727,15 +18737,15 @@
               this,
               "enabled",
               b,
-              this.jsonModel.enabled
-            )
+              this.jsonModel.enabled,
+            ),
           ),
           this._triggerOnBridge(
             "elementEnableChanged",
             this,
             "enablement",
             b,
-            this.jsonModel.enabled
+            this.jsonModel.enabled,
           ));
     },
     _setParentAccess: function (a) {
@@ -18748,8 +18758,8 @@
           this,
           "enabled",
           b,
-          this.enabled
-        )
+          this.enabled,
+        ),
       );
     },
     _addStateOverride: function (a, c) {
@@ -18762,7 +18772,7 @@
         this.jsonModel.stateOverrides[a] = c;
         this._guide()._addToStateOverrideMap(
           this.id + this.name,
-          this.jsonModel.stateOverrides
+          this.jsonModel.stateOverrides,
         );
       }
     },
@@ -18815,15 +18825,15 @@
               this,
               "visible",
               b,
-              this.jsonModel.visible
-            )
+              this.jsonModel.visible,
+            ),
           );
           this._triggerOnBridge(
             "elementVisibleChanged",
             this,
             "visible",
             b,
-            this.jsonModel.visible
+            this.jsonModel.visible,
           );
         }
       },
@@ -18835,10 +18845,10 @@
             ? "true" === this.jsonModel.dorExclusion
             : this.jsonModel.dorExclusion
           : "true" === this._guide().getAttribute("excludeFromDoRIfHidden") ||
-            (this._guide().print &&
-              "true" === this._guide().print.excludeFromDoRIfHidden)
-          ? !this.visible
-          : !1;
+              (this._guide().print &&
+                "true" === this._guide().print.excludeFromDoRIfHidden)
+            ? !this.visible
+            : !1;
       },
       set: function (a) {
         var b = this.somExpression;
@@ -18895,7 +18905,7 @@
       this.jsonModel["{default}"] = this.getOrElse(
         this.jsonModel,
         "{default}",
-        this.jsonModel._value
+        this.jsonModel._value,
       );
       this.layoutConfigs = [];
       "string" === typeof this.jsonModel.layoutConfig
@@ -18905,7 +18915,7 @@
             function (a) {
               this.layoutConfigs.push(JSON.parse(a));
             },
-            this
+            this,
           );
     },
     _getTypedValue: function (a) {
@@ -18919,7 +18929,7 @@
         this,
         "value",
         b,
-        this.jsonModel._value
+        this.jsonModel._value,
       );
     },
   }));
@@ -18977,14 +18987,14 @@
             .append(
               c("\x3cdiv\x3e\x3c/div\x3e")
                 .addClass("rtp-title")
-                .text(c.trim(d.text()))
+                .text(c.trim(d.text())),
             )
             .append(
-              c("\x3cdiv\x3e\x3c/div\x3e").addClass("rtp-data").append(f)
+              c("\x3cdiv\x3e\x3c/div\x3e").addClass("rtp-data").append(f),
             );
         });
         return c(
-          '\x3cul data-rtp-index\x3d"' + b.index + '"\x3e\x3c/ul\x3e'
+          '\x3cul data-rtp-index\x3d"' + b.index + '"\x3e\x3c/ul\x3e',
         ).append(d.get());
       },
       target: 0,
@@ -19058,27 +19068,28 @@
             c("\x3ctd\x3e\x3c/td\x3e")
               .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
               .attr("colspan", b)
-              .append(c(a))
+              .append(c(a)),
           ))
         : 0 <
-          this.$tableRowElement.next(g.prototype.defaults.CONTROL_ROW_SELECTOR)
-            .length
-        ? ((this.child.$element = this.$tableRowElement.next()),
-          this.child.$element.append(
-            c("\x3ctd\x3e\x3c/td\x3e")
-              .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
-              .attr("colspan", b)
-              .append(c(a))
-          ))
-        : ((this.child.$element = c("\x3ctr\x3e\x3c/tr\x3e")
-            .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
-            .append(
+            this.$tableRowElement.next(
+              g.prototype.defaults.CONTROL_ROW_SELECTOR,
+            ).length
+          ? ((this.child.$element = this.$tableRowElement.next()),
+            this.child.$element.append(
               c("\x3ctd\x3e\x3c/td\x3e")
                 .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
                 .attr("colspan", b)
-                .append(c(a))
-            )),
-          this.$tableRowElement.after(this.child.$element));
+                .append(c(a)),
+            ))
+          : ((this.child.$element = c("\x3ctr\x3e\x3c/tr\x3e")
+              .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
+              .append(
+                c("\x3ctd\x3e\x3c/td\x3e")
+                  .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
+                  .attr("colspan", b)
+                  .append(c(a)),
+              )),
+            this.$tableRowElement.after(this.child.$element));
     },
     showChild: function () {
       this.child.$element.get(0).style.display = "";
@@ -19157,7 +19168,7 @@
           c(this).after(
             c("\x3ctr\x3e\x3c/tr\x3e")
               .addClass(g.prototype.defaults.CONTROL_ROW_CLASS)
-              .hide()
+              .hide(),
           );
       });
       var f = this.controlRow.controlRowDetails;
@@ -19167,7 +19178,7 @@
           g.prototype.defaults.EVENT_COLUMN_VISIBILITY,
           function () {
             b._controlRowVisibility();
-          }
+          },
         ),
         this.$element.addClass("rtp-" + f.type));
       this.options.fixTableControls &&
@@ -19184,7 +19195,7 @@
     },
     _rearrangeTableRuntimeControls: function (a, b) {
       b = this.$element.find(
-        ".guideTableRuntimeControls .guideTableRuntimeAddControl"
+        ".guideTableRuntimeControls .guideTableRuntimeAddControl",
       );
       var d = 0;
       b.each(function () {
@@ -19209,7 +19220,7 @@
       });
       this._rearrangeTableRuntimeControls(
         this.columns.length - b.length - 1,
-        a
+        a,
       );
       b && 0 < b.length
         ? (this.$element.addClass("collapsed"), (this.bColumnHidden = !0))
@@ -19247,7 +19258,7 @@
                   .eq(0)
                   .focus());
           }
-        }
+        },
       );
     },
     _resize: function () {
@@ -19323,7 +19334,7 @@
           isNaN(c) && (c = 0);
           return a + c;
         },
-        0
+        0,
       );
     };
   f.__runtime__.af.sum = function (c, d) {
@@ -19379,7 +19390,7 @@
         c.event.GuideModelEvent.NAVIGATE_SECTION,
         "navigateWithinSection",
         null,
-        null
+        null,
       );
     },
     _triggerEvent: function (d, a, b, e) {
@@ -19585,7 +19596,7 @@
           c.event.GuideModelEvent.NAVIGATE_SECTION,
           "navigateWithinSection",
           null,
-          null
+          null,
         );
       },
       playJson: function (a) {
@@ -19615,7 +19626,7 @@
           ? d.apply(k, [a, e, e[b]])
           : a;
       },
-      g
+      g,
     );
   };
   f.__runtime__.af.filter = function (a, b, d, g) {
@@ -19627,7 +19638,7 @@
       }),
       function (a) {
         return a[b];
-      }
+      },
     );
   };
   f.__runtime__.af.formatDateToISOString = function (a) {
@@ -19656,7 +19667,7 @@
         function (b) {
           return b._escapeQualifiedName() == a;
         },
-        this
+        this,
       );
     },
     getItemForNav: function (a) {
@@ -19680,7 +19691,7 @@
         function (a) {
           return this._isNavigableItem(a);
         },
-        this
+        this,
       );
     },
     _getNavigableDescendant: function (a) {
@@ -19898,7 +19909,7 @@
               c.event.GuideModelEvent.ERROR_CHANGED,
               "validationStatus",
               this.validationState,
-              this._errorText
+              this._errorText,
             )),
           d.each(this._children, function (a) {
             (a instanceof c.model.Field ||
@@ -19940,7 +19951,7 @@
         function (a) {
           a._postInitialize();
         },
-        this
+        this,
       );
     },
     validate: function (a) {
@@ -19955,7 +19966,7 @@
           k = a.validate(c);
           !1 === k && (b = !1);
         },
-        this
+        this,
       );
       var k = f._super.validate.call(this, c);
       !1 === k && (b = !1);
@@ -19968,7 +19979,7 @@
         function (a) {
           a.prepare();
         },
-        this
+        this,
       );
       f._super.prepare.call(this);
     },
@@ -20005,7 +20016,7 @@
             b.push(a);
           }
         },
-        this
+        this,
       );
       this._children = b;
     },
@@ -20022,7 +20033,7 @@
           a.getNaked(a._index, c.__runtime__, null);
           a.getNaked(a._index, this._guide().runtime, null);
         },
-        this
+        this,
       );
     },
     nakedChildReferences: function (a, b) {
@@ -20066,14 +20077,14 @@
           function (a) {
             return d.isObject(a) ? !0 : !1;
           },
-          this
+          this,
         );
         d.each(
           this.items,
           function (a, c) {
             a.playJson(b[c]);
           },
-          this
+          this,
         );
         f._super.playJson.call(this, a);
       }
@@ -20084,7 +20095,7 @@
         function (b) {
           b._collectValues(a);
         },
-        this
+        this,
       );
     },
     getElement: function (a) {
@@ -20093,7 +20104,7 @@
         function (b) {
           return b.className === a;
         },
-        this
+        this,
       );
     },
     _unloadModel: function () {
@@ -20102,7 +20113,7 @@
         function (a) {
           a._unloadModel();
         },
-        this
+        this,
       );
       f._super._unloadModel.call(this);
     },
@@ -20116,7 +20127,7 @@
             (c.push(d._getNakedThis()), (f = !0));
           if ((f && !b) || (f && 0 > a.indexOf("[*]"))) return !0;
         },
-        this
+        this,
       );
       return c;
     },
@@ -20126,7 +20137,7 @@
         function (a) {
           a.resetData();
         },
-        this
+        this,
       );
     },
     _changeDescendantsAccess: function (a) {
@@ -20137,7 +20148,7 @@
           b instanceof c.model.GuideItemsContainer &&
             b._changeDescendantsAccess(a);
         },
-        this
+        this,
       );
     },
     _changeContainerAccess: function (a) {
@@ -20151,7 +20162,7 @@
             ? (e || (d[b] = a), d._changeDescendantsProperty(a, b))
             : (d[b] = a);
         },
-        this
+        this,
       );
     },
     disableAllFields: function () {
@@ -20175,7 +20186,7 @@
           function (a) {
             return a._isItem ? !0 : !1;
           },
-          this
+          this,
         );
       },
     },
@@ -20213,7 +20224,7 @@
               d.isFunction(b._setGuideValue) &&
               b._setGuideValue(a[b.name]);
           },
-          this
+          this,
         );
     },
     _collectExpressions: function () {
@@ -20221,7 +20232,7 @@
       this.valueCommitScript &&
         (this._compiledScripts.valueCommitScript = this._compileExpression(
           this.valueCommitScript,
-          null
+          null,
         ));
     },
   }));
@@ -20289,8 +20300,8 @@
           this,
           "fileList",
           a,
-          a
-        )
+          a,
+        ),
       );
     },
     _getCurrentFileAttachmentWrapper: function (a) {
@@ -20338,7 +20349,7 @@
                 (a = this.uuid + "-" + (c + 1) + "__afAttachment__" + a));
             return a;
           },
-          this
+          this,
         )
         .join("\n");
     },
@@ -20357,7 +20368,7 @@
             b.indexedXpath,
             b.xmlSec,
             !a.isEmpty(),
-            a.isEmpty() ? "" : this._getFileAttachmentValue()
+            a.isEmpty() ? "" : this._getFileAttachmentValue(),
           );
       else {
         f = e._getAttachmentDataForModel(this);
@@ -20391,7 +20402,7 @@
                 this._handleFileAttachmentItem(e, a, b, c);
               else e[c](a, b);
           },
-          this
+          this,
         );
       }
     },
@@ -20454,7 +20465,7 @@
                       };
                       f.onerror = d;
                       f.readAsDataURL(a);
-                    })
+                    }),
                   );
                 };
               f && [].forEach.call(f, k);
@@ -20491,7 +20502,7 @@
           var e = this._guide().internal.liveDataUtils._getDataContext(
             this,
             a,
-            b
+            b,
           );
           e.xmlSec === this._guide().internal.liveDataUtils.constants.BOUND_TAG
             ? (a = e.indexedXpath)
@@ -20501,7 +20512,7 @@
           });
         }
       },
-    }
+    },
   ));
   f.defineProps({
     showLink: {
@@ -20537,7 +20548,7 @@
           a.navigationChangeExp &&
             this._guide().queueExpressions(a, "navigationChangeExp");
         },
-        this
+        this,
       );
     },
   }));
@@ -20558,7 +20569,7 @@
             this,
             "value",
             b,
-            this.jsonModel._value
+            this.jsonModel._value,
           ))
         : f._super.playJson.call(this, a);
     },
@@ -20590,7 +20601,7 @@
           d.on(
             c.event.GuideModelEvent.OBJECT_DESTROYED,
             this._handleDependentDestroyed,
-            this
+            this,
           ));
       },
       _notifyDependants: function () {
@@ -20599,14 +20610,14 @@
           function (c) {
             this._guide().queueExpressions(c.dependant, c.events);
           },
-          this
+          this,
         );
       },
       _removeDependant: function (f) {
         f.off(
           c.event.GuideModelEvent.OBJECT_DESTROYED,
           this._handleDependentDestroyed,
-          this
+          this,
         );
         f = this._findDependant(f);
         this.dependants = d.without(this.dependants, f);
@@ -20629,7 +20640,7 @@
       f._super._collectExpressions.apply(this);
       this._compiledExpressions.aggregateExp = this._compileExpression(
         "guidelib.chartUtils.gatherAxisData(this);",
-        "data"
+        "data",
       );
     },
   }));
@@ -20653,7 +20664,7 @@
             c.event.GuideModelEvent.MODEL_CHANGED,
             "data",
             b,
-            a
+            a,
           ));
       },
     },
@@ -20668,7 +20679,7 @@
           c.event.GuideModelEvent.MODEL_CHANGED,
           "dataSourceType",
           b,
-          a
+          a,
         );
       },
     },
@@ -20715,7 +20726,7 @@
           c.event.GuideModelEvent.MODEL_CHANGED,
           "chartType",
           b,
-          a
+          a,
         );
       },
     },
@@ -20829,7 +20840,7 @@
       this.jsonModel["{default}"] = this.getOrElse(
         this.jsonModel,
         "{default}",
-        this.jsonModel._value
+        this.jsonModel._value,
       );
       this.isValid = !0;
       this._validationsDisabled =
@@ -20863,21 +20874,21 @@
       this.calcExp &&
         (this._compiledExpressions.calcExp = this._compileExpression(
           this.calcExp,
-          "value"
+          "value",
         ));
       this.validateExp &&
         (this._compiledScripts.validateExp = this._compileExpression(
           this.validateExp,
-          null
+          null,
         ));
       this.valueCommitScript &&
         (this._compiledScripts.valueCommitScript = this._compileExpression(
           this.valueCommitScript,
-          null
+          null,
         ));
       this._compiledScripts.validateAllExp = this._compileExpression(
         "this._runTests()",
-        null
+        null,
       );
     },
     _handleXfaModelChanged: function (a) {
@@ -20886,11 +20897,11 @@
             c.event.GuideModelEvent.VALUE_CHANGED,
             "value",
             a.prevText,
-            a.newText
+            a.newText,
           )
         : "ClearError" == a._property || "ValidationState" == a._property
-        ? this._guide().queueExpressions(this, ["validateAllExp"])
-        : f._super._handleXfaModelChanged.call(this, a);
+          ? this._guide().queueExpressions(this, ["validateAllExp"])
+          : f._super._handleXfaModelChanged.call(this, a);
     },
     validate: function (a) {
       if (!this.visible) return !0;
@@ -20926,7 +20937,7 @@
         c.event.GuideModelEvent.VALUE_CHANGED,
         "value",
         a,
-        this._getFormattedValue(a)
+        this._getFormattedValue(a),
       );
     },
     checkIfNull: function (a) {
@@ -20958,7 +20969,7 @@
             a + "",
             this.validatePictureClause,
             null,
-            !1
+            !1,
           );
         } catch (g) {
           this.logger().log("AF", g),
@@ -20991,7 +21002,7 @@
             c.event.GuideModelEvent.ERROR_CHANGED,
             "validationStatus",
             this.validationState,
-            this._errorText
+            this._errorText,
           );
       return this.validationState;
     },
@@ -21008,7 +21019,7 @@
       var b = !1,
         c =
           "date.default{} date.short{} date.medium{} date.long{} date.full{} num.percent{} num.decimal{} num.currency{}".split(
-            " "
+            " ",
           );
       if (this.bindNode) {
         if (this.validatePictureClause && (this.value || 0 === this.value))
@@ -21017,7 +21028,7 @@
               this.value + "",
               this.validatePictureClause,
               null,
-              !1
+              !1,
             );
           } catch (g) {
             0 <= c.indexOf(this.validatePictureClause)
@@ -21027,12 +21038,12 @@
         if (b) {
           try {
             a.validFlag = new RegExp(this.validatePictureClause).test(
-              this._getValue()
+              this._getValue(),
             );
           } catch (g) {
             this.logger().error(
               "AF",
-              "Error in running regular expression" + g
+              "Error in running regular expression" + g,
             ),
               (a.validFlag = !1);
           }
@@ -21041,9 +21052,9 @@
               "formatTest",
               this.getOrElse(
                 this.bindNode.validate.formatTest,
-                this.bindNode._defaults.validate.formatTest
+                this.bindNode._defaults.validate.formatTest,
               ),
-              this.bindNode.formatMessage
+              this.bindNode.formatMessage,
             ),
             (this._errorText = this.bindNode._errorText),
             xfalib.ut.XfaUtil.prototype._triggerOnBridge(
@@ -21051,7 +21062,7 @@
               this.bindNode,
               "validationStatus",
               !1,
-              !0
+              !0,
             ),
             this.bindNode.execEvent("validationState"));
         } else if (
@@ -21094,14 +21105,14 @@
         c.event.GuideModelEvent.ERROR_RESET,
         "validationStatus",
         this.validationState,
-        this._errorText
+        this._errorText,
       );
     },
     _preserveLazyValue: function () {
       return !(
         d.contains(
           ["guideButton", "guideTextDraw", "guideAdobeSignBlock"],
-          this.className
+          this.className,
         ) || this._isXfaNode()
       );
     },
@@ -21142,7 +21153,7 @@
         c.event.GuideModelEvent.ERROR_CHANGED,
         "validationStatus",
         this.validationState,
-        a
+        a,
       );
     },
     _isStateOverridden: function (a) {
@@ -21271,7 +21282,7 @@
             c.event.GuideModelEvent.MODEL_CHANGED,
             "mandatory",
             b,
-            a
+            a,
           ));
       },
     },
@@ -21308,7 +21319,7 @@
             this,
             "validationStatus",
             b,
-            a
+            a,
           ));
       },
     },
@@ -21352,19 +21363,19 @@
       this.clickExp
         ? (this._compiledScripts.clickExp = this._compileExpression(
             this.clickExp,
-            null
+            null,
           ))
         : 1.1 <= this.targetVersion &&
           this.defaultClickExpressions[this.type] &&
           ((this.jsonModel.clickExp = this.defaultClickExpressions[this.type]),
           (this._compiledScripts.clickExp = this._compileExpression(
             this.clickExp,
-            null
+            null,
           )));
       this.navigationChangeExp
         ? (this._compiledScripts.navigationChangeExp = this._compileExpression(
             this.navigationChangeExp,
-            null
+            null,
           ))
         : 1.1 <= this.targetVersion &&
           this.defaultNavigationExpressions[this.type] &&
@@ -21372,7 +21383,7 @@
             this.defaultNavigationExpressions[this.type]),
           (this._compiledScripts.navigationChangeExp = this._compileExpression(
             this.navigationChangeExp,
-            null
+            null,
           )));
     },
   }));
@@ -21413,7 +21424,7 @@
       this.optionsExp &&
         (this._compiledExpressions.optionsExp = this._compileExpression(
           this.optionsExp,
-          "items"
+          "items",
         ));
     },
     getOnOffValues: function (a) {
@@ -21517,8 +21528,8 @@
       this.bindNode
         ? (b = f._super._getScreenReaderText.apply(this, [a]))
         : "custom" == c
-        ? (b = this._getCustomAssist(a) || this._getCaption(a))
-        : "caption" == c && (b = this._getCaption(a));
+          ? (b = this._getCustomAssist(a) || this._getCaption(a))
+          : "caption" == c && (b = this._getCaption(a));
       return b;
     },
   }));
@@ -21568,8 +21579,8 @@
             Array.isArray(b) && 0 < b.length
               ? b[0].split("\x3d")[0].trim()
               : !d.isUndefined(b) && 0 < b.length
-              ? b.split("\x3d")[0].trim()
-              : "1"),
+                ? b.split("\x3d")[0].trim()
+                : "1"),
           (b =
             Array.isArray(b) && 1 < b.length
               ? b[1].split("\x3d")[0].trim()
@@ -21660,7 +21671,7 @@
               '(?:\x3cdf-variable[^\x3e]*variableid\x3d"' +
                 b +
                 '"[^\x3e]*\x3e)[^\x3c]*(?:\x3c/df-variable\x3e)',
-              "ig"
+              "ig",
             ));
         });
       }
@@ -21703,7 +21714,7 @@
               ((this._errorText = this.guideUtil.getLocalizedMessage(
                 "",
                 c.i18n.strings.totalLengthMessage,
-                [this.length]
+                [this.length],
               )),
               (this._failedTest = this.guideUtil.LENGTH_TEST)))
           : null != this.minLength &&
@@ -21712,7 +21723,7 @@
               ((this._errorText = this.guideUtil.getLocalizedMessage(
                 "",
                 c.i18n.strings.minimumLengthMessage,
-                [this.minLength]
+                [this.minLength],
               )),
               (this._failedTest = this.guideUtil.MINIMUM_LENGTH_TEST))));
     },
@@ -22057,7 +22068,7 @@
       this.optionsExp &&
         (this._compiledExpressions.optionsExp = this._compileExpression(
           this.optionsExp,
-          "items"
+          "items",
         ));
     },
     getItemIdentifier: function (a) {
@@ -22086,8 +22097,8 @@
               this,
               "value",
               a.target.somExpression,
-              a.newText
-            )
+              a.newText,
+            ),
           )
         : f._super._handleXfaModelChanged.call(this, a);
     },
@@ -22103,7 +22114,7 @@
           b = d;
           return c[0] == a;
         },
-        this
+        this,
       )
         ? b
         : null;
@@ -22117,14 +22128,14 @@
             c.event.GuideModelEvent.VALUE_CHANGED,
             "value",
             this.prevOnItem,
-            null
+            null,
           );
         null !== b &&
           this._triggerEvent(
             c.event.GuideModelEvent.VALUE_CHANGED,
             "value",
             b,
-            this._getFormattedValue(a)
+            this._getFormattedValue(a),
           );
         this.prevOnItem = b;
       }
@@ -22217,8 +22228,8 @@
       this.bindNode
         ? (b = f._super._getScreenReaderText.apply(this, [a]))
         : "custom" == c
-        ? (b = this._getCustomAssist(a) || this._getCaption(a))
-        : "caption" == c && (b = this._getCaption(a));
+          ? (b = this._getCustomAssist(a) || this._getCaption(a))
+          : "caption" == c && (b = this._getCaption(a));
       return b;
     },
   }));
@@ -22259,7 +22270,7 @@
       c.model.util.CommonUtils.returnMinimalJSON(
         ["name", "templateId", "guideNodeClass"],
         a,
-        this
+        this,
       );
       return a;
     },
@@ -22339,7 +22350,7 @@
               a + "",
               b,
               guideBridge._readRuntimeLocale(),
-              !0
+              !0,
             )
           : xfalib.ut.PictureFmt.format(
               a + "",
@@ -22350,7 +22361,7 @@
                 "}",
               guideBridge._readRuntimeLocale(),
               !0,
-              !0
+              !0,
             );
       } catch (e) {
         return this.logger().error("Cannot format value " + a + " " + e), a;
@@ -22367,7 +22378,7 @@
           ((this._errorText = c.util.GuideUtil.getLocalizedMessage(
             "",
             c.i18n.strings.totalDigitMessage,
-            [this.leadDigits]
+            [this.leadDigits],
           )),
           (this._failedTest = this.guideUtil.TOTAL_DIGITS_TEST)));
     },
@@ -22379,7 +22390,7 @@
           ((this._errorText = c.util.GuideUtil.getLocalizedMessage(
             "",
             c.i18n.strings.datatypeMessage,
-            ["numeric"]
+            ["numeric"],
           )),
           (this._failedTest = this.guideUtil.FORMAT_TEST));
       }
@@ -22424,7 +22435,7 @@
         if (this.options._guideContainer.jsonModel.footnoteMap) {
           var a = {},
             b = Object.entries(
-              this.options._guideContainer.jsonModel.footnoteMap
+              this.options._guideContainer.jsonModel.footnoteMap,
             );
           document.createElement("p").setAttribute("class", "footnoteClass");
           for (var c = 0; c < b.length; c++) {
@@ -22471,7 +22482,7 @@
         var b = xfalib.ut.DateInfo.Parse(
           a,
           void 0,
-          this.isEditPictureClausePresent
+          this.isEditPictureClausePresent,
         );
         null !== b && (b = b.getISODate());
         return b ? b : a;
@@ -22487,14 +22498,14 @@
             xfalib.ut.DateInfo.Parse(
               b,
               void 0,
-              this.isEditPictureClausePresent
+              this.isEditPictureClausePresent,
             ) &&
           (a.validFlag = !1);
         a.validFlag ||
           ((this._errorText = c.util.GuideUtil.getLocalizedMessage(
             "",
             c.i18n.strings.datatypeMessage,
-            ["date"]
+            ["date"],
           )),
           (this._failedTest = this.guideUtil.FORMAT_TEST));
       }
@@ -22521,7 +22532,7 @@
           this,
           null,
           null,
-          null
+          null,
         ));
     },
     showCaptchaError: function (a) {
@@ -22529,13 +22540,13 @@
         (d.isEmpty(a) &&
           (a = c.util.GuideUtil.getLocalizedMessage(
             "",
-            c.i18n.LogMessages["AEM-AF-901-006"]
+            c.i18n.LogMessages["AEM-AF-901-006"],
           )),
         this._triggerEvent(
           c.event.GuideModelEvent.ERROR_CHANGED,
           "validationStatus",
           !1,
-          a
+          a,
         ));
     },
     validate: function (a) {
@@ -22551,7 +22562,7 @@
               c.event.GuideModelEvent.ERROR_CHANGED,
               "validationStatus",
               !1,
-              this.mandatoryMessage
+              this.mandatoryMessage,
             ),
             !1
           );
@@ -22559,7 +22570,7 @@
           c.event.GuideModelEvent.ERROR_CHANGED,
           "validationStatus",
           !0,
-          null
+          null,
         );
       }
     },
@@ -22610,7 +22621,7 @@
       this.optionsExp &&
         (this._compiledExpressions.optionsExp = this._compileExpression(
           this.optionsExp,
-          "items"
+          "items",
         ));
     },
     _handleXfaModelChanged: function (a) {
@@ -22621,7 +22632,7 @@
             c.event.GuideModelEvent.MODEL_CHANGED,
             a._property,
             a.prevText,
-            a.newText
+            a.newText,
           )
         : f._super._handleXfaModelChanged.call(this, a);
     },
@@ -22633,7 +22644,7 @@
         function (b) {
           a === b.saveValue && (c = b.displayValue);
         },
-        this
+        this,
       );
       return c;
     },
@@ -22713,18 +22724,18 @@
         a ||
           this.logger().log(
             "There was no instance found for InstanceManager at postInitialize:" +
-              this.somExpression
+              this.somExpression,
           );
         a.bindNode &&
           a.bindNode.instanceManager &&
           ((this.bindNode = a.bindNode.instanceManager),
           this.bindNode.parent.on(
             xfalib.script.XfaModelEvent.CHILD_ADDED,
-            this
+            this,
           ),
           this.bindNode.parent.on(
             xfalib.script.XfaModelEvent.CHILD_REMOVED,
-            this
+            this,
           ));
       }
     },
@@ -22734,11 +22745,11 @@
         a.bindNode.instanceManager &&
         (this.bindNode.parent.off(
           xfalib.script.XfaModelEvent.CHILD_ADDED,
-          this
+          this,
         ),
         this.bindNode.parent.off(
           xfalib.script.XfaModelEvent.CHILD_REMOVED,
-          this
+          this,
         ));
       f._super._unloadModel.call(this);
     },
@@ -22757,13 +22768,13 @@
             break;
           case xfalib.script.XfaModelEvent.CHILD_MOVED:
             this.logger().log(
-              "CHILD_REMOVED should never be dispatched. It's achieved via ad and remove child."
+              "CHILD_REMOVED should never be dispatched. It's achieved via ad and remove child.",
             );
         }
     },
     _instanceTemplate: function () {
       return this._guide()._modelTemplateCacheStore.cloneJsonTemplate(
-        this.jsonModel.instanceTemplateId
+        this.jsonModel.instanceTemplateId,
       );
     },
     addInstance: function (a) {
@@ -22781,7 +22792,7 @@
         c.event.GuideModelEvent.MULTIPLE_CHILD_ADDED,
         "multipleChildAdded",
         null,
-        d
+        d,
       );
     },
     _manageChild: function (a, b) {
@@ -22852,7 +22863,7 @@
             (e.insertNode(m, b._getDataNodeName(), b.instanceIndex) ||
               this.logger().warn(
                 "AF",
-                "Unable to store the data of the element"
+                "Unable to store the data of the element",
               ));
         }
         this._execExpressions(a);
@@ -22861,7 +22872,7 @@
       this.logger().log(
         "guide",
         "insertInstance could not create child" +
-          this.jsonModel.instanceTemplateId
+          this.jsonModel.instanceTemplateId,
       );
       return null;
     },
@@ -23086,7 +23097,7 @@
               function (a) {
                 this.putModel(a);
               },
-              this
+              this,
             ))
         : this.logger().log("no Id found for model" + a.getAttribute("name"));
     },
@@ -23105,7 +23116,7 @@
         function (a, c) {
           _.isObject(a) && this._putTemplate(a);
         },
-        this
+        this,
       );
     },
     _putLazyTemplate: function (a) {
@@ -23150,7 +23161,7 @@
       function (a) {
         this.displayOn += f[a] || 0;
       },
-      this
+      this,
     );
     this.$item = c.eq(0).clone();
     c.remove();
@@ -23158,7 +23169,7 @@
   _.extend(a.prototype, {
     showError: function (a, c, d) {
       var b = this.$container.find(
-        "[" + f.DATA_ATTRIBUTE_SOM + '\x3d"' + d + '"]'
+        "[" + f.DATA_ATTRIBUTE_SOM + '\x3d"' + d + '"]',
       );
       0 < b.length
         ? b
@@ -23212,7 +23223,7 @@
       initialize: function () {
         b._super.initialize.apply(arguments);
         a = c(
-          "[" + f.DATA_ATTRIBUTE_ERROR_CONTAINER + "]"
+          "[" + f.DATA_ATTRIBUTE_ERROR_CONTAINER + "]",
         ).globalErrorContainer();
       },
       markError: function (b, d, f, h, l) {
@@ -23400,7 +23411,7 @@
           ["shortDescription", "string", null, "assist.toolTip.value"],
           ["longDescription", "string", null],
         ],
-        "guideNode"
+        "guideNode",
       );
       this.addSchema("guideInstanceManager", [], "guideNode");
       this.addSchema("esign", [], "guideNode");
@@ -23410,12 +23421,12 @@
       this.addSchema(
         "guideContainerNode",
         [["disableSwipeGesture", "boolean", !1]],
-        "guideItemsContainer"
+        "guideItemsContainer",
       );
       this.addSchema(
         "guidePanel",
         [["validateOnStepCompletion", "boolean", !1]],
-        "guideItemsContainer"
+        "guideItemsContainer",
       );
       this.addSchema("rootPanelNode", [], "guidePanel");
       this.addSchema("guideTable", [], "guidePanel");
@@ -23430,7 +23441,7 @@
           ["fileSizeLimit", "integer", 2],
           ["showComment", "boolean", !1],
         ],
-        "guideCompositeField"
+        "guideCompositeField",
       );
       this.addSchema(
         "guideField",
@@ -23453,7 +23464,7 @@
             "string",
             c.util.GuideUtil.getLocalizedMessage(
               "",
-              c.i18n.LogMessages["AEM-AF-901-005"]
+              c.i18n.LogMessages["AEM-AF-901-005"],
             ),
             "mandatoryMessage",
           ],
@@ -23462,7 +23473,7 @@
             "string",
             c.util.GuideUtil.getLocalizedMessage(
               "",
-              c.i18n.LogMessages["AEM-AF-901-006"]
+              c.i18n.LogMessages["AEM-AF-901-006"],
             ),
             "validationMessage",
             "Guide",
@@ -23472,7 +23483,7 @@
             "string",
             c.util.GuideUtil.getLocalizedMessage(
               "",
-              c.i18n.LogMessages["AEM-AF-901-007"]
+              c.i18n.LogMessages["AEM-AF-901-007"],
             ),
             "formatMessage",
           ],
@@ -23480,7 +23491,7 @@
           ["width", "string", null],
           ["height", "string", null],
         ],
-        "scriptable"
+        "scriptable",
       );
       this.addSchema(
         "guideTextBox",
@@ -23490,7 +23501,7 @@
           ["minLength", "integer", null],
           ["length", "integer", null],
         ],
-        "guideField"
+        "guideField",
       );
       this.addSchema("guideCaptcha", [], "guideField");
       this.addSchema("guideTelephone", [], "guideField");
@@ -23505,7 +23516,7 @@
           ["exclusiveMaximum", "boolean", null],
           ["exclusiveMinimum", "boolean", null],
         ],
-        "guideField"
+        "guideField",
       );
       this.addSchema("guidePasswordBox", [], "guideField");
       this.addSchema(
@@ -23514,7 +23525,7 @@
           ["optionsExp", "string", null],
           ["options", "object", null, "items"],
         ],
-        "guideField"
+        "guideField",
       );
       this.addSchema(
         "guideCheckBox",
@@ -23522,7 +23533,7 @@
           ["optionsExp", "string", null],
           ["options", "object", null, "items"],
         ],
-        "guideField"
+        "guideField",
       );
       this.addSchema("guideSwitch", [], "guideCheckBox");
       this.addSchema("guideScribble", [], "guideField");
@@ -23534,20 +23545,20 @@
           ["exclusiveMaximum", "boolean", null],
           ["exclusiveMinimum", "boolean", null],
         ],
-        "guideField"
+        "guideField",
       );
       this.addSchema("guideButton", [], "guideField");
       this.addSchema("guideListFileAttachmentButton", [], "guideButton");
       this.addSchema(
         "guideTextDraw",
         [["documentFragmentVariables", "string", null]],
-        "guideField"
+        "guideField",
       );
       this.addSchema("guideFootnotePlaceHolder", [], "guideTextDraw");
       this.addSchema(
         "guideAdobeSignBlock",
         [["documentFragmentVariables", "string", null]],
-        "guideField"
+        "guideField",
       );
       this.addSchema("guideCompositeFieldItem", [], "guideField");
       this.addSchema(
@@ -23558,7 +23569,7 @@
           ["optionsExp", "string", null],
           ["options", "object", null, "items"],
         ],
-        "guideField"
+        "guideField",
       );
       this.addSchema(
         "guideTermsAndConditions",
@@ -23567,7 +23578,7 @@
           ["showAsPopUp", "boolean", !1],
           ["clickStatus", "string", null],
         ],
-        "guideCompositeField"
+        "guideCompositeField",
       );
       this.addSchema(
         "guideChart",
@@ -23591,17 +23602,17 @@
           ["showLegends", "boolean", !1],
           ["legendPosition", "string", "right"],
         ],
-        "scriptable"
+        "scriptable",
       );
       this.addSchema(
         "guideAdModule",
         [["_value", "string", null]],
-        "scriptable"
+        "scriptable",
       );
       this.addSchema(
         "guideAdModuleGroup",
         [["_value", "string", null]],
-        "scriptable"
+        "scriptable",
       );
     },
     addSchema: function (a, c, g) {
@@ -23708,11 +23719,11 @@
                   c.event.GuideModelEvent.MODEL_REFRESH,
                   "jsonModel",
                   null,
-                  null
+                  null,
                 );
             }
           },
-          this
+          this,
         );
     },
     _resetExpressionCounters: function () {
@@ -23735,10 +23746,10 @@
       var a = c.model.GuideNode.prototype._getReducedJSON.call(this);
       c.model.util.CommonUtils.returnMinimalJSON(
         "xdpRef xsdRef id dorTemplateRef dorType excludeFromDoRIfHidden schemaRef schemaType".split(
-          " "
+          " ",
         ),
         a,
-        this
+        this,
       );
       a.rootPanel = this.rootPanel._getReducedJSON();
       this.jsonModel.toolbar && (a.toolbar = this.toolbar._getReducedJSON());
@@ -23748,12 +23759,12 @@
       var a = { _guideContainer: this };
       this.rootPanel = c.model.GuideModelRegistry.prototype.createModel(
         this.jsonModel.rootPanel,
-        a
+        a,
       );
       this._initializeChild(this.rootPanel);
       this._children.push(this.rootPanel);
       a = c.model.GuideModelRegistry.prototype.createInstanceManager(
-        this.rootPanel
+        this.rootPanel,
       );
       this._initializeChild(a);
       this._children.splice(this._children.indexOf(this.rootPanel), 0, a);
@@ -23764,7 +23775,7 @@
           (a = d.extend({}, a, { _guideContainer: this._guide() })),
         (this.toolbar = c.model.GuideModelRegistry.prototype.createModel(
           this.jsonModel.toolbar,
-          a
+          a,
         )),
         this._initializeChild(this.toolbar),
         this._children.push(this.toolbar));
@@ -23833,7 +23844,7 @@
                     : "phone" === d &&
                       (e =
                         c.model.GuideTelephone.prototype._extractPhoneNumber(
-                          e
+                          e,
                         )));
             } catch (v) {}
             return e ? e.toString() : e;
@@ -23870,19 +23881,19 @@
       this.autoSaveStartExpression &&
         (this._compiledExpressions.autoSaveStartExp = this._compileExpression(
           this.autoSaveStartExpression,
-          "autoSaveStart"
+          "autoSaveStart",
         ));
       this.submitSuccess ||
         (this.jsonModel.submitSuccess = this.defaultSubmitSuccess);
       this._compiledScripts.submitSuccess = this._compileExpression(
         this.submitSuccess,
-        null
+        null,
       );
       this.submitError ||
         (this.jsonModel.submitError = this.defaultSubmitError);
       this._compiledScripts.submitError = this._compileExpression(
         this.submitError,
-        null
+        null,
       );
     },
     prepare: function () {
@@ -23897,7 +23908,7 @@
           function (a) {
             a.prepare();
           },
-          this
+          this,
         ),
         this.queueExpressions(this, ["autoSaveStartExp"]),
         this.runPendingExpressions());
@@ -23938,7 +23949,7 @@
             b[d] = b[d] || 0;
             c && 0 > c.indexOf(a) && 10 > b[d] && (c.push(a), (b[d] += 1));
           },
-          this
+          this,
         ));
     },
     playJson: function (a, b) {
@@ -23954,7 +23965,7 @@
         function (b) {
           b._collectValues(a);
         },
-        this
+        this,
       );
     },
     resolveNode: function (a) {
@@ -23965,14 +23976,14 @@
         b[0] === this._escapeQualifiedName()
           ? ((c = this), b.shift())
           : this.hasOwnProperty(b[0])
-          ? ((c = this[b[0]]), b.shift())
-          : c || (c = this.rootPanel);
+            ? ((c = this[b[0]]), b.shift())
+            : c || (c = this.rootPanel);
         d.each(
           b,
           function (a) {
             c = c && c._findChildren ? c._findChildren(a, !1)[0] : null;
           },
-          this
+          this,
         );
         null == c && (c = this.getOrElse(this._guide().runtime, a, null));
         return c;
@@ -24000,7 +24011,7 @@
           (delete this._compiledExpressions.autoSaveStartExp,
           this._triggerOnBridge(
             window.guideBridge.GUIDE_AUTO_SAVE_START,
-            this
+            this,
           ));
       },
     },
@@ -24140,7 +24151,7 @@
       this.completionExp &&
         (this._compiledScripts.completionExp = this._compileExpression(
           this.completionExp,
-          null
+          null,
         ));
       this._compiledExpressions.summaryExp = this.jsonModel.summaryExp
         ? this._compileExpression(this.jsonModel.summaryExp, "summary")
@@ -24173,7 +24184,7 @@
           a instanceof c.model.GuidePanel &&
             (b = this._initializeInstanceManager(a, d, b));
         },
-        this
+        this,
       );
       this.jsonModel.toolbar &&
         ((a = {}),
@@ -24183,7 +24194,7 @@
           })),
         (a = c.model.GuideModelRegistry.prototype.createModel(
           this.jsonModel.toolbar,
-          a
+          a,
         )),
         this._initializeChild(a),
         this._children.push(a));
@@ -24209,7 +24220,7 @@
             k[c] = b;
             l++;
           },
-          this
+          this,
         );
         l == f - 1 && (k[h] = a.jsonModel);
         this.jsonModel.items = k;
@@ -24226,7 +24237,7 @@
             c.event.GuideModelEvent.CHILD_CHANGED,
             "childAdded",
             null,
-            a
+            a,
           );
       }
     },
@@ -24317,12 +24328,12 @@
                 function (a, c) {
                   a === b.jsonModel && (e = c);
                 },
-                this
+                this,
               );
               e && delete this.jsonModel.items[e];
               this._normalizeChildren();
             },
-            this
+            this,
           );
           this._currentItem = this._navigationContext = null;
         }
@@ -24341,7 +24352,7 @@
             (d.isUndefined(b[this.templateId]) || (b[this.templateId] = 0));
           c._unloadModel(a);
         },
-        this
+        this,
       );
       c.model.Scriptable.prototype._unloadModel.call(this);
     },
@@ -24355,7 +24366,7 @@
         function (b, c) {
           b === a.jsonModel && (e = c);
         },
-        this
+        this,
       );
       e && delete this.jsonModel.items[e];
       this._normalizeChildren();
@@ -24363,7 +24374,7 @@
         c.event.GuideModelEvent.CHILD_CHANGED,
         "childRemoved",
         a,
-        null
+        null,
       );
     },
     _embedJson: function (a, b) {
@@ -24388,10 +24399,10 @@
               (this.jsonModel.items = this.jsonModel.items || {}),
               (this.jsonModel.items[b] = a),
               this._guide()._modelTemplateCacheStore._putTemplate(
-                JSON.parse(JSON.stringify(a))
+                JSON.parse(JSON.stringify(a)),
               ));
           },
-          this
+          this,
         ),
         this._embedModel());
       return c;
@@ -24410,7 +24421,7 @@
           c._isItem && b++;
           if (d >= a) return !0;
         },
-        this
+        this,
       );
       return b;
     },
@@ -24428,17 +24439,17 @@
                 ? f[a.name].push(a)
                 : (f[a.name] = [a])
               : e[a.name]
-              ? e[a.name].push(a)
-              : (e[a.name] = [a]));
+                ? e[a.name].push(a)
+                : (e[a.name] = [a]));
         },
-        this
+        this,
       );
       var k = d.filter(
         this._children,
         function (a) {
           return a instanceof c.model.GuideInstanceManager;
         },
-        this
+        this,
       );
       d.each(
         k,
@@ -24453,7 +24464,7 @@
                 ? ((d = e.shift()), c.playJson(d, b))
                 : a.removeInstance(d);
             },
-            this
+            this,
           );
           0 < e.length &&
             d.each(
@@ -24462,10 +24473,10 @@
                 var d = a.addInstance();
                 d && d.playJson(c, b);
               },
-              this
+              this,
             );
         },
-        this
+        this,
       );
       d.each(
         this.items,
@@ -24475,7 +24486,7 @@
             d && 0 < d.length && a.playJson(d.shift(), b);
           }
         },
-        this
+        this,
       );
       this.toolbar && this.toolbar.playJson(a.toolbar, b);
     },
@@ -24496,7 +24507,7 @@
       this.bindNode &&
         (b = this.getOrElse(
           this.bindNode.assist && this.bindNode.assist.role,
-          null
+          null,
         )) &&
         (a = c[b]);
       return a;
@@ -24518,7 +24529,7 @@
           if (b instanceof c.model.GuidePanel && !b.execCompletion())
             return (a = !1), !0;
         },
-        this
+        this,
       );
       a && this.completionExp && (a = this.executeExpression("completionExp"));
       return a;
@@ -24541,7 +24552,7 @@
             0 === this.instanceIndex &&
             c(
               e.getDataInstances(g, this._getDataNodeName()),
-              e.getParentDataNode(g)
+              e.getParentDataNode(g),
             ),
           (l = e.addIndexToPath(l, this.instanceIndex)));
         g.xmlSec === e.constants.UNBOUND_TAG
@@ -24572,7 +24583,7 @@
             for (a = a.length - 1; a >= e; --a)
               c.removeChild(b, d._getDataNodeName(), a);
         },
-        "_updateLiveData"
+        "_updateLiveData",
       );
     },
     _playLiveData: function (a, b) {
@@ -24601,7 +24612,7 @@
               e && d._playLiveData.apply(e, c);
             }
         },
-        "_playLiveData"
+        "_playLiveData",
       );
     },
   }));
@@ -24678,8 +24689,8 @@
               this,
               "title",
               b,
-              a
-            )
+              a,
+            ),
           ));
       },
     },
@@ -24698,8 +24709,8 @@
               this,
               "summary",
               b,
-              this._summary
-            )
+              this._summary,
+            ),
           ));
       },
     },
@@ -24708,7 +24719,7 @@
         return this.getOrElse(
           this.jsonModel,
           "layout.enableLayoutOptimization",
-          !1
+          !1,
         );
       },
     },
@@ -24841,7 +24852,7 @@
       window.formBridge
         ? (window.formBridge.registerConfig(
             "contextPath",
-            window.guideBridge.userConfig.contextPath
+            window.guideBridge.userConfig.contextPath,
           ),
           window.formBridge.registerConfig("LoggerConfig", {
             logConfigString: a,
@@ -24876,12 +24887,12 @@
         a.runtime.guideContext &&
           (b = f.util.GuideUtil.fetchXMLNodeValue(
             a.runtime.guideContext.guidePrefillXml,
-            "lastFocusItem"
+            "lastFocusItem",
           ));
         d.isUndefined(b) &&
           (b = f.util.GuideUtil._fetchJSONNodeValue(
             a.runtime.guideContext.guidePrefillJson,
-            "afSubmissionInfo.lastFocusItem"
+            "afSubmissionInfo.lastFocusItem",
           ));
         d.isUndefined(b) &&
           (b = window.guideBridge.customContextProperty("lastFocusItem"));
@@ -24948,27 +24959,27 @@
           (a.data.attachments = h(a.data.guideState.attachments)),
         window.guideBridge.restoreGuideState(a.data))
       : a.data
-      ? (b.setGuideState(e.GUIDE_STATE_MERGE_PROGRESS),
-        c.initLiveData(
-          a.data,
-          null,
-          d.isString(b.xdpRef),
-          d.isString(b.xsdRef),
-          b.getAttribute("xsdRootElement"),
-          h(a.attachments)
-        ),
-        c.playLiveData(b.rootPanel),
-        g.prefillCrossFragFields(b),
-        b.setGuideState(e.GUIDE_STATE_MERGE_COMPLETE),
-        b.prepare())
-      : (b.prepare(),
-        c.initLiveData(
-          null,
-          null,
-          d.isString(b.xdpRef),
-          d.isString(b.xsdRef),
-          b.getAttribute("xsdRootElement")
-        ));
+        ? (b.setGuideState(e.GUIDE_STATE_MERGE_PROGRESS),
+          c.initLiveData(
+            a.data,
+            null,
+            d.isString(b.xdpRef),
+            d.isString(b.xsdRef),
+            b.getAttribute("xsdRootElement"),
+            h(a.attachments),
+          ),
+          c.playLiveData(b.rootPanel),
+          g.prefillCrossFragFields(b),
+          b.setGuideState(e.GUIDE_STATE_MERGE_COMPLETE),
+          b.prepare())
+        : (b.prepare(),
+          c.initLiveData(
+            null,
+            null,
+            d.isString(b.xdpRef),
+            d.isString(b.xsdRef),
+            b.getAttribute("xsdRootElement"),
+          ));
     a = guideBridge.customContextProperty("fileAttachmentMap");
     if (!d.isUndefined(a) && "string" === typeof a)
       try {
@@ -25029,13 +25040,13 @@
         a(
           h,
           "guideState.guidePrefillXml",
-          a(b.data, "guideState.guidePrefillJson", void 0)
-        )
+          a(b.data, "guideState.guidePrefillJson", void 0),
+        ),
       );
       (l = a(
         b.data,
         "guideState.guideContext.afSubmissionInfo.afDraft",
-        ""
+        "",
       ).replace(/"/g, "")) && (k = l.split(","));
       l = a(b.data, "guideState.guideContext.customPropertyMap", {});
       var m = a(b.data, "guideState.customContext", null);
@@ -25050,11 +25061,11 @@
     } else
       guideBridge.customContextProperty(
         "fileAttachmentMap",
-        b.fileAttachmentMap
+        b.fileAttachmentMap,
       ),
         guideBridge.customContextProperty(
           "fileAttachmentWrappers",
-          b.fileAttachmentWrappers
+          b.fileAttachmentWrappers,
         );
     e.xdpRef &&
       ((m = a(b.data, "guideState.xfaState.xfaRenderContext", null)),
@@ -25098,18 +25109,21 @@
           null !== a(w, "guideState", null) && (m = w),
           (m = { data: m, isMergedJson: !0 }))
         : m instanceof Function
-        ? ((w = m()),
-          (m =
-            w.then instanceof Function
-              ? w
-              : d.extend({}, { isMergedJson: !1 }, m())))
-        : ((m = a(
-            window.guideBridge,
-            "userConfig.submitConfig.aemFormComponentPath",
-            t.guidePath
-          )),
-          (m = window.guideBridge._getGuidePathUrl(".af.prefilldata.json", m)),
-          (m = this.fetchData(m + window.location.search)));
+          ? ((w = m()),
+            (m =
+              w.then instanceof Function
+                ? w
+                : d.extend({}, { isMergedJson: !1 }, m())))
+          : ((m = a(
+              window.guideBridge,
+              "userConfig.submitConfig.aemFormComponentPath",
+              t.guidePath,
+            )),
+            (m = window.guideBridge._getGuidePathUrl(
+              ".af.prefilldata.json",
+              m,
+            )),
+            (m = this.fetchData(m + window.location.search)));
       w = this.initializeLiveDataUtils(t.schemaType);
       v = new f.model.LiveModel();
       "server" == window.guideBridge.hostName &&
@@ -25129,7 +25143,7 @@
         y.runtime.guideContext.customPropertyMap = d.extend(
           {},
           y.runtime.guideContext.customPropertyMap,
-          r
+          r,
         );
         0 < x.length && v.createCrossFragFields(b.guideGlobalLazyField, y);
         y.version = new f.util.Version({
@@ -25238,7 +25252,7 @@
           a.preventDefault(),
             a.stopImmediatePropagation(),
             d(this).guideAddRemove("add");
-      }
+      },
     )
     .on(
       "click.guideAddRemove.data-api keypress.guideAddRemove.data-api",
@@ -25249,7 +25263,7 @@
           guidelib.util.GuideUtil.isEnterKeyPressed(a)
         )
           a.preventDefault(), d(this).guideAddRemove("remove");
-      }
+      },
     );
 })($);
 (function (d) {
@@ -25297,7 +25311,7 @@ $(function (d) {
       ((b = a.parentView.$element.find(
         '[id*\x3d"' +
           guidelib.util.GuideUtil.GUIDE_ITEM_NAV_CONTAINER_SUFFIX +
-          '"]'
+          '"]',
       )),
       !_.isUndefined(b) && !_.isNull(b) && 0 < b.length)
     ) {
@@ -25317,7 +25331,7 @@ $(function (d) {
         a,
         '[id*\x3d"' +
           guidelib.util.GuideUtil.GUIDE_ITEM_NAV_SUFFIX +
-          '"]:not(.hidden)'
+          '"]:not(.hidden)',
       );
     }
   });
@@ -25353,7 +25367,7 @@ $(function (d) {
       d(document).on(
         "click",
         "button[data-guide-progressive-nav]",
-        d.proxy(c.navigateSection, c)
+        d.proxy(c.navigateSection, c),
       );
   });
 });
@@ -25421,7 +25435,7 @@ $(function (d) {
               "date-time" === a.jsonModel.xDataType
             )
               a.jsonModel.xAxisReferencePoint = new Date(
-                a.jsonModel.xAxisReferencePoint
+                a.jsonModel.xAxisReferencePoint,
               ).getTime();
             g.isXYReferencePointSet = !0;
           }
@@ -25429,7 +25443,7 @@ $(function (d) {
             var v = a.jsonModel.seriesRepeatableItem;
             var u = a.jsonModel.seriesName.substring(
               v.length + 1,
-              a.jsonModel.seriesName.length
+              a.jsonModel.seriesName.length,
             );
             c = (d = this._getRepeatableInstances(v, null, a)) ? d.length : c;
             var w = t.substring(v.length, t.length);
@@ -25437,13 +25451,13 @@ $(function (d) {
               "fdmReferencePoint" === a.jsonModel.referencePointType &&
               (f = a.jsonModel.seriesReferenceExp.substring(
                 v.length + 1,
-                a.jsonModel.seriesReferenceExp.length
+                a.jsonModel.seriesReferenceExp.length,
               ));
             for (var x = 0; x < c; x++)
               (g.repeatableInstances = this._getRepeatableInstances(
                 w,
                 d[x],
-                a
+                a,
               )),
                 g.repeatableItemForReferencePoint,
                 f &&
@@ -25452,7 +25466,7 @@ $(function (d) {
                   this.matchUserInputWithFDM(
                     a.jsonModel.seriesReferenceDataType,
                     d[x][f],
-                    a.jsonModel.seriesReferenceValue
+                    a.jsonModel.seriesReferenceValue,
                   ) && (g.repeatableItemForReferencePoint = t)),
                 (v = this.buildChartData(g)),
                 (v.name = d[x][u]),
@@ -25488,7 +25502,7 @@ $(function (d) {
           (d = a.chartModel.jsonModel.xyReferencePointExp
             .substring(
               a.repeatableItemForReferencePoint.length + 1,
-              a.chartModel.jsonModel.xyReferencePointExp.length
+              a.chartModel.jsonModel.xyReferencePointExp.length,
             )
             .split("/"));
         var g = this;
@@ -25517,7 +25531,7 @@ $(function (d) {
                 g.matchUserInputWithFDM(
                   a.chartModel.jsonModel.xyReferencePointDataType,
                   k,
-                  a.chartModel.jsonModel.xyReferencePointValue
+                  a.chartModel.jsonModel.xyReferencePointValue,
                 ) &&
                   ((a.chartModel.jsonModel.xAxisReferencePoint =
                     "date" === a.chartModel.jsonModel.xDataType ||
@@ -25575,7 +25589,7 @@ $(function (d) {
             return c.util.GuideUtil.formatValue(
               a,
               u.labelDisplayFormat,
-              u.categoryDataType
+              u.categoryDataType,
             );
           }));
         u.valueDisplayFormat &&
@@ -25583,7 +25597,7 @@ $(function (d) {
             return c.util.GuideUtil.formatValue(
               a,
               u.valueDisplayFormat,
-              u.valueDataType
+              u.valueDataType,
             );
           }));
         x[z] = "label";
@@ -25672,7 +25686,7 @@ $(function (d) {
           a.isChartAxisTitleApplicable(f) &&
             C.guide("x", dv.guide.axis().title(d.xAxisTitle)).guide(
               "y",
-              dv.guide.axis().title(d.yAxisTitle)
+              dv.guide.axis().title(d.yAxisTitle),
             );
           a.isChartLegendApplicable(f) &&
             g &&
@@ -25862,7 +25876,7 @@ $(function (d) {
         var G = a.serviceEndPoint;
         m ||
           console.log(
-            "No model parameter passed to this API, this may fail during server side re-validation. Please correct your scripts."
+            "No model parameter passed to this API, this may fail during server side re-validation. Please correct your scripts.",
           );
         m = m && m._guide && m._guide();
         var E = (m ? m.jcrPath : c.__runtime__.guide.jcrPath) + ".af.dermis";
@@ -25934,7 +25948,7 @@ $(function (d) {
         function (b, c) {
           0 === this.visitMap[b] && (a += b + ",");
         },
-        this
+        this,
       );
       0 < a.length && (a = a.substring(0, a.length - 1));
       return a;
@@ -25985,7 +25999,7 @@ $(function (d) {
         k = window.guideBridge.customContextProperty("draftID"),
         h = xfalib.ut.Class.prototype.getOrElse(
           window.guidelib.runtime.guideContext.customPropertyMap,
-          {}
+          {},
         ),
         l,
         m,
@@ -25998,7 +26012,7 @@ $(function (d) {
         success: function (l) {
           window.guideBridge.trigger(
             "saveStarted",
-            window.guidelib.event.GuideModelEvent.createEvent("saveStarted")
+            window.guidelib.event.GuideModelEvent.createEvent("saveStarted"),
           );
           m = l.data;
           l = guideBridge
@@ -26036,14 +26050,14 @@ $(function (d) {
                 alert(
                   guidelib.util.GuideUtil.getLocalizedMessage(
                     "",
-                    guidelib.i18n.strings.draftSavedSuccessMessage
-                  )
+                    guidelib.i18n.strings.draftSavedSuccessMessage,
+                  ),
                 );
               window.guideBridge.trigger(
                 "saveCompleted",
                 window.guidelib.event.GuideModelEvent.createEvent(
-                  "saveCompleted"
-                )
+                  "saveCompleted",
+                ),
               );
               c.isUndefined(f.success) || f.success.call(f.context || this);
             },
@@ -26053,14 +26067,14 @@ $(function (d) {
                   ? alert(
                       guidelib.util.GuideUtil.getLocalizedMessage(
                         "",
-                        guidelib.i18n.LogMessages["AEM-AF-901-008"]
-                      )
+                        guidelib.i18n.LogMessages["AEM-AF-901-008"],
+                      ),
                     )
                   : alert(
                       guidelib.util.GuideUtil.getLocalizedMessage(
                         "",
-                        guidelib.i18n.LogMessages["AEM-AF-901-009"]
-                      )
+                        guidelib.i18n.LogMessages["AEM-AF-901-009"],
+                      ),
                     ));
               c.isUndefined(f.error) || f.error.call(f.context || this);
             },
@@ -26073,8 +26087,8 @@ $(function (d) {
               console.log(
                 guidelib.util.GuideUtil.getLocalizedMessage(
                   "",
-                  guidelib.i18n.LogMessages["AEM-AF-901-009"]
-                )
+                  guidelib.i18n.LogMessages["AEM-AF-901-009"],
+                ),
               ),
               0
             );
@@ -26090,7 +26104,7 @@ $(function (d) {
             .ajax({
               method: "GET",
               url: Granite.HTTP.externalize(
-                "/content/forms/portal/draftandsubmission.fp.draft.json?func\x3dgetUid"
+                "/content/forms/portal/draftandsubmission.fp.draft.json?func\x3dgetUid",
               ),
               cache: !1,
               dataType: "json",
@@ -26103,8 +26117,8 @@ $(function (d) {
               alert(
                 guidelib.util.GuideUtil.getLocalizedMessage(
                   "",
-                  guidelib.i18n.LogMessages["AEM-AF-901-009"]
-                )
+                  guidelib.i18n.LogMessages["AEM-AF-901-009"],
+                ),
               );
               return 0;
             })
@@ -26120,9 +26134,9 @@ $(function (d) {
         (f = d.getAttribute("metadataselector")) && "local" === f
           ? d.getAttribute("fpmetadata")
           : (f = window.guideBridge.getGlobalMetaInfo()) &&
-            f.hasOwnProperty("metadata")
-          ? f.metadata
-          : null;
+              f.hasOwnProperty("metadata")
+            ? f.metadata
+            : null;
       if (f)
         if ("object" === typeof f)
           for (var k in f) {
@@ -26133,7 +26147,7 @@ $(function (d) {
           "string" === typeof f &&
             ((h = JSON.parse(f)),
             (b[h.key] = window.guideBridge._guide._compileExpression(
-              h.value
+              h.value,
             )()));
       d.getAttribute("enableAnonymous") &&
         (e = d.getAttribute("enableAnonymous"));

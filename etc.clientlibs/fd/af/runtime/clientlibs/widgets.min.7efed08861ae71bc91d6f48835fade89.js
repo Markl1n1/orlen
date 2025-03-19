@@ -29,16 +29,16 @@
     render: function () {
       var e = this;
       this.element.append(
-        '\x3cdiv class\x3d"guide-af-captcha"\x3e\x3c/div\x3e'
+        '\x3cdiv class\x3d"guide-af-captcha"\x3e\x3c/div\x3e',
       );
       var a = b("div.guide-af-captcha");
       this.captchaImgPath = Granite.HTTP.externalize(
-        this.options.captchaConfigData["jcr:path"] + ".captcha.png"
+        this.options.captchaConfigData["jcr:path"] + ".captcha.png",
       );
       a.html(
         '\x3cinput type\x3d"hidden" id\x3d"afcaptchakey" value\x3d""/\x3e\x3cdiv\x3e\x3cdiv class\x3d"afcaptcha-img"\x3e\x3cimg id\x3d"afcaptchaimg" src\x3d"' +
           this.captchaImgPath +
-          '?id\x3d" alt\x3d""\x3e\x3c/div\x3e\x3cdiv class\x3d"afcaptcha-input"\x3e\x3cinput type\x3d"text" id\x3d"afcaptchaToken"/\x3e\x3c/div\x3e\x3cdiv class\x3d"afcaptcha-refresh"\x3e\x3cinput type\x3d"button" class\x3d"afcaptcha-refresh-btn" value\x3d"Reload"\x3e\x3c/div\x3e\x3c/div\x3e\x3cdiv class\x3d"timer-bar-holder"\x3e\x3cdiv id\x3d"afcaptchatimer" class\x3d"afcaptchatimer" style\x3d"width: 63px;"\x3e\x3c/div\x3e\x3c/div\x3e'
+          '?id\x3d" alt\x3d""\x3e\x3c/div\x3e\x3cdiv class\x3d"afcaptcha-input"\x3e\x3cinput type\x3d"text" id\x3d"afcaptchaToken"/\x3e\x3c/div\x3e\x3cdiv class\x3d"afcaptcha-refresh"\x3e\x3cinput type\x3d"button" class\x3d"afcaptcha-refresh-btn" value\x3d"Reload"\x3e\x3c/div\x3e\x3c/div\x3e\x3cdiv class\x3d"timer-bar-holder"\x3e\x3cdiv id\x3d"afcaptchatimer" class\x3d"afcaptchatimer" style\x3d"width: 63px;"\x3e\x3c/div\x3e\x3c/div\x3e',
       );
       b(".afcaptcha-refresh-btn").click(function () {
         c();
@@ -83,7 +83,7 @@
     render: function () {
       guidelib.util.RecaptchaUtil.renderRecaptcha(
         this.element,
-        this.options.captchaConfigData
+        this.options.captchaConfigData,
       );
       return b("div.g-recaptcha");
     },
@@ -125,22 +125,22 @@
           D: this._getCombFieldOptions(
             this.options.placeholderDay,
             null,
-            this.options.labelDay
+            this.options.labelDay,
           ),
           M: this._getCombFieldOptions(
             this.options.placeholderMonth,
             null,
-            this.options.labelMonth
+            this.options.labelMonth,
           ),
           Y: this._getCombFieldOptions(
             this.options.placeholderYear,
             4,
-            this.options.labelYear
+            this.options.labelYear,
           ),
         },
         d = this;
       this.separator = this.options.dateFormat.match(
-        /^date\{.*([^mdy]).*\}$/i
+        /^date\{.*([^mdy]).*\}$/i,
       )[1];
       this.combFieldControls = {
         D: {
@@ -172,7 +172,7 @@
           var t = b(this).children("[data-dateInput-label]");
           0 == t.length &&
             ((t = b(document.createElement("label")).attr(
-              "data-dateInput-label"
+              "data-dateInput-label",
             )),
             l.before(t));
           t.text(f.label).attr("for", n).addClass("showTitle");
@@ -245,7 +245,7 @@
     getOptionsMap: function () {
       var a = b.xfaWidget.abstractWidget.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return b.extend({}, a, {
         value: function (a) {
@@ -303,13 +303,13 @@
     getOptionsMap: function () {
       var e = b.xfaWidget.XfaCheckBox.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return b.extend({}, e, {
         displayValue: function (a) {
           e.displayValue.apply(this, arguments);
           var c = this.$userControl.parents(
-            ".guideRadioButtonItem, .guideCheckBoxItem"
+            ".guideRadioButtonItem, .guideCheckBoxItem",
           );
           c && c.toggleClass("imageCheckButtonChecked", this.checkedState);
           "disabled" === this.$userControl.attr("disabled") &&
@@ -514,9 +514,9 @@
           ? this.options.icon &&
             (this.options.icons.primary = this.options.icon)
           : this.options.icons.primary
-          ? (this.options.icon = this.options.icons.primary)
-          : ((this.options.icon = this.options.icons.secondary),
-            (this.options.iconPosition = "end"));
+            ? (this.options.icon = this.options.icons.primary)
+            : ((this.options.icon = this.options.icons.secondary),
+              (this.options.iconPosition = "end"));
         this._super();
       },
       _setOption: function (a, b) {
@@ -548,18 +548,18 @@
                   "ui-" +
                     ("checkbox" !== a && "radio" !== a
                       ? "button"
-                      : "checkboxradio")
+                      : "checkboxradio"),
                 );
                 if ("instance" === c) return (l = d), !1;
                 if (!d)
                   return b.error(
                     "cannot call methods on button prior to initialization; attempted to call method '" +
                       c +
-                      "'"
+                      "'",
                   );
                 if ("function" !== typeof d[c] || "_" === c.charAt(0))
                   return b.error(
-                    "no such method '" + c + "' for button widget instance"
+                    "no such method '" + c + "' for button widget instance",
                   );
                 a = d[c].apply(d, e);
                 if (a !== d && void 0 !== a)
@@ -575,8 +575,8 @@
               e
                 ? (e.option(c || {}), e._init && e._init())
                 : "button" === d
-                ? a.call(b(this), c)
-                : b(this).checkboxradio(b.extend({ icon: !1 }, c));
+                  ? a.call(b(this), c)
+                  : b(this).checkboxradio(b.extend({ icon: !1 }, c));
             }));
         return l;
       };
@@ -693,7 +693,7 @@
           this._repeat(
             null,
             b(a.currentTarget).hasClass("ui-spinner-up") ? 1 : -1,
-            a
+            a,
           );
       },
       "mouseup .ui-spinner-button": "_stop",
@@ -703,7 +703,7 @@
           this._repeat(
             null,
             b(a.currentTarget).hasClass("ui-spinner-up") ? 1 : -1,
-            a
+            a,
           );
         }
       },
@@ -721,7 +721,7 @@
       this._addClass(
         this.uiSpinner,
         "ui-spinner",
-        "ui-widget ui-widget-content"
+        "ui-widget ui-widget-content",
       );
       this._addClass("ui-spinner-input");
       this.element.attr("role", "spinbutton");
@@ -805,8 +805,8 @@
       return null !== b.max && a > b.max
         ? b.max
         : null !== b.min && a < b.min
-        ? b.min
-        : a;
+          ? b.min
+          : a;
     },
     _stop: function (a) {
       this.spinning &&
@@ -856,8 +856,8 @@
       return "" === a
         ? ""
         : window.Globalize && this.options.numberFormat
-        ? Globalize.format(a, this.options.numberFormat, this.options.culture)
-        : a;
+          ? Globalize.format(a, this.options.numberFormat, this.options.culture)
+          : a;
     },
     _refresh: function () {
       this.element.attr({
@@ -882,7 +882,7 @@
       this.element
         .prop("disabled", !1)
         .removeAttr(
-          "autocomplete role aria-valuemin aria-valuemax aria-valuenow"
+          "autocomplete role aria-valuemin aria-valuemax aria-valuenow",
         );
       this.uiSpinner.replaceWith(this.element);
     },
@@ -941,7 +941,7 @@
     getOptionsMap: function () {
       var a = b.xfaWidget.numericInput.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return b.extend({}, a, {
         access: function (a) {
@@ -967,7 +967,7 @@
     getEventMap: function () {
       var a = b.xfaWidget.numericInput.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return b.extend({}, a, {
         spinstop: e.XFA_EXIT_EVENT,
@@ -997,7 +997,7 @@
     getOptionsMap: function () {
       var e = b.xfaWidget.textField.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
       return b.extend({}, e, {
         value: function (a) {
@@ -1019,7 +1019,7 @@
         selector: b.attr("id"),
         toolbar: window.Form.rte.RichTextEditor.AFToolbar,
         data: xfalib.ut.XfaUtil.prototype.encodeScriptableTags(
-          this.options.value
+          this.options.value,
         ),
         locale: b.data("locale"),
       });
@@ -1033,7 +1033,7 @@
       if (xfalib.ut.XfaUtil.prototype.isIE()) {
         var e = b.xfaWidget.textField.prototype.getEventMap.apply(
           this,
-          arguments
+          arguments,
         );
         return b.extend({}, e, {
           "activate.richTextField": xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT,
@@ -1045,7 +1045,7 @@
       var e = this.element.find("div.richTextWidget").eq(0);
       e.children().remove();
       var a = xfalib.ut.XfaUtil.prototype.encodeScriptableTags(
-        this.options.value
+        this.options.value,
       );
       e.append(a);
       return b.xfaWidget.defaultWidget.prototype.render.apply(this, arguments);
@@ -1176,7 +1176,7 @@
             ? d.key
               ? b.replace(
                   /(<\w+)(?=[\s>])(?![^>]*_tmplitem)([^>]*)/g,
-                  '$1 _tmplitem\x3d"' + d.key + '" $2'
+                  '$1 _tmplitem\x3d"' + d.key + '" $2',
                 )
               : b
             : a(b, d, b._ctnt);
@@ -1191,7 +1191,7 @@
         q(g);
         d && (g = c(d).concat(g));
         k && (g = g.concat(c(k)));
-      }
+      },
     );
     return g ? g : c(h);
   }
@@ -1247,7 +1247,7 @@
                           ")!\x3d\x3d'undefined' \x26\x26 (" +
                           g +
                           ")!\x3dnull"
-                      : "true"
+                      : "true",
                   )
                   .split("$1a")
                   .join(m)
@@ -1257,14 +1257,14 @@
                   .join(e || d.$2 || "") +
                 "__.push('"
               );
-            }
+            },
           ) +
-        "');}return __;"
+        "');}return __;",
     );
   }
   function n(c, d) {
     c._wrap = a(c, !0, b.isArray(d) ? d : [z.test(d) ? d : b(d).html()]).join(
-      ""
+      "",
     );
   }
   function l(a) {
@@ -1351,7 +1351,7 @@
           a = b;
         }
         return a;
-      }
+      },
     );
   }
   function E() {
@@ -1405,7 +1405,7 @@
         b.tmpl.complete(d);
         return e;
       };
-    }
+    },
   );
   b.fn.extend({
     tmpl: function (a, c, d) {
@@ -1479,10 +1479,10 @@
             (c = b.data(c, "tmpl") || b.data(c, "tmpl", d(c.innerHTML))),
           "string" === typeof a ? (b.template[a] = c) : c)
         : a
-        ? "string" !== typeof a
-          ? b.template(null, a)
-          : b.template[a] || b.template(null, z.test(a) ? a : b(a))
-        : null;
+          ? "string" !== typeof a
+            ? b.template(null, a)
+            : b.template[a] || b.template(null, z.test(a) ? a : b(a))
+          : null;
     },
     encode: function (a) {
       return ("" + a)
@@ -1533,8 +1533,8 @@
         11 === c.nodeType
           ? b.makeArray(c.childNodes)
           : 1 === c.nodeType
-          ? [c]
-          : [];
+            ? [c]
+            : [];
       d.call(a, c);
       q(e);
       r++;
@@ -1564,7 +1564,7 @@
         this.element.prop("checked") &&
           this.$container.toggleClass(
             "ui-state-active",
-            this.element.prop("checked")
+            this.element.prop("checked"),
           ),
         this.options.autoResize && this._autoResize(),
         this._initialPosition());
@@ -1575,7 +1575,7 @@
       this.element.remove();
       this.$container.append(this.element);
       this.$disabledLabel = this.$container.children(
-        ".ui-switchbutton-disabled"
+        ".ui-switchbutton-disabled",
       );
       this.$disabledSpan = this.$disabledLabel.children("span");
       this.$enabledLabel = this.$container.children(".ui-switchbutton-enabled");
@@ -1644,9 +1644,9 @@
             c.isDefaultPrevented()
               ? (d = a.element.prop("checked"))
               : b[e].dragging
-              ? ((d = (d - b[e].dragStartPosition) / a.rightSide),
-                (d = 0 > d ? 0.5 > Math.abs(d) : 0.5 <= d))
-              : (d = !a.element.prop("checked")),
+                ? ((d = (d - b[e].dragStartPosition) / a.rightSide),
+                  (d = 0 > d ? 0.5 > Math.abs(d) : 0.5 <= d))
+                : (d = !a.element.prop("checked")),
             (b[e].currentlyClicking = null),
             (b[e].dragging = null),
             a.element.prop("checked", d),
@@ -1666,7 +1666,7 @@
         a.$disabledSpan.animate({ "margin-right": -b }, a.options.duration);
         a.$enabledSpan.animate(
           { "margin-left": b - a.rightSide },
-          a.options.duration
+          a.options.duration,
         );
       });
     },
@@ -1764,13 +1764,13 @@
     getOptionsMap: function () {
       return b.xfaWidget.XfaCheckBox.prototype.getOptionsMap.apply(
         this,
-        arguments
+        arguments,
       );
     },
     getEventMap: function () {
       var e = b.xfaWidget.XfaCheckBox.prototype.getEventMap.apply(
         this,
-        arguments
+        arguments,
       );
       return b.extend({}, e, {
         change: xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT,

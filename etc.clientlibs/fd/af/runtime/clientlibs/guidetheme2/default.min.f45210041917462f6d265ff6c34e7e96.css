@@ -21,7 +21,9 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-.guideFieldNode.validation-failure:not(.guideButton):not(.guideTextDraw):not(.guideChart) {
+.guideFieldNode.validation-failure:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ) {
   border-left-width: 4px;
   border-style: solid;
   border-color: #eb3c36;
@@ -43,7 +45,9 @@ body {
   padding-top: 0.5rem;
   margin-bottom: 0.25rem;
 }
-.guideFieldNode.validation-success:not(.guideButton):not(.guideTextDraw):not(.guideChart) {
+.guideFieldNode.validation-success:not(.guideButton):not(.guideTextDraw):not(
+    .guideChart
+  ) {
   border-bottom-width: 0;
   border-right-width: 0;
   border-top-width: 0;
@@ -254,8 +258,8 @@ textarea,
 @media (max-width: 767px) {
   .guide-nav-prev.guide-nav-toolbar-button {
     position: relative;
-    background: url(default/resources/FatChevron-Left-Default.svg) center center /
-      auto 1.25rem no-repeat;
+    background: url(default/resources/FatChevron-Left-Default.svg) center
+      center / auto 1.25rem no-repeat;
     width: 2.5rem;
     height: 2.5rem;
     margin-right: 1rem;
@@ -376,8 +380,8 @@ textarea,
   .guideRadioButtonItem.imageCheckButtonChecked
   .guideWidgetLabel,
 .guideImageChoice .guideCheckBoxItem.imageCheckButtonChecked .guideWidgetLabel {
-  background: url(default/resources/ImageChoiceSelectIcon.svg) center center
-      no-repeat,
+  background:
+    url(default/resources/ImageChoiceSelectIcon.svg) center center no-repeat,
     rgba(23, 107, 230, 0.5);
 }
 .afTncContentArea.guide-modal-body {
@@ -403,8 +407,9 @@ textarea,
   border-color: #e5e5e5;
 }
 .dropDownList select:hover {
-  background: url(default/resources/Chevron-Down-Active.svg) calc(100% - 0.5rem)
-      50% / auto 1rem no-repeat,
+  background:
+    url(default/resources/Chevron-Down-Active.svg) calc(100% - 0.5rem) 50% /
+      auto 1rem no-repeat,
     rgba(255, 255, 255, 0.8);
 }
 .dropDownList select {
@@ -423,8 +428,9 @@ textarea,
   border-bottom-left-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  background: url(default/resources/Chevron-Down-Default.svg)
-      calc(100% - 0.5rem) 50% / auto 1rem no-repeat,
+  background:
+    url(default/resources/Chevron-Down-Default.svg) calc(100% - 0.5rem) 50% /
+      auto 1rem no-repeat,
     rgba(255, 255, 255, 0.5);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -458,7 +464,8 @@ textarea,
   }
 }
 .guideHelpQuestionMark:hover {
-  background: url(default/resources/questionmark.svg) left top / cover no-repeat,
+  background:
+    url(default/resources/questionmark.svg) left top / cover no-repeat,
     #777;
 }
 .guideHelpQuestionMark {
@@ -472,8 +479,8 @@ textarea,
   border-bottom-left-radius: 9px;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  background: url(default/resources/questionmark.svg) center center / cover
-      no-repeat,
+  background:
+    url(default/resources/questionmark.svg) center center / cover no-repeat,
     #969696;
   cursor: pointer;
 }
@@ -614,16 +621,17 @@ textarea,
   }
 }
 .accordion-navigators .guideHeader > a:hover {
-  background: url(default/resources/Chevron-Right-Hover.svg) 0.5rem 50% / auto
-      1rem no-repeat,
+  background:
+    url(default/resources/Chevron-Right-Hover.svg) 0.5rem 50% / auto 1rem
+      no-repeat,
     #f0f0f0;
   color: #666;
 }
 .accordion-navigators .active > .guideHeader > a,
 .accordion-navigators .active .guideHeader > a:hover {
   color: #666;
-  background: url(default/resources/Chevron-Active.svg) 0.5rem 50% / auto 1rem
-      no-repeat,
+  background:
+    url(default/resources/Chevron-Active.svg) 0.5rem 50% / auto 1rem no-repeat,
     #f5f5f5;
   border-left-width: 2px;
   border-bottom-width: 0;
@@ -647,8 +655,8 @@ textarea,
   text-decoration: none;
   color: #969696;
   cursor: pointer;
-  background: url(default/resources/Chevron-Right.svg) 0.5rem 50% / auto 1rem
-      no-repeat,
+  background:
+    url(default/resources/Chevron-Right.svg) 0.5rem 50% / auto 1rem no-repeat,
     #f1f1f1;
   border-bottom-width: 2px;
 }
@@ -759,8 +767,8 @@ textarea,
   > li.stepped
   > a.guideLeftNavIcon:hover {
   color: #666;
-  background: url(default/resources/Tick_Hover.svg) 0.5rem 50% / 0.8125rem auto
-      no-repeat,
+  background:
+    url(default/resources/Tick_Hover.svg) 0.5rem 50% / 0.8125rem auto no-repeat,
     #e6e6e6;
 }
 .guideTabbedPanelLayout
@@ -776,8 +784,8 @@ textarea,
   > li.active
   > a.guideLeftNavIcon:hover {
   color: #fff;
-  background: url(default/resources/Tick.svg) 0.5rem 50% / 0.8125rem auto
-      no-repeat,
+  background:
+    url(default/resources/Tick.svg) 0.5rem 50% / 0.8125rem auto no-repeat,
     #888;
 }
 .guideTabbedPanelLayout
@@ -816,8 +824,8 @@ textarea,
   > li.stepped
   > a.guideLeftNavIcon:hover {
   color: #666;
-  background: url(default/resources/DoubleTick.svg) 0.5rem 50% / 0.8125rem auto
-      no-repeat,
+  background:
+    url(default/resources/DoubleTick.svg) 0.5rem 50% / 0.8125rem auto no-repeat,
     #fff;
 }
 .guideTabbedPanelLayout
@@ -835,8 +843,8 @@ textarea,
   .tab-navigators-vertical
   > li.active
   > a.guideLeftNavIcon:hover {
-  background: url(default/resources/DoubleTick.svg) 0.5rem 50% / 0.8125rem auto
-      no-repeat,
+  background:
+    url(default/resources/DoubleTick.svg) 0.5rem 50% / 0.8125rem auto no-repeat,
     #fff;
   border-left-width: 4px;
   border-bottom-width: 0;
@@ -1021,8 +1029,8 @@ textarea,
 }
 .wizard-navigators > li.stepped > a::before {
   content: "";
-  background: url(default/resources/Tick.svg) center center / 0.75rem 0.75rem
-      no-repeat,
+  background:
+    url(default/resources/Tick.svg) center center / 0.75rem 0.75rem no-repeat,
     #969696;
   border-color: rgba(0, 0, 0, 0);
 }
@@ -1085,8 +1093,9 @@ textarea,
   background: #969696;
 }
 .wizard-nav-arrow.wizard-nav-next:hover {
-  background: url(default/resources/Chevron-Right-White.svg) center center /
-      1rem 1rem no-repeat,
+  background:
+    url(default/resources/Chevron-Right-White.svg) center center / 1rem 1rem
+      no-repeat,
     #666;
   border-color: #666;
 }
@@ -1119,8 +1128,9 @@ textarea,
   }
 }
 .wizard-nav-arrow.wizard-nav-prev:hover {
-  background: url(default/resources/Chevron-Left-White.svg) center center / 1rem
-      1rem no-repeat,
+  background:
+    url(default/resources/Chevron-Left-White.svg) center center / 1rem 1rem
+      no-repeat,
     #969696;
 }
 .wizard-nav-arrow.wizard-nav-prev {
@@ -1222,8 +1232,8 @@ textarea,
     1.2rem 1.2rem no-repeat;
 }
 .guideTableRuntimeDeleteControl {
-  background: url(default/resources/Accordion-Delete-Default.svg) center center /
-    1.2rem 1.2rem no-repeat;
+  background: url(default/resources/Accordion-Delete-Default.svg) center
+    center / 1.2rem 1.2rem no-repeat;
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 1rem;
@@ -1286,13 +1296,13 @@ button.reset:not(.af-icon-button):focus .iconButton-icon {
     no-repeat;
 }
 button.reset:not(.af-icon-button):hover .iconButton-icon {
-  background: url(default/resources/Reset-Hover.svg) center center / auto 1.2rem
-      no-repeat,
+  background:
+    url(default/resources/Reset-Hover.svg) center center / auto 1.2rem no-repeat,
     #666;
 }
 button.reset:not(.af-icon-button):active .iconButton-icon {
-  background: url(default/resources/Reset-Hover.svg) center center / auto 1.2rem
-      no-repeat,
+  background:
+    url(default/resources/Reset-Hover.svg) center center / auto 1.2rem no-repeat,
     #555;
   border-color: #555;
 }
@@ -1308,19 +1318,22 @@ button .iconButton-icon {
     no-repeat;
 }
 button.submit:not(.af-icon-button):focus .iconButton-icon {
-  background: url(default/resources/Submit-Hover.svg) center center / auto
-      1.3rem no-repeat,
+  background:
+    url(default/resources/Submit-Hover.svg) center center / auto 1.3rem
+      no-repeat,
     #666;
 }
 button.submit:not(.af-icon-button):hover .iconButton-icon {
-  background: url(default/resources/Submit-Hover.svg) center center / auto
-      1.3rem no-repeat,
+  background:
+    url(default/resources/Submit-Hover.svg) center center / auto 1.3rem
+      no-repeat,
     #555;
   border-color: #555;
 }
 button.submit:not(.af-icon-button):active .iconButton-icon {
-  background: url(default/resources/Submit-Hover.svg) center center / auto
-      1.3rem no-repeat,
+  background:
+    url(default/resources/Submit-Hover.svg) center center / auto 1.3rem
+      no-repeat,
     #555;
   border-color: #555;
 }
@@ -1769,13 +1782,13 @@ button.save:not(.af-icon-button):focus .iconButton-icon {
     no-repeat;
 }
 button.save:not(.af-icon-button):hover .iconButton-icon {
-  background: url(default/resources/Save-Hover.svg) center center / auto 1.3rem
-      no-repeat,
+  background:
+    url(default/resources/Save-Hover.svg) center center / auto 1.3rem no-repeat,
     #666;
 }
 button.save:not(.af-icon-button):active .iconButton-icon {
-  background: url(default/resources/Save-Hover.svg) center center / auto 1.3rem
-      no-repeat,
+  background:
+    url(default/resources/Save-Hover.svg) center center / auto 1.3rem no-repeat,
     #555;
 }
 button.save .iconButton-icon {
