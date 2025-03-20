@@ -235,10 +235,10 @@
       /*<![CDATA[*/
 
       try {
-        triggerEmClassChange();
+        triggerEmclassChange();
       } catch (e) {
         console.ls.warn(
-          "triggerEmClassChange could not be run. Is survey.js correctly loaded?",
+          "triggerEmclassChange could not be run. Is survey.js correctly loaded?",
         );
       }
 
@@ -246,7 +246,7 @@
       jQuery(document)
         .off("pjax:scriptcomplete.mainBottom")
         .on("ready pjax:scriptcomplete.mainBottom", function () {
-          updateMandatoryErrorClass();
+          updateMandatoryErrorclass();
         });
       /*]]>*/
     </script>

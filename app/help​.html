@@ -1197,14 +1197,14 @@
             Math.round(this.scrollTop + this.offsetHeight) >=
             Math.round(this.scrollHeight - 10)
           ) {
-            $(".scrollBottom").addClass("hidden");
+            $(".scrollBottom").addclass("hidden");
             if (isRegisterForm) {
               $("#closeRegulationDialog").button("option", "disabled", false);
               $("input[name='acceptedRegulation']").prop("disabled", false);
             }
           } else {
-            if ($(".scrollBottom").hasClass("hidden")) {
-              $(".scrollBottom").removeClass("hidden");
+            if ($(".scrollBottom").hasclass("hidden")) {
+              $(".scrollBottom").removeclass("hidden");
             }
           }
         });
