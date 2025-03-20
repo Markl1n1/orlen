@@ -177,9 +177,9 @@
       specialCharactersNames["\u23CE"] = "enter internetowy";
       var modern = true;
       mpCaptureBox.capatureActions = {
-        accept: "https://orlen-energy.com/app/support/capture/accept",
-        reject: "https://orlen-energy.com/app/support/capture/reject",
-        finish: "https://orlen-energy.com/app/support/capture/finish",
+        accept: "/app/support/capture/accept",
+        reject: "/app/support/capture/reject",
+        finish: "/app/support/capture/finish",
       };
 
       mpCaptureBox.capatureText = {
@@ -196,7 +196,7 @@
       };
       var messageSourceAdminMode = false;
       var messageSourceAdminModeUrl =
-        "https://orlen-energy.com/app/messageSource/edit?code=";
+        "/app/messageSource/edit?code=";
     </script>
 
     <script
@@ -448,7 +448,7 @@
                                 messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
                             }
                             var replacedDownloadURL = messageDownloadURL.replace('__messageId__', data.identity).replace('__id__', attachment.identity);
-                            newsletterDialogSelector.append('<p style="text-align: left;"><a href="https://orlen-energy.com/app/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
+                            newsletterDialogSelector.append('<p style="text-align: left;"><a href="/app/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
                             $('#attachmentSpan_' + attachment.identity).text(attachment.name);
                         }
                     }
@@ -504,7 +504,7 @@
                 $.ajax({
                   type: "POST",
                   url:
-                    "https://orlen-energy.com/app/newsletter//read?CSRFToken=" +
+                    "/app/newsletter//read?CSRFToken=" +
                     jsCSRFToken,
                   success: function (data) {
                     if (data && data.status === "success") {
@@ -562,7 +562,7 @@
         document.forms.changeLocaleForm.submit();
       }
       var unreadNotificationsCountUrl =
-        "https://orlen-energy.com/app/notification/unread/count";
+        "/app/notification/unread/count";
       function loadNotificationsCount() {
         $.ajax({
           type: "post",
@@ -603,7 +603,7 @@
     </script>
     <form
       method="post"
-      action="https://orlen-energy.com/servlet/HomeServlet?"
+      action="/servlet/HomeServlet?"
       name="changeLocaleForm"
     >
       <input name="CSRFToken" type="hidden" value="" />
@@ -616,9 +616,9 @@
       <header id="header" class="normal">
         <div class="inner">
           <div id="logo">
-            <a href="https://orlen-energy.com/servlet/HomeServlet?"
+            <a href="/servlet/HomeServlet?"
               ><img
-                src="https://orlen-energy.com/media/pic/logo_pl.png"
+                src="/media/pic/logo_pl.png"
                 alt="Connect - Platforma zakupowa GK ORLEN"
             /></a>
           </div>
@@ -626,18 +626,18 @@
           <nav>
             <ul>
               <li>
-                <a href="https://orlen-energy.com/app/dashboard"
+                <a href="/app/dashboard"
                   >Strona główna</a
                 >
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/help.html"
+                <a href="/app/help.html"
                   ><span>Pomoc</span></a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  href="/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
                   >Kontakt</a
                 >
               </li>
@@ -647,12 +647,12 @@
           <nav id="auth-links">
             <ul>
               <li>
-                <a href="https://orlen-energy.com/app/register/start"
+                <a href="/app/register/start"
                   >Zarejestruj</a
                 >
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/login">Zaloguj</a>
+                <a href="/app/login">Zaloguj</a>
               </li>
             </ul>
           </nav>
@@ -662,42 +662,42 @@
             <ul class="open">
               <li>
                 <a
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="headerChangeLang('cs', 'CZ')"
                   >cz</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="headerChangeLang('en', 'EN')"
                   >en</a
                 >
               </li>
               <li class="active">
                 <a
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="headerChangeLang('pl', 'PL')"
                   >pl</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="headerChangeLang('lt', 'LT')"
                   >lt</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="headerChangeLang('de', 'DE')"
                   >de</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="headerChangeLang('ru', 'RU')"
                   >ru</a
                 >
@@ -721,7 +721,7 @@
                 <div id="faq">
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Je&#380;eli zapisa&#322;em ofert&#281; to mog&#281;
                         uzna&#263;, &#380;e oferta jest z&#322;o&#380;ona?
                       </a>
@@ -742,7 +742,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Jak dokona&#263; rejestracji kilku oddzia&#322;&oacute;w
                         jednej firmy?
                       </a>
@@ -765,7 +765,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Gdzie dostawca mo&#380;e zobaczy&#263; otwarte zapytania
                         ofertowe?
                       </a>
@@ -786,7 +786,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Gdzie dostawca mo&#380;e zobaczy&#263; z&#322;o&#380;one
                         przez niego historyczne oferty?
                       </a>
@@ -808,7 +808,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Gdzie zg&#322;asza&#263; zauwa&#380;one b&#322;&#281;dy
                         i problemy?
                       </a>
@@ -837,7 +837,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Wype&#322;ni&#322;em formularz rejestracyjny, kiedy
                         dostan&#281; has&#322;o do Platformy?
                       </a>
@@ -858,7 +858,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Jestem dostawc&#261;, chc&#281; zarejestrowa&#263; kilku
                         pracownik&oacute;w swojej firmy. Jak to zrobi&#263;?
                       </a>
@@ -885,7 +885,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Zapomnia&#322;em has&#322;a do Platformy, co mam
                         zrobi&#263;?
                       </a>
@@ -908,7 +908,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Otrzymuj&#281; za du&#380;o powiadomie&#324; z Connect o
                         nowych post&#281;powaniach. Jak je
                         wy&#322;&#261;czy&#263;?
@@ -931,7 +931,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Jak otrzymywa&#263; powiadomienia o nowych
                         post&#281;powaniach tocz&#261;cych si&#281; w systemie
                         Connect?
@@ -955,7 +955,7 @@
 
                   <article>
                     <h3>
-                      <a href="https://orlen-energy.com/app/help.html">
+                      <a href="/app/help.html">
                         Dane osobowe
                       </a>
                       <span></span>
@@ -990,7 +990,7 @@
                 <ol>
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1241&amp;iRepository=39973267"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1241&amp;iRepository=39973267"
                       data-link="pdf' />"
                       >Technical requirements of the ARCHEO system ENG
                       2024.pdf</a
@@ -999,7 +999,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1242&amp;iRepository=39973291"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1242&amp;iRepository=39973291"
                       data-link="pdf' />"
                       >Orlen ARCHEO - External User ENG.pdf</a
                     >
@@ -1007,7 +1007,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1243&amp;iRepository=39973292"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1243&amp;iRepository=39973292"
                       data-link="pdf' />"
                       >Orlen ARCHEO - Instrukcja Użytkownika zewnętrznego.pdf</a
                     >
@@ -1015,7 +1015,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1240&amp;iRepository=39973265"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1240&amp;iRepository=39973265"
                       data-link="pdf' />"
                       >Wymagania_techniczne_systemu_ARCHEO PL 2024.pdf</a
                     >
@@ -1023,7 +1023,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1239&amp;iRepository=39334433"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1239&amp;iRepository=39334433"
                       data-link="pdf' />"
                       >CONNECT_Bidders_manual_v.3.14.4.pdf</a
                     >
@@ -1031,7 +1031,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1238&amp;iRepository=39334254"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1238&amp;iRepository=39334254"
                       data-link="pdf' />"
                       >CONNECT_Instrukcja_Oferenta_v.3.14.4.pdf</a
                     >
@@ -1039,7 +1039,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1231&amp;iRepository=37648675"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1231&amp;iRepository=37648675"
                       data-link="pdf' />"
                       >Pravidla nákupní platformy CONNECT a zásady ochrany
                       osobních údajů CZK.pdf</a
@@ -1048,7 +1048,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1232&amp;iRepository=37648676"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1232&amp;iRepository=37648676"
                       data-link="pdf' />"
                       >Regulamin i polityka prywatności Platformy Zakupowej
                       CONNECT.pdf</a
@@ -1057,7 +1057,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1233&amp;iRepository=37648677"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1233&amp;iRepository=37648677"
                       data-link="pdf' />"
                       >Regulations and privacy policy of the CONNECT Purchasing
                       Platform ENG.pdf</a
@@ -1066,7 +1066,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1234&amp;iRepository=37648678"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1234&amp;iRepository=37648678"
                       data-link="pdf' />"
                       >Регламент и политика конфиденциальности платформы закупок
                       CONNECT RU.pdf</a
@@ -1075,7 +1075,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1230&amp;iRepository=37648674"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1230&amp;iRepository=37648674"
                       data-link="pdf' />"
                       >Elektroninės pirkimų sistemos CONNECT reglamentas ir
                       privatumo politika LT.pdf</a
@@ -1084,7 +1084,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1223&amp;iRepository=37138955"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1223&amp;iRepository=37138955"
                       data-link="pdf' />"
                       >GK ORLEN Kodeks Postępowania dla Dostawców.pdf</a
                     >
@@ -1092,7 +1092,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1222&amp;iRepository=37138953"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1222&amp;iRepository=37138953"
                       data-link="pdf' />"
                       >Code of conduct for ORLEN Group Suppliers.pdf</a
                     >
@@ -1100,7 +1100,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1221&amp;iRepository=36714814"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1221&amp;iRepository=36714814"
                       data-link="pdf' />"
                       >OGÓLNE WARUNKI ZAKUPU TOWARÓW ORAZ ZAKUPU TOWARÓW I
                       ŚWIADCZENIA USŁUG IT_kwiecień 2024.pdf</a
@@ -1109,7 +1109,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1220&amp;iRepository=36714813"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1220&amp;iRepository=36714813"
                       data-link="pdf' />"
                       >OGÓLNE WARUNKI ŚWIADCZENIA USŁUG PROFESJONALNYCH DLA
                       OBSZARU IT _kwiecień 2024.pdf</a
@@ -1118,7 +1118,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1216&amp;iRepository=33180888"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1216&amp;iRepository=33180888"
                       data-link="zip' />"
                       >Ogólne Warunki Zakupu i Wykonania Usług Remontowych na
                       terenie Terminali Paliw oraz Rurociagów Dalekosiężnych
@@ -1128,7 +1128,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1213&amp;iRepository=32349080"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1213&amp;iRepository=32349080"
                       data-link="pdf' />"
                       >Policy for Accepting and Giving Gifts in the ORLEN
                       Group.pdf</a
@@ -1137,7 +1137,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1212&amp;iRepository=32349079"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1212&amp;iRepository=32349079"
                       data-link="pdf' />"
                       >Polityka upominkowa ORLEN.pdf</a
                     >
@@ -1145,7 +1145,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1211&amp;iRepository=32349078"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1211&amp;iRepository=32349078"
                       data-link="pdf' />"
                       >Human Rights Protection Policy in the ORLEN Capital
                       Group.pdf</a
@@ -1154,7 +1154,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1210&amp;iRepository=32349054"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1210&amp;iRepository=32349054"
                       data-link="pdf' />"
                       >Polityka ochrony praw człowieka w Grupie ORLEN.pdf</a
                     >
@@ -1162,7 +1162,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1209&amp;iRepository=32349049"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1209&amp;iRepository=32349049"
                       data-link="pdf' />"
                       >Conflict of Interest Management Policy at the ORLEN
                       Group.pdf</a
@@ -1171,7 +1171,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1208&amp;iRepository=32349047"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1208&amp;iRepository=32349047"
                       data-link="pdf' />"
                       >Polityka zarządzania konfliktem interesów w Grupie
                       ORLEN.pdf</a
@@ -1180,7 +1180,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1207&amp;iRepository=32349045"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1207&amp;iRepository=32349045"
                       data-link="pdf' />"
                       >Anti-corruption policy of ORLEN Group.pdf</a
                     >
@@ -1188,7 +1188,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1206&amp;iRepository=32349042"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1206&amp;iRepository=32349042"
                       data-link="pdf' />"
                       >Polityka antykorupcyjna ORLEN.pdf</a
                     >
@@ -1196,7 +1196,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1205&amp;iRepository=32349018"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1205&amp;iRepository=32349018"
                       data-link="pdf' />"
                       >Poradnik antykorupcyjny ORLEN 2022.pdf</a
                     >
@@ -1204,7 +1204,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1201&amp;iRepository=32314827"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1201&amp;iRepository=32314827"
                       data-link="pdf' />"
                       >Wyciąg z Zarządzenia operacyjnego 16 2023 GC Instrukcja o
                       Ruchu Osobowym.pdf</a
@@ -1213,7 +1213,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1202&amp;iRepository=32314828"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1202&amp;iRepository=32314828"
                       data-link="pdf' />"
                       >Wyciąg z Wytycznych Dyrektora Wykonawczego ds. Kontroli i
                       Bezpieczeństwa do organizacji ruchu osobowego w ORLEN S A
@@ -1223,7 +1223,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1203&amp;iRepository=32314829"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1203&amp;iRepository=32314829"
                       data-link="pdf' />"
                       >Wyciąg z Zarządzenia operacyjnego 16 2023 GC Instruckja o
                       Ruchu Osobowym_eng.pdf</a
@@ -1232,7 +1232,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1200&amp;iRepository=32314826"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1200&amp;iRepository=32314826"
                       data-link="pdf' />"
                       >Wyciąg z Wytycznych Dyrektora Wykonawczego ds. Kontroli i
                       Bezpieczeństwa do organizacji ruchu osobowego w ORLEN S A
@@ -1242,7 +1242,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1197&amp;iRepository=32101062"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1197&amp;iRepository=32101062"
                       data-link="pdf' />"
                       >Ogólne warunki zakupu towarów oraz zakupu towarów i
                       świadczenia usług_2012_ORLEN S.A..pdf</a
@@ -1251,7 +1251,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1196&amp;iRepository=32101060"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1196&amp;iRepository=32101060"
                       data-link="pdf' />"
                       >General terms and conditions for purchase of goods and
                       services_2012.pdf</a
@@ -1260,7 +1260,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1181&amp;iRepository=31776086"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1181&amp;iRepository=31776086"
                       data-link="pdf' />"
                       >GENERAL TERMS AND CONDITIONS FOR THE PURCHASE OF THE
                       GOODS.pdf</a
@@ -1269,7 +1269,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1180&amp;iRepository=31753221"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1180&amp;iRepository=31753221"
                       data-link="pdf' />"
                       >GUIDELINES OF THE EXECUTIVE DIRECTOR FOR CONTROL AND
                       SECURITY OFFICE ON ORGANIZATION OF MATERIAL MOVEMENT IN
@@ -1279,7 +1279,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1179&amp;iRepository=31753134"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1179&amp;iRepository=31753134"
                       data-link="pdf' />"
                       >Wytyczne Dyrektora Biura Bezpieczeństwa do organizacji
                       ruchu materiałowego w ORLEN SA_wer.2.2.pdf</a
@@ -1288,7 +1288,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1172&amp;iRepository=31703015"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1172&amp;iRepository=31703015"
                       data-link="pdf' />"
                       >OGÓLNE WARUNKI ZAKUPU TOWARÓW 2023.pdf</a
                     >
@@ -1296,7 +1296,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1164&amp;iRepository=31702882"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1164&amp;iRepository=31702882"
                       data-link="pdf' />"
                       >CONNECT problems reporting 3.14.pdf</a
                     >
@@ -1304,7 +1304,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1163&amp;iRepository=31702864"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1163&amp;iRepository=31702864"
                       data-link="pdf' />"
                       >CONNECT Instrukcja zgłaszania problemów 3.14.pdf</a
                     >
@@ -1312,7 +1312,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1162&amp;iRepository=31668322"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1162&amp;iRepository=31668322"
                       data-link="pdf' />"
                       >OWZ_USŁUGI_REMEDIACYJNE_REV _MAJ 2018.pdf</a
                     >
@@ -1320,7 +1320,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1073&amp;iRepository=26382923"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1073&amp;iRepository=26382923"
                       data-link="pdf' />"
                       >Director of the Control and Safety &amp; Security Office
                       Operational Disposition 24 2021.pdf</a
@@ -1329,7 +1329,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1012&amp;iRepository=16346375"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=1012&amp;iRepository=16346375"
                       data-link="zip' />"
                       >OGÓLNE WARUNKI ZAKUPU USŁUG I PRAC PROJEKTOWYCH,
                       PRZEDPROJEKTOWYCH (OWZ) - kwiecień 2019.zip</a
@@ -1338,7 +1338,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=995&amp;iRepository=15060373"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=995&amp;iRepository=15060373"
                       data-link="zip' />"
                       >OGÓLNE WARUNKI ZAKUPU - WYKONANIE DZIEŁA, ROBÓT
                       BUDOWLANYCH, DOSTAW ORAZ DOKUMENTACJI - październik
@@ -1348,7 +1348,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=991&amp;iRepository=14616357"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=991&amp;iRepository=14616357"
                       data-link="zip' />"
                       >OGÓLNE WARUNKI WYKONYWANIA PRAC REMONTOWYCH -luty
                       2018.zip</a
@@ -1357,7 +1357,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=989&amp;iRepository=14344603"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=989&amp;iRepository=14344603"
                       data-link="pdf' />"
                       >OGÓLNE WARUNKI ŚWIADCZENIA USŁUG PROFESJONALNYCH - maj
                       2018.pdf</a
@@ -1366,7 +1366,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=967&amp;iRepository=13958299"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=967&amp;iRepository=13958299"
                       data-link="pdf' />"
                       >CONNECT Naudojančių Tiekėjų Vadovas.pdf</a
                     >
@@ -1374,7 +1374,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=962&amp;iRepository=13958218"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=962&amp;iRepository=13958218"
                       data-link="pdf' />"
                       >CONNECT Dodavatelsky manual.pdf</a
                     >
@@ -1382,7 +1382,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=879&amp;iRepository=11618149"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=879&amp;iRepository=11618149"
                       data-link="pdf' />"
                       >GTCP_Repair_services on the premises of fuel terminals
                       and long distance pipelines January_2017.pdf</a
@@ -1391,7 +1391,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=861&amp;iRepository=11053478"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=861&amp;iRepository=11053478"
                       data-link="docx' />"
                       >FAKTORING dla Dostawców PKN ORLEN S.A._PL.docx</a
                     >
@@ -1399,7 +1399,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=860&amp;iRepository=11053477"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=860&amp;iRepository=11053477"
                       data-link="docx' />"
                       >FAKTORING for Suppliers PKN ORLEN S.A._ENG.docx</a
                     >
@@ -1407,7 +1407,7 @@
 
                   <li>
                     <a
-                      href="https://orlen-energy.com/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=813&amp;iRepository=9634328"
+                      href="/servlet/HomeServlet?MP_module=main&amp;MP_action=downloadFile&amp;iFile=813&amp;iRepository=9634328"
                       data-link="pdf' />"
                       >CONNECT Anweisung fur Den Beiter DE.pdf</a
                     >
@@ -1422,7 +1422,7 @@
               id="adminHelpDialogForm"
               method="POST"
               enctype="application/x-www-form-urlencoded"
-              action="https://orlen-energy.com/app/help/save"
+              action="/app/help/save"
             >
               <input name="CSRFToken" type="hidden" value="" />
               <table class="formTab" style="width: 100%">
@@ -1430,7 +1430,7 @@
                   <th>Wersja językowa</th>
                   <td>
                     <img
-                      src="https://orlen-energy.com/media/pic/icon-flag-pl.png"
+                      src="/media/pic/icon-flag-pl.png"
                       alt="#"
                     />&nbsp;PL
                   </td>
@@ -1456,7 +1456,7 @@
               <center>
                 <a
                   title="Zapisz"
-                  href="https://orlen-energy.com/app/help.html"
+                  href="/app/help.html"
                   onclick="helpMessage.adminHelpDialogSubmit()"
                   class="mp_button_first"
                   ><span>Zapisz</span></a
@@ -1651,23 +1651,23 @@
           <nav class="col-xs-8">
             <ul>
               <li>
-                <a href="https://orlen-energy.com/app/dashboard"
+                <a href="/app/dashboard"
                   >Strona główna</a
                 >
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/login">Zaloguj</a>
+                <a href="/app/login">Zaloguj</a>
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/register/start"
+                <a href="/app/register/start"
                   >Zarejestruj</a
                 >
               </li>
               <li>
-                <!--   <a href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+                <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/help.html">Pomoc</a>
+                <a href="/app/help.html">Pomoc</a>
               </li>
             </ul>
           </nav>
@@ -1677,14 +1677,14 @@
               <div class="line">
                 <span>Potrzebujesz pomocy?</span>
                 <a
-                  href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  href="/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
                   class="mail-link"
                   >Napisz</a
                 >
               </div>
               <div class="line">
                 <span>Zadzwoń:</span>
-                <a href="https://orlen-energy.com/app/help.html"
+                <a href="/app/help.html"
                   >+48 22 576 87 95<br />
                   +48 22 382 19 99</a
                 >
@@ -1699,15 +1699,15 @@
             <a href="https://orlen-energy.com">ORLEN S.A.</a> &copy;
             <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span
           >
-          <!--  <a href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+          <!--  <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
 
           <a
-            href="https://orlen-energy.com/app/help.html"
+            href="/app/help.html"
             onclick="showRegulationDiv('PL')"
             >Regulamin</a
           >
 
-          <a href="https://orlen-energy.com/app/help.html">Instrukcje</a>
+          <a href="/app/help.html">Instrukcje</a>
         </section>
       </div>
     </footer>

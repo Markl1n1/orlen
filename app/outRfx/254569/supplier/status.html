@@ -176,9 +176,9 @@
       specialCharactersNames["\u23CE"] = "enter internetowy";
       var modern = true;
       mpCaptureBox.capatureActions = {
-        accept: "https://orlen-energy.com/app/support/capture/accept",
-        reject: "https://orlen-energy.com/app/support/capture/reject",
-        finish: "https://orlen-energy.com/app/support/capture/finish",
+        accept: "/app/support/capture/accept",
+        reject: "/app/support/capture/reject",
+        finish: "/app/support/capture/finish",
       };
 
       mpCaptureBox.capatureText = {
@@ -195,7 +195,7 @@
       };
       var messageSourceAdminMode = false;
       var messageSourceAdminModeUrl =
-        "https://orlen-energy.com/app/messageSource/edit?code=";
+        "/app/messageSource/edit?code=";
     </script>
 
     <script
@@ -447,7 +447,7 @@
                                 messageDownloadURL = defaultContextPath + '/app/HomeServlet?MP_module=main&MP_action=cmsMessageRepoDownload&iMessage=__messageId__&iFile=__id__';
                             }
                             var replacedDownloadURL = messageDownloadURL.replace('__messageId__', data.identity).replace('__id__', attachment.identity);
-                            newsletterDialogSelector.append('<p style="text-align: left;"><a href="https://orlen-energy.com/app/outRfx/254569/supplier/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
+                            newsletterDialogSelector.append('<p style="text-align: left;"><a href="/app/outRfx/254569/supplier/'%20+%20replacedDownloadURL%20+%20'" style="color: #2c71b2 !important;"><span id="attachmentSpan_' + attachment.identity + '"></span></a></p>');
                             $('#attachmentSpan_' + attachment.identity).text(attachment.name);
                         }
                     }
@@ -503,7 +503,7 @@
                 $.ajax({
                   type: "POST",
                   url:
-                    "https://orlen-energy.com/app/newsletter//read?CSRFToken=" +
+                    "/app/newsletter//read?CSRFToken=" +
                     jsCSRFToken,
                   success: function (data) {
                     if (data && data.status === "success") {
@@ -561,7 +561,7 @@
         document.forms.changeLocaleForm.submit();
       }
       var unreadNotificationsCountUrl =
-        "https://orlen-energy.com/app/notification/unread/count";
+        "/app/notification/unread/count";
       function loadNotificationsCount() {
         $.ajax({
           type: "post",
@@ -602,7 +602,7 @@
     </script>
     <form
       method="post"
-      action="https://orlen-energy.com/servlet/HomeServlet?"
+      action="/servlet/HomeServlet?"
       name="changeLocaleForm"
     >
       <input name="CSRFToken" type="hidden" value="" />
@@ -615,9 +615,9 @@
       <header id="header" class="normal">
         <div class="inner">
           <div id="logo">
-            <a href="https://orlen-energy.com/servlet/HomeServlet?"
+            <a href="/servlet/HomeServlet?"
               ><img
-                src="https://orlen-energy.com/media/pic/logo_pl.png"
+                src="/media/pic/logo_pl.png"
                 alt="Connect - Platforma zakupowa GK ORLEN"
             /></a>
           </div>
@@ -625,18 +625,18 @@
           <nav>
             <ul>
               <li>
-                <a href="https://orlen-energy.com/app/dashboard"
+                <a href="/app/dashboard"
                   >Strona główna</a
                 >
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/help.html"
+                <a href="/app/help.html"
                   ><span>Pomoc</span></a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  href="/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
                   >Kontakt</a
                 >
               </li>
@@ -646,12 +646,12 @@
           <nav id="auth-links">
             <ul>
               <li>
-                <a href="https://orlen-energy.com/app/register/start"
+                <a href="/app/register/start"
                   >Zarejestruj</a
                 >
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/login">Zaloguj</a>
+                <a href="/app/login">Zaloguj</a>
               </li>
             </ul>
           </nav>
@@ -661,42 +661,42 @@
             <ul class="open">
               <li>
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="headerChangeLang('cs', 'CZ')"
                   >cz</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="headerChangeLang('en', 'EN')"
                   >en</a
                 >
               </li>
               <li class="active">
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="headerChangeLang('pl', 'PL')"
                   >pl</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="headerChangeLang('lt', 'LT')"
                   >lt</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="headerChangeLang('de', 'DE')"
                   >de</a
                 >
               </li>
               <li>
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="headerChangeLang('ru', 'RU')"
                   >ru</a
                 >
@@ -736,7 +736,7 @@
               id="login-form"
               name="login"
               class="form"
-              action="https://orlen-energy.com/app/login"
+              action="/app/login"
               method="post"
               autocomplete="off"
             >
@@ -744,7 +744,7 @@
                 id="backUrl"
                 name="backUrl"
                 type="hidden"
-                value="https://orlen-energy.com/app/outRfx/254569/supplier/status"
+                value="/app/outRfx/254569/supplier/status"
               />
               <section class="box">
                 <header>
@@ -783,7 +783,7 @@
 
                         <div class="align-helper clearfix">
                           <a
-                            href="https://orlen-energy.com/app/forgetPassword"
+                            href="/app/forgetPassword"
                             class="pull-right login-link"
                             >Przypomnij hasło</a
                           >
@@ -795,7 +795,7 @@
                       <div class="field col-xs-8 col-xs-offset-4">
                         <div class="align-helper">
                           <a
-                            href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                            href="/app/outRfx/254569/supplier/status.htm#"
                             onclick="javascript:submitForm()"
                             tabindex="4"
                             class="btn btn-primary with-arrow-right pull-right"
@@ -812,7 +812,7 @@
                             >Nie masz konta?</span
                           >
                           <a
-                            href="https://orlen-energy.com/app/register/start"
+                            href="/app/register/start"
                             class="btn with-arrow-right pull-right"
                             >Zarejestruj się</a
                           >
@@ -830,7 +830,7 @@
               id="adminHelpDialogForm"
               method="POST"
               enctype="application/x-www-form-urlencoded"
-              action="https://orlen-energy.com/app/help/save"
+              action="/app/help/save"
             >
               <input name="CSRFToken" type="hidden" value="" />
               <table class="formTab" style="width: 100%">
@@ -838,7 +838,7 @@
                   <th>Wersja językowa</th>
                   <td>
                     <img
-                      src="https://orlen-energy.com/media/pic/icon-flag-pl.png"
+                      src="/media/pic/icon-flag-pl.png"
                       alt="#"
                     />&nbsp;PL
                   </td>
@@ -864,7 +864,7 @@
               <center>
                 <a
                   title="Zapisz"
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   onclick="helpMessage.adminHelpDialogSubmit()"
                   class="mp_button_first"
                   ><span>Zapisz</span></a
@@ -1059,23 +1059,23 @@
           <nav class="col-xs-8">
             <ul>
               <li>
-                <a href="https://orlen-energy.com/app/dashboard"
+                <a href="/app/dashboard"
                   >Strona główna</a
                 >
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/login">Zaloguj</a>
+                <a href="/app/login">Zaloguj</a>
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/register/start"
+                <a href="/app/register/start"
                   >Zarejestruj</a
                 >
               </li>
               <li>
-                <!--   <a href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+                <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
               </li>
               <li>
-                <a href="https://orlen-energy.com/app/help.html">Pomoc</a>
+                <a href="/app/help.html">Pomoc</a>
               </li>
             </ul>
           </nav>
@@ -1085,7 +1085,7 @@
               <div class="line">
                 <span>Potrzebujesz pomocy?</span>
                 <a
-                  href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
+                  href="/servlet/HomeServlet?MP_module=static&amp;MP_action=contact"
                   class="mail-link"
                   >Napisz</a
                 >
@@ -1093,7 +1093,7 @@
               <div class="line">
                 <span>Zadzwoń:</span>
                 <a
-                  href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+                  href="/app/outRfx/254569/supplier/status.htm#"
                   >+48 22 576 87 95<br />
                   +48 22 382 19 99</a
                 >
@@ -1108,15 +1108,15 @@
             <a href="https://orlen-energy.com">ORLEN S.A.</a> &copy;
             <span id="currentYear"></span> Wersja 3.14.4.5-ORL-SNAPSHOT</span
           >
-          <!--  <a href="https://orlen-energy.com/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
+          <!--  <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a> -->
 
           <a
-            href="https://orlen-energy.com/app/outRfx/254569/supplier/status.htm#"
+            href="/app/outRfx/254569/supplier/status.htm#"
             onclick="showRegulationDiv('PL')"
             >Regulamin</a
           >
 
-          <a href="https://orlen-energy.com/app/help.html">Instrukcje</a>
+          <a href="/app/help.html">Instrukcje</a>
         </section>
       </div>
     </footer>
