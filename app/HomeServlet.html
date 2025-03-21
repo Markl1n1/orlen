@@ -17,36 +17,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link
-      rel="shortcut icon"
-      href="/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/css/css/open-sans.css"
-    />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/css/css/sweetalert.css"
-    />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/wf/css/style.css"
-    />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/wf/css/style-extra.css"
-    />
-    <link
-      media="print"
-      rel="stylesheet"
-      href="/wf/css/print.css"
-    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link media="screen" rel="stylesheet" href="/css/css/open-sans.css" />
+    <link media="screen" rel="stylesheet" href="/css/css/sweetalert.css" />
+    <link media="screen" rel="stylesheet" href="/wf/css/style.css" />
+    <link media="screen" rel="stylesheet" href="/wf/css/style-extra.css" />
+    <link media="print" rel="stylesheet" href="/wf/css/print.css" />
     <link
       media="screen"
       rel="stylesheet"
@@ -57,40 +33,19 @@
       rel="stylesheet"
       href="/css/jquery-ui-1.9.1.custom.css"
     />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/css/hlp.min.css"
-    />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/css/orlen_new.css"
-    />
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/css/orlen_custom.css"
-    />
+    <link media="screen" rel="stylesheet" href="/css/hlp.min.css" />
+    <link media="screen" rel="stylesheet" href="/css/orlen_new.css" />
+    <link media="screen" rel="stylesheet" href="/css/orlen_custom.css" />
 
     <!--[if IE 8]>
-      <link
-        media="screen"
-        rel="stylesheet"
-        href="/wf/css/ie8.css"
-      />
+      <link media="screen" rel="stylesheet" href="/wf/css/ie8.css" />
     <![endif]-->
-    <link
-      media="screen"
-      rel="stylesheet"
-      href="/css/messageSource.css"
-    />
+    <link media="screen" rel="stylesheet" href="/css/messageSource.css" />
 
     <script>
       var layoutFilesSubfolder = "/wf";
       var messageSourceAdminMode = false;
-      var messageSourceAdminModeUrl =
-        "/app/messageSource/edit?code=";
+      var messageSourceAdminModeUrl = "/app/messageSource/edit?code=";
     </script>
     <script src="/js/js/knockout.js"></script>
     <script src="/js/js/knockout.mapping.js"></script>
@@ -100,22 +55,13 @@
     <script src="/js/jquery.inputmask.bundle.min.js"></script>
     <script src="/js/jquery.cookie.js"></script>
     <script src="/js/support-tickets.js"></script>
-    <script
-      src="/js/hlp.min.js"
-      charset="utf-8"
-    ></script>
+    <script src="/js/hlp.min.js" charset="utf-8"></script>
     <script
       type="text/javascript"
       src="/js/js/jquery.dotdotdot.min.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/js/js/promise-polyfill.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/js/js/sweetalert.min.js"
-    ></script>
+    <script type="text/javascript" src="/js/js/promise-polyfill.js"></script>
+    <script type="text/javascript" src="/js/js/sweetalert.min.js"></script>
     <script src="/js/mpFramework3.js"></script>
 
     <script src="/js/support-capture.js"></script>
@@ -167,14 +113,10 @@
   >
     <ul class="aural">
       <li>
-        <a href="/servlet/HomeServlet.htm#nav"
-          >nawigacja</a
-        >
+        <a href="/servlet/HomeServlet.htm#nav">nawigacja</a>
       </li>
       <li>
-        <a href="/servlet/HomeServlet.htm#content"
-          >tresc</a
-        >
+        <a href="/servlet/HomeServlet.htm#content">tresc</a>
       </li>
     </ul>
 
@@ -419,9 +361,7 @@
                 click: function () {
                   $.ajax({
                     type: "POST",
-                    url:
-                      "/app/newsletter//read?CSRFToken=" +
-                      jsCSRFToken,
+                    url: "/app/newsletter//read?CSRFToken=" + jsCSRFToken,
                     success: function (data) {
                       if (data && data.status === "success") {
                         newNewsletterDialog.dialog("close");
@@ -471,8 +411,7 @@
       }
       //-->
 
-      var unreadNotificationsCountUrl =
-        "/app/notification/unread/count";
+      var unreadNotificationsCountUrl = "/app/notification/unread/count";
       function loadNotificationsCount() {
         $.ajax({
           type: "post",
@@ -512,11 +451,7 @@
       }
     </script>
 
-    <form
-      method="post"
-      action="/servlet/HomeServlet?"
-      name="changeLocaleForm"
-    >
+    <form method="post" action="/servlet/HomeServlet?" name="changeLocaleForm">
       <input name="CSRFToken" type="hidden" value="" />
       <input type="hidden" name="MP_module" value="common" />
       <input type="hidden" name="MP_action" value="changeLocale" />
@@ -537,9 +472,7 @@
           <div class="nav">
             <ul>
               <li class="active">
-                <a href="/app/dashboard"
-                  >Strona główna</a
-                >
+                <a href="/app/dashboard">Strona główna</a>
               </li>
               <li>
                 <a href="/servlet/help.html">Pomoc</a>
@@ -556,9 +489,7 @@
           <div class="nav" id="auth-links">
             <ul>
               <li>
-                <a href="/app/register/start"
-                  >Zarejestruj</a
-                >
+                <a href="/app/register/start">Zarejestruj</a>
               </li>
               <li>
                 <a href="/app/login">Zaloguj</a>
@@ -628,11 +559,7 @@
         >
           <a
             href="mailto:energia@orlen-energy.com?subject=Energia Elektryczna z PKN ORLEN S.A."
-            ><img
-              src="/media/pic/energia.jpg"
-              width="948"
-              height="210"
-              alt="#"
+            ><img src="/media/pic/energia.jpg" width="948" height="210" alt="#"
           /></a>
         </div>
 
@@ -1517,10 +1444,7 @@
             data-bind="css: {visible: orgCardsVisible() || catsCardsVisible() || overlayVisible()}"
           >
             <div data-bind="visible: loaderVisible">
-              <img
-                src="/media/pic/spinner.gif"
-                alt="loader"
-              />
+              <img src="/media/pic/spinner.gif" alt="loader" />
             </div>
           </div>
         </div>
@@ -2116,17 +2040,13 @@
           <div class="nav col-xs-8">
             <ul>
               <li>
-                <a href="/app/dashboard"
-                  >Strona główna</a
-                >
+                <a href="/app/dashboard">Strona główna</a>
               </li>
               <li>
                 <a href="/app/login">Zaloguj</a>
               </li>
               <li>
-                <a href="/app/register/start"
-                  >Zarejestruj</a
-                >
+                <a href="/app/register/start">Zarejestruj</a>
               </li>
               <li>
                 <!--   <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>
@@ -2168,9 +2088,7 @@
           >
           <!--      <a href="/servlet/HomeServlet?MP_module=static&MP_action=policy">Polityka prywatności</a>-->
 
-          <a
-            href="/servlet/HomeServlet.htm#"
-            onclick="showRegulationDiv('PL')"
+          <a href="/servlet/HomeServlet.htm#" onclick="showRegulationDiv('PL')"
             >Regulamin</a
           >
 
