@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="pl" class="h-full">
   <head>
     <meta charset="utf-8" />
@@ -869,7 +869,6 @@
       [type=reset],
       [type=submit],
       button {
-        -webkit-appearance: button;
         background-color: transparent;
         background-image: none
       }
@@ -892,7 +891,6 @@
       }
 
       [type=search] {
-        -webkit-appearance: textfield;
         outline-offset: -2px
       }
 
@@ -980,7 +978,6 @@
       svg,
       video {
         display: block;
-        vertical-align: middle
       }
 
       img,
@@ -994,14 +991,14 @@
       }
 
       .\!contrast {
-        --backgroundImage-gray-gradient: linear-gradient(0deg, #f2f500, rgba(243, 246, 0, 0)) !important;
-        --backgroundImage-main: linear-gradient(137.01deg, rgba(12, 28, 0, .9) -2.63%, rgba(43, 46, 0, .4) 104.19%) !important;
-        --backgroundImage-placeholderimg: linear-gradient(100deg, rgba(51, 51, 0, 0) 10%, rgba(51, 51, 0, .3), rgba(51, 51, 0, .6), rgba(51, 51, 0, .3), rgba(51, 51, 0, 0) 90%);
-         !important;
-        --backgroundImage-textWApla: linear-gradient(163.56deg, #e0eb00 1.11%, #f3f600 59.8%) !important;
-        --boxShadow-head: 0px 1px 0px #ff0 !important;
-        --boxShadow-popper: 0px 0px 0px 1px #ff0 !important
-      }
+    --backgroundImage-gray-gradient: linear-gradient(0deg, #f2f500, rgba(243, 246, 0, 0)) !important;
+    --backgroundImage-main: linear-gradient(137.01deg, rgba(12, 28, 0, .9) -2.63%, rgba(43, 46, 0, .4) 104.19%) !important;
+    --backgroundImage-placeholderimg: linear-gradient(100deg, rgba(51, 51, 0, 0) 10%, rgba(51, 51, 0, .3), rgba(51, 51, 0, .6), rgba(51, 51, 0, .3), rgba(51, 51, 0, 0) 90%) !important;
+    --backgroundImage-textWApla: linear-gradient(163.56deg, #e0eb00 1.11%, #f3f600 59.8%) !important;
+    --boxShadow-head: 0px 1px 0px #ff0 !important;
+    --boxShadow-popper: 0px 0px 0px 1px #ff0 !important;
+}
+
 
       .contrast {
         --backgroundImage-gray-gradient: linear-gradient(0deg, #f2f500, rgba(243, 246, 0, 0));
@@ -2938,7 +2935,7 @@
       }
 
       .columns-1 {
-        -moz-columns: 1;
+
         column-count: 1
       }
 
@@ -23910,7 +23907,7 @@
         }
 
         .m\:columns-2 {
-          -moz-columns: 2;
+
           column-count: 2
         }
 
@@ -25811,12 +25808,12 @@
         }
 
         .t\:columns-3 {
-          -moz-columns: 3;
+
           column-count: 3
         }
 
         .t\:columns-4 {
-          -moz-columns: 4;
+
           column-count: 4
         }
 
@@ -27990,10 +27987,7 @@
     </style>
     <style>
       .loading-bar {
-        transition:
-          width 0.1s,
-          height 0.4s,
-          opacity 0.4s;
+        transition: width 0.1s, height 0.4s, opacity 0.4s;
         z-index: 999999;
       }
     </style>
@@ -28426,9 +28420,8 @@
         line-height: 2.4rem;
         padding: 0.2rem 1.2rem;
         transition-duration: 0.3s;
-        transition-property:
-          color, background-color, border-color, text-decoration-color, fill,
-          stroke;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
 
@@ -28809,34 +28802,15 @@
         left: 0;
         position: absolute;
         transition-duration: 0.3s;
-        transition-property:
-          color,
-          background-color,
-          border-color,
-          text-decoration-color,
-          fill,
-          stroke,
-          opacity,
-          box-shadow,
-          transform,
-          filter,
-          -webkit-backdrop-filter;
-        transition-property:
-          color, background-color, border-color, text-decoration-color, fill,
-          stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-        transition-property:
-          color,
-          background-color,
-          border-color,
-          text-decoration-color,
-          fill,
-          stroke,
-          opacity,
-          box-shadow,
-          transform,
-          filter,
-          backdrop-filter,
-          -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter, -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         width: 100%;
       }
@@ -29220,7 +29194,6 @@
         border-radius: 10px;
         border-radius: var(--swiper-scrollbar-border-radius, 10px);
         position: relative;
-        -ms-touch-action: none;
       }
 
       .swiper-scrollbar-disabled > .swiper-scrollbar,
@@ -29441,12 +29414,9 @@
         --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
           calc(var(--tw-ring-offset-width)) var(--tw-ring-color);
         --tw-ring-offset-width: 0px;
-        box-shadow:
-          var(--tw-ring-inset) 0 0 0 0 var(--tw-ring-offset-color),
-          var(--tw-ring-inset) 0 0 0 0 var(--tw-ring-color),
-          0 0 #0000;
-        box-shadow:
-          var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+        box-shadow: var(--tw-ring-inset) 0 0 0 0 var(--tw-ring-offset-color),
+          var(--tw-ring-inset) 0 0 0 0 var(--tw-ring-color), 0 0 #0000;
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
           var(--tw-shadow, 0 0 #0000);
         outline-width: 0;
       }
@@ -29492,9 +29462,7 @@
         padding-top: var(--9736d696);
         pointer-events: none;
         top: 0;
-        transition:
-          visibility 0.3s,
-          opacity 0.3s,
+        transition: visibility 0.3s, opacity 0.3s,
           top 0.32s cubic-bezier(0.4, 0, 0.2, 1);
         visibility: hidden;
       }
@@ -30044,9 +30012,8 @@
         height: 100%;
         padding: 1.6rem 3.6rem 1.6rem 0.8rem;
         transition-duration: 0.3s;
-        transition-property:
-          background-color, border-color, color, fill, stroke, transform,
-          opacity;
+        transition-property: background-color, border-color, color, fill, stroke,
+          transform, opacity;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         width: 100%;
       }
@@ -30260,9 +30227,8 @@
         display: inline;
         overflow-wrap: break-word;
         transition-duration: 0.3s;
-        transition-property:
-          color, background-color, border-color, text-decoration-color, fill,
-          stroke;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
 
@@ -30398,9 +30364,8 @@
         line-height: 2.4rem;
         padding: 0.4rem 1.2rem;
         transition-duration: 0.3s;
-        transition-property:
-          color, background-color, border-color, text-decoration-color, fill,
-          stroke;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
 
@@ -30587,14 +30552,13 @@
       .content--two-cols {
         -moz-column-fill: balance;
         column-fill: balance;
-        -moz-columns: 1;
+
         column-count: 1;
         gap: 1.6rem;
       }
 
       @media (min-width: 768px) {
         .content--two-cols {
-          -moz-columns: 2;
           column-count: 2;
           gap: 2.4rem;
         }
@@ -30609,14 +30573,13 @@
       .content--three-cols {
         -moz-column-fill: balance;
         column-fill: balance;
-        -moz-columns: 1;
+
         column-count: 1;
         gap: 1.6rem;
       }
 
       @media (min-width: 768px) {
         .content--three-cols {
-          -moz-columns: 2;
           column-count: 2;
           gap: 2.4rem;
         }
@@ -30624,7 +30587,6 @@
 
       @media (min-width: 1280px) {
         .content--three-cols {
-          -moz-columns: 3;
           column-count: 3;
           gap: 4rem;
         }
@@ -30633,14 +30595,13 @@
       .content--four-cols {
         -moz-column-fill: balance;
         column-fill: balance;
-        -moz-columns: 1;
+
         column-count: 1;
         gap: 1.6rem;
       }
 
       @media (min-width: 768px) {
         .content--four-cols {
-          -moz-columns: 2;
           column-count: 2;
           gap: 2.4rem;
         }
@@ -30648,7 +30609,6 @@
 
       @media (min-width: 1280px) {
         .content--four-cols {
-          -moz-columns: 4;
           column-count: 4;
           gap: 4rem;
         }
@@ -31370,7 +31330,7 @@
           </header>
           <div
             class="nav-panel fixed bottom-0 left-0 z-40 flex w-full flex-col bg-white"
-            style="--9736d696: 1rem; --679db002:"
+            style="--9736d696: 1rem; --679db002: "
           >
             <!---->
             <div>
@@ -37802,7 +37762,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -37852,7 +37811,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -37903,7 +37861,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -37954,7 +37911,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -38005,7 +37961,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -38056,7 +38011,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -38106,7 +38060,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -38156,7 +38109,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
@@ -38206,7 +38158,6 @@
                               >
                                 undefined
                                 <mask
-                                  id="mask0_399_3743"
                                   style="mask-type: alpha"
                                   maskunits="userSpaceOnUse"
                                   x="0"
