@@ -1,15 +1,7 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html class="no-js">
   <head>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-    </script>
-
     <meta charset="UTF-8" />
 
     <title>Platforma zakupowa Grupy ORLEN</title>
@@ -36,10 +28,6 @@
     <link media="screen" rel="stylesheet" href="/css/hlp.min.css" />
     <link media="screen" rel="stylesheet" href="/css/orlen_new.css" />
     <link media="screen" rel="stylesheet" href="/css/orlen_custom.css" />
-
-    <!--[if IE 8]>
-      <link media="screen" rel="stylesheet" href="/wf/css/ie8.css" />
-    <![endif]-->
     <link media="screen" rel="stylesheet" href="/css/messageSource.css" />
 
     <script>
@@ -102,15 +90,9 @@
       var newsListErrorText = "Jesteś wylogowany";
       var jsCSRFToken = "";
     </script>
-
-    <!--[if lt IE 9]>
-      <script src="/js/js/old-ie.js"></script>
-    <![endif]-->
   </head>
 
-  <body
-    style="background: #ffffff url(&quot;/pic/instance/prd.png&quot;) repeat"
-  >
+  <body style="background: #ffffff url('/pic/instance/prd.png') repeat">
     <ul class="aural">
       <li>
         <a href="/servlet/HomeServlet.htm#nav">nawigacja</a>
@@ -135,7 +117,7 @@
 
       $(document).ready(function () {
         var newsletterDialog = $('<div id="newsletter-dialog"></div>').appendTo(
-          "body",
+          "body"
         );
 
         newsletterDialog.dialog({
@@ -257,10 +239,10 @@
             if (data != null) {
               newsletterDialogSelector.html("");
               newsletterDialogSelector.append(
-                '<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>',
+                '<div id="dateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="textDiv" style="text-align: left;"></div><br/><br/>'
               );
               $("#dateDiv").text(
-                data.dateValidFrom + ", " + newsListAuthorText,
+                data.dateValidFrom + ", " + newsListAuthorText
               );
               var escaped = $("#textDiv").text(data.text).html();
               var str = escaped.replace(/(?:\r\n|\r|\n)/g, "<br>");
@@ -270,10 +252,10 @@
                 newsletterDialogSelector.append(
                   '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
                     newsListLinkText +
-                    "</p>",
+                    "</p>"
                 );
                 newsletterDialogSelector.append(
-                  '<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>',
+                  '<p style="text-align: left"><a id="newsletterLink" target="_blank" style="color:#2c71b2"></a></p>'
                 );
                 var newsletterLink = $("#newsletterLink");
                 newsletterLink.text(data.link);
@@ -285,7 +267,7 @@
                 newsletterDialogSelector.append(
                   '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
                     newsListAttachmentsText +
-                    "</p>",
+                    "</p>"
                 );
                 for (var i = 0; i < data.attachments.length; i++) {
                   var attachment = data.attachments[i];
@@ -301,10 +283,10 @@
                     .replace("__messageId__", data.identity)
                     .replace("__id__", attachment.identity);
                   newsletterDialogSelector.append(
-                    '<p style="text-align: left;"></p>',
+                    '<p style="text-align: left;"></p>'
                   );
                   $("#attachmentSpan_" + attachment.identity).text(
-                    attachment.name,
+                    attachment.name
                   );
                 }
               }
@@ -344,7 +326,7 @@
       $(document).ready(function () {
         if ("" && "" && "" && "") {
           var newNewsletterDialog = $(
-            '<div id="new-newsletter-dialog"></div>',
+            '<div id="new-newsletter-dialog"></div>'
           ).appendTo("body");
 
           newNewsletterDialog.dialog({
@@ -381,7 +363,7 @@
 
           newNewsletterDialog.html("");
           newNewsletterDialog.append(
-            '<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>',
+            '<div id="newDateDiv" style="font-size: 90%; color: #888; border-bottom: 1px solid #CCC; text-align: left;"></div><br/><div id="newTextDiv" style="text-align: left;"></div><br/><br/>'
           );
           $("#newDateDiv").text(", " + newsListAuthorText);
           var str = "";
@@ -392,7 +374,7 @@
             newNewsletterDialog.append(
               '<p style="font-weight: bold; text-align: left; font-style: italic;">' +
                 newsListAttachmentsText +
-                "</p>",
+                "</p>"
             );
           }
 
@@ -421,7 +403,7 @@
           dataType: "json",
           success: function (result) {
             $("#notifications-count span").text(
-              result.unreadNotificationsCount,
+              result.unreadNotificationsCount
             );
           },
         });
@@ -445,7 +427,7 @@
           input.form.newFileDescription.value = "";
           mpFrm3.showToastMessage(
             "Dołączany plik jest za duży. Rozmiar pliku nie może przekraczać 100 MB.",
-            "error",
+            "error"
           );
         }
       }
@@ -1588,7 +1570,7 @@
             if (!push) {
               self.showLoader(true);
               self.resultsNum(
-                self.demands().length > 15 ? self.demands().length : 15,
+                self.demands().length > 15 ? self.demands().length : 15
               );
             } else {
               self.smallLoaderVisible(true);
@@ -1765,7 +1747,7 @@
                 return (
                   cat.name().toLowerCase().indexOf(filter.toLowerCase()) !== -1
                 );
-              }),
+              })
             );
           };
 
@@ -2012,7 +1994,7 @@
         mainPageModel.init().done(function () {
           ko.applyBindings(
             mainPageModel,
-            document.getElementById("demand-search-wrapper"),
+            document.getElementById("demand-search-wrapper")
           );
           mainPageModel.initialized(true);
         });
@@ -2140,14 +2122,14 @@
                   .next(".ui-dialog-buttonpane")
                   .eq(0)
                   .prepend(
-                    "<a class='scrollBottom' href='https://orlen-energy.com/servlet/HomeServlet.htm#'><i class='arrow-down'></i></a>",
+                    "<a class='scrollBottom' href='https://orlen-energy.com/servlet/HomeServlet.htm#'><i class='arrow-down'></i></a>"
                   );
                 $("#regulationDiv").scrollTop(0);
                 if (isRegisterForm) {
                   $("#closeRegulationDialog").button(
                     "option",
                     "disabled",
-                    true,
+                    true
                   );
                 }
               }
@@ -2202,7 +2184,7 @@
           {
             scrollTop: current + percentScroll,
           },
-          500,
+          500
         );
       });
     </script>
