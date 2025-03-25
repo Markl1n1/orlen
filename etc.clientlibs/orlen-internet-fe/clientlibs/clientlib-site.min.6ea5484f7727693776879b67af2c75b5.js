@@ -83057,7 +83057,7 @@
                       ),
                     r = '<img class="'
                       .concat(i.CONFIG.COMMENT_AUTHOR_IMAGE_SELECTOR, '" src="')
-                      .concat(e, '" alt=""/>');
+                      .concat(e, '" />');
                   i.commentsListElement.innerHTML += ""
                     .concat('<li class="cmp-comments__comment">')
                     .concat(r)
