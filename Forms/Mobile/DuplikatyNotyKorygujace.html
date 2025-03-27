@@ -42,7 +42,6 @@
       href="https://opinie.orlen-energy.com/Styles/select2.css?v=20250214"
       rel="stylesheet"
     />
-
     <script
       type="text/javascript"
       src="https://opinie.orlen-energy.com/Scripts/ua-parser.min.js?v=20250214"
@@ -71,7 +70,6 @@
       type="text/javascript"
       src="https://opinie.orlen-energy.com/Scripts/jqueryUiNew/jquery-ui.min.js"
     ></script>
-
     <script
       type="text/javascript"
       src="https://opinie.orlen-energy.com/Scripts/jquery.ui.datepicker.min.js"
@@ -108,16 +106,12 @@
       type="text/javascript"
       src="https://opinie.orlen-energy.com/Scripts/select2.js?v=20250214"
     ></script>
-
     <title>Zmiana danych na fakturze i duplikaty faktur - Orlen</title>
-
     <script type="text/javascript">
       if (top !== self) top.location.replace(self.location.href);
-
       $(function () {
         preventEnterOnTextBoxes();
       });
-
       function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -128,11 +122,9 @@
           console.log("desktop");
         }
       }
-
       window.onload = function () {
         hideBannerForNotyDuplikaty();
       };
-
       function hideBannerForNotyDuplikaty() {
         var infoPageNumber = GetQueryStringParams("info");
         if (infoPageNumber === "7") {
@@ -168,7 +160,6 @@
           value="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TEVOIFMuQS4geiBzaWVkemlixIUgdyBQxYJvY2t1LCAwOSA0MTEgUMWCb2NrLCB1bC4gQ2hlbWlrw7N3IDcsIChkYWxlajogT1JMRU4gUy5BLikuIEtvbnRha3Rvd2UgbnVtZXJ5IHRlbGVmb27Ds3cgZG8gT1JMRU4gUy5BLjogKDI0KSAyNTYgMDAgMDAsICgyNCkgMzY1IDAwIDAwLCAoMjIpIDc3OCAwMCAwMC48YnIgLz4NCiAgICA8YnIgLz4NCiAgICAyLiBaIEluc3Bla3RvcmVtIE9jaHJvbnkgRGFueWNoIG1vxbxuYSBzacSZIHNrb250YWt0b3dhxIc6IHBvcHJ6ZXogYWRyZXMgZW1haWw6IGRhbmVvc29ib3dlQG9ybGVuLnBsIGx1YiBwaXNlbW5pZSBuYSBhZHJlcyBuYXN6ZWogc2llZHppYnksIHdza2F6YW55IHcgcGt0IEksIHogZG9waXNraWVtIOKAnkluc3Bla3RvciBPY2hyb255IERhbnljaOKAnS4gPGJyIC8+DQogICAgPGJyIC8+DQogICAgMy4gUGFuaS9QYW5hIGRhbmUgb3NvYm93ZSBwcnpldHdhcnphbmUgc8SFIHcgbmFzdMSZcHVqxIVjeWNoIGNlbGFjaDo8YnIgLz4NCiAgICA8dWw+DQogICAgICAgIDxsaT5wcm93YWR6ZW5pYSB6IFBhbmnEhS9QYW5lbSBrb3Jlc3BvbmRlbmNqaSwgb2JzxYJ1Z2Egc3ByYXcgemfFgmFzemFueWNoIHByemV6IGZvcm11bGFyeiBvcmF6IHcgY2VsdSBld2VudHVhbG5lZ28gZG9jaG9kemVuaWEgcm9zemN6ZcWEIGx1YiBvYnJvbnkgcHJ6ZWQgdGFraW1pIHJvc3pjemVuaWFtaSDigJMgcG9kc3Rhd8SFIHByYXduYSBqZXN0IHByYXduaWUgdXphc2FkbmlvbnkgaW50ZXJlcyAoYXJ0LiA2IHVzdC4gMSBsaXQgZiBST0RPKSw8L2xpPg0KICAgICAgICA8bGk+d3lwZcWCbmllbmllIGNpxIXFvMSFY3ljaCBuYSBhZG1pbmlzdHJhdG9yemUgb2Jvd2nEhXprw7N3IHByYXdueWNoIC0gd3lkYW5pYSBkb2t1bWVudHUgcG90d2llcmR6YWrEhWNlZ28gemFrdXAgdG93YXJ1IGx1YiB1c8WCdWdpIChmYWt0dXJhKSBpIGlubnljaCBkb2t1bWVudMOzdyBrc2nEmWdvd3ljaCAoYXJ0LiA2IHVzdC4gMSBsaXQuIGMgUk9ETykuPC9saT4NCiAgICA8L3VsPg0KICAgIDxiciAvPg0KICAgIDQuIFBhbmkvUGFuYSBtb2fEhSBiecSHIHVqYXduaWFuZSBwcnpleiBPUkxFTiBTLkEuIHBvZG1pb3RvbSB6IG5pbSB3c3DDs8WCcHJhY3VqxIVjeW0gKG9kYmlvcmNvbSksIHcgc3pjemVnw7Nsbm/Fm2NpIHBvZG1pb3RvbSB3c3DDs8WCcHJhY3VqxIVjeW0gcHJ6eSBvYnPFgnVkemUgc3lzdGVtdSBTQVNpUiwgxZt3aWFkY3rEhWN5bSB1c8WCdWdpIHNwcnplZGHFvHksIGZha3R1cm93YW5pYSwgcm96bGljemFuaWEgbmFsZcW8bm/Fm2NpLCBkb3LEmWN6YW5pYSBrb3Jlc3BvbmRlbmNqaSBpIHByemVzecWCZWssIHByYXduZSwgd2luZHlrYWN5am5lLCBhcmNoaXdpemFjamksIG9ic8WCdWdpIHByb2Nlc8OzdyBrc2nEmWdvd2/igJNyb3psaWN6ZW5pb3d5Y2guPGJyIC8+DQogICAgPGJyIC8+DQogICAgNS4gUGFuaS9QYW5hIGRhbmUgb3NvYm93ZSBixJlkxIUgcHJ6ZXR3YXJ6YW5lIHByemV6IG9rcmVzIHd5bmlrYWrEhWN5IHogcG93c3plY2huaWUgb2Jvd2nEhXp1asSFY3ljaCBwcnplcGlzw7N3IHByYXdhIG9yYXogZG8gY3phc3Ugd3lnYcWbbmnEmWNpYSByb3N6Y3plxYQgdyB0eW0gemFrcmVzaWUuPGJyIC8+DQogICAgPGJyIC8+DQogICAgNi4gUHJ6eXPFgnVndWrEhSBQYW5pL1BhbnUgcHJhd2EgendpxIV6YW5lIHogcHJ6ZXR3YXJ6YW5pZW0gZGFueWNoIG9zb2Jvd3ljaDo8YnIgLz4NCiAgICA8dWw+DQogICAgICAgIDxsaT5wcmF3byB3bmllc2llbmlhIHNwcnplY2l3dSAtIHcgcHJ6eXBhZGthY2gsIGtpZWR5IE9STEVOIFMuQS5wcnpldHdhcnphIFBhbmkvUGFuYSBkYW5lIG9zb2Jvd2UgbmEgcG9kc3Rhd2llIHN3b2plZ28gcHJhd25pZSB1emFzYWRuaW9uZWdvIGludGVyZXN1LCBzcHJ6ZWNpdyBtb8W8bmEgd3lyYXppxIcgemUgd3pnbMSZZHUgbmEgc3pjemVnw7NsbsSFIHN5dHVhY2rEmSBuYSBhZHJlcyBwb2N6dHkgZWxla3Ryb25pY3puZWo6IGRhbmVvc29ib3dlQG9ybGVuLnBsIGx1YiBhZHJlcyBzaWVkemlieSBPUkxFTiBTLkEuIHogZG9waXNraWVtIOKAnkluc3Bla3RvciBPY2hyb255IERhbnljaOKAnSw8L2xpPg0KICAgICAgICA8bGk+cHJhd28gxbzEhWRhbmlhIGRvc3TEmXB1IGRvIHRyZcWbY2kgc3dvaWNoIGRhbnljaCw8L2xpPg0KICAgICAgICA8bGk+cHJhd28gxbzEhWRhbmlhIHNwcm9zdG93YW5pYSBkYW55Y2ggb3NvYm93eWNoLDwvbGk+DQogICAgICAgIDxsaT5wcmF3byBkbyBvZ3JhbmljemVuaWEgcHJ6ZXR3YXJ6YW5pYSBkYW55Y2ggb3NvYm93eWNoLDwvbGk+DQogICAgPC91bD4NCiAgICA3LiBQcnp5c8WCdWd1amUgUGFuaS9QYW51IHByYXdvIGRvIHduaWVzaWVuaWEgc2thcmdpIGRvIG9yZ2FudSBuYWR6b3JjemVnbywgUHJlemVzYSBVcnrEmWR1IE9jaHJvbnkgRGFueWNoIE9zb2Jvd3ljaC48YnIgLz4NCiAgICA8YnIgLz4NCiAgICA4LiBQb2RhbmllIGRhbnljaCBvc29ib3d5Y2ggamVzdCBkb2Jyb3dvbG5lIGplZG5hayBuaWV6YsSZZG5lIGRvIHVkemllbGVuaWEgb2Rwb3dpZWR6aSBuYSBQYW5pL1BhbmEgemfFgm9zemVuaWUuZGQCIw9kFgJmDw8WAh8DaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYEBS5jdGwwMCRjcGhNYWluJHRiTm90eUtvcnlndWphY2VJbm55T2RiaW9yY2EkY2hiBSRjdGwwMCRjcGhNYWluJGNoYk5yUmVqZXN0cmFjeWpueSRjaGIFIGN0bDAwJGNwaE1haW4kY2hiVXBvd2F6bmlvbnkkY2hiBSFjdGwwMCRjcGhNYWluJGNoYld5cmF6YW1aZ29kZSRjaGISqnzDfTIebS047E8YZ5L/kJ1teiZhvodx3Hm5GNkGOw=="
         />
       </div>
-
       <script type="text/javascript">
         //<![CDATA[
         var theForm = document.forms["aspnetForm"];
@@ -184,12 +175,10 @@
         }
         //]]>
       </script>
-
       <script
         src="https://opinie.orlen-energy.com/WebResource.axd?d=Sr5XR1dbgWMhHdCYGZ6rsWRq4T0A7VN6_YwHsCm66L-1QTjFzMn5gbiHmu6qnbbazTD_dg9kftqrnig2VwltKzaGUn9P2BsCTBLrdRQKgcQ1&amp;t=637100538060000000"
         type="text/javascript"
       ></script>
-
       <script
         src="https://opinie.orlen-energy.com/ScriptResource.axd?d=MS_z_l6JbA1nKatfsWHvwHS0P5BS89iqV1lpBNjGENhvuHMeKEKahMXq-y3OlDuzGo3UIlLhEQPxWt1chx-Z_I8-rivu90EIjPUFUCXKVusutMpV-TZNfrasVJXR1PFwlDBIGYQCjLGfAqHAPbvOlXYoWktEzHo2AFt2aB_o44Y1&amp;t=ffffffff93f2983c"
         type="text/javascript"
@@ -204,7 +193,6 @@
           throw new Error("ASP.NET Ajax client-side framework failed to load.");
         //]]>
       </script>
-
       <script
         src="https://opinie.orlen-energy.com/ScriptResource.axd?d=N1nw0uUHMfXeuZJ_srD2gyLlG_rrjkKSNIfkdKWoZkoT33kJWoGhbCCS_b4Hy0eiBVGPK610WgtXcREUseE72nvmBdmwbpyLMJ_oaCOq0n54nUr07hCtBCRcBxqbw_qBaYuZGxBUC9OUz2baMmn_NUy9vx0yhnSqFGbYOmoJtRb9K4OheE-D1aypkoW2gCfe0&amp;t=ffffffffecf19baa"
         type="text/javascript"
@@ -221,7 +209,6 @@
         }
         //]]>
       </script>
-
       <div>
         <input
           type="hidden"
@@ -261,7 +248,6 @@
         );
         //]]>
       </script>
-
       <div
         class="container page-header"
         style="
@@ -375,14 +361,12 @@
         </aside>
         <section id="main">
           <!--<link rel="stylesheet" type="text/css" href="/content/opinie-styles.min.css" />-->
-
           <style>
             .rbl input[type="radio"] {
               margin-right: 10px;
               text-align: center;
               padding-left: 0px;
             }
-
             @media screen and (min-width: 768px) {
               .errorMessage {
                 margin-left: 45% !important;
@@ -391,14 +375,12 @@
                 top: 0px;
               }
             }
-
             @media screen and (max-width: 767px) {
               .errorMessage {
                 margin-left: 0% !important;
                 font: bold 12px sans-serif;
               }
             }
-
             .banner {
               visibility: hidden;
             }
@@ -410,7 +392,6 @@
             var maxUploadSize = Math.round(5000000 / 1024 / 1024);
             var userRoleId = "-1";
             var allowedExtensions = ["pdf", "jpg"];
-
             //js do hamburgermenu
             const hamburgerMenu = document.querySelector(".hamburger-menu");
             const hamburgerMenuIcon = document.querySelector(
@@ -433,7 +414,6 @@
             type="text/javascript"
             src="https://opinie.orlen-energy.com/Scripts/WalidatoryNotyDuplikaty.js?v=20250214"
           ></script>
-
           <div class="client-content">
             <div id="ctl00_cphMain_pForm" class="form-validation">
               <div class="form-title-row">
@@ -445,7 +425,6 @@
                 id="ctl00_cphMain_hfdGuid"
               />
               <span id="ctl00_cphMain_lblError" style="color: Red"></span>
-
               <div>
                 <div
                   id="ctl00_cphMain_pDiv"
@@ -487,7 +466,6 @@
                     >
                   </div>
                 </div>
-
                 <div
                   id="ctl00_cphMain_pRblNotyKorygujaceCzyFirma"
                   class="form-control flex-input-container border-0"
@@ -527,7 +505,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="ctl00_cphMain_pNotyKorygujaceDaneFirmy">
                 <div class="form-title-row">
                   <h1>Nabywca</h1>
@@ -589,7 +566,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_pDiv"
                     class="form-group flex-field"
@@ -638,7 +614,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujaceFirmaAdres_pDiv"
                     class="form-group flex-field"
@@ -686,7 +661,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_pDiv"
                     class="form-group flex-field"
@@ -736,7 +710,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_pDiv"
                     class="form-group flex-field"
@@ -787,7 +760,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="ctl00_cphMain_pNotyKorygujaceFaktura">
                 <div class="form-title-row">
                   <h1>DANE FAKTURY KORYGOWANEJ</h1>
@@ -852,7 +824,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujaceDataFaktury_pDiv"
                     class="form-group flex-field"
@@ -901,7 +872,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="ctl00_cphMain_pNotyKorygujaceDanePrzedKoreta">
                 <div class="form-title-row mb-0">
                   <h1>Treść korygowana</h1>
@@ -958,7 +928,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_pDiv"
                     class="form-group flex-field"
@@ -1007,7 +976,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_pDiv"
                     class="form-group flex-field"
@@ -1057,7 +1025,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_pDiv"
                     class="form-group flex-field"
@@ -1106,7 +1073,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_pDiv"
                     class="form-group flex-field"
@@ -1155,7 +1121,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_pDiv"
                     class="form-group flex-field"
@@ -1216,7 +1181,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="ctl00_cphMain_pNotyKorygujaceDanePoKorekcie">
                 <div class="form-title-row mb-0">
                   <h1>Treść prawidłowa</h1>
@@ -1273,7 +1237,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_pDiv"
                     class="form-group flex-field"
@@ -1322,7 +1285,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_pDiv"
                     class="form-group flex-field"
@@ -1372,7 +1334,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_pDiv"
                     class="form-group flex-field"
@@ -1421,7 +1382,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePoKorektaNip_pDiv"
                     class="form-group flex-field"
@@ -1469,7 +1429,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorca_pDiv"
                     class="form-row cb form-input-name-row appClasstbNotyKorygujaceInnyOdbiorca"
@@ -1494,7 +1453,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <!-- Odbiorca inny niż Nabywca -->
                   <div id="OdbiorcaInnyDiv" style="display: none">
                     <div class="form-title-row mb-3">
@@ -1549,7 +1507,6 @@
                           ></span>
                         </div>
                       </div>
-
                       <div
                         id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_pDiv"
                         class="form-group flex-field"
@@ -1598,7 +1555,6 @@
                           ></span>
                         </div>
                       </div>
-
                       <div
                         id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_pDiv"
                         class="form-group flex-field"
@@ -1648,7 +1604,6 @@
                           ></span>
                         </div>
                       </div>
-
                       <div
                         id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_pDiv"
                         class="form-group flex-field"
@@ -1697,7 +1652,6 @@
                           ></span>
                         </div>
                       </div>
-
                       <div
                         id="ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_pDiv"
                         class="form-group flex-field"
@@ -1748,7 +1702,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_pDiv"
                     class="form-group flex-field"
@@ -1807,7 +1760,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_chbNrRejestracyjny_pDiv"
                     class="form-group flex-field"
@@ -1826,7 +1778,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="ctl00_cphMain_pNotyKorygujaceSkanFaktury">
                 <div class="form-title-row mb-0">
                   <h1>Skan dokumentu</h1>
@@ -1935,7 +1886,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="ctl00_cphMain_pOsobaZglaszajaca">
                 <div class="form-title-row">
                   <h1>Osoba zgłaszająca wniosek</h1>
@@ -1989,7 +1939,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbOsobaZglaszajacaEmail_pDiv"
                     class="form-group flex-field"
@@ -2037,7 +1986,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_pDiv"
                     class="form-group flex-field"
@@ -2085,7 +2033,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_tbOsobaZglaszajacaTelefon_pDiv"
                     class="form-group flex-field"
@@ -2133,7 +2080,6 @@
                       ></span>
                     </div>
                   </div>
-
                   <div
                     id="ctl00_cphMain_chbUpowazniony_pDiv"
                     class="form-group flex-field"
@@ -2160,7 +2106,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="flex-row">
                 <div>
                   <script type="text/javascript">
@@ -2172,7 +2117,6 @@
                       });
                     });
                   </script>
-
                   <div
                     id="ctl00_cphMain_chbWyrazamZgode_pDiv"
                     class="form-group flex-field"
@@ -2282,7 +2226,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="flex-row">
                 <div></div>
               </div>
@@ -2318,7 +2261,6 @@
               </div>
             </div>
           </div>
-
           <div
             style="
               text-align: center;
@@ -2346,7 +2288,6 @@
           </div>
         </footer>
       </div>
-
       <script type="text/javascript">
         //<![CDATA[
         var Page_Validators = new Array(
@@ -2623,7 +2564,6 @@
         );
         //]]>
       </script>
-
       <script type="text/javascript">
         //<![CDATA[
         var ctl00_cphMain_RFVal_czyNoty = document.all
@@ -4038,15 +3978,12 @@
         ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal.minimumvalue = "";
         //]]>
       </script>
-
       <script type="text/javascript">
         //<![CDATA[
-
         var Page_ValidationActive = false;
         if (typeof ValidatorOnLoad == "function") {
           ValidatorOnLoad();
         }
-
         function ValidatorOnSubmit() {
           if (Page_ValidationActive) {
             return ValidatorCommonOnSubmit();
@@ -4054,13 +3991,10 @@
             return true;
           }
         }
-
         theForm.oldSubmit = theForm.submit;
         theForm.submit = WebForm_SaveScrollPositionSubmit;
-
         theForm.oldOnSubmit = theForm.onsubmit;
         theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
-
         document.getElementById("ctl00_cphMain_RFVal_czyNoty").dispose =
           function () {
             Array.remove(
@@ -4068,7 +4002,6 @@
               document.getElementById("ctl00_cphMain_RFVal_czyNoty"),
             );
           };
-
         document.getElementById("ctl00_cphMain_RFVal_czyNotyFirma").dispose =
           function () {
             Array.remove(
@@ -4076,7 +4009,6 @@
               document.getElementById("ctl00_cphMain_RFVal_czyNotyFirma"),
             );
           };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaNip_RFVal",
         ).dispose = function () {
@@ -4087,7 +4019,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaNip_REVal",
         ).dispose = function () {
@@ -4098,7 +4029,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaNip_RVal",
         ).dispose = function () {
@@ -4109,7 +4039,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RFVal",
         ).dispose = function () {
@@ -4120,7 +4049,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_REVal",
         ).dispose = function () {
@@ -4131,7 +4059,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaNazwaFirmy_RVal",
         ).dispose = function () {
@@ -4142,7 +4069,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RFVal",
         ).dispose = function () {
@@ -4153,7 +4079,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaAdres_REVal",
         ).dispose = function () {
@@ -4164,7 +4089,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaAdres_RVal",
         ).dispose = function () {
@@ -4175,7 +4099,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RFVal",
         ).dispose = function () {
@@ -4186,7 +4109,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_REVal",
         ).dispose = function () {
@@ -4197,7 +4119,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaKodPocztowy_RVal",
         ).dispose = function () {
@@ -4208,7 +4129,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RFVal",
         ).dispose = function () {
@@ -4219,7 +4139,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_REVal",
         ).dispose = function () {
@@ -4230,7 +4149,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceFirmaMiejscowosc_RVal",
         ).dispose = function () {
@@ -4241,7 +4159,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceNrFaktury_RFVal",
         ).dispose = function () {
@@ -4252,7 +4169,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceNrFaktury_REVal",
         ).dispose = function () {
@@ -4263,7 +4179,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceNrFaktury_RVal",
         ).dispose = function () {
@@ -4274,7 +4189,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceDataFaktury_RFVal",
         ).dispose = function () {
@@ -4285,7 +4199,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceDataFaktury_REVal",
         ).dispose = function () {
@@ -4296,7 +4209,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceDataFaktury_RVal",
         ).dispose = function () {
@@ -4307,7 +4219,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RFVal",
         ).dispose = function () {
@@ -4318,7 +4229,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_REVal",
         ).dispose = function () {
@@ -4329,7 +4239,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNazwaFirmy_RVal",
         ).dispose = function () {
@@ -4340,7 +4249,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RFVal",
         ).dispose = function () {
@@ -4351,7 +4259,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_REVal",
         ).dispose = function () {
@@ -4362,7 +4269,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaAdres_RVal",
         ).dispose = function () {
@@ -4373,7 +4279,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RFVal",
         ).dispose = function () {
@@ -4384,7 +4289,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_REVal",
         ).dispose = function () {
@@ -4395,7 +4299,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaKodPocztowy_RVal",
         ).dispose = function () {
@@ -4406,7 +4309,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RFVal",
         ).dispose = function () {
@@ -4417,7 +4319,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_REVal",
         ).dispose = function () {
@@ -4428,7 +4329,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaMiejscowosc_RVal",
         ).dispose = function () {
@@ -4439,7 +4339,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RFVal",
         ).dispose = function () {
@@ -4450,7 +4349,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_REVal",
         ).dispose = function () {
@@ -4461,7 +4359,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNip_RVal",
         ).dispose = function () {
@@ -4472,7 +4369,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RFVal",
         ).dispose = function () {
@@ -4483,7 +4379,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_REVal",
         ).dispose = function () {
@@ -4494,7 +4389,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePrzedKorektaNrRejestracyjny_RVal",
         ).dispose = function () {
@@ -4505,7 +4399,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RFVal",
         ).dispose = function () {
@@ -4516,7 +4409,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_REVal",
         ).dispose = function () {
@@ -4527,7 +4419,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNazwaFirmy_RVal",
         ).dispose = function () {
@@ -4538,7 +4429,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RFVal",
         ).dispose = function () {
@@ -4549,7 +4439,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_REVal",
         ).dispose = function () {
@@ -4560,7 +4449,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaAdres_RVal",
         ).dispose = function () {
@@ -4571,7 +4459,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RFVal",
         ).dispose = function () {
@@ -4582,7 +4469,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_REVal",
         ).dispose = function () {
@@ -4593,7 +4479,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaKodPocztowy_RVal",
         ).dispose = function () {
@@ -4604,7 +4489,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RFVal",
         ).dispose = function () {
@@ -4615,7 +4499,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_REVal",
         ).dispose = function () {
@@ -4626,7 +4509,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaMiejscowosc_RVal",
         ).dispose = function () {
@@ -4637,7 +4519,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RFVal",
         ).dispose = function () {
@@ -4648,7 +4529,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNip_REVal",
         ).dispose = function () {
@@ -4659,7 +4539,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNip_RVal",
         ).dispose = function () {
@@ -4670,7 +4549,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RFVal",
         ).dispose = function () {
@@ -4681,7 +4559,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_REVal",
         ).dispose = function () {
@@ -4692,7 +4569,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNazwaFirmy_RVal",
         ).dispose = function () {
@@ -4703,7 +4579,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RFVal",
         ).dispose = function () {
@@ -4714,7 +4589,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_REVal",
         ).dispose = function () {
@@ -4725,7 +4599,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieAdres_RVal",
         ).dispose = function () {
@@ -4736,7 +4609,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RFVal",
         ).dispose = function () {
@@ -4747,7 +4619,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_REVal",
         ).dispose = function () {
@@ -4758,7 +4629,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieKodPocztowy_RVal",
         ).dispose = function () {
@@ -4769,7 +4639,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RFVal",
         ).dispose = function () {
@@ -4780,7 +4649,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_REVal",
         ).dispose = function () {
@@ -4791,7 +4659,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieMiejscowosc_RVal",
         ).dispose = function () {
@@ -4802,7 +4669,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RFVal",
         ).dispose = function () {
@@ -4813,7 +4679,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_REVal",
         ).dispose = function () {
@@ -4824,7 +4689,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujaceInnyOdbiorcaPoKorekcieNIP_RVal",
         ).dispose = function () {
@@ -4835,7 +4699,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RFVal",
         ).dispose = function () {
@@ -4846,7 +4709,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_REVal",
         ).dispose = function () {
@@ -4857,7 +4719,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbNotyKorygujacePoKorektaNrRejestracyjny_RVal",
         ).dispose = function () {
@@ -4868,7 +4729,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RFVal",
         ).dispose = function () {
@@ -4879,7 +4739,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_AttNotyKorygujaceSkanFaktury_REVal",
         ).dispose = function () {
@@ -4890,7 +4749,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_AttNotyKorygujaceSkanFaktury_RVal",
         ).dispose = function () {
@@ -4901,7 +4759,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RFVal",
         ).dispose = function () {
@@ -4912,7 +4769,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbDodatkowyOpisZmianaDanych_REVal",
         ).dispose = function () {
@@ -4923,7 +4779,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbDodatkowyOpisZmianaDanych_RVal",
         ).dispose = function () {
@@ -4934,7 +4789,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RFVal",
         ).dispose = function () {
@@ -4945,7 +4799,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_REVal",
         ).dispose = function () {
@@ -4956,7 +4809,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaImieNazwisko_RVal",
         ).dispose = function () {
@@ -4967,7 +4819,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaEmail_RFVal",
         ).dispose = function () {
@@ -4978,7 +4829,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaEmail_REVal",
         ).dispose = function () {
@@ -4989,7 +4839,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaEmail_RVal",
         ).dispose = function () {
@@ -5000,7 +4849,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RFVal",
         ).dispose = function () {
@@ -5011,7 +4859,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_REVal",
         ).dispose = function () {
@@ -5022,7 +4869,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaEmailRepeat_RVal",
         ).dispose = function () {
@@ -5033,7 +4879,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaTelefon_RFVal",
         ).dispose = function () {
@@ -5044,7 +4889,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaTelefon_REVal",
         ).dispose = function () {
@@ -5055,7 +4899,6 @@
             ),
           );
         };
-
         document.getElementById(
           "ctl00_cphMain_tbOsobaZglaszajacaTelefon_RVal",
         ).dispose = function () {

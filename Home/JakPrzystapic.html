@@ -1,10 +1,8 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="https://www.w3.org/1999/xhtml">
   <head id="Head1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>ORLEN Mikroflota Jak przystąpić</title>
-
     <link
       rel="Shortcut Icon"
       href="https://mikroflota.orlen-energy.com/Content/img/favicon.ico"
@@ -14,13 +12,11 @@
       type="text/css"
       href="https://mikroflota.orlen-energy.com/Content/jquery-ui/jquery-ui.min.css"
     />
-
     <link
       rel="Stylesheet"
       type="text/css"
       href="https://mikroflota.orlen-energy.com/Content/General.css"
     />
-
     <script
       src="https://mikroflota.orlen-energy.com/Scripts/jquery-1.9.1.js"
       type="text/javascript"
@@ -41,13 +37,11 @@
       src="https://mikroflota.orlen-energy.com/Scripts/MicrosoftMvcAjax.js"
       type="text/javascript"
     ></script>
-
     <link
       type="text/css"
       href="https://mikroflota.orlen-energy.com/asset.axd?id=uAAAAB-LCAAAAAAABABVjkEKwjAQRe8y6xCbiArZ9gi6k67iCMUkUzrTopTc3aFFirv57z8-s8ADwn2BAQK0VASLgIHnyooywYRj_7KRcqZiI7PWBKGp5l_gPg8Jd8H9hNsmtBML5at8EvJu-drVzkCUdekth62ZNfrGOevtxXkFUb88nk96QJBxwvoFg97oBbgAAAA%3d"
       rel="stylesheet"
     />
-
     <style id="antiClickjack">
       body {
         display: none !important;
@@ -85,7 +79,6 @@
                 </a>
               </div>
             </div>
-
             <div class="rejestracjaB">
               <div class="cbox">
                 <div class="rtitle">Rejestracja</div>
@@ -136,7 +129,6 @@
                 >
               </li>
             </ul>
-
             <div id="demoBox">
               <a href="https://mikroflota.orlen-energy.com/Home/Demo"> </a>
             </div>
@@ -172,7 +164,6 @@
               </div>
             </div>
           </div>
-
           <ul class="infoGraph1">
             <li class="opt1">
               <h4>Wypełnij prosty formularz</h4>
@@ -322,7 +313,6 @@
           </script>
         </div>
       </div>
-
       <div id="footer">
         <ul>
           <li>
@@ -345,30 +335,25 @@
       <div class="push"></div>
     </div>
     <div id="banners"></div>
-
     <script type="text/javascript">
       if (navigator.appName == "Microsoft Internet Explorer") {
         $(".t-grid-content").css("padding-bottom", "17px");
       }
     </script>
-
     <script type="text/javascript">
       $.query = {
         suffix: true,
         separator: "&",
       };
     </script>
-
     <script type="text/javascript">
       function addTsd(sValue) {
         var sRegExp = new RegExp("(-?[0-9]+)([0-9]{3})");
-
         while (sRegExp.test(sValue)) {
           sValue = sValue.replace(sRegExp, "$1 $2");
         }
         return sValue;
       }
-
       $(document).ready(function () {
         $(".currencyTextBox2").focusout(function () {
           {
@@ -388,11 +373,9 @@
             }
           }
         });
-
         $(".currencyTextBox3").focusout(function () {
           {
             var re = new RegExp("\s", "g");
-
             var value = parseFloat(
               $(this)
                 .val()
@@ -409,7 +392,6 @@
             }
           }
         });
-
         $(".t-grid table").each(function () {
           var errors = false;
           var sum = 0;
@@ -442,9 +424,7 @@
       $(".playClipLink").click(function (event) {
         event.preventDefault();
         var source = $(event.target);
-
         $("html, body").animate({ scrollTop: 0 }, "slow");
-
         var modalDiv = $("#PlayClip");
         console.log(source);
         modalDiv
