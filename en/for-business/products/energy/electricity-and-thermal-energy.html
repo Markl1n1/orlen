@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,7 +53,7 @@
       window.adobeDataLayer = window.adobeDataLayer || [];
       adobeDataLayer.push({
         page: JSON.parse(
-          "{\x22productpage\u002D2f8a4419ba\x22:{\x22@type\x22:\x22orlen\u002Dinternet\/components\/productpage\x22,\x22repo:modifyDate\x22:\x222023\u002D02\u002D03T11:54:00Z\x22,\x22dc:title\x22:\x22Electricity and thermal energy | ORLEN\x22,\x22dc:description\x22:\x22We are one of the largest oil industry corporations in Central and Eastern Europe. We process crude oil into unleaded gasoline, diesel fuel, heating oil, jet fuel, plastics and petrochemicals. We operate Central Europe\x27s largest network of service stations located in Poland, Germany, the Czech Republic and Lithuania. Our fuel stations offer customers products and services of the highest quality. ORLEN\x27s retail network is supported by an effective logistics infrastructure consisting of over and underground storage facilities and a network of long\u002Ddistance pipelines.\x22,\x22xdm:template\x22:\x22\/conf\/orlen\u002Dinternet\/settings\/wcm\/templates\/product\u002Dpage\u002Dcontent\x22,\x22xdm:language\x22:\x22en\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/internet\/orlen\/pl\/en\/for\u002Dbusiness\/products\/energy\/electricity\u002Dand\u002Dthermal\u002Denergy.html\x22}}"
+          "{\x22productpage\u002D2f8a4419ba\x22:{\x22@type\x22:\x22orlen\u002Dinternet\/components\/productpage\x22,\x22repo:modifyDate\x22:\x222023\u002D02\u002D03T11:54:00Z\x22,\x22dc:title\x22:\x22Electricity and thermal energy | ORLEN\x22,\x22dc:description\x22:\x22We are one of the largest oil industry corporations in Central and Eastern Europe. We process crude oil into unleaded gasoline, diesel fuel, heating oil, jet fuel, plastics and petrochemicals. We operate Central Europe\x27s largest network of service stations located in Poland, Germany, the Czech Republic and Lithuania. Our fuel stations offer customers products and services of the highest quality. ORLEN\x27s retail network is supported by an effective logistics infrastructure consisting of over and underground storage facilities and a network of long\u002Ddistance pipelines.\x22,\x22xdm:template\x22:\x22\/conf\/orlen\u002Dinternet\/settings\/wcm\/templates\/product\u002Dpage\u002Dcontent\x22,\x22xdm:language\x22:\x22en\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/internet\/orlen\/pl\/en\/for\u002Dbusiness\/products\/energy\/electricity\u002Dand\u002Dthermal\u002Denergy.html\x22}}",
         ),
         event: "cmp:show",
         eventInfo: {
@@ -125,8 +125,6 @@
               <div class="container responsivegrid header__mobile-panel">
                 <div id="header--mobile-panel" class="cmp-container">
                   <div class="button header__mobile-intro-button--back">
-                    <!--Added icon positioning feature.-->
-
                     <button
                       type="button"
                       class="cmp-button"
@@ -2509,19 +2507,67 @@
                   </div>
                 </div>
                 <div class="button header__group-menu-trigger">
-                  <!--Added icon positioning feature.-->
-
-                  <button
-                    type="button"
-                    id="toggle-button--orlen-group"
-                    class="cmp-button"
-                  >
-                    <span class="cmp-button__text">ORLEN Group</span>
-                  </button>
-                </div>
+                    <div id="mobile-brand" class="cmp-teaser cmp-teaser-mobile">
+                      <div class="cmp-teaser__image">
+                        <div
+                          class="cmp-image"
+                          itemtype="https://schema.org/ImageObject"
+                        >
+                          <img
+                            src="/media/pic/Ambersgate.jpg"
+                            class="cmp-image__image"
+                            itemprop="contentUrl"
+                          />
+                        </div>
+                      </div>
+                      <div class="cmp-teaser__content">
+                        <h2 class="cmp-teaser__title">
+                          <a
+                            class="cmp-teaser__title-link"
+                            href="https://ambersgate.ltd/en/"
+                            style="
+                              color: inherit;
+                              text-decoration: none;
+                              cursor: pointer;
+                            "
+                            tabindex="0"
+                            >Merger with Ambersgate</a
+                          >
+                        </h2>
+                        <div class="cmp-teaser__action-container">
+                          <a
+                            class="cmp-teaser__action-link cmp-teaser__action-link-mobile"
+                            href="https://ambersgate.ltd/en/"
+                            style="
+                              display: inline;
+                              padding: 0;
+                              border: 0;
+                              font-size: 16px;
+                              line-height: 1.5rem;
+                              font-weight: 400;
+                              letter-spacing: 0.16px;
+                              color: #d81e04;
+                              text-transform: none;
+                              text-decoration: none;
+                            "
+                            tabindex="0"
+                            >Read more</a
+                          >
+                        </div>
+                        <div class="cmp-teaser__promo-wrapper">
+                          <div class="cmp-teaser__price"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      id="toggle-button--orlen-group"
+                      class="cmp-button"
+                    >
+                      <span class="cmp-button__text">ORLEN Group</span>
+                    </button>
+                  </div>
                 <div class="button header__contact-link">
-                  <!--Added icon positioning feature.-->
-
                   <a class="cmp-button" href="/en/contact.html">
                     <span class="cmp-button__text">Contact</span>
                   </a>
@@ -2809,8 +2855,6 @@
               </div>
             </div>
             <div class="button header__search-trigger">
-              <!--Added icon positioning feature.-->
-
               <button
                 type="button"
                 class="cmp-button"
@@ -2818,8 +2862,6 @@
               ></button>
             </div>
             <div class="button header__mobile-nav-trigger">
-              <!--Added icon positioning feature.-->
-
               <button
                 type="button"
                 class="cmp-button"
@@ -3675,8 +3717,6 @@
                         <div
                           class="button facebook-icon footer__social-media-icon"
                         >
-                          <!--Added icon positioning feature.-->
-
                           <a
                             class="cmp-button"
                             href="https://www.facebook.com/GrupaORLEN"
@@ -3688,8 +3728,6 @@
                         <div
                           class="button linkedin-icon footer__social-media-icon"
                         >
-                          <!--Added icon positioning feature.-->
-
                           <a
                             class="cmp-button"
                             href="https://www.linkedin.com/company/pkn-orlen-s.a./?originalSubdomain=pl"
@@ -3698,8 +3736,6 @@
                           </a>
                         </div>
                         <div class="button x-icon footer__social-media-icon">
-                          <!--Added icon positioning feature.-->
-
                           <a
                             class="cmp-button"
                             href="https://twitter.com/ORLEN_Group"
@@ -3711,8 +3747,6 @@
                         <div
                           class="button youtube-icon footer__social-media-icon"
                         >
-                          <!--Added icon positioning feature.-->
-
                           <a
                             class="cmp-button"
                             href="https://www.youtube.com/@grupa_orlen"
@@ -3724,8 +3758,6 @@
                         <div
                           class="button tiktok-icon footer__social-media-icon"
                         >
-                          <!--Added icon positioning feature.-->
-
                           <a
                             class="cmp-button"
                             href="https://www.tiktok.com/@grupaorlen"
@@ -3741,22 +3773,16 @@
                     >
                       <div class="cmp-container">
                         <div class="button footer__bottom-links-item">
-                          <!--Added icon positioning feature.-->
-
                           <a class="cmp-button" href="/en/sitemap.html">
                             <span class="cmp-button__text">Sitemap</span>
                           </a>
                         </div>
                         <div class="button footer__bottom-links-item">
-                          <!--Added icon positioning feature.-->
-
                           <a class="cmp-button" href="/en/privacy-policy.html">
                             <span class="cmp-button__text">Privacy policy</span>
                           </a>
                         </div>
                         <div class="button footer__bottom-links-item">
-                          <!--Added icon positioning feature.-->
-
                           <a
                             class="cmp-button"
                             href="/en/legal-disclaimer.html"
@@ -3767,8 +3793,6 @@
                           </a>
                         </div>
                         <div class="button footer__bottom-links-item">
-                          <!--Added icon positioning feature.-->
-
                           <a class="cmp-button" href="/en/personal-data.html">
                             <span class="cmp-button__text">Personal data</span>
                           </a>

@@ -114,14 +114,6 @@
   height: 1rem;
   animation: cmp-search__loading-indicator-spin 2s linear infinite;
 }
-@keyframes cmp-search__loading-indicator-spin {
-  0 {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .cmp-search__clear {
   display: none;
   margin: 0;
@@ -4477,5 +4469,14 @@
   .aem-GridColumn {
     padding-left: 12px;
     padding-right: 12px;
+  }
+}
+#mobile-brand {
+  display: none;
+  margin-bottom: 30px;
+}
+@media (max-width: 1279px) {
+  #mobile-brand {
+      display: block;
   }
 }
