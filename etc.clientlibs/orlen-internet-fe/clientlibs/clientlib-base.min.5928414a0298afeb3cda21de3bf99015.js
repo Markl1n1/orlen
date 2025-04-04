@@ -245,7 +245,7 @@ Element.prototype.closest ||
       : b.id;
   }
   function r() {
-    d = (k = document.body.hasAttribute("data-cmp-data-layer-enabled"))
+    d = (k = document.body.hasAttribute(""))
       ? (window.adobeDataLayer = window.adobeDataLayer || [])
       : void 0;
     for (var b = document.querySelectorAll(u.self), g = 0; g < b.length; g++)
@@ -473,7 +473,7 @@ Element.prototype.closest ||
       : d.id;
   }
   function r() {
-    d = (k = document.body.hasAttribute("data-cmp-data-layer-enabled"))
+    d = (k = document.body.hasAttribute(""))
       ? (window.adobeDataLayer = window.adobeDataLayer || [])
       : void 0;
     for (var h = document.querySelectorAll(u.self), b = 0; b < h.length; b++)
@@ -782,7 +782,7 @@ Element.prototype.closest ||
       : b.id;
   }
   function r() {
-    d = (k = document.body.hasAttribute("data-cmp-data-layer-enabled"))
+    d = (k = document.body.hasAttribute(""))
       ? (window.adobeDataLayer = window.adobeDataLayer || [])
       : void 0;
     for (var b = document.querySelectorAll(u.self), g = 0; g < b.length; g++)
@@ -3932,7 +3932,7 @@ function _typeof(e) {
     k.push({ event: "cmp:click", eventInfo: { path: "component." + c } });
   }
   function l() {
-    k = (r = document.body.hasAttribute("data-cmp-data-layer-enabled"))
+    k = (r = document.body.hasAttribute(""))
       ? (window.adobeDataLayer = window.adobeDataLayer || [])
       : void 0;
     if (r) {
