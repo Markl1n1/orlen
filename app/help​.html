@@ -316,11 +316,11 @@
       }
     </script>
     <form method="post" action="/servlet/HomeServlet?" name="changeLocaleForm">
-      <input name="CSRFToken" type="hidden" value="" />
+      <input name="CSRFToken" type="hidden" />
       <input type="hidden" name="MP_module" value="common" />
       <input type="hidden" name="MP_action" value="changeLocale" />
-      <input type="hidden" name="language" value="" />
-      <input type="hidden" name="country" value="" />
+      <input type="hidden" name="language" />
+      <input type="hidden" name="country" />
     </form>
     <div id="wrapper">
       <header id="header" class="normal">
@@ -441,7 +441,7 @@
               method="post"
               autocomplete="off"
             >
-              <input id="backUrl" name="backUrl" type="hidden" value="" />
+              <input id="backUrl" name="backUrl" type="hidden" />
               <section class="box">
                 <header>
                   <h2>Zaloguj się do platformy zakupowej</h2>
@@ -459,7 +459,6 @@
                           onkeypress="ifEnterPressedSubmit(event);"
                           class="xl-size"
                           type="text"
-                          value=""
                         />
                       </div>
                     </div>
@@ -474,7 +473,6 @@
                           onkeypress="ifEnterPressedSubmit(event);"
                           class="xl-size"
                           type="password"
-                          value=""
                         />
 
                         <div class="align-helper clearfix">
@@ -528,7 +526,7 @@
               enctype="application/x-www-form-urlencoded"
               action="/app/help/save"
             >
-              <input name="CSRFToken" type="hidden" value="" />
+              <input name="CSRFToken" type="hidden" />
               <table class="formTab" style="width: 100%">
                 <tr>
                   <th>Wersja językowa</th>
@@ -544,7 +542,6 @@
                       id="adminHelpDialog_key_input"
                       type="hidden"
                       name="key"
-                      value=""
                     />
                   </td>
                 </tr>
@@ -731,7 +728,7 @@
         enctype="application/x-www-form-urlencoded"
         style="display: none"
       >
-        <input name="CSRFToken" type="hidden" value="" /><input
+        <input name="CSRFToken" type="hidden" /><input
           type="hidden"
           name="UNIQUE_ID"
           value="1739544384630V2XX0XedOlag4NdcXRi"
