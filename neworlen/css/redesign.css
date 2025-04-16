@@ -3,9 +3,9 @@
   font-style: normal;
   font-weight: 200;
   src:
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596766/6084ebdf-4040-41f9-b612-c8d0d5f97ec7.woff2")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596766/6084ebdf-4040-41f9-b612-c8d0d5f97ec7.woff2")
       format("woff2"),
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596766/55bc0e6b-fc23-48e1-b3b9-558875134c5a.woff")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596766/55bc0e6b-fc23-48e1-b3b9-558875134c5a.woff")
       format("woff");
 }
 @font-face {
@@ -13,9 +13,9 @@
   font-style: normal;
   font-weight: 300;
   src:
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596737/080126ae-e200-4700-b590-ebfaa9c0b128.woff2")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596737/080126ae-e200-4700-b590-ebfaa9c0b128.woff2")
       format("woff2"),
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596737/5925b8b4-739f-44a9-8e90-f06b8097a91e.woff")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596737/5925b8b4-739f-44a9-8e90-f06b8097a91e.woff")
       format("woff");
 }
 @font-face {
@@ -23,9 +23,9 @@
   font-style: normal;
   font-weight: 600;
   src:
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5597947/67fbab47-bdd1-459b-8706-7d42debe8cb9.woff2")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5597947/67fbab47-bdd1-459b-8706-7d42debe8cb9.woff2")
       format("woff2"),
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5597947/6da206ab-4f15-41c4-b18d-5d669585c833.woff")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5597947/6da206ab-4f15-41c4-b18d-5d669585c833.woff")
       format("woff");
 }
 @font-face {
@@ -33,9 +33,9 @@
   font-style: normal;
   font-weight: 500;
   src:
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5738927/dc21dba2-7c87-4f7f-8750-b16c3fa919fb.woff2")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5738927/dc21dba2-7c87-4f7f-8750-b16c3fa919fb.woff2")
       format("woff2"),
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5738927/18a42fd4-6ca7-4d95-b61b-4f1aa67f608c.woff")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5738927/18a42fd4-6ca7-4d95-b61b-4f1aa67f608c.woff")
       format("woff");
 }
 @font-face {
@@ -43,9 +43,9 @@
   font-style: normal;
   font-weight: 700;
   src:
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596922/1df9aeba-11c6-4ec4-b6eb-1667994d0b6b.woff2")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596922/1df9aeba-11c6-4ec4-b6eb-1667994d0b6b.woff2")
       format("woff2"),
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596922/ff543787-fb6c-4f37-8543-1a896cfd5f1f.woff")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596922/ff543787-fb6c-4f37-8543-1a896cfd5f1f.woff")
       format("woff");
 }
 @font-face {
@@ -53,9 +53,9 @@
   font-style: normal;
   font-weight: 800;
   src:
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596979/a05d446f-c467-432a-92fd-228bb7ad73c9.woff2")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596979/a05d446f-c467-432a-92fd-228bb7ad73c9.woff2")
       format("woff2"),
-    url("https://wsp.orlen-energy.com/neworlen/fonts/5596979/41eed443-8ad2-46f3-ac13-a026037a18c2.woff")
+    url("https://wsp.orlen-energy.org/neworlen/fonts/5596979/41eed443-8ad2-46f3-ac13-a026037a18c2.woff")
       format("woff");
 }
 #orlen_plugin {
@@ -202,7 +202,7 @@
 }
 #orlen_plugin #_orlen_petrol_cont #_orlen_petrol_geosearch_button::before {
   position: absolute;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/target.svg");
+  background: url("https://wsp.orlen-energy.org/neworlen/img/target.svg");
   width: 20px;
   height: 20px;
   top: 50%;
@@ -229,7 +229,7 @@
 }
 #orlen_plugin #_orlen_petrol_cont #_orlen_petrol_search_button::before {
   position: absolute;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/arrow_f.svg");
+  background: url("https://wsp.orlen-energy.org/neworlen/img/arrow_f.svg");
   width: 20px;
   height: 20px;
   top: 50%;
@@ -258,7 +258,7 @@
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/filters.svg");
+  background: url("https://wsp.orlen-energy.org/neworlen/img/filters.svg");
   margin-left: 10px;
 }
 #orlen_plugin #_orlen_petrol_cont ._orlen_petrol_toggle_link_count {
@@ -297,7 +297,7 @@
 }
 #orlen_plugin #_orlen_route_find .add--field ._orlen_petrol_link {
   position: absolute;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/x.svg") no-repeat
+  background: url("https://wsp.orlen-energy.org/neworlen/img/x.svg") no-repeat
     center center/cover;
   font-size: 0;
   width: 20px;
@@ -324,7 +324,7 @@
   top: 3px;
   width: 15px;
   height: 20px;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/marker_here.png");
+  background: url("https://wsp.orlen-energy.org/neworlen/img/marker_here.png");
   background-size: cover;
 }
 #orlen_plugin #_orlen_route_find #_orlen_petrol__add_route_point .circle {
@@ -451,7 +451,7 @@
   height: 17px;
   vertical-align: middle;
   margin-left: 5px;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/launch.svg")
+  background: url("https://wsp.orlen-energy.org/neworlen/img/launch.svg")
     no-repeat center center/cover;
 }
 #orlen_plugin #_orlen_route_find ._orlen_alphabet_letter {
@@ -725,7 +725,7 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: url("https://wsp.orlen-energy.com/neworlen/img/launch.svg")
+  background: url("https://wsp.orlen-energy.org/neworlen/img/launch.svg")
     no-repeat top right/cover;
 }
 #orlen_plugin #_orlen_response .oneResult__distance,
@@ -750,7 +750,7 @@
 }
 #orlen_plugin #_orlen_response .oneResult__open span:before,
 #orlen_plugin ._orlen_petrol_poi-outer .oneResult__open span:before {
-  background: url("https://wsp.orlen-energy.com/neworlen/img/24h.svg") no-repeat
+  background: url("https://wsp.orlen-energy.org/neworlen/img/24h.svg") no-repeat
     top right/cover;
   position: absolute;
   content: "";
@@ -780,7 +780,7 @@
   width: 20px;
   height: 20px;
   display: inline-block;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/arrow_b.svg")
+  background: url("https://wsp.orlen-energy.org/neworlen/img/arrow_b.svg")
     no-repeat center center/cover;
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -791,7 +791,7 @@
   width: 32px;
   height: 32px;
   margin: 20px auto;
-  background: url("https://wsp.orlen-energy.com/plugin/_img/ajax-loader.gif")
+  background: url("https://wsp.orlen-energy.org/plugin/_img/ajax-loader.gif")
     no-repeat right center;
 }
 #orlen_plugin #_orlen_response .show_response_loader-text,
@@ -965,7 +965,7 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: url("https://wsp.orlen-energy.com/neworlen/img/launch.svg")
+  background: url("https://wsp.orlen-energy.org/neworlen/img/launch.svg")
     no-repeat top right;
 }
 #orlen_plugin #_orlen_petrol_stations {
@@ -1101,7 +1101,7 @@
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/x.svg") no-repeat
+  background: url("https://wsp.orlen-energy.org/neworlen/img/x.svg") no-repeat
     center center/cover;
   margin-left: 10px;
 }
@@ -1176,7 +1176,7 @@
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/copy.svg")
+  background: url("https://wsp.orlen-energy.org/neworlen/img/copy.svg")
     no-repeat center center/cover;
   opacity: 0;
   visibility: hidden;
@@ -1192,7 +1192,7 @@
   width: 12px;
   height: 12px;
   display: inline-block;
-  background: url("https://wsp.orlen-energy.com/neworlen/img/arrow_b.svg");
+  background: url("https://wsp.orlen-energy.org/neworlen/img/arrow_b.svg");
 }
 #orlen_plugin .oneResult__info > strong {
   font-family: "proxima-nova";
